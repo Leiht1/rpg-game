@@ -1,0 +1,49 @@
+{
+  "status": "preview_not_game_integrated",
+  "fps": 8,
+  "frameSize": [
+    256,
+    256
+  ],
+  "frameCountPerDirection": 8,
+  "directions": [
+    "front",
+    "back",
+    "left",
+    "right"
+  ],
+  "changedFramesOneBased": [
+    3,
+    7
+  ],
+  "unchanged": [
+    "front",
+    "back",
+    "other six side frames"
+  ],
+  "sideCanonical": "right",
+  "leftDerivation": "whole-frame horizontal mirror without frame-order reversal",
+  "source": "edit_provenance.json",
+  "atlasSize": [
+    1024,
+    2048
+  ],
+  "atlasDirectionRows": {
+    "front": [
+      0,
+      1
+    ],
+    "back": [
+      2,
+      3
+    ],
+    "left": [
+      4,
+      5
+    ],
+    "right": [
+      6,
+      7
+    ]
+  }
+}

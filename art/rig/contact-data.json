@@ -1,0 +1,1298 @@
+[
+  {
+    "direction": "front",
+    "action": "idle",
+    "frame": 0,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "idle",
+    "frame": 0,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "idle",
+    "frame": 1,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "idle",
+    "frame": 1,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "idle",
+    "frame": 2,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "idle",
+    "frame": 2,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "idle",
+    "frame": 3,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "idle",
+    "frame": 3,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "idle",
+    "frame": 4,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "idle",
+    "frame": 4,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "idle",
+    "frame": 5,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "idle",
+    "frame": 5,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 0,
+    "leg": "far",
+    "planted": true,
+    "travel": 12.0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 0,
+    "leg": "near",
+    "planted": true,
+    "travel": -8.0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 1,
+    "leg": "far",
+    "planted": true,
+    "travel": 8.666666666666668,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 1,
+    "leg": "near",
+    "planted": true,
+    "travel": -11.333333333333336,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 2,
+    "leg": "far",
+    "planted": true,
+    "travel": 5.333333333333334,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 2,
+    "leg": "near",
+    "planted": false,
+    "travel": -10.222222222222223,
+    "lift": 2.499999999999999
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 3,
+    "leg": "far",
+    "planted": true,
+    "travel": 2.0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 3,
+    "leg": "near",
+    "planted": false,
+    "travel": -4.406249999999997,
+    "lift": 4.619397662556434
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 4,
+    "leg": "far",
+    "planted": true,
+    "travel": -1.3333333333333321,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 4,
+    "leg": "near",
+    "planted": false,
+    "travel": 2.972222222222216,
+    "lift": 4.829629131445342
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 5,
+    "leg": "far",
+    "planted": true,
+    "travel": -4.666666666666668,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 5,
+    "leg": "near",
+    "planted": false,
+    "travel": 9.309027777777782,
+    "lift": 3.0438071450436004
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 6,
+    "leg": "far",
+    "planted": true,
+    "travel": -8.0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 6,
+    "leg": "near",
+    "planted": true,
+    "travel": 12.0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 7,
+    "leg": "far",
+    "planted": true,
+    "travel": -11.333333333333336,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 7,
+    "leg": "near",
+    "planted": true,
+    "travel": 8.66666666666666,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 8,
+    "leg": "far",
+    "planted": false,
+    "travel": -10.222222222222223,
+    "lift": 2.499999999999999
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 8,
+    "leg": "near",
+    "planted": true,
+    "travel": 5.333333333333339,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 9,
+    "leg": "far",
+    "planted": false,
+    "travel": -4.406249999999997,
+    "lift": 4.619397662556434
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 9,
+    "leg": "near",
+    "planted": true,
+    "travel": 2.0,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 10,
+    "leg": "far",
+    "planted": false,
+    "travel": 2.9722222222222268,
+    "lift": 4.829629131445341
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 10,
+    "leg": "near",
+    "planted": true,
+    "travel": -1.3333333333333393,
+    "lift": 0
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 11,
+    "leg": "far",
+    "planted": false,
+    "travel": 9.309027777777775,
+    "lift": 3.0438071450436044
+  },
+  {
+    "direction": "front",
+    "action": "walk",
+    "frame": 11,
+    "leg": "near",
+    "planted": true,
+    "travel": -4.666666666666661,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "idle",
+    "frame": 0,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "idle",
+    "frame": 0,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "idle",
+    "frame": 1,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "idle",
+    "frame": 1,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "idle",
+    "frame": 2,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "idle",
+    "frame": 2,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "idle",
+    "frame": 3,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "idle",
+    "frame": 3,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "idle",
+    "frame": 4,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "idle",
+    "frame": 4,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "idle",
+    "frame": 5,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "idle",
+    "frame": 5,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 0,
+    "leg": "far",
+    "planted": true,
+    "travel": 12.0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 0,
+    "leg": "near",
+    "planted": true,
+    "travel": -8.0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 1,
+    "leg": "far",
+    "planted": true,
+    "travel": 8.666666666666668,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 1,
+    "leg": "near",
+    "planted": true,
+    "travel": -11.333333333333336,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 2,
+    "leg": "far",
+    "planted": true,
+    "travel": 5.333333333333334,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 2,
+    "leg": "near",
+    "planted": false,
+    "travel": -10.222222222222223,
+    "lift": 2.499999999999999
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 3,
+    "leg": "far",
+    "planted": true,
+    "travel": 2.0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 3,
+    "leg": "near",
+    "planted": false,
+    "travel": -4.406249999999997,
+    "lift": 4.619397662556434
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 4,
+    "leg": "far",
+    "planted": true,
+    "travel": -1.3333333333333321,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 4,
+    "leg": "near",
+    "planted": false,
+    "travel": 2.972222222222216,
+    "lift": 4.829629131445342
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 5,
+    "leg": "far",
+    "planted": true,
+    "travel": -4.666666666666668,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 5,
+    "leg": "near",
+    "planted": false,
+    "travel": 9.309027777777782,
+    "lift": 3.0438071450436004
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 6,
+    "leg": "far",
+    "planted": true,
+    "travel": -8.0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 6,
+    "leg": "near",
+    "planted": true,
+    "travel": 12.0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 7,
+    "leg": "far",
+    "planted": true,
+    "travel": -11.333333333333336,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 7,
+    "leg": "near",
+    "planted": true,
+    "travel": 8.66666666666666,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 8,
+    "leg": "far",
+    "planted": false,
+    "travel": -10.222222222222223,
+    "lift": 2.499999999999999
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 8,
+    "leg": "near",
+    "planted": true,
+    "travel": 5.333333333333339,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 9,
+    "leg": "far",
+    "planted": false,
+    "travel": -4.406249999999997,
+    "lift": 4.619397662556434
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 9,
+    "leg": "near",
+    "planted": true,
+    "travel": 2.0,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 10,
+    "leg": "far",
+    "planted": false,
+    "travel": 2.9722222222222268,
+    "lift": 4.829629131445341
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 10,
+    "leg": "near",
+    "planted": true,
+    "travel": -1.3333333333333393,
+    "lift": 0
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 11,
+    "leg": "far",
+    "planted": false,
+    "travel": 9.309027777777775,
+    "lift": 3.0438071450436044
+  },
+  {
+    "direction": "back",
+    "action": "walk",
+    "frame": 11,
+    "leg": "near",
+    "planted": true,
+    "travel": -4.666666666666661,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "idle",
+    "frame": 0,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "idle",
+    "frame": 0,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "idle",
+    "frame": 1,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "idle",
+    "frame": 1,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "idle",
+    "frame": 2,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "idle",
+    "frame": 2,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "idle",
+    "frame": 3,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "idle",
+    "frame": 3,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "idle",
+    "frame": 4,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "idle",
+    "frame": 4,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "idle",
+    "frame": 5,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "idle",
+    "frame": 5,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 0,
+    "leg": "far",
+    "planted": true,
+    "travel": 12.0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 0,
+    "leg": "near",
+    "planted": true,
+    "travel": -8.0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 1,
+    "leg": "far",
+    "planted": true,
+    "travel": 8.666666666666668,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 1,
+    "leg": "near",
+    "planted": true,
+    "travel": -11.333333333333336,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 2,
+    "leg": "far",
+    "planted": true,
+    "travel": 5.333333333333334,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 2,
+    "leg": "near",
+    "planted": false,
+    "travel": -10.222222222222223,
+    "lift": 2.499999999999999
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 3,
+    "leg": "far",
+    "planted": true,
+    "travel": 2.0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 3,
+    "leg": "near",
+    "planted": false,
+    "travel": -4.406249999999997,
+    "lift": 4.619397662556434
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 4,
+    "leg": "far",
+    "planted": true,
+    "travel": -1.3333333333333321,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 4,
+    "leg": "near",
+    "planted": false,
+    "travel": 2.972222222222216,
+    "lift": 4.829629131445342
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 5,
+    "leg": "far",
+    "planted": true,
+    "travel": -4.666666666666668,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 5,
+    "leg": "near",
+    "planted": false,
+    "travel": 9.309027777777782,
+    "lift": 3.0438071450436004
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 6,
+    "leg": "far",
+    "planted": true,
+    "travel": -8.0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 6,
+    "leg": "near",
+    "planted": true,
+    "travel": 12.0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 7,
+    "leg": "far",
+    "planted": true,
+    "travel": -11.333333333333336,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 7,
+    "leg": "near",
+    "planted": true,
+    "travel": 8.66666666666666,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 8,
+    "leg": "far",
+    "planted": false,
+    "travel": -10.222222222222223,
+    "lift": 2.499999999999999
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 8,
+    "leg": "near",
+    "planted": true,
+    "travel": 5.333333333333339,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 9,
+    "leg": "far",
+    "planted": false,
+    "travel": -4.406249999999997,
+    "lift": 4.619397662556434
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 9,
+    "leg": "near",
+    "planted": true,
+    "travel": 2.0,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 10,
+    "leg": "far",
+    "planted": false,
+    "travel": 2.9722222222222268,
+    "lift": 4.829629131445341
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 10,
+    "leg": "near",
+    "planted": true,
+    "travel": -1.3333333333333393,
+    "lift": 0
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 11,
+    "leg": "far",
+    "planted": false,
+    "travel": 9.309027777777775,
+    "lift": 3.0438071450436044
+  },
+  {
+    "direction": "right",
+    "action": "walk",
+    "frame": 11,
+    "leg": "near",
+    "planted": true,
+    "travel": -4.666666666666661,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "idle",
+    "frame": 0,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "idle",
+    "frame": 0,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "idle",
+    "frame": 1,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "idle",
+    "frame": 1,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "idle",
+    "frame": 2,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "idle",
+    "frame": 2,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "idle",
+    "frame": 3,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "idle",
+    "frame": 3,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "idle",
+    "frame": 4,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "idle",
+    "frame": 4,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "idle",
+    "frame": 5,
+    "leg": "far",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "idle",
+    "frame": 5,
+    "leg": "near",
+    "planted": true,
+    "travel": 0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 0,
+    "leg": "far",
+    "planted": true,
+    "travel": 12.0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 0,
+    "leg": "near",
+    "planted": true,
+    "travel": -8.0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 1,
+    "leg": "far",
+    "planted": true,
+    "travel": 8.666666666666668,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 1,
+    "leg": "near",
+    "planted": true,
+    "travel": -11.333333333333336,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 2,
+    "leg": "far",
+    "planted": true,
+    "travel": 5.333333333333334,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 2,
+    "leg": "near",
+    "planted": false,
+    "travel": -10.222222222222223,
+    "lift": 2.499999999999999
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 3,
+    "leg": "far",
+    "planted": true,
+    "travel": 2.0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 3,
+    "leg": "near",
+    "planted": false,
+    "travel": -4.406249999999997,
+    "lift": 4.619397662556434
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 4,
+    "leg": "far",
+    "planted": true,
+    "travel": -1.3333333333333321,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 4,
+    "leg": "near",
+    "planted": false,
+    "travel": 2.972222222222216,
+    "lift": 4.829629131445342
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 5,
+    "leg": "far",
+    "planted": true,
+    "travel": -4.666666666666668,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 5,
+    "leg": "near",
+    "planted": false,
+    "travel": 9.309027777777782,
+    "lift": 3.0438071450436004
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 6,
+    "leg": "far",
+    "planted": true,
+    "travel": -8.0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 6,
+    "leg": "near",
+    "planted": true,
+    "travel": 12.0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 7,
+    "leg": "far",
+    "planted": true,
+    "travel": -11.333333333333336,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 7,
+    "leg": "near",
+    "planted": true,
+    "travel": 8.66666666666666,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 8,
+    "leg": "far",
+    "planted": false,
+    "travel": -10.222222222222223,
+    "lift": 2.499999999999999
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 8,
+    "leg": "near",
+    "planted": true,
+    "travel": 5.333333333333339,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 9,
+    "leg": "far",
+    "planted": false,
+    "travel": -4.406249999999997,
+    "lift": 4.619397662556434
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 9,
+    "leg": "near",
+    "planted": true,
+    "travel": 2.0,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 10,
+    "leg": "far",
+    "planted": false,
+    "travel": 2.9722222222222268,
+    "lift": 4.829629131445341
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 10,
+    "leg": "near",
+    "planted": true,
+    "travel": -1.3333333333333393,
+    "lift": 0
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 11,
+    "leg": "far",
+    "planted": false,
+    "travel": 9.309027777777775,
+    "lift": 3.0438071450436044
+  },
+  {
+    "direction": "left",
+    "action": "walk",
+    "frame": 11,
+    "leg": "near",
+    "planted": true,
+    "travel": -4.666666666666661,
+    "lift": 0
+  }
+]

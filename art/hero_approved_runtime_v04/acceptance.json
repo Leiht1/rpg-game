@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-15",
+  "userApproval": "好多了，把这一版都接入游戏吧，另外把游戏里的移动速度再调快一点",
+  "sourceMap": {
+    "front/back walk": "hero_consistency_preview_v04",
+    "side walk": "hero_side_spacing_preview_v06",
+    "front/back/side idle": "hero_sequence_repair_preview_v05"
+  },
+  "template": "windrest-character-template-4",
+  "art_source": "existing",
+  "newImageCalls": 0,
+  "newVideoCalls": 0,
+  "speedBefore": 100,
+  "speedAfter": 115,
+  "stride_world_units": 66.66666666666667,
+  "idle_cycle_ms": 1800
+}

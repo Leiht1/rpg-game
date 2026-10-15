@@ -1,0 +1,109 @@
+{
+  "status": "needs-visual-review",
+  "frameCount": 4,
+  "uniqueFrameCount": 4,
+  "canvas": [
+    128,
+    128
+  ],
+  "anchor": [
+    64,
+    112
+  ],
+  "cycleMs": 3000,
+  "durationsMs": [
+    750,
+    750,
+    750,
+    750
+  ],
+  "bounds": [
+    [
+      42,
+      23,
+      86,
+      112
+    ],
+    [
+      42,
+      23,
+      86,
+      112
+    ],
+    [
+      42,
+      22,
+      86,
+      112
+    ],
+    [
+      42,
+      22,
+      86,
+      112
+    ]
+  ],
+  "minimumAlphaMargin": 16,
+  "bodyHeights": [
+    89,
+    89,
+    90,
+    90
+  ],
+  "soleBottomRangePx": 0,
+  "footCentroids": [
+    [
+      63.76987500241495,
+      102.30161704758409
+    ],
+    [
+      63.76923599716497,
+      102.29312504247696
+    ],
+    [
+      63.80594713656388,
+      101.94584501401683
+    ],
+    [
+      63.799474149004496,
+      101.93520191072575
+    ]
+  ],
+  "footCentroidRangePx": [
+    0.036711139398910575,
+    0.36641513685833615
+  ],
+  "headCentroids": [
+    [
+      63.51118603991869,
+      38.8102022474621
+    ],
+    [
+      63.44223220991932,
+      38.7788626947399
+    ],
+    [
+      63.52829497405343,
+      38.52956827791658
+    ],
+    [
+      63.48640508860485,
+      38.539411389126485
+    ]
+  ],
+  "headCentroidRangePx": [
+    0.08606276413411251,
+    0.28063396954551934
+  ],
+  "adjacentPremultipliedMeanDifferences": [
+    0.6333645689721201,
+    1.7226923923866422,
+    0.48286767099417893,
+    1.8290144378063724
+  ],
+  "wrapOverMedianAdjacent": 1.5526062975587493,
+  "notProven": [
+    "Numerical geometry does not certify breathing, nodding or zero foot sliding.",
+    "Generated neutral is based on current idle but has small redraw differences."
+  ]
+}

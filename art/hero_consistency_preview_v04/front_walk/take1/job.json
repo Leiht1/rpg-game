@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "d7c0ff50e99b0466ee94e12b30838df9e4b4aa8471fe2f3a720adc6c0b24c8f0",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T07:44:28.213Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T07:44:28.213Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Full eyes and upright head across existing front walk poses",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13dd0-2e37-7b80-a90b-2be7b02cd173",
+    "source": "CODEX_HOME/generated_images/01a13dd0-2e37-7b80-a90b-2be7b02cd173/exec-d9f00a1b-f710-4446-a724-8e572fb22b4d.png",
+    "sourceSha256": "f8e664c503692c2438e2afed0ba9bd9299c9b84c22fca735db12fce70e5e1d12",
+    "sourceMtime": "2026-10-15T07:44:05Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "f8e664c503692c2438e2afed0ba9bd9299c9b84c22fca735db12fce70e5e1d12",
+    "bytes": 848587,
+    "format": "PNG",
+    "size": [
+      1774,
+      887
+    ]
+  }
+}

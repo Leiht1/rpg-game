@@ -1,0 +1,79 @@
+{
+  "art_source": "host_image",
+  "route": "host:image_gen + generate2dmedia cli_media.py adopt",
+  "imageCalls": 6,
+  "videoCalls": 0,
+  "model": "not exposed",
+  "cost": "unknown",
+  "license": "Subject to provider/account terms; not asserted public domain or open source.",
+  "prompts": [
+    "prompt.txt",
+    "prompt_frame2.txt",
+    "prompt_frame3.txt",
+    "prompt_frame5.txt",
+    "prompt_frame6.txt",
+    "prompt_frame6_hand.txt"
+  ],
+  "references": [
+    "references/edit_targets_2_3_5_6.png",
+    "references/current_8_frames.png",
+    "take1/high_frame_01.png",
+    "take1/high_frame_02.png",
+    "take1/high_frame_04.png",
+    "take1/high_frame_05.png",
+    "take5/high_frame_05.png"
+  ],
+  "sources": [
+    {
+      "raw": "take1/generated.png",
+      "job": "take1/job.json",
+      "registration": "take1/registration.json",
+      "sourceSha256": "d05695232be08ce8c45a1080113d3eaf8da7168a260074c32d3cf8986691addd"
+    },
+    {
+      "raw": "take2/generated.png",
+      "job": "take2/job.json",
+      "registration": "take2/registration.json",
+      "sourceSha256": "f376483a6b44dec330517980b8edddb68e55533325f0baab87b98f87e9ba3e9c"
+    },
+    {
+      "raw": "take3/generated.png",
+      "job": "take3/job.json",
+      "registration": "take3/registration.json",
+      "sourceSha256": "7a5eae9e064206bb52718478d9816959da142590711898ca1f7b8e5bcc90f13d"
+    },
+    {
+      "raw": "take4/generated.png",
+      "job": "take4/job.json",
+      "registration": "take4/registration.json",
+      "sourceSha256": "d22a6061ca49b9f65e52992d91aec2669eb87405c6ec08649e0fb63e90108f4a"
+    },
+    {
+      "raw": "take5/generated.png",
+      "job": "take5/job.json",
+      "registration": "take5/registration.json",
+      "sourceSha256": "e0419d59ebf2f79c7df6ec31a3be6d3b6fdf7c58c0d538ef6cba4c7a151f1dc7"
+    },
+    {
+      "raw": "take6/generated.png",
+      "job": "take6/job.json",
+      "registration": "take6/registration.json",
+      "sourceSha256": "2671dce70a1344f5b03384a0b4565274eea35832926f91d6a6e2f5529d3b1e0a"
+    }
+  ],
+  "selection": "selection.json",
+  "status": "needs-visual-review",
+  "previewOnly": true,
+  "inheritedSources": "../hero_side_spacing_preview_v06/provenance.json",
+  "rejectedTakes": [
+    {
+      "source": "take1",
+      "reason": "Four-pose candidate retained only as editing reference: frame 2 still rear-folded, frame 3 too extended, frame 5 insufficient recovery, frame 6 arm too forward."
+    },
+    {
+      "source": "take5",
+      "reason": "Corrected legs retained as reference; near hand too far behind frame 7. take6 corrects complete pose to interpolate hand between frames 5 and 7."
+    }
+  ],
+  "normalization": "The four selected 1254px single-pose sources share scale 512/1254/4. Complete-frame rigid registration, no individual body-bbox fitting, limb patch, warp or compositing."
+}

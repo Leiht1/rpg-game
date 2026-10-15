@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "219e3380fc8bd104c74b6b19cbcae7080c738fae08923b35f44c366bc63d9f62",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T09:41:15.111Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T09:41:15.111Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Frame 2 complete passing-pose and neutral-arm correction",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13eae-d60b-7a53-b798-179e593aeac9",
+    "source": "CODEX_HOME/generated_images/01a13eae-d60b-7a53-b798-179e593aeac9/exec-da29a144-5a75-4a8f-a34d-b8937cbef427.png",
+    "sourceSha256": "f376483a6b44dec330517980b8edddb68e55533325f0baab87b98f87e9ba3e9c",
+    "sourceMtime": "2026-10-15T09:40:46Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "f376483a6b44dec330517980b8edddb68e55533325f0baab87b98f87e9ba3e9c",
+    "bytes": 472564,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

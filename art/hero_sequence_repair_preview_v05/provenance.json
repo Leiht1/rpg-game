@@ -1,0 +1,186 @@
+{
+  "artSource": "existing v04 + host_image edits",
+  "route": "host:image_gen + generate2dmedia adopt",
+  "completedNewImageCalls": 4,
+  "videoCalls": 0,
+  "model": "not exposed by host",
+  "generationCost": "unknown; adopt receipts are not generation billing",
+  "prompts": [
+    {
+      "file": "side_frame7_hands_prompt.txt",
+      "sha256": "681f464314d129f064a56bac780ae5fcb15e169ff3d47445fbd3798c4af6e79a"
+    },
+    {
+      "file": "side_second_half_prompt.txt",
+      "sha256": "40de2aa0082b9b637bdcf342d895cc56344c3940b3d629894f051ec7bfb0807b"
+    },
+    {
+      "file": "side_walk_prompt.txt",
+      "sha256": "38991a7425098d8f7364d588dee5c6fc2ffffd0994fef88dc06be211ad6be64e"
+    },
+    {
+      "file": "side_walk_refine_prompt.txt",
+      "sha256": "e20f30cb39a58b97fe4eeff800243eb14aed4122b5c84978130674736a4d9b94"
+    }
+  ],
+  "references": [
+    "../hero_consistency_preview_v04/references/side_walk_corrected_reference.png",
+    "side_walk/take1/generated.png",
+    "side_walk/take2/cell_02.png"
+  ],
+  "walkSelection": "side_walk/selection.json",
+  "rejectedCandidates": {
+    "take1": "Only frame 3 selected; other poses did not consistently preserve second-half near/far anatomy.",
+    "take2": "No final frame selected; frame 7 provides the full-pose reference for take4, but its arm swing is too far back.",
+    "take3": "Select only cells 0,1,3 (frames 5,6,8). Cell 2 still trails the near leg and was rejected.",
+    "take4": "Selected full frame 7, moving near hand toward neutral and retaining foreground passing leg."
+  },
+  "idleArt": "Existing v04 front take1 / side take2; no new idle drawing. Whole-frame foot-only rigid registration.",
+  "license": "Generated under applicable tool/account terms; no third-party art added, no CC0/MIT art claim.",
+  "files": [
+    {
+      "file": "back_idle_preview/frames/back_idle_00.png",
+      "sha256": "7a0650483421b4e9162fdadec57689b82f22995fb501f06cc239be3eda8eecf8"
+    },
+    {
+      "file": "back_idle_preview/frames/back_idle_01.png",
+      "sha256": "088013b474c79a83fef1ba09fa3c5c3bb545740b00dcb9af94bf9b6e0fa1d1fd"
+    },
+    {
+      "file": "back_idle_preview/frames/back_idle_02.png",
+      "sha256": "a1447d83cf2e45d4439a88cec7dd48e576d27d97103b11c58f9b4c22ca77e768"
+    },
+    {
+      "file": "back_idle_preview/frames/back_idle_03.png",
+      "sha256": "ac8be54988bdbf847dd0a93fdff4f999a7eaaaf16684c4c986ed9002179f989d"
+    },
+    {
+      "file": "front_idle_preview/frames/front_idle_00.png",
+      "sha256": "e6d359d2e7ad38876ed3699443b2c3f19fe01c2de0543566357feeeab8025c9f"
+    },
+    {
+      "file": "front_idle_preview/frames/front_idle_01.png",
+      "sha256": "e2509039e7d013e7d12bff55b9237115d06ff53e6f1a5a2b2b85596e395fc243"
+    },
+    {
+      "file": "front_idle_preview/frames/front_idle_02.png",
+      "sha256": "5e609b9af568a9f471a135d1b37fff771351e57e4d81923a2fb349c3eefae167"
+    },
+    {
+      "file": "front_idle_preview/frames/front_idle_03.png",
+      "sha256": "cda1d1696d7e3d4350343c2ab2ba905e43d76ac44162ceb9676be794b2e72863"
+    },
+    {
+      "file": "left_idle_preview/frames/left_idle_00.png",
+      "sha256": "2a92a647ae1465de361820bb1a1512f88a6137a491bbd4a3e059583d86aaa33b"
+    },
+    {
+      "file": "left_idle_preview/frames/left_idle_01.png",
+      "sha256": "f50baa500fff78d3a66ae405f4959de21d737589cf9ad2c169be0a618a764948"
+    },
+    {
+      "file": "left_idle_preview/frames/left_idle_02.png",
+      "sha256": "6e7c06b1e42edf14b319454e9ccf6656b72a432ad500dbf5c8826ce32045f26b"
+    },
+    {
+      "file": "left_idle_preview/frames/left_idle_03.png",
+      "sha256": "7b5b6ebf11e85073e401f15939adb69bdbff1a604d0b13266db14af3c38f20ec"
+    },
+    {
+      "file": "left_walk_preview/frames/left_walk_00.png",
+      "sha256": "16362b7b104fdd610ccfcf024e8ff565988358ab8e5dd34c506ba40f6c441129"
+    },
+    {
+      "file": "left_walk_preview/frames/left_walk_01.png",
+      "sha256": "33edaed87b4b603eccfd2cd635050fcd1c19c2cc2a0c7a857aa847a352f56a5c"
+    },
+    {
+      "file": "left_walk_preview/frames/left_walk_02.png",
+      "sha256": "2e4da060083ba92d4851456d779c7f4be5a96ee4ad9900001bb7bf35e2527b21"
+    },
+    {
+      "file": "left_walk_preview/frames/left_walk_03.png",
+      "sha256": "2be7a615faf8fc6746aca6f45da55aff3ca6484d7fc5f7d4bb5341a5c1717766"
+    },
+    {
+      "file": "left_walk_preview/frames/left_walk_04.png",
+      "sha256": "bbeca32106239bfae818350d0537e53841a18e7a3353c8aa9e6227b5a194227a"
+    },
+    {
+      "file": "left_walk_preview/frames/left_walk_05.png",
+      "sha256": "58e0dbc6313855bb996ca2455fd51b90caa50e5657eb14039e34641c9537d1a6"
+    },
+    {
+      "file": "left_walk_preview/frames/left_walk_06.png",
+      "sha256": "73a1f2cdf0dc66a91fa6cbbe74b6c6a1a07ef5dde6d5c85e78022dd1bf29a86c"
+    },
+    {
+      "file": "left_walk_preview/frames/left_walk_07.png",
+      "sha256": "17deb91cb13e7267964842078ba1b8205cb666b4d68170d13f93a661ad82b4fa"
+    },
+    {
+      "file": "right_idle_preview/frames/right_idle_00.png",
+      "sha256": "724c3dadc884a1a1ee5dc3af50bf5e46f5f12c8cc7b8b2386da3759a9991b577"
+    },
+    {
+      "file": "right_idle_preview/frames/right_idle_01.png",
+      "sha256": "a2f1eac3ba3c9cb51d596dd37daac075971cb64cea43d7e31c5d62475c28db30"
+    },
+    {
+      "file": "right_idle_preview/frames/right_idle_02.png",
+      "sha256": "f54c7a59d0b62804ef19c61de190c8f9155d34518c2242948678611b62f1fd58"
+    },
+    {
+      "file": "right_idle_preview/frames/right_idle_03.png",
+      "sha256": "d0e3bc2c98f2ad02ca5a0c2358f6ec9796f827f378b8854829d9f5c76bd169e3"
+    },
+    {
+      "file": "right_walk_preview/frames/right_walk_00.png",
+      "sha256": "db5a6896e720d78524e9d34603fe3ebfa7ac59bc7438f32a96a0b556168cf550"
+    },
+    {
+      "file": "right_walk_preview/frames/right_walk_01.png",
+      "sha256": "b68260c35b3409c4e6acbed8bdcbc302211ecfce81a9fb475a4efeda494b9e0c"
+    },
+    {
+      "file": "right_walk_preview/frames/right_walk_02.png",
+      "sha256": "86b5285d756f4addfa6ea02b97bcf07ae28bdacac25e2b11c693d6628c3164db"
+    },
+    {
+      "file": "right_walk_preview/frames/right_walk_03.png",
+      "sha256": "859870dcd1d23bb5399136a5aa4f70a9e0b034ab278b97cf8507402c5675631d"
+    },
+    {
+      "file": "right_walk_preview/frames/right_walk_04.png",
+      "sha256": "4c9f6e642ec6a93eb63238f501ba3841b065fa5a4ff56aeafbfd2ff0d8608657"
+    },
+    {
+      "file": "right_walk_preview/frames/right_walk_05.png",
+      "sha256": "970d54ddbdbc0376c95e9db78e38252fbac82ac82336fd92973b85466b8dc668"
+    },
+    {
+      "file": "right_walk_preview/frames/right_walk_06.png",
+      "sha256": "efa2d8355ec397529d0d8286f7d36a233d796808f888a73390da6b3fb31e1696"
+    },
+    {
+      "file": "right_walk_preview/frames/right_walk_07.png",
+      "sha256": "a5921d411eaf467df5c1899c9bfc5de22e35ec61473fde468cf0276ac8939a4b"
+    },
+    {
+      "file": "side_walk/take1/generated.png",
+      "sha256": "d2d3d41b60838a7914b54cb2ef34cf76bac2ca0f962c4bd3cfe53514d768ec45"
+    },
+    {
+      "file": "side_walk/take2/generated.png",
+      "sha256": "5b8c559de732348bd83f85d9e221f0d8455a864e91939665c2f92c2ac9c73aa1"
+    },
+    {
+      "file": "side_walk/take3/generated.png",
+      "sha256": "73313a442f818b9c66635f5cb24d8a9e25c8b5672e7a47dadf4ecc24f1c02780"
+    },
+    {
+      "file": "side_walk/take4/generated.png",
+      "sha256": "dc6693556d52c31a48563a7dd1996b169bba9f319223e117ee496c66213c08e1"
+    }
+  ]
+}

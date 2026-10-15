@@ -1,0 +1,105 @@
+{
+  "status": "needs-visual-review",
+  "uniqueFrames": 4,
+  "canvas": [
+    128,
+    128
+  ],
+  "anchor": [
+    64,
+    112
+  ],
+  "bodyBounds": [
+    [
+      42,
+      23,
+      86,
+      112
+    ],
+    [
+      42,
+      23,
+      86,
+      112
+    ],
+    [
+      42,
+      23,
+      86,
+      112
+    ],
+    [
+      42,
+      23,
+      86,
+      112
+    ]
+  ],
+  "headRegionResidual": [
+    {
+      "bestRigidResidualShiftPx": [
+        0.0,
+        -0.0
+      ],
+      "zeroShiftRms": 0.0
+    },
+    {
+      "bestRigidResidualShiftPx": [
+        0.0036,
+        -0.0143
+      ],
+      "zeroShiftRms": 0.014049
+    },
+    {
+      "bestRigidResidualShiftPx": [
+        0.0009,
+        -0.052
+      ],
+      "zeroShiftRms": 0.018926
+    },
+    {
+      "bestRigidResidualShiftPx": [
+        0.0003,
+        -0.0532
+      ],
+      "zeroShiftRms": 0.019797
+    }
+  ],
+  "legsRegionResidual": [
+    {
+      "bestRigidResidualShiftPx": [
+        -0.0,
+        0.0
+      ],
+      "zeroShiftRms": 0.0
+    },
+    {
+      "bestRigidResidualShiftPx": [
+        -0.0002,
+        0.032
+      ],
+      "zeroShiftRms": 0.016081
+    },
+    {
+      "bestRigidResidualShiftPx": [
+        -0.0,
+        0.0927
+      ],
+      "zeroShiftRms": 0.028588
+    },
+    {
+      "bestRigidResidualShiftPx": [
+        -0.0012,
+        0.1
+      ],
+      "zeroShiftRms": 0.028954
+    }
+  ],
+  "chestRegionFrame00Rms": [
+    0.0,
+    0.04908279329538345,
+    0.034234412014484406,
+    0.02839459851384163
+  ],
+  "notProven": "Numerical image registration does not certify natural breath, zero drift, or pixel-identical locked regions."
+}

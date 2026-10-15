@@ -1,0 +1,74 @@
+{
+  "route": "host image_gen image editing, adopted via generate2dmedia cli_media.py",
+  "underlyingModel": "not exposed",
+  "sourceImage": "take1/generated.png",
+  "sourceSha256": "9411ab461607cd9b1cf45c673a31b6abb2d1b7c22ce26a16dbe41b341cd8eba2",
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "sourceCells": [
+    [
+      0,
+      0,
+      887,
+      887
+    ],
+    [
+      887,
+      0,
+      1774,
+      887
+    ]
+  ],
+  "template": "references/side_frames_03_07_edit_target.png",
+  "prompt": "edit_prompt.txt",
+  "changedFramesOneBased": [
+    3,
+    7
+  ],
+  "globalUniformScale": 0.28861330326944756,
+  "translation": [
+    0,
+    0
+  ],
+  "registration": "retain whole-frame positions from the approved paired canvas template",
+  "alphaCleanup": [
+    {
+      "frameOneBased": 3,
+      "sourceFaintAlphaPixelsRemoved": 4566,
+      "finalFaintAlphaPixelsRemoved": 626
+    },
+    {
+      "frameOneBased": 7,
+      "sourceFaintAlphaPixelsRemoved": 4758,
+      "finalFaintAlphaPixelsRemoved": 687
+    }
+  ],
+  "cutoff": 8,
+  "sourceGeometry": [
+    {
+      "sourcePanel": 0,
+      "foregroundBbox": [
+        323,
+        105,
+        609,
+        676
+      ],
+      "minimumMargin": 105
+    },
+    {
+      "sourcePanel": 1,
+      "foregroundBbox": [
+        332,
+        103,
+        596,
+        674
+      ],
+      "minimumMargin": 103
+    }
+  ],
+  "gridPolicy": "known 2:1 paired edit-template cells verified against actual foreground clusters and safe boundaries",
+  "creativeLocalPixelEdits": false,
+  "perFrameBboxScaling": false
+}

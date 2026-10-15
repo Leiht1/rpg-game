@@ -1,0 +1,15 @@
+Use case: identity-preserve, precise-object-edit.
+Edit target: the attached transparent 2x2 sheet. The FOUR cells are EXACT copies of ONE complete standing character. It is a production game animation edit, not four different drawings.
+Fix the previous idle-breath attempt: its chest motion was too tiny while the whole person drifted. Keep this exact identity, standing pose, face, hair, outfit, proportions, original simple warm hand-painted cartoon brushwork, color and camera. BACK: only rear hair, jacket back, heels; no face, no front scarf knot.
+
+ONLY animate visible ribcage breathing in jacket and cream shirt. READABLE but calm normal breathing, no panting. At the provided 512px cell size the upper chest expands by 8 pixels TOTAL WIDTH at peak inhale (4px on each side); shoulder tops rise 6-8px. Exhale relaxes chest by 3-4px total relative to neutral and shoulders lower 3-4px. At final 128px cell size this should be 2-3 pixels shoulder excursion, rather than imperceptible subpixel noise. Change the chest volume and jacket/shirt folds, NOT body scale.
+
+Timeline, row-major order, four unique poses:
+00 top-left: exact neutral reference, torso at baseline.
+01 top-right: inhale peak, upper chest visibly fuller and shoulder line gently lifted as described. Shoulder-to-neck length changes, not the head location. Arms respond by at most 2-3px at this source size.
+02 bottom-left: returning almost to neutral after inhale, with tiny residual chest fullness. This is a descending transition, not a second inhale.
+03 bottom-right: relaxed exhale trough, shoulders slightly lower and shirt/chest volume smaller; close enough to neutral for a smooth loop back to 00.
+
+IMMOBILE REGIONS: both boots, socks, shins, knees, shorts/pelvis/waist, face, eyes, nose, ears and entire hair silhouette must stay EXACTLY in the same pixel positions and have identical shape, size, color and texture in every cell. Duplicate them faithfully, do not reinterpret or repaint them. Head stays absolutely still: no lift, bob, nod, rotation or blink. Waist stays still. Only the upper chest, shoulder garment and tiny passive sleeve/scarf-fold changes carry the breathing. Do not translate the whole figure. Do not enlarge or shrink the entire sprite. No forward/back rocking, side sway, stepping, foot movement, arm swing or new stance.
+
+Keep fixed 2x2 equal square cells, identical per-cell coordinates, enough transparent margins, original left-upper soft lighting. True RGBA transparent background, no checkerboard paint, no ground shadow, no text, no panel borders, no added objects. Output one transparent square sprite sheet. Prioritize a locked lower body and head, with clearly visible chest/shoulder breathing between the four complete frames.

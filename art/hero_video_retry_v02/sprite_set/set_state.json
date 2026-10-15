@@ -1,0 +1,111 @@
+{
+  "schema": "video2dsprite.sprite_set_state.v1",
+  "tool": {
+    "name": "sprite_set",
+    "version": "0.4.0"
+  },
+  "plan": {
+    "path": "set_plan.json",
+    "sha256": "47d84f6bdf795a5123a7f0ffbc48571e323553ad5e66db28b39fdd171b1e7b1a"
+  },
+  "createdAt": "2026-10-15T04:32:18.804Z",
+  "runs": 1,
+  "actions": {
+    "front-idle": {
+      "status": "no-route",
+      "round": 1,
+      "fixes": [],
+      "job": {
+        "dir": "actions/front-idle/job",
+        "job": "actions/front-idle/job/registration_job.json",
+        "sha256": "5de8e17553af909a5f412394c3aa8a266dd006546b7db38019544a6f323f3ff2",
+        "input": "actions/front-idle/job/input.png",
+        "referenceScale": 1.0,
+        "keyColor": "magenta",
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "warnings": 4
+      },
+      "takes": [
+        {
+          "take": 1,
+          "round": 1,
+          "dir": "actions/front-idle/takes/t01",
+          "status": "no-route",
+          "createdAt": "2026-10-15T04:32:21.322Z",
+          "prompt": {
+            "path": "actions/front-idle/takes/t01/prompt.txt",
+            "sha256": "65d5788055674e99f938538e10f1e5e275acabf5e4d897890f1dcebf462cff0a"
+          },
+          "fixes": [],
+          "lint": [
+            {
+              "rule": "weak-amplitude",
+              "message": "'tiny' shrinks the generated motion until it is invisible at game size; ask for clearly visible motion with a cycle length instead",
+              "match": "tiny"
+            }
+          ],
+          "stages": {},
+          "message": "no output"
+        }
+      ],
+      "chosen": null,
+      "accepted": null,
+      "output": null,
+      "message": "no generation route (no output); generate the clip with the host tool from actions/front-idle/job/input.png and actions/front-idle/takes/t01/prompt.txt, save it as actions/front-idle/takes/t01/media/clip.mp4 and run again"
+    },
+    "front-walk": {
+      "status": "no-route",
+      "round": 1,
+      "fixes": [],
+      "job": {
+        "dir": "actions/front-walk/job",
+        "job": "actions/front-walk/job/registration_job.json",
+        "sha256": "5400d0224553de056d6c2822395828c53628912b08f70d4bf612e066d68adefb",
+        "input": "actions/front-walk/job/input.png",
+        "referenceScale": 1.0,
+        "keyColor": "magenta",
+        "padding": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "warnings": 4
+      },
+      "takes": [
+        {
+          "take": 1,
+          "round": 1,
+          "dir": "actions/front-walk/takes/t01",
+          "status": "no-route",
+          "createdAt": "2026-10-15T04:32:21.328Z",
+          "prompt": {
+            "path": "actions/front-walk/takes/t01/prompt.txt",
+            "sha256": "7749c85a1df69604f8980bb6f604c01687400b02d82aead821b76b40a5e9f729"
+          },
+          "fixes": [],
+          "lint": [
+            {
+              "rule": "weak-amplitude",
+              "message": "'tiny' shrinks the generated motion until it is invisible at game size; ask for clearly visible motion with a cycle length instead",
+              "match": "tiny"
+            }
+          ],
+          "stages": {},
+          "message": "no output"
+        }
+      ],
+      "chosen": null,
+      "accepted": null,
+      "output": null,
+      "message": "no generation route (no output); generate the clip with the host tool from actions/front-walk/job/input.png and actions/front-walk/takes/t01/prompt.txt, save it as actions/front-walk/takes/t01/media/clip.mp4 and run again"
+    }
+  },
+  "review": null,
+  "updatedAt": "2026-10-15T04:32:22.215Z"
+}

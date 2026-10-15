@@ -1,0 +1,174 @@
+{
+  "schema": "generate2dsprite.master.v1",
+  "tool": {
+    "name": "master_still",
+    "version": "0.4.0"
+  },
+  "created": "2026-10-15T02:50:32.247Z",
+  "name": "windrest-wanderer",
+  "subject": "an original young adult wilderness wanderer",
+  "identity_recap": "original chestnut-haired wanderer with tiny dark eyes, sage jacket, oatmeal shirt, ochre neckerchief, brown shorts, cream socks and brown boots",
+  "facing": "front",
+  "view": "slightly elevated top-down 2D game view, head top and front visible",
+  "finish": "hd",
+  "class": "hero",
+  "framing": {
+    "canvas": [
+      1024,
+      1024
+    ],
+    "subject_height_px": 788,
+    "top_margin_px": 138,
+    "lead_px": 0,
+    "preset": "hero",
+    "subject_bbox": [
+      343,
+      138,
+      682,
+      926
+    ],
+    "anchor": [
+      523.5,
+      926.0
+    ],
+    "opaque_area_px": 157451,
+    "width_limited": false
+  },
+  "key": "#FF00FF",
+  "files": {
+    "master": {
+      "path": "master.png",
+      "sha256": "d6761971125dc9fb1d089a3508088f4d791df15a91e111c5db4fb9bc0c7ef541",
+      "bytes": 334386,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    "cutout": {
+      "path": "master_rgba.png",
+      "sha256": "2e98c2596f84c3b367c71bb387943a53afff7220d65febc6d5c197a499e0dfd4",
+      "bytes": 396204,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    "source": {
+      "path": "source.png",
+      "sha256": "b5cf99577c02c053236d86760b9654b7c3fc88210d606dbacf8a2bf6de6dcdbf",
+      "bytes": 710235,
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    "spec": {
+      "path": "spec.json",
+      "sha256": "ae0b643990eaf1c18b5b489c262f5a5664a5630ae3e3702b766c52d6e8053bc0",
+      "bytes": 1171
+    },
+    "prompt": {
+      "path": "prompt.txt",
+      "sha256": "b3b09aa563badb2961e0aaa7d5b23019938564e07212554c3e36e078bbce491e",
+      "bytes": 1893
+    }
+  },
+  "references": [],
+  "transform": {
+    "mapping": "master = scale * source + offset (continuous pixel coordinates: pixel i spans [i, i + 1))",
+    "source_size": [
+      1254,
+      1254
+    ],
+    "source_subject_bbox": [
+      400,
+      67,
+      867,
+      1153
+    ],
+    "crop_box": [
+      394,
+      61,
+      873,
+      1159
+    ],
+    "crop_margin_px": 6,
+    "scale": 0.7255985267034991,
+    "offset": [
+      52.333333333333314,
+      89.38489871086556
+    ],
+    "canvas": [
+      1024,
+      1024
+    ],
+    "resampler": "lanczos",
+    "premultiplied": true,
+    "alpha_floor_px": 4343,
+    "subject_parts": 1,
+    "ignored_parts": 0,
+    "ignored_px": 0,
+    "source_touches": [],
+    "key_rgb": [
+      255,
+      0,
+      255
+    ]
+  },
+  "route": "host:image_gen",
+  "provenance": {
+    "command": "prompt",
+    "run": "../master-prompt",
+    "take": null,
+    "source_name": "hero.png",
+    "source_sha256": "b5cf99577c02c053236d86760b9654b7c3fc88210d606dbacf8a2bf6de6dcdbf",
+    "media": null,
+    "media_cli_source": null,
+    "edit": null
+  },
+  "matte": {
+    "requested": "soft",
+    "key_estimate": {
+      "key": [
+        255.0,
+        0.0,
+        255.0
+      ],
+      "source": "native_alpha",
+      "valid": false,
+      "ring_share": 0.0,
+      "coverage": 0.0,
+      "distance_from_declared": 0.0
+    },
+    "quality": "native_alpha",
+    "qa": {
+      "key": [
+        255.0,
+        0.0,
+        255.0
+      ],
+      "opaque_key_px": 0,
+      "outer_ring_spill_fraction": 0.0038774352184603746,
+      "semitransparent_fraction": 0.996929424593938,
+      "enclosed_key_pockets": 0,
+      "key_hued_px": 0,
+      "visible_px": 313622,
+      "outer_ring_px": 10574,
+      "thresholds": {
+        "key_tolerance": 48.0,
+        "spill_threshold": 20.0,
+        "min_pocket_area": 16,
+        "opaque_alpha": 128,
+        "spill_hue_balance": 0.5
+      },
+      "method": "forge_matte.matte_qa v1: straight-colour key distance and dominance on the keyed image; two-channel keys count spill only where the key channels are balanced"
+    },
+    "key_choice": {
+      "status": "ok",
+      "overlap_share": 0.0,
+      "rule": "reject a key when more than 0.5% of subject pixels have key dominance >= 40; first acceptable candidate wins"
+    }
+  },
+  "warnings": []
+}

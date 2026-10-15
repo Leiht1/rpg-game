@@ -1,0 +1,29 @@
+{
+  "schema": "generate2dsprite.master_run.v1",
+  "tool": {
+    "name": "master_still",
+    "version": "0.4.0"
+  },
+  "command": "prompt",
+  "created": "2026-10-15T02:50:31.101Z",
+  "name": "windrest-wanderer",
+  "class": "hero",
+  "finish": "hd",
+  "facing": "front",
+  "key": "#FF00FF",
+  "prompt": {
+    "path": "prompt.txt",
+    "sha256": "b3b09aa563badb2961e0aaa7d5b23019938564e07212554c3e36e078bbce491e",
+    "bytes": 1893
+  },
+  "spec": {
+    "path": "spec.json",
+    "sha256": "ae0b643990eaf1c18b5b489c262f5a5664a5630ae3e3702b766c52d6e8053bc0",
+    "bytes": 1171
+  },
+  "references": [],
+  "media": null,
+  "takes": [],
+  "status": "ok",
+  "warnings": []
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "806ec47567cb9ad49835adafbdcffca17f00bfd9ffcb8c75aaf381ec5dce275e",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T07:54:44.270Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T07:54:44.270Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Front idle breathing matching corrected walk complete eyes upright head",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13dd0-2e37-7b80-a90b-2be7b02cd173",
+    "source": "CODEX_HOME/generated_images/01a13dd0-2e37-7b80-a90b-2be7b02cd173/exec-6ed6aad6-e5f0-4791-8f96-c329de8dec2d.png",
+    "sourceSha256": "d9479874ea188bf7175990d3f16fe28665e0609e9dd3e774052369e47502b84c",
+    "sourceMtime": "2026-10-15T07:54:29Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "d9479874ea188bf7175990d3f16fe28665e0609e9dd3e774052369e47502b84c",
+    "bytes": 838991,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

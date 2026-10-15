@@ -1,0 +1,220 @@
+{
+  "right": {
+    "status": "preview_reviewed_pending_user_acceptance",
+    "frameCount": 8,
+    "fps": 8,
+    "uniqueFrameCount": 8,
+    "frameSize": [
+      256,
+      256
+    ],
+    "sheetSize": [
+      1024,
+      512
+    ],
+    "gifCycleMs": 1000,
+    "alphaBboxes": [
+      [
+        80,
+        31,
+        183,
+        191
+      ],
+      [
+        84,
+        32,
+        164,
+        193
+      ],
+      [
+        93,
+        30,
+        176,
+        195
+      ],
+      [
+        74,
+        27,
+        183,
+        190
+      ],
+      [
+        71,
+        26,
+        187,
+        187
+      ],
+      [
+        87,
+        28,
+        164,
+        190
+      ],
+      [
+        95,
+        29,
+        172,
+        195
+      ],
+      [
+        76,
+        26,
+        190,
+        187
+      ]
+    ],
+    "fullBodyHeights": [
+      160,
+      161,
+      165,
+      163,
+      161,
+      162,
+      166,
+      161
+    ],
+    "minimumAlphaMargin": 26,
+    "fullBodyHeightCV": 0.012293086545551432,
+    "adjacentPremultipliedMAE": [
+      0.026597926393151283,
+      0.03515023738145828,
+      0.0432124026119709,
+      0.023448608815670013,
+      0.04141233116388321,
+      0.040068697184324265,
+      0.04593425989151001,
+      0.0393216647207737
+    ],
+    "loopSeamToMedianAdjacentRatio": 0.981356207811947,
+    "sourceEdgeRisks": [],
+    "globalScale": null,
+    "registration": "retain original normalized canvas registration; edited upper-body placement follows the paired reference template",
+    "scope": "preview only, no game integration",
+    "limitations": [
+      "Numerical checks do not establish anatomy, gait, identity stability or a seamless loop."
+    ],
+    "visualReview": {
+      "acceptedForPreview": true,
+      "checks": [
+        "complete character and lower swing-knee/boot pose in frames 3 and 7",
+        "six untouched side frames preserved",
+        "right frame 3 and 7 and left frame 3 inspected in actual browser",
+        "playback resumed"
+      ],
+      "limitations": [
+        "small complete-frame redraw contour differences",
+        "existing cross-take chest and rhythm changes remain",
+        "mirrored lighting on left"
+      ]
+    }
+  },
+  "left": {
+    "status": "preview_reviewed_pending_user_acceptance",
+    "frameCount": 8,
+    "fps": 8,
+    "uniqueFrameCount": 8,
+    "frameSize": [
+      256,
+      256
+    ],
+    "sheetSize": [
+      1024,
+      512
+    ],
+    "gifCycleMs": 1000,
+    "alphaBboxes": [
+      [
+        73,
+        31,
+        176,
+        191
+      ],
+      [
+        92,
+        32,
+        172,
+        193
+      ],
+      [
+        80,
+        30,
+        163,
+        195
+      ],
+      [
+        73,
+        27,
+        182,
+        190
+      ],
+      [
+        69,
+        26,
+        185,
+        187
+      ],
+      [
+        92,
+        28,
+        169,
+        190
+      ],
+      [
+        84,
+        29,
+        161,
+        195
+      ],
+      [
+        66,
+        26,
+        180,
+        187
+      ]
+    ],
+    "fullBodyHeights": [
+      160,
+      161,
+      165,
+      163,
+      161,
+      162,
+      166,
+      161
+    ],
+    "minimumAlphaMargin": 26,
+    "fullBodyHeightCV": 0.012293086545551432,
+    "adjacentPremultipliedMAE": [
+      0.026597926393151283,
+      0.03515023738145828,
+      0.0432124026119709,
+      0.023448608815670013,
+      0.04141233116388321,
+      0.040068693459033966,
+      0.04593425989151001,
+      0.0393216609954834
+    ],
+    "loopSeamToMedianAdjacentRatio": 0.9813562060785853,
+    "sourceEdgeRisks": [],
+    "globalScale": null,
+    "registration": "retain original normalized canvas registration; edited upper-body placement follows the paired reference template",
+    "scope": "preview only, no game integration",
+    "limitations": [
+      "Numerical checks do not establish anatomy, gait, identity stability or a seamless loop."
+    ],
+    "visualReview": {
+      "acceptedForPreview": true,
+      "checks": [
+        "complete character and lower swing-knee/boot pose in frames 3 and 7",
+        "six untouched side frames preserved",
+        "right frame 3 and 7 and left frame 3 inspected in actual browser",
+        "playback resumed"
+      ],
+      "limitations": [
+        "small complete-frame redraw contour differences",
+        "existing cross-take chest and rhythm changes remain",
+        "mirrored lighting on left"
+      ]
+    }
+  }
+}

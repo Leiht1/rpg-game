@@ -1,0 +1,29 @@
+{
+	"camera_zoom_range": [
+		0.65,
+		1.65
+	],
+	"collision_center_distance": {
+		"0": 22.67578125,
+		"2": 27.44921875
+	},
+	"complete_character_sprites": 1,
+	"failures": [],
+	"lake_shore_stopped": true,
+	"movement_distances_30_ticks": [
+		50.009765625,
+		49.98046875,
+		50.009765625,
+		49.98046875,
+		49.9877586364746,
+		49.9877586364746,
+		49.9877586364746,
+		49.9877586364746
+	],
+	"normal_speed_px_per_second": 100.0,
+	"physical_WASD": true,
+	"rapid_switch_and_stop_cycles": 180,
+	"status": "pass",
+	"stride_world_units": 66.6666666666667,
+	"walk_frames_per_direction": 8
+}

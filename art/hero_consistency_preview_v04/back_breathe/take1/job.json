@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "63a0b2aa6d49cc4217b801c607903c7460c7ed52e75adce88be42d502fe32cf1",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T07:56:15.136Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T07:56:15.136Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Back idle breathing matching corrected walk proportions colors upright head",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13dd0-2e37-7b80-a90b-2be7b02cd173",
+    "source": "CODEX_HOME/generated_images/01a13dd0-2e37-7b80-a90b-2be7b02cd173/exec-43923637-4b99-478c-8944-27c9fabc1aef.png",
+    "sourceSha256": "337f233007202bb3cda9352fe3444a26bcb6942b6394a791dcd4977fddddf789",
+    "sourceMtime": "2026-10-15T07:55:58Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "337f233007202bb3cda9352fe3444a26bcb6942b6394a791dcd4977fddddf789",
+    "bytes": 785931,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

@@ -1,0 +1,365 @@
+{
+  "schema": "windrest.character_template.v1",
+  "version": "windrest-character-template-2",
+  "canvas": [
+    128,
+    128
+  ],
+  "anchor": [
+    64,
+    112
+  ],
+  "directions": {
+    "front": {
+      "neutral": "../final_sprite/front_idle_00.png",
+      "frames": [
+        {
+          "key": "front_idle_00",
+          "file": "../final_sprite/front_idle_00.png",
+          "sha256": "2d3aed9e46a51dbab619126458994cf41b1a61746a73c4e4d8b90aa5f2beda50",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": null
+        },
+        {
+          "key": "front_walk_00",
+          "file": "../final_sprite/front_walk_00.png",
+          "sha256": "2a0c6ed1c26e1a04784b6602996172f9b922d9c8eecf759f9aa7ff194c152112",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.0
+        },
+        {
+          "key": "front_walk_01",
+          "file": "../final_sprite/front_walk_01.png",
+          "sha256": "20b5e8d0548078939e9c185d256de1d339f9155324ebc3b0b4256ec980429251",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.125
+        },
+        {
+          "key": "front_walk_02",
+          "file": "../final_sprite/front_walk_02.png",
+          "sha256": "a581d2dd27d845fd01f822845cc4824bd10ce66564123026b377458ffb284273",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.25
+        },
+        {
+          "key": "front_walk_03",
+          "file": "../final_sprite/front_walk_03.png",
+          "sha256": "be80dd2d2987cda1a24c7e3668ee18c29b22b64bf14af9b6cbf67d3fd4e68742",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.375
+        },
+        {
+          "key": "front_walk_04",
+          "file": "../final_sprite/front_walk_04.png",
+          "sha256": "c0ecef6514093fd3a19bc5c8bf5ab09416c9c4d298e3f13916869f768d0b8dd5",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.5
+        },
+        {
+          "key": "front_walk_05",
+          "file": "../final_sprite/front_walk_05.png",
+          "sha256": "215041bab015542be5f796bc5c2d934b37244e549deb422b8ecb6adc351b24ce",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.625
+        },
+        {
+          "key": "front_walk_06",
+          "file": "../final_sprite/front_walk_06.png",
+          "sha256": "a39be6d0baa01e96c933419758f1240a6bf13259b8e6afaf65011ef96c4c3266",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.75
+        },
+        {
+          "key": "front_walk_07",
+          "file": "../final_sprite/front_walk_07.png",
+          "sha256": "370b3a79adb16cbd26cf0782374a5bb4d73debc312eda2ed7923f683546f292e",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.875
+        }
+      ],
+      "registration": "../animation/registration.json",
+      "walk_source_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "back": {
+      "neutral": "../final_sprite/back_idle_00.png",
+      "frames": [
+        {
+          "key": "back_idle_00",
+          "file": "../final_sprite/back_idle_00.png",
+          "sha256": "e6f877c0468197bf5286ad0355fe1c1dfd2b060da512109704ab8f687996e7df",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": null
+        },
+        {
+          "key": "back_walk_00",
+          "file": "../final_sprite/back_walk_00.png",
+          "sha256": "03fb8a26045f6e29af2aba4b196a672377cc2f2e8b4853c65638f9a3f8f895d0",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.0
+        },
+        {
+          "key": "back_walk_01",
+          "file": "../final_sprite/back_walk_01.png",
+          "sha256": "ff1a02d6f8254d34a74be5895a95d5ebdb664ee4f62d12c4eab08ea3e8a379bb",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.125
+        },
+        {
+          "key": "back_walk_02",
+          "file": "../final_sprite/back_walk_02.png",
+          "sha256": "3647dc3b2b500ee63e7438242b7b8488051ab27ace2ec7a7ee11b7dfc028dacb",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.25
+        },
+        {
+          "key": "back_walk_03",
+          "file": "../final_sprite/back_walk_03.png",
+          "sha256": "8dfe44676b406b6b814aa7988e4250badd1346177dabb759c2eb71ecb6a01ee3",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.375
+        },
+        {
+          "key": "back_walk_04",
+          "file": "../final_sprite/back_walk_04.png",
+          "sha256": "a3023955dc698ce2b4f5988154c1aeb8b9b1486383ab623c2f71a6684cf0cc0f",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.5
+        },
+        {
+          "key": "back_walk_05",
+          "file": "../final_sprite/back_walk_05.png",
+          "sha256": "4f2760611cea34027f6bd8201d56f31b5da3adc873f78d6c36b2fa89644c2ca9",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.625
+        },
+        {
+          "key": "back_walk_06",
+          "file": "../final_sprite/back_walk_06.png",
+          "sha256": "5b832aeb7e531ceed0e1e9446d0b785829ff756a688c6f6d213a5ca765e55656",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.75
+        },
+        {
+          "key": "back_walk_07",
+          "file": "../final_sprite/back_walk_07.png",
+          "sha256": "cfea926a9598f5e7060ef575d547763eb459df01530bf5f29cbca4ae95f7fcdf",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.875
+        }
+      ],
+      "registration": "../animation/registration.json",
+      "walk_source_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "side": {
+      "neutral": "../final_sprite/side_idle_00.png",
+      "frames": [
+        {
+          "key": "side_idle_00",
+          "file": "../final_sprite/side_idle_00.png",
+          "sha256": "85398c42832a7a293060c791f5d030fe5a3c3df786902afa9793f7b2f7344b6d",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": null
+        },
+        {
+          "key": "side_walk_00",
+          "file": "../final_sprite/side_walk_00.png",
+          "sha256": "8fa84f71c37fcb06a22a6734ab5ef5beb562c2a7a9fa474ad4728478d1787f90",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.0
+        },
+        {
+          "key": "side_walk_01",
+          "file": "../final_sprite/side_walk_01.png",
+          "sha256": "741d7d3c203291e415039553298943cb781547e2a2b769c3a8465a5df2e512de",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.125
+        },
+        {
+          "key": "side_walk_02",
+          "file": "../final_sprite/side_walk_02.png",
+          "sha256": "49ff8308abfe4df7f17d360c8314c9481bf2ea1f305a799d5f40985dda55e931",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.25
+        },
+        {
+          "key": "side_walk_03",
+          "file": "../final_sprite/side_walk_03.png",
+          "sha256": "15a82bc0b371cdd900a9a991782df34018f1e14d2f8178ddf4021031ed907098",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.375
+        },
+        {
+          "key": "side_walk_04",
+          "file": "../final_sprite/side_walk_04.png",
+          "sha256": "c20f7df9d26dd6ce5fb8e8041e1c831c221f596cfdd27480b11ec2b7e720b53f",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.5
+        },
+        {
+          "key": "side_walk_05",
+          "file": "../final_sprite/side_walk_05.png",
+          "sha256": "18329b5826fd2c6f9aea6357e44dbbaca383f831c222dbd1f3477abc14f0f9ea",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.625
+        },
+        {
+          "key": "side_walk_06",
+          "file": "../final_sprite/side_walk_06.png",
+          "sha256": "e17c4861c974947844fe2096661a1775434072d78162b0cb5430a318f0d984d6",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.75
+        },
+        {
+          "key": "side_walk_07",
+          "file": "../final_sprite/side_walk_07.png",
+          "sha256": "9013e39056d88ad1fd471a6d23aa84dbb8843ab78a66ad5c5769fa49e16bf60a",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.875
+        }
+      ],
+      "registration": "../animation/registration.json",
+      "walk_source_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  "modules": [
+    "base_body",
+    "hair",
+    "top",
+    "bottom",
+    "shoes",
+    "accessory"
+  ],
+  "rendering": "complete character frames; future modules must be redrawn per frame",
+  "base_body_status": "hidden anatomy remains a future redraw prerequisite",
+  "timing": {
+    "tick_hz": 60,
+    "idle_ticks_per_frame": 60,
+    "walk_ticks_per_frame": 5,
+    "walk_cycle_frames": 8,
+    "speed_ref": 100,
+    "stride_world_units": 66.66666666666667
+  },
+  "phase_semantics": [
+    "contact_a",
+    "down_a",
+    "passing_a",
+    "up_a",
+    "contact_b",
+    "down_b",
+    "passing_b",
+    "up_b"
+  ],
+  "side_mirror": {
+    "left": "full-frame flip_h",
+    "pivot_x": 64,
+    "asymmetry_requires_new_template": true
+  }
+}

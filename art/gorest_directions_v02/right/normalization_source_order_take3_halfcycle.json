@@ -1,0 +1,136 @@
+{
+  "frameCount": 4,
+  "cellSize": 256,
+  "frameSize": [
+    256,
+    256
+  ],
+  "sheetSize": [
+    512,
+    512
+  ],
+  "sourceSheetSize": [
+    1254,
+    1254
+  ],
+  "sourceCells": [
+    [
+      6,
+      6,
+      632,
+      610
+    ],
+    [
+      644,
+      6,
+      1248,
+      610
+    ],
+    [
+      6,
+      622,
+      632,
+      1248
+    ],
+    [
+      644,
+      622,
+      1248,
+      1248
+    ]
+  ],
+  "globalScale": 0.30660333137649165,
+  "safePadding": 24,
+  "safeFramePolicy": "global_uniform_scale_preserve_anchor_with_minimum_edge_padding",
+  "sourceEdgePolicy": "flag_source_cells_whose_alpha_touches_or_nears_a_detected_cell_edge",
+  "sourceEdgeThreshold": 2,
+  "sourceEdgeRisks": [],
+  "frameBboxes": [
+    [
+      78,
+      29,
+      107,
+      166
+    ],
+    [
+      82,
+      30,
+      82,
+      166
+    ],
+    [
+      93,
+      30,
+      93,
+      169
+    ],
+    [
+      72,
+      25,
+      113,
+      169
+    ]
+  ],
+  "rootAnchors": [
+    [
+      128.0,
+      78.08
+    ],
+    [
+      128.0,
+      78.08
+    ],
+    [
+      128.0,
+      78.08
+    ],
+    [
+      128.0,
+      78.08
+    ]
+  ],
+  "gridPolicy": "auto_detect_grid_from_sprite_distances_then_fallback_proportional",
+  "gridDetection": {
+    "mode": "auto_detected",
+    "xRuns": [
+      [
+        197,
+        554
+      ],
+      [
+        723,
+        1089
+      ]
+    ],
+    "yRuns": [
+      [
+        47,
+        590
+      ],
+      [
+        642,
+        1193
+      ]
+    ],
+    "xBounds": [
+      0,
+      638,
+      1254
+    ],
+    "yBounds": [
+      0,
+      616,
+      1254
+    ]
+  },
+  "proportionPolicy": "uniform_scale_preserve_input_character_proportions",
+  "rootAnchorPolicy": "fixed_upper_body_centroid_anchor_character_position_stable",
+  "normalization": "global_uniform_scale_fixed_root_anchor_auto_grid_no_nonuniform_scaling",
+  "createdTime": "2026-10-15T13:23:40",
+  "frames": [
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"512\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"512\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"512\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"512\" height=\"512\" preserveAspectRatio=\"none\"/></svg>"
+  ]
+}

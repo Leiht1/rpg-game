@@ -1,0 +1,11 @@
+{
+  "status": "rejected_motion",
+  "identity": "recognizable and broadly preserved",
+  "observations": [
+    "The sixteen cells do not follow the requested chronological two-step gait.",
+    "Many contact poses repeat the same forward leg; frame nine does not provide the opposite contact from frame one.",
+    "The same arm remains forward in most cells rather than alternating against the legs.",
+    "Per-cell padding is substantially smaller than requested, though Gorest source-edge checks detect no cell-edge contact."
+  ],
+  "decision": "Keep source and normalization as evidence; request one full-sheet correction with eight explicit opposite-half-cycle poses."
+}

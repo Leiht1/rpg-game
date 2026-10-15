@@ -1,0 +1,639 @@
+{
+  "measurementScope": "Image matching and alpha-band width are diagnostics, not anatomical proof. Old frames are only translated in this measurement, never changed in the comparison preview.",
+  "regions": {
+    "head": [
+      15,
+      51
+    ],
+    "legs": [
+      81,
+      116
+    ],
+    "chest": [
+      52,
+      77
+    ],
+    "shoulderBand": [
+      54,
+      64
+    ]
+  },
+  "directions": {
+    "front": {
+      "v01": {
+        "headRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              0.0,
+              -0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0631,
+              0.0426
+            ],
+            "zeroShiftRms": 0.023837
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0,
+              0.4075
+            ],
+            "zeroShiftRms": 0.075171
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0034,
+              0.4024
+            ],
+            "zeroShiftRms": 0.075801
+          }
+        ],
+        "legsRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              0.0,
+              0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0359,
+              -0.0043
+            ],
+            "zeroShiftRms": 0.020106
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0,
+              0.6188
+            ],
+            "zeroShiftRms": 0.093988
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.015,
+              0.6156
+            ],
+            "zeroShiftRms": 0.094251
+          }
+        ],
+        "maxStaticRegionResidualShiftPx": 0.6188,
+        "shoulderBandAlphaWidthPx": [
+          29.03764705882353,
+          28.95450980392157,
+          29.74313725490196,
+          29.563529411764705
+        ],
+        "shoulderBandWidthRangePx": 0.788627450980389,
+        "chestRmsAfterEstimatedStaticRegionTranslation": [
+          0.0,
+          0.024861296638846397,
+          0.022557061165571213,
+          0.018844278529286385
+        ]
+      },
+      "v02": {
+        "headRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              0.0,
+              -0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0036,
+              -0.0143
+            ],
+            "zeroShiftRms": 0.014049
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0009,
+              -0.052
+            ],
+            "zeroShiftRms": 0.018926
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0003,
+              -0.0532
+            ],
+            "zeroShiftRms": 0.019797
+          }
+        ],
+        "legsRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0,
+              0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0002,
+              0.032
+            ],
+            "zeroShiftRms": 0.016081
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0,
+              0.0927
+            ],
+            "zeroShiftRms": 0.028588
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0012,
+              0.1
+            ],
+            "zeroShiftRms": 0.028954
+          }
+        ],
+        "maxStaticRegionResidualShiftPx": 0.10000719974081866,
+        "shoulderBandAlphaWidthPx": [
+          29.898823529411764,
+          31.282745098039214,
+          30.7721568627451,
+          30.535686274509807
+        ],
+        "shoulderBandWidthRangePx": 1.38392156862745,
+        "chestRmsAfterEstimatedStaticRegionTranslation": [
+          0.0,
+          0.048581842333078384,
+          0.03303396701812744,
+          0.02729976736009121
+        ]
+      }
+    },
+    "back": {
+      "v01": {
+        "headRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              0.0,
+              0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.5143,
+              0.1057
+            ],
+            "zeroShiftRms": 0.076184
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0,
+              -0.715
+            ],
+            "zeroShiftRms": 0.106044
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.5085,
+              -0.8437
+            ],
+            "zeroShiftRms": 0.129855
+          }
+        ],
+        "legsRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              0.0,
+              0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.4868,
+              0.0057
+            ],
+            "zeroShiftRms": 0.103151
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0,
+              -0.4165
+            ],
+            "zeroShiftRms": 0.067153
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.505,
+              -0.5233
+            ],
+            "zeroShiftRms": 0.130399
+          }
+        ],
+        "maxStaticRegionResidualShiftPx": 0.9850898131642617,
+        "shoulderBandAlphaWidthPx": [
+          30.263529411764704,
+          30.575686274509803,
+          29.47098039215686,
+          29.312941176470588
+        ],
+        "shoulderBandWidthRangePx": 1.2627450980392148,
+        "chestRmsAfterEstimatedStaticRegionTranslation": [
+          0.0,
+          0.023306183516979218,
+          0.01515287347137928,
+          0.02398616075515747
+        ]
+      },
+      "v02": {
+        "headRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0,
+              0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0221,
+              0.0002
+            ],
+            "zeroShiftRms": 0.016543
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.004,
+              0.0109
+            ],
+            "zeroShiftRms": 0.015033
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0027,
+              -0.0033
+            ],
+            "zeroShiftRms": 0.014502
+          }
+        ],
+        "legsRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              0.0,
+              -0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0025,
+              -0.0075
+            ],
+            "zeroShiftRms": 0.011409
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0026,
+              -0.0126
+            ],
+            "zeroShiftRms": 0.013206
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0025,
+              -0.0121
+            ],
+            "zeroShiftRms": 0.015072
+          }
+        ],
+        "maxStaticRegionResidualShiftPx": 0.022100904958847277,
+        "shoulderBandAlphaWidthPx": [
+          29.709019607843135,
+          30.288627450980393,
+          29.918823529411764,
+          29.682352941176468
+        ],
+        "shoulderBandWidthRangePx": 0.6062745098039244,
+        "chestRmsAfterEstimatedStaticRegionTranslation": [
+          0.0,
+          0.024633901193737984,
+          0.012636889703571796,
+          0.00866122730076313
+        ]
+      }
+    },
+    "left": {
+      "v01": {
+        "headRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              0.0,
+              -0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0226,
+              0.2748
+            ],
+            "zeroShiftRms": 0.048418
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0186,
+              0.5345
+            ],
+            "zeroShiftRms": 0.083575
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0692,
+              0.3067
+            ],
+            "zeroShiftRms": 0.057241
+          }
+        ],
+        "legsRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              0.0,
+              0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0378,
+              0.0699
+            ],
+            "zeroShiftRms": 0.02113
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0002,
+              0.5259
+            ],
+            "zeroShiftRms": 0.080674
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0333,
+              0.4736
+            ],
+            "zeroShiftRms": 0.075429
+          }
+        ],
+        "maxStaticRegionResidualShiftPx": 0.5348235316438498,
+        "shoulderBandAlphaWidthPx": [
+          17.33686274509804,
+          18.201568627450982,
+          17.51843137254902,
+          17.17137254901961
+        ],
+        "shoulderBandWidthRangePx": 1.0301960784313735,
+        "chestRmsAfterEstimatedStaticRegionTranslation": [
+          0.0,
+          0.03880803659558296,
+          0.014110194519162178,
+          0.016388623043894768
+        ]
+      },
+      "v02": {
+        "headRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              0.0,
+              0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0087,
+              -0.0043
+            ],
+            "zeroShiftRms": 0.013568
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0034,
+              -0.0508
+            ],
+            "zeroShiftRms": 0.017967
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0,
+              -0.0575
+            ],
+            "zeroShiftRms": 0.020636
+          }
+        ],
+        "legsRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              0.0,
+              -0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0097,
+              0.0124
+            ],
+            "zeroShiftRms": 0.013048
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0001,
+              0.0828
+            ],
+            "zeroShiftRms": 0.020089
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0146,
+              0.0916
+            ],
+            "zeroShiftRms": 0.02418
+          }
+        ],
+        "maxStaticRegionResidualShiftPx": 0.09275623968229847,
+        "shoulderBandAlphaWidthPx": [
+          18.041568627450978,
+          20.301960784313728,
+          19.16549019607843,
+          17.713725490196076
+        ],
+        "shoulderBandWidthRangePx": 2.588235294117652,
+        "chestRmsAfterEstimatedStaticRegionTranslation": [
+          0.0,
+          0.054658688604831696,
+          0.03259117156267166,
+          0.02135842852294445
+        ]
+      }
+    },
+    "right": {
+      "v01": {
+        "headRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0,
+              -0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0226,
+              0.2748
+            ],
+            "zeroShiftRms": 0.048418
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0186,
+              0.5345
+            ],
+            "zeroShiftRms": 0.083575
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0692,
+              0.3067
+            ],
+            "zeroShiftRms": 0.057241
+          }
+        ],
+        "legsRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0,
+              -0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0378,
+              0.0699
+            ],
+            "zeroShiftRms": 0.02113
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0002,
+              0.5259
+            ],
+            "zeroShiftRms": 0.080674
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0333,
+              0.4736
+            ],
+            "zeroShiftRms": 0.075429
+          }
+        ],
+        "maxStaticRegionResidualShiftPx": 0.5348235316438498,
+        "shoulderBandAlphaWidthPx": [
+          17.33686274509804,
+          18.201568627450982,
+          17.51843137254902,
+          17.17137254901961
+        ],
+        "shoulderBandWidthRangePx": 1.0301960784313735,
+        "chestRmsAfterEstimatedStaticRegionTranslation": [
+          0.0,
+          0.03880803659558296,
+          0.014110193587839603,
+          0.016388623043894768
+        ]
+      },
+      "v02": {
+        "headRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0,
+              0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0087,
+              -0.0043
+            ],
+            "zeroShiftRms": 0.013568
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              0.0034,
+              -0.0508
+            ],
+            "zeroShiftRms": 0.017967
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0,
+              -0.0575
+            ],
+            "zeroShiftRms": 0.020636
+          }
+        ],
+        "legsRegionResidual": [
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0,
+              -0.0
+            ],
+            "zeroShiftRms": 0.0
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0097,
+              0.0124
+            ],
+            "zeroShiftRms": 0.013048
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0001,
+              0.0828
+            ],
+            "zeroShiftRms": 0.020089
+          },
+          {
+            "bestRigidResidualShiftPx": [
+              -0.0146,
+              0.0916
+            ],
+            "zeroShiftRms": 0.02418
+          }
+        ],
+        "maxStaticRegionResidualShiftPx": 0.09275623968229847,
+        "shoulderBandAlphaWidthPx": [
+          18.041568627450978,
+          20.301960784313728,
+          19.16549019607843,
+          17.713725490196076
+        ],
+        "shoulderBandWidthRangePx": 2.588235294117652,
+        "chestRmsAfterEstimatedStaticRegionTranslation": [
+          0.0,
+          0.054658692330121994,
+          0.03259117156267166,
+          0.02135842852294445
+        ]
+      }
+    }
+  }
+}

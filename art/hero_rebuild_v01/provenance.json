@@ -1,0 +1,285 @@
+{
+  "schema": "windrest.character_provenance.v1",
+  "date": "2026-10-15",
+  "template_version": "windrest-character-template-1",
+  "skill": "C:/Users/HT/.codex/skills/generate2dsprite/SKILL.md",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "actual_image_calls": 6,
+  "video_route": "no-route",
+  "underlying_image_model": "unknown",
+  "cost_note": "estimateUsd 0.0 records subscription quota with no per-call USD quote; actual dollar cost is not known",
+  "external_downloaded_art": false,
+  "commercial_game_art": false,
+  "license_note": "Generated images are subject to the user account and tool-provider terms; no public-domain or open-source license assertion. Existing approved identity kept.",
+  "reference_art": [
+    {
+      "file": "assets/hero/reference/identity.png",
+      "sha256": "b5cf99577c02c053236d86760b9654b7c3fc88210d606dbacf8a2bf6de6dcdbf",
+      "source": "existing approved original generated project character reference; see art/ASSET_MANIFEST.md for initial generation provenance"
+    },
+    {
+      "file": "assets/hero/reference/turnaround.png",
+      "sha256": "22ecb37373b44d7c3511aa6b62b210251bbd203bd5ea9784c217af0efb92a9e4",
+      "source": "existing approved original generated project character reference; see art/ASSET_MANIFEST.md for initial generation provenance"
+    }
+  ],
+  "generations": [
+    {
+      "folder": "raw_front",
+      "use": "rejected: phase errors; no runtime frames",
+      "route": "local:codex-cli",
+      "requestedModel": "codex-image_gen",
+      "underlying_image_model": "unknown",
+      "prompt": "raw_front/prompt.txt",
+      "submitted_prompt_sha256": "d8dfa6b702dca28dd8436e70fac570f7226658e5ea311599b85d204e7d6d74b5",
+      "prompt_hash_normalization": "UTF-8 text, universal newlines, strip leading/trailing whitespace, matching route_media.py",
+      "prompt_file_sha256": "a0102b7933771aed7edca3224156e0738fa7d97eb2cc7f61b989a4e931b265ca",
+      "receipt": "raw_front/job.json",
+      "references": [
+        {
+          "sha256": "b5cf99577c02c053236d86760b9654b7c3fc88210d606dbacf8a2bf6de6dcdbf",
+          "bytes": 710235
+        },
+        {
+          "sha256": "22ecb37373b44d7c3511aa6b62b210251bbd203bd5ea9784c217af0efb92a9e4",
+          "bytes": 2144238
+        }
+      ],
+      "artifact": {
+        "path": "generated.png",
+        "sha256": "faab494657ed7969ef7da471b998d25b3d89abcd2ee78886f45c79ddd327bd0b",
+        "bytes": 1284872,
+        "format": "PNG",
+        "size": [
+          1448,
+          1086
+        ]
+      },
+      "estimate": {
+        "usd": 0.0,
+        "currency": "USD",
+        "pricesVersion": "2026-10-06",
+        "items": [],
+        "basis": "subscription quota call: no per-call USD price; counted by call caps"
+      },
+      "completedAt": "2026-10-15T03:09:24.610Z"
+    },
+    {
+      "folder": "front_walk_take2",
+      "use": "accepted four complete front walk poses; cell order 0,3,2,1",
+      "route": "local:codex-cli",
+      "requestedModel": "codex-image_gen",
+      "underlying_image_model": "unknown",
+      "prompt": "front_walk_take2/prompt.txt",
+      "submitted_prompt_sha256": "58cbe5567f04f5401ef675baf298bb2703001fb611e2a49df52c0aa4647a46a1",
+      "prompt_hash_normalization": "UTF-8 text, universal newlines, strip leading/trailing whitespace, matching route_media.py",
+      "prompt_file_sha256": "8df48368331dbde7594d5389af4cd3a8687afd68c2baae78155715a0e9631d30",
+      "receipt": "front_walk_take2/job.json",
+      "references": [
+        {
+          "sha256": "b5cf99577c02c053236d86760b9654b7c3fc88210d606dbacf8a2bf6de6dcdbf",
+          "bytes": 710235
+        },
+        {
+          "sha256": "59bf7ad66b3b5d6850e4074e4a6dd361177e6dfd7070fa48995b2927b7325c72",
+          "bytes": 16696
+        },
+        {
+          "sha256": "22ecb37373b44d7c3511aa6b62b210251bbd203bd5ea9784c217af0efb92a9e4",
+          "bytes": 2144238
+        }
+      ],
+      "artifact": {
+        "path": "generated.png",
+        "sha256": "287abc8bff110a70a6f40922b03b07a8fe8f10bc12490af1a2c0fef9a2e3f547",
+        "bytes": 964927,
+        "format": "PNG",
+        "size": [
+          1254,
+          1254
+        ]
+      },
+      "estimate": {
+        "usd": 0.0,
+        "currency": "USD",
+        "pricesVersion": "2026-10-06",
+        "items": [],
+        "basis": "subscription quota call: no per-call USD price; counted by call caps"
+      },
+      "completedAt": "2026-10-15T03:14:56.891Z"
+    },
+    {
+      "folder": "back_walk",
+      "use": "accepted cells 0,2,3; cell 1 rejected for repeating support leg",
+      "route": "local:codex-cli",
+      "requestedModel": "codex-image_gen",
+      "underlying_image_model": "unknown",
+      "prompt": "back_walk/prompt.txt",
+      "submitted_prompt_sha256": "41ac8b6ceae784cebc42623938f8997d4bb5fa56be2d813d5c75aa1f5e432cad",
+      "prompt_hash_normalization": "UTF-8 text, universal newlines, strip leading/trailing whitespace, matching route_media.py",
+      "prompt_file_sha256": "1fc134feefae3d17b1fb7873e5d5a5fd9d2f83fadc6cbdd6b04e9d3be2ac2b38",
+      "receipt": "back_walk/job.json",
+      "references": [
+        {
+          "sha256": "b5cf99577c02c053236d86760b9654b7c3fc88210d606dbacf8a2bf6de6dcdbf",
+          "bytes": 710235
+        },
+        {
+          "sha256": "30c689dd3191cd0a3f83b9e5a7a952eb3bed009208ad9fe808f562996576897e",
+          "bytes": 16736
+        },
+        {
+          "sha256": "22ecb37373b44d7c3511aa6b62b210251bbd203bd5ea9784c217af0efb92a9e4",
+          "bytes": 2144238
+        }
+      ],
+      "artifact": {
+        "path": "generated.png",
+        "sha256": "593ba9ed6807271c77482e70f86f1a17d15fd4d02cf74e2e7b9458cb7f138157",
+        "bytes": 918890,
+        "format": "PNG",
+        "size": [
+          1254,
+          1254
+        ]
+      },
+      "estimate": {
+        "usd": 0.0,
+        "currency": "USD",
+        "pricesVersion": "2026-10-06",
+        "items": [],
+        "basis": "subscription quota call: no per-call USD price; counted by call caps"
+      },
+      "completedAt": "2026-10-15T03:20:07.610Z"
+    },
+    {
+      "folder": "side_walk",
+      "use": "accepted four complete right-profile walk poses; cell order 0,1,2,3",
+      "route": "local:codex-cli",
+      "requestedModel": "codex-image_gen",
+      "underlying_image_model": "unknown",
+      "prompt": "side_walk/prompt.txt",
+      "submitted_prompt_sha256": "c5bd714342e7f7f80b184efb902b97d7999f6f7afe13f94aa4af7bdef20da22a",
+      "prompt_hash_normalization": "UTF-8 text, universal newlines, strip leading/trailing whitespace, matching route_media.py",
+      "prompt_file_sha256": "2d22fd13a5c123d6728c7d0b3e9691c779d3d539c4a8f7284b48c5dfea38ac01",
+      "receipt": "side_walk/job.json",
+      "references": [
+        {
+          "sha256": "b5cf99577c02c053236d86760b9654b7c3fc88210d606dbacf8a2bf6de6dcdbf",
+          "bytes": 710235
+        },
+        {
+          "sha256": "439b47bb3291d091a9c2f3ff5a070b51f7cc807f6107d954b6347ffe47c93b15",
+          "bytes": 18355
+        },
+        {
+          "sha256": "22ecb37373b44d7c3511aa6b62b210251bbd203bd5ea9784c217af0efb92a9e4",
+          "bytes": 2144238
+        }
+      ],
+      "artifact": {
+        "path": "generated.png",
+        "sha256": "6c773689c2212d29304ea5b526659c7d15f61cc01110f9bc9351c1f651480f60",
+        "bytes": 1081445,
+        "format": "PNG",
+        "size": [
+          1254,
+          1254
+        ]
+      },
+      "estimate": {
+        "usd": 0.0,
+        "currency": "USD",
+        "pricesVersion": "2026-10-06",
+        "items": [],
+        "basis": "subscription quota call: no per-call USD price; counted by call caps"
+      },
+      "completedAt": "2026-10-15T03:21:45.555Z"
+    },
+    {
+      "folder": "back_passing_edit",
+      "use": "accepted whole-figure edit replacing missing back passing pose",
+      "route": "local:codex-cli",
+      "requestedModel": "codex-image_gen",
+      "underlying_image_model": "unknown",
+      "prompt": "back_passing_edit/prompt.txt",
+      "submitted_prompt_sha256": "c0edb13e7230a5c3d17e69190da99a064d5ed6efd731e992f9640a3ca222d08c",
+      "prompt_hash_normalization": "UTF-8 text, universal newlines, strip leading/trailing whitespace, matching route_media.py",
+      "prompt_file_sha256": "e61707176f7157048645bed5de802983353e640394a153aab1e647a69fef4da2",
+      "receipt": "back_passing_edit/job.json",
+      "references": [
+        {
+          "sha256": "2203c4ed8b95bda0eaff55a21ef6521d9780e3b9b742a5e4ad1c6eb3cf3d77e6",
+          "bytes": 232398
+        }
+      ],
+      "artifact": {
+        "path": "generated.png",
+        "sha256": "dc7041122af4224ce3788b4cb2e36e9375cb9477a0702f3e327e9296aff72825",
+        "bytes": 679951,
+        "format": "PNG",
+        "size": [
+          1254,
+          1254
+        ]
+      },
+      "estimate": {
+        "usd": 0.0,
+        "currency": "USD",
+        "pricesVersion": "2026-10-06",
+        "items": [],
+        "basis": "subscription quota call: no per-call USD price; counted by call caps"
+      },
+      "completedAt": "2026-10-15T03:25:35.719Z"
+    },
+    {
+      "folder": "side_idle_edit",
+      "use": "accepted whole-figure neutral edit matching side walk proportions",
+      "route": "local:codex-cli",
+      "requestedModel": "codex-image_gen",
+      "underlying_image_model": "unknown",
+      "prompt": "side_idle_edit/prompt.txt",
+      "submitted_prompt_sha256": "93847a29e5bd657ee246abfc8f3d0fa17be33561bd2672d500c57bf4eaf6e342",
+      "prompt_hash_normalization": "UTF-8 text, universal newlines, strip leading/trailing whitespace, matching route_media.py",
+      "prompt_file_sha256": "f17e30c5dca6045cd325f98d43f080fd9aa8ced89e0d73b454c772724c1fa6f4",
+      "receipt": "side_idle_edit/job.json",
+      "references": [
+        {
+          "sha256": "5787859b0a9b39c2e811f2737eb9dee02186324bd9374c08a2cba98e7c46fa28",
+          "bytes": 253439
+        }
+      ],
+      "artifact": {
+        "path": "generated.png",
+        "sha256": "9f3cf478e94eb874013f534b149a4dee784850f494d279251b2c4bc42b9a42a3",
+        "bytes": 647760,
+        "format": "PNG",
+        "size": [
+          1254,
+          1254
+        ]
+      },
+      "estimate": {
+        "usd": 0.0,
+        "currency": "USD",
+        "pricesVersion": "2026-10-06",
+        "items": [],
+        "basis": "subscription quota call: no per-call USD price; counted by call caps"
+      },
+      "completedAt": "2026-10-15T03:28:57.948Z"
+    }
+  ],
+  "registration": "registration.json",
+  "runtime_manifest": "../../assets/hero/animation/clips.json",
+  "template": "../../assets/hero/modular_plan/template.json",
+  "qa_warnings": "QC_FINDINGS.md",
+  "acceptance": "ACCEPTANCE.md",
+  "quality_limits": [
+    "single-frame neutral idle",
+    "four generated walk key poses per direction",
+    "minor painted contour changes",
+    "left view mirrored lighting",
+    "no hidden anatomical body or clothing modules delivered"
+  ]
+}

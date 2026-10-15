@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "8ede0601c49c8a4dd56b6398b306ad4b4c31d4ae481dd993b64e3e00a26af7c9",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T07:04:25.900Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T07:04:25.900Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Revise back breathing: visible shoulders and fixed head/pelvis/boots; preview only",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13dd0-2e37-7b80-a90b-2be7b02cd173",
+    "source": "CODEX_HOME/generated_images/01a13dd0-2e37-7b80-a90b-2be7b02cd173/exec-64972122-0f0d-4758-80c9-50cd2268f711.png",
+    "sourceSha256": "3b3ca4f959ea475f718e049fe82fa06ff7e0091ae7a6aa59ce139c278828399e",
+    "sourceMtime": "2026-10-15T07:04:10Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "3b3ca4f959ea475f718e049fe82fa06ff7e0091ae7a6aa59ce139c278828399e",
+    "bytes": 587198,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

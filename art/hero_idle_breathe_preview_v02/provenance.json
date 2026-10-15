@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-15",
+  "revision": "v02",
+  "status": "needs-visual-review",
+  "previewOnly": true,
+  "route": "host:image_gen",
+  "adoption": "generate2dmedia cli_media.py adopt",
+  "actualImageCalls": 3,
+  "videoCalls": 0,
+  "underlyingModel": null,
+  "estimateUsd": null,
+  "actualUsd": null,
+  "costNote": "Image model and per-call price not exposed. Zero-dollar adoption receipts are not image generation cost evidence.",
+  "sources": {
+    "front": {
+      "raw": "front/take1/generated.png",
+      "job": "front/take1/job.json",
+      "rawSha256": "656814debb6361ad5fce62a859243001ff0567c4100e5682de6d63aaf1e88e14",
+      "actualSize": [
+        1254,
+        1254
+      ],
+      "prompt": "front_prompt.txt",
+      "promptSha256": "1856632a7cb4583a895c6edcb95c6cf9396ef58721af054ec39fad28c9175652",
+      "reference": "references/front_locked_four_frame_target.png",
+      "referenceSha256": "964dc29f89c31740dbf7d8e055fe82525f072682c333af42d00b0d9c2d5ba3d3",
+      "referenceConstruction": "Four copies of v01 complete neutral figure, one common scale matching current idle height. Reference only, not final animation.",
+      "operations": "New generated whole-body poses; native alpha<=8 cleaned; Gorest grid; common direction scale and whole-frame subpixel rigid translation, one premultiplied sampling pass."
+    },
+    "back": {
+      "raw": "back/take1/generated.png",
+      "job": "back/take1/job.json",
+      "rawSha256": "3b3ca4f959ea475f718e049fe82fa06ff7e0091ae7a6aa59ce139c278828399e",
+      "actualSize": [
+        1254,
+        1254
+      ],
+      "prompt": "back_prompt.txt",
+      "promptSha256": "21eb83107b99ea5bcadca5a612dfbc9ebbc2a7db793581552ac00e666ddf6e99",
+      "reference": "references/back_locked_four_frame_target.png",
+      "referenceSha256": "99ba268696409031df66463b0427f713b815cc868adaa16c6a2325246ef91b9a",
+      "referenceConstruction": "Four copies of v01 complete neutral figure, one common scale matching current idle height. Reference only, not final animation.",
+      "operations": "New generated whole-body poses; native alpha<=8 cleaned; Gorest grid; common direction scale and whole-frame subpixel rigid translation, one premultiplied sampling pass."
+    },
+    "side": {
+      "raw": "side/take1/generated.png",
+      "job": "side/take1/job.json",
+      "rawSha256": "164b0b1056d1289d3811fb6574aefc1e7b689d8fd3b6e5f73e39ac0fd18aad31",
+      "actualSize": [
+        1254,
+        1254
+      ],
+      "prompt": "side_prompt.txt",
+      "promptSha256": "7627556c2c37ef7a1c87ebdadfd720618d30f056281c3e57b1ef69c4a60ee9c3",
+      "reference": "references/side_locked_four_frame_target.png",
+      "referenceSha256": "c914a1491436d405ec017244ac3e65b9c67bd5141fa7965b1f8ea432dc3074d3",
+      "referenceConstruction": "Four copies of v01 complete neutral figure, one common scale matching current idle height. Reference only, not final animation.",
+      "operations": "New generated whole-body poses; native alpha<=8 cleaned; Gorest grid; common direction scale and whole-frame subpixel rigid translation, one premultiplied sampling pass."
+    }
+  },
+  "leftDerivation": "Whole-frame horizontal mirror of right/side in the same time order",
+  "license": "Generated artwork subject to provider/account terms; no third-party commercial game assets used; no public-domain or open-source claim.",
+  "previousVersion": "../hero_idle_breathe_preview_v01/",
+  "previousStatus": "rejected by user: motion too small and obvious displacement",
+  "gameIntegration": false
+}

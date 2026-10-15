@@ -1,0 +1,107 @@
+{
+  "status": "needs-visual-review",
+  "frameBboxes": [
+    [
+      45,
+      19,
+      88,
+      112
+    ],
+    [
+      45,
+      19,
+      88,
+      112
+    ],
+    [
+      45,
+      19,
+      88,
+      112
+    ],
+    [
+      45,
+      19,
+      88,
+      112
+    ]
+  ],
+  "uniqueFrames": 4,
+  "root": [
+    64,
+    112
+  ],
+  "frameHashes": [
+    "1e836b2aed3cc1fe88901876322312929d9223ca6ac8f82c383ccb9c5cd01138",
+    "371079641cae1392b49d9372631d67494cf5f005bda58c69e049cc5e0262451d",
+    "351b27516ddb5cf1d03f2a9fb6bb75f38a626fa0eb6398e8016e9c2e732f85c8",
+    "b9ba55e2436521d0e192ab2ec4d5ec0d693b372eda4c0442d9772f5f48d179cd"
+  ],
+  "headResidual": [
+    {
+      "bestRigidResidualShiftPx": [
+        -0.0,
+        0.0
+      ],
+      "zeroShiftRms": 0.0
+    },
+    {
+      "bestRigidResidualShiftPx": [
+        0.173,
+        -0.0
+      ],
+      "zeroShiftRms": 0.052867
+    },
+    {
+      "bestRigidResidualShiftPx": [
+        -0.0,
+        -0.366
+      ],
+      "zeroShiftRms": 0.073683
+    },
+    {
+      "bestRigidResidualShiftPx": [
+        0.083,
+        -0.384
+      ],
+      "zeroShiftRms": 0.087476
+    }
+  ],
+  "legsResidual": [
+    {
+      "bestRigidResidualShiftPx": [
+        -0.0,
+        -0.0
+      ],
+      "zeroShiftRms": 0.0
+    },
+    {
+      "bestRigidResidualShiftPx": [
+        -0.184,
+        0.014
+      ],
+      "zeroShiftRms": 0.056106
+    },
+    {
+      "bestRigidResidualShiftPx": [
+        -0.0,
+        0.587
+      ],
+      "zeroShiftRms": 0.110046
+    },
+    {
+      "bestRigidResidualShiftPx": [
+        -0.075,
+        0.599
+      ],
+      "zeroShiftRms": 0.115894
+    }
+  ],
+  "chestRms": [
+    0.0,
+    0.06413741946044099,
+    0.027007725743476686,
+    0.03145454236627035
+  ],
+  "notProven": "Static-region fits do not establish zero drift, unchanged anatomy, natural motion or exact palette identity."
+}

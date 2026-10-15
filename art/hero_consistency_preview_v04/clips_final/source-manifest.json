@@ -1,0 +1,191 @@
+{
+  "schema": "generate2dsprite.animation_clips.v2",
+  "frames": [
+    "front_idle_preview/frames/front_idle_00.png",
+    "front_idle_preview/frames/front_idle_01.png",
+    "front_idle_preview/frames/front_idle_02.png",
+    "front_idle_preview/frames/front_idle_03.png",
+    "front_walk_preview/frames/front_walk_00.png",
+    "front_walk_preview/frames/front_walk_01.png",
+    "front_walk_preview/frames/front_walk_02.png",
+    "front_walk_preview/frames/front_walk_03.png",
+    "front_walk_preview/frames/front_walk_04.png",
+    "front_walk_preview/frames/front_walk_05.png",
+    "front_walk_preview/frames/front_walk_06.png",
+    "front_walk_preview/frames/front_walk_07.png",
+    "back_idle_preview/frames/back_idle_00.png",
+    "back_idle_preview/frames/back_idle_01.png",
+    "back_idle_preview/frames/back_idle_02.png",
+    "back_idle_preview/frames/back_idle_03.png",
+    "back_walk_preview/frames/back_walk_00.png",
+    "back_walk_preview/frames/back_walk_01.png",
+    "back_walk_preview/frames/back_walk_02.png",
+    "back_walk_preview/frames/back_walk_03.png",
+    "back_walk_preview/frames/back_walk_04.png",
+    "back_walk_preview/frames/back_walk_05.png",
+    "back_walk_preview/frames/back_walk_06.png",
+    "back_walk_preview/frames/back_walk_07.png",
+    "left_idle_preview/frames/left_idle_00.png",
+    "left_idle_preview/frames/left_idle_01.png",
+    "left_idle_preview/frames/left_idle_02.png",
+    "left_idle_preview/frames/left_idle_03.png",
+    "left_walk_preview/frames/left_walk_00.png",
+    "left_walk_preview/frames/left_walk_01.png",
+    "left_walk_preview/frames/left_walk_02.png",
+    "left_walk_preview/frames/left_walk_03.png",
+    "left_walk_preview/frames/left_walk_04.png",
+    "left_walk_preview/frames/left_walk_05.png",
+    "left_walk_preview/frames/left_walk_06.png",
+    "left_walk_preview/frames/left_walk_07.png",
+    "right_idle_preview/frames/right_idle_00.png",
+    "right_idle_preview/frames/right_idle_01.png",
+    "right_idle_preview/frames/right_idle_02.png",
+    "right_idle_preview/frames/right_idle_03.png",
+    "right_walk_preview/frames/right_walk_00.png",
+    "right_walk_preview/frames/right_walk_01.png",
+    "right_walk_preview/frames/right_walk_02.png",
+    "right_walk_preview/frames/right_walk_03.png",
+    "right_walk_preview/frames/right_walk_04.png",
+    "right_walk_preview/frames/right_walk_05.png",
+    "right_walk_preview/frames/right_walk_06.png",
+    "right_walk_preview/frames/right_walk_07.png"
+  ],
+  "anchor_px": [
+    64,
+    112
+  ],
+  "clips": {
+    "front_idle": {
+      "frames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "ticks": 27,
+      "tick_hz": 60,
+      "loop_policy": "cycle",
+      "entry_frame": 0,
+      "role": "player"
+    },
+    "front_walk": {
+      "frames": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "ticks": 5,
+      "tick_hz": 60,
+      "loop_policy": "cycle",
+      "entry_frame": 0,
+      "role": "player",
+      "stride_world_units": 66.66666666666667,
+      "speed_ref": 100
+    },
+    "back_idle": {
+      "frames": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "ticks": 27,
+      "tick_hz": 60,
+      "loop_policy": "cycle",
+      "entry_frame": 0,
+      "role": "player"
+    },
+    "back_walk": {
+      "frames": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "ticks": 5,
+      "tick_hz": 60,
+      "loop_policy": "cycle",
+      "entry_frame": 0,
+      "role": "player",
+      "stride_world_units": 66.66666666666667,
+      "speed_ref": 100
+    },
+    "left_idle": {
+      "frames": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "ticks": 27,
+      "tick_hz": 60,
+      "loop_policy": "cycle",
+      "entry_frame": 0,
+      "role": "player"
+    },
+    "left_walk": {
+      "frames": [
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "ticks": 5,
+      "tick_hz": 60,
+      "loop_policy": "cycle",
+      "entry_frame": 0,
+      "role": "player",
+      "stride_world_units": 66.66666666666667,
+      "speed_ref": 100
+    },
+    "right_idle": {
+      "frames": [
+        36,
+        37,
+        38,
+        39
+      ],
+      "ticks": 27,
+      "tick_hz": 60,
+      "loop_policy": "cycle",
+      "entry_frame": 0,
+      "role": "player"
+    },
+    "right_walk": {
+      "frames": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "ticks": 5,
+      "tick_hz": 60,
+      "loop_policy": "cycle",
+      "entry_frame": 0,
+      "role": "player",
+      "stride_world_units": 66.66666666666667,
+      "speed_ref": 100
+    }
+  },
+  "sampling": "linear",
+  "pixel_art": false,
+  "art_source": "host_image",
+  "body_height_px": 92
+}

@@ -1,0 +1,21 @@
+Generate a new full-body WALK-IN-PLACE animation sheet of the same approved hero, in a TRUE RIGHT-FACING SIDE PROFILE in every frame.
+
+Reference 1 is the user-approved new character rendering: copy its exact proportions, hair volume, outfit palette, clean warm cartoon outlines and shading. Reference 2 is the original character identity. Reference 3 is the approved RIGHT SIDE turnaround and governs the true profile, nose pointing RIGHT, body overlap and clothing silhouette. The character is the same person, not a redesigned side-view character.
+
+EXACTLY 8 complete character frames, 4 columns by 2 rows, chronological reading order, wide 2:1 canvas (2048x1024 preferred). Flat pure magenta #FF00FF background. No grid lines, frame labels, text, scenery, ground shadows or floor. Each complete silhouette occupies at most 72% of cell height and width, with at least 14% clean magenta padding on EVERY side. Large clean gaps, no body parts or boots reaching a cell edge.
+
+The same small friendly adventurer: fluffy chestnut hair and cowlick; small black eye, rosy cheek; sage green open jacket with cream rolled cuffs, cream shirt, ochre neckerchief, brown shorts, cream socks, brown boots. Warm bright hand-painted 2D cartoon, soft brown outlines, moderately simplified painted colors, about 2.7 heads tall. No realistic, 3D, PBR, anime, pixel or vector style. Gentle upper-left warm light consistent with the approved look.
+
+TRUE SIDE PROFILE facing RIGHT throughout: one visible side eye, one nose silhouette pointing right, same ear and hair silhouette, far arm/leg partly occluded by near arm/leg. Shoulders, chest, hips and boots all in side projection. Do NOT rotate toward the viewer, create a front face, show two eyes, or turn direction between cells. Slightly elevated camera consistent with reference, locked throughout. Walk along an invisible horizontal treadmill to the RIGHT; never slide the whole character across its cell.
+
+8 distinct chronological walk key poses. NEAR leg means the leg closest to camera; FAR leg is behind it in depth. Both boots point RIGHT in side profile:
+1 CONTACT A: NEAR leg extended forward toward RIGHT, heel contacting; FAR leg extended backward toward LEFT, toe pushing off. NEAR arm swings back toward LEFT, FAR arm forward toward RIGHT.
+2 DOWN A: Weight loads onto NEAR leg, near knee bends slightly, FAR heel lifts and FAR knee folds as boot leaves ground. Torso slightly lower.
+3 PASSING A: NEAR leg supports below hip; FAR bent knee passes it moving RIGHT, FAR boot visibly lifted; arms pass by body.
+4 UP A: FAR leg reaches forward toward RIGHT, NEAR leg extends behind with raised heel; NEAR arm advances RIGHT, FAR arm goes LEFT.
+5 CONTACT B: FAR leg extended forward toward RIGHT, heel contacting; NEAR leg extended backward toward LEFT, toe pushing off. NEAR arm swings forward RIGHT, FAR arm backward LEFT. This MUST be the opposite leg AND arm contact from frame 1.
+6 DOWN B: Weight loads onto FAR leg, far knee bends slightly, NEAR heel lifts and NEAR knee folds as boot leaves ground. Torso slightly lower.
+7 PASSING B: FAR leg supports below hip; NEAR bent knee passes it moving RIGHT, NEAR boot visibly lifted; arms pass by body.
+8 UP B: NEAR leg reaches forward RIGHT, FAR leg behind with raised heel; NEAR arm returns LEFT and FAR arm RIGHT. Lead naturally into frame 1 without duplicating it.
+
+Moderate relaxed walking stride, not high-knee marching or running. Real alternate footfalls with correct depth overlap. Lock hair, eye, face, outfit, proportions, body scale, framing and lighting across all 8 frames. Tiny natural torso bob, stable root. Exactly two arms, two hands, two legs and two boots. No detached or extra limbs, smear frames, blurry details, static translated poses, or changing character size. Visually check frame 1 versus frame 5 for opposite limb contacts.

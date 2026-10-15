@@ -1,0 +1,642 @@
+{
+  "frameCount": 8,
+  "cellSize": 256,
+  "frameSize": [
+    256,
+    256
+  ],
+  "sheetSize": [
+    1024,
+    512
+  ],
+  "sourceSheetSize": null,
+  "sourceCells": [
+    [
+      6,
+      6,
+      632,
+      610
+    ],
+    [
+      644,
+      6,
+      1248,
+      610
+    ],
+    [
+      6,
+      622,
+      632,
+      1248
+    ],
+    [
+      644,
+      622,
+      1248,
+      1248
+    ],
+    [
+      4,
+      450,
+      473,
+      883
+    ],
+    [
+      481,
+      450,
+      876,
+      883
+    ],
+    [
+      884,
+      450,
+      1292,
+      883
+    ],
+    [
+      1300,
+      450,
+      1770,
+      883
+    ]
+  ],
+  "globalScale": null,
+  "safePadding": 24,
+  "safeFramePolicy": "global_uniform_scale_preserve_anchor_with_minimum_edge_padding",
+  "sourceEdgePolicy": "flag_source_cells_whose_alpha_touches_or_nears_a_detected_cell_edge",
+  "sourceEdgeThreshold": 2,
+  "sourceEdgeRisks": [],
+  "frameBboxes": [
+    [
+      80,
+      31,
+      103,
+      160
+    ],
+    [
+      84,
+      32,
+      80,
+      161
+    ],
+    [
+      94,
+      31,
+      90,
+      163
+    ],
+    [
+      74,
+      27,
+      109,
+      163
+    ],
+    [
+      71,
+      26,
+      116,
+      161
+    ],
+    [
+      87,
+      28,
+      77,
+      162
+    ],
+    [
+      97,
+      30,
+      75,
+      163
+    ],
+    [
+      76,
+      26,
+      114,
+      161
+    ]
+  ],
+  "rootAnchors": [
+    [
+      128.0,
+      78.08
+    ],
+    [
+      128.0,
+      78.08
+    ],
+    [
+      128.0,
+      78.08
+    ],
+    [
+      128.0,
+      78.08
+    ],
+    [
+      128.0,
+      78.08
+    ],
+    [
+      128.0,
+      78.08
+    ],
+    [
+      128.0,
+      78.08
+    ],
+    [
+      128.0,
+      78.08
+    ]
+  ],
+  "gridPolicy": "auto_detect_grid_from_sprite_distances_then_fallback_proportional",
+  "gridDetection": {
+    "mode": "auto_detected",
+    "xRuns": [
+      [
+        101,
+        396
+      ],
+      [
+        558,
+        754
+      ],
+      [
+        1005,
+        1201
+      ],
+      [
+        1392,
+        1682
+      ]
+    ],
+    "yRuns": [
+      [
+        18,
+        438
+      ],
+      [
+        454,
+        870
+      ]
+    ],
+    "xBounds": [
+      0,
+      477,
+      880,
+      1296,
+      1774
+    ],
+    "yBounds": [
+      0,
+      446,
+      887
+    ]
+  },
+  "proportionPolicy": "uniform_scale_preserve_input_character_proportions",
+  "rootAnchorPolicy": "fixed_upper_body_centroid_anchor_character_position_stable",
+  "normalization": "one_global_uniform_scale_per_source_take_fixed_upper_body_anchor_complete_pose_assembly",
+  "createdTime": "2026-10-15T13:17:51",
+  "frames": [
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"512 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"768 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"512 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"768 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>"
+  ],
+  "sourceTake": "take3_halfcycle+take2",
+  "sourceFrameOrder": [
+    0,
+    1,
+    2,
+    3,
+    8,
+    9,
+    10,
+    11
+  ],
+  "phaseOrderPolicy": "Four complete opposite-half poses from take3, followed by four complete poses from take2; no limb edits or per-frame scaling.",
+  "sourceNormalizations": {
+    "take2": {
+      "frameCount": 8,
+      "cellSize": 256,
+      "frameSize": [
+        256,
+        256
+      ],
+      "sheetSize": [
+        1024,
+        512
+      ],
+      "sourceSheetSize": [
+        1774,
+        887
+      ],
+      "sourceCells": [
+        [
+          4,
+          4,
+          473,
+          442
+        ],
+        [
+          481,
+          4,
+          876,
+          442
+        ],
+        [
+          884,
+          4,
+          1292,
+          442
+        ],
+        [
+          1300,
+          4,
+          1770,
+          442
+        ],
+        [
+          4,
+          450,
+          473,
+          883
+        ],
+        [
+          481,
+          450,
+          876,
+          883
+        ],
+        [
+          884,
+          450,
+          1292,
+          883
+        ],
+        [
+          1300,
+          450,
+          1770,
+          883
+        ]
+      ],
+      "globalScale": 0.3905198777224937,
+      "safePadding": 24,
+      "safeFramePolicy": "global_uniform_scale_preserve_anchor_with_minimum_edge_padding",
+      "sourceEdgePolicy": "flag_source_cells_whose_alpha_touches_or_nears_a_detected_cell_edge",
+      "sourceEdgeThreshold": 2,
+      "sourceEdgeRisks": [],
+      "frameBboxes": [
+        [
+          75,
+          27,
+          111,
+          162
+        ],
+        [
+          87,
+          28,
+          75,
+          164
+        ],
+        [
+          95,
+          29,
+          67,
+          164
+        ],
+        [
+          77,
+          25,
+          111,
+          163
+        ],
+        [
+          71,
+          26,
+          116,
+          161
+        ],
+        [
+          87,
+          28,
+          77,
+          162
+        ],
+        [
+          97,
+          30,
+          75,
+          163
+        ],
+        [
+          76,
+          26,
+          114,
+          161
+        ]
+      ],
+      "rootAnchors": [
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ]
+      ],
+      "gridPolicy": "auto_detect_grid_from_sprite_distances_then_fallback_proportional",
+      "gridDetection": {
+        "mode": "auto_detected",
+        "xRuns": [
+          [
+            101,
+            396
+          ],
+          [
+            558,
+            754
+          ],
+          [
+            1005,
+            1201
+          ],
+          [
+            1392,
+            1682
+          ]
+        ],
+        "yRuns": [
+          [
+            18,
+            438
+          ],
+          [
+            454,
+            870
+          ]
+        ],
+        "xBounds": [
+          0,
+          477,
+          880,
+          1296,
+          1774
+        ],
+        "yBounds": [
+          0,
+          446,
+          887
+        ]
+      },
+      "proportionPolicy": "uniform_scale_preserve_input_character_proportions",
+      "rootAnchorPolicy": "fixed_upper_body_centroid_anchor_character_position_stable",
+      "normalization": "global_uniform_scale_fixed_root_anchor_auto_grid_no_nonuniform_scaling",
+      "createdTime": "2026-10-15T13:17:51",
+      "frames": [
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"512 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"768 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"512 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"768 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"512\" preserveAspectRatio=\"none\"/></svg>"
+      ],
+      "sourceTake": "take2",
+      "sourceFrameOrder": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "phaseOrderPolicy": "Eight complete generated poses in visually reviewed gait order; no partial-body edits."
+    },
+    "take3_halfcycle": {
+      "frameCount": 4,
+      "cellSize": 256,
+      "frameSize": [
+        256,
+        256
+      ],
+      "sheetSize": [
+        512,
+        512
+      ],
+      "sourceSheetSize": [
+        1254,
+        1254
+      ],
+      "sourceCells": [
+        [
+          6,
+          6,
+          632,
+          610
+        ],
+        [
+          644,
+          6,
+          1248,
+          610
+        ],
+        [
+          6,
+          622,
+          632,
+          1248
+        ],
+        [
+          644,
+          622,
+          1248,
+          1248
+        ]
+      ],
+      "globalScale": 0.2956205254764382,
+      "safePadding": 24,
+      "safeFramePolicy": "global_uniform_scale_preserve_anchor_with_minimum_edge_padding",
+      "sourceEdgePolicy": "flag_source_cells_whose_alpha_touches_or_nears_a_detected_cell_edge",
+      "sourceEdgeThreshold": 2,
+      "sourceEdgeRisks": [],
+      "frameBboxes": [
+        [
+          80,
+          31,
+          103,
+          160
+        ],
+        [
+          84,
+          32,
+          80,
+          161
+        ],
+        [
+          94,
+          31,
+          90,
+          163
+        ],
+        [
+          74,
+          27,
+          109,
+          163
+        ]
+      ],
+      "rootAnchors": [
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ]
+      ],
+      "gridPolicy": "auto_detect_grid_from_sprite_distances_then_fallback_proportional",
+      "gridDetection": {
+        "mode": "auto_detected",
+        "xRuns": [
+          [
+            197,
+            554
+          ],
+          [
+            723,
+            1089
+          ]
+        ],
+        "yRuns": [
+          [
+            47,
+            590
+          ],
+          [
+            642,
+            1193
+          ]
+        ],
+        "xBounds": [
+          0,
+          638,
+          1254
+        ],
+        "yBounds": [
+          0,
+          616,
+          1254
+        ]
+      },
+      "proportionPolicy": "uniform_scale_preserve_input_character_proportions",
+      "rootAnchorPolicy": "fixed_upper_body_centroid_anchor_character_position_stable",
+      "normalization": "global_uniform_scale_fixed_root_anchor_auto_grid_no_nonuniform_scaling",
+      "createdTime": "2026-10-15T13:23:40",
+      "frames": [
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"512\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"512\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"512\" height=\"512\" preserveAspectRatio=\"none\"/></svg>",
+        "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_hero_right_walk_v02.png\" x=\"0\" y=\"0\" width=\"512\" height=\"512\" preserveAspectRatio=\"none\"/></svg>"
+      ],
+      "gorestOriginalGlobalScale": 0.30660333137649165,
+      "crossTakeGroupScaleFactor": 0.9641791044776119,
+      "crossTakeScalePolicy": "One additional uniform factor for all four poses of this source take, matched to the other take's median height; rendered once from raw pixels."
+    }
+  },
+  "sourceTakes": [
+    "take3_halfcycle",
+    "take2"
+  ],
+  "sourceGlobalScales": {
+    "take3_halfcycle": 0.2956205254764382,
+    "take2": 0.3905198777224937
+  },
+  "sourceSheetSizes": {
+    "take3_halfcycle": [
+      1254,
+      1254
+    ],
+    "take2": [
+      1774,
+      887
+    ]
+  },
+  "sourceFrameRefs": [
+    {
+      "take": "take3_halfcycle",
+      "frame": 0
+    },
+    {
+      "take": "take3_halfcycle",
+      "frame": 1
+    },
+    {
+      "take": "take3_halfcycle",
+      "frame": 2
+    },
+    {
+      "take": "take3_halfcycle",
+      "frame": 3
+    },
+    {
+      "take": "take2",
+      "frame": 4
+    },
+    {
+      "take": "take2",
+      "frame": 5
+    },
+    {
+      "take": "take2",
+      "frame": 6
+    },
+    {
+      "take": "take2",
+      "frame": 7
+    }
+  ]
+}

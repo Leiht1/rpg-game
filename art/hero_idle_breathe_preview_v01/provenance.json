@@ -1,0 +1,17 @@
+{
+  "route": "host:image_gen transparent identity-preserving edit + generate2dmedia cli_media.py adopt",
+  "underlyingModel": "not exposed",
+  "estimateUsd": null,
+  "generationCalls": 3,
+  "videoGenerated": false,
+  "generatedArt": "three independently edited 2x2 complete-body breathing sequences; left whole-frame mirror",
+  "gorestUsed": "normalize_spritesheet.py grid detection and feet-baseline anchor; native alpha preserved",
+  "source_refs": {
+    "front": "2d3aed9e46a51dbab619126458994cf41b1a61746a73c4e4d8b90aa5f2beda50",
+    "back": "e6f877c0468197bf5286ad0355fe1c1dfd2b060da512109704ab8f687996e7df",
+    "side": "85398c42832a7a293060c791f5d030fe5a3c3df786902afa9793f7b2f7344b6d"
+  },
+  "noCreativeLocalPixelEdits": true,
+  "noPerFrameScaling": true,
+  "runtimeIntegrated": false
+}

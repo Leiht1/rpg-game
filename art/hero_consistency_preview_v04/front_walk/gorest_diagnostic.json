@@ -1,0 +1,214 @@
+{
+  "frameCount": 8,
+  "cellSize": 128,
+  "frameSize": [
+    128,
+    128
+  ],
+  "sheetSize": [
+    512,
+    256
+  ],
+  "sourceSheetSize": [
+    1774,
+    887
+  ],
+  "sourceCells": [
+    [
+      4,
+      4,
+      436,
+      444
+    ],
+    [
+      444,
+      4,
+      878,
+      444
+    ],
+    [
+      886,
+      4,
+      1315,
+      444
+    ],
+    [
+      1323,
+      4,
+      1770,
+      444
+    ],
+    [
+      4,
+      452,
+      436,
+      883
+    ],
+    [
+      444,
+      452,
+      878,
+      883
+    ],
+    [
+      886,
+      452,
+      1315,
+      883
+    ],
+    [
+      1323,
+      452,
+      1770,
+      883
+    ]
+  ],
+  "globalScale": 0.29737609329446063,
+  "safePadding": 12,
+  "safeFramePolicy": "global_uniform_scale_preserve_anchor_with_minimum_edge_padding",
+  "sourceEdgePolicy": "flag_source_cells_whose_alpha_touches_or_nears_a_detected_cell_edge",
+  "sourceEdgeThreshold": 2,
+  "sourceEdgeRisks": [],
+  "frameBboxes": [
+    [
+      38,
+      13,
+      50,
+      102
+    ],
+    [
+      39,
+      13,
+      50,
+      102
+    ],
+    [
+      38,
+      13,
+      51,
+      102
+    ],
+    [
+      40,
+      13,
+      50,
+      102
+    ],
+    [
+      40,
+      13,
+      51,
+      102
+    ],
+    [
+      40,
+      13,
+      51,
+      102
+    ],
+    [
+      40,
+      13,
+      51,
+      102
+    ],
+    [
+      38,
+      13,
+      51,
+      102
+    ]
+  ],
+  "rootAnchors": [
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ]
+  ],
+  "gridPolicy": "auto_detect_grid_from_sprite_distances_then_fallback_proportional",
+  "gridDetection": {
+    "mode": "auto_detected",
+    "xRuns": [
+      [
+        134,
+        309
+      ],
+      [
+        572,
+        747
+      ],
+      [
+        1017,
+        1187
+      ],
+      [
+        1451,
+        1629
+      ]
+    ],
+    "yRuns": [
+      [
+        63,
+        406
+      ],
+      [
+        491,
+        834
+      ]
+    ],
+    "xBounds": [
+      0,
+      440,
+      882,
+      1319,
+      1774
+    ],
+    "yBounds": [
+      0,
+      448,
+      887
+    ]
+  },
+  "proportionPolicy": "uniform_scale_preserve_input_character_proportions",
+  "rootAnchorPolicy": "fixed_lower_body_centroid_x_and_shared_feet_baseline",
+  "normalization": "global_uniform_scale_fixed_feet_baseline_auto_grid_no_nonuniform_scaling",
+  "createdTime": "2026-10-15T15:49:22",
+  "frames": [
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"128 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"384 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"128 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"384 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>"
+  ]
+}

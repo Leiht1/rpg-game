@@ -1,0 +1,143 @@
+{
+	"accelerated_distance_px": 43680.5645591728,
+	"adapter": "NVIDIA GeForce RTX 3060",
+	"average_fps": 1260.40561613379,
+	"captures_during_run": false,
+	"engine": "4.7.2-stable (official)",
+	"generator": "windrest-0.1.0",
+	"loaded_chunks": 30,
+	"map_cells": 1024,
+	"max_chunk_install_ms": 1.003,
+	"max_frame_ms": 18.444,
+	"mean_frame_ms": 0.793395385738947,
+	"memory_samples": [
+		{
+			"loaded": 8,
+			"objects": 351,
+			"static_memory_mib": 52.3690013885498,
+			"time": 0.00138888888888888
+		},
+		{
+			"loaded": 25,
+			"objects": 1084,
+			"static_memory_mib": 57.9711780548096,
+			"time": 5.00144411111114
+		},
+		{
+			"loaded": 25,
+			"objects": 1084,
+			"static_memory_mib": 58.1362743377686,
+			"time": 10.0014981111111
+		},
+		{
+			"loaded": 30,
+			"objects": 1287,
+			"static_memory_mib": 59.7987461090088,
+			"time": 15.0019621111109
+		},
+		{
+			"loaded": 30,
+			"objects": 1273,
+			"static_memory_mib": 60.1503276824951,
+			"time": 20.0024981111112
+		},
+		{
+			"loaded": 30,
+			"objects": 1278,
+			"static_memory_mib": 60.4298229217529,
+			"time": 25.0030911111118
+		},
+		{
+			"loaded": 30,
+			"objects": 1276,
+			"static_memory_mib": 60.4332714080811,
+			"time": 30.0034351111122
+		},
+		{
+			"loaded": 30,
+			"objects": 1298,
+			"static_memory_mib": 60.9835529327393,
+			"time": 35.0035281111126
+		},
+		{
+			"loaded": 30,
+			"objects": 1294,
+			"static_memory_mib": 61.1090183258057,
+			"time": 40.0038191111133
+		},
+		{
+			"loaded": 30,
+			"objects": 1293,
+			"static_memory_mib": 60.8790836334229,
+			"time": 45.0043401111137
+		},
+		{
+			"loaded": 25,
+			"objects": 988,
+			"static_memory_mib": 59.818208694458,
+			"time": 50.0044051111141
+		},
+		{
+			"loaded": 30,
+			"objects": 1293,
+			"static_memory_mib": 61.5840930938721,
+			"time": 55.0048541111145
+		},
+		{
+			"loaded": 30,
+			"objects": 1294,
+			"static_memory_mib": 61.8152980804443,
+			"time": 60.0052061111148
+		},
+		{
+			"loaded": 30,
+			"objects": 1298,
+			"static_memory_mib": 61.7557773590088,
+			"time": 65.0052181111143
+		},
+		{
+			"loaded": 29,
+			"objects": 1240,
+			"static_memory_mib": 61.5109462738037,
+			"time": 70.0060630000008
+		},
+		{
+			"loaded": 30,
+			"objects": 1278,
+			"static_memory_mib": 62.7349720001221,
+			"time": 75.0062431111102
+		},
+		{
+			"loaded": 30,
+			"objects": 1273,
+			"static_memory_mib": 62.7704219818115,
+			"time": 80.0064591111069
+		},
+		{
+			"loaded": 30,
+			"objects": 1287,
+			"static_memory_mib": 62.6482448577881,
+			"time": 85.0069541111046
+		}
+	],
+	"method": "Rendered window; wall-clock frame intervals. 8-way input + rapid switching + 8x accelerated streaming stress (harness skips prop collisions); excludes startup and first 2s. Physics collisions tested separately.",
+	"missing_player_ground_frames": 0,
+	"nodes": 2001,
+	"objects": 1308,
+	"p95_frame_ms": 1.32,
+	"p99_frame_ms": 1.849,
+	"peak_static_memory_mib": 62.7907466888428,
+	"position": "(12525.13, 21603.4)",
+	"renderer": "gl_compatibility",
+	"samples": 110917,
+	"seconds": 90.0004381111019,
+	"seed": 271828,
+	"spawn": "(12446.19, 24576.0)",
+	"static_memory_mib": 62.7193660736084,
+	"total_chunks_loaded": 230,
+	"total_chunks_unloaded": 200,
+	"video_memory_mib": 136.525779724121,
+	"viewport": "(1280.0, 720.0)",
+	"viewport_not_ready_frames": 0,
+	"vsync": false
+}

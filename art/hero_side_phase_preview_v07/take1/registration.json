@@ -1,0 +1,67 @@
+{
+  "globalScale": 0.19574468085106383,
+  "transforms": [
+    {
+      "sourceCellIndexZeroBased": 0,
+      "outputIndexZeroBased": 1,
+      "sourceCell": [
+        6,
+        6,
+        623,
+        629
+      ],
+      "scale": 0.19574468085106383,
+      "offsetPx": [
+        -1.2919348670596733,
+        2.3829787234042534
+      ]
+    },
+    {
+      "sourceCellIndexZeroBased": 1,
+      "outputIndexZeroBased": 2,
+      "sourceCell": [
+        635,
+        6,
+        1248,
+        629
+      ],
+      "scale": 0.19574468085106383,
+      "offsetPx": [
+        3.1493956272592456,
+        2.5787234042553173
+      ]
+    },
+    {
+      "sourceCellIndexZeroBased": 2,
+      "outputIndexZeroBased": 4,
+      "sourceCell": [
+        6,
+        641,
+        623,
+        1248
+      ],
+      "scale": 0.19574468085106383,
+      "offsetPx": [
+        -1.3654607654284021,
+        8.451063829787234
+      ]
+    },
+    {
+      "sourceCellIndexZeroBased": 3,
+      "outputIndexZeroBased": 5,
+      "sourceCell": [
+        635,
+        641,
+        1248,
+        1248
+      ],
+      "scale": 0.19574468085106383,
+      "offsetPx": [
+        2.9255089021687297,
+        8.451063829787234
+      ]
+    }
+  ],
+  "sourceSha256": "d05695232be08ce8c45a1080113d3eaf8da7168a260074c32d3cf8986691addd",
+  "policy": "One common source scale; full-frame rigid head registration only, no local manipulation."
+}

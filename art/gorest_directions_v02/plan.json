@@ -1,0 +1,43 @@
+{
+  "status": "complete_preview_only",
+  "purpose": "Extend the user-approved Gorest front walk preview with back, right and left walk previews only",
+  "approvedLook": "art/gorest_walk_trial_v01/take2/generated.png",
+  "identity": "art/reference/hero.png",
+  "turnaround": "art/candidates/hero-turnaround.png",
+  "art_source": "host_image",
+  "route": "generate2dmedia route_media.py image",
+  "actions": [
+    "back_walk",
+    "right_walk",
+    "left_walk"
+  ],
+  "framesPerAction": 8,
+  "fps": 8,
+  "loop": true,
+  "frameSize": [
+    256,
+    256
+  ],
+  "grid": [
+    4,
+    2
+  ],
+  "leftPolicy": "Mirror each complete right-facing bitmap frame per ART_STYLE.md; never mirror individual limbs",
+  "registration": "Gorest upper-body root (128,78.08), one uniform scale per source take; take3 group uniformly matched to take2 median height, never per-frame bbox scaling",
+  "finish": "warm bright hand-painted cartoon matching approved Gorest front",
+  "scope": "PNG frames, animated previews and Gorest library only; no Godot integration",
+  "imageCallsThisTurn": 4,
+  "backSource": "back/take1",
+  "rightSources": [
+    "right/take3_halfcycle frames 0..3",
+    "right/take2 frames 4..7"
+  ],
+  "rejectedAsCompleteCycles": [
+    "right/take1",
+    "right/take2"
+  ],
+  "gameIntegrated": false,
+  "gorestVerified": true,
+  "pngExportVerified": true,
+  "knownLimitationsRecorded": true
+}

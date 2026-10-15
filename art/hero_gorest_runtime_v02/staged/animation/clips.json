@@ -1,0 +1,206 @@
+{
+  "schema": "generate2dsprite.animation_clips.v2",
+  "name": "windrest-hero",
+  "frames": [
+    {
+      "name": "front_idle_00",
+      "file": "../final_sprite/front_idle_00.png"
+    },
+    {
+      "name": "front_walk_00",
+      "file": "../final_sprite/front_walk_00.png"
+    },
+    {
+      "name": "front_walk_01",
+      "file": "../final_sprite/front_walk_01.png"
+    },
+    {
+      "name": "front_walk_02",
+      "file": "../final_sprite/front_walk_02.png"
+    },
+    {
+      "name": "front_walk_03",
+      "file": "../final_sprite/front_walk_03.png"
+    },
+    {
+      "name": "front_walk_04",
+      "file": "../final_sprite/front_walk_04.png"
+    },
+    {
+      "name": "front_walk_05",
+      "file": "../final_sprite/front_walk_05.png"
+    },
+    {
+      "name": "front_walk_06",
+      "file": "../final_sprite/front_walk_06.png"
+    },
+    {
+      "name": "front_walk_07",
+      "file": "../final_sprite/front_walk_07.png"
+    },
+    {
+      "name": "back_idle_00",
+      "file": "../final_sprite/back_idle_00.png"
+    },
+    {
+      "name": "back_walk_00",
+      "file": "../final_sprite/back_walk_00.png"
+    },
+    {
+      "name": "back_walk_01",
+      "file": "../final_sprite/back_walk_01.png"
+    },
+    {
+      "name": "back_walk_02",
+      "file": "../final_sprite/back_walk_02.png"
+    },
+    {
+      "name": "back_walk_03",
+      "file": "../final_sprite/back_walk_03.png"
+    },
+    {
+      "name": "back_walk_04",
+      "file": "../final_sprite/back_walk_04.png"
+    },
+    {
+      "name": "back_walk_05",
+      "file": "../final_sprite/back_walk_05.png"
+    },
+    {
+      "name": "back_walk_06",
+      "file": "../final_sprite/back_walk_06.png"
+    },
+    {
+      "name": "back_walk_07",
+      "file": "../final_sprite/back_walk_07.png"
+    },
+    {
+      "name": "side_idle_00",
+      "file": "../final_sprite/side_idle_00.png"
+    },
+    {
+      "name": "side_walk_00",
+      "file": "../final_sprite/side_walk_00.png"
+    },
+    {
+      "name": "side_walk_01",
+      "file": "../final_sprite/side_walk_01.png"
+    },
+    {
+      "name": "side_walk_02",
+      "file": "../final_sprite/side_walk_02.png"
+    },
+    {
+      "name": "side_walk_03",
+      "file": "../final_sprite/side_walk_03.png"
+    },
+    {
+      "name": "side_walk_04",
+      "file": "../final_sprite/side_walk_04.png"
+    },
+    {
+      "name": "side_walk_05",
+      "file": "../final_sprite/side_walk_05.png"
+    },
+    {
+      "name": "side_walk_06",
+      "file": "../final_sprite/side_walk_06.png"
+    },
+    {
+      "name": "side_walk_07",
+      "file": "../final_sprite/side_walk_07.png"
+    }
+  ],
+  "anchor_px": [
+    64,
+    112
+  ],
+  "sampling": "linear",
+  "pixel_art": false,
+  "art_source": "existing",
+  "body_height_px": 89,
+  "placeholder": false,
+  "clips": {
+    "front_idle": {
+      "frames": [
+        "front_idle_00"
+      ],
+      "ticks": 60,
+      "loop_policy": "cycle",
+      "role": "player",
+      "entry_frame": 0
+    },
+    "front_walk": {
+      "frames": [
+        "front_walk_00",
+        "front_walk_01",
+        "front_walk_02",
+        "front_walk_03",
+        "front_walk_04",
+        "front_walk_05",
+        "front_walk_06",
+        "front_walk_07"
+      ],
+      "ticks": 5,
+      "loop_policy": "cycle",
+      "role": "player",
+      "entry_frame": 0,
+      "stride_world_units": 66.66666666666667,
+      "speed_ref": 100
+    },
+    "back_idle": {
+      "frames": [
+        "back_idle_00"
+      ],
+      "ticks": 60,
+      "loop_policy": "cycle",
+      "role": "player",
+      "entry_frame": 0
+    },
+    "back_walk": {
+      "frames": [
+        "back_walk_00",
+        "back_walk_01",
+        "back_walk_02",
+        "back_walk_03",
+        "back_walk_04",
+        "back_walk_05",
+        "back_walk_06",
+        "back_walk_07"
+      ],
+      "ticks": 5,
+      "loop_policy": "cycle",
+      "role": "player",
+      "entry_frame": 0,
+      "stride_world_units": 66.66666666666667,
+      "speed_ref": 100
+    },
+    "side_idle": {
+      "frames": [
+        "side_idle_00"
+      ],
+      "ticks": 60,
+      "loop_policy": "cycle",
+      "role": "player",
+      "entry_frame": 0
+    },
+    "side_walk": {
+      "frames": [
+        "side_walk_00",
+        "side_walk_01",
+        "side_walk_02",
+        "side_walk_03",
+        "side_walk_04",
+        "side_walk_05",
+        "side_walk_06",
+        "side_walk_07"
+      ],
+      "ticks": 5,
+      "loop_policy": "cycle",
+      "role": "player",
+      "entry_frame": 0,
+      "stride_world_units": 66.66666666666667,
+      "speed_ref": 100
+    }
+  }
+}

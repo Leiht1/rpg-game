@@ -1,0 +1,89 @@
+{
+  "status": "needs-visual-review",
+  "frameBboxes": [
+    [
+      39,
+      20,
+      83,
+      113
+    ],
+    [
+      39,
+      20,
+      83,
+      112
+    ],
+    [
+      40,
+      20,
+      82,
+      113
+    ],
+    [
+      36,
+      20,
+      86,
+      113
+    ],
+    [
+      39,
+      20,
+      85,
+      111
+    ],
+    [
+      38,
+      20,
+      82,
+      111
+    ],
+    [
+      40,
+      20,
+      82,
+      112
+    ],
+    [
+      37,
+      20,
+      84,
+      111
+    ]
+  ],
+  "uniqueFrames": 8,
+  "root": [
+    64,
+    112
+  ],
+  "frameHashes": [
+    "e65ed4fe6513fca910a120b999e9db937240e3e3179808bc1f449695c3fa10c9",
+    "8831de40f12b072b882597fd2c720c2925f64548b97c9c3a7db46bfe2d20aad8",
+    "276b224d58bee927523816d11393f3257c27b1bc511af4e8426c696f7bb3d36a",
+    "81ba25744159de554aca0f3cfb79f5ae0fe3d13e95d2ed85c6c0ddbe4990c807",
+    "f052bcc17cec5fdb700befdbe263d1e39579d439d298ced24ad7ab072d0d4409",
+    "355c56a9c5b12c30e3efca48d859381a89a973dc3e7bd19242106270eefd774a",
+    "7ead0969b13ad26554cba80185fc18001cf77820f77dac392f14d31373b56a6c",
+    "d5436ff6234805b7cb5888c5ecec3d3b98c6925dede40e08695a5dce0d026bd6"
+  ],
+  "bootBand99to114SpanPx": [
+    42,
+    37,
+    35,
+    50,
+    46,
+    37,
+    38,
+    47
+  ],
+  "oldBootBandSpanPx": [
+    58,
+    43,
+    38,
+    60,
+    64,
+    40,
+    41,
+    63
+  ],
+  "measurementLimit": "Whole lower-boot alpha envelope, includes overlap and contour; not anatomical ankle travel."
+}

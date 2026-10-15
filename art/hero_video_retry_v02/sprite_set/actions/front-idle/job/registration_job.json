@@ -1,0 +1,156 @@
+{
+  "schema": "video2dsprite.registration_job.v1",
+  "tool": {
+    "name": "prepare_i2v_input",
+    "version": "0.4.0"
+  },
+  "action": "idle",
+  "actionKind": "loop",
+  "returnsToRest": true,
+  "master": {
+    "path": "master.png",
+    "sha256": "3e20745a24a29737df72cbd690c05e0448674b5c640d9372085fc9c44b301efc",
+    "size": [
+      1024,
+      1024
+    ],
+    "anchor": [
+      523.5,
+      925.0
+    ],
+    "sourceName": "master.png"
+  },
+  "sourceSize": [
+    1024,
+    1024
+  ],
+  "sourceAnchor": [
+    523.5,
+    925.0
+  ],
+  "anchorMode": "explicit",
+  "referenceCanvas": [
+    1024,
+    1024
+  ],
+  "referenceScale": 1.0,
+  "referenceOffset": [
+    0.0,
+    0.0
+  ],
+  "referenceRoot": [
+    523.5,
+    925.0
+  ],
+  "pixelArt": false,
+  "placementResampler": "lanczos",
+  "keyColor": "magenta",
+  "keyChoice": {
+    "requested": "magenta",
+    "status": "ok",
+    "candidates": [
+      {
+        "key": "magenta",
+        "overlapShare": 0.0,
+        "rejected": false
+      }
+    ],
+    "rule": "reject a key when more than 0.5% of subject pixels have key dominance >= 40; first acceptable candidate wins"
+  },
+  "workRegion": [
+    20,
+    20,
+    1004,
+    1004
+  ],
+  "workRegionClipped": [
+    20.0,
+    20.0,
+    20.0,
+    20.0
+  ],
+  "margin": 20.0,
+  "padding": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "durationS": 6.0,
+  "calmSpanS": 0.4,
+  "timeline": [
+    {
+      "startS": 0.0,
+      "endS": 0.4,
+      "text": "hold exactly the supplied reference pose, nothing moves yet"
+    },
+    {
+      "startS": 0.4,
+      "endS": 5.6,
+      "text": "two complete slow breathing cycles, about one every 2.6 seconds"
+    },
+    {
+      "startS": 5.6,
+      "endS": 6.0,
+      "text": "settle back into exactly the starting pose, position and scale"
+    }
+  ],
+  "prompt": {
+    "path": "prompt.txt",
+    "sha256": "65d5788055674e99f938538e10f1e5e275acabf5e4d897890f1dcebf462cff0a"
+  },
+  "lint": [
+    {
+      "rule": "weak-amplitude",
+      "message": "'tiny' shrinks the generated motion until it is invisible at game size; ask for clearly visible motion with a cycle length instead",
+      "match": "tiny"
+    },
+    {
+      "rule": "missing-work-region",
+      "message": "give the numeric work region, e.g. 'inside the work region x=316..965, y=20..646 of this 1280x720 image'"
+    },
+    {
+      "rule": "missing-timeline",
+      "message": "give a timeline in seconds, e.g. '0.0-0.4 s hold the reference pose; ...'"
+    }
+  ],
+  "warnings": [
+    "lint weak-amplitude: 'tiny' shrinks the generated motion until it is invisible at game size; ask for clearly visible motion with a cycle length instead",
+    "lint missing-work-region: give the numeric work region, e.g. 'inside the work region x=316..965, y=20..646 of this 1280x720 image'",
+    "lint missing-timeline: give a timeline in seconds, e.g. '0.0-0.4 s hold the reference pose; ...'",
+    "the master was opaque: keyed its magenta backdrop with forge_matte.key_still (masterKeying in the job); check master.png over light and dark"
+  ],
+  "masterKeying": {
+    "method": "forge_matte.key_still (soft matte)",
+    "backdrop": "magenta",
+    "requested": "magenta",
+    "keyRgb": [
+      255.0,
+      0.0,
+      255.0
+    ],
+    "quality": "soft",
+    "transparentShare": 0.848962,
+    "qa": {
+      "opaque_key_px": 0,
+      "outer_ring_spill_fraction": 0.0,
+      "enclosed_key_pockets": 0,
+      "key_hued_px": 0
+    },
+    "sourceName": "master.png",
+    "sourceSha256": "d6761971125dc9fb1d089a3508088f4d791df15a91e111c5db4fb9bc0c7ef541"
+  },
+  "input": {
+    "path": "input.png",
+    "sha256": "51da4a65c9791346a4de3311afd57da5bf66dfa186c02bba4ba873deb6f869ba",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  "reviewGuide": {
+    "path": "review-guide.png",
+    "sha256": "61525bdf094b5afd7cb5452201bd0e496cc5733d1964a4bbd170410606e90e97",
+    "note": "review aid only; never send it to the provider"
+  }
+}

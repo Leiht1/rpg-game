@@ -1,0 +1,106 @@
+{
+  "status": "reviewed_preview_with_limitations",
+  "frameCount": 8,
+  "fps": 8,
+  "uniqueFrameCount": 8,
+  "frameSize": [
+    256,
+    256
+  ],
+  "sheetSize": [
+    1024,
+    512
+  ],
+  "gifCycleMs": 1000,
+  "alphaBboxes": [
+    [
+      88,
+      25,
+      163,
+      189
+    ],
+    [
+      88,
+      25,
+      163,
+      189
+    ],
+    [
+      90,
+      26,
+      164,
+      189
+    ],
+    [
+      93,
+      25,
+      167,
+      189
+    ],
+    [
+      93,
+      27,
+      167,
+      188
+    ],
+    [
+      91,
+      26,
+      167,
+      187
+    ],
+    [
+      92,
+      26,
+      165,
+      188
+    ],
+    [
+      88,
+      25,
+      163,
+      191
+    ]
+  ],
+  "fullBodyHeights": [
+    164,
+    164,
+    163,
+    164,
+    161,
+    161,
+    162,
+    166
+  ],
+  "minimumAlphaMargin": 25,
+  "fullBodyHeightCV": 0.009902565504459835,
+  "adjacentPremultipliedMAE": [
+    0.01519727986305952,
+    0.01387424673885107,
+    0.01907793991267681,
+    0.009438847191631794,
+    0.01372982282191515,
+    0.012971901334822178,
+    0.01901232823729515,
+    0.007203001528978348
+  ],
+  "loopSeamToMedianAdjacentRatio": 0.5191634302429041,
+  "sourceEdgeRisks": [],
+  "globalScale": 0.42367882784991406,
+  "registration": "fixed_upper_body_centroid_anchor_character_position_stable",
+  "scope": "preview only, no game integration",
+  "limitations": [
+    "Numerical checks do not establish anatomy, gait, identity stability or a seamless loop."
+  ],
+  "visualReview": {
+    "acceptedForPreview": true,
+    "finalGameAsset": false,
+    "direction": "True back without face or chest knot",
+    "gait": "Opposite footfalls and arm swing present; whole generated poses only",
+    "identity": "Compared with user-approved front and original hero; same hair, clothing and palette",
+    "limitations": [
+      "Minor outline and timing changes between hand-drawn poses",
+      "Contact poses can hold briefly"
+    ]
+  }
+}

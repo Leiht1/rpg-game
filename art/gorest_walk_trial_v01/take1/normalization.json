@@ -1,0 +1,360 @@
+{
+  "frameCount": 16,
+  "cellSize": 256,
+  "frameSize": [
+    256,
+    256
+  ],
+  "sheetSize": [
+    1024,
+    1024
+  ],
+  "sourceSheetSize": [
+    1254,
+    1254
+  ],
+  "sourceCells": [
+    [
+      3,
+      3,
+      311,
+      315
+    ],
+    [
+      317,
+      3,
+      623,
+      315
+    ],
+    [
+      629,
+      3,
+      933,
+      315
+    ],
+    [
+      939,
+      3,
+      1251,
+      315
+    ],
+    [
+      3,
+      321,
+      311,
+      627
+    ],
+    [
+      317,
+      321,
+      623,
+      627
+    ],
+    [
+      629,
+      321,
+      933,
+      627
+    ],
+    [
+      939,
+      321,
+      1251,
+      627
+    ],
+    [
+      3,
+      633,
+      311,
+      935
+    ],
+    [
+      317,
+      633,
+      623,
+      935
+    ],
+    [
+      629,
+      633,
+      933,
+      935
+    ],
+    [
+      939,
+      633,
+      1251,
+      935
+    ],
+    [
+      3,
+      941,
+      311,
+      1251
+    ],
+    [
+      317,
+      941,
+      623,
+      1251
+    ],
+    [
+      629,
+      941,
+      933,
+      1251
+    ],
+    [
+      939,
+      941,
+      1251,
+      1251
+    ]
+  ],
+  "globalScale": 0.6959459459459459,
+  "safePadding": 24,
+  "safeFramePolicy": "global_uniform_scale_preserve_anchor_with_minimum_edge_padding",
+  "sourceEdgePolicy": "flag_source_cells_whose_alpha_touches_or_nears_a_detected_cell_edge",
+  "sourceEdgeThreshold": 2,
+  "sourceEdgeRisks": [],
+  "frameBboxes": [
+    [
+      78,
+      28,
+      97,
+      203
+    ],
+    [
+      81,
+      28,
+      98,
+      203
+    ],
+    [
+      83,
+      27,
+      95,
+      204
+    ],
+    [
+      81,
+      29,
+      93,
+      202
+    ],
+    [
+      75,
+      28,
+      102,
+      203
+    ],
+    [
+      79,
+      29,
+      100,
+      202
+    ],
+    [
+      79,
+      26,
+      97,
+      205
+    ],
+    [
+      83,
+      25,
+      93,
+      206
+    ],
+    [
+      79,
+      27,
+      100,
+      204
+    ],
+    [
+      81,
+      26,
+      99,
+      205
+    ],
+    [
+      82,
+      28,
+      96,
+      203
+    ],
+    [
+      82,
+      32,
+      90,
+      199
+    ],
+    [
+      80,
+      30,
+      100,
+      201
+    ],
+    [
+      82,
+      32,
+      97,
+      199
+    ],
+    [
+      80,
+      28,
+      95,
+      203
+    ],
+    [
+      80,
+      28,
+      95,
+      203
+    ]
+  ],
+  "rootAnchors": [
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ],
+    [
+      128.0,
+      231
+    ]
+  ],
+  "gridPolicy": "auto_detect_grid_from_sprite_distances_then_fallback_proportional",
+  "gridDetection": {
+    "mode": "auto_detected",
+    "xRuns": [
+      [
+        84,
+        229
+      ],
+      [
+        398,
+        541
+      ],
+      [
+        711,
+        851
+      ],
+      [
+        1022,
+        1161
+      ]
+    ],
+    "yRuns": [
+      [
+        16,
+        311
+      ],
+      [
+        326,
+        622
+      ],
+      [
+        638,
+        931
+      ],
+      [
+        945,
+        1238
+      ]
+    ],
+    "xBounds": [
+      0,
+      314,
+      626,
+      936,
+      1254
+    ],
+    "yBounds": [
+      0,
+      318,
+      630,
+      938,
+      1254
+    ]
+  },
+  "proportionPolicy": "uniform_scale_preserve_input_character_proportions",
+  "rootAnchorPolicy": "fixed_lower_body_centroid_x_and_shared_feet_baseline",
+  "normalization": "global_uniform_scale_fixed_feet_baseline_auto_grid_no_nonuniform_scaling",
+  "createdTime": "2026-10-15T12:54:47",
+  "frames": [
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"512 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"768 0 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"512 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"768 256 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 512 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 512 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"512 512 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"768 512 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 768 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 768 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"512 768 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"768 768 256 256\" width=\"256\" height=\"256\"><image href=\"/generated/windrest_front_walk_trial_v01.png\" x=\"0\" y=\"0\" width=\"1024\" height=\"1024\" preserveAspectRatio=\"none\"/></svg>"
+  ]
+}

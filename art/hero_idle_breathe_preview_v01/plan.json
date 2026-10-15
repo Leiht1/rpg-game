@@ -1,0 +1,48 @@
+{
+  "status": "preview_ready_user_visual_review_pending",
+  "directions": [
+    "front",
+    "back",
+    "right",
+    "left"
+  ],
+  "independent_art": [
+    "front",
+    "back",
+    "side"
+  ],
+  "left_derivation": "whole-frame horizontal mirror of side; time order unchanged",
+  "frames_per_direction": 4,
+  "cycle_ms": 3000,
+  "frame_durations_ms": [
+    750,
+    750,
+    750,
+    750
+  ],
+  "canvas": [
+    128,
+    128
+  ],
+  "anchor": [
+    64,
+    112
+  ],
+  "base": "existing idle frame, not walk proportion correction",
+  "phase_order": [
+    "neutral",
+    "subtle_inhale",
+    "near_neutral",
+    "subtle_exhale"
+  ],
+  "art_source": "host_image",
+  "route": "host:image_gen edit, generate2dmedia adoption",
+  "required_invariants": [
+    "stationary boots",
+    "no per-frame scale fitting",
+    "no nodding",
+    "same standing pose"
+  ],
+  "generation_pending": false,
+  "effective_skill_output": "clips_fixed_feet/animation-clips.json"
+}

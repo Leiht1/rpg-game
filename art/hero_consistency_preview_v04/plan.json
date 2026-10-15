@@ -1,0 +1,43 @@
+{
+  "previewOnly": true,
+  "status": "preview_complete_needs_user_review",
+  "request": "Match breathe/walk scale and palette; quicker breathing; smaller side stride; full eyes",
+  "art_source": "host_image",
+  "route": "host:image_gen + generate2dmedia adopt",
+  "eyeReference": "art/candidates/hero-a.png (eyes only)",
+  "idleFrames": 4,
+  "idleFrameMs": 450,
+  "idleCycleMs": 1800,
+  "walkFrames": 8,
+  "walkFrameTicks": 5,
+  "walkCycleMs": 666.6666666666666,
+  "canvas": [
+    128,
+    128
+  ],
+  "root": [
+    64,
+    112
+  ],
+  "speedUnchanged": 100,
+  "generationPlan": [
+    "front_walk: full eyes, preserve motion and colors",
+    "side_walk: full eyes and shorter steps",
+    "front/back/side breathe: match walk scale/colors"
+  ],
+  "leftPolicy": "mirror complete right frames in unchanged time order",
+  "noLocalPatches": true,
+  "noPerFrameScale": true,
+  "headCorrection": "Upright centered head, horizontal front eye line, no roll/pitch/yaw across idle and walk",
+  "interruptedAttempt": "Front walk image call interrupted by user after 61.3 seconds; no generated file found at continuation check",
+  "completedImageGenerations": 8,
+  "generationModel": "not exposed by host",
+  "generationCost": "unknown; adoption receipt is not generation billing",
+  "selectedBreathTakes": {
+    "front": "take1",
+    "back": "take1",
+    "side": "take2"
+  },
+  "rejectedRefinement": "front take2 did not improve static-region residual (0.852px vs 0.766px), so take1 retained; not claimed as a stability improvement",
+  "gameIntegrated": false
+}

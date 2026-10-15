@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bvq8pxcdl0u8o"]
+
+[ext_resource type="Script" uid="uid://8kq2rdqdpf1p" path="res://scripts/world.gd" id="1"]
+
+[node name="WindrestWilds" type="Node2D" unique_id=739045802]
+position = Vector2(39, 37)
+script = ExtResource("1")

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "0927d042f3f04e5bb4e2c0941612f4296593a8d6a6a53781d5e3b62cb000d61b",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T08:44:30.613Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T08:44:30.613Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Single full frame 7 correction: neutral hand, preserve passing leg foreground overlap",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13eae-d60b-7a53-b798-179e593aeac9",
+    "source": "CODEX_HOME/generated_images/01a13eae-d60b-7a53-b798-179e593aeac9/exec-640475ad-f71f-4e46-88bc-06ae0aa2b0b9.png",
+    "sourceSha256": "dc6693556d52c31a48563a7dd1996b169bba9f319223e117ee496c66213c08e1",
+    "sourceMtime": "2026-10-15T08:42:54Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "dc6693556d52c31a48563a7dd1996b169bba9f319223e117ee496c66213c08e1",
+    "bytes": 547633,
+    "format": "PNG",
+    "size": [
+      1453,
+      1083
+    ]
+  }
+}

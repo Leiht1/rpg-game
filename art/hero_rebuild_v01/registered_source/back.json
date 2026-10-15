@@ -1,0 +1,135 @@
+{
+  "direction": "back",
+  "canvas": [
+    640,
+    640
+  ],
+  "root": [
+    320,
+    560
+  ],
+  "operation": "whole-figure uniform resample + rigid registration only",
+  "frames": [
+    {
+      "source": "assets/hero/reference/turnaround.png",
+      "rect": [
+        560,
+        0,
+        1040,
+        1024
+      ],
+      "root": [
+        233,
+        958
+      ],
+      "scale": 0.54,
+      "role": "complete accepted neutral view",
+      "source_sha256": "22ecb37373b44d7c3511aa6b62b210251bbd203bd5ea9784c217af0efb92a9e4",
+      "staged_offset": [
+        194,
+        43
+      ],
+      "staged_root": [
+        320,
+        560
+      ]
+    },
+    {
+      "source": "art/hero_rebuild_v01/back_walk/generated.png",
+      "rect": [
+        0,
+        0,
+        627,
+        620
+      ],
+      "root": [
+        397,
+        615
+      ],
+      "scale": 0.8165869218500797,
+      "source_pose": 0,
+      "source_sha256": "593ba9ed6807271c77482e70f86f1a17d15fd4d02cf74e2e7b9458cb7f138157",
+      "staged_offset": [
+        -4,
+        58
+      ],
+      "staged_root": [
+        320,
+        560
+      ]
+    },
+    {
+      "source": "art/hero_rebuild_v01/back_passing_edit/generated.png",
+      "rect": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "root": [
+        469,
+        1228
+      ],
+      "scale": 0.4082934609250399,
+      "source_pose": "edited_passing",
+      "role": "whole-pose edit, output canvas doubled, scale is same after 2x provider-size normalization",
+      "source_sha256": "dc7041122af4224ce3788b4cb2e36e9375cb9477a0702f3e327e9296aff72825",
+      "staged_offset": [
+        129,
+        59
+      ],
+      "staged_root": [
+        320,
+        560
+      ]
+    },
+    {
+      "source": "art/hero_rebuild_v01/back_walk/generated.png",
+      "rect": [
+        0,
+        620,
+        627,
+        1254
+      ],
+      "root": [
+        400,
+        599
+      ],
+      "scale": 0.8165869218500797,
+      "source_pose": 2,
+      "source_sha256": "593ba9ed6807271c77482e70f86f1a17d15fd4d02cf74e2e7b9458cb7f138157",
+      "staged_offset": [
+        -7,
+        71
+      ],
+      "staged_root": [
+        320,
+        560
+      ]
+    },
+    {
+      "source": "art/hero_rebuild_v01/back_walk/generated.png",
+      "rect": [
+        627,
+        620,
+        1254,
+        1254
+      ],
+      "root": [
+        238.5,
+        602
+      ],
+      "scale": 0.8165869218500797,
+      "source_pose": 3,
+      "source_sha256": "593ba9ed6807271c77482e70f86f1a17d15fd4d02cf74e2e7b9458cb7f138157",
+      "staged_offset": [
+        125,
+        68
+      ],
+      "staged_root": [
+        320,
+        560
+      ]
+    }
+  ]
+}

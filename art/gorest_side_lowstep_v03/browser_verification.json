@@ -1,0 +1,29 @@
+{
+  "url": "http://localhost:3000/",
+  "direction": "right",
+  "frameCount": 8,
+  "grid": [
+    4,
+    2
+  ],
+  "frameSize": [
+    256,
+    256
+  ],
+  "rightFramesInspectedOneBased": [
+    3,
+    7
+  ],
+  "leftFramesInspectedOneBased": [
+    3
+  ],
+  "playbackResumed": true,
+  "screenshots": [
+    "gorest_frame03.png",
+    "gorest_frame07.png",
+    "gorest_left_frame03.png"
+  ],
+  "lint": "pass",
+  "build": "pass; existing 599.71 kB warning",
+  "gameIntegrated": false
+}

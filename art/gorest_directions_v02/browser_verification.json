@@ -1,0 +1,63 @@
+{
+  "url": "http://localhost:3000/",
+  "checks": {
+    "back": {
+      "loaded": true,
+      "frameCount": 8,
+      "grid": [
+        4,
+        2
+      ],
+      "frameSize": [
+        256,
+        256
+      ],
+      "playing": true
+    },
+    "right": {
+      "loaded": true,
+      "frameCount": 8,
+      "grid": [
+        4,
+        2
+      ],
+      "frameSize": [
+        256,
+        256
+      ],
+      "playing": true,
+      "pauseAndSelectFrames": [
+        1,
+        5
+      ],
+      "resume": true
+    },
+    "left": {
+      "loaded": true,
+      "frameCount": 8,
+      "grid": [
+        4,
+        2
+      ],
+      "frameSize": [
+        256,
+        256
+      ],
+      "playing": true,
+      "screenDirection": "left"
+    }
+  },
+  "proof": [
+    "gorest_preview.png",
+    "gorest_back_preview.png",
+    "gorest_right_frame1.png",
+    "gorest_left_preview.png"
+  ],
+  "libraryExistingAssetsUnchanged": true,
+  "libraryOtherDataUnchanged": true,
+  "lint": "pass",
+  "build": "pass",
+  "existingBuildWarning": "JS chunk 599.71 kB > 500 kB",
+  "gameIntegrated": false,
+  "gamePerformanceTested": false
+}

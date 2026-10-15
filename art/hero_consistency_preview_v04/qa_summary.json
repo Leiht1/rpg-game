@@ -1,0 +1,723 @@
+{
+  "front_idle": {
+    "status": "needs-visual-review",
+    "frameBboxes": [
+      [
+        41,
+        19,
+        86,
+        112
+      ],
+      [
+        41,
+        19,
+        87,
+        112
+      ],
+      [
+        41,
+        19,
+        86,
+        112
+      ],
+      [
+        41,
+        19,
+        86,
+        111
+      ]
+    ],
+    "uniqueFrames": 4,
+    "root": [
+      64,
+      112
+    ],
+    "frameHashes": [
+      "a3a4ea4e6ee60081c85f3338cd31c7b57871b14c50d2d95c4e32fb996297e4fa",
+      "7270cd001ce0de200b5d9752e748f917f6cd06250a1e6291190d54a450382603",
+      "09bbf9eed4116c954249dcbf843ee2b204200bf96c476167264fb7e9ea6242d3",
+      "e6f8297317a92c5e8df7c20565303d87d87f078dd7023e64b3fc48a8f1c1277c"
+    ],
+    "headResidual": [
+      {
+        "bestRigidResidualShiftPx": [
+          0.0,
+          0.0
+        ],
+        "zeroShiftRms": 0.0
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          -0.001,
+          -0.047
+        ],
+        "zeroShiftRms": 0.029008
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          0.001,
+          -0.491
+        ],
+        "zeroShiftRms": 0.095281
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          0.0,
+          -0.489
+        ],
+        "zeroShiftRms": 0.094782
+      }
+    ],
+    "legsResidual": [
+      {
+        "bestRigidResidualShiftPx": [
+          -0.0,
+          -0.0
+        ],
+        "zeroShiftRms": 0.0
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          -0.0,
+          0.052
+        ],
+        "zeroShiftRms": 0.022129
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          -0.007,
+          0.742
+        ],
+        "zeroShiftRms": 0.122659
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          -0.006,
+          0.766
+        ],
+        "zeroShiftRms": 0.126286
+      }
+    ],
+    "chestRms": [
+      0.0,
+      0.06944212110338933,
+      0.08112539709243288,
+      0.05080712867674025
+    ],
+    "notProven": "Static-region fits do not establish zero drift, unchanged anatomy, natural motion or exact palette identity."
+  },
+  "front_walk": {
+    "status": "needs-visual-review",
+    "frameBboxes": [
+      [
+        41,
+        20,
+        87,
+        112
+      ],
+      [
+        42,
+        20,
+        88,
+        112
+      ],
+      [
+        41,
+        20,
+        87,
+        112
+      ],
+      [
+        40,
+        20,
+        86,
+        112
+      ],
+      [
+        39,
+        20,
+        87,
+        112
+      ],
+      [
+        40,
+        20,
+        87,
+        112
+      ],
+      [
+        41,
+        20,
+        87,
+        112
+      ],
+      [
+        42,
+        20,
+        88,
+        112
+      ]
+    ],
+    "uniqueFrames": 8,
+    "root": [
+      64,
+      112
+    ],
+    "frameHashes": [
+      "f14bee5ef7ced2e1d82e550286c4b3a4f382ddc95c10c247df20ae9da826bfb2",
+      "603f9015f70002536c6fa93977919308a9abeaa6c16c034be67841502b787119",
+      "4fff058e3d596ddb5c1bed338cb8d9989a34c90c0f0f28e98a17db8f31f12b40",
+      "8eef4f07698c5db4f12c956d7799b196089244fdaeb077dec9f568a372eb473f",
+      "6c8d1ff6b719a55dd51e21acc6890b44fe58e0c420d41d012866748cef595245",
+      "198d0c18aabf1980574acba02e48bf6f01228d78e2534153ad99ebdd031d8ac4",
+      "00a4c1ea3cf33be9c08628776c425019cdaf986b79a36531f38975c7757dda89",
+      "c7a1daff243eeefb720ce16f1cc345ad4bc5faab1482aa9d95176783be0b6839"
+    ]
+  },
+  "back_idle": {
+    "status": "needs-visual-review",
+    "frameBboxes": [
+      [
+        42,
+        20,
+        86,
+        112
+      ],
+      [
+        42,
+        20,
+        86,
+        112
+      ],
+      [
+        42,
+        20,
+        86,
+        112
+      ],
+      [
+        42,
+        20,
+        86,
+        112
+      ]
+    ],
+    "uniqueFrames": 4,
+    "root": [
+      64,
+      112
+    ],
+    "frameHashes": [
+      "57cc141993dba1f6255584b93af79dd21a38b9c182cfdc8f2e6e4f13a4888700",
+      "0eb933c44dfc2254c16448a42f1a832fef61ecb010890d1525a32b6f49c80ea2",
+      "4d4f053cd744f26f5506d42fc7be03d97fec4376050759f28181518e2ab62b99",
+      "d5efd975f4722df3fdc6f4078ffc12c856e07301521a915268c675bc47aeaf98"
+    ],
+    "headResidual": [
+      {
+        "bestRigidResidualShiftPx": [
+          0.0,
+          -0.0
+        ],
+        "zeroShiftRms": 0.0
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          0.03,
+          -0.003
+        ],
+        "zeroShiftRms": 0.016528
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          0.013,
+          -0.005
+        ],
+        "zeroShiftRms": 0.018575
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          0.026,
+          0.001
+        ],
+        "zeroShiftRms": 0.021047
+      }
+    ],
+    "legsResidual": [
+      {
+        "bestRigidResidualShiftPx": [
+          -0.0,
+          0.0
+        ],
+        "zeroShiftRms": 0.0
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          -0.018,
+          0.011
+        ],
+        "zeroShiftRms": 0.01501
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          -0.006,
+          0.001
+        ],
+        "zeroShiftRms": 0.014917
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          -0.008,
+          0.003
+        ],
+        "zeroShiftRms": 0.013651
+      }
+    ],
+    "chestRms": [
+      0.0,
+      0.06180713901369751,
+      0.032514608478354995,
+      0.018156781482843984
+    ],
+    "notProven": "Static-region fits do not establish zero drift, unchanged anatomy, natural motion or exact palette identity."
+  },
+  "back_walk": {
+    "status": "needs-visual-review",
+    "frameBboxes": [
+      [
+        40,
+        20,
+        84,
+        112
+      ],
+      [
+        40,
+        20,
+        85,
+        112
+      ],
+      [
+        41,
+        20,
+        86,
+        112
+      ],
+      [
+        44,
+        20,
+        87,
+        112
+      ],
+      [
+        44,
+        20,
+        87,
+        113
+      ],
+      [
+        41,
+        20,
+        87,
+        112
+      ],
+      [
+        41,
+        20,
+        86,
+        113
+      ],
+      [
+        40,
+        20,
+        84,
+        113
+      ]
+    ],
+    "uniqueFrames": 8,
+    "root": [
+      64,
+      112
+    ],
+    "frameHashes": [
+      "0eb3ae4f181a26e7aa440b572a5acff791e3c05c5258c2cb5d2b73b11b1d2e43",
+      "ba928af7be94041c09095c369d7794d24736f94404ecb440f41aa799ba90e807",
+      "30295027a1cb3b9125dffe33179e1898fc10f3dd8837b9ef6f6d8d94086afaaf",
+      "a8b020f220424a62d9f948fafd85188f6fcd6fe6a830ffe07a7bff053428017e",
+      "cffd59311cfa1db64f3af8e1f0bc78efbd35b2df57cf6f9746e822ae34f05252",
+      "bbe9eae7356c3e794601779cad43cfb350acae730bd89d2079ae9f0b41fda21f",
+      "3ab843ead28d77ce33cbef9ac794c7629c7e2352f5ea209bc33207c1f35bea99",
+      "cd03a94779583ae0936694d7d3c9b3a7f2b5dc2ccba3c9e02a8a7fcac4896f92"
+    ]
+  },
+  "left_idle": {
+    "status": "needs-visual-review",
+    "frameBboxes": [
+      [
+        45,
+        19,
+        88,
+        112
+      ],
+      [
+        45,
+        19,
+        88,
+        112
+      ],
+      [
+        45,
+        19,
+        88,
+        112
+      ],
+      [
+        45,
+        19,
+        88,
+        112
+      ]
+    ],
+    "uniqueFrames": 4,
+    "root": [
+      64,
+      112
+    ],
+    "frameHashes": [
+      "1e836b2aed3cc1fe88901876322312929d9223ca6ac8f82c383ccb9c5cd01138",
+      "371079641cae1392b49d9372631d67494cf5f005bda58c69e049cc5e0262451d",
+      "351b27516ddb5cf1d03f2a9fb6bb75f38a626fa0eb6398e8016e9c2e732f85c8",
+      "b9ba55e2436521d0e192ab2ec4d5ec0d693b372eda4c0442d9772f5f48d179cd"
+    ],
+    "headResidual": [
+      {
+        "bestRigidResidualShiftPx": [
+          -0.0,
+          0.0
+        ],
+        "zeroShiftRms": 0.0
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          0.173,
+          -0.0
+        ],
+        "zeroShiftRms": 0.052867
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          -0.0,
+          -0.366
+        ],
+        "zeroShiftRms": 0.073683
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          0.083,
+          -0.384
+        ],
+        "zeroShiftRms": 0.087476
+      }
+    ],
+    "legsResidual": [
+      {
+        "bestRigidResidualShiftPx": [
+          -0.0,
+          -0.0
+        ],
+        "zeroShiftRms": 0.0
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          -0.184,
+          0.014
+        ],
+        "zeroShiftRms": 0.056106
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          -0.0,
+          0.587
+        ],
+        "zeroShiftRms": 0.110046
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          -0.075,
+          0.599
+        ],
+        "zeroShiftRms": 0.115894
+      }
+    ],
+    "chestRms": [
+      0.0,
+      0.06413741946044099,
+      0.027007725743476686,
+      0.03145454236627035
+    ],
+    "notProven": "Static-region fits do not establish zero drift, unchanged anatomy, natural motion or exact palette identity."
+  },
+  "left_walk": {
+    "status": "needs-visual-review",
+    "frameBboxes": [
+      [
+        45,
+        20,
+        89,
+        113
+      ],
+      [
+        45,
+        20,
+        89,
+        112
+      ],
+      [
+        46,
+        20,
+        88,
+        113
+      ],
+      [
+        42,
+        20,
+        92,
+        113
+      ],
+      [
+        43,
+        20,
+        89,
+        111
+      ],
+      [
+        46,
+        20,
+        90,
+        111
+      ],
+      [
+        46,
+        20,
+        88,
+        112
+      ],
+      [
+        44,
+        20,
+        91,
+        111
+      ]
+    ],
+    "uniqueFrames": 8,
+    "root": [
+      64,
+      112
+    ],
+    "frameHashes": [
+      "822c004c56e9f6de957c3e70208e77baff4ec84b3da68bac5b2475cc5ca08f67",
+      "36978ee7832470f2ccb37c03fb5f8dd806e3e01476b0f53073ebf3ca013ff842",
+      "106dd6fd5514613ec68f5ef873f037d64ce32472d25206a9f860beee627ab2e7",
+      "de0599bc24e177f6fce816d70a2fe38ed8e4d8de79429158fd7849f0f3c04352",
+      "5dcc690774c7cf07bf186f426a6039bc748e18b66da6090698cfe465f7b044a0",
+      "12e96a919a81e9581cd1651b231bd56b41532773a01ac7cf15a15a1443f4d6e1",
+      "1e02f93ed10a5335fe2fee3d6db3c6cfd296ce82b3ee6fad4f06d537ae2358c4",
+      "bc437ecf805f616417cac1d40425c169ec64dbe26067ffd40a09752f749a553d"
+    ]
+  },
+  "right_idle": {
+    "status": "needs-visual-review",
+    "frameBboxes": [
+      [
+        40,
+        19,
+        83,
+        112
+      ],
+      [
+        40,
+        19,
+        83,
+        112
+      ],
+      [
+        40,
+        19,
+        83,
+        112
+      ],
+      [
+        40,
+        19,
+        83,
+        112
+      ]
+    ],
+    "uniqueFrames": 4,
+    "root": [
+      64,
+      112
+    ],
+    "frameHashes": [
+      "b44ebeba04b2605f681de40e61fdb29d9c235bd6633846c2e35b48b18eb36c19",
+      "f78876fe05a11128cedc348acc44a732bf5371f17323b463eef91933a64a774f",
+      "d6768ca147d7a50b010c64bb109839653554361115c9ef430b393be414ba93f2",
+      "38dd203dcb2268e8c33a93755524de781a6af81a9392d8dd20383143d6316cdf"
+    ],
+    "headResidual": [
+      {
+        "bestRigidResidualShiftPx": [
+          -0.0,
+          0.0
+        ],
+        "zeroShiftRms": 0.0
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          -0.173,
+          -0.0
+        ],
+        "zeroShiftRms": 0.052867
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          0.0,
+          -0.366
+        ],
+        "zeroShiftRms": 0.073683
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          -0.083,
+          -0.384
+        ],
+        "zeroShiftRms": 0.087476
+      }
+    ],
+    "legsResidual": [
+      {
+        "bestRigidResidualShiftPx": [
+          -0.0,
+          0.0
+        ],
+        "zeroShiftRms": 0.0
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          0.184,
+          0.014
+        ],
+        "zeroShiftRms": 0.056106
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          0.0,
+          0.587
+        ],
+        "zeroShiftRms": 0.110046
+      },
+      {
+        "bestRigidResidualShiftPx": [
+          0.075,
+          0.599
+        ],
+        "zeroShiftRms": 0.115894
+      }
+    ],
+    "chestRms": [
+      0.0,
+      0.06413741946044099,
+      0.027007725743476686,
+      0.03145454236627034
+    ],
+    "notProven": "Static-region fits do not establish zero drift, unchanged anatomy, natural motion or exact palette identity."
+  },
+  "right_walk": {
+    "status": "needs-visual-review",
+    "frameBboxes": [
+      [
+        39,
+        20,
+        83,
+        113
+      ],
+      [
+        39,
+        20,
+        83,
+        112
+      ],
+      [
+        40,
+        20,
+        82,
+        113
+      ],
+      [
+        36,
+        20,
+        86,
+        113
+      ],
+      [
+        39,
+        20,
+        85,
+        111
+      ],
+      [
+        38,
+        20,
+        82,
+        111
+      ],
+      [
+        40,
+        20,
+        82,
+        112
+      ],
+      [
+        37,
+        20,
+        84,
+        111
+      ]
+    ],
+    "uniqueFrames": 8,
+    "root": [
+      64,
+      112
+    ],
+    "frameHashes": [
+      "e65ed4fe6513fca910a120b999e9db937240e3e3179808bc1f449695c3fa10c9",
+      "8831de40f12b072b882597fd2c720c2925f64548b97c9c3a7db46bfe2d20aad8",
+      "276b224d58bee927523816d11393f3257c27b1bc511af4e8426c696f7bb3d36a",
+      "81ba25744159de554aca0f3cfb79f5ae0fe3d13e95d2ed85c6c0ddbe4990c807",
+      "f052bcc17cec5fdb700befdbe263d1e39579d439d298ced24ad7ab072d0d4409",
+      "355c56a9c5b12c30e3efca48d859381a89a973dc3e7bd19242106270eefd774a",
+      "7ead0969b13ad26554cba80185fc18001cf77820f77dac392f14d31373b56a6c",
+      "d5436ff6234805b7cb5888c5ecec3d3b98c6925dede40e08695a5dce0d026bd6"
+    ],
+    "bootBand99to114SpanPx": [
+      42,
+      37,
+      35,
+      50,
+      46,
+      37,
+      38,
+      47
+    ],
+    "oldBootBandSpanPx": [
+      58,
+      43,
+      38,
+      60,
+      64,
+      40,
+      41,
+      63
+    ],
+    "measurementLimit": "Whole lower-boot alpha envelope, includes overlap and contour; not anatomical ankle travel."
+  }
+}

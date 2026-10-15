@@ -1,0 +1,12 @@
+{
+  "previewOnly": true,
+  "userFeedback": "v01 too little visible breathing and obvious whole-body displacement",
+  "art": "three image-generated full-body edits, left whole-frame mirror",
+  "framesPerDirection": 4,
+  "cycleMs": 3000,
+  "goal": "stationary head/pelvis/legs/boots; readable chest and shoulders, not whole-sprite bobbing",
+  "packaging": "one common scale per direction, whole-frame subpixel translation fitted to static head and legs; no per-frame scale, no local edits",
+  "previousVersion": "../hero_idle_breathe_preview_v01",
+  "generationPending": false,
+  "status": "needs-visual-review"
+}

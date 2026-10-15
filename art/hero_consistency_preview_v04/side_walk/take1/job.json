@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "2beb4ad633a0e7361d238c39e006411aa1990fe5501f90df607898e5d5ffe80c",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T07:45:55.515Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T07:45:55.515Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Smaller side step swing, complete eye and upright profile head",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13dd0-2e37-7b80-a90b-2be7b02cd173",
+    "source": "CODEX_HOME/generated_images/01a13dd0-2e37-7b80-a90b-2be7b02cd173/exec-adb6dd6f-ffef-4ef9-940f-cf70c9cdded0.png",
+    "sourceSha256": "7ed4e2de202954f9851a5bd46a2f56c25437bd948c9305b4ee82685e126c05e0",
+    "sourceMtime": "2026-10-15T07:45:33Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "7ed4e2de202954f9851a5bd46a2f56c25437bd948c9305b4ee82685e126c05e0",
+    "bytes": 907006,
+    "format": "PNG",
+    "size": [
+      1774,
+      887
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "records": [
+    {
+      "label": "front-walk",
+      "visible": "    - img \"风栖原野主角 · 正面行走 v04（8帧修订预览） source spritesheet\"\n    - strong: 风栖原野主角 · 正面行走 v04（8帧修订预览）\n    - generic: 1 / 8 frames / 4 x 2 grid\n    - button \"Pause\":\n      - text: Pause\n    - spinbutton \"Frame W\": \"128\"\n    - spinbutton \"Frame H\": \"128\"\n    - slider \"Frame\": \"0\""
+    },
+    {
+      "label": "back-idle",
+      "visible": "    - img \"风栖原野主角 · 背面呼吸 v04（4帧修订预览） source spritesheet\"\n    - strong: 风栖原野主角 · 背面呼吸 v04（4帧修订预览）\n    - generic: 1 / 4 frames / 2 x 2 grid\n    - button \"Pause\":\n      - text: Pause\n    - spinbutton \"Frame W\": \"128\"\n    - spinbutton \"Frame H\": \"128\"\n    - slider \"Frame\": \"0\""
+    },
+    {
+      "label": "back-walk",
+      "visible": "    - img \"风栖原野主角 · 背面行走 v04（8帧修订预览） source spritesheet\"\n    - strong: 风栖原野主角 · 背面行走 v04（8帧修订预览）\n    - generic: 1 / 8 frames / 4 x 2 grid\n    - button \"Pause\":\n      - text: Pause\n    - spinbutton \"Frame W\": \"128\"\n    - spinbutton \"Frame H\": \"128\"\n    - slider \"Frame\": \"0\""
+    },
+    {
+      "label": "left-idle",
+      "visible": "    - img \"风栖原野主角 · 左侧呼吸 v04（4帧修订预览） source spritesheet\"\n    - strong: 风栖原野主角 · 左侧呼吸 v04（4帧修订预览）\n    - generic: 1 / 4 frames / 2 x 2 grid\n    - button \"Pause\":\n      - text: Pause\n    - spinbutton \"Frame W\": \"128\"\n    - spinbutton \"Frame H\": \"128\"\n    - slider \"Frame\": \"0\""
+    },
+    {
+      "label": "left-walk",
+      "visible": "    - img \"风栖原野主角 · 左侧行走 v04（8帧修订预览） source spritesheet\"\n    - strong: 风栖原野主角 · 左侧行走 v04（8帧修订预览）\n    - generic: 1 / 8 frames / 4 x 2 grid\n    - button \"Pause\":\n      - text: Pause\n    - spinbutton \"Frame W\": \"128\"\n    - spinbutton \"Frame H\": \"128\"\n    - slider \"Frame\": \"0\""
+    },
+    {
+      "label": "right-idle-inhale",
+      "visible": " textbox \"Target\": \"#9c623b\"\n    - text: Hex\n    - textbox \"Hex\": \"#9c623b\"\n    - text: Hue\n    - generic: \"24\"\n    - slider \"Hue 24\": \"24\"\n    - text: Saturation\n    - generic: 45%\n    - slider \"Saturation 45%\": \"45\"\n    - text: Lightness\n    - generic: 42%\n    - slider \"Lightness 42%\": \"42\"\n    - button \"Color\" [disabled]:\n      - text: Color\n    - button \"All\" [disabled]:\n      - text: All\n    - button \"Variant\" [disabled]:\n      - text: Variant\n  - complementary \"Spritesheet frame tools\":\n    - strong: P1 / Source\n    - generic: 256 x 256\n    - img \"风栖原野主角 · 右侧呼吸 v04（4帧修订预览） source spritesheet\"\n    - strong: Frames\n    - generic: 4 / 4\n    - button \"Frame 1\"\n    - generic: Frame 1\n    - button \"Delete frame 1\":\n    - button \"Frame 2\" [active]\n    - generic: Frame 2\n    - button \"Delete frame 2\":\n    - button \"Frame 3\"\n    - generic: Frame 3\n    - button \"Delete frame 3\":\n    - button \"Frame 4\"\n    - generic: Frame 4\n    - button \"Delete frame 4\":\n  - region \"Spritesheet slicing controls\":\n    - strong: 风栖原野主角 · 右侧呼吸 v04（4帧修订预览）\n    - generic: 2 / 4 frames / 2 x 2 grid\n    - button \"Download\":\n      - text: Download\n    - button \"Play\":\n      - text: Play\n    - button \"Auto\":\n      - text: Auto\n    - text: Frame W\n    - spinbutton \"Frame W\": \"128\"\n    - text: Frame H\n    - spinbutton \"Frame H\": \"128\"\n    - text: Frame\n    - slider \"Frame\": \"1\"\n- button \"Open community help\":"
+    },
+    {
+      "label": "right-walk-frame4",
+      "visible": "6%\": \"46\"\n    - text: Lightness\n    - generic: 39%\n    - slider \"Lightness 39%\": \"39\"\n    - button \"Color\" [disabled]:\n      - text: Color\n    - button \"All\" [disabled]:\n      - text: All\n    - button \"Variant\" [disabled]:\n      - text: Variant\n  - complementary \"Spritesheet frame tools\":\n    - strong: P1 / Source\n    - generic: 512 x 256\n    - img \"风栖原野主角 · 右侧行走 v04（8帧修订预览） source spritesheet\"\n    - strong: Frames\n    - generic: 8 / 8\n    - button \"Frame 1\"\n    - generic: Frame 1\n    - button \"Delete frame 1\":\n    - button \"Frame 2\"\n    - generic: Frame 2\n    - button \"Delete frame 2\":\n    - button \"Frame 3\"\n    - generic: Frame 3\n    - button \"Delete frame 3\":\n    - button \"Frame 4\" [active]\n    - generic: Frame 4\n    - button \"Delete frame 4\":\n    - button \"Frame 5\"\n    - generic: Frame 5\n    - button \"Delete frame 5\":\n    - button \"Frame 6\"\n    - generic: Frame 6\n    - button \"Delete frame 6\":\n    - button \"Frame 7\"\n    - generic: Frame 7\n    - button \"Delete frame 7\":\n    - button \"Frame 8\"\n    - generic: Frame 8\n    - button \"Delete frame 8\":\n  - region \"Spritesheet slicing controls\":\n    - strong: 风栖原野主角 · 右侧行走 v04（8帧修订预览）\n    - generic: 4 / 8 frames / 4 x 2 grid\n    - button \"Download\":\n      - text: Download\n    - button \"Play\":\n      - text: Play\n    - button \"Auto\":\n      - text: Auto\n    - text: Frame W\n    - spinbutton \"Frame W\": \"128\"\n    - text: Frame H\n    - spinbutton \"Frame H\": \"128\"\n    - text: Frame\n    - slider \"Frame\": \"3\"\n- button \"Open community help\":"
+    }
+  ],
+  "frontIdleManualCheck": "Pause, Frame2 inhale, Frame4 exhale, resume; screenshots saved",
+  "rightWalkManualCheck": "Pause, Frame4, Frame8, resume; screenshots saved",
+  "notProven": "UI playback observed, no game integration or zero-drift certification",
+  "captureNote": "Early captures were taken before the browser finished painting and may show the preceding selection/frame. They are retained as early_capture_* diagnostics, not frame-identification evidence. Final separately captured and visually checked evidence is gorest-front-verified.png and gorest-right-walk-verified.png."
+}

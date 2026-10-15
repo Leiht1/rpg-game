@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "1289955940d851ad33ceaa31a6c58bf704a45a693a1d75f4d59e07c6a92f0e86",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T09:38:12.663Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T09:38:12.663Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Redistribute side walk phases 2 3 5 6 and correct foreground leg ownership in frame 6",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13eae-d60b-7a53-b798-179e593aeac9",
+    "source": "CODEX_HOME/generated_images/01a13eae-d60b-7a53-b798-179e593aeac9/exec-f52e20a5-8572-4ada-b970-5cbe50b9bfc9.png",
+    "sourceSha256": "d05695232be08ce8c45a1080113d3eaf8da7168a260074c32d3cf8986691addd",
+    "sourceMtime": "2026-10-15T09:37:55Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "d05695232be08ce8c45a1080113d3eaf8da7168a260074c32d3cf8986691addd",
+    "bytes": 715531,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

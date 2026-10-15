@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "717cf4646355af0b68fe73d327b2c32aa3b4449d6012f73d4ee700428ba69be0",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T09:45:15.592Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T09:45:15.592Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Frame 5 foreground leg visibly recovering below hip, distinct from frame 4",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13eae-d60b-7a53-b798-179e593aeac9",
+    "source": "CODEX_HOME/generated_images/01a13eae-d60b-7a53-b798-179e593aeac9/exec-fa72a6e7-dccc-40f1-8c99-9461b5742e39.png",
+    "sourceSha256": "d22a6061ca49b9f65e52992d91aec2669eb87405c6ec08649e0fb63e90108f4a",
+    "sourceMtime": "2026-10-15T09:44:48Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "d22a6061ca49b9f65e52992d91aec2669eb87405c6ec08649e0fb63e90108f4a",
+    "bytes": 482653,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

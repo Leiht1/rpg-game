@@ -1,0 +1,150 @@
+{
+  "schema": "windrest.layered_actor.v1",
+  "art_source": "host_image",
+  "route": "host:image_gen via generate2dsprite",
+  "motion_source": "procedural_two_bone_cutout_rig; no image-to-video route",
+  "canvas": [
+    128,
+    128
+  ],
+  "anchor": [
+    64,
+    112
+  ],
+  "body_height": 88,
+  "columns": 12,
+  "slots": [
+    "far_leg",
+    "far_pants",
+    "far_shoe",
+    "far_arm",
+    "far_sleeve",
+    "torso",
+    "near_leg",
+    "near_pants",
+    "near_shoe",
+    "head",
+    "near_arm",
+    "jacket",
+    "near_sleeve",
+    "hair"
+  ],
+  "rows": {
+    "idle_front": 0,
+    "walk_front": 1,
+    "idle_back": 2,
+    "walk_back": 3,
+    "idle_right": 4,
+    "walk_right": 5,
+    "idle_left": 6,
+    "walk_left": 7
+  },
+  "animations": {
+    "idle": {
+      "frames": 6,
+      "fps": 6
+    },
+    "walk": {
+      "frames": 12,
+      "stride_world_units": 40,
+      "distance_driven": true
+    }
+  },
+  "layer_groups": {
+    "body": [
+      "far_leg",
+      "far_arm",
+      "torso",
+      "near_leg",
+      "head",
+      "near_arm"
+    ],
+    "hair": [
+      "hair"
+    ],
+    "top": [
+      "far_sleeve",
+      "jacket",
+      "near_sleeve"
+    ],
+    "pants": [
+      "far_pants",
+      "near_pants"
+    ],
+    "shoes": [
+      "far_shoe",
+      "near_shoe"
+    ]
+  },
+  "limits": [
+    "Cutout rig, not hand-drawn frame-by-frame or generated video.",
+    "Left view is mirrored right view.",
+    "Future clothes must match these joints, canvas, layer order and timebase; base torso is an undershirt."
+  ],
+  "rig_rest": {
+    "head_anchor": [
+      64,
+      29
+    ],
+    "hair_anchor": [
+      64,
+      22
+    ],
+    "torso_anchor": [
+      64,
+      56
+    ],
+    "jacket_anchor": [
+      64,
+      55
+    ],
+    "pelvis_anchor": [
+      64,
+      79
+    ],
+    "front_back_leg_hips": [
+      [
+        57,
+        83
+      ],
+      [
+        71,
+        83
+      ]
+    ],
+    "side_leg_hips": [
+      [
+        62,
+        82
+      ],
+      [
+        66,
+        82
+      ]
+    ],
+    "front_back_shoulders": [
+      [
+        48,
+        57
+      ],
+      [
+        80,
+        57
+      ]
+    ],
+    "side_shoulders": [
+      [
+        61,
+        57
+      ],
+      [
+        67,
+        57
+      ]
+    ],
+    "base_ankle_y_front_back": 101,
+    "base_ankle_y_side": 105,
+    "stance_fraction": 0.6,
+    "swing_lift_px": 5
+  }
+}

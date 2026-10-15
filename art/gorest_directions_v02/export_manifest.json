@@ -1,0 +1,278 @@
+{
+  "purpose": "Four-direction walk previews only; not integrated into Godot",
+  "frameSize": [
+    256,
+    256
+  ],
+  "framesPerDirection": 8,
+  "fps": 8,
+  "gridColumns": 4,
+  "rowsPerDirection": 2,
+  "directionOrder": [
+    "front",
+    "back",
+    "left",
+    "right"
+  ],
+  "atlasSize": [
+    1024,
+    2048
+  ],
+  "loop": true,
+  "leftPolicy": "Mirror each complete right-facing frame, retaining chronological order",
+  "registration": "Gorest fixed upper-body centroid; not the runtime game's foot origin",
+  "directions": {
+    "front": {
+      "atlasOffset": [
+        0,
+        0
+      ],
+      "sheet": "front/front_walk_sheet.png",
+      "globalScale": 0.41001356143978857,
+      "sourceFrameOrder": [
+        0,
+        5,
+        6,
+        7,
+        3,
+        2,
+        1,
+        4
+      ],
+      "rootAnchors": [
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ]
+      ],
+      "pngSha256": "81a610df4f806a8fef57f84a2c1aeabfd2be4d0552501c1ee9d4648503f145cf",
+      "gifDurationsMs": [
+        120,
+        130,
+        130,
+        120,
+        120,
+        130,
+        130,
+        120
+      ]
+    },
+    "back": {
+      "atlasOffset": [
+        0,
+        512
+      ],
+      "sheet": "back/back_walk_sheet.png",
+      "globalScale": 0.42367882784991406,
+      "sourceFrameOrder": [
+        0,
+        1,
+        2,
+        7,
+        4,
+        5,
+        6,
+        3
+      ],
+      "rootAnchors": [
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ]
+      ],
+      "pngSha256": "556e868666452e5975207070166effb18d6e2266259d4d0e5916512d03c4852a",
+      "gifDurationsMs": [
+        120,
+        130,
+        120,
+        130,
+        120,
+        130,
+        120,
+        130
+      ]
+    },
+    "left": {
+      "atlasOffset": [
+        0,
+        1024
+      ],
+      "sheet": "left/left_walk_sheet.png",
+      "globalScale": null,
+      "sourceFrameOrder": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11
+      ],
+      "rootAnchors": [
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ]
+      ],
+      "pngSha256": "09c0b0b6b0aedfb82428a4b9aaa4b85808a9e6186be6c9ba52271beea1b5152c",
+      "gifDurationsMs": [
+        120,
+        130,
+        120,
+        130,
+        120,
+        130,
+        120,
+        130
+      ]
+    },
+    "right": {
+      "atlasOffset": [
+        0,
+        1536
+      ],
+      "sheet": "right/right_walk_sheet.png",
+      "globalScale": null,
+      "sourceFrameOrder": [
+        0,
+        1,
+        2,
+        3,
+        8,
+        9,
+        10,
+        11
+      ],
+      "rootAnchors": [
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ],
+        [
+          128.0,
+          78.08
+        ]
+      ],
+      "pngSha256": "e2f8a09759ee91f9473942599210cf0df4f2028a2db5961efe05a372e9b47e3a",
+      "gifDurationsMs": [
+        120,
+        130,
+        120,
+        130,
+        120,
+        130,
+        120,
+        130
+      ]
+    }
+  }
+}

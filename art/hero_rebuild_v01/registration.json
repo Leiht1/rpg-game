@@ -1,0 +1,272 @@
+{
+  "schema": "windrest.whole_character_registration.v1",
+  "stride_world_units": 42.666666666666664,
+  "registration_method": "Manual whole-figure root landmarks; same walk source scale per action; no local transforms or per-frame bbox fitting",
+  "directions": {
+    "front": {
+      "walk_source_order": [
+        0,
+        3,
+        2,
+        1
+      ],
+      "source_frames": [
+        {
+          "source": "assets/hero/reference/turnaround.png",
+          "rect": [
+            0,
+            0,
+            560,
+            1024
+          ],
+          "root": [
+            306,
+            960
+          ],
+          "scale": 0.54,
+          "role": "complete accepted neutral view"
+        },
+        {
+          "source": "art/hero_rebuild_v01/front_walk_take2/generated.png",
+          "rect": [
+            0,
+            0,
+            627,
+            627
+          ],
+          "root": [
+            375,
+            617
+          ],
+          "scale": 0.8165869218500797,
+          "source_pose": 0,
+          "role": "whole generated walk key pose"
+        },
+        {
+          "source": "art/hero_rebuild_v01/front_walk_take2/generated.png",
+          "rect": [
+            627,
+            627,
+            1254,
+            1254
+          ],
+          "root": [
+            266,
+            609
+          ],
+          "scale": 0.8165869218500797,
+          "source_pose": 3,
+          "role": "whole generated walk key pose"
+        },
+        {
+          "source": "art/hero_rebuild_v01/front_walk_take2/generated.png",
+          "rect": [
+            0,
+            627,
+            627,
+            1254
+          ],
+          "root": [
+            379,
+            609
+          ],
+          "scale": 0.8165869218500797,
+          "source_pose": 2,
+          "role": "whole generated walk key pose"
+        },
+        {
+          "source": "art/hero_rebuild_v01/front_walk_take2/generated.png",
+          "rect": [
+            627,
+            0,
+            1254,
+            627
+          ],
+          "root": [
+            267.5,
+            617
+          ],
+          "scale": 0.8165869218500797,
+          "source_pose": 1,
+          "role": "whole generated walk key pose"
+        }
+      ]
+    },
+    "side": {
+      "walk_source_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "source_frames": [
+        {
+          "source": "art/hero_rebuild_v01/side_idle_edit/generated.png",
+          "rect": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "root": [
+            612,
+            1226
+          ],
+          "scale": 0.4151,
+          "role": "whole neutral pose edit from side walk; one fixed uniform source scale"
+        },
+        {
+          "source": "art/hero_rebuild_v01/side_walk/generated.png",
+          "rect": [
+            0,
+            0,
+            627,
+            627
+          ],
+          "root": [
+            410,
+            621
+          ],
+          "scale": 0.8165869218500797,
+          "source_pose": 0,
+          "role": "whole generated walk key pose"
+        },
+        {
+          "source": "art/hero_rebuild_v01/side_walk/generated.png",
+          "rect": [
+            627,
+            0,
+            1254,
+            627
+          ],
+          "root": [
+            288,
+            621
+          ],
+          "scale": 0.8165869218500797,
+          "source_pose": 1,
+          "role": "whole generated walk key pose"
+        },
+        {
+          "source": "art/hero_rebuild_v01/side_walk/generated.png",
+          "rect": [
+            0,
+            627,
+            627,
+            1254
+          ],
+          "root": [
+            410,
+            615
+          ],
+          "scale": 0.8165869218500797,
+          "source_pose": 2,
+          "role": "whole generated walk key pose"
+        },
+        {
+          "source": "art/hero_rebuild_v01/side_walk/generated.png",
+          "rect": [
+            627,
+            627,
+            1254,
+            1254
+          ],
+          "root": [
+            293,
+            617
+          ],
+          "scale": 0.8165869218500797,
+          "source_pose": 3,
+          "role": "whole generated walk key pose"
+        }
+      ],
+      "processed_folder": "side_final"
+    },
+    "back": {
+      "walk_source_order": [
+        0,
+        "edited_passing",
+        2,
+        3
+      ],
+      "source_frames": [
+        {
+          "source": "assets/hero/reference/turnaround.png",
+          "rect": [
+            560,
+            0,
+            1040,
+            1024
+          ],
+          "root": [
+            233,
+            958
+          ],
+          "scale": 0.54,
+          "role": "complete accepted neutral view"
+        },
+        {
+          "source": "art/hero_rebuild_v01/back_walk/generated.png",
+          "rect": [
+            0,
+            0,
+            627,
+            620
+          ],
+          "root": [
+            397,
+            615
+          ],
+          "scale": 0.8165869218500797,
+          "source_pose": 0
+        },
+        {
+          "source": "art/hero_rebuild_v01/back_passing_edit/generated.png",
+          "rect": [
+            0,
+            0,
+            1254,
+            1254
+          ],
+          "root": [
+            469,
+            1228
+          ],
+          "scale": 0.4082934609250399,
+          "source_pose": "edited_passing",
+          "role": "whole-pose edit, output canvas doubled, scale is same after 2x provider-size normalization"
+        },
+        {
+          "source": "art/hero_rebuild_v01/back_walk/generated.png",
+          "rect": [
+            0,
+            620,
+            627,
+            1254
+          ],
+          "root": [
+            400,
+            599
+          ],
+          "scale": 0.8165869218500797,
+          "source_pose": 2
+        },
+        {
+          "source": "art/hero_rebuild_v01/back_walk/generated.png",
+          "rect": [
+            627,
+            620,
+            1254,
+            1254
+          ],
+          "root": [
+            238.5,
+            602
+          ],
+          "scale": 0.8165869218500797,
+          "source_pose": 3
+        }
+      ]
+    }
+  }
+}

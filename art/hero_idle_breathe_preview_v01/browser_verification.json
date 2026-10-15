@@ -1,0 +1,60 @@
+{
+  "checkedAt": "2026-10-15T06:52:02.302552+00:00",
+  "url": "http://localhost:3000/",
+  "surface": "Spritesheet Only",
+  "directionsOpened": [
+    "front",
+    "back",
+    "right",
+    "left"
+  ],
+  "observedFrameCount": 4,
+  "observedGrid": [
+    2,
+    2
+  ],
+  "observedFrameSize": [
+    128,
+    128
+  ],
+  "observedPlayback": true,
+  "pauseResumeChecked": [
+    "front",
+    "right"
+  ],
+  "manualFramesChecked": {
+    "front": [
+      2,
+      4
+    ],
+    "right": [
+      2
+    ]
+  },
+  "frameOrder": "one-based UI indices",
+  "leftMirrorFacingVerified": true,
+  "finalSurface": "gallery, first four breathing preview cards",
+  "timingEvidence": "GIF/WebP file verification + Gorest playback interval uses sprite.fps=4/3 => 750ms; no wall-clock browser benchmark",
+  "screenshots": [
+    {
+      "file": "gorest_four_direction_gallery.png",
+      "sha256": "5b363b372498d09d92ce4e40d9b7ccc316328184cca5e5085917616ac05a9140"
+    },
+    {
+      "file": "gorest_front_frame02.png",
+      "sha256": "3334bb9e195494a299695ce6e5fa9d49ad534584d0ac623ba47b0ad8d66fa749"
+    },
+    {
+      "file": "gorest_back_preview.png",
+      "sha256": "6ca6ba390ba47112334dd3d395e81dacd4c3d619c1753d049905c1a551d49458"
+    },
+    {
+      "file": "gorest_right_preview.png",
+      "sha256": "dc08601b05aa1d879cc6763abcf230208cb7f7980b6df0b8bf8c07465a68fb4f"
+    },
+    {
+      "file": "gorest_left_preview.png",
+      "sha256": "a3fc4f8b5e3a1b6f072364f33760c2e32200d279f10bded1e286f5c4a2f6a0af"
+    }
+  ]
+}

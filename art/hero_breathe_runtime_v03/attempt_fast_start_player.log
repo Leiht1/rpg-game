@@ -1,0 +1,2942 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ERROR: Initial visible chunks never became ready
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:26)
+ERROR: Wrong movement speed for ["move_right"]: 0.000
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:67)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Walk did not activate
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:68)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong direction clip for ["move_right"]
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:74)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong movement speed for ["move_down"]: 0.000
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:67)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Walk did not activate
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:68)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong direction clip for ["move_down"]
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:74)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Stopping must begin at the neutral breathing frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:79)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong movement speed for ["move_left"]: 0.000
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:67)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Walk did not activate
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:68)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong direction clip for ["move_left"]
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:74)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Stopping must begin at the neutral breathing frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:79)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong movement speed for ["move_up"]: 0.000
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:67)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Walk did not activate
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:68)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong direction clip for ["move_up"]
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:74)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Stopping must begin at the neutral breathing frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:79)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong movement speed for ["move_right", "move_down"]: 0.000
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:67)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Walk did not activate
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:68)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong direction clip for ["move_right", "move_down"]
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:74)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Stopping must begin at the neutral breathing frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:79)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong movement speed for ["move_left", "move_down"]: 0.000
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:67)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Walk did not activate
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:68)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong direction clip for ["move_left", "move_down"]
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:74)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong movement speed for ["move_left", "move_up"]: 0.000
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:67)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Walk did not activate
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:68)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong direction clip for ["move_left", "move_up"]
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:74)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Stopping must begin at the neutral breathing frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:79)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong movement speed for ["move_right", "move_up"]: 0.000
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:67)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Walk did not activate
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:68)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Wrong direction clip for ["move_right", "move_up"]
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:74)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Stopping must begin at the neutral breathing frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:79)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Travel did not play a complete walk cycle
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:108)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 0
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 1
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 2
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 3
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 4
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 5
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 6
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 7
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 8
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 9
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 10
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 11
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 12
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 13
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 14
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 15
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 16
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 17
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 18
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 19
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 20
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 21
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 22
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 23
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 24
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 25
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 26
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 27
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 28
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 29
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 30
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 31
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 32
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 33
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 34
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 35
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 36
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 37
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 38
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 39
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 40
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 41
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 42
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 43
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 44
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 45
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 46
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 47
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 48
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 49
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 50
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 51
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 52
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 53
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 54
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 55
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 56
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 57
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 58
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 59
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 60
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 61
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 62
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 63
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 64
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 65
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 66
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 67
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 68
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 69
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 70
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 71
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 72
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 73
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 74
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 75
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 76
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 77
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 78
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 79
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 80
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 81
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 82
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 83
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 84
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 85
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 86
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 87
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 88
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 89
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 90
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 91
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 92
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 93
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 94
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 95
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 96
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 97
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 98
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 99
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 100
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 101
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 102
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 103
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 104
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 105
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 106
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 107
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 108
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 109
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 110
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 111
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 112
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 113
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 114
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 115
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 116
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 117
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 118
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 119
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 120
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 121
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 122
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 123
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 124
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 125
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 126
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 127
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 128
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 129
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 130
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 131
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 132
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 133
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 134
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 135
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 136
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 137
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 138
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 139
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 140
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 141
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 142
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 143
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 144
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 145
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 146
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 147
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 148
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 149
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 150
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 151
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 152
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 153
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 154
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 155
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 156
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 157
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 158
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 159
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 160
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 161
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 162
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 163
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 164
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 165
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 166
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 167
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 168
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 169
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 170
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 171
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 172
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 173
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Turn reset gait phase
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:120)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid stop did not reset the breathing entry frame
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:124)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 174
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 175
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 176
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 177
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 178
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Rapid turn chose wrong clip at 179
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:116)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: WASD physical key does not map
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:136)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: WASD physical key does not map
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:136)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: WASD physical key does not map
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:136)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: WASD physical key does not map
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:136)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: No prop found for collision test
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:148)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: No prop found for collision test
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:148)
+       [2] ticks (res://tests/test_player.gd:14)
+ERROR: Shore collision did not stop the player at water edge
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_player.gd:8)
+       [1] run (res://tests/test_player.gd:178)
+       [2] ticks (res://tests/test_player.gd:14)
+PLAYER_TESTS fail | 490 failures

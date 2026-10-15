@@ -1,0 +1,229 @@
+{
+  "frameCount": 4,
+  "cellSize": 128,
+  "frameSize": [
+    128,
+    128
+  ],
+  "sheetSize": [
+    256,
+    256
+  ],
+  "sourceSheetSize": [
+    1254,
+    1254
+  ],
+  "sourceCells": [
+    [
+      6,
+      6,
+      621,
+      634
+    ],
+    [
+      633,
+      6,
+      1248,
+      634
+    ],
+    [
+      6,
+      646,
+      621,
+      1248
+    ],
+    [
+      633,
+      646,
+      1248,
+      1248
+    ]
+  ],
+  "globalScale": 0.2026726057906459,
+  "safePadding": 16,
+  "safeFramePolicy": "global_uniform_scale_preserve_anchor_with_minimum_edge_padding",
+  "sourceEdgePolicy": "flag_source_cells_whose_alpha_touches_or_nears_a_detected_cell_edge",
+  "sourceEdgeThreshold": 2,
+  "sourceEdgeRisks": [],
+  "frameBboxes": [
+    [
+      45,
+      21,
+      88,
+      112
+    ],
+    [
+      45,
+      21,
+      88,
+      112
+    ],
+    [
+      45,
+      21,
+      88,
+      112
+    ],
+    [
+      45,
+      21,
+      88,
+      112
+    ]
+  ],
+  "rootAnchors": [
+    [
+      64,
+      112
+    ],
+    [
+      64,
+      112
+    ],
+    [
+      64,
+      112
+    ],
+    [
+      64,
+      112
+    ]
+  ],
+  "gridPolicy": "auto_detect_grid_from_sprite_distances_then_fallback_proportional",
+  "gridDetection": {
+    "mode": "auto_detected",
+    "xRuns": [
+      [
+        211,
+        416
+      ],
+      [
+        838,
+        1043
+      ]
+    ],
+    "yRuns": [
+      [
+        101,
+        550
+      ],
+      [
+        729,
+        1177
+      ]
+    ],
+    "xBounds": [
+      0,
+      627,
+      1254
+    ],
+    "yBounds": [
+      0,
+      640,
+      1254
+    ]
+  },
+  "proportionPolicy": "uniform_scale_preserve_input_character_proportions",
+  "rootAnchorPolicy": "static head and pelvis/legs whole-frame subpixel registration against frame00; not per-frame silhouette centroid",
+  "normalization": "native alpha; one shared direction scale from neutral; rigid translation only",
+  "createdTime": "2026-10-15T15:08:26",
+  "frames": [
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_left_idle_breathe_v02.png\" x=\"0\" y=\"0\" width=\"256\" height=\"256\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"128 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_left_idle_breathe_v02.png\" x=\"0\" y=\"0\" width=\"256\" height=\"256\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_left_idle_breathe_v02.png\" x=\"0\" y=\"0\" width=\"256\" height=\"256\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"128 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_left_idle_breathe_v02.png\" x=\"0\" y=\"0\" width=\"256\" height=\"256\"/></svg>"
+  ],
+  "transforms": [
+    {
+      "sourceCell": [
+        6,
+        6,
+        621,
+        634
+      ],
+      "scale": 0.2026726057906459,
+      "offsetPx": [
+        -0.77317049552002,
+        1.7461024498886388
+      ],
+      "registration": {
+        "rigidOffsetPx": [
+          0,
+          0
+        ],
+        "objective": 0
+      }
+    },
+    {
+      "sourceCell": [
+        633,
+        6,
+        1248,
+        634
+      ],
+      "scale": 0.2026726057906459,
+      "offsetPx": [
+        -0.6560075232093837,
+        1.7424659222064494
+      ],
+      "registration": {
+        "rigidOffsetPx": [
+          0.007334513750193144,
+          -0.0036365276821894526
+        ],
+        "objective": 0.00014550815103575587
+      }
+    },
+    {
+      "sourceCell": [
+        6,
+        646,
+        621,
+        1248
+      ],
+      "scale": 0.2026726057906459,
+      "offsetPx": [
+        -0.7661688201253929,
+        4.196748068348839
+      ],
+      "registration": {
+        "rigidOffsetPx": [
+          0.002095102039455711,
+          -0.18409825681818862
+        ],
+        "objective": 0.0002904183347709477
+      }
+    },
+    {
+      "sourceCell": [
+        633,
+        646,
+        1248,
+        1248
+      ],
+      "scale": 0.2026726057906459,
+      "offsetPx": [
+        -0.6598706501228753,
+        4.176890215914826
+      ],
+      "registration": {
+        "rigidOffsetPx": [
+          0.006199107730531701,
+          -0.2039561092522016
+        ],
+        "objective": 0.0004001567140221596
+      }
+    }
+  ],
+  "sourceSha256": "164b0b1056d1289d3811fb6574aefc1e7b689d8fd3b6e5f73e39ac0fd18aad31",
+  "referenceSha256": "85398c42832a7a293060c791f5d030fe5a3c3df786902afa9793f7b2f7344b6d",
+  "fps": 1.3333333333333333,
+  "cycleMs": 3000,
+  "previewOnly": true,
+  "status": "needs-visual-review",
+  "artSource": "host:image_gen",
+  "noLocalCreativePixelEdits": true,
+  "noPerFrameScale": true,
+  "frame00Policy": "generated neutral based on existing idle posture, not byte-identical copy",
+  "derivation": "whole-frame horizontal mirror of side, same time order"
+}

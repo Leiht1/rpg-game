@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "65657420340c30936ded51712e254b7d7fe5a72e5eef235a7e007350bac65cb7",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T08:39:05.930Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T08:39:05.930Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Four complete correction poses, inspect hands and legs; select frames 5 7 8",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13eae-d60b-7a53-b798-179e593aeac9",
+    "source": "CODEX_HOME/generated_images/01a13eae-d60b-7a53-b798-179e593aeac9/exec-163831d7-5a0a-457e-9316-832dbef9fed9.png",
+    "sourceSha256": "5b8c559de732348bd83f85d9e221f0d8455a864e91939665c2f92c2ac9c73aa1",
+    "sourceMtime": "2026-10-15T08:38:29Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "5b8c559de732348bd83f85d9e221f0d8455a864e91939665c2f92c2ac9c73aa1",
+    "bytes": 804922,
+    "format": "PNG",
+    "size": [
+      1423,
+      1105
+    ]
+  }
+}

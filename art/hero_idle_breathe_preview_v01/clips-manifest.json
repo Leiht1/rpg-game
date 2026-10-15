@@ -1,0 +1,129 @@
+{
+  "schema": "generate2dsprite.animation_clips.v2",
+  "name": "windrest-idle-breathe-preview",
+  "frames": [
+    {
+      "name": "front_00",
+      "file": "front/frames/front_idle_breathe_00.png"
+    },
+    {
+      "name": "front_01",
+      "file": "front/frames/front_idle_breathe_01.png"
+    },
+    {
+      "name": "front_02",
+      "file": "front/frames/front_idle_breathe_02.png"
+    },
+    {
+      "name": "front_03",
+      "file": "front/frames/front_idle_breathe_03.png"
+    },
+    {
+      "name": "back_00",
+      "file": "back/frames/back_idle_breathe_00.png"
+    },
+    {
+      "name": "back_01",
+      "file": "back/frames/back_idle_breathe_01.png"
+    },
+    {
+      "name": "back_02",
+      "file": "back/frames/back_idle_breathe_02.png"
+    },
+    {
+      "name": "back_03",
+      "file": "back/frames/back_idle_breathe_03.png"
+    },
+    {
+      "name": "right_00",
+      "file": "right/frames/right_idle_breathe_00.png"
+    },
+    {
+      "name": "right_01",
+      "file": "right/frames/right_idle_breathe_01.png"
+    },
+    {
+      "name": "right_02",
+      "file": "right/frames/right_idle_breathe_02.png"
+    },
+    {
+      "name": "right_03",
+      "file": "right/frames/right_idle_breathe_03.png"
+    },
+    {
+      "name": "left_00",
+      "file": "left/frames/left_idle_breathe_00.png"
+    },
+    {
+      "name": "left_01",
+      "file": "left/frames/left_idle_breathe_01.png"
+    },
+    {
+      "name": "left_02",
+      "file": "left/frames/left_idle_breathe_02.png"
+    },
+    {
+      "name": "left_03",
+      "file": "left/frames/left_idle_breathe_03.png"
+    }
+  ],
+  "anchor_px": [
+    64,
+    112
+  ],
+  "sampling": "linear",
+  "pixel_art": false,
+  "art_source": "host_image",
+  "body_height_px": 89,
+  "placeholder": false,
+  "clips": {
+    "front_idle_breathe": {
+      "frames": [
+        "front_00",
+        "front_01",
+        "front_02",
+        "front_03"
+      ],
+      "ticks": 45,
+      "loop_policy": "cycle",
+      "role": "player",
+      "entry_frame": 0
+    },
+    "back_idle_breathe": {
+      "frames": [
+        "back_00",
+        "back_01",
+        "back_02",
+        "back_03"
+      ],
+      "ticks": 45,
+      "loop_policy": "cycle",
+      "role": "player",
+      "entry_frame": 0
+    },
+    "right_idle_breathe": {
+      "frames": [
+        "right_00",
+        "right_01",
+        "right_02",
+        "right_03"
+      ],
+      "ticks": 45,
+      "loop_policy": "cycle",
+      "role": "player",
+      "entry_frame": 0
+    },
+    "left_idle_breathe": {
+      "frames": [
+        "left_00",
+        "left_01",
+        "left_02",
+        "left_03"
+      ],
+      "ticks": 45,
+      "loop_policy": "cycle",
+      "role": "player",
+      "entry_frame": 0
+    }
+  }
+}

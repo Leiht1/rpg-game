@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "b2f39e1fe2faea94fea90681e882298c0e16ece9df4b9aae7bdc40dc356472c4",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T07:58:06.430Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T07:58:06.430Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Side idle breathing matching corrected short-stride walk complete eye upright head",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13dd0-2e37-7b80-a90b-2be7b02cd173",
+    "source": "CODEX_HOME/generated_images/01a13dd0-2e37-7b80-a90b-2be7b02cd173/exec-0252789d-a284-4e58-87cb-38c7a5aea7e8.png",
+    "sourceSha256": "283d665990ea394f3258994a5d0a13dc2828657dc478fe59f5d4c1f05571feab",
+    "sourceMtime": "2026-10-15T07:57:26Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "283d665990ea394f3258994a5d0a13dc2828657dc478fe59f5d4c1f05571feab",
+    "bytes": 684031,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

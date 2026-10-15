@@ -1,0 +1,75 @@
+{
+  "frameCount": 1,
+  "cellSize": 128,
+  "frameSize": [
+    128,
+    128
+  ],
+  "sheetSize": [
+    128,
+    128
+  ],
+  "sourceSheetSize": [
+    1254,
+    1254
+  ],
+  "sourceCells": [
+    [
+      13,
+      13,
+      1241,
+      1241
+    ]
+  ],
+  "globalScale": 0.11295681063122924,
+  "safePadding": 12,
+  "safeFramePolicy": "global_uniform_scale_preserve_anchor_with_minimum_edge_padding",
+  "sourceEdgePolicy": "flag_source_cells_whose_alpha_touches_or_nears_a_detected_cell_edge",
+  "sourceEdgeThreshold": 2,
+  "sourceEdgeRisks": [],
+  "frameBboxes": [
+    [
+      37,
+      13,
+      50,
+      102
+    ]
+  ],
+  "rootAnchors": [
+    [
+      64.0,
+      115
+    ]
+  ],
+  "gridPolicy": "auto_detect_grid_from_sprite_distances_then_fallback_proportional",
+  "gridDetection": {
+    "mode": "auto_detected",
+    "xRuns": [
+      [
+        378,
+        820
+      ]
+    ],
+    "yRuns": [
+      [
+        195,
+        1098
+      ]
+    ],
+    "xBounds": [
+      0,
+      1254
+    ],
+    "yBounds": [
+      0,
+      1254
+    ]
+  },
+  "proportionPolicy": "uniform_scale_preserve_input_character_proportions",
+  "rootAnchorPolicy": "fixed_lower_body_centroid_x_and_shared_feet_baseline",
+  "normalization": "global_uniform_scale_fixed_feet_baseline_auto_grid_no_nonuniform_scaling",
+  "createdTime": "2026-10-15T17:53:05",
+  "frames": [
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_side_phase_v07.png\" x=\"0\" y=\"0\" width=\"128\" height=\"128\" preserveAspectRatio=\"none\"/></svg>"
+  ]
+}

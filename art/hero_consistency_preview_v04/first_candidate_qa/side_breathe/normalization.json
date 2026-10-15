@@ -1,0 +1,226 @@
+{
+  "frameCount": 4,
+  "cellSize": 128,
+  "frameSize": [
+    128,
+    128
+  ],
+  "sheetSize": [
+    256,
+    256
+  ],
+  "sourceSheetSize": [
+    1254,
+    1254
+  ],
+  "sourceCells": [
+    [
+      6,
+      6,
+      622,
+      647
+    ],
+    [
+      634,
+      6,
+      1248,
+      647
+    ],
+    [
+      6,
+      659,
+      622,
+      1248
+    ],
+    [
+      634,
+      659,
+      1248,
+      1248
+    ]
+  ],
+  "globalScale": 0.1849246231155779,
+  "safePadding": 12,
+  "safeFramePolicy": "global_uniform_scale_preserve_anchor_with_minimum_edge_padding",
+  "sourceEdgePolicy": "flag_source_cells_whose_alpha_touches_or_nears_a_detected_cell_edge",
+  "sourceEdgeThreshold": 2,
+  "sourceEdgeRisks": [],
+  "frameBboxes": [
+    [
+      40,
+      19,
+      83,
+      112
+    ],
+    [
+      40,
+      19,
+      83,
+      112
+    ],
+    [
+      40,
+      19,
+      83,
+      112
+    ],
+    [
+      40,
+      19,
+      82,
+      112
+    ]
+  ],
+  "rootAnchors": [
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ]
+  ],
+  "gridPolicy": "auto_detect_grid_from_sprite_distances_then_fallback_proportional",
+  "gridDetection": {
+    "mode": "auto_detected",
+    "xRuns": [
+      [
+        212,
+        441
+      ],
+      [
+        816,
+        1041
+      ]
+    ],
+    "yRuns": [
+      [
+        90,
+        590
+      ],
+      [
+        716,
+        1211
+      ]
+    ],
+    "xBounds": [
+      0,
+      628,
+      1254
+    ],
+    "yBounds": [
+      0,
+      653,
+      1254
+    ]
+  },
+  "proportionPolicy": "uniform_scale_preserve_input_character_proportions",
+  "rootAnchorPolicy": "fixed_lower_body_centroid_x_and_shared_feet_baseline",
+  "normalization": "global_uniform_scale_fixed_feet_baseline_auto_grid_no_nonuniform_scaling",
+  "createdTime": "2026-10-15T16:00:46",
+  "frames": [
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04_side_breathe.png\" x=\"0\" y=\"0\" width=\"256\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"128 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04_side_breathe.png\" x=\"0\" y=\"0\" width=\"256\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04_side_breathe.png\" x=\"0\" y=\"0\" width=\"256\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"128 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04_side_breathe.png\" x=\"0\" y=\"0\" width=\"256\" height=\"256\" preserveAspectRatio=\"none\"/></svg>"
+  ],
+  "sourceSha256": "283d665990ea394f3258994a5d0a13dc2828657dc478fe59f5d4c1f05571feab",
+  "transforms": [
+    {
+      "sourceCell": [
+        6,
+        6,
+        622,
+        647
+      ],
+      "scale": 0.1849246231155779,
+      "offsetPx": [
+        1.9547036564050657,
+        4.004020100502515
+      ],
+      "staticRegionRegistrationDeltaPx": [
+        0.0,
+        0.0
+      ],
+      "objective": 0.0
+    },
+    {
+      "sourceCell": [
+        634,
+        6,
+        1248,
+        647
+      ],
+      "scale": 0.1849246231155779,
+      "offsetPx": [
+        6.8571471334059,
+        4.044728061315943
+      ],
+      "staticRegionRegistrationDeltaPx": [
+        0.305560053618824,
+        0.040707960813426924
+      ],
+      "objective": 0.0027466730192330716
+    },
+    {
+      "sourceCell": [
+        6,
+        659,
+        622,
+        1248
+      ],
+      "scale": 0.1849246231155779,
+      "offsetPx": [
+        1.94510556163242,
+        9.273373517196475
+      ],
+      "staticRegionRegistrationDeltaPx": [
+        0.056838111001840906,
+        -0.648234523004533
+      ],
+      "objective": 0.006755912650677275
+    },
+    {
+      "sourceCell": [
+        634,
+        659,
+        1248,
+        1248
+      ],
+      "scale": 0.1849246231155779,
+      "offsetPx": [
+        6.848604903572199,
+        9.27373943105778
+      ],
+      "staticRegionRegistrationDeltaPx": [
+        0.23571229190344442,
+        -0.6478686091432281
+      ],
+      "objective": 0.00876389753884093
+    }
+  ],
+  "root": [
+    64,
+    112
+  ],
+  "sourceOrder": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "cycleMs": 1800,
+  "fps": 2.2222222222222223,
+  "status": "needs-visual-review",
+  "previewOnly": true,
+  "policy": "One common scale per direction from median 92px body height. Whole-frame rigid translation to static head/legs only. No local redraw, warp, cut/paste or per-frame scale."
+}

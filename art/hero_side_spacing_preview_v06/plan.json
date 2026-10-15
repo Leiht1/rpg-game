@@ -1,0 +1,33 @@
+{
+  "previewOnly": true,
+  "changedFrames": [
+    3,
+    5
+  ],
+  "unchangedFrames": [
+    1,
+    2,
+    4,
+    6,
+    7,
+    8
+  ],
+  "directions": [
+    "right",
+    "left (whole-frame mirror)"
+  ],
+  "frameSize": [
+    128,
+    128
+  ],
+  "root": [
+    64,
+    112
+  ],
+  "frameCount": 8,
+  "fps": 12,
+  "idle": "unchanged v05; no reprocessing",
+  "artSource": "host_image",
+  "route": "host:image_gen + generate2dmedia adopt",
+  "goal": "Tighten 2-to-3 pose spacing; differentiate 4 contact extension from 5 down/weight transfer, keeping limb identities."
+}

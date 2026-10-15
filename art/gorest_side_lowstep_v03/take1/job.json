@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "8cd18d2146db5fbbc29f35a6441d474ce043e596c43088a39176373a60b9cd53",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T05:37:23.269Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T05:37:23.269Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Lower raised swing leg in side walk frames 3 and 7",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13dd0-2e37-7b80-a90b-2be7b02cd173",
+    "source": "CODEX_HOME/generated_images/01a13dd0-2e37-7b80-a90b-2be7b02cd173/exec-814e0992-76b6-4138-8bce-10d45a3e1e74.png",
+    "sourceSha256": "9411ab461607cd9b1cf45c673a31b6abb2d1b7c22ce26a16dbe41b341cd8eba2",
+    "sourceMtime": "2026-10-15T05:37:12Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "9411ab461607cd9b1cf45c673a31b6abb2d1b7c22ce26a16dbe41b341cd8eba2",
+    "bytes": 446762,
+    "format": "PNG",
+    "size": [
+      1774,
+      887
+    ]
+  }
+}

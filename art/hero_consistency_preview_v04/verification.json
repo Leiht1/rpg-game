@@ -1,0 +1,120 @@
+{
+  "status": "technical_checks_pass_visual_review_pending",
+  "frames": 48,
+  "clips": 8,
+  "canvas": [
+    128,
+    128
+  ],
+  "root": [
+    64,
+    112
+  ],
+  "gameFilesChecked": 60,
+  "gameFilesChanged": [],
+  "pngByteCopies": true,
+  "sheetReadbackExact": true,
+  "mirrorExact": true,
+  "previewFiles": {
+    "four_directions_idle.gif": {
+      "frames": 4,
+      "durationMs": 1800,
+      "sha256": "493dac0e6b54bc3c49a194a57823bd28cb0b429d976e5ab835197b167b36a294"
+    },
+    "four_directions_idle.webp": {
+      "frames": 4,
+      "durationMs": 1800,
+      "sha256": "6bf9829d26424801dae6d008653fd45291a589272ee3b84f42ef978f5b03dbe5"
+    },
+    "four_directions_walk.gif": {
+      "frames": 8,
+      "durationMs": 670,
+      "sha256": "7389bb4ef39673189268e09921ba111335a934798d9e08125e53f1276efbb5a6"
+    },
+    "four_directions_walk.webp": {
+      "frames": 8,
+      "durationMs": 667,
+      "sha256": "9eeaefedc4188c3c0ca19d6de68756ab5a2e6257e39ff44ff69363d15da28016"
+    },
+    "side_walk_before_after.gif": {
+      "frames": 8,
+      "durationMs": 670,
+      "sha256": "bd95d6c361f870efbac8f40b57382fe7a88659be928114cccb4dd901ba70faae"
+    },
+    "side_walk_before_after.webp": {
+      "frames": 8,
+      "durationMs": 667,
+      "sha256": "7626f92071acb09f48edc27d6b2a551316179f036e34ad6f1454d5f62c00d4bb"
+    },
+    "idle_walk_switch.gif": {
+      "frames": 20,
+      "durationMs": 3130,
+      "sha256": "cd1dd485047013483ca57d11f3a609dd477ad0d68fe6b16de45944927c9749b4"
+    },
+    "idle_walk_switch.webp": {
+      "frames": 20,
+      "durationMs": 3133,
+      "sha256": "6b71d72761a95b5493f8e7df5923b2e9d293e2241575fd823012a3f16273979d"
+    }
+  },
+  "skillQaStatus": "needs-visual-review",
+  "skillChecks": [
+    {
+      "id": "png_byte_copy",
+      "status": "pass",
+      "value": 48,
+      "threshold": null
+    },
+    {
+      "id": "webp_timeline",
+      "status": "pass",
+      "value": 8,
+      "threshold": null
+    },
+    {
+      "id": "tick_grid",
+      "status": "pass",
+      "value": 0.333,
+      "threshold": null
+    },
+    {
+      "id": "telegraph",
+      "threshold": 28,
+      "status": "skipped",
+      "value": null
+    },
+    {
+      "id": "near_duplicate_holds",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0
+    },
+    {
+      "id": "loop_seam",
+      "status": "needs-visual-review",
+      "value": 1.577771,
+      "threshold": null
+    },
+    {
+      "id": "manifest_lint",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0
+    }
+  ],
+  "staticRegionMaxEstimatedShiftPx": {
+    "front": 0.766,
+    "back": 0.03,
+    "right": 0.599,
+    "left": 0.599
+  },
+  "sideBootBandMaxSpanBeforePx": 64,
+  "sideBootBandMaxSpanAfterPx": 50,
+  "sideBootBandMaxSpanReduction": 0.21875,
+  "notProven": [
+    "anatomical ankle travel or head angle from alpha regions",
+    "exact same drawn palette/proportions across generated sheets",
+    "zero foot drift or perfect natural motion",
+    "Godot idle/walk switching with this candidate; game not changed"
+  ]
+}

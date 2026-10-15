@@ -1,0 +1,22 @@
+{
+  "route": "host:image_gen + generate2dmedia cli_media.py adopt",
+  "imageCalls": 1,
+  "videoCalls": 0,
+  "model": "not exposed",
+  "cost": "unknown",
+  "license": "Subject to provider and account terms; not asserted public domain or open source.",
+  "prompt": "prompt.txt",
+  "references": [
+    "references/edit_targets_3_5.png",
+    "references/context_2_3_4_and_4_5_6.png"
+  ],
+  "raw": "take1/generated.png",
+  "job": "take1/job.json",
+  "sourceSha256": "8f01753f6bd2dbddacee7235f96780a6dfb45b52fb76f85e325296f3f9d06fff",
+  "registration": "take1/registration.json",
+  "selection": "selection.json",
+  "status": "needs-visual-review",
+  "previewOnly": true,
+  "inheritedSources": "../hero_sequence_repair_preview_v05/provenance.json",
+  "rejectedTakes": []
+}

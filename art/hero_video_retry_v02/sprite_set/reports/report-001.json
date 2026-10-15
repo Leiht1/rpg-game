@@ -1,0 +1,122 @@
+{
+  "schema": "video2dsprite.sprite_set_report.v1",
+  "tool": {
+    "name": "sprite_set",
+    "version": "0.4.0"
+  },
+  "createdAt": "2026-10-15T04:32:30.677Z",
+  "name": "windrest-wanderer",
+  "class": "hero",
+  "status": "incomplete",
+  "plan": {
+    "path": "set_plan.json",
+    "sha256": "47d84f6bdf795a5123a7f0ffbc48571e323553ad5e66db28b39fdd171b1e7b1a"
+  },
+  "finish": {
+    "mode": "hd",
+    "targetHeight": 256,
+    "scaleRefAction": "front-idle",
+    "palette": null,
+    "colors": null,
+    "outline": null,
+    "canvas": null,
+    "canvasAnchor": null,
+    "colourLock": true
+  },
+  "package": {
+    "formats": [
+      "png"
+    ],
+    "tiers": null,
+    "fps": 16,
+    "frameMs": null
+  },
+  "accepted": [],
+  "needsReview": [
+    "front-idle",
+    "front-walk"
+  ],
+  "review": null,
+  "actions": [
+    {
+      "id": "front-idle",
+      "action": "idle",
+      "view": "front",
+      "kind": "loop",
+      "status": "no-route",
+      "message": "no generation route (no output); generate the clip with the host tool from actions/front-idle/job/input.png and actions/front-idle/takes/t01/prompt.txt, save it as actions/front-idle/takes/t01/media/clip.mp4 and run again",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "pinLastFrame": true,
+      "route": null,
+      "chosen": null,
+      "accepted": null,
+      "fixes": [],
+      "takes": [
+        {
+          "take": 1,
+          "round": 1,
+          "status": "no-route",
+          "route": null,
+          "pinnedLastFrame": null,
+          "prompt": {
+            "path": "actions/front-idle/takes/t01/prompt.txt",
+            "sha256": "65d5788055674e99f938538e10f1e5e275acabf5e4d897890f1dcebf462cff0a"
+          },
+          "fixes": [],
+          "clip": null,
+          "failures": [],
+          "reasons": [],
+          "message": "no output",
+          "qc": null
+        }
+      ],
+      "loop": null,
+      "timing": null,
+      "finish": null,
+      "outputs": null
+    },
+    {
+      "id": "front-walk",
+      "action": "walk",
+      "view": "front",
+      "kind": "loop",
+      "status": "no-route",
+      "message": "no generation route (no output); generate the clip with the host tool from actions/front-walk/job/input.png and actions/front-walk/takes/t01/prompt.txt, save it as actions/front-walk/takes/t01/media/clip.mp4 and run again",
+      "canvas": [
+        1024,
+        1024
+      ],
+      "pinLastFrame": false,
+      "route": null,
+      "chosen": null,
+      "accepted": null,
+      "fixes": [],
+      "takes": [
+        {
+          "take": 1,
+          "round": 1,
+          "status": "no-route",
+          "route": null,
+          "pinnedLastFrame": null,
+          "prompt": {
+            "path": "actions/front-walk/takes/t01/prompt.txt",
+            "sha256": "7749c85a1df69604f8980bb6f604c01687400b02d82aead821b76b40a5e9f729"
+          },
+          "fixes": [],
+          "clip": null,
+          "failures": [],
+          "reasons": [],
+          "message": "no output",
+          "qc": null
+        }
+      ],
+      "loop": null,
+      "timing": null,
+      "finish": null,
+      "outputs": null
+    }
+  ]
+}

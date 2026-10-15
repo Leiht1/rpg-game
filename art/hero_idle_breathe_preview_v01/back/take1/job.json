@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "2271396073486695bfbda27f8661df7923c702cb26f7cb05d564436f3f7c05cf",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T06:35:03.107Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T06:35:03.107Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Four-frame back idle breathing from existing idle; preview only",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13dd0-2e37-7b80-a90b-2be7b02cd173",
+    "source": "CODEX_HOME/generated_images/01a13dd0-2e37-7b80-a90b-2be7b02cd173/exec-aaafc02c-20d7-4f32-823d-4a3be4d41da3.png",
+    "sourceSha256": "cdf209926270baa2c9fd01c9c30af9c95c4485c9e4e84cbe8f22a12dea9daf10",
+    "sourceMtime": "2026-10-15T06:34:47Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "cdf209926270baa2c9fd01c9c30af9c95c4485c9e4e84cbe8f22a12dea9daf10",
+    "bytes": 565895,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

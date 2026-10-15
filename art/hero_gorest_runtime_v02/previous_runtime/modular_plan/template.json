@@ -1,0 +1,229 @@
+{
+  "schema": "windrest.character_template.v1",
+  "version": "windrest-character-template-1",
+  "canvas": [
+    128,
+    128
+  ],
+  "anchor": [
+    64,
+    112
+  ],
+  "directions": {
+    "front": {
+      "neutral": "../final_sprite/front_idle_00.png",
+      "frames": [
+        {
+          "key": "front_idle_00",
+          "file": "../final_sprite/front_idle_00.png",
+          "sha256": "2d3aed9e46a51dbab619126458994cf41b1a61746a73c4e4d8b90aa5f2beda50",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": null
+        },
+        {
+          "key": "front_walk_00",
+          "file": "../final_sprite/front_walk_00.png",
+          "sha256": "9e79d7291eca016e6cd02ae979c81022dadc2e10c82268e1eddc659ec7216a3f",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.0
+        },
+        {
+          "key": "front_walk_01",
+          "file": "../final_sprite/front_walk_01.png",
+          "sha256": "7b825eea891080b7997b0aee660cc52ef9ef5477cc3ce43ff242ec697372ad36",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.25
+        },
+        {
+          "key": "front_walk_02",
+          "file": "../final_sprite/front_walk_02.png",
+          "sha256": "f293bba87065d03fef9159a582c63c47a40236db7664324575fd909fc9ce5a14",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.5
+        },
+        {
+          "key": "front_walk_03",
+          "file": "../final_sprite/front_walk_03.png",
+          "sha256": "5e3ad834cfc0430ad24c11bcf060fc69be87ff11ac2ee686cee8ed22ddad6efc",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.75
+        }
+      ],
+      "registration": "../../../art/hero_rebuild_v01/registered_source/front.json",
+      "walk_source_order": [
+        0,
+        3,
+        2,
+        1
+      ]
+    },
+    "back": {
+      "neutral": "../final_sprite/back_idle_00.png",
+      "frames": [
+        {
+          "key": "back_idle_00",
+          "file": "../final_sprite/back_idle_00.png",
+          "sha256": "e6f877c0468197bf5286ad0355fe1c1dfd2b060da512109704ab8f687996e7df",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": null
+        },
+        {
+          "key": "back_walk_00",
+          "file": "../final_sprite/back_walk_00.png",
+          "sha256": "18d9da836e13f7b1b0f36d299f1db21c94fbdac48fd724af49dfc3b6f06466d3",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.0
+        },
+        {
+          "key": "back_walk_01",
+          "file": "../final_sprite/back_walk_01.png",
+          "sha256": "a9ee3b80bb0b8b320ea78ebd12e3813e0dced8aa7774662eff79c8cdef7f589f",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.25
+        },
+        {
+          "key": "back_walk_02",
+          "file": "../final_sprite/back_walk_02.png",
+          "sha256": "a4cf37b5f2b076d3c57c8e9cad7349f21d7f1b73056b942b22a518f861c0d723",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.5
+        },
+        {
+          "key": "back_walk_03",
+          "file": "../final_sprite/back_walk_03.png",
+          "sha256": "22c60f1ca5557c535bf0c90c2e1a3e265625519b1ceae9fff1b4bfda23bf8010",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.75
+        }
+      ],
+      "registration": "../../../art/hero_rebuild_v01/registered_source/back.json",
+      "walk_source_order": [
+        0,
+        "edited_passing",
+        2,
+        3
+      ]
+    },
+    "side": {
+      "neutral": "../final_sprite/side_idle_00.png",
+      "frames": [
+        {
+          "key": "side_idle_00",
+          "file": "../final_sprite/side_idle_00.png",
+          "sha256": "85398c42832a7a293060c791f5d030fe5a3c3df786902afa9793f7b2f7344b6d",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": null
+        },
+        {
+          "key": "side_walk_00",
+          "file": "../final_sprite/side_walk_00.png",
+          "sha256": "d3d3436f50b2cee51210e860fc1d5ad899f98d647eea165bb78b9e182db85205",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.0
+        },
+        {
+          "key": "side_walk_01",
+          "file": "../final_sprite/side_walk_01.png",
+          "sha256": "854e7d05491f226f44af13c2c90c9aff3be655916a2132994dbda50bfcf1d813",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.25
+        },
+        {
+          "key": "side_walk_02",
+          "file": "../final_sprite/side_walk_02.png",
+          "sha256": "1d3aadf4a2b70a874ee3717eac14e45617be96bbe06ca6cfee26aff43513bf0e",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.5
+        },
+        {
+          "key": "side_walk_03",
+          "file": "../final_sprite/side_walk_03.png",
+          "sha256": "eed06bc57f6a6e0995846e7a35987f520456a658371fc4d2a27ccefb9427bbf4",
+          "anchor": [
+            64,
+            112
+          ],
+          "phase": 0.75
+        }
+      ],
+      "registration": "../../../art/hero_rebuild_v01/registered_source/side.json",
+      "walk_source_order": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "modules": [
+    "base_body",
+    "hair",
+    "top",
+    "bottom",
+    "shoes",
+    "accessory"
+  ],
+  "rendering": "complete character frames; future modules must be redrawn per frame",
+  "base_body_status": "proportions and poses fixed by complete-frame templates; hidden anatomy is a future redraw prerequisite",
+  "timing": {
+    "tick_hz": 60,
+    "idle_ticks_per_frame": 60,
+    "walk_ticks_per_frame": 8,
+    "walk_cycle_frames": 4,
+    "speed_ref": 80,
+    "stride_world_units": 42.666666666666664
+  },
+  "phase_semantics": [
+    "right_contact",
+    "right_support_left_passing",
+    "left_contact",
+    "left_support_right_passing"
+  ],
+  "side_mirror": {
+    "left": "full-frame flip_h",
+    "pivot_x": 64,
+    "asymmetry_requires_new_template": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "globalScale": 0.10207336523125997,
+  "transforms": [
+    {
+      "sourceCellIndexZeroBased": 0,
+      "outputIndexZeroBased": 4,
+      "sourceCell": [
+        13,
+        13,
+        1241,
+        1241
+      ],
+      "scale": 0.10207336523125997,
+      "offsetPx": [
+        1.1934193272897176,
+        1.4226475279106872
+      ]
+    }
+  ],
+  "sourceSha256": "d22a6061ca49b9f65e52992d91aec2669eb87405c6ec08649e0fb63e90108f4a",
+  "policy": "All four singleton edits use identical 512/1254 reference-canvas ratio then 1/4 display scale. No individual body-height fitting. Full-frame rigid head registration only, no local manipulation.",
+  "referenceCanvas": [
+    512,
+    512
+  ]
+}

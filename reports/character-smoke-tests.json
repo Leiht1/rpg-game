@@ -1,0 +1,22 @@
+{
+	"breathing_boundary_samples": 20,
+	"failures": [],
+	"godot_version": "4.7.2-stable (official)",
+	"idle_cycle_ms": 1800,
+	"movement_distances_12_ticks": [
+		23.00390625,
+		22.9921875,
+		23.00390625,
+		22.9921875,
+		23.0030670166016,
+		23.0030670166016,
+		23.0030670166016,
+		23.0030670166016
+	],
+	"movement_speed": 115.0,
+	"rendered_direction_pose_samples": 8,
+	"scope": "Import, actual rendering, eight short movement directions, distance-driven gait, stop and brief idle. No map/performance/full regression.",
+	"status": "pass",
+	"template": "windrest-character-template-4",
+	"walk_frames_visited": 8
+}

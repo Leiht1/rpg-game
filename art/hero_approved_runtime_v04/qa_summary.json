@@ -1,0 +1,23 @@
+{
+  "clips": {
+    "status": "needs-visual-review",
+    "nonPassChecks": [
+      {
+        "id": "telegraph",
+        "threshold": 28,
+        "status": "skipped",
+        "value": null
+      },
+      {
+        "id": "loop_seam",
+        "status": "needs-visual-review",
+        "value": 1.533159,
+        "threshold": null
+      }
+    ]
+  },
+  "engine": {
+    "status": "pass",
+    "nonPassChecks": []
+  }
+}

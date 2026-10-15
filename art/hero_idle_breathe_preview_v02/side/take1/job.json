@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "4e4f456bbc350c5303bbf5b63b55cc23c23e599e1f7a15b05d336e0688c3b6d5",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T07:08:09.288Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T07:08:09.288Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Revise side breathing with clearer chest expansion and stationary head, pelvis and feet; preview only",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13dd0-2e37-7b80-a90b-2be7b02cd173",
+    "source": "CODEX_HOME/generated_images/01a13dd0-2e37-7b80-a90b-2be7b02cd173/exec-9dd6fd69-00e4-4355-91aa-af6c87a31654.png",
+    "sourceSha256": "164b0b1056d1289d3811fb6574aefc1e7b689d8fd3b6e5f73e39ac0fd18aad31",
+    "sourceMtime": "2026-10-15T07:07:58Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "164b0b1056d1289d3811fb6574aefc1e7b689d8fd3b6e5f73e39ac0fd18aad31",
+    "bytes": 549485,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "source": "reports/character-godot-poses.png",
+  "source_sha256": "85d8f4bf46fb7468a94a61143b75a581ccba098bbd022a02372403d2d7bdb770",
+  "directions": [
+    "front",
+    "back",
+    "right",
+    "left"
+  ],
+  "source_idle_columns": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "cell_size": [
+    176,
+    208
+  ],
+  "frame_duration_ms": 750,
+  "total_duration_ms": 3000,
+  "method": "Godot fixed-position pose samples assembled for preview, not a continuous gameplay recording",
+  "art_edits": false
+}

@@ -1,0 +1,94 @@
+{
+  "source": "D:\\codex项目\\rpg\\art\\hero_consistency_preview_v04\\front_breathe",
+  "scale": 0.18930041152263374,
+  "transforms": [
+    {
+      "sourceCell": [
+        6,
+        6,
+        624,
+        640
+      ],
+      "scale": 0.18930041152263374,
+      "offsetPx": [
+        4.608402286041418,
+        3.341563786008237
+      ],
+      "staticRegionRegistrationDeltaPx": [
+        0.0,
+        0.0
+      ],
+      "objective": 0.0
+    },
+    {
+      "sourceCell": [
+        636,
+        6,
+        1248,
+        640
+      ],
+      "scale": 0.18930041152263374,
+      "offsetPx": [
+        6.098585809510693,
+        3.3997199409185743
+      ],
+      "staticRegionRegistrationDeltaPx": [
+        0.0016564580206964977,
+        0.029485897172055835
+      ],
+      "objective": 0.000539615743754945,
+      "v05FeetOnlyDeltaPx": [
+        -0.0022694042051948702,
+        0.028670257738281166
+      ],
+      "feetCost": 0.0002168307633443373
+    },
+    {
+      "sourceCell": [
+        6,
+        652,
+        624,
+        1248
+      ],
+      "scale": 0.18930041152263374,
+      "offsetPx": [
+        4.568125310102306,
+        9.549131748063202
+      ],
+      "staticRegionRegistrationDeltaPx": [
+        -0.07684837946650158,
+        -0.8334442014803615
+      ],
+      "objective": 0.009532358966802705,
+      "v05FeetOnlyDeltaPx": [
+        -0.029990445486688916,
+        0.7940985832884143
+      ],
+      "feetCost": 0.0004506847784272466
+    },
+    {
+      "sourceCell": [
+        636,
+        652,
+        1248,
+        1248
+      ],
+      "scale": 0.18930041152263374,
+      "offsetPx": [
+        5.985404929419333,
+        9.47941443231667
+      ],
+      "staticRegionRegistrationDeltaPx": [
+        -0.033965338607849595,
+        -0.9416787599734582
+      ],
+      "objective": 0.009828678070338997,
+      "v05FeetOnlyDeltaPx": [
+        -0.018740236115453546,
+        0.8326158260349799
+      ],
+      "feetCost": 0.0005917740677099866
+    }
+  ],
+  "policy": "Same v04 complete source frames and one shared scale. Whole-frame rigid translation fitted only to both boots, y=96:115. First frame unchanged. No local patch/warp/scale."
+}

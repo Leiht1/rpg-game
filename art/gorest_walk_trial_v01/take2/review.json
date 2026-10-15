@@ -1,0 +1,14 @@
+{
+  "status": "previewable_trial_not_production_accepted",
+  "originalFrameCount": 8,
+  "sourceFrameOrderZeroBased": [0, 5, 6, 7, 3, 2, 1, 4],
+  "observations": [
+    "Recognizable protagonist identity, green jacket, cream shirt, ochre scarf, brown shorts and boots are maintained.",
+    "The source includes opposite boot-contact and knee-passing poses but does not arrange them in chronological order.",
+    "Whole-frame reordering yields a visible alternating two-step cycle without mirroring, drawing patches, or warping.",
+    "Arm transitions remain uneven, and adjacent contact drawings create a visible held beat.",
+    "Generated linework is somewhat bolder and cleaner than the softer approved reference; minor face and hair drawing variation remains.",
+    "This is a motion experiment for user review, not final game art or a seamless-motion certification."
+  ],
+  "decision": "Deliver the eight-frame transparent preview in Gorest and keep the existing Godot runtime assets unchanged."
+}

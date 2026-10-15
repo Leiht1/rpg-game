@@ -1,0 +1,20 @@
+{
+  "status": "previewable_trial_not_game_accepted",
+  "purpose": "Generate and preview a new protagonist frame animation using the local gorest workflow; no game integration",
+  "reference": "art/reference/hero.png",
+  "art_source": "host_image",
+  "route_request": "generate2dmedia route_media.py image",
+  "action": "front_walk_in_place",
+  "camera": "approved slightly elevated frontal view",
+  "initial_requested_frames": 16,
+  "frames": 8,
+  "columns": 4,
+  "rows": 2,
+  "fps": 8,
+  "loop": true,
+  "finish": "HD hand-painted cartoon",
+  "target_frame_size": [256, 256],
+  "registration": "single global scale, rigid upper-body anchor only; no local deformation",
+  "delivery": ["transparent PNG sheet", "animated preview", "gorest library preview"],
+  "scope": "trial only; existing Godot assets unchanged"
+}

@@ -1,0 +1,235 @@
+{
+  "frameCount": 4,
+  "cellSize": 128,
+  "frameSize": [
+    128,
+    128
+  ],
+  "sheetSize": [
+    256,
+    256
+  ],
+  "sourceSheetSize": [
+    1254,
+    1254
+  ],
+  "sourceCells": [
+    [
+      6,
+      6,
+      612,
+      633
+    ],
+    [
+      624,
+      6,
+      1248,
+      633
+    ],
+    [
+      6,
+      645,
+      612,
+      1248
+    ],
+    [
+      624,
+      645,
+      1248,
+      1248
+    ]
+  ],
+  "globalScale": 0.2002200220022002,
+  "safePadding": 15,
+  "safeFramePolicy": "global_uniform_scale_preserve_anchor_with_minimum_edge_padding",
+  "sourceEdgePolicy": "flag_source_cells_whose_alpha_touches_or_nears_a_detected_cell_edge",
+  "sourceEdgeThreshold": 2,
+  "sourceEdgeRisks": [],
+  "frameBboxes": [
+    [
+      41,
+      21,
+      82,
+      112
+    ],
+    [
+      41,
+      20,
+      82,
+      112
+    ],
+    [
+      41,
+      20,
+      82,
+      112
+    ],
+    [
+      41,
+      20,
+      82,
+      112
+    ]
+  ],
+  "rootAnchors": [
+    [
+      64,
+      112
+    ],
+    [
+      64,
+      112
+    ],
+    [
+      64,
+      112
+    ],
+    [
+      64,
+      112
+    ]
+  ],
+  "gridPolicy": "auto_detect_grid_from_sprite_distances_then_fallback_proportional",
+  "gridDetection": {
+    "mode": "auto_detected",
+    "xRuns": [
+      [
+        202,
+        406
+      ],
+      [
+        829,
+        1033
+      ]
+    ],
+    "yRuns": [
+      [
+        99,
+        553
+      ],
+      [
+        725,
+        1180
+      ]
+    ],
+    "xBounds": [
+      0,
+      618,
+      1254
+    ],
+    "yBounds": [
+      0,
+      639,
+      1254
+    ]
+  },
+  "proportionPolicy": "uniform_scale_preserve_input_character_proportions",
+  "rootAnchorPolicy": "fixed_lower_body_centroid_x_and_resampled_visible_sole_baseline_64_112",
+  "normalization": "gorest_grid_and_feet_detector_native_alpha_one_scale_from_existing_idle_height",
+  "createdTime": "2026-10-15T14:42:04",
+  "frames": [
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_right_idle_breathe_v01.png\" x=\"0\" y=\"0\" width=\"256\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"128 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_right_idle_breathe_v01.png\" x=\"0\" y=\"0\" width=\"256\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_right_idle_breathe_v01.png\" x=\"0\" y=\"0\" width=\"256\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"128 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_right_idle_breathe_v01.png\" x=\"0\" y=\"0\" width=\"256\" height=\"256\" preserveAspectRatio=\"none\"/></svg>"
+  ],
+  "transforms": [
+    {
+      "source_frame": 0,
+      "source_cell": [
+        6,
+        6,
+        612,
+        633
+      ],
+      "source_feet_anchor": [
+        309.1039584728895,
+        547.0
+      ],
+      "source_to_output_scale": 0.2002200220022002,
+      "offset": [
+        2,
+        2
+      ],
+      "output_anchor": [
+        64,
+        112
+      ]
+    },
+    {
+      "source_frame": 1,
+      "source_cell": [
+        624,
+        6,
+        1248,
+        633
+      ],
+      "source_feet_anchor": [
+        317.89915922389605,
+        547.0
+      ],
+      "source_to_output_scale": 0.2002200220022002,
+      "offset": [
+        0,
+        2
+      ],
+      "output_anchor": [
+        64,
+        112
+      ]
+    },
+    {
+      "source_frame": 2,
+      "source_cell": [
+        6,
+        645,
+        612,
+        1248
+      ],
+      "source_feet_anchor": [
+        309.04631414199486,
+        536.0
+      ],
+      "source_to_output_scale": 0.2002200220022002,
+      "offset": [
+        2,
+        4
+      ],
+      "output_anchor": [
+        64,
+        112
+      ]
+    },
+    {
+      "source_frame": 3,
+      "source_cell": [
+        624,
+        645,
+        1248,
+        1248
+      ],
+      "source_feet_anchor": [
+        317.87363577124904,
+        536.0
+      ],
+      "source_to_output_scale": 0.2002200220022002,
+      "offset": [
+        0,
+        4
+      ],
+      "output_anchor": [
+        64,
+        112
+      ]
+    }
+  ],
+  "alphaPolicy": "native_alpha; only alpha <= 8 cleared; no chroma key",
+  "sourceSha256": "0358b250ab76a7cf274bb67c5ca16029ac550e3af162953a53a76bce214b847c",
+  "referenceSha256": "85398c42832a7a293060c791f5d030fe5a3c3df786902afa9793f7b2f7344b6d",
+  "frame00Policy": "model-generated neutral extension from current idle, not byte-identical source copy",
+  "previewOnly": true,
+  "status": "needs-visual-review",
+  "fps": 1.3333333333333333,
+  "cycleMs": 3000,
+  "derivation": "same as side"
+}

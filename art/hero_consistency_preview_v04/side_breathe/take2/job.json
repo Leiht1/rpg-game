@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "d70270d1874025f6edae086c6e56321c3103c514a45a1d4c69737195cb17b68e",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T08:07:27.597Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T08:07:27.597Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Refine full-body side breath fixed head pelvis boots",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13dd0-2e37-7b80-a90b-2be7b02cd173",
+    "source": "CODEX_HOME/generated_images/01a13dd0-2e37-7b80-a90b-2be7b02cd173/exec-b0906f19-256d-4b21-820b-6de2bc0403c6.png",
+    "sourceSha256": "c7dcec294af97f8ab0acf305e4ff1413727a1e08af8fe048e2981be02e7be37c",
+    "sourceMtime": "2026-10-15T08:06:48Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "c7dcec294af97f8ab0acf305e4ff1413727a1e08af8fe048e2981be02e7be37c",
+    "bytes": 672458,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

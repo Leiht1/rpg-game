@@ -1,0 +1,19 @@
+Create a corrected animation sprite sheet. Image 1 is the approved original character. Image 2 is an unsuccessful first sprite sheet; preserve its character rendering, but fix its motion. The first sheet repeated the same side of the gait and kept the same arm forward. Replace it with a real alternating symmetrical two-step cycle.
+
+OUTPUT EXACTLY 8 full-body frames in a 4-column by 2-row contact sheet, wide 2:1 canvas. All frames face FRONT, same identity, same size, same frontal slightly elevated camera. Pure flat #FF00FF magenta backdrop; no labels, grid lines, shadows, scenery, or text. Each complete character occupies only 65% of cell height, with wide magenta gutters. Nothing touches a cell edge.
+
+Keep the reference character exactly: fluffy chestnut hair with cowlick, small black eyes, rosy cheeks, sage green jacket with cream rolled cuffs, cream shirt, ochre neckerchief, brown shorts, cream socks and brown boots. Warm friendly hand-painted cartoon, soft brown outlines and simple shading, 2.7 heads tall. No realistic, 3D, anime or pixel style.
+
+8 WALKING POSES IN READING ORDER:
+TOP ROW (frames 1 to 4):
+1. LEFT side of picture: boot planted forward and closest to viewer. RIGHT side of picture: leg behind, heel raised. RIGHT-side arm swings toward viewer, LEFT-side arm swings backward.
+2. Same left leg supports body, right knee bends and right boot lifts to swing. Opposite arm movement continues.
+3. Right knee passes forward beside supporting left leg; both hands pass alongside torso. One boot visibly off ground.
+4. Right leg reaches forward, left heel lifts to push off; LEFT-side hand begins swinging toward viewer, RIGHT-side hand goes backward.
+BOTTOM ROW (frames 5 to 8): EXACT OPPOSITE HALF-CYCLE OF TOP ROW, with equal motion spacing.
+5. RIGHT side of picture: boot planted forward and closest to viewer. LEFT side of picture: leg behind, heel raised. LEFT-side arm swings toward viewer, RIGHT-side arm swings backward. This MUST be the opposite leg AND opposite arm from frame 1.
+6. Same right leg supports body, left knee bends and left boot lifts to swing. Opposite arm movement continues.
+7. Left knee passes forward beside supporting right leg; both hands pass alongside torso. One boot visibly off ground.
+8. Left leg reaches forward, right heel lifts to push off; RIGHT-side hand begins swinging toward viewer, LEFT-side hand goes backward. This leads naturally into frame 1.
+
+Every figure is a full newly drawn whole-character pose. Two hands, two legs and two boots only. Lock identity, hair, face, clothing, source scale and framing across all 8 frames. Both supporting boot contacts share the same baseline. Smooth natural walk, modest knee flexion and subtle torso bob, no marching with high knees. No static translated duplicate poses. No duplicate first frame at the end. Double-check that frame 1 and frame 5 show opposite boot contacts and opposite arm swings, and that each row progresses continuously.

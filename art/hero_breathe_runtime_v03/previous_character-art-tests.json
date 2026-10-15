@@ -1,0 +1,281 @@
+{
+  "status": "pass",
+  "failures": [],
+  "rows": {
+    "front_idle": {
+      "frame_count": 1,
+      "unique_files": 1,
+      "bounds": [
+        [
+          42,
+          23,
+          85,
+          112
+        ]
+      ],
+      "anchor": [
+        64,
+        112
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "loop_seam_over_median_step": 0.0,
+      "body_height_cv": 0.0
+    },
+    "front_walk": {
+      "frame_count": 8,
+      "unique_files": 8,
+      "bounds": [
+        [
+          43,
+          20,
+          86,
+          110
+        ],
+        [
+          43,
+          20,
+          86,
+          111
+        ],
+        [
+          42,
+          20,
+          85,
+          111
+        ],
+        [
+          43,
+          20,
+          85,
+          111
+        ],
+        [
+          42,
+          20,
+          85,
+          110
+        ],
+        [
+          42,
+          20,
+          86,
+          110
+        ],
+        [
+          43,
+          20,
+          87,
+          110
+        ],
+        [
+          43,
+          20,
+          86,
+          111
+        ]
+      ],
+      "anchor": [
+        64,
+        112
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "loop_seam_over_median_step": 0.7834811696156372,
+      "body_height_cv": 0.0055248618784530384
+    },
+    "back_idle": {
+      "frame_count": 1,
+      "unique_files": 1,
+      "bounds": [
+        [
+          43,
+          23,
+          84,
+          112
+        ]
+      ],
+      "anchor": [
+        64,
+        112
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "loop_seam_over_median_step": 0.0,
+      "body_height_cv": 0.0
+    },
+    "back_walk": {
+      "frame_count": 8,
+      "unique_files": 8,
+      "bounds": [
+        [
+          42,
+          20,
+          84,
+          111
+        ],
+        [
+          42,
+          20,
+          84,
+          111
+        ],
+        [
+          43,
+          21,
+          84,
+          111
+        ],
+        [
+          44,
+          20,
+          86,
+          111
+        ],
+        [
+          44,
+          21,
+          86,
+          110
+        ],
+        [
+          43,
+          21,
+          86,
+          110
+        ],
+        [
+          44,
+          21,
+          85,
+          110
+        ],
+        [
+          42,
+          20,
+          84,
+          112
+        ]
+      ],
+      "anchor": [
+        64,
+        112
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "loop_seam_over_median_step": 0.5139545422022943,
+      "body_height_cv": 0.012074512308976937
+    },
+    "side_idle": {
+      "frame_count": 1,
+      "unique_files": 1,
+      "bounds": [
+        [
+          42,
+          21,
+          82,
+          112
+        ]
+      ],
+      "anchor": [
+        64,
+        112
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "loop_seam_over_median_step": 0.0,
+      "body_height_cv": 0.0
+    },
+    "side_walk": {
+      "frame_count": 8,
+      "unique_files": 8,
+      "bounds": [
+        [
+          37,
+          23,
+          95,
+          112
+        ],
+        [
+          39,
+          24,
+          84,
+          113
+        ],
+        [
+          45,
+          23,
+          91,
+          114
+        ],
+        [
+          34,
+          21,
+          94,
+          111
+        ],
+        [
+          32,
+          21,
+          97,
+          110
+        ],
+        [
+          41,
+          22,
+          84,
+          111
+        ],
+        [
+          46,
+          23,
+          89,
+          114
+        ],
+        [
+          35,
+          21,
+          98,
+          110
+        ]
+      ],
+      "anchor": [
+        64,
+        112
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "loop_seam_over_median_step": 0.9776029253884635,
+      "body_height_cv": 0.00956158242733758
+    }
+  },
+  "runtime_layers": 1,
+  "template_version": "windrest-character-template-2",
+  "whole_frames": 27,
+  "common_walk_scale": 0.546875,
+  "common_walk_offset": [
+    -6,
+    7
+  ],
+  "skill_qa": {
+    "clips": "needs-visual-review",
+    "engine": "pass"
+  },
+  "not_proven": [
+    "Numeric geometry does not certify anatomy, facing, identity or perfectly planted feet.",
+    "Single-frame idle is a neutral hold; its drawing proportions differ slightly from the new walk.",
+    "Left mirrors the complete side frame including its soft lighting."
+  ]
+}

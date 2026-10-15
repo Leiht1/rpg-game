@@ -1,0 +1,138 @@
+{
+  "direction": "front",
+  "canvas": [
+    640,
+    640
+  ],
+  "root": [
+    320,
+    560
+  ],
+  "operation": "whole-figure uniform resample + rigid registration only",
+  "frames": [
+    {
+      "source": "assets/hero/reference/turnaround.png",
+      "rect": [
+        0,
+        0,
+        560,
+        1024
+      ],
+      "root": [
+        306,
+        960
+      ],
+      "scale": 0.54,
+      "role": "complete accepted neutral view",
+      "source_sha256": "22ecb37373b44d7c3511aa6b62b210251bbd203bd5ea9784c217af0efb92a9e4",
+      "staged_offset": [
+        155,
+        42
+      ],
+      "staged_root": [
+        320,
+        560
+      ]
+    },
+    {
+      "source": "art/hero_rebuild_v01/front_walk_take2/generated.png",
+      "rect": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "root": [
+        375,
+        617
+      ],
+      "scale": 0.8165869218500797,
+      "source_pose": 0,
+      "role": "whole generated walk key pose",
+      "source_sha256": "287abc8bff110a70a6f40922b03b07a8fe8f10bc12490af1a2c0fef9a2e3f547",
+      "staged_offset": [
+        14,
+        56
+      ],
+      "staged_root": [
+        320,
+        560
+      ]
+    },
+    {
+      "source": "art/hero_rebuild_v01/front_walk_take2/generated.png",
+      "rect": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "root": [
+        266,
+        609
+      ],
+      "scale": 0.8165869218500797,
+      "source_pose": 3,
+      "role": "whole generated walk key pose",
+      "source_sha256": "287abc8bff110a70a6f40922b03b07a8fe8f10bc12490af1a2c0fef9a2e3f547",
+      "staged_offset": [
+        103,
+        63
+      ],
+      "staged_root": [
+        320,
+        560
+      ]
+    },
+    {
+      "source": "art/hero_rebuild_v01/front_walk_take2/generated.png",
+      "rect": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "root": [
+        379,
+        609
+      ],
+      "scale": 0.8165869218500797,
+      "source_pose": 2,
+      "role": "whole generated walk key pose",
+      "source_sha256": "287abc8bff110a70a6f40922b03b07a8fe8f10bc12490af1a2c0fef9a2e3f547",
+      "staged_offset": [
+        11,
+        63
+      ],
+      "staged_root": [
+        320,
+        560
+      ]
+    },
+    {
+      "source": "art/hero_rebuild_v01/front_walk_take2/generated.png",
+      "rect": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "root": [
+        267.5,
+        617
+      ],
+      "scale": 0.8165869218500797,
+      "source_pose": 1,
+      "role": "whole generated walk key pose",
+      "source_sha256": "287abc8bff110a70a6f40922b03b07a8fe8f10bc12490af1a2c0fef9a2e3f547",
+      "staged_offset": [
+        102,
+        56
+      ],
+      "staged_root": [
+        320,
+        560
+      ]
+    }
+  ]
+}

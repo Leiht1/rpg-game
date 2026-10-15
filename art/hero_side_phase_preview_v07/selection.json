@@ -1,0 +1,70 @@
+{
+  "selection": [
+    {
+      "frameOneBased": 1,
+      "outputIndexZeroBased": 0,
+      "source": "../hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_00.png",
+      "registration": "inherited without resampling"
+    },
+    {
+      "frameOneBased": 2,
+      "outputIndexZeroBased": 1,
+      "source": "take2/generated.png",
+      "registration": "take2/registration.json"
+    },
+    {
+      "frameOneBased": 3,
+      "outputIndexZeroBased": 2,
+      "source": "take3/generated.png",
+      "registration": "take3/registration.json"
+    },
+    {
+      "frameOneBased": 4,
+      "outputIndexZeroBased": 3,
+      "source": "../hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_03.png",
+      "registration": "inherited without resampling"
+    },
+    {
+      "frameOneBased": 5,
+      "outputIndexZeroBased": 4,
+      "source": "take4/generated.png",
+      "registration": "take4/registration.json"
+    },
+    {
+      "frameOneBased": 6,
+      "outputIndexZeroBased": 5,
+      "source": "take6/generated.png",
+      "registration": "take6/registration.json"
+    },
+    {
+      "frameOneBased": 7,
+      "outputIndexZeroBased": 6,
+      "source": "../hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_06.png",
+      "registration": "inherited without resampling"
+    },
+    {
+      "frameOneBased": 8,
+      "outputIndexZeroBased": 7,
+      "source": "../hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_07.png",
+      "registration": "inherited without resampling"
+    }
+  ],
+  "changedFramesOneBased": [
+    2,
+    3,
+    5,
+    6
+  ],
+  "unchangedFramesOneBased": [
+    1,
+    4,
+    7,
+    8
+  ],
+  "root": [
+    64,
+    112
+  ],
+  "leftPolicy": "Whole-frame horizontal mirror, identical phase order",
+  "runtimePolicy": "Preview only; current game template 4, speed 115 and all idle frames unchanged."
+}

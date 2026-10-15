@@ -1,0 +1,329 @@
+{
+  "frameCount": 8,
+  "cellSize": 128,
+  "frameSize": [
+    128,
+    128
+  ],
+  "sheetSize": [
+    512,
+    256
+  ],
+  "sourceSheetSize": [
+    1774,
+    887
+  ],
+  "sourceCells": [
+    [
+      4,
+      4,
+      439,
+      444
+    ],
+    [
+      447,
+      4,
+      882,
+      444
+    ],
+    [
+      890,
+      4,
+      1324,
+      444
+    ],
+    [
+      1332,
+      4,
+      1770,
+      444
+    ],
+    [
+      4,
+      452,
+      439,
+      883
+    ],
+    [
+      447,
+      452,
+      882,
+      883
+    ],
+    [
+      890,
+      452,
+      1324,
+      883
+    ],
+    [
+      1332,
+      452,
+      1770,
+      883
+    ]
+  ],
+  "globalScale": 0.27586206896551724,
+  "safePadding": 12,
+  "safeFramePolicy": "global_uniform_scale_preserve_anchor_with_minimum_edge_padding",
+  "sourceEdgePolicy": "flag_source_cells_whose_alpha_touches_or_nears_a_detected_cell_edge",
+  "sourceEdgeThreshold": 2,
+  "sourceEdgeRisks": [],
+  "frameBboxes": [
+    [
+      40,
+      20,
+      84,
+      112
+    ],
+    [
+      40,
+      20,
+      85,
+      112
+    ],
+    [
+      41,
+      20,
+      86,
+      112
+    ],
+    [
+      44,
+      20,
+      87,
+      112
+    ],
+    [
+      44,
+      20,
+      87,
+      113
+    ],
+    [
+      41,
+      20,
+      87,
+      112
+    ],
+    [
+      41,
+      20,
+      86,
+      113
+    ],
+    [
+      40,
+      20,
+      84,
+      113
+    ]
+  ],
+  "rootAnchors": [
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ]
+  ],
+  "gridPolicy": "auto_detect_grid_from_sprite_distances_then_fallback_proportional",
+  "gridDetection": {
+    "mode": "auto_detected",
+    "xRuns": [
+      [
+        138,
+        305
+      ],
+      [
+        581,
+        747
+      ],
+      [
+        1025,
+        1188
+      ],
+      [
+        1468,
+        1635
+      ]
+    ],
+    "yRuns": [
+      [
+        63,
+        396
+      ],
+      [
+        499,
+        833
+      ]
+    ],
+    "xBounds": [
+      0,
+      443,
+      886,
+      1328,
+      1774
+    ],
+    "yBounds": [
+      0,
+      448,
+      887
+    ]
+  },
+  "proportionPolicy": "uniform_scale_preserve_input_character_proportions",
+  "rootAnchorPolicy": "fixed_lower_body_centroid_x_and_shared_feet_baseline",
+  "normalization": "global_uniform_scale_fixed_feet_baseline_auto_grid_no_nonuniform_scaling",
+  "createdTime": "2026-10-15T15:49:22",
+  "frames": [
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"128 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"384 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"128 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"384 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/v04.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>"
+  ],
+  "sourceSha256": "c9591a55e744c82c8fc3ff5503635f84977056568df1a8b1e026fcac8bfac1c8",
+  "transforms": [
+    {
+      "sourceCell": [
+        4,
+        4,
+        439,
+        444
+      ],
+      "scale": 0.27586206896551724,
+      "offsetPx": [
+        3.7210018372030405,
+        3.724137931034484
+      ]
+    },
+    {
+      "sourceCell": [
+        447,
+        4,
+        882,
+        444
+      ],
+      "scale": 0.27586206896551724,
+      "offsetPx": [
+        3.5159600022884163,
+        3.724137931034484
+      ]
+    },
+    {
+      "sourceCell": [
+        890,
+        4,
+        1324,
+        444
+      ],
+      "scale": 0.27586206896551724,
+      "offsetPx": [
+        3.8014346851642244,
+        3.724137931034484
+      ]
+    },
+    {
+      "sourceCell": [
+        1332,
+        4,
+        1770,
+        444
+      ],
+      "scale": 0.27586206896551724,
+      "offsetPx": [
+        3.327347781174325,
+        3.724137931034484
+      ]
+    },
+    {
+      "sourceCell": [
+        4,
+        452,
+        439,
+        883
+      ],
+      "scale": 0.27586206896551724,
+      "offsetPx": [
+        3.7101638309601483,
+        7.03448275862069
+      ]
+    },
+    {
+      "sourceCell": [
+        447,
+        452,
+        882,
+        883
+      ],
+      "scale": 0.27586206896551724,
+      "offsetPx": [
+        3.4298496287384523,
+        7.03448275862069
+      ]
+    },
+    {
+      "sourceCell": [
+        890,
+        452,
+        1324,
+        883
+      ],
+      "scale": 0.27586206896551724,
+      "offsetPx": [
+        3.382069591043404,
+        7.310344827586206
+      ]
+    },
+    {
+      "sourceCell": [
+        1332,
+        452,
+        1770,
+        883
+      ],
+      "scale": 0.27586206896551724,
+      "offsetPx": [
+        2.9928905744305894,
+        7.03448275862069
+      ]
+    }
+  ],
+  "root": [
+    64,
+    112
+  ],
+  "policy": "one sheet scale from median whole-body height; complete-frame translation fixing head-band centroid x/top; no local patches or per-frame scale",
+  "targetMedianHeight": 92,
+  "status": "needs-visual-review",
+  "artSource": "host:image_gen"
+}

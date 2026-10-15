@@ -1,0 +1,45 @@
+{
+  "previewOnly": true,
+  "changedFramesOneBased": [
+    2,
+    3,
+    5,
+    6
+  ],
+  "preservedFramesOneBased": [
+    1,
+    4,
+    7,
+    8
+  ],
+  "frameCount": 8,
+  "fpsReference": 12,
+  "fpsGameSpeed115": 13.8,
+  "canvas": [
+    128,
+    128
+  ],
+  "root": [
+    64,
+    112
+  ],
+  "sourceVersion": "v06, currently game template 4",
+  "runtimePolicy": "No assets, scripts, speed, idle or current template changes.",
+  "phasePlanDraft": [
+    "1 NEAR support/weight acceptance; FAR starts swing; near hand behind",
+    "2 FAR recovery/passing under hip, visibly ahead of previous rear boot; NEAR support foot flat; near hand moving forward beside hip",
+    "3 FAR low reach toward next contact; NEAR support foot moving backward; near hand moderately forward",
+    "4 FAR forward reach/contact; NEAR trailing; near hand forward",
+    "5 FAR weight acceptance with support foot under body; NEAR rear heel lifts and knee starts moving forward; near hand returns",
+    "6 NEAR recovery/passing forward IN FRONT of FAR planted support leg; near boot raised just under/forward of hip, near hand nearly below shoulder",
+    "7 NEAR low reach; FAR support; near hand begins backward",
+    "8 NEAR forward reach/contact; FAR trailing; near hand backward"
+  ],
+  "acceptanceFocus": [
+    "1-to-2-to-3 spacing",
+    "4-to-5-to-6 spacing",
+    "frame6 foreground leg identity",
+    "opposite arm swing",
+    "8-to-1 loop seam"
+  ]
+}

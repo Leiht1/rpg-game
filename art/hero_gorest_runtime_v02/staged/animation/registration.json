@@ -1,0 +1,543 @@
+{
+  "schema": "windrest.complete_registration.v2",
+  "template_version": "windrest-character-template-2",
+  "source": "user-approved Gorest complete-frame preview; no new image generation",
+  "canvas": [
+    128,
+    128
+  ],
+  "anchor": [
+    64,
+    112
+  ],
+  "source_canvas": [
+    256,
+    256
+  ],
+  "source_root": [
+    128,
+    192
+  ],
+  "walk_scale": 0.546875,
+  "walk_offset": [
+    -6,
+    7
+  ],
+  "scale_policy": "one common whole-canvas uniform scale and translation for every walk frame in all directions",
+  "sampling": "premultiplied-alpha LANCZOS",
+  "directions": {
+    "front": {
+      "frames": [
+        {
+          "name": "front_idle_00",
+          "source": "art\\hero_gorest_runtime_v02\\previous_runtime\\final_sprite\\front_idle_00.png",
+          "source_sha256": "2d3aed9e46a51dbab619126458994cf41b1a61746a73c4e4d8b90aa5f2beda50",
+          "operation": "preserve existing neutral idle byte for byte",
+          "source_to_output_scale": 1.0
+        },
+        {
+          "name": "front_walk_00",
+          "source": "art\\gorest_side_lowstep_v03\\front\\frames\\front_walk_00.png",
+          "source_sha256": "554829ab3492dbb01e722080ba5aced18262b88ad1dfba88cf575fe03be9c264",
+          "source_frame": 0,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "2a0c6ed1c26e1a04784b6602996172f9b922d9c8eecf759f9aa7ff194c152112"
+        },
+        {
+          "name": "front_walk_01",
+          "source": "art\\gorest_side_lowstep_v03\\front\\frames\\front_walk_01.png",
+          "source_sha256": "20984a9d53e8b4c40d59891656f14e6cf8ce5d388bbde6defb9068c45a636923",
+          "source_frame": 1,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "20b5e8d0548078939e9c185d256de1d339f9155324ebc3b0b4256ec980429251"
+        },
+        {
+          "name": "front_walk_02",
+          "source": "art\\gorest_side_lowstep_v03\\front\\frames\\front_walk_02.png",
+          "source_sha256": "3bc2ddbeabfa712bb8423b195be6df06030c43117a726c81ab11922929f0ba0b",
+          "source_frame": 2,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "a581d2dd27d845fd01f822845cc4824bd10ce66564123026b377458ffb284273"
+        },
+        {
+          "name": "front_walk_03",
+          "source": "art\\gorest_side_lowstep_v03\\front\\frames\\front_walk_03.png",
+          "source_sha256": "80da1bba9710c7cd3c2eb6d9d69d4f968079321acf8e6bca621390a7c1b60409",
+          "source_frame": 3,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "be80dd2d2987cda1a24c7e3668ee18c29b22b64bf14af9b6cbf67d3fd4e68742"
+        },
+        {
+          "name": "front_walk_04",
+          "source": "art\\gorest_side_lowstep_v03\\front\\frames\\front_walk_04.png",
+          "source_sha256": "714ec8c280fc9c68c11c988d102326999e26b0ab73a114f7aa4e839f6a2976ea",
+          "source_frame": 4,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "c0ecef6514093fd3a19bc5c8bf5ab09416c9c4d298e3f13916869f768d0b8dd5"
+        },
+        {
+          "name": "front_walk_05",
+          "source": "art\\gorest_side_lowstep_v03\\front\\frames\\front_walk_05.png",
+          "source_sha256": "080c904ffd0a3607be57c03874ab8eaae7f03c52d740a1f338d82dae809a5f4b",
+          "source_frame": 5,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "215041bab015542be5f796bc5c2d934b37244e549deb422b8ecb6adc351b24ce"
+        },
+        {
+          "name": "front_walk_06",
+          "source": "art\\gorest_side_lowstep_v03\\front\\frames\\front_walk_06.png",
+          "source_sha256": "a14843eacac6d2aea13b9d7a23c5a5434766de4d7e906b3b05e4387658f4479a",
+          "source_frame": 6,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "a39be6d0baa01e96c933419758f1240a6bf13259b8e6afaf65011ef96c4c3266"
+        },
+        {
+          "name": "front_walk_07",
+          "source": "art\\gorest_side_lowstep_v03\\front\\frames\\front_walk_07.png",
+          "source_sha256": "aecafe42fce354c51f2907328d5f83b528ba14704f2ec95586bab2c1726450a5",
+          "source_frame": 7,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "370b3a79adb16cbd26cf0782374a5bb4d73debc312eda2ed7923f683546f292e"
+        }
+      ]
+    },
+    "back": {
+      "frames": [
+        {
+          "name": "back_idle_00",
+          "source": "art\\hero_gorest_runtime_v02\\previous_runtime\\final_sprite\\back_idle_00.png",
+          "source_sha256": "e6f877c0468197bf5286ad0355fe1c1dfd2b060da512109704ab8f687996e7df",
+          "operation": "preserve existing neutral idle byte for byte",
+          "source_to_output_scale": 1.0
+        },
+        {
+          "name": "back_walk_00",
+          "source": "art\\gorest_side_lowstep_v03\\back\\frames\\back_walk_00.png",
+          "source_sha256": "5c1bf64bdd03bca0b9169f5e3c3bdf40da0c2bd4cecb48d49777b0fe2764aff6",
+          "source_frame": 0,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "03fb8a26045f6e29af2aba4b196a672377cc2f2e8b4853c65638f9a3f8f895d0"
+        },
+        {
+          "name": "back_walk_01",
+          "source": "art\\gorest_side_lowstep_v03\\back\\frames\\back_walk_01.png",
+          "source_sha256": "b60695819d92c7de671846c77b79453862a7e329506f2ef86da54e0ab60f549e",
+          "source_frame": 1,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "ff1a02d6f8254d34a74be5895a95d5ebdb664ee4f62d12c4eab08ea3e8a379bb"
+        },
+        {
+          "name": "back_walk_02",
+          "source": "art\\gorest_side_lowstep_v03\\back\\frames\\back_walk_02.png",
+          "source_sha256": "f234bd16cc65d85d41364574131e148ca9cac932478015e8fcc8efc2a7339dd1",
+          "source_frame": 2,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "3647dc3b2b500ee63e7438242b7b8488051ab27ace2ec7a7ee11b7dfc028dacb"
+        },
+        {
+          "name": "back_walk_03",
+          "source": "art\\gorest_side_lowstep_v03\\back\\frames\\back_walk_03.png",
+          "source_sha256": "7f1aee6d539bfee8802a9700b8d0d118694410df20b7799f383b70909b4db61e",
+          "source_frame": 3,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "8dfe44676b406b6b814aa7988e4250badd1346177dabb759c2eb71ecb6a01ee3"
+        },
+        {
+          "name": "back_walk_04",
+          "source": "art\\gorest_side_lowstep_v03\\back\\frames\\back_walk_04.png",
+          "source_sha256": "a188c852f4d1628f966e0dbe0e6950908c1cc4e9217863c57312ce8008590a6a",
+          "source_frame": 4,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "a3023955dc698ce2b4f5988154c1aeb8b9b1486383ab623c2f71a6684cf0cc0f"
+        },
+        {
+          "name": "back_walk_05",
+          "source": "art\\gorest_side_lowstep_v03\\back\\frames\\back_walk_05.png",
+          "source_sha256": "a027e3e77c8b96bc36c3ea11c9edf2c6e300310e0f398c1d21bd45be6302f3ff",
+          "source_frame": 5,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "4f2760611cea34027f6bd8201d56f31b5da3adc873f78d6c36b2fa89644c2ca9"
+        },
+        {
+          "name": "back_walk_06",
+          "source": "art\\gorest_side_lowstep_v03\\back\\frames\\back_walk_06.png",
+          "source_sha256": "ce3d8b89b63f14bd3d3145a4be20a12eb99d7f4f66b7c53bcdba423f5ad76ced",
+          "source_frame": 6,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "5b832aeb7e531ceed0e1e9446d0b785829ff756a688c6f6d213a5ca765e55656"
+        },
+        {
+          "name": "back_walk_07",
+          "source": "art\\gorest_side_lowstep_v03\\back\\frames\\back_walk_07.png",
+          "source_sha256": "251e0bc7b717ba911c8848baa93fee174472efd68a322a0ec2dabd50e3f3b3b8",
+          "source_frame": 7,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "cfea926a9598f5e7060ef575d547763eb459df01530bf5f29cbca4ae95f7fcdf"
+        }
+      ]
+    },
+    "side": {
+      "frames": [
+        {
+          "name": "side_idle_00",
+          "source": "art\\hero_gorest_runtime_v02\\previous_runtime\\final_sprite\\side_idle_00.png",
+          "source_sha256": "85398c42832a7a293060c791f5d030fe5a3c3df786902afa9793f7b2f7344b6d",
+          "operation": "preserve existing neutral idle byte for byte",
+          "source_to_output_scale": 1.0
+        },
+        {
+          "name": "side_walk_00",
+          "source": "art\\gorest_side_lowstep_v03\\right\\frames\\right_walk_00.png",
+          "source_sha256": "77c1a0d4d0824ee59fddde893e7a8ee7dda81471e5c0a66b7c22070804adf571",
+          "source_frame": 0,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "8fa84f71c37fcb06a22a6734ab5ef5beb562c2a7a9fa474ad4728478d1787f90"
+        },
+        {
+          "name": "side_walk_01",
+          "source": "art\\gorest_side_lowstep_v03\\right\\frames\\right_walk_01.png",
+          "source_sha256": "70b8b252cd08739f5d938aae96b15d426325c835fe4ee7587b3c875f64fb4ee2",
+          "source_frame": 1,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "741d7d3c203291e415039553298943cb781547e2a2b769c3a8465a5df2e512de"
+        },
+        {
+          "name": "side_walk_02",
+          "source": "art\\gorest_side_lowstep_v03\\right\\frames\\right_walk_02.png",
+          "source_sha256": "9d1e90b4dcb80cfba2a7254bb926474ca78a7d70cf694f6766e6c3b212b440b1",
+          "source_frame": 2,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "49ff8308abfe4df7f17d360c8314c9481bf2ea1f305a799d5f40985dda55e931"
+        },
+        {
+          "name": "side_walk_03",
+          "source": "art\\gorest_side_lowstep_v03\\right\\frames\\right_walk_03.png",
+          "source_sha256": "14970462c815417e489ad99444fee2686e6be8d735d9ff91d0886b108eed096b",
+          "source_frame": 3,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "15a82bc0b371cdd900a9a991782df34018f1e14d2f8178ddf4021031ed907098"
+        },
+        {
+          "name": "side_walk_04",
+          "source": "art\\gorest_side_lowstep_v03\\right\\frames\\right_walk_04.png",
+          "source_sha256": "41086c5717bfe6c9aff9b67497dad76405ebd792ba240ae28fa44ff7d2990a98",
+          "source_frame": 4,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "c20f7df9d26dd6ce5fb8e8041e1c831c221f596cfdd27480b11ec2b7e720b53f"
+        },
+        {
+          "name": "side_walk_05",
+          "source": "art\\gorest_side_lowstep_v03\\right\\frames\\right_walk_05.png",
+          "source_sha256": "af90b26b6f2be4c15cbc30e45c2b2816d1a33b5baa9be8f97aba040379dcfad5",
+          "source_frame": 5,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "18329b5826fd2c6f9aea6357e44dbbaca383f831c222dbd1f3477abc14f0f9ea"
+        },
+        {
+          "name": "side_walk_06",
+          "source": "art\\gorest_side_lowstep_v03\\right\\frames\\right_walk_06.png",
+          "source_sha256": "c253a8d982050b16e64d97e3febc04b9c9cf48876d495fcd0910ce7b90988b99",
+          "source_frame": 6,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "e17c4861c974947844fe2096661a1775434072d78162b0cb5430a318f0d984d6"
+        },
+        {
+          "name": "side_walk_07",
+          "source": "art\\gorest_side_lowstep_v03\\right\\frames\\right_walk_07.png",
+          "source_sha256": "b4f7362cb320467488cfdc3b89df1760c9ace834e3fe219fc69cca52dee019aa",
+          "source_frame": 7,
+          "source_to_output_scale": 0.546875,
+          "source_root": [
+            128,
+            192
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "offset": [
+            -6,
+            7
+          ],
+          "output_sha256": "9013e39056d88ad1fd471a6d23aa84dbb8843ab78a66ad5c5769fa49e16bf60a"
+        }
+      ]
+    }
+  }
+}

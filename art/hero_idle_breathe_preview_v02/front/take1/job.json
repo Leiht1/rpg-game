@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "aca4dd4fc8422cc2e6b63b2b554b06e8d52c53df6167de89d87ee75503b4c43b",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T07:00:43.532Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T07:00:43.532Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Revise front breathing: stronger chest action and locked head/pelvis/feet; preview only",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13dd0-2e37-7b80-a90b-2be7b02cd173",
+    "source": "CODEX_HOME/generated_images/01a13dd0-2e37-7b80-a90b-2be7b02cd173/exec-199f4ea9-6f86-4809-819b-0c930a4a8682.png",
+    "sourceSha256": "656814debb6361ad5fce62a859243001ff0567c4100e5682de6d63aaf1e88e14",
+    "sourceMtime": "2026-10-15T07:00:10Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "656814debb6361ad5fce62a859243001ff0567c4100e5682de6d63aaf1e88e14",
+    "bytes": 756439,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "74c70f0870d9fe3dd13bd696b1ca3c4af5ca204240265c291ad5e7b83293e2c1",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T08:34:15.481Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T08:34:15.481Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Repair side walk near far limb continuity frames 3 5 6 7 and loop frame 8",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13eae-d60b-7a53-b798-179e593aeac9",
+    "source": "CODEX_HOME/generated_images/01a13eae-d60b-7a53-b798-179e593aeac9/exec-f7e6fdab-763c-43ec-a9a5-2cc711b9ea2e.png",
+    "sourceSha256": "d2d3d41b60838a7914b54cb2ef34cf76bac2ca0f962c4bd3cfe53514d768ec45",
+    "sourceMtime": "2026-10-15T08:33:42Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "d2d3d41b60838a7914b54cb2ef34cf76bac2ca0f962c4bd3cfe53514d768ec45",
+    "bytes": 829506,
+    "format": "PNG",
+    "size": [
+      1774,
+      887
+    ]
+  }
+}

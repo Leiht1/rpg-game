@@ -1,0 +1,241 @@
+{
+  "status": "pass-files-only",
+  "visualApproval": false,
+  "previewOnly": true,
+  "frames": {
+    "front": {
+      "count": 4,
+      "unique": 4,
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "minimumAlpha16MarginPx": 16,
+      "visibleHeightsPx": [
+        89,
+        89,
+        89,
+        89
+      ],
+      "pngSheetReadbackExact": true
+    },
+    "back": {
+      "count": 4,
+      "unique": 4,
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "minimumAlpha16MarginPx": 16,
+      "visibleHeightsPx": [
+        89,
+        89,
+        89,
+        89
+      ],
+      "pngSheetReadbackExact": true
+    },
+    "right": {
+      "count": 4,
+      "unique": 4,
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "minimumAlpha16MarginPx": 16,
+      "visibleHeightsPx": [
+        91,
+        91,
+        91,
+        91
+      ],
+      "pngSheetReadbackExact": true
+    },
+    "left": {
+      "count": 4,
+      "unique": 4,
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "minimumAlpha16MarginPx": 16,
+      "visibleHeightsPx": [
+        91,
+        91,
+        91,
+        91
+      ],
+      "pngSheetReadbackExact": true
+    }
+  },
+  "media": {
+    "back_before_after.gif": {
+      "frames": 4,
+      "totalMs": 3000
+    },
+    "before_after_preview.gif": {
+      "frames": 4,
+      "totalMs": 3000
+    },
+    "four_directions_preview.gif": {
+      "frames": 4,
+      "totalMs": 3000
+    },
+    "front_before_after.gif": {
+      "frames": 4,
+      "totalMs": 3000
+    },
+    "game_size_preview.gif": {
+      "frames": 4,
+      "totalMs": 3000
+    },
+    "left_before_after.gif": {
+      "frames": 4,
+      "totalMs": 3000
+    },
+    "right_before_after.gif": {
+      "frames": 4,
+      "totalMs": 3000
+    },
+    "back_before_after.webp": {
+      "frames": 4,
+      "totalMs": 3000
+    },
+    "before_after_preview.webp": {
+      "frames": 4,
+      "totalMs": 3000
+    },
+    "four_directions_preview.webp": {
+      "frames": 4,
+      "totalMs": 3000
+    },
+    "front_before_after.webp": {
+      "frames": 4,
+      "totalMs": 3000
+    },
+    "game_size_preview.webp": {
+      "frames": 4,
+      "totalMs": 3000
+    },
+    "left_before_after.webp": {
+      "frames": 4,
+      "totalMs": 3000
+    },
+    "right_before_after.webp": {
+      "frames": 4,
+      "totalMs": 3000
+    }
+  },
+  "sources": {
+    "front": {
+      "sha256": "656814debb6361ad5fce62a859243001ff0567c4100e5682de6d63aaf1e88e14",
+      "size": [
+        1254,
+        1254
+      ],
+      "oneDirectionScale": 0.18126272912423624,
+      "sourceEdgeRisks": []
+    },
+    "back": {
+      "sha256": "3b3ca4f959ea475f718e049fe82fa06ff7e0091ae7a6aa59ce139c278828399e",
+      "size": [
+        1254,
+        1254
+      ],
+      "oneDirectionScale": 0.20412844036697247,
+      "sourceEdgeRisks": []
+    },
+    "side": {
+      "sha256": "164b0b1056d1289d3811fb6574aefc1e7b689d8fd3b6e5f73e39ac0fd18aad31",
+      "size": [
+        1254,
+        1254
+      ],
+      "oneDirectionScale": 0.2026726057906459,
+      "sourceEdgeRisks": []
+    }
+  },
+  "wholeFrameLeftMirrorExact": true,
+  "runtime": {
+    "filesCompared": 51,
+    "changed": [],
+    "godotTestRun": false,
+    "performanceMeasured": false
+  },
+  "gorest": {
+    "count": 49,
+    "updatedPreviews": 4,
+    "otherAssetsPreserved": 45,
+    "idsOrderScenesPreserved": true,
+    "confirmed": false,
+    "lintExitCode": 0,
+    "buildExitCode": 0
+  },
+  "skillQA": [
+    {
+      "id": "png_byte_copy",
+      "status": "pass",
+      "value": 16,
+      "threshold": null
+    },
+    {
+      "id": "webp_timeline",
+      "status": "pass",
+      "value": 4,
+      "threshold": null
+    },
+    {
+      "id": "tick_grid",
+      "status": "pass",
+      "value": 0.0,
+      "threshold": null
+    },
+    {
+      "id": "telegraph",
+      "threshold": 28,
+      "status": "skipped",
+      "value": null
+    },
+    {
+      "id": "near_duplicate_holds",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0
+    },
+    {
+      "id": "loop_seam",
+      "status": "needs-visual-review",
+      "value": 1.09965,
+      "threshold": null
+    },
+    {
+      "id": "manifest_lint",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0
+    }
+  ],
+  "skillStatus": "needs-visual-review",
+  "frameSha256": {
+    "front/frames/front_idle_breathe_00.png": "0cb5159923f945e09224046e5676eecad7fcfe4e55b07dc788ab580f9f2e1ccf",
+    "front/frames/front_idle_breathe_01.png": "67953802870f29ce88bf834bad029055ce5c33db117091feb93c311c0475ffe8",
+    "front/frames/front_idle_breathe_02.png": "0ad3398ee9676faa623186038528439d59401a70297da16f13156f062af072f0",
+    "front/frames/front_idle_breathe_03.png": "cc7e3e7a4e89cf18085b967c5aa3059c1a1778cda83ac2405902447de9788b24",
+    "back/frames/back_idle_breathe_00.png": "0b6ade14614419c9a86ffa9b4453edb7f3a70a40a80f89d013969cf8f5afbf7b",
+    "back/frames/back_idle_breathe_01.png": "cb32e32038d6ea9ca8b6fac5cea5bf971d512f27e234e70488af2c6ecf49dac7",
+    "back/frames/back_idle_breathe_02.png": "a1d346f8f9e4c667e680af502da17ca4c7f48590b9d25d5e1b56177de921936e",
+    "back/frames/back_idle_breathe_03.png": "6d46d177544d84f5c9d52f763f5b5c8550030d50f90b1273a998a1a7f81a14ab",
+    "right/frames/right_idle_breathe_00.png": "0b08e5d949cec9320ed955f27e52d8246f526336300d5b425d2dde6ece0cc48d",
+    "right/frames/right_idle_breathe_01.png": "c48e22385c8515c15e570963c9892c487fd9efdbcee3986bf199e8e282ac8c01",
+    "right/frames/right_idle_breathe_02.png": "51af610b3d8c13610acdb476a325dc3a05c09b305f00e1f46e8f7ac61c1acfd1",
+    "right/frames/right_idle_breathe_03.png": "3356efa8d518a7f8a2645b8225a24e38c8916961632e5aaf61bdc298575c65d6",
+    "left/frames/left_idle_breathe_00.png": "74cc8630a1a3e9d37af4b62ea524d37068b1b2ea93589c92e5f0d5bb331f53e2",
+    "left/frames/left_idle_breathe_01.png": "685240ba338c2857640d5f00f2366957512f54f9fc9b85933e8ebc0b4509c105",
+    "left/frames/left_idle_breathe_02.png": "50b26c95a7d177d7a0913878b6fbd427e7b272b1a79f006974e3d4376e877305",
+    "left/frames/left_idle_breathe_03.png": "91654cee73f825357cec699c4a810d8b6e1094e739c3837766733b0966a03df1"
+  }
+}

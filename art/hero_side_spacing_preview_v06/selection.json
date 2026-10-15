@@ -1,0 +1,62 @@
+{
+  "selection": [
+    {
+      "frameOneBased": 1,
+      "outputIndexZeroBased": 0,
+      "source": "../hero_sequence_repair_preview_v05/right_walk_preview/frames/right_walk_00.png"
+    },
+    {
+      "frameOneBased": 2,
+      "outputIndexZeroBased": 1,
+      "source": "../hero_sequence_repair_preview_v05/right_walk_preview/frames/right_walk_01.png"
+    },
+    {
+      "frameOneBased": 3,
+      "outputIndexZeroBased": 2,
+      "source": "take1/generated.png cell 0"
+    },
+    {
+      "frameOneBased": 4,
+      "outputIndexZeroBased": 3,
+      "source": "../hero_sequence_repair_preview_v05/right_walk_preview/frames/right_walk_03.png"
+    },
+    {
+      "frameOneBased": 5,
+      "outputIndexZeroBased": 4,
+      "source": "take1/generated.png cell 1"
+    },
+    {
+      "frameOneBased": 6,
+      "outputIndexZeroBased": 5,
+      "source": "../hero_sequence_repair_preview_v05/right_walk_preview/frames/right_walk_05.png"
+    },
+    {
+      "frameOneBased": 7,
+      "outputIndexZeroBased": 6,
+      "source": "../hero_sequence_repair_preview_v05/right_walk_preview/frames/right_walk_06.png"
+    },
+    {
+      "frameOneBased": 8,
+      "outputIndexZeroBased": 7,
+      "source": "../hero_sequence_repair_preview_v05/right_walk_preview/frames/right_walk_07.png"
+    }
+  ],
+  "changedFramesOneBased": [
+    3,
+    5
+  ],
+  "unchangedFramesOneBased": [
+    1,
+    2,
+    4,
+    6,
+    7,
+    8
+  ],
+  "root": [
+    64,
+    112
+  ],
+  "leftPolicy": "Whole-frame horizontal mirror, same phase order",
+  "idlePolicy": "All v05 breathing previews retained without changes."
+}

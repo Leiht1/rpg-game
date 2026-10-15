@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "f958d909f53296a4bbb3b9677131a2d99ef00b11f75b8f1e3550004a415e507c",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T08:05:29.713Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T08:05:29.713Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Refine full-body front breath static head hips and feet while retaining chest action",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13dd0-2e37-7b80-a90b-2be7b02cd173",
+    "source": "CODEX_HOME/generated_images/01a13dd0-2e37-7b80-a90b-2be7b02cd173/exec-7fbad630-e746-4e0e-bc09-cda2e5873270.png",
+    "sourceSha256": "322202539ebd9a4002845711a79914a71b3c91ff0b5dd2baa4e1634b7b34d94b",
+    "sourceMtime": "2026-10-15T08:05:11Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "322202539ebd9a4002845711a79914a71b3c91ff0b5dd2baa4e1634b7b34d94b",
+    "bytes": 821908,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "windrest.complete_actor.v1",
+  "canvas": [
+    128,
+    128
+  ],
+  "anchor": [
+    64,
+    112
+  ],
+  "stride_world_units": 66.66666666666667,
+  "template_version": "windrest-character-template-3",
+  "direction_map": {
+    "down": "front",
+    "up": "back",
+    "right": "side",
+    "left": "side + flip_h"
+  },
+  "walk_clock": "actual post-collision distance",
+  "idle_clock": "seconds",
+  "runtime_layers": 1,
+  "idle_action": "idle_breathe",
+  "idle_cycle_ms": 3000
+}

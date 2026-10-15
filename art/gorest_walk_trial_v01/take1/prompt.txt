@@ -1,0 +1,25 @@
+Use the attached image as the exact approved character identity and rendering reference. Generate ONE NEW sprite animation contact sheet: 16 FULL-BODY FRONT-FACING WALK-IN-PLACE frames of this same character, in chronological row-major order, exactly 4 columns by 4 rows. Square 2048x2048 canvas, equal 512x512 cells, no drawn grid, no labels, no text. Pure flat chroma magenta #FF00FF background, no shadows on background, no scenery, no additional subjects. This is a practical sprite sheet for slicing into animated frames.
+
+Copy the reference's identity faithfully: fluffy chestnut brown hair and forelock; small black eyes, round friendly face and rosy cheeks; sage green open jacket with oatmeal rolled cuffs; cream shirt; small ochre neckerchief tied at the chest; brown shorts; cream socks; brown boots. Original warm bright hand-painted 2D cartoon, soft dark-brown outlines, simple watercolor-like color shading, about 2.7 heads tall, slightly elevated frontal camera showing the crown. Do not add accessories or change clothing. Do not make this realistic, 3D, PBR, anime, pixel art, or vector art.
+
+This is an actual natural walking cycle with visible alternating leg contact, knee flexion, foot lift, and arms swinging opposite the legs. The character faces straight forward toward the viewer in EVERY frame, traveling on a treadmill in place, no side turn, no camera movement or perspective change. Keep the hair, face, torso proportions, outfit, lighting, and source scale consistent. Subtle natural head/torso bob only, not a static body translated to fake walking. Whole character redrawn for every pose, two arms and two legs only. No motion blur, no smear frames, no ghost limbs.
+
+Phase plan for the 16 cells (viewer LEFT/RIGHT means left/right side of the image):
+01 viewer-left boot forward heel contact, viewer-right boot back pushing off; viewer-right arm forward.
+02 left foot rolls down, right heel lifts, body lowers slightly.
+03 left leg supports weight, right knee bends and right boot lifts clear of ground.
+04 right foot swings through beside supporting left leg, opposite arms pass near torso.
+05 right bent knee moves ahead, right toe lifted, left leg extends behind.
+06 right lower leg extends forward, left heel begins rising, right arm swings back.
+07 right heel approaches floor, left boot toes remain behind.
+08 right boot almost in forward contact, left boot pushes off.
+09 viewer-right boot forward heel contact, viewer-left boot back pushing off; viewer-left arm forward. This is the opposite contact from frame 01.
+10 right foot rolls down, left heel lifts, body lowers slightly.
+11 right leg supports weight, left knee bends and left boot lifts clear of ground.
+12 left foot swings through beside supporting right leg, opposite arms pass near torso.
+13 left bent knee moves ahead, left toe lifted, right leg extends behind.
+14 left lower leg extends forward, right heel begins rising, left arm swings back.
+15 left heel approaches floor, right boot toes remain behind.
+16 left boot almost in forward contact, right boot pushes off, smoothly leading into frame 01. Frame 16 must not duplicate frame 01.
+
+Place each full character at the same scale and nearly the same torso center in its cell. Each silhouette must occupy no more than 72% of its cell width and height, with at least 14% clean magenta padding on all four sides. Preserve large continuous gutters between characters. All hair tips, fingertips, and boots entirely inside the correct cell. No cropping or touching cell boundaries. Keep the baseline consistent for supporting feet while lifted feet genuinely lift. The resulting sheet must show visibly different but closely spaced walking poses and a coherent alternating two-step cycle.

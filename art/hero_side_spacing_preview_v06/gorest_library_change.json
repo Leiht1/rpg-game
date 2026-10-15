@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "changedIds": [
+    "asset_windrest_hero_right_walk_v04",
+    "asset_windrest_hero_left_walk_v04"
+  ],
+  "assetCount": 57,
+  "idAndOrderPreserved": true,
+  "otherAssetsUnchanged": true,
+  "otherDataUnchanged": true,
+  "sheetCopiesMatch": true,
+  "confirmed": false,
+  "note": "Initial publisher post-write comparison used Python tuples for bboxes against JSON lists. Corrected comparison; read-only verification confirms actual published data and unchanged unrelated assets."
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "5b4efa3adc043b3789a7f37779d4601b18ce13d01c11231d474f96f5157cfa15",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T09:47:11.950Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T09:47:11.950Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Frame 6 preserve foreground forward leg, low passing boot, near arm returning beside hip",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13eae-d60b-7a53-b798-179e593aeac9",
+    "source": "CODEX_HOME/generated_images/01a13eae-d60b-7a53-b798-179e593aeac9/exec-a2544221-bde2-41c5-a653-d8a289236fe3.png",
+    "sourceSha256": "e0419d59ebf2f79c7df6ec31a3be6d3b6fdf7c58c0d538ef6cba4c7a151f1dc7",
+    "sourceMtime": "2026-10-15T09:46:28Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "e0419d59ebf2f79c7df6ec31a3be6d3b6fdf7c58c0d538ef6cba4c7a151f1dc7",
+    "bytes": 493009,
+    "format": "PNG",
+    "size": [
+      1254,
+      1254
+    ]
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "status": "preview_files_verified_user_visual_review_pending",
+  "runtimeIntegrated": false,
+  "runtimeFilesUnchanged": 51,
+  "pngFrameCount": 16,
+  "framesPerDirection": 4,
+  "canvas": [
+    128,
+    128
+  ],
+  "anchor": [
+    64,
+    112
+  ],
+  "visibleSoleBaseline": 112,
+  "alphaBounds": {
+    "front": [
+      [
+        42,
+        23,
+        86,
+        112
+      ],
+      [
+        42,
+        23,
+        86,
+        112
+      ],
+      [
+        42,
+        22,
+        86,
+        112
+      ],
+      [
+        42,
+        22,
+        86,
+        112
+      ]
+    ],
+    "back": [
+      [
+        43,
+        22,
+        86,
+        112
+      ],
+      [
+        42,
+        22,
+        85,
+        112
+      ],
+      [
+        43,
+        23,
+        86,
+        112
+      ],
+      [
+        42,
+        23,
+        85,
+        112
+      ]
+    ],
+    "right": [
+      [
+        41,
+        21,
+        82,
+        112
+      ],
+      [
+        41,
+        20,
+        82,
+        112
+      ],
+      [
+        41,
+        20,
+        82,
+        112
+      ],
+      [
+        41,
+        20,
+        82,
+        112
+      ]
+    ],
+    "left": [
+      [
+        46,
+        21,
+        87,
+        112
+      ],
+      [
+        46,
+        20,
+        87,
+        112
+      ],
+      [
+        46,
+        20,
+        87,
+        112
+      ],
+      [
+        46,
+        20,
+        87,
+        112
+      ]
+    ]
+  },
+  "sheetRoundTrip": "pass",
+  "leftRightWholeFrameMirror": "pass",
+  "nativeAlpha": "pass",
+  "sourceReferencesPixelIdenticalToExistingIdle": true,
+  "oldGorestAssetsPreserved": 45,
+  "otherLibraryDataUnchanged": true,
+  "newGorestAssetsConfirmed": false,
+  "skillStatus": "needs-visual-review",
+  "skillChecks": [
+    {
+      "id": "png_byte_copy",
+      "status": "pass",
+      "value": 16,
+      "threshold": null
+    },
+    {
+      "id": "webp_timeline",
+      "status": "pass",
+      "value": 4,
+      "threshold": null
+    },
+    {
+      "id": "tick_grid",
+      "status": "pass",
+      "value": 0.0,
+      "threshold": null
+    },
+    {
+      "id": "telegraph",
+      "threshold": 28,
+      "status": "skipped",
+      "value": null
+    },
+    {
+      "id": "near_duplicate_holds",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0
+    },
+    {
+      "id": "loop_seam",
+      "status": "needs-visual-review",
+      "value": 1.932789,
+      "threshold": null
+    },
+    {
+      "id": "manifest_lint",
+      "status": "pass",
+      "value": 0,
+      "threshold": 0
+    }
+  ],
+  "animations": [
+    {
+      "file": "front/front_idle_breathe_preview.gif",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "25e2e6c9f7f07d1b98c110fc185f4715f48230149ff3383ad6e166eccf1b81e0"
+    },
+    {
+      "file": "front/front_idle_breathe_preview.webp",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "5e3ddd51688c81ecd653748b100a5d84d15beed995046e7fe0ff5513d66d0782"
+    },
+    {
+      "file": "back/back_idle_breathe_preview.gif",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "8d18a11f3c404fb86b7be97a3098bc4fa7237c1dfce6f7f243f7ff8c5a5203e9"
+    },
+    {
+      "file": "back/back_idle_breathe_preview.webp",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "8d14e64c116465d2c0a9f754f4b177659a2eb09961679d5cbcbdbdcd0520aab8"
+    },
+    {
+      "file": "side/side_idle_breathe_preview.gif",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "fb5b59848df2d16b508fa7ba39861fc9adcd1ceaba5e9771e44a6e47a4335151"
+    },
+    {
+      "file": "side/side_idle_breathe_preview.webp",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "3bb20a35197f740b9d60987e9d90ea7445dfa475eabef02a72d26f9ae4331f9f"
+    },
+    {
+      "file": "right/right_idle_breathe_preview.gif",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "78b9feafc982daa1ba390b806bd3bc8cb85008c908053d19e40b6ae8d5c718e5"
+    },
+    {
+      "file": "right/right_idle_breathe_preview.webp",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "2e50ca59c8eac5d2dad4415dd28bde4b890e2cdf77d1f80b80ad31a0c828cc47"
+    },
+    {
+      "file": "left/left_idle_breathe_preview.gif",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "c28d4bd23763a9bd8005bab17a102ebb008a37603c749fe1fc4f712405bfd875"
+    },
+    {
+      "file": "left/left_idle_breathe_preview.webp",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "b61500d577fde1a259c47c945453c17165a694d20b75669f75f8dbc362873edb"
+    },
+    {
+      "file": "four_directions_preview.gif",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "193df5d69c53ec48e100bc285c9656dcc0d6bdc1134d9ed997f8fa344b675aaf"
+    },
+    {
+      "file": "four_directions_preview.webp",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "1c8156364e14bc7a0ad7b9f3532ac762a8d16a7b59f85a204a0675c65462b340"
+    },
+    {
+      "file": "game_size_preview.gif",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "a7e4adc157b393b836ed82a22270439e3c8b2c3ea3601d425a3c8abdffcdaedb"
+    },
+    {
+      "file": "game_size_preview.webp",
+      "frameCount": 4,
+      "durationMs": 3000,
+      "sha256": "4021c990cd253ffbcbaa1ad5522148a6ca33dd9ca692379b95042cd6c5fbca17"
+    }
+  ],
+  "pngs": [
+    {
+      "path": "front/frames/front_idle_breathe_00.png",
+      "sha256": "649d3a75689e3af7f7532baf6cb2ed88c76b1b21929ec70813a3bd220828a874"
+    },
+    {
+      "path": "front/frames/front_idle_breathe_01.png",
+      "sha256": "b2241af93702202f01d1b42c5a951cd744ea6218cce1f2a6b307aa36aceb76fd"
+    },
+    {
+      "path": "front/frames/front_idle_breathe_02.png",
+      "sha256": "e8e0e2c1de0b278261b968c69f5dcda35683b3002b0cbc6f276e4399ddd97507"
+    },
+    {
+      "path": "front/frames/front_idle_breathe_03.png",
+      "sha256": "b09dfcb60f43f566c14e1be15830cfba8b437ec503d5ee245c8778609204b519"
+    },
+    {
+      "path": "back/frames/back_idle_breathe_00.png",
+      "sha256": "cddd74c208e84ce582e73cb00578ff42f88f7ad5a39e701002dc89df98f60a4e"
+    },
+    {
+      "path": "back/frames/back_idle_breathe_01.png",
+      "sha256": "5f1b15ba341ea8ccfefbcbba50bd82453478b7f20c32f1506959b66986c62100"
+    },
+    {
+      "path": "back/frames/back_idle_breathe_02.png",
+      "sha256": "1e3c08802a5bef69e5e2f4f2c8db0b5206d6591f25ba96f9eae476d2ad055674"
+    },
+    {
+      "path": "back/frames/back_idle_breathe_03.png",
+      "sha256": "9f4a52846c96efcd10ca588d7ed87d3b0274d28a07ef94ff244d7b1334fe0ca8"
+    },
+    {
+      "path": "right/frames/right_idle_breathe_00.png",
+      "sha256": "bd66ad3046d25ca1534770996a3617ba56181365aa6845d10c08bc65b93b3337"
+    },
+    {
+      "path": "right/frames/right_idle_breathe_01.png",
+      "sha256": "a3e9ea996bcba4198cab8a04b17c5d43bb5f09c8b3eb7ac2646fc96bd958918e"
+    },
+    {
+      "path": "right/frames/right_idle_breathe_02.png",
+      "sha256": "29c16d5340229d32a4989dacaf134132914d857acb0673007259513f326220fd"
+    },
+    {
+      "path": "right/frames/right_idle_breathe_03.png",
+      "sha256": "90251d1197fe35c7834aa937a05ded311df04595832470589b8d1563fd1b07de"
+    },
+    {
+      "path": "left/frames/left_idle_breathe_00.png",
+      "sha256": "f8b185c820cd178688879ec4a24709496e0b26e178cc26a1a7c18cae178177ce"
+    },
+    {
+      "path": "left/frames/left_idle_breathe_01.png",
+      "sha256": "7dd4be09c697623d5a3e12f81eb66ea3452a72e9aa0d333e42283a0a3d32a597"
+    },
+    {
+      "path": "left/frames/left_idle_breathe_02.png",
+      "sha256": "c5432436599a40a75e7f57538d821421c02d2ea2c342ce97033a1ea4c5b4658d"
+    },
+    {
+      "path": "left/frames/left_idle_breathe_03.png",
+      "sha256": "be78ce486ca81903035c75c063825db112e271223f2cb9164e275e8e7e7c66f7"
+    }
+  ],
+  "generatedAt": "2026-10-15T06:52:02.302552+00:00"
+}

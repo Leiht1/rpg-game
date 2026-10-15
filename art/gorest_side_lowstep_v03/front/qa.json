@@ -1,0 +1,88 @@
+{
+  "status": "previewable_trial_not_production_accepted",
+  "frameCount": 8,
+  "uniqueFrameCount": 8,
+  "frameSize": [
+    256,
+    256
+  ],
+  "sheetSize": [
+    1024,
+    512
+  ],
+  "fps": 8,
+  "gifCycleMs": 1000,
+  "alphaBboxes": [
+    [
+      91,
+      25,
+      168,
+      188
+    ],
+    [
+      91,
+      25,
+      168,
+      189
+    ],
+    [
+      89,
+      25,
+      166,
+      189
+    ],
+    [
+      90,
+      25,
+      165,
+      189
+    ],
+    [
+      88,
+      25,
+      166,
+      188
+    ],
+    [
+      89,
+      25,
+      167,
+      187
+    ],
+    [
+      91,
+      25,
+      169,
+      187
+    ],
+    [
+      91,
+      25,
+      168,
+      189
+    ]
+  ],
+  "minimumAlphaMargin": 25,
+  "fullBodyHeightCV": 0.005079057871907197,
+  "adjacentPremultipliedMAE": [
+    0.015493079088628292,
+    0.01458391547203064,
+    0.018026066944003105,
+    0.008761430159211159,
+    0.01813722960650921,
+    0.013244807720184326,
+    0.014431871473789215,
+    0.011992010287940502
+  ],
+  "loopSeamToMedianAdjacentRatio": 0.8222764531883806,
+  "sourceEdgeRisks": [],
+  "globalScale": 0.41001356143978857,
+  "registration": "fixed_upper_body_centroid_anchor_character_position_stable",
+  "scope": "experiment only, no game integration",
+  "limitations": [
+    "Numerical checks do not establish anatomy, gait, identity stability, or a seamless loop.",
+    "Contact-pose holds and uneven arm transitions remain; minor face/hair redraw variation; not final game art."
+  ],
+  "visualReview": "take2/review.json",
+  "browserVerified": true
+}

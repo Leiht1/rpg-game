@@ -1,0 +1,53 @@
+{
+  "selection": [
+    {
+      "frame": 1,
+      "source": "v04/right_walk_00.png"
+    },
+    {
+      "frame": 2,
+      "source": "v04/right_walk_01.png"
+    },
+    {
+      "frame": 3,
+      "source": "take1 cell 2"
+    },
+    {
+      "frame": 4,
+      "source": "v04/right_walk_03.png"
+    },
+    {
+      "frame": 5,
+      "source": "take3 cell 0"
+    },
+    {
+      "frame": 6,
+      "source": "take3 cell 1"
+    },
+    {
+      "frame": 7,
+      "source": "take4 cell 0"
+    },
+    {
+      "frame": 8,
+      "source": "take3 cell 3"
+    }
+  ],
+  "unchangedV04Frames": [
+    1,
+    2,
+    4
+  ],
+  "repairedFrames": [
+    3,
+    5,
+    6,
+    7,
+    8
+  ],
+  "root": [
+    64,
+    112
+  ],
+  "policy": "Complete frames only; original unchanged frames retained byte-for-byte; one common scale per source sheet; singleton inherits reference-cell canvas scale."
+}

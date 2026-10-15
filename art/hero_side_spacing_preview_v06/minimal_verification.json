@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "checks": [
+    "right 8 RGBA frames, canvas, transparent margins, sheet round-trip, unchanged six PNG byte hashes",
+    "left 8 RGBA frames, canvas, transparent margins, sheet round-trip, unchanged six PNG byte hashes",
+    "All eight left frames are exact full-frame mirrors of right",
+    "Both previews decode to eight frames; WebP 667 ms, GIF 670 ms (10 ms quantization), authored 12 FPS retained"
+  ],
+  "frameSha256": {
+    "right_walk_preview\\frames\\right_walk_00.png": "db5a6896e720d78524e9d34603fe3ebfa7ac59bc7438f32a96a0b556168cf550",
+    "right_walk_preview\\frames\\right_walk_01.png": "b68260c35b3409c4e6acbed8bdcbc302211ecfce81a9fb475a4efeda494b9e0c",
+    "right_walk_preview\\frames\\right_walk_02.png": "0f20e3d60ad423650ca7165bddbdfa4bf3bdb4d7586ea51e6069f9f2499672d2",
+    "right_walk_preview\\frames\\right_walk_03.png": "859870dcd1d23bb5399136a5aa4f70a9e0b034ab278b97cf8507402c5675631d",
+    "right_walk_preview\\frames\\right_walk_04.png": "e0a2c256728e78b69a1b2c60ec5dfc899c8a127b7404c2fc2d1a8bc27281602b",
+    "right_walk_preview\\frames\\right_walk_05.png": "970d54ddbdbc0376c95e9db78e38252fbac82ac82336fd92973b85466b8dc668",
+    "right_walk_preview\\frames\\right_walk_06.png": "efa2d8355ec397529d0d8286f7d36a233d796808f888a73390da6b3fb31e1696",
+    "right_walk_preview\\frames\\right_walk_07.png": "a5921d411eaf467df5c1899c9bfc5de22e35ec61473fde468cf0276ac8939a4b",
+    "left_walk_preview\\frames\\left_walk_00.png": "16362b7b104fdd610ccfcf024e8ff565988358ab8e5dd34c506ba40f6c441129",
+    "left_walk_preview\\frames\\left_walk_01.png": "33edaed87b4b603eccfd2cd635050fcd1c19c2cc2a0c7a857aa847a352f56a5c",
+    "left_walk_preview\\frames\\left_walk_02.png": "8e3603da4a62fe521e72c5a1c02383ff35a2174cb4f0fdd989c8b23e21b34959",
+    "left_walk_preview\\frames\\left_walk_03.png": "2be7a615faf8fc6746aca6f45da55aff3ca6484d7fc5f7d4bb5341a5c1717766",
+    "left_walk_preview\\frames\\left_walk_04.png": "5158674fd7b30e08217dff938c0fea003367e1dc4310e5094db640e7b316ebae",
+    "left_walk_preview\\frames\\left_walk_05.png": "58e0dbc6313855bb996ca2455fd51b90caa50e5657eb14039e34641c9537d1a6",
+    "left_walk_preview\\frames\\left_walk_06.png": "73a1f2cdf0dc66a91fa6cbbe74b6c6a1a07ef5dde6d5c85e78022dd1bf29a86c",
+    "left_walk_preview\\frames\\left_walk_07.png": "17deb91cb13e7267964842078ba1b8205cb666b4d68170d13f93a661ad82b4fa"
+  },
+  "changedFramesOneBased": [
+    3,
+    5
+  ],
+  "framesChecked": 16,
+  "fps": 12,
+  "cycleMs": 666.6666666666666,
+  "visualStatus": "needs-visual-review",
+  "sourceEdgeRisks": [],
+  "scope": "Two side walk candidates only. No idle rerun, engine, map, performance, web build or long browser tests."
+}

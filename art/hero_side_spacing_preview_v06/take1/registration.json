@@ -1,0 +1,37 @@
+{
+  "globalScale": 0.14175654853620956,
+  "transforms": [
+    {
+      "sourceCellIndexZeroBased": 0,
+      "outputIndexZeroBased": 2,
+      "sourceCell": [
+        9,
+        9,
+        885,
+        878
+      ],
+      "scale": 0.14175654853620956,
+      "offsetPx": [
+        -1.5099726848033868,
+        0.012326656394453295
+      ]
+    },
+    {
+      "sourceCellIndexZeroBased": 1,
+      "outputIndexZeroBased": 4,
+      "sourceCell": [
+        903,
+        9,
+        1765,
+        878
+      ],
+      "scale": 0.14175654853620956,
+      "offsetPx": [
+        -0.6010455658580867,
+        0.15408320493066086
+      ]
+    }
+  ],
+  "sourceSha256": "8f01753f6bd2dbddacee7235f96780a6dfb45b52fb76f85e325296f3f9d06fff",
+  "policy": "One common source-sheet scale; whole-frame head registration only. No per-pose scale, local patch, limb compositing or warp."
+}
