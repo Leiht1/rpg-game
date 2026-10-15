@@ -1,0 +1,42 @@
+{
+  "status": "pass",
+  "sourceRevision": "v07 final take6",
+  "url": "http://localhost:3000/",
+  "sourceFramesVerified": 16,
+  "beforeCount": 41,
+  "afterCount": 43,
+  "addedIds": [
+    "asset_windrest_hero_right_walk_v07",
+    "asset_windrest_hero_left_walk_v07"
+  ],
+  "sheetHashes": {
+    "windrest_hero_right_walk_v07.png": "564e24ab012b53b549f8804714e6c400c91532a2146d41c03e7d83a04bef4315",
+    "windrest_hero_left_walk_v07.png": "c01c2fa03d58bd3191d06d86742b9f965c8934928e5924066486968f5e1594e0"
+  },
+  "existingAssetsAndOrderPreserved": true,
+  "sceneDataPreserved": true,
+  "confirmed": false,
+  "fps": 13.8,
+  "frameCount": 8,
+  "gameChanged": false,
+  "artGenerationCalls": 0,
+  "installation": {
+    "repository": "https://github.com/NO6KIKO/gorest-2d-animation-spritesheet-generator.git",
+    "revision": "0bd4ccc",
+    "directory": ".forge/gorest",
+    "node": "v24.19.0",
+    "npm": "11.17.0",
+    "dependencyInstall": "pass",
+    "lint": "pass",
+    "build": "pass",
+    "buildNotes": ["Existing 599.71 kB JavaScript chunk warning", "CSS plugin timing notice"]
+  },
+  "browser": {
+    "rightPreviewVisible": true,
+    "grid": "4x2",
+    "frameSize": [128, 128],
+    "pauseAndFrame6Selection": "pass",
+    "finalPlayback": "playing",
+    "screenshot": "reports/gorest-v07-preview.jpg"
+  }
+}

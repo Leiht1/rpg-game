@@ -1,0 +1,28 @@
+{
+  "previewOnly": true,
+  "newUserAuthorization": "Redraw a consistent complete sequence, strictly following all current v08 frame poses.",
+  "directionsToRedraw": [
+    "right"
+  ],
+  "directionReferences": [
+    "front",
+    "back"
+  ],
+  "frames": 8,
+  "canvas": [
+    128,
+    128
+  ],
+  "root": [
+    64,
+    112
+  ],
+  "fps": 13.8,
+  "generation": "Whole-sheet complete-figure restoration, no semantic walk recipe overriding the source poses.",
+  "sourcePoseLock": "pose_reference.json",
+  "bodyReference": "references/side_body_master.png",
+  "crossviewReference": "references/crossview_reference.png",
+  "left": "mirror complete right frames",
+  "normalization": "One shared scale for whole new source sheet, rigid whole-frame registration only. No per-frame size fit or body part patches.",
+  "runtime": "No changes before preview acceptance."
+}

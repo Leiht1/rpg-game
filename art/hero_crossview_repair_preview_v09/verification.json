@@ -1,0 +1,286 @@
+{
+  "packaging": "pass",
+  "visualStatus": "needs-visual-review",
+  "directionChecks": [
+    {
+      "direction": "front",
+      "canvas": [
+        128,
+        128
+      ],
+      "count": 8,
+      "bboxes": [
+        [
+          41,
+          20,
+          87,
+          112
+        ],
+        [
+          42,
+          20,
+          88,
+          112
+        ],
+        [
+          41,
+          20,
+          87,
+          112
+        ],
+        [
+          40,
+          20,
+          86,
+          112
+        ],
+        [
+          39,
+          20,
+          87,
+          112
+        ],
+        [
+          40,
+          20,
+          87,
+          112
+        ],
+        [
+          41,
+          20,
+          87,
+          112
+        ],
+        [
+          42,
+          20,
+          88,
+          112
+        ]
+      ]
+    },
+    {
+      "direction": "back",
+      "canvas": [
+        128,
+        128
+      ],
+      "count": 8,
+      "bboxes": [
+        [
+          40,
+          20,
+          84,
+          112
+        ],
+        [
+          40,
+          20,
+          85,
+          112
+        ],
+        [
+          41,
+          20,
+          86,
+          112
+        ],
+        [
+          44,
+          20,
+          87,
+          112
+        ],
+        [
+          44,
+          20,
+          87,
+          113
+        ],
+        [
+          41,
+          20,
+          87,
+          112
+        ],
+        [
+          41,
+          20,
+          86,
+          113
+        ],
+        [
+          40,
+          20,
+          84,
+          113
+        ]
+      ]
+    },
+    {
+      "direction": "right",
+      "canvas": [
+        128,
+        128
+      ],
+      "count": 8,
+      "bboxes": [
+        [
+          34,
+          20,
+          85,
+          114
+        ],
+        [
+          39,
+          20,
+          84,
+          114
+        ],
+        [
+          34,
+          20,
+          90,
+          114
+        ],
+        [
+          34,
+          20,
+          89,
+          114
+        ],
+        [
+          36,
+          20,
+          84,
+          111
+        ],
+        [
+          39,
+          20,
+          87,
+          111
+        ],
+        [
+          37,
+          20,
+          91,
+          111
+        ],
+        [
+          33,
+          20,
+          88,
+          111
+        ]
+      ]
+    },
+    {
+      "direction": "left",
+      "canvas": [
+        128,
+        128
+      ],
+      "count": 8,
+      "bboxes": [
+        [
+          43,
+          20,
+          94,
+          114
+        ],
+        [
+          44,
+          20,
+          89,
+          114
+        ],
+        [
+          38,
+          20,
+          94,
+          114
+        ],
+        [
+          39,
+          20,
+          94,
+          114
+        ],
+        [
+          44,
+          20,
+          92,
+          111
+        ],
+        [
+          41,
+          20,
+          89,
+          111
+        ],
+        [
+          37,
+          20,
+          91,
+          111
+        ],
+        [
+          40,
+          20,
+          95,
+          111
+        ]
+      ]
+    }
+  ],
+  "animationChecks": [
+    {
+      "file": "crossview_walk.webp",
+      "frames": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "crossview_walk_slow.webp",
+      "frames": 8,
+      "cycleMs": 1160
+    },
+    {
+      "file": "side_before_after.webp",
+      "frames": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "side_before_after_slow.webp",
+      "frames": 8,
+      "cycleMs": 1160
+    },
+    {
+      "file": "crossview_walk.gif",
+      "frames": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "crossview_walk_slow.gif",
+      "frames": 8,
+      "cycleMs": 1160
+    },
+    {
+      "file": "side_before_after.gif",
+      "frames": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "side_before_after_slow.gif",
+      "frames": 8,
+      "cycleMs": 1160
+    }
+  ],
+  "runtimeHashCheck": {
+    "files": 60,
+    "unchanged": true
+  },
+  "sameSamplingAllDirections": true,
+  "noPerFrameScale": true
+}

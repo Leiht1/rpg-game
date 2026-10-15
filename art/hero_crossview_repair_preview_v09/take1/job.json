@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "edc3c7c3848a047acaa4112dc0bf17328c953613218114eb2545629bf50213e0",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T12:48:23.542Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T12:48:23.542Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Whole-sheet side anatomy and detail density repair against front/back",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13f7f-13ba-7a60-97b7-06e5d11aacc3",
+    "source": "CODEX_HOME/generated_images/01a13f7f-13ba-7a60-97b7-06e5d11aacc3/exec-33e785fe-db26-48d4-b903-278b6b89993c.png",
+    "sourceSha256": "2328dc80106322754d75a4723f5a7a724a519e0a6e92da019e962e4d8668116c",
+    "sourceMtime": "2026-10-15T12:46:58Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "2328dc80106322754d75a4723f5a7a724a519e0a6e92da019e962e4d8668116c",
+    "bytes": 1015160,
+    "format": "PNG",
+    "size": [
+      1774,
+      887
+    ]
+  }
+}

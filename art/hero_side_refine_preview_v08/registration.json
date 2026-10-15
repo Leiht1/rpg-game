@@ -1,0 +1,101 @@
+{
+  "canvas": [
+    128,
+    128
+  ],
+  "root": [
+    64,
+    112
+  ],
+  "policy": "User-requested source scale correction from stable head region, full-frame isotropic calibration and ground registration. No limb edits by code, no full-body bounding-box height fitting. All calibrated sources share final display scale 1/4. Original v07 preserved.",
+  "transforms": [
+    {
+      "frame": 1,
+      "anatomicalHeadHeightSource512": 139.4949999999999,
+      "isotropicSourceCalibration": 1.0,
+      "translation512": [
+        0.0,
+        -2.0
+      ],
+      "groundSource512": 450,
+      "finalDisplayScale": 0.25
+    },
+    {
+      "frame": 2,
+      "anatomicalHeadHeightSource512": 140.0,
+      "isotropicSourceCalibration": 0.9963928571428564,
+      "translation512": [
+        0.8819464285716094,
+        -1.373178571428241
+      ],
+      "groundSource512": 451,
+      "finalDisplayScale": 0.25
+    },
+    {
+      "frame": 3,
+      "anatomicalHeadHeightSource512": 148.0,
+      "isotropicSourceCalibration": 0.942533783783783,
+      "translation512": [
+        14.99302364864883,
+        14.434459459459788
+      ],
+      "groundSource512": 460,
+      "finalDisplayScale": 0.25
+    },
+    {
+      "frame": 4,
+      "anatomicalHeadHeightSource512": 137.0,
+      "isotropicSourceCalibration": 1.018211678832116,
+      "translation512": [
+        -3.9436496350363086,
+        -9.17704379562008
+      ],
+      "groundSource512": 449,
+      "finalDisplayScale": 0.25
+    },
+    {
+      "frame": 5,
+      "anatomicalHeadHeightSource512": 140.0,
+      "isotropicSourceCalibration": 0.9963928571428564,
+      "translation512": [
+        1.8783392857144747,
+        6.597964285714625
+      ],
+      "groundSource512": 443,
+      "finalDisplayScale": 0.25
+    },
+    {
+      "frame": 6,
+      "anatomicalHeadHeightSource512": 141.0,
+      "isotropicSourceCalibration": 0.989326241134751,
+      "translation512": [
+        3.104397163120751,
+        2.8031914893620637
+      ],
+      "groundSource512": 450,
+      "finalDisplayScale": 0.25
+    },
+    {
+      "frame": 7,
+      "anatomicalHeadHeightSource512": 139.0,
+      "isotropicSourceCalibration": 1.003561151079136,
+      "translation512": [
+        0.13285971223038473,
+        9.443776978417588
+      ],
+      "groundSource512": 437,
+      "finalDisplayScale": 0.25
+    },
+    {
+      "frame": 8,
+      "anatomicalHeadHeightSource512": 141.0,
+      "isotropicSourceCalibration": 0.989326241134751,
+      "translation512": [
+        3.5990602836881465,
+        5.771170212766322
+      ],
+      "groundSource512": 447,
+      "finalDisplayScale": 0.25
+    }
+  ]
+}

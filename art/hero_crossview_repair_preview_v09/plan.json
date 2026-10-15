@@ -1,0 +1,28 @@
+{
+  "previewOnly": true,
+  "request": "Repair whole side sequence anatomy and clarity, align with approved front/back",
+  "canvas": [
+    128,
+    128
+  ],
+  "root": [
+    64,
+    112
+  ],
+  "directionFrames": 8,
+  "fps": 13.8,
+  "sourcePolicy": "Side eight poses in one whole-sheet edit. Front/back from original high-resolution source. Same sampling method and density; one common scale per source sheet. No per-frame size fitting.",
+  "bodyMaster": "references/side_body_master.png",
+  "crossviewReference": "references/crossview_body_reference.png",
+  "referenceDirections": [
+    "front",
+    "back"
+  ],
+  "repairedDirection": "right",
+  "left": "whole-frame mirror",
+  "preservePoseChanges": [
+    "Frame5 modest near/right knee bend",
+    "Frame6 far/left hand behind body, only small portion visible"
+  ],
+  "runtime": "No game assets, scripts, template or map changes before user confirmation"
+}

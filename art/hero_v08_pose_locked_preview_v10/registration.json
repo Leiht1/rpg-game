@@ -1,0 +1,864 @@
+{
+  "canvas": [
+    128,
+    128
+  ],
+  "root": [
+    64,
+    112
+  ],
+  "targetDisplayHeight": 92.0,
+  "targetCrownY": 20.0,
+  "targetGroundY": 112.0,
+  "directions": {
+    "front": [
+      {
+        "frame": 1,
+        "source": "art/hero_consistency_preview_v04/front_walk/take1/generated.png",
+        "sourceSha256": "f8e664c503692c2438e2afed0ba9bd9299c9b84c22fca735db12fce70e5e1d12",
+        "sourceCellIndexZeroBased": 0,
+        "sourceCell": [
+          4,
+          4,
+          436,
+          444
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            4,
+            4,
+            436,
+            444
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            4.927950434456349,
+            4.1749271137026245
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "ed14c556aad398f1dd22ae8409fb17fb1b8a462c6c2636605a58724aecb478f8",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          42,
+          20,
+          87,
+          112
+        ]
+      },
+      {
+        "frame": 2,
+        "source": "art/hero_consistency_preview_v04/front_walk/take1/generated.png",
+        "sourceSha256": "f8e664c503692c2438e2afed0ba9bd9299c9b84c22fca735db12fce70e5e1d12",
+        "sourceCellIndexZeroBased": 1,
+        "sourceCell": [
+          444,
+          4,
+          878,
+          444
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            444,
+            4,
+            878,
+            444
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            6.005312105565416,
+            4.1749271137026245
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "f833b6059615656866d995442a34898ad9e5a9b1adcec837beb426c31be4dbd9",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          42,
+          20,
+          87,
+          112
+        ]
+      },
+      {
+        "frame": 3,
+        "source": "art/hero_consistency_preview_v04/front_walk/take1/generated.png",
+        "sourceSha256": "f8e664c503692c2438e2afed0ba9bd9299c9b84c22fca735db12fce70e5e1d12",
+        "sourceCellIndexZeroBased": 2,
+        "sourceCell": [
+          886,
+          4,
+          1315,
+          444
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            886,
+            4,
+            1315,
+            444
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            5.9839806469381145,
+            4.1749271137026245
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "708365ee8c9056ad957f208449ab4fa9db5862ee746d8b8174b9316809ebeb0e",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          41,
+          20,
+          87,
+          112
+        ]
+      },
+      {
+        "frame": 4,
+        "source": "art/hero_consistency_preview_v04/front_walk/take1/generated.png",
+        "sourceSha256": "f8e664c503692c2438e2afed0ba9bd9299c9b84c22fca735db12fce70e5e1d12",
+        "sourceCellIndexZeroBased": 3,
+        "sourceCell": [
+          1323,
+          4,
+          1770,
+          444
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            1323,
+            4,
+            1770,
+            444
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            6.217198460330273,
+            4.443148688046646
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "1202ebde55aec1979fd33d6a37b1a113dd8132d46e8c0fd50836379bca6fa0c9",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          40,
+          20,
+          86,
+          112
+        ]
+      },
+      {
+        "frame": 5,
+        "source": "art/hero_consistency_preview_v04/front_walk/take1/generated.png",
+        "sourceSha256": "f8e664c503692c2438e2afed0ba9bd9299c9b84c22fca735db12fce70e5e1d12",
+        "sourceCellIndexZeroBased": 4,
+        "sourceCell": [
+          4,
+          452,
+          436,
+          883
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            4,
+            452,
+            436,
+            883
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            5.069111798138465,
+            9.53935860058309
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "b8d548629c406dd8ed351f7a1dbac562e7e5974574f2b6fd4e1959e21a78cda6",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          40,
+          20,
+          86,
+          112
+        ]
+      },
+      {
+        "frame": 6,
+        "source": "art/hero_consistency_preview_v04/front_walk/take1/generated.png",
+        "sourceSha256": "f8e664c503692c2438e2afed0ba9bd9299c9b84c22fca735db12fce70e5e1d12",
+        "sourceCellIndexZeroBased": 5,
+        "sourceCell": [
+          444,
+          452,
+          878,
+          883
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            444,
+            452,
+            878,
+            883
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            6.388989430178015,
+            9.53935860058309
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "a2919acff49d80b6be46eeae0012bf70286bd7da1b0a701d1e32dc286ce82f79",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          41,
+          20,
+          87,
+          112
+        ]
+      },
+      {
+        "frame": 7,
+        "source": "art/hero_consistency_preview_v04/front_walk/take1/generated.png",
+        "sourceSha256": "f8e664c503692c2438e2afed0ba9bd9299c9b84c22fca735db12fce70e5e1d12",
+        "sourceCellIndexZeroBased": 6,
+        "sourceCell": [
+          886,
+          452,
+          1315,
+          883
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            886,
+            452,
+            1315,
+            883
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            6.220519107650297,
+            9.53935860058309
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "d3e7dbae1097a5bb6a6f17ec0f994dfb53da1f1539c13b63a3dbbc70b1a93217",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          41,
+          20,
+          87,
+          112
+        ]
+      },
+      {
+        "frame": 8,
+        "source": "art/hero_consistency_preview_v04/front_walk/take1/generated.png",
+        "sourceSha256": "f8e664c503692c2438e2afed0ba9bd9299c9b84c22fca735db12fce70e5e1d12",
+        "sourceCellIndexZeroBased": 7,
+        "sourceCell": [
+          1323,
+          452,
+          1770,
+          883
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            1323,
+            452,
+            1770,
+            883
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            6.019870138510036,
+            9.53935860058309
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "c6947522eff1c3044feec29a3655b1e177158298dc381a8b214710d4fda32e21",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          42,
+          20,
+          88,
+          112
+        ]
+      }
+    ],
+    "back": [
+      {
+        "frame": 1,
+        "source": "art/hero_consistency_preview_v04/back_walk/take1/generated.png",
+        "sourceSha256": "c9591a55e744c82c8fc3ff5503635f84977056568df1a8b1e026fcac8bfac1c8",
+        "sourceCellIndexZeroBased": 0,
+        "sourceCell": [
+          4,
+          4,
+          439,
+          444
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            4,
+            4,
+            439,
+            444
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.7210018372030405,
+            3.724137931034484
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "79c45e89178077f6091f41e03ace908ed7decc8725254fcf5a36c032aed93f78",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          41,
+          20,
+          84,
+          112
+        ]
+      },
+      {
+        "frame": 2,
+        "source": "art/hero_consistency_preview_v04/back_walk/take1/generated.png",
+        "sourceSha256": "c9591a55e744c82c8fc3ff5503635f84977056568df1a8b1e026fcac8bfac1c8",
+        "sourceCellIndexZeroBased": 1,
+        "sourceCell": [
+          447,
+          4,
+          882,
+          444
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            447,
+            4,
+            882,
+            444
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.5159600022884163,
+            3.724137931034484
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "773030bb946033311f361a040d7733c396aa1a6c085bed110f7cacd1b5bfc684",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          40,
+          20,
+          85,
+          112
+        ]
+      },
+      {
+        "frame": 3,
+        "source": "art/hero_consistency_preview_v04/back_walk/take1/generated.png",
+        "sourceSha256": "c9591a55e744c82c8fc3ff5503635f84977056568df1a8b1e026fcac8bfac1c8",
+        "sourceCellIndexZeroBased": 2,
+        "sourceCell": [
+          890,
+          4,
+          1324,
+          444
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            890,
+            4,
+            1324,
+            444
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.8014346851642244,
+            3.724137931034484
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "ee91010009fa4ba187ddfbcf88f93a8f9f47c080cad4c2ada0a659fd1de6d02c",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          41,
+          20,
+          86,
+          112
+        ]
+      },
+      {
+        "frame": 4,
+        "source": "art/hero_consistency_preview_v04/back_walk/take1/generated.png",
+        "sourceSha256": "c9591a55e744c82c8fc3ff5503635f84977056568df1a8b1e026fcac8bfac1c8",
+        "sourceCellIndexZeroBased": 3,
+        "sourceCell": [
+          1332,
+          4,
+          1770,
+          444
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            1332,
+            4,
+            1770,
+            444
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.327347781174325,
+            3.724137931034484
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "3af0fe07e2a882d97c4e7c6ca9f2c3281a1021103f747b1a702d9958df602811",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          44,
+          20,
+          87,
+          112
+        ]
+      },
+      {
+        "frame": 5,
+        "source": "art/hero_consistency_preview_v04/back_walk/take1/generated.png",
+        "sourceSha256": "c9591a55e744c82c8fc3ff5503635f84977056568df1a8b1e026fcac8bfac1c8",
+        "sourceCellIndexZeroBased": 4,
+        "sourceCell": [
+          4,
+          452,
+          439,
+          883
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            4,
+            452,
+            439,
+            883
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.7101638309601483,
+            7.03448275862069
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "c3712fef08c4268424fcf61aa667fbc092198917a3791ce73220cc63c7336c5b",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          44,
+          20,
+          87,
+          112
+        ]
+      },
+      {
+        "frame": 6,
+        "source": "art/hero_consistency_preview_v04/back_walk/take1/generated.png",
+        "sourceSha256": "c9591a55e744c82c8fc3ff5503635f84977056568df1a8b1e026fcac8bfac1c8",
+        "sourceCellIndexZeroBased": 5,
+        "sourceCell": [
+          447,
+          452,
+          882,
+          883
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            447,
+            452,
+            882,
+            883
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.4298496287384523,
+            7.03448275862069
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "fc100e980e85e584a9846f181a304f7de12b3df08a2167f5873670197acedcfb",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          41,
+          20,
+          86,
+          112
+        ]
+      },
+      {
+        "frame": 7,
+        "source": "art/hero_consistency_preview_v04/back_walk/take1/generated.png",
+        "sourceSha256": "c9591a55e744c82c8fc3ff5503635f84977056568df1a8b1e026fcac8bfac1c8",
+        "sourceCellIndexZeroBased": 6,
+        "sourceCell": [
+          890,
+          452,
+          1324,
+          883
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            890,
+            452,
+            1324,
+            883
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.382069591043404,
+            7.310344827586206
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "20bedf29239df3cdedfb7a12bee51d9f3594b291805e6c399c1b98f65fab490f",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          41,
+          20,
+          86,
+          113
+        ]
+      },
+      {
+        "frame": 8,
+        "source": "art/hero_consistency_preview_v04/back_walk/take1/generated.png",
+        "sourceSha256": "c9591a55e744c82c8fc3ff5503635f84977056568df1a8b1e026fcac8bfac1c8",
+        "sourceCellIndexZeroBased": 7,
+        "sourceCell": [
+          1332,
+          452,
+          1770,
+          883
+        ],
+        "sourceRegistration": {
+          "sourceCell": [
+            1332,
+            452,
+            1770,
+            883
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            2.9928905744305894,
+            7.03448275862069
+          ]
+        },
+        "sizeCalibration": 1.0,
+        "additionalTranslation512": [
+          0,
+          0
+        ],
+        "outputSha256": "6178fa30282d899326d4fd258dfc18b2ba0691e57d10c41558a805d720d306cb",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          40,
+          20,
+          84,
+          112
+        ]
+      }
+    ],
+    "right": [
+      {
+        "frame": 1,
+        "source": "art/hero_side_refine_preview_v08/registered_high/frame_01.png",
+        "sourceSha256": "193b173f9240a443c0d32369050ccb5f43c50b80fd5641ed821adbab549c4c47",
+        "poseBaseline": "art/hero_side_refine_preview_v08/right_walk_preview/frames/right_walk_00.png",
+        "poseBaselineSha256": "1c3ae8dbe5799856211c83232b8957daa9fb09dbc9421fdc36284259ce20b2c2",
+        "sourceCellIndexZeroBased": 0,
+        "operation": "Only full-frame uniform scale/translation; no rotation, shear, warp, part processing or generated pixels.",
+        "sizeCalibration": 0.9945945945945946,
+        "additionalTranslation512": [
+          1.3216216216216081,
+          2.4216216216216253
+        ],
+        "registeredCrown512": 80.0,
+        "registeredGround512": 448.0,
+        "sourceRegistrationPoints512": {
+          "crownY": 78,
+          "stanceGroundY": 448
+        },
+        "outputSha256": "dac051d30f78a40e653e78cd8d71ee6bcddaeb5a7f75aa22242074b8107dbba8",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          40,
+          20,
+          83,
+          112
+        ]
+      },
+      {
+        "frame": 2,
+        "source": "art/hero_side_refine_preview_v08/registered_high/frame_02.png",
+        "sourceSha256": "8e0f2778804b5d039754655ee9d31d5bdaeb3943b202976dd943369e60e0c333",
+        "poseBaseline": "art/hero_side_refine_preview_v08/right_walk_preview/frames/right_walk_01.png",
+        "poseBaselineSha256": "76c414eed2b42c82be05a9258d9e770d202c1c25113ce9a2efd5af94394183ea",
+        "sourceCellIndexZeroBased": 1,
+        "operation": "Only full-frame uniform scale/translation; no rotation, shear, warp, part processing or generated pixels.",
+        "sizeCalibration": 0.9945945945945946,
+        "additionalTranslation512": [
+          1.3216216216216081,
+          2.4216216216216253
+        ],
+        "registeredCrown512": 80.0,
+        "registeredGround512": 448.0,
+        "sourceRegistrationPoints512": {
+          "crownY": 78,
+          "stanceGroundY": 448
+        },
+        "outputSha256": "0b1344d354f4dc97c9511d2eb2e90880c7e2577605953bb8e57dad8918bba6f2",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          39,
+          20,
+          83,
+          112
+        ]
+      },
+      {
+        "frame": 3,
+        "source": "art/hero_side_refine_preview_v08/registered_high/frame_03.png",
+        "sourceSha256": "df3097c7306a5457a19be165b2fbbc8b9f4e961334e91cc99a5d89b1c3f3dd49",
+        "poseBaseline": "art/hero_side_refine_preview_v08/right_walk_preview/frames/right_walk_02.png",
+        "poseBaselineSha256": "169c7d4381b375ba4fdedd8fc2f98cc75160466d36c10219d77cbd64085d6cf8",
+        "sourceCellIndexZeroBased": 2,
+        "operation": "Only full-frame uniform scale/translation; no rotation, shear, warp, part processing or generated pixels.",
+        "sizeCalibration": 1.0279329608938548,
+        "additionalTranslation512": [
+          -6.8296089385474925,
+          -12.513966480446925
+        ],
+        "registeredCrown512": 80.0,
+        "registeredGround512": 448.0,
+        "sourceRegistrationPoints512": {
+          "crownY": 90,
+          "stanceGroundY": 448
+        },
+        "outputSha256": "7c15d0d799a72798e459e83da0a94fb9b0d87d60248e919fd3c761f7a60ee5fe",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          38,
+          20,
+          85,
+          112
+        ]
+      },
+      {
+        "frame": 4,
+        "source": "art/hero_side_refine_preview_v08/registered_high/frame_04.png",
+        "sourceSha256": "e0ea7a5570a8b270beeece4bf159ba62658400983778fd6c24d3ac0a81b7bc83",
+        "poseBaseline": "art/hero_side_refine_preview_v08/right_walk_preview/frames/right_walk_03.png",
+        "poseBaselineSha256": "eaee6f58cf1b4222894fa4ec59c16b8dfbbe9847696f051967ea522b9164709a",
+        "sourceCellIndexZeroBased": 3,
+        "operation": "Only full-frame uniform scale/translation; no rotation, shear, warp, part processing or generated pixels.",
+        "sizeCalibration": 0.9813333333333333,
+        "additionalTranslation512": [
+          4.564000000000013,
+          8.362666666666712
+        ],
+        "registeredCrown512": 80.0,
+        "registeredGround512": 448.0,
+        "sourceRegistrationPoints512": {
+          "crownY": 73,
+          "stanceGroundY": 448
+        },
+        "outputSha256": "c2b2fd47f96f86c9befb43d38b21c3b0ff7a0a0200ea6fb095bcbbde026ad8ee",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          37,
+          20,
+          86,
+          112
+        ]
+      },
+      {
+        "frame": 5,
+        "source": "art/hero_side_refine_preview_v08/registered_high/frame_05.png",
+        "sourceSha256": "d7a9eed9726374050e95c72a7874cc43bd555ccd2129accd63d487670610f132",
+        "poseBaseline": "art/hero_side_refine_preview_v08/right_walk_preview/frames/right_walk_04.png",
+        "poseBaselineSha256": "7568e5d8bf0d867899f50d4d6d82ab88c307710fa0270aca4e8392d046d20a9f",
+        "sourceCellIndexZeroBased": 4,
+        "operation": "Only full-frame uniform scale/translation; no rotation, shear, warp, part processing or generated pixels.",
+        "sizeCalibration": 1.0165745856353592,
+        "additionalTranslation512": [
+          -4.052486187845321,
+          -7.425414364640915
+        ],
+        "registeredCrown512": 80.0,
+        "registeredGround512": 448.0,
+        "sourceRegistrationPoints512": {
+          "crownY": 86,
+          "stanceGroundY": 448
+        },
+        "outputSha256": "9d8eb38fb2ca909a72aae4f2b0e751b06cfe062359ae43452b698efca260cf63",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          39,
+          20,
+          84,
+          112
+        ]
+      },
+      {
+        "frame": 6,
+        "source": "art/hero_side_refine_preview_v08/registered_high/frame_06.png",
+        "sourceSha256": "cde8b8a4312b25f0dd43a925cc15e6d421d4b059f492a3a04a16af4a4834dc01",
+        "poseBaseline": "art/hero_side_refine_preview_v08/right_walk_preview/frames/right_walk_05.png",
+        "poseBaselineSha256": "14e7c862c3ca9dc764c18bac750d1ee0eac0cbd5f8ae5ea3bc700d3d7b6ebc7d",
+        "sourceCellIndexZeroBased": 5,
+        "operation": "Only full-frame uniform scale/translation; no rotation, shear, warp, part processing or generated pixels.",
+        "sizeCalibration": 1.002724795640327,
+        "additionalTranslation512": [
+          -0.6662125340599282,
+          -1.2207084468664675
+        ],
+        "registeredCrown512": 80.0,
+        "registeredGround512": 448.0,
+        "sourceRegistrationPoints512": {
+          "crownY": 81,
+          "stanceGroundY": 448
+        },
+        "outputSha256": "6ebac3da4674169a347309a4e38d7a503f6a0cdd6942cdf544ddbd63a3c39233",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          38,
+          20,
+          84,
+          112
+        ]
+      },
+      {
+        "frame": 7,
+        "source": "art/hero_side_refine_preview_v08/registered_high/frame_07.png",
+        "sourceSha256": "d60e14ba2ea651e4ffca54d6a2ee51087373442c3492600edd985e69447133fc",
+        "poseBaseline": "art/hero_side_refine_preview_v08/right_walk_preview/frames/right_walk_06.png",
+        "poseBaselineSha256": "44e6385df8a8a70ac2b5df686feb561253933b07fef8977cfb99305eb5940857",
+        "sourceCellIndexZeroBased": 6,
+        "operation": "Only full-frame uniform scale/translation; no rotation, shear, warp, part processing or generated pixels.",
+        "sizeCalibration": 1.0250696378830084,
+        "additionalTranslation512": [
+          -6.129526462395559,
+          -11.231197771587745
+        ],
+        "registeredCrown512": 80.0,
+        "registeredGround512": 448.0,
+        "sourceRegistrationPoints512": {
+          "crownY": 89,
+          "stanceGroundY": 448
+        },
+        "outputSha256": "db2d7cf87b62c7971a3895b6fb5cbf2483d4dbc017c90feb0d83ab12f992dc63",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          38,
+          20,
+          89,
+          112
+        ]
+      },
+      {
+        "frame": 8,
+        "source": "art/hero_side_refine_preview_v08/registered_high/frame_08.png",
+        "sourceSha256": "b6463f552c436334cc08fd572a8b63b226f557d89da67bdd5e2bf6cefaf50425",
+        "poseBaseline": "art/hero_side_refine_preview_v08/right_walk_preview/frames/right_walk_07.png",
+        "poseBaselineSha256": "0c0d5188cf8b1ed345c0456ad3cb543fe4b562061e11cd666226d844d0c69549",
+        "sourceCellIndexZeroBased": 7,
+        "operation": "Only full-frame uniform scale/translation; no rotation, shear, warp, part processing or generated pixels.",
+        "sizeCalibration": 1.0137741046831956,
+        "additionalTranslation512": [
+          -3.367768595041329,
+          -6.170798898071666
+        ],
+        "registeredCrown512": 80.0,
+        "registeredGround512": 448.0,
+        "sourceRegistrationPoints512": {
+          "crownY": 85,
+          "stanceGroundY": 448
+        },
+        "outputSha256": "abaf52bc1781be41f5eb2f79d3421947870ed0b03d2677d3c02d87e81e845eed",
+        "finalScale": 0.25,
+        "visibleBounds": [
+          34,
+          20,
+          90,
+          112
+        ]
+      }
+    ]
+  },
+  "finish": {
+    "sampler": "Premultiplied RGBA LANCZOS, common 512 to 128 final grid",
+    "rgbSharpness": {
+      "gaussianRadius": 0.5,
+      "amount": 0.45,
+      "maximumChannelDelta": 8,
+      "alphaChanged": false
+    }
+  },
+  "policy": "All source poses are fixed. Side uses small constant whole-frame isotropic source-size repairs to the front/back display stature. No nonuniform shape edits. Do not convert these into runtime per-frame dynamic normalization.",
+  "limitations": "Native drawn texture and nonuniform body proportions cannot be fully equalized by full-frame transforms. No claim of synthesized detail or exact anatomical consistency."
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "bfe1fc453628347411264a3e1f90d049cdf432b3ba4812cb7fdcc14e1b11243f",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-15T13:11:16.120Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-15T13:11:16.120Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "User-authorized complete redraw of all v08 poses with consistent body model",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a13f7f-13ba-7a60-97b7-06e5d11aacc3",
+    "source": "CODEX_HOME/generated_images/01a13f7f-13ba-7a60-97b7-06e5d11aacc3/exec-00a68071-2d45-4564-99ec-7b82983df2a9.png",
+    "sourceSha256": "8b2d2c7f5b5ac4b81c04cace7514596850669278d181fd37ed8398852c38c462",
+    "sourceMtime": "2026-10-15T13:10:27Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "8b2d2c7f5b5ac4b81c04cace7514596850669278d181fd37ed8398852c38c462",
+    "bytes": 951960,
+    "format": "PNG",
+    "size": [
+      1774,
+      887
+    ]
+  }
+}

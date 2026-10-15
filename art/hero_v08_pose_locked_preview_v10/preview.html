@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>风栖原野 · v08 姿势锁定尺寸校准</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f1f3e9;color:#324238;font:15px/1.6 "Microsoft YaHei",sans-serif}main{max-width:1170px;margin:26px auto;padding:0 20px}h1{font-size:23px;margin:0 0 5px}p{margin:0 0 18px;color:#5e6c61}.bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0}button{border:1px solid #c3cdbb;border-radius:7px;background:#fff;color:#324238;padding:7px 13px;font:inherit;cursor:pointer}button.active,button[aria-pressed=true]{background:#47694d;color:white;border-color:#47694d}.views{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.view{background:#fff;border:1px solid #ccd4c4;border-radius:12px;overflow:hidden}.view h2{font-size:15px;margin:0;padding:11px 12px;border-bottom:1px solid #dde3d7}.stage{padding:16px 0;display:flex;justify-content:center;align-items:center;background-color:#e6ebdb;background-image:linear-gradient(45deg,#d5ddca 25%,transparent 25%),linear-gradient(-45deg,#d5ddca 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#d5ddca 75%),linear-gradient(-45deg,transparent 75%,#d5ddca 75%);background-size:20px 20px;background-position:0 0,0 10px,10px -10px,-10px 0}body.dark .stage{background-color:#2d3835;background-image:linear-gradient(45deg,#35433c 25%,transparent 25%),linear-gradient(-45deg,#35433c 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#35433c 75%),linear-gradient(-45deg,transparent 75%,#35433c 75%)}canvas{width:256px;height:256px;max-width:100%;object-fit:contain}.detail{padding:9px 12px;color:#65725f;font-size:12px}.status{margin-left:auto;font-variant-numeric:tabular-nums}.note{margin-top:14px;padding:12px 14px;border-left:3px solid #9eb291;background:#e7ecdf;font-size:13px;color:#596952}label{display:inline-flex;align-items:center;gap:5px}a{color:#47694d}.contact{width:100%;display:block;border:1px solid #ccd4c4;border-radius:10px;margin-top:20px}@media(max-width:950px){.views{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:480px){main{padding:0 12px}.views{gap:6px}.view h2{font-size:12px;padding:8px}.stage{padding:8px}.detail{font-size:11px;padding:6px}.status{width:100%;margin:0}}
+</style>
+<main>
+<h1>三视图同尺度检查 · v08 姿势锁定</h1>
+<p>沿用 v08 的原有动作，只处理尺寸、定位与清晰度。四个画面同步显示同一帧。</p>
+<div class="bar"><button id="play">暂停</button><button id="normal" class="active">原速</button><button id="slow">半速</button><button id="one">1 倍显示</button><button id="two" class="active">2 倍显示</button><label><input type="checkbox" id="dark">暗色背景</label><label><input type="checkbox" id="guides">对齐线</label><span class="status" id="status">正在载入…</span></div>
+<section class="views">
+<article class="view"><h2>正视 · 尺寸与清晰度参考</h2><div class="stage"><canvas id="front" width="128" height="128" aria-label="正视行走预览"></canvas></div><div class="detail">已确认原动作 · 128×128</div></article>
+<article class="view"><h2>背视 · 尺寸与清晰度参考</h2><div class="stage"><canvas id="back" width="128" height="128" aria-label="背视行走预览"></canvas></div><div class="detail">已确认原动作 · 128×128</div></article>
+<article class="view"><h2>侧视 · v10 尺寸清晰度校准</h2><div class="stage"><canvas id="right" width="128" height="128" aria-label="v08姿势锁定的侧视预览"></canvas></div><div class="detail">v08 同帧原姿势 · 128×128</div></article>
+<article class="view"><h2>侧视 · v08 原帧对照</h2><div class="stage"><canvas id="old" width="128" height="128" aria-label="v08原帧对照"></canvas></div><div class="detail">原始预览保留 · 128×128</div></article>
+</section>
+<div class="bar" id="frames" aria-label="逐帧选择"></div>
+<div class="note">本次图片生成 0 次。侧视的帧顺序、手脚姿势、关节角度和遮挡全部沿用 v08；每帧仅作整帧等比尺寸与定位处理。四组画面使用相同显示倍率。清晰度处理不补画新细节；原稿中已有的身体比例、笔触差异仍可能可见。</div>
+<p style="margin-top:14px"><a href="side_before_after_slow.webp">半速新旧对照</a> · <a href="crossview_walk.webp">三视图动图</a> · <a href="pose_lock.json">原帧与来源记录</a></p>
+<img class="contact" src="side_contact.png" alt="v08八个原姿势的尺寸清晰度处理后逐帧图">
+</main>
+<script>
+let current=0,playing=true,fps=13.8,last=performance.now(),loaded=false;
+const paths={front:'front_walk_preview/front_walk_sheet.png',back:'back_walk_preview/back_walk_sheet.png',right:'right_walk_preview/right_walk_sheet.png',old:'side_v08_sheet.png'},images={},buttons=[];
+const play=document.getElementById('play'),status=document.getElementById('status');
+for(let i=0;i<8;i++){const b=document.createElement('button');b.textContent='第 '+(i+1)+' 帧';b.setAttribute('aria-label','查看第 '+(i+1)+' 帧');b.onclick=()=>{playing=false;play.textContent='播放';current=i;draw()};buttons.push(b);document.getElementById('frames').appendChild(b)}
+function draw(){if(!loaded)return;for(const key of Object.keys(paths)){const c=document.getElementById(key),ctx=c.getContext('2d');ctx.clearRect(0,0,128,128);ctx.drawImage(images[key],current%4*128,Math.floor(current/4)*128,128,128,0,0,128,128);if(document.getElementById('guides').checked){ctx.save();ctx.lineWidth=.5;ctx.strokeStyle='#8e6d32';ctx.beginPath();ctx.moveTo(0,20);ctx.lineTo(128,20);ctx.moveTo(0,112);ctx.lineTo(128,112);ctx.moveTo(64,108);ctx.lineTo(64,116);ctx.stroke();ctx.restore()}}buttons.forEach((b,i)=>b.setAttribute('aria-pressed',String(i===current)));status.textContent='第 '+(current+1)+' / 8 帧 · '+fps+' 帧/秒'}
+play.onclick=()=>{playing=!playing;play.textContent=playing?'暂停':'播放';last=performance.now()};
+function speed(v,id){fps=v;last=performance.now();for(const n of ['normal','slow'])document.getElementById(n).classList.toggle('active',n===id);draw()}
+document.getElementById('normal').onclick=()=>speed(13.8,'normal');document.getElementById('slow').onclick=()=>speed(6.9,'slow');
+function scale(v,id){document.querySelectorAll('canvas').forEach(c=>{c.style.width=(128*v)+'px';c.style.height=(128*v)+'px'});for(const n of ['one','two'])document.getElementById(n).classList.toggle('active',n===id)}
+document.getElementById('one').onclick=()=>scale(1,'one');document.getElementById('two').onclick=()=>scale(2,'two');document.getElementById('dark').onchange=e=>document.body.classList.toggle('dark',e.target.checked);document.getElementById('guides').onchange=draw;
+Promise.all(Object.entries(paths).map(([key,src])=>new Promise((resolve,reject)=>{const im=new Image;images[key]=im;im.onload=resolve;im.onerror=reject;im.src=src}))).then(()=>{loaded=true;draw()}).catch(()=>status.textContent='图集未能加载，请刷新页面');
+function tick(now){if(loaded&&playing&&now-last>=1000/fps){const steps=Math.floor((now-last)/(1000/fps));current=(current+steps)%8;last+=steps*(1000/fps);draw()}requestAnimationFrame(tick)}requestAnimationFrame(tick);
+</script></html>

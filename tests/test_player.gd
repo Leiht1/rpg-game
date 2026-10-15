@@ -26,7 +26,7 @@ func run() -> void:
 	check(world.started,"Initial visible chunks never became ready")
 	var player: WildPlayer=world.player
 	check(is_equal_approx(WildPlayer.WALK_SPEED,115.0),"Normal movement speed must be 115 px/s")
-	check(player.actor.template_version=="windrest-character-template-4","Wrong character template version")
+	check(player.actor.template_version=="windrest-character-template-5","Wrong character template version")
 	for view in ["front","back","side"]:
 		check(player.sprite.sprite_frames.get_frame_count(view+"_walk")==8,"Walk must contain eight poses")
 		check(player.sprite.sprite_frames.get_frame_count(view+"_idle")==4,"Idle must contain the four approved breathing poses")

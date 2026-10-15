@@ -1,0 +1,46 @@
+{
+  "status": "pass",
+  "libraryAssets": 43,
+  "servedPreviews": {
+    "right": {
+      "name": "风栖原野主角 · 右侧行走 v11（按v08逐帧姿势统一重绘）",
+      "servedSha256": "b0e738131eb423b20b2652efa5d43330d9eab8e6698db9fcfa91cd7ae4f19b0e",
+      "confirmed": false,
+      "frames": 8
+    },
+    "left": {
+      "name": "风栖原野主角 · 左侧行走 v11（按v08逐帧姿势统一重绘）",
+      "servedSha256": "963e2f2f26d7954356f457d6c6d7955166914fe321f349ec64b7528a7acd774d",
+      "confirmed": false,
+      "frames": 8
+    }
+  },
+  "runtimeFilesUnchanged": 59,
+  "poseReferenceSourcesUnchanged": true,
+  "zipCRC": "pass",
+  "browser": {
+    "url": "http://localhost:3000/generated/sources/windrest_hero_pose_redraw_v11/preview.html",
+    "visibleViews": [
+      "v08 original",
+      "v11 redraw",
+      "approved front",
+      "approved back"
+    ],
+    "pauseAndSelectFrames": [
+      5,
+      6
+    ],
+    "halfSpeed": 6.9,
+    "originalSpeed": 13.8,
+    "oneToOneAndDoubleScale": "checked",
+    "lightAndDark": "checked",
+    "finalPlayback": "playing at original speed",
+    "screenshots": [
+      "browser_frame5.jpg",
+      "browser_frame6.jpg",
+      "browser_crossview.jpg"
+    ]
+  },
+  "visualStatus": "needs-visual-review",
+  "gameChanged": false
+}

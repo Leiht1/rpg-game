@@ -2,6 +2,12 @@
 
 生成日期：2026-10-15。所有任务先读取根目录 ART_STYLE.md。
 
+## 当前角色 · accepted：v11 侧视行走接入（模板 5）
+
+2026-10-15 用户看过 v11 预览后授权“接入游戏吧”。当前 `../assets/hero/final_sprite/side_walk_00..07.png` 与 `hero_v08_pose_redraw_preview_v11/right_walk_preview/frames/` 八张 PNG 字节一致，take2 索引 0..7；按 v08 原姿势统一重绘，保留第 5 帧低位收腿及第 6 帧左手在背后少量露出的要求。左向整帧镜像。正背行走 v04 的 16 张及呼吸 v05 的 12 张均保持模板 4 原文件。全部 128×128 RGBA、原点 (64,112)，此次没有重采样、改姿势或改变播放速度。
+
+接入 art_source=existing，新增图片/视频调用均 0；v11 制作阶段的两次 host:image_gen / generate2dmedia adopt 及供应方/账户条款、模型/费用未知边界继续追溯至原 provenance.json。模板 4 完整备份、接受记录、源哈希与未改写的 skill 输出在 `hero_v11_runtime_v05/`。Godot 4.7.2 / OpenGL 3.3 / RTX 5060 实际导入、短移动/走停专项及四方向 48 个固定姿势渲染通过；没有新性能基准。六动作/36 帧 warnings=0，工具仍 needs-visual-review，用户接受不改写自动美术 QA；质量边界见该目录 QC_FINDINGS.md。更早候选与接入记录保持原样。
+
 ## 待确认修订候选 v07：侧视相位与第 6 帧近远腿
 
 `hero_side_phase_preview_v07/` 仅预览。重新绘制完整第 2、3、5、6 帧，改善 1→2→3 与 4→5 的相位分配，修正第 6 帧前景腿及手臂回摆；1/4/7/8 PNG 字节保留，左侧完整镜像。128×128 / (64,112) / 八帧，原速 13.8 FPS 对应当前 115 px/s，另有半速及 12 FPS 参考。游戏、呼吸及正式模板 4 未替换。
@@ -10,9 +16,9 @@ art_source=host_image，实际 route=host:image_gen + generate2dmedia adopt，�
 
 Gorest 新增两个独立 confirmed=false 的 v07 条目，原 57 条及场景保留，总数 59。最小图像/图集/镜像/保留帧/动图时序验证通过；未重跑引擎、地图、性能、网页构建及长浏览器检查。仍 needs-visual-review，由用户手动循环验收；保留轻微轮廓和相对身长差异，见该目录 RESULT.md / QC_FINDINGS.md。
 
-## 当前角色 · accepted：整套 v04/v05/v06 修订接入（模板 4）
+## 历史角色 · accepted：整套 v04/v05/v06 修订接入（模板 4，侧视由模板 5 替换）
 
-2026-10-15 用户确认“好多了，把这一版都接入游戏吧”。`../assets/hero/final_sprite/` 36 张 PNG 当前有效：front/back walk 来源 `hero_consistency_preview_v04/`，side walk 来源 `hero_side_spacing_preview_v06/`，front/back/side idle 来源 `hero_sequence_repair_preview_v05/`。right 对应 side，left 完整镜像；全部已确认 128×128 RGBA 字节原样复制，共用 (64,112)。呼吸 450 ms×4=1.8 秒；移动 115 px/s，位移步频 13.8 帧/秒、周期距离 200/3 px。
+2026-10-15 用户确认“好多了，把这一版都接入游戏吧”。当时 `../assets/hero/final_sprite/` 36 张 PNG：front/back walk 来源 `hero_consistency_preview_v04/`，side walk 来源 `hero_side_spacing_preview_v06/`，front/back/side idle 来源 `hero_sequence_repair_preview_v05/`。right 对应 side，left 完整镜像；全部已确认 128×128 RGBA 字节原样复制，共用 (64,112)。呼吸 450 ms×4=1.8 秒；移动 115 px/s，位移步频 13.8 帧/秒、周期距离 200/3 px。
 
 本轮 art_source=existing，图片/视频新增调用 0 次；沿用原 host:image_gen / generate2dmedia adopt 来源与供应方/账户许可边界，用 generate2dsprite 打包和 Godot 导出。模板 3 完整备份、接受记录、源哈希与导出在 `hero_approved_runtime_v04/`。六动作/36 帧 warnings=0、原工具状态仍 needs-visual-review（loop_seam=1.533159），引擎导出及最小实际游戏专项通过；不将用户接受改写成工具的自动美术通过。细微重绘和镜像光照边界继续保留，详见该目录 RESULT.md / QC_FINDINGS.md。下方为生成、预览及历史接入记录。
 

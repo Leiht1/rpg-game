@@ -1,0 +1,197 @@
+{
+  "packaging": "pass",
+  "visualStatus": "needs-visual-review",
+  "poseSourceHashesUnchanged": true,
+  "sourceContainsV09": false,
+  "imageCalls": 0,
+  "videoCalls": 0,
+  "directionChecks": [
+    {
+      "direction": "front",
+      "frames": 8,
+      "visibleHeights": [
+        92,
+        92,
+        92,
+        92,
+        92,
+        92,
+        92,
+        92
+      ],
+      "topY": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "groundY": [
+        112,
+        112,
+        112,
+        112,
+        112,
+        112,
+        112,
+        112
+      ]
+    },
+    {
+      "direction": "back",
+      "frames": 8,
+      "visibleHeights": [
+        92,
+        92,
+        92,
+        92,
+        92,
+        92,
+        93,
+        92
+      ],
+      "topY": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "groundY": [
+        112,
+        112,
+        112,
+        112,
+        112,
+        112,
+        113,
+        112
+      ]
+    },
+    {
+      "direction": "right",
+      "frames": 8,
+      "visibleHeights": [
+        92,
+        92,
+        92,
+        92,
+        92,
+        92,
+        92,
+        92
+      ],
+      "topY": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "groundY": [
+        112,
+        112,
+        112,
+        112,
+        112,
+        112,
+        112,
+        112
+      ]
+    },
+    {
+      "direction": "left",
+      "frames": 8,
+      "visibleHeights": [
+        92,
+        92,
+        92,
+        92,
+        92,
+        92,
+        92,
+        92
+      ],
+      "topY": [
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "groundY": [
+        112,
+        112,
+        112,
+        112,
+        112,
+        112,
+        112,
+        112
+      ]
+    }
+  ],
+  "decodes": [
+    {
+      "file": "crossview_walk.webp",
+      "frames": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "crossview_walk_slow.webp",
+      "frames": 8,
+      "cycleMs": 1160
+    },
+    {
+      "file": "side_before_after.webp",
+      "frames": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "side_before_after_slow.webp",
+      "frames": 8,
+      "cycleMs": 1160
+    },
+    {
+      "file": "crossview_walk.gif",
+      "frames": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "crossview_walk_slow.gif",
+      "frames": 8,
+      "cycleMs": 1160
+    },
+    {
+      "file": "side_before_after.gif",
+      "frames": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "side_before_after_slow.gif",
+      "frames": 8,
+      "cycleMs": 1160
+    }
+  ],
+  "sourceEdgeRisks": [],
+  "runtimeHashCheck": {
+    "files": 59,
+    "unchanged": true
+  },
+  "limits": [
+    "Nonuniform source body proportions and differing painted textures remain; geometry is deliberately preserved.",
+    "Clarity is deterministic resampling/sharpening, not generated detail restoration."
+  ]
+}

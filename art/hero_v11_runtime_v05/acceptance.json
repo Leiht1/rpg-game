@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-15",
+  "userApproval": "接入游戏吧",
+  "acceptedPreview": "art/hero_v08_pose_redraw_preview_v11",
+  "scope": "Replace eight side_walk PNGs only; preserve all 28 front/back walk and idle PNGs.",
+  "selection": "take2, original indices 0..7; v08 pose design; whole-frame left mirror",
+  "template": "windrest-character-template-5",
+  "art_source": "existing",
+  "newImageCalls": 0,
+  "newVideoCalls": 0,
+  "scale": 1.0,
+  "offset": [
+    0,
+    0
+  ],
+  "canvas": [
+    128,
+    128
+  ],
+  "anchor": [
+    64,
+    112
+  ],
+  "movement_speed": 115,
+  "stride_world_units": 66.66666666666667,
+  "idle_cycle_ms": 1800,
+  "sourceQA": "Source needs-visual-review entries retained; user acceptance does not rewrite QA."
+}

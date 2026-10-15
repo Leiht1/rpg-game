@@ -1,0 +1,797 @@
+{
+  "schema": "windrest.complete_registration.v3",
+  "template_version": "windrest-character-template-4",
+  "source": "User-approved whole-frame v04/v05/v06 set on 2026-10-15; no new art",
+  "canvas": [
+    128,
+    128
+  ],
+  "anchor": [
+    64,
+    112
+  ],
+  "source_canvas": [
+    128,
+    128
+  ],
+  "source_root": [
+    64,
+    112
+  ],
+  "scale_policy": "Copy every approved 128x128 RGBA PNG byte for byte, scale 1, offset [0,0].",
+  "directions": {
+    "front": {
+      "frames": [
+        {
+          "name": "front_idle_00",
+          "source": "art/hero_sequence_repair_preview_v05/front_idle_preview/frames/front_idle_00.png",
+          "source_sha256": "e6d359d2e7ad38876ed3699443b2c3f19fe01c2de0543566357feeeab8025c9f",
+          "source_frame": 0,
+          "output_sha256": "e6d359d2e7ad38876ed3699443b2c3f19fe01c2de0543566357feeeab8025c9f",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "front_idle_01",
+          "source": "art/hero_sequence_repair_preview_v05/front_idle_preview/frames/front_idle_01.png",
+          "source_sha256": "e2509039e7d013e7d12bff55b9237115d06ff53e6f1a5a2b2b85596e395fc243",
+          "source_frame": 1,
+          "output_sha256": "e2509039e7d013e7d12bff55b9237115d06ff53e6f1a5a2b2b85596e395fc243",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "front_idle_02",
+          "source": "art/hero_sequence_repair_preview_v05/front_idle_preview/frames/front_idle_02.png",
+          "source_sha256": "5e609b9af568a9f471a135d1b37fff771351e57e4d81923a2fb349c3eefae167",
+          "source_frame": 2,
+          "output_sha256": "5e609b9af568a9f471a135d1b37fff771351e57e4d81923a2fb349c3eefae167",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "front_idle_03",
+          "source": "art/hero_sequence_repair_preview_v05/front_idle_preview/frames/front_idle_03.png",
+          "source_sha256": "cda1d1696d7e3d4350343c2ab2ba905e43d76ac44162ceb9676be794b2e72863",
+          "source_frame": 3,
+          "output_sha256": "cda1d1696d7e3d4350343c2ab2ba905e43d76ac44162ceb9676be794b2e72863",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "front_walk_00",
+          "source": "art/hero_consistency_preview_v04/front_walk_preview/frames/front_walk_00.png",
+          "source_sha256": "a08cc1680ec0c5e019ccff95dfd2ad9c196e9b15dda04f8b6fbb9fea41216e10",
+          "source_frame": 0,
+          "output_sha256": "a08cc1680ec0c5e019ccff95dfd2ad9c196e9b15dda04f8b6fbb9fea41216e10",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "front_walk_01",
+          "source": "art/hero_consistency_preview_v04/front_walk_preview/frames/front_walk_01.png",
+          "source_sha256": "fcb9673d614b9464c19823658a138d586adad13f149d197dd4f7b0227995f71d",
+          "source_frame": 1,
+          "output_sha256": "fcb9673d614b9464c19823658a138d586adad13f149d197dd4f7b0227995f71d",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "front_walk_02",
+          "source": "art/hero_consistency_preview_v04/front_walk_preview/frames/front_walk_02.png",
+          "source_sha256": "2f89007293e4db21116ecdc4fadfc3e914216389d9e24156e36cd3892245ead1",
+          "source_frame": 2,
+          "output_sha256": "2f89007293e4db21116ecdc4fadfc3e914216389d9e24156e36cd3892245ead1",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "front_walk_03",
+          "source": "art/hero_consistency_preview_v04/front_walk_preview/frames/front_walk_03.png",
+          "source_sha256": "e2f312e5a2c03ddcfaae18b1ca4d2136c5e5c02be7730e50e77d364ba5861325",
+          "source_frame": 3,
+          "output_sha256": "e2f312e5a2c03ddcfaae18b1ca4d2136c5e5c02be7730e50e77d364ba5861325",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "front_walk_04",
+          "source": "art/hero_consistency_preview_v04/front_walk_preview/frames/front_walk_04.png",
+          "source_sha256": "e4bc7b24bb67be5190cc212f9c2b986a755bb1f920ad46961aced58abd417fd1",
+          "source_frame": 4,
+          "output_sha256": "e4bc7b24bb67be5190cc212f9c2b986a755bb1f920ad46961aced58abd417fd1",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "front_walk_05",
+          "source": "art/hero_consistency_preview_v04/front_walk_preview/frames/front_walk_05.png",
+          "source_sha256": "60736ce9f2930f8dadce2521e75d4e06dc5972cd7d568f17da45183213ec5d40",
+          "source_frame": 5,
+          "output_sha256": "60736ce9f2930f8dadce2521e75d4e06dc5972cd7d568f17da45183213ec5d40",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "front_walk_06",
+          "source": "art/hero_consistency_preview_v04/front_walk_preview/frames/front_walk_06.png",
+          "source_sha256": "c89f10ccf1422e0be7e7a521e7def763b01d1459939b5880fc8214cb08ddd38a",
+          "source_frame": 6,
+          "output_sha256": "c89f10ccf1422e0be7e7a521e7def763b01d1459939b5880fc8214cb08ddd38a",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "front_walk_07",
+          "source": "art/hero_consistency_preview_v04/front_walk_preview/frames/front_walk_07.png",
+          "source_sha256": "b4a886219257e9c7082a28b5517213d53b295e0d73240e5ed9387ba4c2f4d08f",
+          "source_frame": 7,
+          "output_sha256": "b4a886219257e9c7082a28b5517213d53b295e0d73240e5ed9387ba4c2f4d08f",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        }
+      ]
+    },
+    "back": {
+      "frames": [
+        {
+          "name": "back_idle_00",
+          "source": "art/hero_sequence_repair_preview_v05/back_idle_preview/frames/back_idle_00.png",
+          "source_sha256": "7a0650483421b4e9162fdadec57689b82f22995fb501f06cc239be3eda8eecf8",
+          "source_frame": 0,
+          "output_sha256": "7a0650483421b4e9162fdadec57689b82f22995fb501f06cc239be3eda8eecf8",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "back_idle_01",
+          "source": "art/hero_sequence_repair_preview_v05/back_idle_preview/frames/back_idle_01.png",
+          "source_sha256": "088013b474c79a83fef1ba09fa3c5c3bb545740b00dcb9af94bf9b6e0fa1d1fd",
+          "source_frame": 1,
+          "output_sha256": "088013b474c79a83fef1ba09fa3c5c3bb545740b00dcb9af94bf9b6e0fa1d1fd",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "back_idle_02",
+          "source": "art/hero_sequence_repair_preview_v05/back_idle_preview/frames/back_idle_02.png",
+          "source_sha256": "a1447d83cf2e45d4439a88cec7dd48e576d27d97103b11c58f9b4c22ca77e768",
+          "source_frame": 2,
+          "output_sha256": "a1447d83cf2e45d4439a88cec7dd48e576d27d97103b11c58f9b4c22ca77e768",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "back_idle_03",
+          "source": "art/hero_sequence_repair_preview_v05/back_idle_preview/frames/back_idle_03.png",
+          "source_sha256": "ac8be54988bdbf847dd0a93fdff4f999a7eaaaf16684c4c986ed9002179f989d",
+          "source_frame": 3,
+          "output_sha256": "ac8be54988bdbf847dd0a93fdff4f999a7eaaaf16684c4c986ed9002179f989d",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "back_walk_00",
+          "source": "art/hero_consistency_preview_v04/back_walk_preview/frames/back_walk_00.png",
+          "source_sha256": "8bb4720670f1b4bea9ad98395e7497a9ac7f10e8611cf9ef891532b867194802",
+          "source_frame": 0,
+          "output_sha256": "8bb4720670f1b4bea9ad98395e7497a9ac7f10e8611cf9ef891532b867194802",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "back_walk_01",
+          "source": "art/hero_consistency_preview_v04/back_walk_preview/frames/back_walk_01.png",
+          "source_sha256": "e1f6414b8f762925a464b2cb90f8a3dfc2986a4990a6d90f2ffbf24b450244c0",
+          "source_frame": 1,
+          "output_sha256": "e1f6414b8f762925a464b2cb90f8a3dfc2986a4990a6d90f2ffbf24b450244c0",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "back_walk_02",
+          "source": "art/hero_consistency_preview_v04/back_walk_preview/frames/back_walk_02.png",
+          "source_sha256": "9dd9409f37bf23773eead8e6cbf54712e22f0dc6f5adcc6b08654416b38a1553",
+          "source_frame": 2,
+          "output_sha256": "9dd9409f37bf23773eead8e6cbf54712e22f0dc6f5adcc6b08654416b38a1553",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "back_walk_03",
+          "source": "art/hero_consistency_preview_v04/back_walk_preview/frames/back_walk_03.png",
+          "source_sha256": "08a9fb2150bd0ab77273fc62dd4b777a0be4f3f26072c6776a68d12e2a270a46",
+          "source_frame": 3,
+          "output_sha256": "08a9fb2150bd0ab77273fc62dd4b777a0be4f3f26072c6776a68d12e2a270a46",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "back_walk_04",
+          "source": "art/hero_consistency_preview_v04/back_walk_preview/frames/back_walk_04.png",
+          "source_sha256": "d996eda455e10017c7a0f95f4818c10f4639412cf2a3b4d9624711f676857e74",
+          "source_frame": 4,
+          "output_sha256": "d996eda455e10017c7a0f95f4818c10f4639412cf2a3b4d9624711f676857e74",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "back_walk_05",
+          "source": "art/hero_consistency_preview_v04/back_walk_preview/frames/back_walk_05.png",
+          "source_sha256": "fc82899064fc5538af01f75e9f529f8834411c046fadd3b06b1498312c2908ee",
+          "source_frame": 5,
+          "output_sha256": "fc82899064fc5538af01f75e9f529f8834411c046fadd3b06b1498312c2908ee",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "back_walk_06",
+          "source": "art/hero_consistency_preview_v04/back_walk_preview/frames/back_walk_06.png",
+          "source_sha256": "542228a06c596878cfa003f47ae564932538f79e9a183dacf0949d0cc955b456",
+          "source_frame": 6,
+          "output_sha256": "542228a06c596878cfa003f47ae564932538f79e9a183dacf0949d0cc955b456",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "back_walk_07",
+          "source": "art/hero_consistency_preview_v04/back_walk_preview/frames/back_walk_07.png",
+          "source_sha256": "616269a661a4de986082d8bd3623c991af7ec09a61d4bbc7093c5edacafe5d8a",
+          "source_frame": 7,
+          "output_sha256": "616269a661a4de986082d8bd3623c991af7ec09a61d4bbc7093c5edacafe5d8a",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        }
+      ]
+    },
+    "side": {
+      "frames": [
+        {
+          "name": "side_idle_00",
+          "source": "art/hero_sequence_repair_preview_v05/right_idle_preview/frames/right_idle_00.png",
+          "source_sha256": "724c3dadc884a1a1ee5dc3af50bf5e46f5f12c8cc7b8b2386da3759a9991b577",
+          "source_frame": 0,
+          "output_sha256": "724c3dadc884a1a1ee5dc3af50bf5e46f5f12c8cc7b8b2386da3759a9991b577",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "side_idle_01",
+          "source": "art/hero_sequence_repair_preview_v05/right_idle_preview/frames/right_idle_01.png",
+          "source_sha256": "a2f1eac3ba3c9cb51d596dd37daac075971cb64cea43d7e31c5d62475c28db30",
+          "source_frame": 1,
+          "output_sha256": "a2f1eac3ba3c9cb51d596dd37daac075971cb64cea43d7e31c5d62475c28db30",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "side_idle_02",
+          "source": "art/hero_sequence_repair_preview_v05/right_idle_preview/frames/right_idle_02.png",
+          "source_sha256": "f54c7a59d0b62804ef19c61de190c8f9155d34518c2242948678611b62f1fd58",
+          "source_frame": 2,
+          "output_sha256": "f54c7a59d0b62804ef19c61de190c8f9155d34518c2242948678611b62f1fd58",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "side_idle_03",
+          "source": "art/hero_sequence_repair_preview_v05/right_idle_preview/frames/right_idle_03.png",
+          "source_sha256": "d0e3bc2c98f2ad02ca5a0c2358f6ec9796f827f378b8854829d9f5c76bd169e3",
+          "source_frame": 3,
+          "output_sha256": "d0e3bc2c98f2ad02ca5a0c2358f6ec9796f827f378b8854829d9f5c76bd169e3",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "side_walk_00",
+          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_00.png",
+          "source_sha256": "db5a6896e720d78524e9d34603fe3ebfa7ac59bc7438f32a96a0b556168cf550",
+          "source_frame": 0,
+          "output_sha256": "db5a6896e720d78524e9d34603fe3ebfa7ac59bc7438f32a96a0b556168cf550",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "side_walk_01",
+          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_01.png",
+          "source_sha256": "b68260c35b3409c4e6acbed8bdcbc302211ecfce81a9fb475a4efeda494b9e0c",
+          "source_frame": 1,
+          "output_sha256": "b68260c35b3409c4e6acbed8bdcbc302211ecfce81a9fb475a4efeda494b9e0c",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "side_walk_02",
+          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_02.png",
+          "source_sha256": "0f20e3d60ad423650ca7165bddbdfa4bf3bdb4d7586ea51e6069f9f2499672d2",
+          "source_frame": 2,
+          "output_sha256": "0f20e3d60ad423650ca7165bddbdfa4bf3bdb4d7586ea51e6069f9f2499672d2",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "side_walk_03",
+          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_03.png",
+          "source_sha256": "859870dcd1d23bb5399136a5aa4f70a9e0b034ab278b97cf8507402c5675631d",
+          "source_frame": 3,
+          "output_sha256": "859870dcd1d23bb5399136a5aa4f70a9e0b034ab278b97cf8507402c5675631d",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "side_walk_04",
+          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_04.png",
+          "source_sha256": "e0a2c256728e78b69a1b2c60ec5dfc899c8a127b7404c2fc2d1a8bc27281602b",
+          "source_frame": 4,
+          "output_sha256": "e0a2c256728e78b69a1b2c60ec5dfc899c8a127b7404c2fc2d1a8bc27281602b",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "side_walk_05",
+          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_05.png",
+          "source_sha256": "970d54ddbdbc0376c95e9db78e38252fbac82ac82336fd92973b85466b8dc668",
+          "source_frame": 5,
+          "output_sha256": "970d54ddbdbc0376c95e9db78e38252fbac82ac82336fd92973b85466b8dc668",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "side_walk_06",
+          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_06.png",
+          "source_sha256": "efa2d8355ec397529d0d8286f7d36a233d796808f888a73390da6b3fb31e1696",
+          "source_frame": 6,
+          "output_sha256": "efa2d8355ec397529d0d8286f7d36a233d796808f888a73390da6b3fb31e1696",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        },
+        {
+          "name": "side_walk_07",
+          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_07.png",
+          "source_sha256": "a5921d411eaf467df5c1899c9bfc5de22e35ec61473fde468cf0276ac8939a4b",
+          "source_frame": 7,
+          "output_sha256": "a5921d411eaf467df5c1899c9bfc5de22e35ec61473fde468cf0276ac8939a4b",
+          "source_to_output_scale": 1.0,
+          "offset": [
+            0,
+            0
+          ],
+          "source_root": [
+            64,
+            112
+          ],
+          "output_anchor": [
+            64,
+            112
+          ],
+          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+        }
+      ]
+    }
+  },
+  "source_provenance": [
+    "art/hero_consistency_preview_v04/provenance.json",
+    "art/hero_sequence_repair_preview_v05/provenance.json",
+    "art/hero_side_spacing_preview_v06/provenance.json"
+  ]
+}

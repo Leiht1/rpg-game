@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/0x0funky/agent-sprite-forge",
+  "commit": "5324342fdfab72430f4e9604f3fe427009f8596d",
+  "version": "0.4.0",
+  "license": "MIT",
+  "localCheckout": ".forge/agent-sprite-forge",
+  "installedSkillRoot": "C:/Users/雷/.codex/skills",
+  "skills": [
+    "generate2dsprite",
+    "generate2dmedia",
+    "video2dsprite",
+    "generate2dmap",
+    "codeart2d"
+  ],
+  "installer": "skill-installer/scripts/install-skill-from-github.py",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "Pillow": "12.3.0",
+  "capabilities": "doctor.json"
+}

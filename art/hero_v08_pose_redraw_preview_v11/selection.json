@@ -1,0 +1,25 @@
+{
+  "selectedCompleteSheet": "take2",
+  "frameIndicesZeroBased": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "frameOrderChanged": false,
+  "sourcePoseVersion": "v08",
+  "rejectedCandidates": [
+    {
+      "take": "take1",
+      "reason": "Pose arrangement followed v08, but head width44.5-45.75px and stance/body length varied more; take2 refines complete sheet with fixed original poses."
+    }
+  ],
+  "review": "pose_comparison_contact.png",
+  "status": "needs-visual-review",
+  "noV09Art": true,
+  "noMixedTakes": true
+}

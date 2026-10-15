@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "changedIds": [
+    "asset_windrest_hero_right_walk_v07",
+    "asset_windrest_hero_left_walk_v07"
+  ],
+  "beforeCount": 43,
+  "afterCount": 43,
+  "idsAndOrderPreserved": true,
+  "otherAssetsAndSceneDataUnchanged": true,
+  "confirmed": false,
+  "version": "v11",
+  "poseReference": "v08",
+  "selectedTake": "take2",
+  "imageCalls": 2,
+  "comparisonUrl": "http://localhost:3000/generated/sources/windrest_hero_pose_redraw_v11/preview.html",
+  "sheetSha256": {
+    "right": "b0e738131eb423b20b2652efa5d43330d9eab8e6698db9fcfa91cd7ae4f19b0e",
+    "left": "963e2f2f26d7954356f457d6c6d7955166914fe321f349ec64b7528a7acd774d"
+  }
+}

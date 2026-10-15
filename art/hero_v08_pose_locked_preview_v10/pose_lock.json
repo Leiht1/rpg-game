@@ -1,0 +1,47 @@
+{
+  "authoritativeVersion": "v08",
+  "sourceHashes": {
+    "art\\hero_side_refine_preview_v08\\registered_high\\frame_01.png": "193b173f9240a443c0d32369050ccb5f43c50b80fd5641ed821adbab549c4c47",
+    "art\\hero_side_refine_preview_v08\\right_walk_preview\\frames\\right_walk_00.png": "1c3ae8dbe5799856211c83232b8957daa9fb09dbc9421fdc36284259ce20b2c2",
+    "art\\hero_side_refine_preview_v08\\registered_high\\frame_02.png": "8e0f2778804b5d039754655ee9d31d5bdaeb3943b202976dd943369e60e0c333",
+    "art\\hero_side_refine_preview_v08\\right_walk_preview\\frames\\right_walk_01.png": "76c414eed2b42c82be05a9258d9e770d202c1c25113ce9a2efd5af94394183ea",
+    "art\\hero_side_refine_preview_v08\\registered_high\\frame_03.png": "df3097c7306a5457a19be165b2fbbc8b9f4e961334e91cc99a5d89b1c3f3dd49",
+    "art\\hero_side_refine_preview_v08\\right_walk_preview\\frames\\right_walk_02.png": "169c7d4381b375ba4fdedd8fc2f98cc75160466d36c10219d77cbd64085d6cf8",
+    "art\\hero_side_refine_preview_v08\\registered_high\\frame_04.png": "e0ea7a5570a8b270beeece4bf159ba62658400983778fd6c24d3ac0a81b7bc83",
+    "art\\hero_side_refine_preview_v08\\right_walk_preview\\frames\\right_walk_03.png": "eaee6f58cf1b4222894fa4ec59c16b8dfbbe9847696f051967ea522b9164709a",
+    "art\\hero_side_refine_preview_v08\\registered_high\\frame_05.png": "d7a9eed9726374050e95c72a7874cc43bd555ccd2129accd63d487670610f132",
+    "art\\hero_side_refine_preview_v08\\right_walk_preview\\frames\\right_walk_04.png": "7568e5d8bf0d867899f50d4d6d82ab88c307710fa0270aca4e8392d046d20a9f",
+    "art\\hero_side_refine_preview_v08\\registered_high\\frame_06.png": "cde8b8a4312b25f0dd43a925cc15e6d421d4b059f492a3a04a16af4a4834dc01",
+    "art\\hero_side_refine_preview_v08\\right_walk_preview\\frames\\right_walk_05.png": "14e7c862c3ca9dc764c18bac750d1ee0eac0cbd5f8ae5ea3bc700d3d7b6ebc7d",
+    "art\\hero_side_refine_preview_v08\\registered_high\\frame_07.png": "d60e14ba2ea651e4ffca54d6a2ee51087373442c3492600edd985e69447133fc",
+    "art\\hero_side_refine_preview_v08\\right_walk_preview\\frames\\right_walk_06.png": "44e6385df8a8a70ac2b5df686feb561253933b07fef8977cfb99305eb5940857",
+    "art\\hero_side_refine_preview_v08\\registered_high\\frame_08.png": "b6463f552c436334cc08fd572a8b63b226f557d89da67bdd5e2bf6cefaf50425",
+    "art\\hero_side_refine_preview_v08\\right_walk_preview\\frames\\right_walk_07.png": "0c0d5188cf8b1ed345c0456ad3cb543fe4b562061e11cd666226d844d0c69549"
+  },
+  "frameIndicesZeroBased": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "frameOrderChanged": false,
+  "imageCalls": 0,
+  "videoCalls": 0,
+  "rejectedSource": "v09; no v09 generated pixels used",
+  "allowedOperations": [
+    "Whole-frame uniform scale",
+    "Whole-frame translation",
+    "Same premultiplied LANCZOS downsample for all views",
+    "Bounded RGB-only sharpening, alpha unchanged"
+  ],
+  "prohibitedOperations": [
+    "Redraw or generate",
+    "Rotate/shear/warp",
+    "Limb or part edits",
+    "Change hand/foot angles, relative positions, occlusion or phase"
+  ]
+}

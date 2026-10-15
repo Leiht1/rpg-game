@@ -1,0 +1,271 @@
+{
+  "packaging": "pass",
+  "visualStatus": "needs-visual-review",
+  "frames": [
+    {
+      "file": "right_walk_preview\\frames\\right_walk_00.png",
+      "sha256": "1c3ae8dbe5799856211c83232b8957daa9fb09dbc9421fdc36284259ce20b2c2",
+      "bbox": [
+        40,
+        19,
+        83,
+        112
+      ]
+    },
+    {
+      "file": "right_walk_preview\\frames\\right_walk_01.png",
+      "sha256": "76c414eed2b42c82be05a9258d9e770d202c1c25113ce9a2efd5af94394183ea",
+      "bbox": [
+        39,
+        19,
+        83,
+        112
+      ]
+    },
+    {
+      "file": "right_walk_preview\\frames\\right_walk_02.png",
+      "sha256": "169c7d4381b375ba4fdedd8fc2f98cc75160466d36c10219d77cbd64085d6cf8",
+      "bbox": [
+        38,
+        22,
+        84,
+        112
+      ]
+    },
+    {
+      "file": "right_walk_preview\\frames\\right_walk_03.png",
+      "sha256": "eaee6f58cf1b4222894fa4ec59c16b8dfbbe9847696f051967ea522b9164709a",
+      "bbox": [
+        36,
+        18,
+        87,
+        112
+      ]
+    },
+    {
+      "file": "right_walk_preview\\frames\\right_walk_04.png",
+      "sha256": "7568e5d8bf0d867899f50d4d6d82ab88c307710fa0270aca4e8392d046d20a9f",
+      "bbox": [
+        39,
+        21,
+        84,
+        112
+      ]
+    },
+    {
+      "file": "right_walk_preview\\frames\\right_walk_05.png",
+      "sha256": "14e7c862c3ca9dc764c18bac750d1ee0eac0cbd5f8ae5ea3bc700d3d7b6ebc7d",
+      "bbox": [
+        38,
+        20,
+        84,
+        112
+      ]
+    },
+    {
+      "file": "right_walk_preview\\frames\\right_walk_06.png",
+      "sha256": "44e6385df8a8a70ac2b5df686feb561253933b07fef8977cfb99305eb5940857",
+      "bbox": [
+        39,
+        22,
+        88,
+        112
+      ]
+    },
+    {
+      "file": "right_walk_preview\\frames\\right_walk_07.png",
+      "sha256": "0c0d5188cf8b1ed345c0456ad3cb543fe4b562061e11cd666226d844d0c69549",
+      "bbox": [
+        34,
+        21,
+        89,
+        112
+      ]
+    },
+    {
+      "file": "left_walk_preview\\frames\\left_walk_00.png",
+      "sha256": "f0c927cd49eebab54fa5201457c99e6f7d28831524f425153e4680e87a3b10fe",
+      "bbox": [
+        45,
+        19,
+        88,
+        112
+      ]
+    },
+    {
+      "file": "left_walk_preview\\frames\\left_walk_01.png",
+      "sha256": "75fe234c0468a757e8d9ef5abbf98025a023f1979f80b3fea085046ffd9b3a4a",
+      "bbox": [
+        45,
+        19,
+        89,
+        112
+      ]
+    },
+    {
+      "file": "left_walk_preview\\frames\\left_walk_02.png",
+      "sha256": "893a77b3cade1780d6f6d770f9be455eb30d391c1841243bc108c6ceedbca036",
+      "bbox": [
+        44,
+        22,
+        90,
+        112
+      ]
+    },
+    {
+      "file": "left_walk_preview\\frames\\left_walk_03.png",
+      "sha256": "bbb44d3e446c8f4aa17a6a5179c1cd3ed4bec4571676799a26a5f0a2d2e6dc71",
+      "bbox": [
+        41,
+        18,
+        92,
+        112
+      ]
+    },
+    {
+      "file": "left_walk_preview\\frames\\left_walk_04.png",
+      "sha256": "2cbb19631463a9927d8fc3c4bb1590f8bfcdeafb2dd6cb25acab3f7249795cda",
+      "bbox": [
+        44,
+        21,
+        89,
+        112
+      ]
+    },
+    {
+      "file": "left_walk_preview\\frames\\left_walk_05.png",
+      "sha256": "4ee323bc5f00a3a3e70d2de077a665b31fd8e6a8056a2e47a108029b18d31cb7",
+      "bbox": [
+        44,
+        20,
+        90,
+        112
+      ]
+    },
+    {
+      "file": "left_walk_preview\\frames\\left_walk_06.png",
+      "sha256": "f8d168f5bf827549b11af0c62be35b8d2ea4375aecffb98aa750920ad4e567ba",
+      "bbox": [
+        40,
+        22,
+        89,
+        112
+      ]
+    },
+    {
+      "file": "left_walk_preview\\frames\\left_walk_07.png",
+      "sha256": "b469bd89088bab20bb8b4805475857c20f026aa914035398f39387e757495ab7",
+      "bbox": [
+        39,
+        21,
+        94,
+        112
+      ]
+    }
+  ],
+  "measuredRegistration": [
+    {
+      "frame": 1,
+      "registeredHeadHeightPx": 34.899,
+      "headCenterXPx": 61.125,
+      "visibleHeightPx": 93,
+      "stanceBaselinePx": 112
+    },
+    {
+      "frame": 2,
+      "registeredHeadHeightPx": 35.0,
+      "headCenterXPx": 61.125,
+      "visibleHeightPx": 93,
+      "stanceBaselinePx": 112
+    },
+    {
+      "frame": 3,
+      "registeredHeadHeightPx": 34.75,
+      "headCenterXPx": 61.25,
+      "visibleHeightPx": 90,
+      "stanceBaselinePx": 112
+    },
+    {
+      "frame": 4,
+      "registeredHeadHeightPx": 34.75,
+      "headCenterXPx": 61.125,
+      "visibleHeightPx": 94,
+      "stanceBaselinePx": 112
+    },
+    {
+      "frame": 5,
+      "registeredHeadHeightPx": 34.5,
+      "headCenterXPx": 61.125,
+      "visibleHeightPx": 91,
+      "stanceBaselinePx": 112
+    },
+    {
+      "frame": 6,
+      "registeredHeadHeightPx": 35.0,
+      "headCenterXPx": 61.125,
+      "visibleHeightPx": 92,
+      "stanceBaselinePx": 112
+    },
+    {
+      "frame": 7,
+      "registeredHeadHeightPx": 35.25,
+      "headCenterXPx": 61.25,
+      "visibleHeightPx": 90,
+      "stanceBaselinePx": 112
+    },
+    {
+      "frame": 8,
+      "registeredHeadHeightPx": 34.75,
+      "headCenterXPx": 61.125,
+      "visibleHeightPx": 91,
+      "stanceBaselinePx": 112
+    }
+  ],
+  "animationDecodes": [
+    {
+      "file": "side_walk_compare.webp",
+      "frameCount": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "side_walk_game_speed.webp",
+      "frameCount": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "side_walk_game_speed_slow.webp",
+      "frameCount": 8,
+      "cycleMs": 1160
+    },
+    {
+      "file": "side_walk_slow.webp",
+      "frameCount": 8,
+      "cycleMs": 1160
+    },
+    {
+      "file": "side_walk_compare.gif",
+      "frameCount": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "side_walk_game_speed.gif",
+      "frameCount": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "side_walk_game_speed_slow.gif",
+      "frameCount": 8,
+      "cycleMs": 1160
+    },
+    {
+      "file": "side_walk_slow.gif",
+      "frameCount": 8,
+      "cycleMs": 1160
+    }
+  ],
+  "gorestSourceEdgeRisks": [],
+  "limits": [
+    "Anatomical redraw differences remain possible; head calibration is not a zero-drift guarantee.",
+    "No game integration or performance test."
+  ]
+}

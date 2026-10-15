@@ -24,19 +24,19 @@ godot --path . -- --seed=42 --size=1024
 
 ## 主角及美术
 
-当前使用一个完整角色 AnimatedSprite2D，front/back/side 各四张呼吸待机及八张行走帧，左向复用完整侧面镜像。正/背行走采用已确认 v04，侧面采用手脚衔接与第 3、5 帧相位微调后的 v06，呼吸采用 v05 脚底修订，450 ms×4=1.8 秒。常规速度为 **115 px/s**，比上版 100 提高 15%，斜向速度归一化。统一 128×128 画布、(64,112) 脚底原点；行走按碰撞后实际位移推进，周期距离仍为 200/3 px，当前步频为 13.8 帧/秒。旧 14 层裁片与关节烘焙已停用，不能作为未来服装的模板。
+当前使用一个完整角色 AnimatedSprite2D，front/back/side 各四张呼吸待机及八张行走帧，左向复用完整侧面镜像。正/背行走沿用已确认 v04，侧面采用按 v08 原姿势统一重绘并确认的 v11，呼吸沿用 v05 脚底修订，450 ms×4=1.8 秒。常规速度为 **115 px/s**，斜向速度归一化。统一 128×128 画布、(64,112) 脚底原点；行走按碰撞后实际位移推进，周期距离仍为 200/3 px，当前步频为 13.8 帧/秒。旧 14 层裁片与关节烘焙已停用，不能作为未来服装的模板。
 
-`assets/hero/` 下 `reference/` 保存身份、三视图与当前帧预览，`final_sprite/` 保存 36 张完整帧，`animation/hero.tres` 是可直接加载的 Godot SpriteFrames，`modular_plan/` 保存模板 4 的哈希和相位。后续身体、发型、上衣、裤装、鞋子及饰品须按同方向、同帧模板逐帧重绘；完整规则见 `CHARACTER_MODULAR_RULES.md`。本轮没有正式换装系统。
+`assets/hero/` 下 `reference/` 保存身份、三视图与当前帧预览，`final_sprite/` 保存 36 张完整帧，`animation/hero.tres` 是可直接加载的 Godot SpriteFrames，`modular_plan/` 保存模板 5 的哈希和相位。后续身体、发型、上衣、裤装、鞋子及饰品须按同方向、同帧模板逐帧重绘；完整规则见 `CHARACTER_MODULAR_RULES.md`。本轮没有正式换装系统。
 
 全部图片经 `generate2dsprite` skill 的受控图片工作流生成，经过候选筛选、透明裁片整理和实际导入；未使用外部商业游戏素材。详见 `art/ASSET_MANIFEST.md`。新增素材前必须读取 `ART_STYLE.md`。
 
-**动画质量：用户已确认的 v04/v05/v06 整套修订。** 本轮直接复制已确认的完整 PNG，没有新图片或视频调用，也没有重新缩放。源图由 host:image_gen 生成、generate2dmedia adopt 留存并用 Gorest 整理；本次采用 generate2dsprite 的现有素材打包/导出。仍保留轻微轮廓、颜色和侧面投影变化，左向光照随镜像翻转。未宣称零滑步、人工逐帧手绘或图生视频成果。
+**动画质量：侧视 v11 经用户确认后接入。** 本轮仅原样替换 8 张侧面行走 PNG，其余 28 张运行帧保持字节一致，没有新图片或视频调用，也没有重新缩放。源图由 host:image_gen 生成、generate2dmedia adopt 留存并用 Gorest 整理；本次采用 generate2dsprite 的现有素材打包/导出。仍保留轻微轮廓、颜色和侧面投影变化，左向光照随镜像翻转。未宣称零滑步、人工逐帧手绘或图生视频成果。
 
 ![当前主角实际场景](reports/character-world.png)
 
 ## 验证和性能
 
-本轮仅做匹配接入范围的最小验证：36 PNG 源哈希/模板/图集核对，Godot 4.7.2 导入、四向八个实际渲染采样、八方向短移动、完整行走周期及走停呼吸通过。没有重跑历史 180 次切换、树石/湖岸专项、地图或性能回归；详见 `reports/CHARACTER_VALIDATION.md`。早期地图与性能验证保留在 `reports/VALIDATION.md`。
+本轮仅做匹配接入范围的最小验证：36 PNG 源哈希/模板/图集及 28 张保留帧核对，Godot 4.7.2 导入、四方向全部 48 个固定姿势渲染、八方向短移动、完整行走周期及走停呼吸通过。没有重跑历史 180 次切换、树石/湖岸专项、地图或性能回归；详见 `reports/CHARACTER_VALIDATION.md`。早期地图与性能验证保留在 `reports/VALIDATION.md`。
 
 以下为角色重建前的历史性能数据，本轮未重跑压力测试：RTX 3060、1280×720、关闭垂直同步的 90 秒加速跨区块测试 P95 1.32 ms、P99 1.849 ms、最大 18.444 ms；加载 230 / 卸载 200 区块，未记录缺地面或可视缺块。Godot 静态内存峰值 62.79 MiB。不能将其作为本轮角色版本的实测性能或所有配置稳定 60 FPS 的承诺。
 
@@ -63,4 +63,4 @@ godot --path . -- --benchmark --seconds=90 --report=stress-1024
 
 最后一条会运行渲染压力测试并结束，报告写入 `reports/`；加速穿越仅用于测试，不影响正常移动。`--capture` 会增加 GPU 读回开销，性能测试时不要使用。
 
-当前角色导入记录为 `tools/integrate_approved_character.py`，检查为 `tools/verify_character.py`；staging、skill 循环整理 / Godot 导出及模板 3 备份保存在 `art/hero_approved_runtime_v04/`。历史 `integrate_gorest_character.py`、`integrate_idle_breathe.py`、`prepare_character.py` 和旧 art 目录不能发布为当前模板。旧 `prepare_art.py` / `verify_art.py` 已明确停用。离线工具需要 Python、Pillow、NumPy 等；游戏运行不需要。`tools/package_project.py` 可生成工程压缩包，本轮未重新打包，旧压缩包不包含此次角色和速度调整。
+当前角色导入记录为 `tools/integrate_side_walk_v11.py`，检查为 `tools/verify_character.py`；staging、skill 循环整理 / Godot 导出及模板 4 备份保存在 `art/hero_v11_runtime_v05/`。历史导入脚本与旧 art 目录仅供追溯，不能发布为当前模板。旧 `prepare_art.py` / `verify_art.py` 已明确停用。离线工具需要 Python、Pillow、NumPy 等；游戏运行不需要。`tools/package_project.py` 可生成工程压缩包，本轮未重新打包，旧压缩包不包含此次侧视替换。

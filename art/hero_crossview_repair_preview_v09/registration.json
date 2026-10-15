@@ -1,0 +1,595 @@
+{
+  "directions": {
+    "front": {
+      "source": "art/hero_consistency_preview_v04/front_walk/take1/generated.png",
+      "sourceSha256": "f8e664c503692c2438e2afed0ba9bd9299c9b84c22fca735db12fce70e5e1d12",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "globalScale": 0.26822157434402333,
+      "transforms": [
+        {
+          "frameOneBased": 1,
+          "sourceCellIndexZeroBased": 0,
+          "sourceCell": [
+            4,
+            4,
+            436,
+            444
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            4.927950434456349,
+            4.1749271137026245
+          ],
+          "outputSha256": "2a8f18ab5ceb7e924c5e864503ee9081f23c195d546dbbb795e1c8f2a282f724",
+          "bbox": [
+            41,
+            20,
+            87,
+            112
+          ]
+        },
+        {
+          "frameOneBased": 2,
+          "sourceCellIndexZeroBased": 1,
+          "sourceCell": [
+            444,
+            4,
+            878,
+            444
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            6.005312105565416,
+            4.1749271137026245
+          ],
+          "outputSha256": "b2135bdafc17c0ce6e36956ab4b1b9a0d40afd29bb5d0039c8b879a667bcd523",
+          "bbox": [
+            42,
+            20,
+            88,
+            112
+          ]
+        },
+        {
+          "frameOneBased": 3,
+          "sourceCellIndexZeroBased": 2,
+          "sourceCell": [
+            886,
+            4,
+            1315,
+            444
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            5.9839806469381145,
+            4.1749271137026245
+          ],
+          "outputSha256": "82105ea38dd052ef08e257177e85a30be14b1de00a744bd62af5b3558a7ca706",
+          "bbox": [
+            41,
+            20,
+            87,
+            112
+          ]
+        },
+        {
+          "frameOneBased": 4,
+          "sourceCellIndexZeroBased": 3,
+          "sourceCell": [
+            1323,
+            4,
+            1770,
+            444
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            6.217198460330273,
+            4.443148688046646
+          ],
+          "outputSha256": "f633f045422f9d69f6d2e3e49f9d3fec6d093230b3b65f640302061708472983",
+          "bbox": [
+            40,
+            20,
+            86,
+            112
+          ]
+        },
+        {
+          "frameOneBased": 5,
+          "sourceCellIndexZeroBased": 4,
+          "sourceCell": [
+            4,
+            452,
+            436,
+            883
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            5.069111798138465,
+            9.53935860058309
+          ],
+          "outputSha256": "3bedfff4536a3fe95b73a6906478cfb343743f3007072a1838ccff6e7fdcda9c",
+          "bbox": [
+            39,
+            20,
+            87,
+            112
+          ]
+        },
+        {
+          "frameOneBased": 6,
+          "sourceCellIndexZeroBased": 5,
+          "sourceCell": [
+            444,
+            452,
+            878,
+            883
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            6.388989430178015,
+            9.53935860058309
+          ],
+          "outputSha256": "0b83550ac9f8a5556ad2c288d5ea2d1f245c772caa958b435375734a9405da05",
+          "bbox": [
+            40,
+            20,
+            87,
+            112
+          ]
+        },
+        {
+          "frameOneBased": 7,
+          "sourceCellIndexZeroBased": 6,
+          "sourceCell": [
+            886,
+            452,
+            1315,
+            883
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            6.220519107650297,
+            9.53935860058309
+          ],
+          "outputSha256": "4a45f095e2601e88d52bf23b4e4b732033bd63ac30feed236a4bc29f305e23d3",
+          "bbox": [
+            41,
+            20,
+            87,
+            112
+          ]
+        },
+        {
+          "frameOneBased": 8,
+          "sourceCellIndexZeroBased": 7,
+          "sourceCell": [
+            1323,
+            452,
+            1770,
+            883
+          ],
+          "scale": 0.26822157434402333,
+          "offsetPx": [
+            6.019870138510036,
+            9.53935860058309
+          ],
+          "outputSha256": "d94aa8e2667541a2398938cba845fed42aee138dd2a63edba92b3f8aa5f06601",
+          "bbox": [
+            42,
+            20,
+            88,
+            112
+          ]
+        }
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "root": [
+        64,
+        112
+      ],
+      "sampling": "RGBA premultiplied, 4x affine BICUBIC, common LANCZOS area downsample, one source-to-final pass; no sharpening"
+    },
+    "back": {
+      "source": "art/hero_consistency_preview_v04/back_walk/take1/generated.png",
+      "sourceSha256": "c9591a55e744c82c8fc3ff5503635f84977056568df1a8b1e026fcac8bfac1c8",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "globalScale": 0.27586206896551724,
+      "transforms": [
+        {
+          "frameOneBased": 1,
+          "sourceCellIndexZeroBased": 0,
+          "sourceCell": [
+            4,
+            4,
+            439,
+            444
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.7210018372030405,
+            3.724137931034484
+          ],
+          "outputSha256": "ed64857410741a8cb0244d4fb3b8c284cda68b618ba1f05652f748288f30c9fc",
+          "bbox": [
+            40,
+            20,
+            84,
+            112
+          ]
+        },
+        {
+          "frameOneBased": 2,
+          "sourceCellIndexZeroBased": 1,
+          "sourceCell": [
+            447,
+            4,
+            882,
+            444
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.5159600022884163,
+            3.724137931034484
+          ],
+          "outputSha256": "d42431dcc26999158738efd3d7963df62ece2b00df5a8839b7dbf7aaa594d347",
+          "bbox": [
+            40,
+            20,
+            85,
+            112
+          ]
+        },
+        {
+          "frameOneBased": 3,
+          "sourceCellIndexZeroBased": 2,
+          "sourceCell": [
+            890,
+            4,
+            1324,
+            444
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.8014346851642244,
+            3.724137931034484
+          ],
+          "outputSha256": "2323d68c06accc62b2989b014c99cef6780c1488762bd37f8692ba35290b8e6c",
+          "bbox": [
+            41,
+            20,
+            86,
+            112
+          ]
+        },
+        {
+          "frameOneBased": 4,
+          "sourceCellIndexZeroBased": 3,
+          "sourceCell": [
+            1332,
+            4,
+            1770,
+            444
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.327347781174325,
+            3.724137931034484
+          ],
+          "outputSha256": "d26cb3a064e78d3669912b8ef63349222589fbeb83dd94f113dc1b5c37e047d9",
+          "bbox": [
+            44,
+            20,
+            87,
+            112
+          ]
+        },
+        {
+          "frameOneBased": 5,
+          "sourceCellIndexZeroBased": 4,
+          "sourceCell": [
+            4,
+            452,
+            439,
+            883
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.7101638309601483,
+            7.03448275862069
+          ],
+          "outputSha256": "ce91422546e673dd979b1f503e5e79bd666e90dcc863337edd010d1c01b310f4",
+          "bbox": [
+            44,
+            20,
+            87,
+            113
+          ]
+        },
+        {
+          "frameOneBased": 6,
+          "sourceCellIndexZeroBased": 5,
+          "sourceCell": [
+            447,
+            452,
+            882,
+            883
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.4298496287384523,
+            7.03448275862069
+          ],
+          "outputSha256": "bf4fde5eceb34b59904e6c79d33bcf7e90f59876785eceb609d0186f48c6f4ba",
+          "bbox": [
+            41,
+            20,
+            87,
+            112
+          ]
+        },
+        {
+          "frameOneBased": 7,
+          "sourceCellIndexZeroBased": 6,
+          "sourceCell": [
+            890,
+            452,
+            1324,
+            883
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            3.382069591043404,
+            7.310344827586206
+          ],
+          "outputSha256": "8b2ad7fd4f5b0fc138f5ae382b07cbb92c254f5aa1b68365b9c85daf1b6896a7",
+          "bbox": [
+            41,
+            20,
+            86,
+            113
+          ]
+        },
+        {
+          "frameOneBased": 8,
+          "sourceCellIndexZeroBased": 7,
+          "sourceCell": [
+            1332,
+            452,
+            1770,
+            883
+          ],
+          "scale": 0.27586206896551724,
+          "offsetPx": [
+            2.9928905744305894,
+            7.03448275862069
+          ],
+          "outputSha256": "43d02c88e3917a5f6e066931f8525cce3a64a41e61c3e1724529a0676d2a8ded",
+          "bbox": [
+            40,
+            20,
+            84,
+            113
+          ]
+        }
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "root": [
+        64,
+        112
+      ],
+      "sampling": "RGBA premultiplied, 4x affine BICUBIC, common LANCZOS area downsample, one source-to-final pass; no sharpening"
+    },
+    "right": {
+      "source": "art/hero_crossview_repair_preview_v09/take1/generated.png",
+      "sourceSha256": "2328dc80106322754d75a4723f5a7a724a519e0a6e92da019e962e4d8668116c",
+      "sourceSize": [
+        1774,
+        887
+      ],
+      "globalScale": 0.252400548696845,
+      "transforms": [
+        {
+          "frameOneBased": 1,
+          "sourceCellIndexZeroBased": 0,
+          "sourceCell": [
+            4,
+            4,
+            440,
+            453
+          ],
+          "scale": 0.252400548696845,
+          "offsetPx": [
+            6.334222913831596,
+            6.370370370370372
+          ],
+          "outputSha256": "ca2874d86c042da3a4942f9283d176cc547f6a82f12212900e60468af8549a6d",
+          "bbox": [
+            34,
+            20,
+            85,
+            114
+          ]
+        },
+        {
+          "frameOneBased": 2,
+          "sourceCellIndexZeroBased": 1,
+          "sourceCell": [
+            448,
+            4,
+            878,
+            453
+          ],
+          "scale": 0.252400548696845,
+          "offsetPx": [
+            6.879540769782402,
+            6.117969821673526
+          ],
+          "outputSha256": "d1263f786d43e9eaaa33b6de8bbe5fcc7323d5b5668b6adbd72d32ff6468fdf4",
+          "bbox": [
+            39,
+            20,
+            84,
+            114
+          ]
+        },
+        {
+          "frameOneBased": 3,
+          "sourceCellIndexZeroBased": 2,
+          "sourceCell": [
+            887,
+            5,
+            1329,
+            452
+          ],
+          "scale": 0.252400548696845,
+          "offsetPx": [
+            6.590283012410467,
+            6.117969821673526
+          ],
+          "outputSha256": "503f9a026e52b64b00713dc5158bcc121b07d76b58b6e5707eafb64b91ee997f",
+          "bbox": [
+            34,
+            20,
+            90,
+            114
+          ]
+        },
+        {
+          "frameOneBased": 4,
+          "sourceCellIndexZeroBased": 3,
+          "sourceCell": [
+            1338,
+            4,
+            1770,
+            453
+          ],
+          "scale": 0.252400548696845,
+          "offsetPx": [
+            8.259778693518307,
+            6.117969821673526
+          ],
+          "outputSha256": "2b7e78ea28e6c4e52763d078081a23759d7823d02be289e22dc976781b04a692",
+          "bbox": [
+            34,
+            20,
+            89,
+            114
+          ]
+        },
+        {
+          "frameOneBased": 5,
+          "sourceCellIndexZeroBased": 4,
+          "sourceCell": [
+            4,
+            461,
+            440,
+            883
+          ],
+          "scale": 0.252400548696845,
+          "offsetPx": [
+            5.526606939036299,
+            14.447187928669411
+          ],
+          "outputSha256": "23623e64c464fc27a059f48a224f25d96e80735df3107209b81f2a1130a841c4",
+          "bbox": [
+            36,
+            20,
+            84,
+            111
+          ]
+        },
+        {
+          "frameOneBased": 6,
+          "sourceCellIndexZeroBased": 5,
+          "sourceCell": [
+            448,
+            461,
+            878,
+            883
+          ],
+          "scale": 0.252400548696845,
+          "offsetPx": [
+            6.241855543213198,
+            14.447187928669411
+          ],
+          "outputSha256": "fae9964ecfeeeac15d398c9d462ed0231192b94df056031f610055cafeafb10b",
+          "bbox": [
+            39,
+            20,
+            87,
+            111
+          ]
+        },
+        {
+          "frameOneBased": 7,
+          "sourceCellIndexZeroBased": 6,
+          "sourceCell": [
+            886,
+            461,
+            1330,
+            883
+          ],
+          "scale": 0.252400548696845,
+          "offsetPx": [
+            5.175478266750851,
+            14.447187928669411
+          ],
+          "outputSha256": "8944d79c3c67462a8c83f498328af318178c87988f34ee8608b5c752a0dd6719",
+          "bbox": [
+            37,
+            20,
+            91,
+            111
+          ]
+        },
+        {
+          "frameOneBased": 8,
+          "sourceCellIndexZeroBased": 7,
+          "sourceCell": [
+            1338,
+            461,
+            1770,
+            883
+          ],
+          "scale": 0.252400548696845,
+          "offsetPx": [
+            6.9257022896743194,
+            14.447187928669411
+          ],
+          "outputSha256": "575abac80ab76243290338f055ed6213fa45853a44d2f0bcc1ab4c17ff211ce7",
+          "bbox": [
+            33,
+            20,
+            88,
+            111
+          ]
+        }
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "root": [
+        64,
+        112
+      ],
+      "sampling": "RGBA premultiplied, 4x affine BICUBIC, common LANCZOS area downsample, one source-to-final pass; no sharpening"
+    }
+  },
+  "policy": "One scale per full-sheet source, no per-frame source calibration or bbox height fitting. Side whole-sheet generation; approved front/back native source reconstructions. Identical final sampling for all directions. Head-band/top full-frame rigid translation only, common root; stance pixels may move with pose.",
+  "selectedTake": "take1",
+  "left": "whole-frame mirror around pixel-grid center 64"
+}

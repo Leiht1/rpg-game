@@ -1,0 +1,36 @@
+{
+  "art_source": "host_image",
+  "route": "host:image_gen + generate2dmedia cli_media.py adopt",
+  "imageCalls": 2,
+  "videoCalls": 0,
+  "model": "not exposed",
+  "estimateUsd": null,
+  "costNote": "Adoption receipt estimate 0 only records a copy with no new provider call; actual generation price unknown.",
+  "prompts": [
+    "prompt_frame5.txt",
+    "prompt_frame6.txt"
+  ],
+  "references": [
+    "../hero_side_phase_preview_v07/take4/high_frame_04.png",
+    "../hero_side_phase_preview_v07/take6/high_frame_05.png"
+  ],
+  "sources": [
+    {
+      "file": "edit_frame5/generated.png",
+      "sha256": "8e1a2e0e74417c4172cb94570dfc30e655610131196bd751e24a05403981fe32",
+      "receipt": "edit_frame5/job.json"
+    },
+    {
+      "file": "edit_frame6/generated.png",
+      "sha256": "7f4bdda94bec645d7651648000df2643e719c6053616fa507dd6d39cfb6fb75d",
+      "receipt": "edit_frame6/job.json"
+    }
+  ],
+  "inheritedProvenance": "../hero_side_phase_preview_v07/provenance.json",
+  "toolInstallation": "installation.json",
+  "selection": "selection.json",
+  "normalization": "registration.json",
+  "license": "Original generated character; subject to generation provider/account terms. No claim of public-domain or MIT license on the generated art. Forge and Gorest software are MIT; no external game art used.",
+  "status": "needs-visual-review",
+  "previewOnly": true
+}

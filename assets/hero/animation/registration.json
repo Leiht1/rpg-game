@@ -1,7 +1,7 @@
 {
   "schema": "windrest.complete_registration.v3",
-  "template_version": "windrest-character-template-4",
-  "source": "User-approved whole-frame v04/v05/v06 set on 2026-10-15; no new art",
+  "template_version": "windrest-character-template-5",
+  "source": "User-approved v11 side walk; front/back walk v04 and all idle v05 preserved from template 4. No new art during integration.",
   "canvas": [
     128,
     128
@@ -620,10 +620,10 @@
         },
         {
           "name": "side_walk_00",
-          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_00.png",
-          "source_sha256": "db5a6896e720d78524e9d34603fe3ebfa7ac59bc7438f32a96a0b556168cf550",
+          "source": "art/hero_v08_pose_redraw_preview_v11/right_walk_preview/frames/right_walk_00.png",
+          "source_sha256": "02da487164fce0a7a0b333c42726ce5673b09ac5973931dd72c0bdbef75d63d6",
           "source_frame": 0,
-          "output_sha256": "db5a6896e720d78524e9d34603fe3ebfa7ac59bc7438f32a96a0b556168cf550",
+          "output_sha256": "02da487164fce0a7a0b333c42726ce5673b09ac5973931dd72c0bdbef75d63d6",
           "source_to_output_scale": 1.0,
           "offset": [
             0,
@@ -637,14 +637,14 @@
             64,
             112
           ],
-          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+          "operation": "Byte-identical approved v11 complete PNG; right maps to side; no resampling."
         },
         {
           "name": "side_walk_01",
-          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_01.png",
-          "source_sha256": "b68260c35b3409c4e6acbed8bdcbc302211ecfce81a9fb475a4efeda494b9e0c",
+          "source": "art/hero_v08_pose_redraw_preview_v11/right_walk_preview/frames/right_walk_01.png",
+          "source_sha256": "663914eb014f13fe38f30a9fe86dd3488138c2581ef005171413fdbc902c1a32",
           "source_frame": 1,
-          "output_sha256": "b68260c35b3409c4e6acbed8bdcbc302211ecfce81a9fb475a4efeda494b9e0c",
+          "output_sha256": "663914eb014f13fe38f30a9fe86dd3488138c2581ef005171413fdbc902c1a32",
           "source_to_output_scale": 1.0,
           "offset": [
             0,
@@ -658,14 +658,14 @@
             64,
             112
           ],
-          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+          "operation": "Byte-identical approved v11 complete PNG; right maps to side; no resampling."
         },
         {
           "name": "side_walk_02",
-          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_02.png",
-          "source_sha256": "0f20e3d60ad423650ca7165bddbdfa4bf3bdb4d7586ea51e6069f9f2499672d2",
+          "source": "art/hero_v08_pose_redraw_preview_v11/right_walk_preview/frames/right_walk_02.png",
+          "source_sha256": "23e8d8c703a52e74e7bc74741393afb735779b97c7427e42501bc1fcca3ffb7e",
           "source_frame": 2,
-          "output_sha256": "0f20e3d60ad423650ca7165bddbdfa4bf3bdb4d7586ea51e6069f9f2499672d2",
+          "output_sha256": "23e8d8c703a52e74e7bc74741393afb735779b97c7427e42501bc1fcca3ffb7e",
           "source_to_output_scale": 1.0,
           "offset": [
             0,
@@ -679,14 +679,14 @@
             64,
             112
           ],
-          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+          "operation": "Byte-identical approved v11 complete PNG; right maps to side; no resampling."
         },
         {
           "name": "side_walk_03",
-          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_03.png",
-          "source_sha256": "859870dcd1d23bb5399136a5aa4f70a9e0b034ab278b97cf8507402c5675631d",
+          "source": "art/hero_v08_pose_redraw_preview_v11/right_walk_preview/frames/right_walk_03.png",
+          "source_sha256": "394c1cc6475d9f136bf8ba54c8b188123eb581ca6f8ff3c60134ef5c37cd16d6",
           "source_frame": 3,
-          "output_sha256": "859870dcd1d23bb5399136a5aa4f70a9e0b034ab278b97cf8507402c5675631d",
+          "output_sha256": "394c1cc6475d9f136bf8ba54c8b188123eb581ca6f8ff3c60134ef5c37cd16d6",
           "source_to_output_scale": 1.0,
           "offset": [
             0,
@@ -700,14 +700,14 @@
             64,
             112
           ],
-          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+          "operation": "Byte-identical approved v11 complete PNG; right maps to side; no resampling."
         },
         {
           "name": "side_walk_04",
-          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_04.png",
-          "source_sha256": "e0a2c256728e78b69a1b2c60ec5dfc899c8a127b7404c2fc2d1a8bc27281602b",
+          "source": "art/hero_v08_pose_redraw_preview_v11/right_walk_preview/frames/right_walk_04.png",
+          "source_sha256": "0b697400aa46402563b5d5030b2b0a46b9c2c476dd73e1f536d94139ae921d43",
           "source_frame": 4,
-          "output_sha256": "e0a2c256728e78b69a1b2c60ec5dfc899c8a127b7404c2fc2d1a8bc27281602b",
+          "output_sha256": "0b697400aa46402563b5d5030b2b0a46b9c2c476dd73e1f536d94139ae921d43",
           "source_to_output_scale": 1.0,
           "offset": [
             0,
@@ -721,14 +721,14 @@
             64,
             112
           ],
-          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+          "operation": "Byte-identical approved v11 complete PNG; right maps to side; no resampling."
         },
         {
           "name": "side_walk_05",
-          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_05.png",
-          "source_sha256": "970d54ddbdbc0376c95e9db78e38252fbac82ac82336fd92973b85466b8dc668",
+          "source": "art/hero_v08_pose_redraw_preview_v11/right_walk_preview/frames/right_walk_05.png",
+          "source_sha256": "325fba03eabe91aa12ca5c119d9d884baa996c4995b9b0b2bc4d0a84ab9e5c4b",
           "source_frame": 5,
-          "output_sha256": "970d54ddbdbc0376c95e9db78e38252fbac82ac82336fd92973b85466b8dc668",
+          "output_sha256": "325fba03eabe91aa12ca5c119d9d884baa996c4995b9b0b2bc4d0a84ab9e5c4b",
           "source_to_output_scale": 1.0,
           "offset": [
             0,
@@ -742,14 +742,14 @@
             64,
             112
           ],
-          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+          "operation": "Byte-identical approved v11 complete PNG; right maps to side; no resampling."
         },
         {
           "name": "side_walk_06",
-          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_06.png",
-          "source_sha256": "efa2d8355ec397529d0d8286f7d36a233d796808f888a73390da6b3fb31e1696",
+          "source": "art/hero_v08_pose_redraw_preview_v11/right_walk_preview/frames/right_walk_06.png",
+          "source_sha256": "3386de36cc5659910d405e04da9654f4e77afaf733c7c7d02baa1b08ab079391",
           "source_frame": 6,
-          "output_sha256": "efa2d8355ec397529d0d8286f7d36a233d796808f888a73390da6b3fb31e1696",
+          "output_sha256": "3386de36cc5659910d405e04da9654f4e77afaf733c7c7d02baa1b08ab079391",
           "source_to_output_scale": 1.0,
           "offset": [
             0,
@@ -763,14 +763,14 @@
             64,
             112
           ],
-          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+          "operation": "Byte-identical approved v11 complete PNG; right maps to side; no resampling."
         },
         {
           "name": "side_walk_07",
-          "source": "art/hero_side_spacing_preview_v06/right_walk_preview/frames/right_walk_07.png",
-          "source_sha256": "a5921d411eaf467df5c1899c9bfc5de22e35ec61473fde468cf0276ac8939a4b",
+          "source": "art/hero_v08_pose_redraw_preview_v11/right_walk_preview/frames/right_walk_07.png",
+          "source_sha256": "eece3ef4d7929012d4d7fba358777e529cfba0d739737bca370c1b025f9443d2",
           "source_frame": 7,
-          "output_sha256": "a5921d411eaf467df5c1899c9bfc5de22e35ec61473fde468cf0276ac8939a4b",
+          "output_sha256": "eece3ef4d7929012d4d7fba358777e529cfba0d739737bca370c1b025f9443d2",
           "source_to_output_scale": 1.0,
           "offset": [
             0,
@@ -784,7 +784,7 @@
             64,
             112
           ],
-          "operation": "Byte-identical approved complete PNG; right canonical maps to side."
+          "operation": "Byte-identical approved v11 complete PNG; right maps to side; no resampling."
         }
       ]
     }
@@ -792,6 +792,7 @@
   "source_provenance": [
     "art/hero_consistency_preview_v04/provenance.json",
     "art/hero_sequence_repair_preview_v05/provenance.json",
-    "art/hero_side_spacing_preview_v06/provenance.json"
+    "art/hero_side_spacing_preview_v06/provenance.json",
+    "art/hero_v08_pose_redraw_preview_v11/provenance.json"
   ]
 }

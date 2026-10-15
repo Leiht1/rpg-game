@@ -1,0 +1,188 @@
+{
+  "frameCount": 8,
+  "cellSize": 128,
+  "frameSize": [
+    128,
+    128
+  ],
+  "sheetSize": [
+    512,
+    256
+  ],
+  "sourceSheetSize": [
+    512,
+    256
+  ],
+  "sourceCells": [
+    [
+      1,
+      1,
+      127,
+      127
+    ],
+    [
+      129,
+      1,
+      255,
+      127
+    ],
+    [
+      257,
+      1,
+      383,
+      127
+    ],
+    [
+      385,
+      1,
+      511,
+      127
+    ],
+    [
+      1,
+      129,
+      127,
+      255
+    ],
+    [
+      129,
+      129,
+      255,
+      255
+    ],
+    [
+      257,
+      129,
+      383,
+      255
+    ],
+    [
+      385,
+      129,
+      511,
+      255
+    ]
+  ],
+  "globalScale": 1.0,
+  "safePadding": 12,
+  "safeFramePolicy": "global_uniform_scale_preserve_anchor_with_minimum_edge_padding",
+  "sourceEdgePolicy": "flag_source_cells_whose_alpha_touches_or_nears_a_detected_cell_edge",
+  "sourceEdgeThreshold": 2,
+  "sourceEdgeRisks": [],
+  "frameBboxes": [
+    [
+      43,
+      22,
+      44,
+      93
+    ],
+    [
+      38,
+      22,
+      45,
+      93
+    ],
+    [
+      41,
+      24,
+      46,
+      91
+    ],
+    [
+      40,
+      21,
+      51,
+      94
+    ],
+    [
+      42,
+      24,
+      45,
+      91
+    ],
+    [
+      40,
+      23,
+      46,
+      92
+    ],
+    [
+      38,
+      25,
+      50,
+      90
+    ],
+    [
+      38,
+      24,
+      55,
+      91
+    ]
+  ],
+  "rootAnchors": [
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ],
+    [
+      64.0,
+      115
+    ]
+  ],
+  "gridPolicy": "auto_detect_grid_from_sprite_distances_then_fallback_proportional",
+  "gridDetection": {
+    "mode": "proportional_forced",
+    "xRuns": [],
+    "yRuns": [],
+    "xBounds": [
+      0,
+      128,
+      256,
+      384,
+      512
+    ],
+    "yBounds": [
+      0,
+      128,
+      256
+    ]
+  },
+  "proportionPolicy": "uniform_scale_preserve_input_character_proportions",
+  "rootAnchorPolicy": "fixed_lower_body_centroid_x_and_shared_feet_baseline",
+  "normalization": "global_uniform_scale_fixed_feet_baseline_auto_grid_no_nonuniform_scaling",
+  "createdTime": "2026-10-15T20:33:17",
+  "frames": [
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_right_walk_v08.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"128 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_right_walk_v08.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_right_walk_v08.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"384 0 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_right_walk_v08.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_right_walk_v08.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"128 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_right_walk_v08.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"256 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_right_walk_v08.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>",
+    "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"384 128 128 128\" width=\"128\" height=\"128\"><image href=\"/generated/windrest_hero_right_walk_v08.png\" x=\"0\" y=\"0\" width=\"512\" height=\"256\" preserveAspectRatio=\"none\"/></svg>"
+  ]
+}

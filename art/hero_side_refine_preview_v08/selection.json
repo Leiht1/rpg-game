@@ -1,0 +1,101 @@
+{
+  "frames": [
+    {
+      "frameOneBased": 1,
+      "outputIndexZeroBased": 0,
+      "source": "../hero_consistency_preview_v04/side_walk/take1/generated.png",
+      "sourceSha256": "7ed4e2de202954f9851a5bd46a2f56c25437bd948c9305b4ee82685e126c05e0",
+      "registration": "../hero_consistency_preview_v04/side_walk/normalization.json",
+      "sourceCellIndexZeroBased": 0,
+      "sizeCalibration": "registration.json"
+    },
+    {
+      "frameOneBased": 2,
+      "outputIndexZeroBased": 1,
+      "source": "../hero_side_phase_preview_v07/take2/generated.png",
+      "sourceSha256": "f376483a6b44dec330517980b8edddb68e55533325f0baab87b98f87e9ba3e9c",
+      "registration": "../hero_side_phase_preview_v07/take2/registration.json",
+      "sourceCellIndexZeroBased": 0,
+      "sizeCalibration": "registration.json"
+    },
+    {
+      "frameOneBased": 3,
+      "outputIndexZeroBased": 2,
+      "source": "../hero_side_phase_preview_v07/take3/generated.png",
+      "sourceSha256": "7a5eae9e064206bb52718478d9816959da142590711898ca1f7b8e5bcc90f13d",
+      "registration": "../hero_side_phase_preview_v07/take3/registration.json",
+      "sourceCellIndexZeroBased": 0,
+      "sizeCalibration": "registration.json"
+    },
+    {
+      "frameOneBased": 4,
+      "outputIndexZeroBased": 3,
+      "source": "../hero_consistency_preview_v04/side_walk/take1/generated.png",
+      "sourceSha256": "7ed4e2de202954f9851a5bd46a2f56c25437bd948c9305b4ee82685e126c05e0",
+      "registration": "../hero_consistency_preview_v04/side_walk/normalization.json",
+      "sourceCellIndexZeroBased": 3,
+      "sizeCalibration": "registration.json"
+    },
+    {
+      "frameOneBased": 5,
+      "outputIndexZeroBased": 4,
+      "source": "edit_frame5/generated.png",
+      "sourceSha256": "8e1a2e0e74417c4172cb94570dfc30e655610131196bd751e24a05403981fe32",
+      "registration": null,
+      "sourceCellIndexZeroBased": 0,
+      "sizeCalibration": "registration.json"
+    },
+    {
+      "frameOneBased": 6,
+      "outputIndexZeroBased": 5,
+      "source": "edit_frame6/generated.png",
+      "sourceSha256": "7f4bdda94bec645d7651648000df2643e719c6053616fa507dd6d39cfb6fb75d",
+      "registration": null,
+      "sourceCellIndexZeroBased": 0,
+      "sizeCalibration": "registration.json"
+    },
+    {
+      "frameOneBased": 7,
+      "outputIndexZeroBased": 6,
+      "source": "../hero_sequence_repair_preview_v05/side_walk/take4/generated.png",
+      "sourceSha256": "dc6693556d52c31a48563a7dd1996b169bba9f319223e117ee496c66213c08e1",
+      "registration": "../hero_sequence_repair_preview_v05/side_walk/take4/registration.json",
+      "sourceCellIndexZeroBased": 0,
+      "sizeCalibration": "registration.json"
+    },
+    {
+      "frameOneBased": 8,
+      "outputIndexZeroBased": 7,
+      "source": "../hero_sequence_repair_preview_v05/side_walk/take3/generated.png",
+      "sourceSha256": "73313a442f818b9c66635f5cb24d8a9e25c8b5672e7a47dadf4ecc24f1c02780",
+      "registration": "../hero_sequence_repair_preview_v05/side_walk/take3/registration.json",
+      "sourceCellIndexZeroBased": 3,
+      "sizeCalibration": "registration.json"
+    }
+  ],
+  "redrawnFramesOneBased": [
+    5,
+    6
+  ],
+  "sizeAndRootCalibratedFramesOneBased": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "frameCount": 8,
+  "root": [
+    64,
+    112
+  ],
+  "canvas": [
+    128,
+    128
+  ],
+  "previewOnly": true,
+  "left": "Whole-frame mirror in identical phase order"
+}

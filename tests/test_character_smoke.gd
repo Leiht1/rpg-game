@@ -1,6 +1,6 @@
 extends SceneTree
 
-# Short integration check for the accepted frames and the 115 px/s movement change.
+# Short integration check for the accepted v11 side walk at the existing 115 px/s.
 var failures: Array[String]=[]
 var world: Node2D
 
@@ -26,7 +26,7 @@ func run() -> void:
 	var player: WildPlayer=world.player
 	player.set_physics_process(false)
 	check(WildPlayer.WALK_SPEED==115.0,"Movement speed is not 115 px/s")
-	check(player.actor.template_version=="windrest-character-template-4","Wrong runtime template")
+	check(player.actor.template_version=="windrest-character-template-5","Wrong runtime template")
 	check(player.actor.idle_cycle_ms==1800,"Wrong breathing cycle")
 	for view in ["front","back","side"]:
 		for action in ["idle","walk"]:
@@ -89,7 +89,7 @@ func run() -> void:
 	check(player.position.is_equal_approx(stopped) and not player.moving,"Breathing moved the physics body")
 	check(player.sprite.frame==1,"Real idle clock did not reach the second breathing pose")
 	var result := {"status":"pass" if failures.is_empty() else "fail","failures":failures,
-		"godot_version":Engine.get_version_info().string,"template":"windrest-character-template-4",
+		"godot_version":Engine.get_version_info().string,"template":"windrest-character-template-5",
 		"movement_speed":WildPlayer.WALK_SPEED,"movement_distances_12_ticks":distances,
 		"idle_cycle_ms":1800,"breathing_boundary_samples":20,"walk_frames_visited":visited.size(),
 		"rendered_direction_pose_samples":8,"scope":"Import, actual rendering, eight short movement directions, distance-driven gait, stop and brief idle. No map/performance/full regression."}

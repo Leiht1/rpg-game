@@ -1,12 +1,12 @@
 # 《风栖原野》角色动作与未来换装规范
 
-版本：`windrest-character-template-4` · 2026-10-15。
+版本：`windrest-character-template-5` · 2026-10-15。
 
 本轮用户要求替代旧运行时分层契约。V0.1 使用完整角色序列帧，不实现正式换装系统。旧独立部件生成、切碎、镜像修补和程序关节拼接结果不能作为新衣物模板。
 
 ## 1. 统一角色基体（Base Body）
 
-原始身份参考为 `assets/hero/reference/identity.png`，三方向身份参考为 `reference/turnaround.png`；当前实际眼型、姿态和比例以用户已确认的模板 4 完整帧及 `reference/frame-review.png` 为准。固定栗棕短乱发、圆润小脸与完整棕色眼型、鼠尾草绿短外套、奶白内衣与卷袖、赭黄围巾、棕短裤、奶白袜和棕短靴。本轮只有这一套服装。
+原始身份参考为 `assets/hero/reference/identity.png`，三方向身份参考为 `reference/turnaround.png`；当前实际眼型、姿态和比例以用户已确认的模板 5 完整帧及 `reference/frame-review.png` 为准。固定栗棕短乱发、圆润小脸与完整棕色眼型、鼠尾草绿短外套、奶白内衣与卷袖、赭黄围巾、棕短裤、奶白袜和棕短靴。本轮只有这一套服装。
 
 - 比例以已接受完整帧为实际尺规，约 3 头身；头、胸腔、骨盆与四肢长度沿用同一套结构，不能换方向就换身体。
 - 所有运行帧画布 **128×128 RGBA**，脚底世界原点 **(64,112)**，Y 向下。阴影、碰撞体和世界移动独立于图像。
@@ -33,24 +33,24 @@
 
 完整帧和姿态模板逐帧一一对应；模板版本包括帧内容及哈希。新增衣物只能追随该版本，不能在同名帧里私自改变动作。idle 第 0 帧为该方向站姿基准；当前使用用户已确认的 v05 四帧呼吸修订，依次为 neutral、inhale、release、exhale。保持现有六个动画名，`front/back/side_idle` 即对应 idle_breathe，左向整帧镜像 side。
 
-本轮最终 walk 为每方向用户已确认的 **8 张不同整身姿势**：正面、背面采用 v04，侧面采用 v06（含 v05 的近远手脚修订及 v06 第 3、5 帧间距微调）。前、背、右视图各有完整周期，左视图整帧镜像。最终姿态以完整图和验收记录为准，不能把生成提示词或相位标签当作已验证的解剖事实。禁止静态整图平移、复制半周期或倒放前半周期冒充完整步态。
+本轮最终 walk 为每方向用户已确认的 **8 张不同整身姿势**：正面、背面沿用 v04，侧面采用按 v08 原姿势统一重绘并经用户确认的 v11 take2，索引 0..7。侧面第 5 帧保留低位收腿、第 6 帧左手在背后少量露出的要求；v09 改动作候选弃用。前、背、右视图各有完整周期，左视图整帧镜像。最终姿态以完整图和验收记录为准，不能把生成提示词或相位标签当作已验证的解剖事实。禁止静态整图平移、复制半周期或倒放前半周期冒充完整步态。
 
 | 相位 | 标准用途 |
 | --- | --- |
 | 0 · phase 0 | 第一组接触姿势 contact_a |
 | 1 · phase 0.125 | 第一组下沉过渡 down_a |
-| 2 · phase 0.25 | 第一组经过姿势 passing_a；侧面 v06 收回前摆脚、手 |
+| 2 · phase 0.25 | 第一组经过姿势 passing_a；侧面以 v11 第 3 帧完整姿势为准 |
 | 3 · phase 0.375 | 第一组迈出过渡 up_a |
-| 4 · phase 0.5 | 相反腿接触/承重姿势 contact_b；侧面 v06 收步、后跟开始抬起 |
-| 5 · phase 0.625 | 第二组下沉过渡 down_b |
-| 6 · phase 0.75 | 第二组经过姿势 passing_b；侧面沿用 v05 手脚修订 |
+| 4 · phase 0.5 | 相反腿接触/承重相位 contact_b；侧面保留 v08/v11 第 5 帧低位收腿 |
+| 5 · phase 0.625 | 第二组下沉过渡 down_b；侧面第 6 帧左手在背后少量露出 |
+| 6 · phase 0.75 | 第二组经过姿势 passing_b；侧面以 v11 第 7 帧完整姿势为准 |
 | 7 · phase 0.875 | 第二组抬升过渡 up_b，随后进入下一周期 |
 
 左右均指角色自身。背视接触脚存在向屏幕上方的透视投影，鞋底最低像素可能属于后摆脚；不能把每帧透明包围盒底边强行拉到同一条地面线。共享原点是身体在地图中的脚下基准，真实鞋底像素会随动作与透视变化，不作为固定常数。
 
-walk 源帧为 `art/hero_consistency_preview_v04/` 的 front/back_walk_preview 与 `art/hero_side_spacing_preview_v06/` 的 right_walk_preview，索引均为 `[0,1,2,3,4,5,6,7]`，right 对应 side。24 张已确认 128×128 PNG 原样复制，scale=1、offset=(0,0)，不沿用历史 256→140 的映射，也不重新对齐。
+walk 源帧为 `art/hero_consistency_preview_v04/` 的 front/back_walk_preview 与 `art/hero_v08_pose_redraw_preview_v11/` 的 right_walk_preview，索引均为 `[0,1,2,3,4,5,6,7]`，right 对应 side。本轮只替换 8 张 side_walk；正背行走 16 张及全部 idle 12 张与模板 4 字节一致。24 张已确认 128×128 PNG 原样复制，scale=1、offset=(0,0)，不沿用历史 256→140 的映射，也不重新对齐。
 
-idle 源帧为 `art/hero_sequence_repair_preview_v05/` 的 front/back/right_idle_preview 各 `[0,1,2,3]`，right 对应 side。12 张已确认 128×128 PNG 原样复制，不再缩放或重新对齐；正面/侧面保留双脚修订，背面保留 v04。共享脚底原点 (64,112)，源图的完整帧注册参数继续保留。替换前模板 3 的完整资源和规则备份于 `art/hero_approved_runtime_v04/previous_runtime/` 及 `previous_*`。
+idle 源帧为 `art/hero_sequence_repair_preview_v05/` 的 front/back/right_idle_preview 各 `[0,1,2,3]`，right 对应 side。12 张已确认 128×128 PNG 原样复制，不再缩放或重新对齐；正面/侧面保留双脚修订，背面保留 v04。共享脚底原点 (64,112)，源图的完整帧注册参数继续保留。替换前模板 4 的完整资源和规则备份于 `art/hero_v11_runtime_v05/previous_runtime/` 及 `previous_*`；更早模板 3 备份仍保留。
 
 `animation/registration.json` 固定源图路径、源哈希和统一变换，`modular_plan/template.json` 固定 36 张最终帧哈希、相位和时间轴。各方向的轻微线条/体型差和镜像光照仍保留为已确认素材的边界；不通过运行时额外缩放或平移冒充呼吸。
 

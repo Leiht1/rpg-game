@@ -1,0 +1,61 @@
+{
+  "sourcePoseReference": "v08 unchanged",
+  "selectedSheet": "take2",
+  "selectedSideGlobalScale": 0.2746268656716418,
+  "headWidthPx": [
+    42.0,
+    43.0
+  ],
+  "headHeightPx": [
+    34.5,
+    35.5
+  ],
+  "oldHeadAlphaAreaCV": 0.023798480970863907,
+  "newHeadAlphaAreaCV": 0.011320833037599374,
+  "maximumDominantArmSkinCentroidDeltaPx": 2.601154986394233,
+  "maximumFootExtentDeltaPx": 5.0,
+  "diagnosticLimits": "Head skin/alpha regions are estimated; arm skin centroids/foot extents change with size correction and occlusion, not exact joint measurements. No metric alone certifies anatomy or pose.",
+  "animationChecks": [
+    {
+      "file": "crossview_walk.webp",
+      "frames": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "crossview_walk_slow.webp",
+      "frames": 8,
+      "cycleMs": 1160
+    },
+    {
+      "file": "side_before_after.webp",
+      "frames": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "side_before_after_slow.webp",
+      "frames": 8,
+      "cycleMs": 1160
+    },
+    {
+      "file": "crossview_walk.gif",
+      "frames": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "crossview_walk_slow.gif",
+      "frames": 8,
+      "cycleMs": 1160
+    },
+    {
+      "file": "side_before_after.gif",
+      "frames": 8,
+      "cycleMs": 580
+    },
+    {
+      "file": "side_before_after_slow.gif",
+      "frames": 8,
+      "cycleMs": 1160
+    }
+  ],
+  "runtimeAndReferenceHashesUnchanged": true
+}

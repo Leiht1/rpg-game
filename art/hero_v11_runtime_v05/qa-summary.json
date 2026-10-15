@@ -1,0 +1,85 @@
+{
+  "clips": {
+    "status": "needs-visual-review",
+    "checks": [
+      {
+        "id": "png_byte_copy",
+        "status": "pass",
+        "value": 36,
+        "threshold": null
+      },
+      {
+        "id": "webp_timeline",
+        "status": "pass",
+        "value": 6,
+        "threshold": null
+      },
+      {
+        "id": "tick_grid",
+        "status": "pass",
+        "value": 0.333,
+        "threshold": null
+      },
+      {
+        "id": "telegraph",
+        "threshold": 28,
+        "status": "skipped",
+        "value": null
+      },
+      {
+        "id": "near_duplicate_holds",
+        "status": "pass",
+        "value": 0,
+        "threshold": 0
+      },
+      {
+        "id": "loop_seam",
+        "status": "needs-visual-review",
+        "value": 1.533159,
+        "threshold": null
+      },
+      {
+        "id": "manifest_lint",
+        "status": "pass",
+        "value": 0,
+        "threshold": 0
+      }
+    ],
+    "envelope": "clips/animation-clips.json"
+  },
+  "engine": {
+    "status": "pass",
+    "checks": [
+      {
+        "id": "godot_spriteframes_roundtrip",
+        "status": "pass",
+        "value": {
+          "animations": 6
+        },
+        "threshold": null
+      },
+      {
+        "id": "godot_spriteframes_duration_error_ms",
+        "status": "pass",
+        "value": 0.6666666666666714,
+        "threshold": 1.0
+      },
+      {
+        "id": "atlas_max_side_px",
+        "status": "pass",
+        "value": 794,
+        "threshold": 4096
+      },
+      {
+        "id": "source_frame_hashes",
+        "status": "pass",
+        "value": {
+          "verified": 36,
+          "frames": 36
+        },
+        "threshold": null
+      }
+    ],
+    "envelope": "engine/engine-export.json"
+  }
+}

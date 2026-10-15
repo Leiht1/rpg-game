@@ -1,0 +1,48 @@
+{
+  "art_source": "host_image",
+  "route": "host:image_gen + generate2dmedia cli_media.py adopt",
+  "imageCalls": 2,
+  "videoCalls": 0,
+  "requestedModel": "codex-image_gen (host tool)",
+  "returnedModel": "not exposed",
+  "estimateUsd": null,
+  "costNote": "Actual image price unknown; adoption receipts estimate0 reflects copying with no new image call, not free image generation.",
+  "authorization": "User explicitly requested a new complete sequence following all current v08 poses after body/hand/foot inconsistency feedback.",
+  "sources": [
+    {
+      "file": "take1/generated.png",
+      "sha256": "8b2d2c7f5b5ac4b81c04cace7514596850669278d181fd37ed8398852c38c462",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "job": "take1/job.json",
+      "prompt": "prompt_take1.txt"
+    },
+    {
+      "file": "take2/generated.png",
+      "sha256": "99dc4f9251e65c69cd43b08c2f612e26166e36e09de1dbb5c80915ac8168a1f4",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGBA",
+      "job": "take2/job.json",
+      "prompt": "prompt_take2.txt"
+    }
+  ],
+  "poseReferences": "pose_reference.json",
+  "references": [
+    "references/v08_exact_eight_poses.png",
+    "references/side_body_master.png",
+    "references/crossview_reference.png",
+    "references/pose_landmark_guide.png"
+  ],
+  "selection": "selection.json",
+  "registration": "registration.json",
+  "inheritedIdentityAndArtLicense": "../hero_side_refine_preview_v08/provenance.json",
+  "license": "Original generated character; subject to provider/account terms. Not asserted MIT or public domain. No commercial game or external third-party art used. Forge/Gorest software under their own MIT terms.",
+  "status": "needs-visual-review",
+  "previewOnly": true
+}

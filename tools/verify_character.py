@@ -6,7 +6,7 @@ from PIL import Image
 
 ROOT=Path(__file__).resolve().parents[1]
 HERO=ROOT/'assets/hero'
-WORK=ROOT/'art/hero_approved_runtime_v04'
+WORK=ROOT/'art/hero_v11_runtime_v05'
 
 def read(path): return json.loads(path.read_text(encoding='utf-8'))
 def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -21,7 +21,7 @@ def check(condition,message):
     if not condition: failures.append(message)
 
 check(runtime['canvas']==[128,128] and runtime['anchor']==[64,112],'Runtime canvas/root mismatch')
-check(template['version']==runtime['template_version']==registration['template_version']=='windrest-character-template-4','Template version mismatch')
+check(template['version']==runtime['template_version']==registration['template_version']=='windrest-character-template-5','Template version mismatch')
 check(runtime['movement_speed']==template['timing']['movement_speed']==115,'Movement speed metadata mismatch')
 check(len(manifest['clips'])==6 and len(manifest['frames'])==36,'Expected six clips / 36 frames')
 check(abs(runtime['stride_world_units']-200/3)<1e-8,'Wrong distance per walk cycle')
@@ -68,12 +68,19 @@ for folder,name in [('clips','animation-clips.json'),('engine','engine-export.js
         check(str(c['status']).lower() not in ['warn','fail'],folder+': '+json.dumps(c,ensure_ascii=False))
 baseline=read(WORK/'unchanged_game_baseline.json')
 for path,digest in baseline.items(): check(sha(ROOT/path)==digest,path+': unrelated game file changed')
+preserved=read(WORK/'unchanged_frames.json')
+check(len(preserved)==28,'Expected 28 preserved non-side-walk frames')
+for name,digest in preserved.items(): check(sha(HERO/'final_sprite'/name)==digest,name+': previous accepted frame changed')
+for i in range(8):
+    approved=ROOT/f'art/hero_v08_pose_redraw_preview_v11/right_walk_preview/frames/right_walk_{i:02}.png'
+    check(sha(HERO/f'final_sprite/side_walk_{i:02}.png')==sha(approved),f'side_walk_{i:02}: differs from approved v11')
 check(sha(HERO/'modular_plan/CHARACTER_MODULAR_RULES.md')==sha(ROOT/'CHARACTER_MODULAR_RULES.md'),'Character rules copy out of sync')
 report={'status':'pass' if not failures else 'fail','failures':failures,'rows':rows,
     'runtime_layers':1,'template_version':template['version'],'whole_frames':36,
     'common_walk_scale':1.0,'common_walk_offset':[0,0],'movement_speed':115,'idle_cycle_ms':1800,'skill_qa':qa_status,
+    'approved_v11_frames':8,'preserved_previous_frames':len(preserved),
     'not_proven':['Numeric geometry does not certify anatomy, facing, identity or perfectly planted feet.',
-        'The v04/v05/v06 complete-frame set is user accepted; small redraw contour/projection differences remain.',
+        'The v11 side walk is user accepted; v04 front/back walk and v05 idle remain unchanged. Small redraw contour/projection differences remain.',
         'Left mirrors the complete side frame including its soft lighting.']}
 (ROOT/'reports/character-art-tests.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(json.dumps({'status':report['status'],'failures':failures,'clips':len(rows),'whole_frames':36,'skill_qa':qa_status}))
