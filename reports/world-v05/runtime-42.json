@@ -1,0 +1,80 @@
+{
+  "adapter": "NVIDIA GeForce RTX 3060",
+  "checks": [
+    {
+      "details": "",
+      "name": "stream settled 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M opens and blocks movement 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M default covers entire world 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M cache matches full live world 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "map pan zoom clamps 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M closes releases movement 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 42",
+      "pass": true
+    },
+    {
+      "details": 1803.17309570313,
+      "name": "actual normal movement 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "actual chunk crossing 42",
+      "pass": true
+    },
+    {
+      "details": [
+        0,
+        0
+      ],
+      "name": "no missing viewport or loading stops 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "identity preserves seed size and upgrades version",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "note": "Actual normal player physics, loaded streaming and M key events. No accelerated movement. Timing samples are not FPS guarantees.",
+  "renderer": "gl_compatibility",
+  "seeds": [
+    {
+      "distance": 1803.17309570313,
+      "last_chunk_build_ms": 57.847,
+      "loading_blocks": 0,
+      "map_max_slice_ms": 4.515,
+      "map_total_build_ms": 1311.151,
+      "max_install_ms": 1.575,
+      "missing_view_frames": 0,
+      "physics_frames": 542,
+      "seed": 42
+    }
+  ]
+}

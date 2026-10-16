@@ -15,6 +15,7 @@ var hint := Label.new()
 var debug_label := Label.new()
 var loading_cover := ColorRect.new()
 var loading_label := Label.new()
+var map_view: Control
 var debug_on := false
 var started := false
 var occlusion_clock := 0.0
@@ -35,9 +36,13 @@ var last_frame_usec := 0
 var benchmark_travel := 0.0
 var memory_samples: Array[Dictionary] = []
 var benchmark_north := false
+var persistent_world := true
+const WORLD_ID_PATH = "user://world-biome-v02.json"
 
 func _ready() -> void:
+	load_world_identity()
 	parse_arguments()
+	if persistent_world: save_world_identity()
 	setup_input()
 	generator=Gen.new(world_seed,map_cells)
 	object_root.name="YSortedNatureAndActor"
@@ -55,13 +60,29 @@ func _ready() -> void:
 	object_root.add_child(player)
 	player.camera.reset_smoothing()
 	stream.update_target(player.position)
+	stream.spawn_drop(generator.spawn+Vector2(50,30),"initial")
 	setup_ui()
+	map_view=load("res://scripts/world_map.gd").new()
+	ui.add_child(map_view)
+	map_view.configure(generator,player)
 	if benchmark:
 		player.automated=true
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 
+func load_world_identity(path: String = WORLD_ID_PATH) -> void:
+	world_seed=int(Time.get_unix_time_from_system()*1000)%2147483647
+	if not FileAccess.file_exists(path):return
+	var data=JSON.parse_string(FileAccess.get_file_as_string(path))
+	if data is Dictionary and str(data.get("generator","")).begins_with("windrest-biome-"):
+		world_seed=int(data.seed)
+		map_cells=clampi(int(data.get("map_cells",1024)),128,1024)
+
+func save_world_identity(path: String = WORLD_ID_PATH) -> void:
+	save_json(path,{"seed":world_seed,"map_cells":map_cells,"generator":Gen.VERSION})
+
 func parse_arguments() -> void:
 	for arg in OS.get_cmdline_user_args():
+		if arg.begins_with("--seed=") or arg.begins_with("--size=") or arg=="--benchmark":persistent_world=false
 		if arg.begins_with("--seed="): world_seed=int(arg.get_slice("=",1))
 		elif arg.begins_with("--size="): map_cells=clampi(int(arg.get_slice("=",1)),128,1024)
 		elif arg=="--benchmark": benchmark=true; debug_on=true
@@ -70,7 +91,7 @@ func parse_arguments() -> void:
 		elif arg=="--capture": benchmark_captures=true
 
 func setup_input() -> void:
-	var keys := {"move_left":[KEY_A,KEY_LEFT],"move_right":[KEY_D,KEY_RIGHT],"move_up":[KEY_W,KEY_UP],"move_down":[KEY_S,KEY_DOWN]}
+	var keys := {"run":[KEY_SHIFT],"interact":[KEY_E],"move_left":[KEY_A,KEY_LEFT],"move_right":[KEY_D,KEY_RIGHT],"move_up":[KEY_W,KEY_UP],"move_down":[KEY_S,KEY_DOWN]}
 	for action in keys:
 		if not InputMap.has_action(action): InputMap.add_action(action)
 		for key in keys[action]:
@@ -91,7 +112,7 @@ func make_label(node: Label, text_value: String, pos: Vector2, size: int) -> voi
 func setup_ui() -> void:
 	add_child(ui)
 	make_label(title,"风栖原野",Vector2(26,20),25)
-	make_label(hint,"WASD 移动   ·   滚轮缩放   ·   F3 调试",Vector2(26,58),15)
+	make_label(hint,"WASD 移动 · 按住 Shift 奔跑 · E 砍树 / 拾取 · 滚轮缩放 · M 地图 · N 新世界 · F3 调试",Vector2(26,58),15)
 	make_label(debug_label,"",Vector2(26,100),16)
 	debug_label.visible=debug_on
 	loading_cover.color=Color("6c8c62")
@@ -121,9 +142,12 @@ func _process(delta: float) -> void:
 	if occlusion_clock>.1:
 		occlusion_clock=0
 		for prop in object_root.get_children():
-			if prop!=player and prop.has_method("update_occlusion"): prop.update_occlusion(player.position)
+			if is_instance_valid(prop) and prop!=player and prop.has_method("update_occlusion"): prop.update_occlusion(player.position)
 	if ui_clock>.25:
 		ui_clock=0
+		var target := stream.interaction_target(player.position)
+		hint.text="WASD 移动 · Shift 奔跑 · E 砍树 / 拾取 · 滚轮缩放 · M 地图 · N 新世界 · F3 调试"
+		if target!=null: hint.text += "  |  E 拾取木材" if target.is_in_group("drops") else "  |  E 砍树（大树四击 / 小树两击，可长按）"
 		var memory := OS.get_static_memory_usage()/1048576.0
 		peak_memory=maxf(peak_memory,memory)
 		debug_label.text="Seed %d  ·  %s  ·  %d×%d\n%s  (%.0f, %.0f)\n%d FPS · %.2f ms\n区块 %d · 对象 %d · 节点 %d\n内存 %.1f MiB · 前方待生成 %d\n挂载 %.2f ms · 后台生成 %.1f ms"%[
@@ -136,6 +160,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode==KEY_F3:
 		debug_on=not debug_on
 		debug_label.visible=debug_on
+
+	if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode==KEY_N and persistent_world:
+		world_seed=(world_seed+int(Time.get_ticks_msec())+1)%2147483647
+		save_world_identity()
+		get_tree().reload_current_scene()
 
 func save_json(path: String, value: Variant) -> void:
 	var file := FileAccess.open(path,FileAccess.WRITE)

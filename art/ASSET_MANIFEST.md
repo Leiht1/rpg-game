@@ -1,8 +1,18 @@
+> 当前生效规范为根目录 ART_STYLE.md 2.1、CHARACTER_SEQUENCE_WORKFLOW.md 与 SCENE_ART_WORKFLOW.md。下方旧完整帧/程序关节说明仅约束历史资源，不是当前生成入口。
+
+# 当前正式素材登记 · 2026-10-16
+角色：assets/hero/cartoon，用户已确认V4简化短腿白T部件；本轮复用角色与已确认动作，15条原生动画。
+场景：assets/environment/cartoon_v2，已接入可玩候选、等待用户验收。两树、两石、草、草花、镜像草变体、木材和新斧，地表笔刷为本轮草色块模糊派生。一次受控图片调用，route=local:codex-cli、art_source=host_image、model=codex-image_gen；底层精确模型和实际费用未知，无外部商业游戏图。适用生成服务/账户条款，不宣称第三方CC0许可。
+来源与QA见 scene_cartoon_v2/generated/job.json、prompt.txt、processing.json、QA.md。旧环境保留但不再加载；禁止正式使用的实验道具未复用。
+
+---
+以下为历史登记，accepted只指当时版本，不改变当前正式路线。
+
 # 素材来源与验收登记
 
 生成日期：2026-10-15。所有任务先读取根目录 ART_STYLE.md。
 
-## 当前角色 · accepted：v11 侧视行走接入（模板 5）
+## 历史角色 · accepted：v11 侧视行走接入（模板 5）
 
 2026-10-15 用户看过 v11 预览后授权“接入游戏吧”。当前 `../assets/hero/final_sprite/side_walk_00..07.png` 与 `hero_v08_pose_redraw_preview_v11/right_walk_preview/frames/` 八张 PNG 字节一致，take2 索引 0..7；按 v08 原姿势统一重绘，保留第 5 帧低位收腿及第 6 帧左手在背后少量露出的要求。左向整帧镜像。正背行走 v04 的 16 张及呼吸 v05 的 12 张均保持模板 4 原文件。全部 128×128 RGBA、原点 (64,112)，此次没有重采样、改姿势或改变播放速度。
 
@@ -136,3 +146,17 @@ Gorest 只负责整理/预览，新增四条 confirmed=false 素材，旧素材�
 ## 能力限制
 
 初版曾改用本地程序关节烘焙，此路线现已停止；`LAYER_CONTRACT.md` 只留历史。当前能力检查见 `hero_rebuild_v01/doctor.json`：图片生成实际可用、视频无可用路由；交付整身生成关键帧，不使用程序关节替代动作。ffmpeg 缺失不阻碍 PNG / Godot SpriteFrames。
+
+
+## 2026-10-16 地面 V0.4 候选（pending_user）
+assets/environment/ground_v04/0..5.png；受控生成1次，真实参考树石及角色同屏，route local:codex-cli / codex-image_gen。原图/提示词/哈希回执/alpha清理/拒选与比较记录位于art/ground_v04。A/B仅可玩测试区，用户未选定，不得批量替换。
+
+## 2026-10-16 · 自然轻手绘场景正式接入（用户已确认）
+assets/environment/stylized_v3：tree_0/1、rock_0/1、grass、tuft_0/1/2（实际为小花和落叶碎石，沿用旧kind槽位）。复用用户确认V0.7，不新增生成。源图/提示词/真实参考及哈希/route回执/alpha清理见art/scene_v07；runtime资源哈希和转换说明见integration.json。地面1280×720世界尺度镜像连续采样；树石原画布、脚底、坐标与碰撞保留。正式可玩入口Start-Playtest.cmd；原资产保留历史。原始图集非网格与透明雾边警告仍见QA.md。
+
+
+## 当前正式资源（2026-10-16 已确认）
+- 主角：assets/hero/cartoon，9张部件及原生AnimationPlayer；斧/木材为assets/environment/cartoon_v2/axe.png与wood.png。
+- 树石：assets/environment/view_v01/tree_0/1.png、rock_0/1.png；地表为biome_v02四张画稿，点缀为stylized_v3的tuft_0/1/2，原grass及ground_v03/ground_atlas保留运行依赖。
+- 上述均为项目已有受控生成、整理并获用户确认的素材，无新增外部商业资源。提示词与处理记录在本地art及prototypes归档中保留；本次按用户要求不推送历史原图、候选、预览与压缩包。当前树石提示词及处理元数据单独随项目保留，运行文件SHA256见CURRENT_ASSET_HASHES.json。
+- 已确认水面为scripts/terrain.gdshader，世界生成windrest-biome-0.5.0；旧候选状态只用于历史追溯，不覆盖本节。

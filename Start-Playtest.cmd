@@ -1,0 +1,8 @@
+@echo off
+set "GODOT_EXE=D:\Godot_v4.7.2-stable_win64.exe\Godot_v4.7.2-stable_win64.exe"
+if not exist "%GODOT_EXE%" (
+ echo Godot 4.7.2 not found. Open project.godot in Godot and press F5.
+ pause
+ exit /b 1
+)
+start "" "%GODOT_EXE%" --path "%~dp0."

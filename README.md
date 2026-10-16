@@ -1,66 +1,54 @@
-# 《风栖原野》V0.1
+> 已接入统一斜俯视树石与湖岸 V0.2，搭配多区域节点世界 V0.5；双击 Start-Playtest.cmd 体验。当前已验收的角色、树石与湖岸资源随正式项目提交。
 
-原创温暖手绘随机原野，当前只包含大地图、完整序列帧主角、移动与性能调试。主角保留未来逐帧模块换装模板，当前只有一套服装。
+> 当前正式版：多区域节点世界 V0.5。双击 **Start-Playtest.cmd** 游玩；**N** 新世界，正常重启沿用保存的 Seed；WASD / Shift / E / M 保持。当前生成器 `windrest-biome-0.5.0`，详见 MAP_SYSTEM.md。当前验收数据见 reports/world-v05/generation.json 和 runtime.json；截图比较页保留在本地。以下旧版本记录保留追溯。
 
-## 打开和操作
+> 当前场景美术（2026-10-16）：已确认的自然绿轻手绘 V0.7 正式接入。双击 **Start-Playtest.cmd** 游玩；WASD移动、Shift奔跑、E砍树/拾取、M地图。树石、地表和低密度花叶使用 `assets/environment/stylized_v3`，无踏草反馈。主角及玩法保持。专项结果见 `reports/scene-v3-integration-tests.json`，实际出生点画面见 `reports/scene-v3-after.png`。历史预览与下文旧版本记录仅供追溯。
 
-1. 使用 **Godot 4.7.2 Stable** 导入本目录的 `project.godot`。
-2. 等待首次图片导入完成，按 **F5** 运行主场景。初次进入显示短暂地图加载画面。
-3. **WASD / 方向键** 八方向移动；**鼠标滚轮** 缩放；**F3** 显示/隐藏 FPS、帧耗时、区块、对象和 Godot 内存指标。
+# 风栖原野 · 简化卡通场景体验版
+2026-10-16 · Godot 4.7.2 Stable · Windows PC。
 
-运行游戏不需要 Python、图片生成服务或任何 API key。工程不依赖项目目录以外的美术文件。
+## 启动
+双击项目根目录 Start-Playtest.cmd，使用本机已有 Godot 4.7.2 启动当前游戏；或在 Godot 导入 project.godot 后 F5。无需 Python、图片服务或 API key。启动入口不是独立打包 EXE，依赖本机已有引擎。
 
-## 地图参数
+- WASD / 方向键：正常移动 200 px/s。
+- 按住 Shift：奔跑 310 px/s；松开恢复行走，无体力系统。
+- E：靠近树干左右侧，看到提示后砍树；两次完整挥砍掉落一份木材。靠近木材按 E 拾取。动作期间暂时停步，结束恢复移动。
+- 滚轮缩放；F3 查看当前运行指标。
 
-在 `scenes/world.tscn` 的根节点 Inspector 中修改 `World Seed`、`Map Cells`，保存后运行。默认 Seed 为 271828、地图为 1024×1024 格；支持 128～1024 格。每格 48 px，区块为 24×24 格；地图不会一次性实例化所有对象。
+出生点附近布置五棵树、三块石头、稀疏草花和一份测试木材，中央留空用于走跑；外围仍是原有 Seed 大地图与区块加载，不是孤立截图。只做基础砍树掉落/拾取反馈，没有背包、存档或新成长系统。重启场景恢复树和掉落。
 
-也可从命令行启动（将 `godot` 替换为本机控制台版 Godot 可执行文件）：
+## 当前正式方向
+已确认的大头短腿白T短裤主角，六个原生部件支点、九张方向图片、15条 AnimationPlayer 动画：正/背/侧 breathe、walk、run、chop、pickup；左侧镜像。行走奔跑共享碰撞后位移相位，每128px一个周期，常速约.64秒，跑速约.413秒；不因按键重置步态。砍树/拾取回用已确认关键帧，不新增人物序列帧。
+环境已切换 assets/environment/cartoon_v2：两款圆冠树、两款圆石、小草/草花、木材、新斧头；草地配色和低对比地表笔刷同步更新。旧环境与完整帧资源保留归档，当前加载不再使用它们。实验中禁止正式使用的斧/树/果实未迁入。
+树干和石底为六点凸多边形碰撞，树冠不挡路，遮住主角时淡化。木材无物理阻挡，42px内且路径无遮挡才可主动拾取；砍树目标62px内且位于侧向，避免纵深动作对位错误。树砍倒后移除碰撞，当前运行中区块重载也不会复活。
 
-```powershell
-godot --path . -- --seed=42 --size=1024
+## 地图复现
+默认 Seed 271828，1024×1024格，48px/格、24×24格/区块。相同引擎、Seed、尺寸和生成器 windrest-0.1.1-cartoon 复现相同布局。该版升级反映出生点体验区、装饰密度及地表配色调整；河湖生成与基本区块机制保留。
+命令行可使用 -- --seed=42 --size=1024。
+
+## 验证与已知边界
+本轮实际 Godot 窗口 / Compatibility / RTX3060：tests/test_scene_cartoon.gd 56项检查、0失败，见 reports/scene-cartoon-tests.json。范围包括走跑/Shift、步态、树干与树冠、石底碰撞、砍树命中只执行一次、掉落拾取、倒树后通行、边界和出生区同Seed复现；实际截图见 reports/scene-cartoon-v2.png、scene-cartoon-chop.png、scene-cartoon-pickup.png。
+最初无窗口测试在第一段手动步进有2项距离时钟误差，实际60FPS窗口检查通过；未把它当作新性能数据。测试未覆盖所有Seed、长时间跨区块压力或所有岸线形状，原有五点脚下地形检测保留。本轮无新性能基准，不沿用旧版帧率承诺。
+单段四肢、左右镜像光照、简化挥砍和拾取仍是当前已确认路线的表现边界。两次砍击后树摇动淡出，不包含物理倒树或树桩玩法。视觉统一与主观手感待用户验收。
+图片实际路线 local:codex-cli / codex-image_gen，一次生成，无视频；精确底层图片模型与实际费用未公开。原图格线越界及透明雾点已按物件完整轮廓整理，不按格线硬切；整理后仍有 safe_frame 警告，见 art/scene_cartoon_v2/QA.md，不声明全部美术QC通过。
+
+## 规范与追溯
+ART_STYLE.md、CHARACTER_SEQUENCE_WORKFLOW.md、CHARACTER_MODULAR_RULES.md 为当前规范；AGENTS.md 已同步。旧 Gorest、完整帧模板和 prototypes 保留历史记录，不是正式生产默认路线。
+art/scene_cartoon_v2 包含提示词、生成回执、来源、完整源图、裁片坐标与哈希、QA、原生动作整理源；assets/hero/cartoon 为当前玩家，assets/environment/cartoon_v2 为当前景物。DEVLOG.md 记录本轮范围。
+
+相关检查：
 ```
-
-相同 Godot 版本、相同生成器版本 `windrest-0.1.0`、相同 Seed 和地图尺寸应得到相同结果。更改尺寸也会影响河湖位置，复现时请一并记录尺寸。水域不可通行，河流的浅滩可步行跨越。
-
-## 主角及美术
-
-当前使用一个完整角色 AnimatedSprite2D，front/back/side 各四张呼吸待机及八张行走帧，左向复用完整侧面镜像。正/背行走沿用已确认 v04，侧面采用按 v08 原姿势统一重绘并确认的 v11，呼吸沿用 v05 脚底修订，450 ms×4=1.8 秒。常规速度为 **115 px/s**，斜向速度归一化。统一 128×128 画布、(64,112) 脚底原点；行走按碰撞后实际位移推进，周期距离仍为 200/3 px，当前步频为 13.8 帧/秒。旧 14 层裁片与关节烘焙已停用，不能作为未来服装的模板。
-
-`assets/hero/` 下 `reference/` 保存身份、三视图与当前帧预览，`final_sprite/` 保存 36 张完整帧，`animation/hero.tres` 是可直接加载的 Godot SpriteFrames，`modular_plan/` 保存模板 5 的哈希和相位。后续身体、发型、上衣、裤装、鞋子及饰品须按同方向、同帧模板逐帧重绘；完整规则见 `CHARACTER_MODULAR_RULES.md`。本轮没有正式换装系统。
-
-全部图片经 `generate2dsprite` skill 的受控图片工作流生成，经过候选筛选、透明裁片整理和实际导入；未使用外部商业游戏素材。详见 `art/ASSET_MANIFEST.md`。新增素材前必须读取 `ART_STYLE.md`。
-
-**动画质量：侧视 v11 经用户确认后接入。** 本轮仅原样替换 8 张侧面行走 PNG，其余 28 张运行帧保持字节一致，没有新图片或视频调用，也没有重新缩放。源图由 host:image_gen 生成、generate2dmedia adopt 留存并用 Gorest 整理；本次采用 generate2dsprite 的现有素材打包/导出。仍保留轻微轮廓、颜色和侧面投影变化，左向光照随镜像翻转。未宣称零滑步、人工逐帧手绘或图生视频成果。
-
-![当前主角实际场景](reports/character-world.png)
-
-## 验证和性能
-
-本轮仅做匹配接入范围的最小验证：36 PNG 源哈希/模板/图集及 28 张保留帧核对，Godot 4.7.2 导入、四方向全部 48 个固定姿势渲染、八方向短移动、完整行走周期及走停呼吸通过。没有重跑历史 180 次切换、树石/湖岸专项、地图或性能回归；详见 `reports/CHARACTER_VALIDATION.md`。早期地图与性能验证保留在 `reports/VALIDATION.md`。
-
-以下为角色重建前的历史性能数据，本轮未重跑压力测试：RTX 3060、1280×720、关闭垂直同步的 90 秒加速跨区块测试 P95 1.32 ms、P99 1.849 ms、最大 18.444 ms；加载 230 / 卸载 200 区块，未记录缺地面或可视缺块。Godot 静态内存峰值 62.79 MiB。不能将其作为本轮角色版本的实测性能或所有配置稳定 60 FPS 的承诺。
-
-只验证本轮和必要依赖，无额外玩法与全量回归。
-
-## 相关文件
-
-- `ART_STYLE.md`：长期美术规范与参考色。
-- `AGENTS.md`：后续执行边界与美术流程。
-- `DEVLOG.md`：交付、实际验证、能力和遗留问题。
-- `art/`：生成候选、样板、源部件、动作预览、来源、QC。
-- `assets/`：运行时透明图集及环境图片。
-- `reports/`：机器可读测试结果、性能原始数据、Godot 实际截图。
-
-复现相关验证：
-
-```powershell
-godot --headless --path . --editor --import --quit
-godot --headless --path . --script tests/test_world.gd
-godot --headless --path . --script tests/test_player.gd
-godot --path . --max-fps 60 --script tests/test_character_smoke.gd
-godot --path . -- --benchmark --seconds=90 --report=stress-1024
+Godot --path . --max-fps 60 --script tests/test_scene_cartoon.gd
+Godot --path . --max-fps 60 --script tests/capture_scene_cartoon.gd
 ```
+旧 tests/test_cartoon_player.gd 断言旧六条动画，仅作上次接入历史验证；tests/test_player.gd 等 SpriteFrames 检查也不是当前接口。本轮使用上面的新检查，不默认全量回归。完成后停止等待验收。
 
-最后一条会运行渲染压力测试并结束，报告写入 `reports/`；加速穿越仅用于测试，不影响正常移动。`--capture` 会增加 GPU 读回开销，性能测试时不要使用。
+## V0.3 当前运行
 
-当前角色导入记录为 `tools/integrate_side_walk_v11.py`，检查为 `tools/verify_character.py`；staging、skill 循环整理 / Godot 导出及模板 4 备份保存在 `art/hero_v11_runtime_v05/`。历史导入脚本与旧 art 目录仅供追溯，不能发布为当前模板。旧 `prepare_art.py` / `verify_art.py` 已明确停用。离线工具需要 Python、Pillow、NumPy 等；游戏运行不需要。`tools/package_project.py` 可生成工程压缩包，本轮未重新打包，旧压缩包不包含此次侧视替换。
+双击 Start-Playtest.cmd；依赖本机已有 Godot 4.7.2，不是独立免安装EXE。WASD移动、Shift奔跑、E砍树/拾取、M地图、Esc关闭地图；地图可滚轮缩放及左键拖动。当前地表/地图/动作说明见 MAP_SYSTEM.md。专项检查：tests/test_v03.gd；保留原移动/碰撞依赖检查报告 reports/v03-regression.json。
+
+实景：reports/v03-after.png、v03-forest.png、v03-mountain.png、v03-shore.png；前版同位置：v03-before.png。连续砍树与拾取预览：v03-continuous-chop.gif、v03-pickup.gif。美术来源与原图警告：art/ground_v03/QA.md。
+
+
+当前地面候选预览：双击 Start-Ground-Preview.cmd，1旧版/2A/3B，0出生点、4森林/5山地/6水岸。WASD、Shift、E、M沿用；Start-Playtest.cmd仍为旧地面正式体验。候选生产门槛见 SCENE_ART_WORKFLOW.md，未选定不全图推广。
+

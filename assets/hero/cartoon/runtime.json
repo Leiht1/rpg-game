@@ -1,0 +1,30 @@
+{
+  "schema": "windrest.cartoon_actor.v1",
+  "canvas": [
+    128,
+    128
+  ],
+  "anchor": [
+    64,
+    112
+  ],
+  "stride_world_units": 128.0,
+  "idle_cycle_ms": 1800,
+  "movement_speed": 200,
+  "source": "prototypes/cartoon_rig_v1_r4",
+  "directions": [
+    "front",
+    "back",
+    "side"
+  ],
+  "actions": [
+    "breathe",
+    "walk",
+    "run",
+    "chop",
+    "pickup"
+  ],
+  "walk_clock": "actual post-collision distance",
+  "run_speed": 310,
+  "run_clock": "shared post-collision gait phase, 128 units/cycle"
+}

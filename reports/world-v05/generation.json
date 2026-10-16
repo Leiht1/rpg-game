@@ -1,0 +1,2243 @@
+{
+  "checks": [
+    {
+      "details": "",
+      "name": "node count 271828",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "cells": 6133,
+          "kind": 1
+        },
+        {
+          "cells": 5725,
+          "kind": 2
+        },
+        {
+          "cells": 6107,
+          "kind": 2
+        },
+        {
+          "cells": 2890,
+          "kind": 0
+        },
+        {
+          "cells": 6326,
+          "kind": 1
+        },
+        {
+          "cells": 4615,
+          "kind": 0
+        },
+        {
+          "cells": 5068,
+          "kind": 0
+        }
+      ],
+      "name": "large connected ecologies 271828",
+      "pass": true
+    },
+    {
+      "details": [
+        3,
+        2,
+        2
+      ],
+      "name": "every biome repeats in separate places 271828",
+      "pass": true
+    },
+    {
+      "details": [
+        6326,
+        2940,
+        6107,
+        5068,
+        5725,
+        4615,
+        2890,
+        3193
+      ],
+      "name": "territory area limits 271828",
+      "pass": true
+    },
+    {
+      "details": [
+        12573,
+        12459,
+        11832
+      ],
+      "name": "biome coverage 271828",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "no meaningful micro fragments 271828",
+      "pass": true
+    },
+    {
+      "details": 1.0,
+      "name": "land connectivity 271828",
+      "pass": true
+    },
+    {
+      "details": [
+        128,
+        111,
+        98
+      ],
+      "name": "large continuous water bodies 271828",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "full grid repeat and worker determinism 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "natural meadow interior spawn 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "protected travel routes dry 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 271828/0",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 271828/1",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 271828/2",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "terrain and subenvironment chunk seams 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "prop repeat and worker match 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "node count 81273",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "cells": 3383,
+          "kind": 2
+        },
+        {
+          "cells": 2927,
+          "kind": 0
+        },
+        {
+          "cells": 5563,
+          "kind": 2
+        },
+        {
+          "cells": 2344,
+          "kind": 1
+        },
+        {
+          "cells": 2376,
+          "kind": 0
+        },
+        {
+          "cells": 2310,
+          "kind": 2
+        },
+        {
+          "cells": 3148,
+          "kind": 0
+        },
+        {
+          "cells": 2737,
+          "kind": 2
+        },
+        {
+          "cells": 3276,
+          "kind": 1
+        },
+        {
+          "cells": 3439,
+          "kind": 2
+        },
+        {
+          "cells": 2771,
+          "kind": 1
+        },
+        {
+          "cells": 2590,
+          "kind": 0
+        }
+      ],
+      "name": "large connected ecologies 81273",
+      "pass": true
+    },
+    {
+      "details": [
+        4,
+        3,
+        5
+      ],
+      "name": "every biome repeats in separate places 81273",
+      "pass": true
+    },
+    {
+      "details": [
+        2590,
+        3383,
+        5563,
+        3439,
+        2737,
+        2310,
+        2927,
+        3148,
+        3276,
+        2771,
+        2344,
+        2376
+      ],
+      "name": "territory area limits 81273",
+      "pass": true
+    },
+    {
+      "details": [
+        11041,
+        8391,
+        17432
+      ],
+      "name": "biome coverage 81273",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "no meaningful micro fragments 81273",
+      "pass": true
+    },
+    {
+      "details": 1.0,
+      "name": "land connectivity 81273",
+      "pass": true
+    },
+    {
+      "details": [
+        161,
+        70,
+        160,
+        168,
+        131,
+        136
+      ],
+      "name": "large continuous water bodies 81273",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "full grid repeat and worker determinism 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "natural meadow interior spawn 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "protected travel routes dry 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 81273/0",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 81273/1",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 81273/2",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "terrain and subenvironment chunk seams 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "prop repeat and worker match 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "node count 902106",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "cells": 3418,
+          "kind": 2
+        },
+        {
+          "cells": 2858,
+          "kind": 0
+        },
+        {
+          "cells": 8928,
+          "kind": 1
+        },
+        {
+          "cells": 3199,
+          "kind": 2
+        },
+        {
+          "cells": 3444,
+          "kind": 0
+        },
+        {
+          "cells": 4019,
+          "kind": 0
+        },
+        {
+          "cells": 4076,
+          "kind": 2
+        },
+        {
+          "cells": 2985,
+          "kind": 1
+        },
+        {
+          "cells": 3937,
+          "kind": 1
+        }
+      ],
+      "name": "large connected ecologies 902106",
+      "pass": true
+    },
+    {
+      "details": [
+        3,
+        3,
+        3
+      ],
+      "name": "every biome repeats in separate places 902106",
+      "pass": true
+    },
+    {
+      "details": [
+        5616,
+        4076,
+        3418,
+        3937,
+        3444,
+        4019,
+        3312,
+        2985,
+        2858,
+        3199
+      ],
+      "name": "territory area limits 902106",
+      "pass": true
+    },
+    {
+      "details": [
+        10321,
+        15850,
+        10693
+      ],
+      "name": "biome coverage 902106",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "no meaningful micro fragments 902106",
+      "pass": true
+    },
+    {
+      "details": 1.0,
+      "name": "land connectivity 902106",
+      "pass": true
+    },
+    {
+      "details": [
+        165,
+        133,
+        197,
+        90
+      ],
+      "name": "large continuous water bodies 902106",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "full grid repeat and worker determinism 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "natural meadow interior spawn 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "protected travel routes dry 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 902106/0",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 902106/1",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 902106/2",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "terrain and subenvironment chunk seams 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "prop repeat and worker match 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "node count 42",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "cells": 4240,
+          "kind": 2
+        },
+        {
+          "cells": 4061,
+          "kind": 1
+        },
+        {
+          "cells": 3401,
+          "kind": 0
+        },
+        {
+          "cells": 4840,
+          "kind": 2
+        },
+        {
+          "cells": 3381,
+          "kind": 0
+        },
+        {
+          "cells": 2252,
+          "kind": 1
+        },
+        {
+          "cells": 3067,
+          "kind": 0
+        },
+        {
+          "cells": 4366,
+          "kind": 1
+        },
+        {
+          "cells": 4262,
+          "kind": 2
+        },
+        {
+          "cells": 2994,
+          "kind": 2
+        }
+      ],
+      "name": "large connected ecologies 42",
+      "pass": true
+    },
+    {
+      "details": [
+        3,
+        3,
+        4
+      ],
+      "name": "every biome repeats in separate places 42",
+      "pass": true
+    },
+    {
+      "details": [
+        2147,
+        4262,
+        4240,
+        3401,
+        2994,
+        4366,
+        3380,
+        4061,
+        2693,
+        2253,
+        3067
+      ],
+      "name": "territory area limits 42",
+      "pass": true
+    },
+    {
+      "details": [
+        9849,
+        10679,
+        16336
+      ],
+      "name": "biome coverage 42",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "no meaningful micro fragments 42",
+      "pass": true
+    },
+    {
+      "details": 1.0,
+      "name": "land connectivity 42",
+      "pass": true
+    },
+    {
+      "details": [
+        160,
+        184,
+        94
+      ],
+      "name": "large continuous water bodies 42",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "full grid repeat and worker determinism 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "natural meadow interior spawn 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "protected travel routes dry 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 42/0",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 42/1",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 42/2",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "terrain and subenvironment chunk seams 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "prop repeat and worker match 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "node count 170219",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "cells": 4116,
+          "kind": 2
+        },
+        {
+          "cells": 4468,
+          "kind": 1
+        },
+        {
+          "cells": 3698,
+          "kind": 2
+        },
+        {
+          "cells": 4065,
+          "kind": 0
+        },
+        {
+          "cells": 3000,
+          "kind": 1
+        },
+        {
+          "cells": 3517,
+          "kind": 1
+        },
+        {
+          "cells": 11514,
+          "kind": 2
+        },
+        {
+          "cells": 2486,
+          "kind": 0
+        }
+      ],
+      "name": "large connected ecologies 170219",
+      "pass": true
+    },
+    {
+      "details": [
+        2,
+        3,
+        3
+      ],
+      "name": "every biome repeats in separate places 170219",
+      "pass": true
+    },
+    {
+      "details": [
+        6666,
+        3698,
+        4116,
+        4848,
+        4065,
+        3517,
+        4468,
+        3000,
+        2486
+      ],
+      "name": "territory area limits 170219",
+      "pass": true
+    },
+    {
+      "details": [
+        6551,
+        10985,
+        19328
+      ],
+      "name": "biome coverage 170219",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "no meaningful micro fragments 170219",
+      "pass": true
+    },
+    {
+      "details": 1.0,
+      "name": "land connectivity 170219",
+      "pass": true
+    },
+    {
+      "details": [
+        143,
+        177,
+        154,
+        133,
+        102,
+        195
+      ],
+      "name": "large continuous water bodies 170219",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "full grid repeat and worker determinism 170219",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "natural meadow interior spawn 170219",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "protected travel routes dry 170219",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 170219/0",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 170219/1",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 170219/2",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "terrain and subenvironment chunk seams 170219",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "prop repeat and worker match 170219",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "node count 630947",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "cells": 4318,
+          "kind": 2
+        },
+        {
+          "cells": 4162,
+          "kind": 1
+        },
+        {
+          "cells": 5641,
+          "kind": 2
+        },
+        {
+          "cells": 3493,
+          "kind": 1
+        },
+        {
+          "cells": 2936,
+          "kind": 0
+        },
+        {
+          "cells": 2955,
+          "kind": 0
+        },
+        {
+          "cells": 4187,
+          "kind": 1
+        },
+        {
+          "cells": 3191,
+          "kind": 1
+        },
+        {
+          "cells": 3512,
+          "kind": 2
+        },
+        {
+          "cells": 2469,
+          "kind": 2
+        }
+      ],
+      "name": "large connected ecologies 630947",
+      "pass": true
+    },
+    {
+      "details": [
+        2,
+        4,
+        4
+      ],
+      "name": "every biome repeats in separate places 630947",
+      "pass": true
+    },
+    {
+      "details": [
+        4318,
+        2955,
+        3512,
+        3338,
+        3191,
+        2936,
+        4187,
+        3493,
+        4162,
+        2469,
+        2303
+      ],
+      "name": "territory area limits 630947",
+      "pass": true
+    },
+    {
+      "details": [
+        5891,
+        15033,
+        15940
+      ],
+      "name": "biome coverage 630947",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "no meaningful micro fragments 630947",
+      "pass": true
+    },
+    {
+      "details": 1.0,
+      "name": "land connectivity 630947",
+      "pass": true
+    },
+    {
+      "details": [
+        182,
+        172,
+        114,
+        174,
+        154,
+        124
+      ],
+      "name": "large continuous water bodies 630947",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "full grid repeat and worker determinism 630947",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "natural meadow interior spawn 630947",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "protected travel routes dry 630947",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 630947/0",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 630947/1",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 630947/2",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "terrain and subenvironment chunk seams 630947",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "prop repeat and worker match 630947",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "node count 104729",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "cells": 3025,
+          "kind": 2
+        },
+        {
+          "cells": 5888,
+          "kind": 1
+        },
+        {
+          "cells": 3220,
+          "kind": 0
+        },
+        {
+          "cells": 2984,
+          "kind": 1
+        },
+        {
+          "cells": 2961,
+          "kind": 2
+        },
+        {
+          "cells": 2761,
+          "kind": 0
+        },
+        {
+          "cells": 3058,
+          "kind": 0
+        },
+        {
+          "cells": 3143,
+          "kind": 0
+        },
+        {
+          "cells": 5120,
+          "kind": 2
+        },
+        {
+          "cells": 4704,
+          "kind": 1
+        }
+      ],
+      "name": "large connected ecologies 104729",
+      "pass": true
+    },
+    {
+      "details": [
+        4,
+        3,
+        3
+      ],
+      "name": "every biome repeats in separate places 104729",
+      "pass": true
+    },
+    {
+      "details": [
+        3586,
+        4704,
+        5120,
+        2984,
+        2761,
+        3143,
+        3025,
+        3220,
+        2961,
+        3058,
+        2302
+      ],
+      "name": "territory area limits 104729",
+      "pass": true
+    },
+    {
+      "details": [
+        12182,
+        13576,
+        11106
+      ],
+      "name": "biome coverage 104729",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "no meaningful micro fragments 104729",
+      "pass": true
+    },
+    {
+      "details": 1.0,
+      "name": "land connectivity 104729",
+      "pass": true
+    },
+    {
+      "details": [
+        106,
+        92,
+        143,
+        89,
+        188,
+        61
+      ],
+      "name": "large continuous water bodies 104729",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "full grid repeat and worker determinism 104729",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "natural meadow interior spawn 104729",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "protected travel routes dry 104729",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 104729/0",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 104729/1",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 104729/2",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "terrain and subenvironment chunk seams 104729",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "prop repeat and worker match 104729",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "node count 524287",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "cells": 4729,
+          "kind": 2
+        },
+        {
+          "cells": 6067,
+          "kind": 0
+        },
+        {
+          "cells": 5576,
+          "kind": 2
+        },
+        {
+          "cells": 3008,
+          "kind": 1
+        },
+        {
+          "cells": 4701,
+          "kind": 1
+        },
+        {
+          "cells": 5719,
+          "kind": 2
+        },
+        {
+          "cells": 4379,
+          "kind": 0
+        },
+        {
+          "cells": 2685,
+          "kind": 0
+        }
+      ],
+      "name": "large connected ecologies 524287",
+      "pass": true
+    },
+    {
+      "details": [
+        3,
+        2,
+        3
+      ],
+      "name": "every biome repeats in separate places 524287",
+      "pass": true
+    },
+    {
+      "details": [
+        5719,
+        5576,
+        4379,
+        4729,
+        6067,
+        4701,
+        3008,
+        2685
+      ],
+      "name": "territory area limits 524287",
+      "pass": true
+    },
+    {
+      "details": [
+        13131,
+        7709,
+        16024
+      ],
+      "name": "biome coverage 524287",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "no meaningful micro fragments 524287",
+      "pass": true
+    },
+    {
+      "details": 1.0,
+      "name": "land connectivity 524287",
+      "pass": true
+    },
+    {
+      "details": [
+        171,
+        202,
+        159
+      ],
+      "name": "large continuous water bodies 524287",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "full grid repeat and worker determinism 524287",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "natural meadow interior spawn 524287",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "protected travel routes dry 524287",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 524287/0",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 524287/1",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 524287/2",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "terrain and subenvironment chunk seams 524287",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "prop repeat and worker match 524287",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "node count 8675309",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "cells": 4510,
+          "kind": 0
+        },
+        {
+          "cells": 4436,
+          "kind": 1
+        },
+        {
+          "cells": 4112,
+          "kind": 2
+        },
+        {
+          "cells": 8694,
+          "kind": 2
+        },
+        {
+          "cells": 6635,
+          "kind": 0
+        },
+        {
+          "cells": 4180,
+          "kind": 1
+        },
+        {
+          "cells": 4297,
+          "kind": 2
+        }
+      ],
+      "name": "large connected ecologies 8675309",
+      "pass": true
+    },
+    {
+      "details": [
+        2,
+        2,
+        3
+      ],
+      "name": "every biome repeats in separate places 8675309",
+      "pass": true
+    },
+    {
+      "details": [
+        6635,
+        4510,
+        4802,
+        4112,
+        4180,
+        4436,
+        3892,
+        4297
+      ],
+      "name": "territory area limits 8675309",
+      "pass": true
+    },
+    {
+      "details": [
+        11145,
+        8616,
+        17103
+      ],
+      "name": "biome coverage 8675309",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "no meaningful micro fragments 8675309",
+      "pass": true
+    },
+    {
+      "details": 0.999972302237979,
+      "name": "land connectivity 8675309",
+      "pass": true
+    },
+    {
+      "details": [
+        114,
+        166,
+        134,
+        171,
+        144
+      ],
+      "name": "large continuous water bodies 8675309",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "full grid repeat and worker determinism 8675309",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "natural meadow interior spawn 8675309",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "protected travel routes dry 8675309",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 8675309/0",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 8675309/1",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 8675309/2",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "terrain and subenvironment chunk seams 8675309",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "prop repeat and worker match 8675309",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "node count 314159",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "cells": 3583,
+          "kind": 1
+        },
+        {
+          "cells": 2900,
+          "kind": 0
+        },
+        {
+          "cells": 4303,
+          "kind": 1
+        },
+        {
+          "cells": 5768,
+          "kind": 2
+        },
+        {
+          "cells": 4556,
+          "kind": 0
+        },
+        {
+          "cells": 3511,
+          "kind": 0
+        },
+        {
+          "cells": 2989,
+          "kind": 1
+        },
+        {
+          "cells": 3551,
+          "kind": 2
+        },
+        {
+          "cells": 2726,
+          "kind": 1
+        },
+        {
+          "cells": 2977,
+          "kind": 0
+        }
+      ],
+      "name": "large connected ecologies 314159",
+      "pass": true
+    },
+    {
+      "details": [
+        4,
+        4,
+        2
+      ],
+      "name": "every biome repeats in separate places 314159",
+      "pass": true
+    },
+    {
+      "details": [
+        2989,
+        4303,
+        2726,
+        3583,
+        4556,
+        3551,
+        2977,
+        3511,
+        3481,
+        2899,
+        2288
+      ],
+      "name": "territory area limits 314159",
+      "pass": true
+    },
+    {
+      "details": [
+        13944,
+        13601,
+        9319
+      ],
+      "name": "biome coverage 314159",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "no meaningful micro fragments 314159",
+      "pass": true
+    },
+    {
+      "details": 1.0,
+      "name": "land connectivity 314159",
+      "pass": true
+    },
+    {
+      "details": [
+        81,
+        171,
+        159,
+        170
+      ],
+      "name": "large continuous water bodies 314159",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "full grid repeat and worker determinism 314159",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "natural meadow interior spawn 314159",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "protected travel routes dry 314159",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 314159/0",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 314159/1",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "subenvironment variety 314159/2",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "terrain and subenvironment chunk seams 314159",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "prop repeat and worker match 314159",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "ten different macro layouts",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "count variation across seeds",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "smaller map scaled plan 128",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "smaller map scaled plan 256",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "smaller map scaled plan 512",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "generator": "windrest-biome-0.5.0",
+  "note": "192 square floodfill sampled evidence, not subpixel proof. Overview PNGs are generator data visualizations.",
+  "seeds": [
+    {
+      "biome_areas": [
+        12573,
+        12459,
+        11832
+      ],
+      "biome_repeats": [
+        3,
+        2,
+        2
+      ],
+      "chunk_build_ms": 49.954,
+      "hash": "876943852",
+      "lakes": 3,
+      "land_reachable_fraction": 1.0,
+      "major_components": [
+        {
+          "cells": 6133,
+          "kind": 1
+        },
+        {
+          "cells": 5725,
+          "kind": 2
+        },
+        {
+          "cells": 6107,
+          "kind": 2
+        },
+        {
+          "cells": 2890,
+          "kind": 0
+        },
+        {
+          "cells": 6326,
+          "kind": 1
+        },
+        {
+          "cells": 4615,
+          "kind": 0
+        },
+        {
+          "cells": 5068,
+          "kind": 0
+        }
+      ],
+      "neighbors": "[(1, 7), (1, 4), (2, 7), (6, 7), (1, 6), (2, 6), (4, 6), (0, 6), (0, 4), (0, 2), (0, 5), (4, 5), (2, 3), (0, 3)]",
+      "node_areas": [
+        6326,
+        2940,
+        6107,
+        5068,
+        5725,
+        4615,
+        2890,
+        3193
+      ],
+      "nodes": 8,
+      "plan_build_ms": 64.571,
+      "rivers": 0,
+      "seed": 271828,
+      "spawn": "(17203.2, 24576.0)",
+      "water_component_cells": [
+        128,
+        111,
+        98
+      ]
+    },
+    {
+      "biome_areas": [
+        11041,
+        8391,
+        17432
+      ],
+      "biome_repeats": [
+        4,
+        3,
+        5
+      ],
+      "chunk_build_ms": 61.226,
+      "hash": "2776425553",
+      "lakes": 6,
+      "land_reachable_fraction": 1.0,
+      "major_components": [
+        {
+          "cells": 3383,
+          "kind": 2
+        },
+        {
+          "cells": 2927,
+          "kind": 0
+        },
+        {
+          "cells": 5563,
+          "kind": 2
+        },
+        {
+          "cells": 2344,
+          "kind": 1
+        },
+        {
+          "cells": 2376,
+          "kind": 0
+        },
+        {
+          "cells": 2310,
+          "kind": 2
+        },
+        {
+          "cells": 3148,
+          "kind": 0
+        },
+        {
+          "cells": 2737,
+          "kind": 2
+        },
+        {
+          "cells": 3276,
+          "kind": 1
+        },
+        {
+          "cells": 3439,
+          "kind": 2
+        },
+        {
+          "cells": 2771,
+          "kind": 1
+        },
+        {
+          "cells": 2590,
+          "kind": 0
+        }
+      ],
+      "neighbors": "[(1, 6), (2, 6), (6, 10), (2, 10), (1, 10), (2, 11), (5, 11), (1, 7), (7, 10), (4, 10), (4, 11), (4, 7), (7, 8), (4, 8), (3, 7), (9, 11), (5, 9), (3, 8), (4, 9), (0, 4), (0, 9), (0, 8)]",
+      "node_areas": [
+        2590,
+        3383,
+        5563,
+        3439,
+        2737,
+        2310,
+        2927,
+        3148,
+        3276,
+        2771,
+        2344,
+        2376
+      ],
+      "nodes": 12,
+      "plan_build_ms": 84.457,
+      "rivers": 1,
+      "seed": 81273,
+      "spawn": "(27033.6, 24576.0)",
+      "water_component_cells": [
+        161,
+        70,
+        160,
+        168,
+        131,
+        136
+      ]
+    },
+    {
+      "biome_areas": [
+        10321,
+        15850,
+        10693
+      ],
+      "biome_repeats": [
+        3,
+        3,
+        3
+      ],
+      "chunk_build_ms": 89.063,
+      "hash": "3089455500",
+      "lakes": 4,
+      "land_reachable_fraction": 1.0,
+      "major_components": [
+        {
+          "cells": 3418,
+          "kind": 2
+        },
+        {
+          "cells": 2858,
+          "kind": 0
+        },
+        {
+          "cells": 8928,
+          "kind": 1
+        },
+        {
+          "cells": 3199,
+          "kind": 2
+        },
+        {
+          "cells": 3444,
+          "kind": 0
+        },
+        {
+          "cells": 4019,
+          "kind": 0
+        },
+        {
+          "cells": 4076,
+          "kind": 2
+        },
+        {
+          "cells": 2985,
+          "kind": 1
+        },
+        {
+          "cells": 3937,
+          "kind": 1
+        }
+      ],
+      "neighbors": "[(2, 8), (0, 8), (2, 6), (6, 8), (0, 6), (0, 9), (2, 4), (4, 6), (5, 6), (0, 5), (5, 9), (1, 6), (1, 5), (1, 4), (4, 7), (3, 9), (1, 7), (3, 5), (1, 3)]",
+      "node_areas": [
+        5616,
+        4076,
+        3418,
+        3937,
+        3444,
+        4019,
+        3312,
+        2985,
+        2858,
+        3199
+      ],
+      "nodes": 10,
+      "plan_build_ms": 80.803,
+      "rivers": 2,
+      "seed": 902106,
+      "spawn": "(19660.8, 34406.4)",
+      "water_component_cells": [
+        165,
+        133,
+        197,
+        90
+      ]
+    },
+    {
+      "biome_areas": [
+        9849,
+        10679,
+        16336
+      ],
+      "biome_repeats": [
+        3,
+        3,
+        4
+      ],
+      "chunk_build_ms": 66.846,
+      "hash": "3814429064",
+      "lakes": 3,
+      "land_reachable_fraction": 1.0,
+      "major_components": [
+        {
+          "cells": 4240,
+          "kind": 2
+        },
+        {
+          "cells": 4061,
+          "kind": 1
+        },
+        {
+          "cells": 3401,
+          "kind": 0
+        },
+        {
+          "cells": 4840,
+          "kind": 2
+        },
+        {
+          "cells": 3381,
+          "kind": 0
+        },
+        {
+          "cells": 2252,
+          "kind": 1
+        },
+        {
+          "cells": 3067,
+          "kind": 0
+        },
+        {
+          "cells": 4366,
+          "kind": 1
+        },
+        {
+          "cells": 4262,
+          "kind": 2
+        },
+        {
+          "cells": 2994,
+          "kind": 2
+        }
+      ],
+      "neighbors": "[(2, 7), (3, 7), (3, 8), (2, 6), (6, 7), (7, 8), (0, 7), (0, 8), (2, 9), (6, 9), (0, 6), (0, 10), (8, 10), (5, 6), (0, 5), (1, 9), (1, 6), (1, 5), (5, 10), (4, 5), (4, 10)]",
+      "node_areas": [
+        2147,
+        4262,
+        4240,
+        3401,
+        2994,
+        4366,
+        3380,
+        4061,
+        2693,
+        2253,
+        3067
+      ],
+      "nodes": 11,
+      "plan_build_ms": 96.764,
+      "rivers": 1,
+      "seed": 42,
+      "spawn": "(27033.6, 22118.4)",
+      "water_component_cells": [
+        160,
+        184,
+        94
+      ]
+    },
+    {
+      "biome_areas": [
+        6551,
+        10985,
+        19328
+      ],
+      "biome_repeats": [
+        2,
+        3,
+        3
+      ],
+      "chunk_build_ms": 55.554,
+      "hash": "3749423463",
+      "lakes": 6,
+      "land_reachable_fraction": 1.0,
+      "major_components": [
+        {
+          "cells": 4116,
+          "kind": 2
+        },
+        {
+          "cells": 4468,
+          "kind": 1
+        },
+        {
+          "cells": 3698,
+          "kind": 2
+        },
+        {
+          "cells": 4065,
+          "kind": 0
+        },
+        {
+          "cells": 3000,
+          "kind": 1
+        },
+        {
+          "cells": 3517,
+          "kind": 1
+        },
+        {
+          "cells": 11514,
+          "kind": 2
+        },
+        {
+          "cells": 2486,
+          "kind": 0
+        }
+      ],
+      "neighbors": "[(2, 6), (1, 6), (2, 4), (4, 6), (2, 7), (4, 7), (1, 4), (4, 5), (1, 5), (0, 7), (0, 4), (3, 4), (3, 5), (0, 3), (5, 8), (3, 8)]",
+      "node_areas": [
+        6666,
+        3698,
+        4116,
+        4848,
+        4065,
+        3517,
+        4468,
+        3000,
+        2486
+      ],
+      "nodes": 9,
+      "plan_build_ms": 75.713,
+      "rivers": 1,
+      "seed": 170219,
+      "spawn": "(24576.0, 31948.8)",
+      "water_component_cells": [
+        143,
+        177,
+        154,
+        133,
+        102,
+        195
+      ]
+    },
+    {
+      "biome_areas": [
+        5891,
+        15033,
+        15940
+      ],
+      "biome_repeats": [
+        2,
+        4,
+        4
+      ],
+      "chunk_build_ms": 59.543,
+      "hash": "2032103688",
+      "lakes": 6,
+      "land_reachable_fraction": 1.0,
+      "major_components": [
+        {
+          "cells": 4318,
+          "kind": 2
+        },
+        {
+          "cells": 4162,
+          "kind": 1
+        },
+        {
+          "cells": 5641,
+          "kind": 2
+        },
+        {
+          "cells": 3493,
+          "kind": 1
+        },
+        {
+          "cells": 2936,
+          "kind": 0
+        },
+        {
+          "cells": 2955,
+          "kind": 0
+        },
+        {
+          "cells": 4187,
+          "kind": 1
+        },
+        {
+          "cells": 3191,
+          "kind": 1
+        },
+        {
+          "cells": 3512,
+          "kind": 2
+        },
+        {
+          "cells": 2469,
+          "kind": 2
+        }
+      ],
+      "neighbors": "[(0, 8), (3, 8), (3, 7), (0, 5), (5, 8), (3, 5), (3, 10), (7, 10), (1, 7), (1, 10), (5, 10), (0, 6), (5, 6), (4, 5), (4, 10), (2, 6), (2, 5), (1, 4), (2, 4), (4, 9), (1, 9)]",
+      "node_areas": [
+        4318,
+        2955,
+        3512,
+        3338,
+        3191,
+        2936,
+        4187,
+        3493,
+        4162,
+        2469,
+        2303
+      ],
+      "nodes": 11,
+      "plan_build_ms": 89.658,
+      "rivers": 4,
+      "seed": 630947,
+      "spawn": "(29491.2, 27033.6)",
+      "water_component_cells": [
+        182,
+        172,
+        114,
+        174,
+        154,
+        124
+      ]
+    },
+    {
+      "biome_areas": [
+        12182,
+        13576,
+        11106
+      ],
+      "biome_repeats": [
+        4,
+        3,
+        3
+      ],
+      "chunk_build_ms": 84.904,
+      "hash": "78007663",
+      "lakes": 6,
+      "land_reachable_fraction": 1.0,
+      "major_components": [
+        {
+          "cells": 3025,
+          "kind": 2
+        },
+        {
+          "cells": 5888,
+          "kind": 1
+        },
+        {
+          "cells": 3220,
+          "kind": 0
+        },
+        {
+          "cells": 2984,
+          "kind": 1
+        },
+        {
+          "cells": 2961,
+          "kind": 2
+        },
+        {
+          "cells": 2761,
+          "kind": 0
+        },
+        {
+          "cells": 3058,
+          "kind": 0
+        },
+        {
+          "cells": 3143,
+          "kind": 0
+        },
+        {
+          "cells": 5120,
+          "kind": 2
+        },
+        {
+          "cells": 4704,
+          "kind": 1
+        }
+      ],
+      "neighbors": "[(0, 6), (0, 7), (3, 7), (0, 8), (7, 8), (4, 6), (0, 4), (3, 8), (4, 10), (0, 10), (8, 10), (8, 9), (3, 9), (5, 10), (5, 8), (2, 4), (2, 10), (2, 5), (1, 5), (1, 8), (1, 9), (1, 2)]",
+      "node_areas": [
+        3586,
+        4704,
+        5120,
+        2984,
+        2761,
+        3143,
+        3025,
+        3220,
+        2961,
+        3058,
+        2302
+      ],
+      "nodes": 11,
+      "plan_build_ms": 95.095,
+      "rivers": 0,
+      "seed": 104729,
+      "spawn": "(29491.2, 24576.0)",
+      "water_component_cells": [
+        106,
+        92,
+        143,
+        89,
+        188,
+        61
+      ]
+    },
+    {
+      "biome_areas": [
+        13131,
+        7709,
+        16024
+      ],
+      "biome_repeats": [
+        3,
+        2,
+        3
+      ],
+      "chunk_build_ms": 52.993,
+      "hash": "1861975274",
+      "lakes": 3,
+      "land_reachable_fraction": 1.0,
+      "major_components": [
+        {
+          "cells": 4729,
+          "kind": 2
+        },
+        {
+          "cells": 6067,
+          "kind": 0
+        },
+        {
+          "cells": 5576,
+          "kind": 2
+        },
+        {
+          "cells": 3008,
+          "kind": 1
+        },
+        {
+          "cells": 4701,
+          "kind": 1
+        },
+        {
+          "cells": 5719,
+          "kind": 2
+        },
+        {
+          "cells": 4379,
+          "kind": 0
+        },
+        {
+          "cells": 2685,
+          "kind": 0
+        }
+      ],
+      "neighbors": "[(3, 4), (1, 4), (3, 6), (4, 6), (4, 5), (1, 5), (0, 6), (0, 4), (0, 5), (2, 5), (1, 2), (6, 7), (0, 7)]",
+      "node_areas": [
+        5719,
+        5576,
+        4379,
+        4729,
+        6067,
+        4701,
+        3008,
+        2685
+      ],
+      "nodes": 8,
+      "plan_build_ms": 73.68,
+      "rivers": 3,
+      "seed": 524287,
+      "spawn": "(22118.4, 27033.6)",
+      "water_component_cells": [
+        171,
+        202,
+        159
+      ]
+    },
+    {
+      "biome_areas": [
+        11145,
+        8616,
+        17103
+      ],
+      "biome_repeats": [
+        2,
+        2,
+        3
+      ],
+      "chunk_build_ms": 70.535,
+      "hash": "1839077839",
+      "lakes": 5,
+      "land_reachable_fraction": 0.999972302237979,
+      "major_components": [
+        {
+          "cells": 4510,
+          "kind": 0
+        },
+        {
+          "cells": 4436,
+          "kind": 1
+        },
+        {
+          "cells": 4112,
+          "kind": 2
+        },
+        {
+          "cells": 8694,
+          "kind": 2
+        },
+        {
+          "cells": 6635,
+          "kind": 0
+        },
+        {
+          "cells": 4180,
+          "kind": 1
+        },
+        {
+          "cells": 4297,
+          "kind": 2
+        }
+      ],
+      "neighbors": "[(1, 5), (3, 5), (1, 6), (5, 6), (0, 5), (0, 3), (0, 6), (1, 2), (2, 6), (4, 6), (0, 4), (2, 4), (0, 7), (4, 7)]",
+      "node_areas": [
+        6635,
+        4510,
+        4802,
+        4112,
+        4180,
+        4436,
+        3892,
+        4297
+      ],
+      "nodes": 8,
+      "plan_build_ms": 78.786,
+      "rivers": 4,
+      "seed": 8675309,
+      "spawn": "(24576.0, 22118.4)",
+      "water_component_cells": [
+        114,
+        166,
+        134,
+        171,
+        144
+      ]
+    },
+    {
+      "biome_areas": [
+        13944,
+        13601,
+        9319
+      ],
+      "biome_repeats": [
+        4,
+        4,
+        2
+      ],
+      "chunk_build_ms": 82.956,
+      "hash": "132269925",
+      "lakes": 4,
+      "land_reachable_fraction": 1.0,
+      "major_components": [
+        {
+          "cells": 3583,
+          "kind": 1
+        },
+        {
+          "cells": 2900,
+          "kind": 0
+        },
+        {
+          "cells": 4303,
+          "kind": 1
+        },
+        {
+          "cells": 5768,
+          "kind": 2
+        },
+        {
+          "cells": 4556,
+          "kind": 0
+        },
+        {
+          "cells": 3511,
+          "kind": 0
+        },
+        {
+          "cells": 2989,
+          "kind": 1
+        },
+        {
+          "cells": 3551,
+          "kind": 2
+        },
+        {
+          "cells": 2726,
+          "kind": 1
+        },
+        {
+          "cells": 2977,
+          "kind": 0
+        }
+      ],
+      "neighbors": "[(3, 9), (1, 9), (8, 9), (1, 8), (1, 4), (4, 8), (3, 7), (3, 8), (7, 8), (0, 7), (0, 8), (8, 10), (4, 10), (0, 10), (5, 7), (0, 5), (2, 4), (2, 10), (0, 6), (6, 10), (2, 6), (5, 6)]",
+      "node_areas": [
+        2989,
+        4303,
+        2726,
+        3583,
+        4556,
+        3551,
+        2977,
+        3511,
+        3481,
+        2899,
+        2288
+      ],
+      "nodes": 11,
+      "plan_build_ms": 88.609,
+      "rivers": 2,
+      "seed": 314159,
+      "spawn": "(24576.0, 24576.0)",
+      "water_component_cells": [
+        81,
+        171,
+        159,
+        170
+      ]
+    }
+  ]
+}

@@ -1,0 +1,359 @@
+{
+  "adapter": "NVIDIA GeForce RTX 3060",
+  "checks": [
+    {
+      "details": "",
+      "name": "stream settled 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M opens and blocks movement 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M default covers entire world 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M cache matches full live world 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "map pan zoom clamps 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M closes releases movement 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 271828",
+      "pass": true
+    },
+    {
+      "details": 4002.41577148438,
+      "name": "actual normal movement 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "actual chunk crossing 271828",
+      "pass": true
+    },
+    {
+      "details": [
+        0,
+        0
+      ],
+      "name": "no missing viewport or loading stops 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M opens and blocks movement 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M default covers entire world 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M cache matches full live world 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "map pan zoom clamps 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M closes releases movement 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 81273",
+      "pass": true
+    },
+    {
+      "details": 1800.04223632813,
+      "name": "actual normal movement 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "actual chunk crossing 81273",
+      "pass": true
+    },
+    {
+      "details": [
+        0,
+        0
+      ],
+      "name": "no missing viewport or loading stops 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 81273",
+      "pass": true
+    },
+    {
+      "details": [
+        0.0,
+        1.0
+      ],
+      "name": "forest sparse dense internal contrast",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M opens and blocks movement 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M default covers entire world 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M cache matches full live world 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "map pan zoom clamps 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M closes releases movement 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 902106",
+      "pass": true
+    },
+    {
+      "details": 1802.54162597656,
+      "name": "actual normal movement 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "actual chunk crossing 902106",
+      "pass": true
+    },
+    {
+      "details": [
+        0,
+        0
+      ],
+      "name": "no missing viewport or loading stops 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M opens and blocks movement 42",
+      "pass": false
+    },
+    {
+      "details": "",
+      "name": "M default covers entire world 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M cache matches full live world 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "map pan zoom clamps 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M closes releases movement 42",
+      "pass": false
+    },
+    {
+      "details": "",
+      "name": "stream settled 42",
+      "pass": true
+    },
+    {
+      "details": 0.0,
+      "name": "actual normal movement 42",
+      "pass": false
+    },
+    {
+      "details": "",
+      "name": "actual chunk crossing 42",
+      "pass": false
+    },
+    {
+      "details": [
+        0,
+        0
+      ],
+      "name": "no missing viewport or loading stops 42",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 170219",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M opens and blocks movement 170219",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M default covers entire world 170219",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M cache matches full live world 170219",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "map pan zoom clamps 170219",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M closes releases movement 170219",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 170219",
+      "pass": true
+    },
+    {
+      "details": 1802.84790039063,
+      "name": "actual normal movement 170219",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "actual chunk crossing 170219",
+      "pass": true
+    },
+    {
+      "details": [
+        0,
+        0
+      ],
+      "name": "no missing viewport or loading stops 170219",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "identity preserves seed size and upgrades version",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": 4,
+  "note": "Actual normal player physics, loaded streaming and M key events. No accelerated movement. Timing samples are not FPS guarantees.",
+  "renderer": "gl_compatibility",
+  "seeds": [
+    {
+      "distance": 4002.41577148438,
+      "last_chunk_build_ms": 54.546,
+      "loading_blocks": 0,
+      "map_max_slice_ms": 4.497,
+      "map_total_build_ms": 1190.193,
+      "max_install_ms": 2.021,
+      "missing_view_frames": 0,
+      "physics_frames": 1202,
+      "seed": 271828
+    },
+    {
+      "distance": 1800.04223632813,
+      "last_chunk_build_ms": 89.614,
+      "loading_blocks": 0,
+      "map_max_slice_ms": 4.514,
+      "map_total_build_ms": 1351.683,
+      "max_install_ms": 2.291,
+      "missing_view_frames": 0,
+      "physics_frames": 894,
+      "seed": 81273
+    },
+    {
+      "distance": 1802.54162597656,
+      "last_chunk_build_ms": 53.876,
+      "loading_blocks": 0,
+      "map_max_slice_ms": 4.042,
+      "map_total_build_ms": 1303.085,
+      "max_install_ms": 2.23,
+      "missing_view_frames": 0,
+      "physics_frames": 542,
+      "seed": 902106
+    },
+    {
+      "distance": 0.0,
+      "last_chunk_build_ms": 56.262,
+      "loading_blocks": 0,
+      "map_max_slice_ms": 4.252,
+      "map_total_build_ms": 1356.567,
+      "max_install_ms": 1.553,
+      "missing_view_frames": 0,
+      "physics_frames": 1500,
+      "seed": 42
+    },
+    {
+      "distance": 1802.84790039063,
+      "last_chunk_build_ms": 77.562,
+      "loading_blocks": 0,
+      "map_max_slice_ms": 4.236,
+      "map_total_build_ms": 1296.215,
+      "max_install_ms": 1.282,
+      "missing_view_frames": 0,
+      "physics_frames": 542,
+      "seed": 170219
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "status": "pending_user",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "exact_underlying_model": null,
+  "actual_cost": null,
+  "estimateUsd": 0,
+  "warnings": [
+    "raw_sheet: requested equal grid not respected; manual ownership rectangles required",
+    "raw_sheet: colored translucent glow; alpha<210 discarded during cleanup"
+  ],
+  "cells": [
+    {
+      "name": "tree_0",
+      "ownership": [
+        70,
+        25,
+        765,
+        650
+      ],
+      "trim": [
+        90,
+        21,
+        674,
+        608
+      ],
+      "uniform_scale": 0.3030821917808219,
+      "placement": [
+        0,
+        12
+      ],
+      "logical_canvas": [
+        177,
+        190
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_alignment": "bottom center; nature_prop draw bottom = root+8"
+    },
+    {
+      "name": "tree_1",
+      "ownership": [
+        910,
+        30,
+        1380,
+        660
+      ],
+      "trim": [
+        50,
+        25,
+        428,
+        615
+      ],
+      "uniform_scale": 0.33559322033898303,
+      "placement": [
+        25,
+        0
+      ],
+      "logical_canvas": [
+        177,
+        198
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_alignment": "bottom center; nature_prop draw bottom = root+8"
+    },
+    {
+      "name": "rock_0",
+      "ownership": [
+        180,
+        670,
+        710,
+        1000
+      ],
+      "trim": [
+        38,
+        8,
+        494,
+        315
+      ],
+      "uniform_scale": 0.16885964912280702,
+      "placement": [
+        0,
+        13
+      ],
+      "logical_canvas": [
+        77,
+        65
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_alignment": "bottom center; nature_prop draw bottom = root+8"
+    },
+    {
+      "name": "rock_1",
+      "ownership": [
+        960,
+        725,
+        1340,
+        995
+      ],
+      "trim": [
+        33,
+        26,
+        348,
+        237
+      ],
+      "uniform_scale": 0.17142857142857143,
+      "placement": [
+        0,
+        12
+      ],
+      "logical_canvas": [
+        54,
+        48
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "base_alignment": "bottom center; nature_prop draw bottom = root+8"
+    }
+  ],
+  "references": {
+    "reports/ecology-v03-271828-region-0.png": "dfe37fc4dae57746c79cc0f55339be60f54bfd0a5923e6d1ccad4ec9b322efea",
+    "assets/environment/stylized_v3/tree_0.png": "d64d940b506c366be95a03758971c6821862c6c9e1399a664aa186bd7a2a9c4f",
+    "assets/environment/stylized_v3/tree_1.png": "92cd482c00c8311522b73f09ed6ce5f7c2cf002404cde5487b65ddec482c6384",
+    "assets/environment/stylized_v3/rock_0.png": "9c9962cc7b91710ee144d0a518851080827d714b7b9018e793e9cd2271e4260f",
+    "assets/environment/stylized_v3/rock_1.png": "bd29f47b625aad377c4347ca150aa541071ef760e9245e937d990bdd7fd6f745"
+  },
+  "raw_sha256": "bc5c55289e76a65530595c580023cda75340ada9e46aca6dbb7278e295ca461a"
+}
