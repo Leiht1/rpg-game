@@ -1,0 +1,41 @@
+{
+  "version": "broadleaf-art-1.0.0",
+  "status": "integrated_per_user_request_visual_review_pending",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen; underlying model undisclosed",
+  "source": "art\\broadleaf-v1\\candidate-02\\generated.png",
+  "prompt": "art/broadleaf-v1/prompt.txt",
+  "receipt": "art/broadleaf-v1/candidate-02/job.json",
+  "source_size": [
+    1448,
+    1086
+  ],
+  "source_sha256": "e75f64bb3445fe8210298584570196ad514213266729c162395cb876e376020f",
+  "file": "assets\\harvest\\broadleaf_v1\\plant.png",
+  "sha256": "5b931fc73544d795fca03f5803158c718d8559e30c10d64bbb7a2c2335898bba",
+  "bbox": [
+    353,
+    301,
+    1095,
+    799
+  ],
+  "canvas": [
+    256,
+    256
+  ],
+  "visible_size": [
+    216,
+    145
+  ],
+  "registration": "visible bottom y=248; existing 64px canvas renderer gives foot+6px; no rotation or nonuniform scaling",
+  "processing": "Complete silhouette chroma key; aspect-preserving LANCZOS downscale; source-painted basal grass retained, no code-painted blades or ground patch",
+  "qa": {
+    "transparent_outer_edges": true,
+    "full_source_silhouette_inside": true
+  },
+  "warnings": [
+    "WARN source_size_mismatch: value=1448x1086, requested=1024x1024; file=art/broadleaf-v1/candidate-02/generated.png"
+  ],
+  "failed_attempt": "candidate-01: ARTIFACT_MISSING because six references exceeded tool limit five; no image returned. Approved two-tree/two-rock reference montage used for candidate-02."
+}

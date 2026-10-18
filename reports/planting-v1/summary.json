@@ -1,0 +1,37 @@
+{
+  "engine": "Godot 4.7.2 stable",
+  "window": [
+    1280,
+    720
+  ],
+  "final_runs": {
+    "window-checks.json": {
+      "checks": 83,
+      "failures": []
+    },
+    "layout-window.json": {
+      "checks": 16,
+      "failures": []
+    },
+    "dependencies.json": {
+      "checks": 15,
+      "failures": []
+    },
+    "persistence-write.json": {
+      "checks": 2,
+      "failures": []
+    },
+    "persistence-read.json": {
+      "checks": 15,
+      "failures": []
+    },
+    "persistence-after-harvest.json": {
+      "checks": 5,
+      "failures": []
+    }
+  },
+  "assertion_executions": 136,
+  "asset_hashes_verified": true,
+  "pending_art_count": 14,
+  "full_planting_formally_enabled": false
+}

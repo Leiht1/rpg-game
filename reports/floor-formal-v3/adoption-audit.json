@@ -1,0 +1,76 @@
+{
+  "png": [
+    {
+      "file": "stone-front.png",
+      "matches_approved_candidate": true
+    },
+    {
+      "file": "stone-top.png",
+      "matches_approved_candidate": true
+    },
+    {
+      "file": "wood-front.png",
+      "matches_approved_candidate": true
+    },
+    {
+      "file": "wood-top.png",
+      "matches_approved_candidate": true
+    }
+  ],
+  "gpu_vs_approved_preview": [
+    {
+      "file": "square-grid-mixed-0.75.png",
+      "pixels": 264000,
+      "pixels_over_3": 0,
+      "max_channel_delta": 0
+    },
+    {
+      "file": "square-grid-mixed-1.0.png",
+      "pixels": 264000,
+      "pixels_over_3": 0,
+      "max_channel_delta": 0
+    },
+    {
+      "file": "square-grid-mixed-1.25.png",
+      "pixels": 264000,
+      "pixels_over_3": 0,
+      "max_channel_delta": 0
+    },
+    {
+      "file": "square-grid-stone_path-0.75.png",
+      "pixels": 264000,
+      "pixels_over_3": 0,
+      "max_channel_delta": 0
+    },
+    {
+      "file": "square-grid-stone_path-1.0.png",
+      "pixels": 264000,
+      "pixels_over_3": 0,
+      "max_channel_delta": 0
+    },
+    {
+      "file": "square-grid-stone_path-1.25.png",
+      "pixels": 264000,
+      "pixels_over_3": 0,
+      "max_channel_delta": 0
+    },
+    {
+      "file": "square-grid-wood_floor-0.75.png",
+      "pixels": 264000,
+      "pixels_over_3": 0,
+      "max_channel_delta": 0
+    },
+    {
+      "file": "square-grid-wood_floor-1.0.png",
+      "pixels": 264000,
+      "pixels_over_3": 0,
+      "max_channel_delta": 0
+    },
+    {
+      "file": "square-grid-wood_floor-1.25.png",
+      "pixels": 264000,
+      "pixels_over_3": 0,
+      "max_channel_delta": 0
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+[
+  {
+    "name": "valid offset footprint placement [\"wood_bed\", false]",
+    "pass": true
+  },
+  {
+    "name": "place [\"wood_bed\", false]",
+    "pass": true
+  },
+  {
+    "name": "live collider matches offset footprint [\"wood_bed\", false]",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"wood_bed\", false](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"wood_bed\", false](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"wood_bed\", false](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"wood_bed\", false](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"wood_bed\", false](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"wood_bed\", false](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"wood_bed\", false](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"wood_bed\", false](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"wood_bed\", false](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"wood_bed\", false](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"wood_bed\", false](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"wood_bed\", false](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"wood_bed\", false](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"wood_bed\", false](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"wood_bed\", false](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"wood_bed\", false](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "wall still blocks edge interaction [\"wood_bed\", false]",
+    "pass": true
+  },
+  {
+    "name": "valid offset footprint placement [\"wood_bed\", true]",
+    "pass": true
+  },
+  {
+    "name": "place [\"wood_bed\", true]",
+    "pass": true
+  },
+  {
+    "name": "live collider matches offset footprint [\"wood_bed\", true]",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"wood_bed\", true](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"wood_bed\", true](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"wood_bed\", true](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"wood_bed\", true](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"wood_bed\", true](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"wood_bed\", true](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"wood_bed\", true](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"wood_bed\", true](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"wood_bed\", true](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"wood_bed\", true](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"wood_bed\", true](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"wood_bed\", true](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"wood_bed\", true](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"wood_bed\", true](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"wood_bed\", true](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"wood_bed\", true](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "wall still blocks edge interaction [\"wood_bed\", true]",
+    "pass": true
+  },
+  {
+    "name": "valid offset footprint placement [\"straw_mat\", false]",
+    "pass": true
+  },
+  {
+    "name": "place [\"straw_mat\", false]",
+    "pass": true
+  },
+  {
+    "name": "live collider matches offset footprint [\"straw_mat\", false]",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"straw_mat\", false](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"straw_mat\", false](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"straw_mat\", false](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"straw_mat\", false](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"straw_mat\", false](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"straw_mat\", false](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"straw_mat\", false](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"straw_mat\", false](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"straw_mat\", false](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"straw_mat\", false](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"straw_mat\", false](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"straw_mat\", false](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"straw_mat\", false](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"straw_mat\", false](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"straw_mat\", false](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"straw_mat\", false](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "wall still blocks edge interaction [\"straw_mat\", false]",
+    "pass": true
+  },
+  {
+    "name": "valid offset footprint placement [\"straw_mat\", true]",
+    "pass": true
+  },
+  {
+    "name": "place [\"straw_mat\", true]",
+    "pass": true
+  },
+  {
+    "name": "live collider matches offset footprint [\"straw_mat\", true]",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"straw_mat\", true](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"straw_mat\", true](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"straw_mat\", true](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"straw_mat\", true](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"straw_mat\", true](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"straw_mat\", true](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"straw_mat\", true](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"straw_mat\", true](1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"straw_mat\", true](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"straw_mat\", true](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"straw_mat\", true](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"straw_mat\", true](0.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"straw_mat\", true](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"straw_mat\", true](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"straw_mat\", true](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"straw_mat\", true](0.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "wall still blocks edge interaction [\"straw_mat\", true]",
+    "pass": true
+  },
+  {
+    "name": "valid offset footprint placement [\"sleeping_bag\", false]",
+    "pass": true
+  },
+  {
+    "name": "place [\"sleeping_bag\", false]",
+    "pass": true
+  },
+  {
+    "name": "live collider matches offset footprint [\"sleeping_bag\", false]",
+    "pass": true
+  },
+  {
+    "name": "can stand and step near visible edge [\"sleeping_bag\", false](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "cannot walk through actual facility [\"sleeping_bag\", false](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "edge-based unified interaction reachable [\"sleeping_bag\", false](-1.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "controller accepts same edge distance [\"sleeping_bag\", false](-1.0, 0.0)",
+    "pass": true
+  }
+]

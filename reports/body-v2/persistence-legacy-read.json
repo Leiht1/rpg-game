@@ -1,0 +1,22 @@
+[
+  {
+    "name": "new process accepts snapshot",
+    "pass": true
+  },
+  {
+    "name": "migrated file survives separate restart",
+    "pass": true
+  },
+  {
+    "name": "invalid source protected version",
+    "pass": true
+  },
+  {
+    "name": "invalid source protected energy",
+    "pass": true
+  },
+  {
+    "name": "invalid source protected clock",
+    "pass": true
+  }
+]

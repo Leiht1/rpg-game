@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.88 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5060
+
+ERROR: fuel bar rendered height exactly half previous seven-thirds
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_camp_effects_v11.gd:8)
+       [1] run (res://tests/test_camp_effects_v11.gd:58)
+       [2] frames (res://tests/test_camp_effects_v11.gd:10)
+CAMP EFFECTS V11: 59 checks; 1 failures

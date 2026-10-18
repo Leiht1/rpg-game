@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "details": "",
+      "name": "stream settled 447349832",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "camera physics timing",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "actor interpolation enabled",
+      "pass": true
+    },
+    {
+      "details": 196.653594970703,
+      "name": "walk speed unchanged",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "gait follows actual collision resolved distance",
+      "pass": true
+    },
+    {
+      "details": 310.033264160156,
+      "name": "run speed unchanged",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "run clip and phase continue",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stop position stable and idle clip",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M freezes physics and gait",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "M release restores movement",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "left flip preserves native pivot",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "right flip restores native pivot",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "real tree available for collision and interaction",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 447349832",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "tree trunk still blocks player",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "chop still starts",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "chop commits exactly once",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "chop does not duplicate hit",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "pickup still starts",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "pickup completes once",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "run_distance": 310.033264160156,
+  "walk_distance": 196.653594970703
+}

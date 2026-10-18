@@ -1,0 +1,307 @@
+{
+  "checks": [
+    {
+      "name": "database keeps 12 items and adds three tools",
+      "pass": true
+    },
+    {
+      "name": "tools fit as independent instances",
+      "pass": true
+    },
+    {
+      "name": "two identical tools have different instance IDs",
+      "pass": true
+    },
+    {
+      "name": "bag tools do not grant capabilities",
+      "pass": true
+    },
+    {
+      "name": "hotbar tool does not grant capabilities",
+      "pass": true
+    },
+    {
+      "name": "equip moves whole instance from hotbar",
+      "pass": true
+    },
+    {
+      "name": "axe grants only chop",
+      "pass": true
+    },
+    {
+      "name": "occupied equipment swaps into source cell",
+      "pass": true
+    },
+    {
+      "name": "wrong equipment slot rejects without mutation",
+      "pass": true
+    },
+    {
+      "name": "full bag unequip leaves equipment untouched",
+      "pass": true
+    },
+    {
+      "name": "unequip moves instance to first bag vacancy",
+      "pass": true
+    },
+    {
+      "name": "inventory and equipment round trip",
+      "pass": true
+    },
+    {
+      "name": "instance state and identity survive restoration",
+      "pass": true
+    },
+    {
+      "name": "duplicate bag/equipment instance rejects restore",
+      "pass": true
+    },
+    {
+      "name": "legacy save without equipment remains compatible",
+      "pass": true
+    },
+    {
+      "name": "unknown and illegal equipment preserved in quarantine without capabilities",
+      "pass": true
+    },
+    {
+      "name": "basic interaction ungated pickup",
+      "pass": true
+    },
+    {
+      "name": "basic interaction ungated open",
+      "pass": true
+    },
+    {
+      "name": "basic interaction ungated talk",
+      "pass": true
+    },
+    {
+      "name": "basic interaction ungated inspect",
+      "pass": true
+    },
+    {
+      "name": "empty hand cannot perform tool actions",
+      "pass": true
+    },
+    {
+      "name": "shovel grants only dig",
+      "pass": true
+    },
+    {
+      "name": "future weapon does not gain gathering permissions",
+      "pass": true
+    },
+    {
+      "name": "data-driven slot accepts head",
+      "pass": true
+    },
+    {
+      "name": "data-driven slot accepts outfit",
+      "pass": true
+    },
+    {
+      "name": "one bag window displays 32 bag cells and three equipment cells",
+      "pass": true
+    },
+    {
+      "name": "bag left and equipment right",
+      "pass": true
+    },
+    {
+      "name": "live original-rig character preview exists",
+      "pass": true
+    },
+    {
+      "name": "right click tool offers equip",
+      "pass": true
+    },
+    {
+      "name": "native menu equips axe",
+      "pass": true
+    },
+    {
+      "name": "equipment content text removed; hover cards retained",
+      "pass": true
+    },
+    {
+      "name": "native drag begins 9",
+      "pass": true
+    },
+    {
+      "name": "native drag exchanges pickaxe and axe",
+      "pass": true
+    },
+    {
+      "name": "native drag begins 40",
+      "pass": true
+    },
+    {
+      "name": "native wrong-slot drop rejected",
+      "pass": true
+    },
+    {
+      "name": "native drag begins 40",
+      "pass": true
+    },
+    {
+      "name": "native drag unequips into bag",
+      "pass": true
+    },
+    {
+      "name": "native drag begins 9",
+      "pass": true
+    },
+    {
+      "name": "equipment menu offers unequip without destroy",
+      "pass": true
+    },
+    {
+      "name": "native menu unequips",
+      "pass": true
+    },
+    {
+      "name": "equipped item supports hover card",
+      "pass": true
+    },
+    {
+      "name": "reachable original tree found",
+      "pass": true
+    },
+    {
+      "name": "empty hand leaves tree unmodified",
+      "pass": true
+    },
+    {
+      "name": "pickaxe equipped for negative tree case",
+      "pass": true
+    },
+    {
+      "name": "pickaxe cannot chop tree",
+      "pass": true
+    },
+    {
+      "name": "mouse target wins within range",
+      "pass": true
+    },
+    {
+      "name": "mouse explicitly selects tree over nearby pickup",
+      "pass": true
+    },
+    {
+      "name": "unusable tree does not permanently steal fallback pickup",
+      "pass": true
+    },
+    {
+      "name": "pickaxe still permits ordinary pickup",
+      "pass": true
+    },
+    {
+      "name": "axe equipped for real tree",
+      "pass": true
+    },
+    {
+      "name": "E starts original axe chop",
+      "pass": true
+    },
+    {
+      "name": "one real axe action commits one hit",
+      "pass": true
+    },
+    {
+      "name": "second axe hit preserves tree hit/drop behavior",
+      "pass": true
+    },
+    {
+      "name": "F6 developer ore can be placed on clear loaded ground",
+      "pass": true
+    },
+    {
+      "name": "empty hand cannot mine or remove ore",
+      "pass": true
+    },
+    {
+      "name": "axe cannot mine",
+      "pass": true
+    },
+    {
+      "name": "E starts pickaxe mining",
+      "pass": true
+    },
+    {
+      "name": "ore consumes once and creates three existing flint materials",
+      "pass": true
+    },
+    {
+      "name": "mined material remains a world pickup",
+      "pass": true
+    },
+    {
+      "name": "E pickup works with equipped pickaxe",
+      "pass": true
+    },
+    {
+      "name": "atomic save reload restores same equipment instance and capabilities",
+      "pass": true
+    },
+    {
+      "name": "ore state survives same snapshot reload",
+      "pass": true
+    },
+    {
+      "name": "ordinary equipment bag still permits movement",
+      "pass": true
+    },
+    {
+      "name": "movement through open equipment bag",
+      "pass": true
+    },
+    {
+      "name": "map still covers equipment bag and HUD",
+      "pass": true
+    },
+    {
+      "name": "Esc closes map",
+      "pass": true
+    },
+    {
+      "name": "equipment bag leaves bottom hotbar visible",
+      "pass": true
+    },
+    {
+      "name": "removing tool cancels pending tool action before impact",
+      "pass": true
+    },
+    {
+      "name": "tool uses existing world discard path",
+      "pass": true
+    },
+    {
+      "name": "world tool drop retains identity without bag copy",
+      "pass": true
+    },
+    {
+      "name": "dropped tool can be picked up empty-handed",
+      "pass": true
+    },
+    {
+      "name": "tool instance state survives drop and pickup",
+      "pass": true
+    },
+    {
+      "name": "exactly one instance exists after tool drop and pickup",
+      "pass": true
+    },
+    {
+      "name": "registered head appearance updates world and portrait together",
+      "pass": true
+    },
+    {
+      "name": "unequip clears both world and portrait appearance",
+      "pass": true
+    }
+  ],
+  "count": 75,
+  "engine": "4.7.2-stable (official)",
+  "failures": []
+}

@@ -1,0 +1,803 @@
+{
+  "checks": [
+    {
+      "name": "application uses default project resolution only",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_axe0.0",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_axe0.0",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_axe0.0",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_axe0.0",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_axe0.0",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_axe0.0",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_axe0.0",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_axe0.2",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_axe0.2",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_axe0.2",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_axe0.2",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_axe0.2",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_axe0.2",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_axe0.2",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_axe0.48",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_axe0.48",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_axe0.48",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_axe0.48",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_axe0.48",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_axe0.48",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_axe0.48",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_axe0.7",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_axe0.7",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_axe0.7",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_axe0.7",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_axe0.7",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_axe0.7",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_axe0.7",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_axe0.98",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_axe0.98",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_axe0.98",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_axe0.98",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_axe0.98",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_axe0.98",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_axe0.98",
+      "pass": true
+    },
+    {
+      "name": "GPU free hand actually visible in natural pose stone_axe",
+      "pass": true
+    },
+    {
+      "name": "GPU empty palm itself visible, not only sleeve stone_axe",
+      "pass": true
+    },
+    {
+      "name": "GPU tool/palm visible over shirt stone_axe",
+      "pass": true
+    },
+    {
+      "name": "release restores original sampled arm layer stone_axe",
+      "pass": true
+    },
+    {
+      "name": "release restores both mounts and original rear free arm stone_axe",
+      "pass": true
+    },
+    {
+      "name": "front override removed on turn stone_axeback",
+      "pass": true
+    },
+    {
+      "name": "back retains tool behind legs stone_axe",
+      "pass": true
+    },
+    {
+      "name": "front override removed on turn stone_axeleft",
+      "pass": true
+    },
+    {
+      "name": "front override removed on turn stone_axeright",
+      "pass": true
+    },
+    {
+      "name": "pickup restores native layers and hides tool stone_axe",
+      "pass": true
+    },
+    {
+      "name": "unequip clears front override stone_axe",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_pickaxe0.0",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_pickaxe0.0",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_pickaxe0.0",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_pickaxe0.0",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_pickaxe0.0",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_pickaxe0.0",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_pickaxe0.0",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_pickaxe0.2",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_pickaxe0.2",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_pickaxe0.2",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_pickaxe0.2",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_pickaxe0.2",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_pickaxe0.2",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_pickaxe0.2",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_pickaxe0.48",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_pickaxe0.48",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_pickaxe0.48",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_pickaxe0.48",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_pickaxe0.48",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_pickaxe0.48",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_pickaxe0.48",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_pickaxe0.7",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_pickaxe0.7",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_pickaxe0.7",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_pickaxe0.7",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_pickaxe0.7",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_pickaxe0.7",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_pickaxe0.7",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_pickaxe0.98",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_pickaxe0.98",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_pickaxe0.98",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_pickaxe0.98",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_pickaxe0.98",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_pickaxe0.98",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_pickaxe0.98",
+      "pass": true
+    },
+    {
+      "name": "GPU free hand actually visible in natural pose stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "GPU empty palm itself visible, not only sleeve stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "GPU tool/palm visible over shirt stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "release restores original sampled arm layer stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "release restores both mounts and original rear free arm stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "front override removed on turn stone_pickaxeback",
+      "pass": true
+    },
+    {
+      "name": "back retains tool behind legs stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "front override removed on turn stone_pickaxeleft",
+      "pass": true
+    },
+    {
+      "name": "front override removed on turn stone_pickaxeright",
+      "pass": true
+    },
+    {
+      "name": "pickup restores native layers and hides tool stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "unequip clears front override stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation simple_shovel0.0",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm simple_shovel0.0",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer simple_shovel0.0",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip simple_shovel0.0",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm simple_shovel0.0",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt simple_shovel0.0",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt simple_shovel0.0",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation simple_shovel0.2",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm simple_shovel0.2",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer simple_shovel0.2",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip simple_shovel0.2",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm simple_shovel0.2",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt simple_shovel0.2",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt simple_shovel0.2",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation simple_shovel0.48",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm simple_shovel0.48",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer simple_shovel0.48",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip simple_shovel0.48",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm simple_shovel0.48",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt simple_shovel0.48",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt simple_shovel0.48",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation simple_shovel0.7",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm simple_shovel0.7",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer simple_shovel0.7",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip simple_shovel0.7",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm simple_shovel0.7",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt simple_shovel0.7",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt simple_shovel0.7",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation simple_shovel0.98",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm simple_shovel0.98",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer simple_shovel0.98",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip simple_shovel0.98",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm simple_shovel0.98",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt simple_shovel0.98",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt simple_shovel0.98",
+      "pass": true
+    },
+    {
+      "name": "GPU free hand actually visible in natural pose simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "GPU empty palm itself visible, not only sleeve simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "GPU tool/palm visible over shirt simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "release restores original sampled arm layer simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "release restores both mounts and original rear free arm simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "front override removed on turn simple_shovelback",
+      "pass": true
+    },
+    {
+      "name": "back retains tool behind legs simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "front override removed on turn simple_shovelleft",
+      "pass": true
+    },
+    {
+      "name": "front override removed on turn simple_shovelright",
+      "pass": true
+    },
+    {
+      "name": "pickup restores native layers and hides tool simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "unequip clears front override simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_hammer0.0",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_hammer0.0",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_hammer0.0",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_hammer0.0",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_hammer0.0",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_hammer0.0",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_hammer0.0",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_hammer0.2",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_hammer0.2",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_hammer0.2",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_hammer0.2",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_hammer0.2",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_hammer0.2",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_hammer0.2",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_hammer0.48",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_hammer0.48",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_hammer0.48",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_hammer0.48",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_hammer0.48",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_hammer0.48",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_hammer0.48",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_hammer0.7",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_hammer0.7",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_hammer0.7",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_hammer0.7",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_hammer0.7",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_hammer0.7",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_hammer0.7",
+      "pass": true
+    },
+    {
+      "name": "local front layer after native animation stone_hammer0.98",
+      "pass": true
+    },
+    {
+      "name": "shirt then tool then original palm stone_hammer0.98",
+      "pass": true
+    },
+    {
+      "name": "front does not add world sorting layer stone_hammer0.98",
+      "pass": true
+    },
+    {
+      "name": "empty palm stays outward of work grip stone_hammer0.98",
+      "pass": true
+    },
+    {
+      "name": "one visible front free arm stone_hammer0.98",
+      "pass": true
+    },
+    {
+      "name": "held shoulder has opaque contact with shirt stone_hammer0.98",
+      "pass": true
+    },
+    {
+      "name": "free shoulder has opaque contact with shirt stone_hammer0.98",
+      "pass": true
+    },
+    {
+      "name": "GPU free hand actually visible in natural pose stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "GPU empty palm itself visible, not only sleeve stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "GPU tool/palm visible over shirt stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "release restores original sampled arm layer stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "release restores both mounts and original rear free arm stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "front override removed on turn stone_hammerback",
+      "pass": true
+    },
+    {
+      "name": "back retains tool behind legs stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "front override removed on turn stone_hammerleft",
+      "pass": true
+    },
+    {
+      "name": "front override removed on turn stone_hammerright",
+      "pass": true
+    },
+    {
+      "name": "pickup restores native layers and hides tool stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "unequip clears front override stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "new ID and new action inherit default front layering",
+      "pass": true
+    },
+    {
+      "name": "future tool layer also restores on release",
+      "pass": true
+    },
+    {
+      "name": "rendered overlap reproduced and repaired",
+      "pass": true
+    },
+    {
+      "name": "formal world front action stone_axe",
+      "pass": true
+    },
+    {
+      "name": "formal world front action stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "formal world front action simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "formal world front action stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "idle held front also uses same safe layering",
+      "pass": true
+    }
+  ],
+  "failed": 0,
+  "pixels": [
+    {
+      "repaired": 450,
+      "samples": 450,
+      "tool": "stone_axe",
+      "wrong": 0
+    },
+    {
+      "repaired": 457,
+      "samples": 457,
+      "tool": "stone_pickaxe",
+      "wrong": 0
+    },
+    {
+      "repaired": 529,
+      "samples": 529,
+      "tool": "simple_shovel",
+      "wrong": 0
+    },
+    {
+      "repaired": 410,
+      "samples": 410,
+      "tool": "stone_hammer",
+      "wrong": 0
+    }
+  ]
+}

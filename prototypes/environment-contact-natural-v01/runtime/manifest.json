@@ -1,0 +1,866 @@
+[
+  {
+    "id": "tree_01",
+    "name": "高瘦幼树",
+    "surface": "grass",
+    "file": "tree_01_grass.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "cut_y": 216,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/grass-processed/raw-sheet-clean.png",
+    "cell": [
+      0,
+      0
+    ],
+    "scale": 0.6496815286624203,
+    "offset": [
+      -52.761146496815286,
+      -39.955414012738856
+    ],
+    "source_bbox": [
+      197,
+      140,
+      372,
+      454
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "b88d554862d1c25cdc95226c0d1bc7ecc0651daafaf5031763a397f80b16a565",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "tree_03",
+    "name": "高大开展树",
+    "surface": "grass",
+    "file": "tree_03_grass.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "cut_y": 216,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/grass-processed/raw-sheet-clean.png",
+    "cell": [
+      0,
+      1
+    ],
+    "scale": 0.6069182389937107,
+    "offset": [
+      -40.15094339622641,
+      -22.968553459119505
+    ],
+    "source_bbox": [
+      108,
+      140,
+      445,
+      458
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "d3d8f27e307149d046bd2d0008ab5d2d9dbe4317f522fb2e560b1817b5c457b4",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "tree_04",
+    "name": "疏冠分叉树",
+    "surface": "grass",
+    "file": "tree_04_grass.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "cut_y": 216,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/grass-processed/raw-sheet-clean.png",
+    "cell": [
+      0,
+      2
+    ],
+    "scale": 0.6241379310344828,
+    "offset": [
+      -37.1448275862069,
+      -30.231034482758616
+    ],
+    "source_bbox": [
+      148,
+      167,
+      417,
+      457
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "d81c8a68f72bbd1c1118d1a1efb49480d61e0af5e221e9e21216f93285a92298",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_01",
+    "name": "低矮扁石",
+    "surface": "grass",
+    "file": "rock_01_grass.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": false,
+    "opaque_upper_body_preserved": true,
+    "source": "art/grass-processed/raw-sheet-clean.png",
+    "cell": [
+      1,
+      0
+    ],
+    "scale": 0.36607142857142855,
+    "offset": [
+      -47.35714285714285,
+      -30.223214285714278
+    ],
+    "source_bbox": [
+      154,
+      241,
+      429,
+      353
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "8b8095eee2827b94e2eed003e8446ebbb967b29b18bae904b0df74e718f57fd8",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_02",
+    "name": "敦实孤石",
+    "surface": "grass",
+    "file": "rock_02_grass.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": false,
+    "opaque_upper_body_preserved": true,
+    "source": "art/grass-processed/raw-sheet-clean.png",
+    "cell": [
+      1,
+      1
+    ],
+    "scale": 0.3620689655172414,
+    "offset": [
+      -35.491379310344826,
+      -29.896551724137936
+    ],
+    "source_bbox": [
+      152,
+      182,
+      383,
+      356
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "8a8c2ebe4f16204e21c10a8a11dce4e0c0c7550305eb83d27cd1b5a1d5efe095",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_03",
+    "name": "楔形石",
+    "surface": "grass",
+    "file": "rock_03_grass.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": false,
+    "opaque_upper_body_preserved": true,
+    "source": "art/grass-processed/raw-sheet-clean.png",
+    "cell": [
+      1,
+      2
+    ],
+    "scale": 0.35119047619047616,
+    "offset": [
+      -33.41666666666666,
+      -25.672619047619037
+    ],
+    "source_bbox": [
+      140,
+      187,
+      409,
+      355
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "e6d15d3e3c5ecfe939c2d85a47cdf0e45f4f83c1c1e0cc677792f128e409c782",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_04",
+    "name": "双肩连体石",
+    "surface": "grass",
+    "file": "rock_04_grass.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/grass-processed/raw-sheet-clean.png",
+    "cell": [
+      2,
+      0
+    ],
+    "scale": 0.35802469135802467,
+    "offset": [
+      -47.191358024691354,
+      -36.333333333333314
+    ],
+    "source_bbox": [
+      156,
+      216,
+      427,
+      378
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "3d57015de47654e98dd5ecc83c3bbd7866c30e0b02654ea70690cfeb59f553c3",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_05",
+    "name": "窄高石",
+    "surface": "grass",
+    "file": "rock_05_grass.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": false,
+    "opaque_upper_body_preserved": true,
+    "source": "art/grass-processed/raw-sheet-clean.png",
+    "cell": [
+      2,
+      1
+    ],
+    "scale": 0.365296803652968,
+    "offset": [
+      -39.56164383561644,
+      -39.082191780821915
+    ],
+    "source_bbox": [
+      187,
+      159,
+      389,
+      378
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "2e37871f58e8b23eb1889d2a85cd20b704b36bfecbd55be7e52bdffac8bae065",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_06",
+    "name": "缺角碎石",
+    "surface": "grass",
+    "file": "rock_06_grass.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": false,
+    "opaque_upper_body_preserved": true,
+    "source": "art/grass-processed/raw-sheet-clean.png",
+    "cell": [
+      2,
+      2
+    ],
+    "scale": 0.35555555555555557,
+    "offset": [
+      -24.37777777777778,
+      -36.82222222222222
+    ],
+    "source_bbox": [
+      173,
+      247,
+      392,
+      382
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "8c1928c34259a7ae23db20efbf78e5dbd758b35e6ee2f3f6e67a00e0aea10142",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "tree_01",
+    "name": "高瘦幼树",
+    "surface": "forest",
+    "file": "tree_01_forest.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "cut_y": 216,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/forest-processed/raw-sheet-clean.png",
+    "cell": [
+      0,
+      0
+    ],
+    "scale": 0.6915254237288135,
+    "offset": [
+      -69.27627118644068,
+      -45.12203389830506
+    ],
+    "source_bbox": [
+      210,
+      139,
+      371,
+      434
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "0e45f5fbb718d0d3de7bcf062b1c9c76333ee63f11e64435e2ffa37461010a5e",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "tree_03",
+    "name": "高大开展树",
+    "surface": "forest",
+    "file": "tree_03_forest.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "cut_y": 216,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/forest-processed/raw-sheet-clean.png",
+    "cell": [
+      0,
+      1
+    ],
+    "scale": 0.6701388888888888,
+    "offset": [
+      -57.97916666666666,
+      -36.51041666666663
+    ],
+    "source_bbox": [
+      127,
+      147,
+      436,
+      435
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "6fdaee1c3c552f48438eb9d9da5e5707fba98b366f1e6a69f8b8292c3a6164e3",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "tree_04",
+    "name": "疏冠分叉树",
+    "surface": "forest",
+    "file": "tree_04_forest.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "cut_y": 216,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/forest-processed/raw-sheet-clean.png",
+    "cell": [
+      0,
+      2
+    ],
+    "scale": 0.6654411764705882,
+    "offset": [
+      -45.511029411764696,
+      -36.463235294117624
+    ],
+    "source_bbox": [
+      153,
+      166,
+      400,
+      438
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "42ec9faf63d05a982a39b5f681b142f66a8491bb78f70423453969b3f4c134dc",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_01",
+    "name": "低矮扁石",
+    "surface": "forest",
+    "file": "rock_01_forest.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": false,
+    "opaque_upper_body_preserved": true,
+    "source": "art/forest-processed/raw-sheet-clean.png",
+    "cell": [
+      1,
+      0
+    ],
+    "scale": 0.37962962962962965,
+    "offset": [
+      -47.38425925925927,
+      -36.90740740740742
+    ],
+    "source_bbox": [
+      153,
+      250,
+      415,
+      358
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "869e3bad55e2d9460886636fdf15600a43b1f8fd237fa1436e3a0c1ef4f4feee",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_02",
+    "name": "敦实孤石",
+    "surface": "forest",
+    "file": "rock_02_forest.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": false,
+    "opaque_upper_body_preserved": true,
+    "source": "art/forest-processed/raw-sheet-clean.png",
+    "cell": [
+      1,
+      1
+    ],
+    "scale": 0.375,
+    "offset": [
+      -37.0625,
+      -34.875
+    ],
+    "source_bbox": [
+      164,
+      189,
+      379,
+      357
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "02fd3e12ab284f20fb601077d04914020b875ecd558d7fc761ebef2e0a4f3281",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_03",
+    "name": "楔形石",
+    "surface": "forest",
+    "file": "rock_03_forest.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": false,
+    "opaque_upper_body_preserved": true,
+    "source": "art/forest-processed/raw-sheet-clean.png",
+    "cell": [
+      1,
+      2
+    ],
+    "scale": 0.37579617834394907,
+    "offset": [
+      -36.76751592356689,
+      -36.286624203821674
+    ],
+    "source_bbox": [
+      147,
+      203,
+      392,
+      360
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "c4e08d048d1009538751331d13cbc70642d5f74ecdb273d5a9150658e00dbad9",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_04",
+    "name": "双肩连体石",
+    "surface": "forest",
+    "file": "rock_04_forest.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": false,
+    "opaque_upper_body_preserved": true,
+    "source": "art/forest-processed/raw-sheet-clean.png",
+    "cell": [
+      2,
+      0
+    ],
+    "scale": 0.3815789473684211,
+    "offset": [
+      -45.24342105263159,
+      -41.42105263157896
+    ],
+    "source_bbox": [
+      151,
+      216,
+      416,
+      368
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "ec067c63f89f6d3fc2c97b3503d084384b0cfa649d9350c28249449745c59d7e",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_05",
+    "name": "窄高石",
+    "surface": "forest",
+    "file": "rock_05_forest.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": false,
+    "opaque_upper_body_preserved": true,
+    "source": "art/forest-processed/raw-sheet-clean.png",
+    "cell": [
+      2,
+      1
+    ],
+    "scale": 0.3827751196172249,
+    "offset": [
+      -41.07177033492823,
+      -43.00956937799043
+    ],
+    "source_bbox": [
+      183,
+      162,
+      373,
+      371
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "649e7e1bac7c6bef9c73b8c3c56b5a59fe93d717a9c3124cf1d1164ee1dde711",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_06",
+    "name": "缺角碎石",
+    "surface": "forest",
+    "file": "rock_06_forest.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": false,
+    "opaque_upper_body_preserved": true,
+    "source": "art/forest-processed/raw-sheet-clean.png",
+    "cell": [
+      2,
+      2
+    ],
+    "scale": 0.366412213740458,
+    "offset": [
+      -29.793893129770993,
+      -36.20610687022901
+    ],
+    "source_bbox": [
+      169,
+      238,
+      389,
+      369
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "ec8312292617ff1b02fc42059080c55d66f08fd5fdbffcb8a64c24460c743d30",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "tree_01",
+    "name": "高瘦幼树",
+    "surface": "dirt",
+    "file": "tree_01_dirt.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "cut_y": 216,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/dirt-processed-02/raw-sheet-clean.png",
+    "cell": [
+      0,
+      0
+    ],
+    "scale": 0.6623376623376623,
+    "offset": [
+      -58.279220779220765,
+      -39.74025974025972
+    ],
+    "source_bbox": [
+      204,
+      137,
+      366,
+      445
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "72e0ecb6ef467ed1df44b989e1f95516ebc1399138d563b9029e9452e5ff7648",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "tree_03",
+    "name": "高大开展树",
+    "surface": "dirt",
+    "file": "tree_03_dirt.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "cut_y": 216,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/dirt-processed-02/raw-sheet-clean.png",
+    "cell": [
+      0,
+      1
+    ],
+    "scale": 0.6411960132890365,
+    "offset": [
+      -51.099667774086384,
+      -30.332225913621244
+    ],
+    "source_bbox": [
+      118,
+      144,
+      444,
+      445
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "a0cc1295fa7d6a286b0a9daaae7d38da7829e24428d0ffb4a988d2f52878e750",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "tree_04",
+    "name": "疏冠分叉树",
+    "surface": "dirt",
+    "file": "tree_04_dirt.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "cut_y": 216,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/dirt-processed-02/raw-sheet-clean.png",
+    "cell": [
+      0,
+      2
+    ],
+    "scale": 0.6581818181818182,
+    "offset": [
+      -35.70363636363638,
+      -38.54909090909092
+    ],
+    "source_bbox": [
+      147,
+      171,
+      391,
+      446
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "6dbc95e20588c637bd0dcf3a7a4a125779e3be953642f408ad99329699382975",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_01",
+    "name": "低矮扁石",
+    "surface": "dirt",
+    "file": "rock_01_dirt.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/dirt-processed-02/raw-sheet-clean.png",
+    "cell": [
+      1,
+      0
+    ],
+    "scale": 0.38317757009345793,
+    "offset": [
+      -49.929906542056074,
+      -35.49532710280374
+    ],
+    "source_bbox": [
+      149,
+      244,
+      422,
+      351
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "82e106f5b653f514916411f8aa7ad9f60bcff79a62754996f8b35dc317f3dcac",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_02",
+    "name": "敦实孤石",
+    "surface": "dirt",
+    "file": "rock_02_dirt.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/dirt-processed-02/raw-sheet-clean.png",
+    "cell": [
+      1,
+      1
+    ],
+    "scale": 0.36627906976744184,
+    "offset": [
+      -36.61337209302326,
+      -32.127906976744185
+    ],
+    "source_bbox": [
+      161,
+      186,
+      387,
+      358
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "4cf145d4197ef9d28d9cf1f8c8c3584ff6bb900fc977d8585d8c90c0109bfc1f",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_03",
+    "name": "楔形石",
+    "surface": "dirt",
+    "file": "rock_03_dirt.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/dirt-processed-02/raw-sheet-clean.png",
+    "cell": [
+      1,
+      2
+    ],
+    "scale": 0.3619631901840491,
+    "offset": [
+      -35.55828220858896,
+      -31.66871165644173
+    ],
+    "source_bbox": [
+      131,
+      198,
+      394,
+      361
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "cf9a9d48048bcfb697453326a7bce56af8933b48a54c993913054c661499f037",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_04",
+    "name": "双肩连体石",
+    "surface": "dirt",
+    "file": "rock_04_dirt.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/dirt-processed-02/raw-sheet-clean.png",
+    "cell": [
+      2,
+      0
+    ],
+    "scale": 0.3558282208588957,
+    "offset": [
+      -40.30981595092024,
+      -34.43558282208588
+    ],
+    "source_bbox": [
+      144,
+      212,
+      432,
+      375
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "f986570c700d395765d88bd94154280a329d6452da67ff4189ea8ebcb59e2500",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_05",
+    "name": "窄高石",
+    "surface": "dirt",
+    "file": "rock_05_dirt.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/dirt-processed-02/raw-sheet-clean.png",
+    "cell": [
+      2,
+      1
+    ],
+    "scale": 0.37735849056603776,
+    "offset": [
+      -42.792452830188694,
+      -43.26415094339623
+    ],
+    "source_bbox": [
+      188,
+      165,
+      383,
+      377
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "d74b0e29f5f67d807ba0a2e144d0ef35b64f356578fc756d8040d13bb3af6921",
+    "status": "layout_pending_user_color_previously_accepted"
+  },
+  {
+    "id": "rock_06",
+    "name": "缺角碎石",
+    "surface": "dirt",
+    "file": "rock_06_dirt.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "cut_y": 76,
+    "upper_original_equal": true,
+    "opaque_upper_body_preserved": true,
+    "source": "art/dirt-processed-02/raw-sheet-clean.png",
+    "cell": [
+      2,
+      2
+    ],
+    "scale": 0.36363636363636365,
+    "offset": [
+      -28.63636363636364,
+      -37.0
+    ],
+    "source_bbox": [
+      170,
+      242,
+      390,
+      374
+    ],
+    "detached_soil_pixels_removed": 0,
+    "sha256": "c516790feaba25682afd092e9b1127a0e293cbba47dbf9ea5b2832e7b6437250",
+    "status": "layout_pending_user_color_previously_accepted"
+  }
+]

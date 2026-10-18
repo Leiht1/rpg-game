@@ -1,0 +1,67 @@
+{
+  "status": "approved_user",
+  "date": "2026-10-18",
+  "user_quote": "可以 直接接入游戏吧",
+  "scope": "本次验收图指定的9张作物阶段、3张种子、2张收获物，逐字节迁入；不批准未来素材",
+  "review_manifest": "reports/planting-v1/pending-art.json",
+  "review_image": "reports/planting-v1/crop-art-review.png",
+  "route": "generate2dsprite -> route_media -> local:codex-cli",
+  "files": {
+    "carrot_0.png": {
+      "source": "prototypes/planting-crops-v2/final/carrot_0.png",
+      "sha256": "33a4757c07562c1d82c7d06b0266df4d62e45a1cbf78482abed925adff82414a"
+    },
+    "carrot_1.png": {
+      "source": "prototypes/planting-crops-v2/final/carrot_1.png",
+      "sha256": "99f69fd525325cc94a00f8366ce8b3a2b137455d96214bf301b7a3785578d183"
+    },
+    "carrot_2.png": {
+      "source": "prototypes/planting-crops-v2/final/carrot_2.png",
+      "sha256": "c5c2d5830fa4ae0f6d903deaf061f934967ffae83d1756e4602d5182bd1dc08f"
+    },
+    "potato_0.png": {
+      "source": "prototypes/planting-crops-v2/final/potato_0.png",
+      "sha256": "eca2c38443cd5e83229b929305bc183f5cec57a219cab2115196a7621780a10a"
+    },
+    "potato_1.png": {
+      "source": "prototypes/planting-crops-v2/final/potato_1.png",
+      "sha256": "733a3d1d7fcf68295a5ebce9be2365094abebbb81a50c6d4954261776fc77208"
+    },
+    "potato_2.png": {
+      "source": "prototypes/planting-crops-v2/final/potato_2.png",
+      "sha256": "10e3bc996267c33ba7b1d190623883d628532d71186079d7a50ce3d100590c92"
+    },
+    "cabbage_0.png": {
+      "source": "prototypes/planting-crops-v2/final/cabbage_0.png",
+      "sha256": "b52dde2c52995493991c68df0ba822935804f9ea13a29739caed15fbaeb517e8"
+    },
+    "cabbage_1.png": {
+      "source": "prototypes/planting-crops-v2/final/cabbage_1.png",
+      "sha256": "e037d0e3fa009ece678514ee13d34b742a2f91b317272aa1687fc2e31ce5442a"
+    },
+    "cabbage_2.png": {
+      "source": "prototypes/planting-crops-v2/final/cabbage_2.png",
+      "sha256": "730165ca0a35f799e1c4bb4cef3d5a2aece5e12039e08c70c454af39aaea13d5"
+    },
+    "carrot_seed.png": {
+      "source": "prototypes/planting-v1/final/carrot_seed.png",
+      "sha256": "9d26450f06e5be166cdee8e2f09b0a7a2375f361af7017d743763713369902b6"
+    },
+    "potato_seed.png": {
+      "source": "prototypes/planting-v1/final/potato_seed.png",
+      "sha256": "f1c88a42a0af25c87fd169e7e6cb04b6b9ab62e1f767f87377c46e2b64fb71eb"
+    },
+    "cabbage_seed.png": {
+      "source": "prototypes/planting-v1/final/cabbage_seed.png",
+      "sha256": "4ba0b7a89d3a158424b9d929e0a55a25c323a6cf7871993b671192ca690d7eaa"
+    },
+    "potato.png": {
+      "source": "prototypes/planting-v1/final/potato.png",
+      "sha256": "6f51384c1299ad76e3673b30a5364df69278726c58ce3c87398db87e4e594e7d"
+    },
+    "cabbage.png": {
+      "source": "prototypes/planting-v1/final/cabbage.png",
+      "sha256": "3dcb2f757cf2f2b0412a19aeecbbfa24f5c5a85049fa9b25ab733779a2577f69"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.88 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5060
+
+SCRIPT ERROR: Invalid type in function 'configure' in base 'Node2D (ground_decals.gd)'. The array of argument 3 (Array) does not have the same element type as the expected typed array argument.
+   at: WildStream.install_chunk (res://scripts/chunk_stream.gd:147)
+   GDScript backtrace (most recent call first):
+       [0] install_chunk (res://scripts/chunk_stream.gd:147)
+       [1] reload_chunk (res://tests/test_harvest_v05.gd:68)
+       [2] run (res://tests/test_harvest_v05.gd:163)
+       [3] frames (res://tests/test_harvest_v05.gd:14)
+ERROR: partial progress survives actual chunk unload/reinstall stone_outcrop
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_harvest_v05.gd:12)
+       [1] run (res://tests/test_harvest_v05.gd:167)
+       [2] frames (res://tests/test_harvest_v05.gd:14)
+SCRIPT ERROR: Invalid access to property or key 'position' on a base object of type 'Nil'.
+   at: point (res://tests/test_harvest_v05.gd:33)
+   GDScript backtrace (most recent call first):
+       [0] point (res://tests/test_harvest_v05.gd:33)
+       [1] run (res://tests/test_harvest_v05.gd:168)
+       [2] frames (res://tests/test_harvest_v05.gd:14)
+SCRIPT ERROR: Invalid access to property or key 'definition' on a base object of type 'Nil'.
+   at: run (res://tests/test_harvest_v05.gd:179)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/test_harvest_v05.gd:179)
+       [1] frames (res://tests/test_harvest_v05.gd:14)

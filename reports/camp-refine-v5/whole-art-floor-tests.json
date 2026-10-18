@@ -1,0 +1,29 @@
+{
+  "checks": [
+    {
+      "exposed_green": 0,
+      "interior_pixels": 75264,
+      "kind": "wood_floor",
+      "pass": true
+    },
+    {
+      "kind": "wood_floor",
+      "original_sprite_comparison_pixels": 30720,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "exposed_green": 0,
+      "interior_pixels": 75264,
+      "kind": "stone_path",
+      "pass": true
+    },
+    {
+      "kind": "stone_path",
+      "original_sprite_comparison_pixels": 30720,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    }
+  ],
+  "failed": 0
+}

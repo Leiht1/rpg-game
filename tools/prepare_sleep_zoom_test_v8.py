@@ -1,0 +1,18 @@
+from pathlib import Path
+s=Path('tests/test_sleep_occupied_v6.gd').read_text(encoding='utf8').replace('res://reports/sleep-occupied-v6/','res://reports/sleep-occupied-v8/')
+Path('tests/sleep_v8_fixture.gd').write_text(s,encoding='utf8')
+s=Path('tests/test_sleep_e_only_v7.gd').read_text(encoding='utf8').replace('res://tests/test_sleep_occupied_v6.gd','res://tests/sleep_v8_fixture.gd').replace('SLEEP E ONLY V7','SLEEP QUILT ZOOM V8').replace('e-only-checks.json','checks.json')
+s=s.replace('[KEY_W,KEY_A,KEY_S,KEY_D,KEY_SHIFT,KEY_ESCAPE,KEY_SPACE,KEY_C]','[KEY_W,KEY_SHIFT]')
+s=s.replace('\t\tw.player.camera.zoom=Vector2(2.5,2.5);', '''		w.player.camera.zoom=Vector2.ONE
+		var up := InputEventMouseButton.new();up.pressed=true;up.button_index=MOUSE_BUTTON_WHEEL_UP;up.position=Vector2(640,360)
+		root.push_input(up,true)
+		check(is_equal_approx(w.player.camera.zoom.x,1.1) and s.body.sleeping,"wheel zooms in while still asleep "+label)
+		var down := InputEventMouseButton.new();down.pressed=true;down.button_index=MOUSE_BUTTON_WHEEL_DOWN;down.position=Vector2(640,360)
+		root.push_input(down,true)
+		check(is_equal_approx(w.player.camera.zoom.x,1.0) and s.body.sleeping and w.player.input_blocked,"wheel zooms out without waking/unlocking actor "+label)
+		w.player.camera.zoom=Vector2.ONE*1.65;root.push_input(up,true)
+		check(is_equal_approx(w.player.camera.zoom.x,1.65),"original upper zoom limit retained "+label)
+		w.player.camera.zoom=Vector2.ONE*.65;root.push_input(down,true)
+		check(is_equal_approx(w.player.camera.zoom.x,.65),"original lower zoom limit retained "+label)
+		w.player.camera.zoom=Vector2(2.5,2.5);''')
+Path('tests/test_sleep_quilt_zoom_v8.gd').write_text(s,encoding='utf8')

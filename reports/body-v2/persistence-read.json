@@ -1,0 +1,50 @@
+[
+  {
+    "name": "new process accepts snapshot",
+    "pass": true
+  },
+  {
+    "name": "new process restores partial sleep without adding time",
+    "pass": true
+  },
+  {
+    "name": "same atomic world clock",
+    "pass": true
+  },
+  {
+    "name": "unchanged state across restart slots",
+    "pass": true
+  },
+  {
+    "name": "unchanged state across restart equipment",
+    "pass": true
+  },
+  {
+    "name": "unchanged state across restart hotbar_equipment",
+    "pass": true
+  },
+  {
+    "name": "unchanged state across restart resource_hits",
+    "pass": true
+  },
+  {
+    "name": "unchanged state across restart consumed",
+    "pass": true
+  },
+  {
+    "name": "unchanged state across restart buildings",
+    "pass": true
+  },
+  {
+    "name": "unchanged state across restart campfires",
+    "pass": true
+  },
+  {
+    "name": "resume remaining two hours once",
+    "pass": true
+  },
+  {
+    "name": "waking atomic save",
+    "pass": true
+  }
+]

@@ -1,0 +1,485 @@
+{
+  "cases": [
+    {
+      "case": "stone_gate-false-h0-s-1-p0.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h0-s-1-p0.15",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h0-s-1-p0.5",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h0-s-1-p0.85",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h0-s-1-p1.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h0-s1-p0.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h0-s1-p0.15",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h0-s1-p0.5",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h0-s1-p0.85",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h0-s1-p1.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h1-s-1-p0.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h1-s-1-p0.15",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h1-s-1-p0.5",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h1-s-1-p0.85",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h1-s-1-p1.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h1-s1-p0.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h1-s1-p0.15",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h1-s1-p0.5",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h1-s1-p0.85",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-false-h1-s1-p1.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h0-s-1-p0.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h0-s-1-p0.15",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h0-s-1-p0.5",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h0-s-1-p0.85",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h0-s-1-p1.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h0-s1-p0.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h0-s1-p0.15",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h0-s1-p0.5",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h0-s1-p0.85",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h0-s1-p1.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h1-s-1-p0.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h1-s-1-p0.15",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h1-s-1-p0.5",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h1-s-1-p0.85",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h1-s-1-p1.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h1-s1-p0.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h1-s1-p0.15",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h1-s1-p0.5",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h1-s1-p0.85",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "stone_gate-true-h1-s1-p1.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h0-s-1-p0.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h0-s-1-p0.15",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h0-s-1-p0.5",
+      "max_channel_difference": 0.00392158329486847,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h0-s-1-p0.85",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h0-s-1-p1.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h0-s1-p0.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h0-s1-p0.15",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h0-s1-p0.5",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h0-s1-p0.85",
+      "max_channel_difference": 0.00784316658973694,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h0-s1-p1.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h1-s-1-p0.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h1-s-1-p0.15",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h1-s-1-p0.5",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h1-s-1-p0.85",
+      "max_channel_difference": 0.00784316658973694,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h1-s-1-p1.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h1-s1-p0.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h1-s1-p0.15",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h1-s1-p0.5",
+      "max_channel_difference": 0.00392158329486847,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h1-s1-p0.85",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-false-h1-s1-p1.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h0-s-1-p0.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h0-s-1-p0.15",
+      "max_channel_difference": 0.00784316658973694,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h0-s-1-p0.5",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h0-s-1-p0.85",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h0-s-1-p1.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h0-s1-p0.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h0-s1-p0.15",
+      "max_channel_difference": 0.00784316658973694,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h0-s1-p0.5",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h0-s1-p0.85",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h0-s1-p1.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h1-s-1-p0.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h1-s-1-p0.15",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h1-s-1-p0.5",
+      "max_channel_difference": 0.00392158329486847,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h1-s-1-p0.85",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h1-s-1-p1.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h1-s1-p0.0",
+      "max_channel_difference": 0.00392156839370728,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h1-s1-p0.15",
+      "max_channel_difference": 0.00784313678741455,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h1-s1-p0.5",
+      "max_channel_difference": 0.00392158329486847,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h1-s1-p0.85",
+      "max_channel_difference": 0.00392159819602966,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    },
+    {
+      "case": "fence_gate-true-h1-s1-p1.0",
+      "max_channel_difference": 0.0,
+      "pass": true,
+      "pixels_over_tolerance": 0
+    }
+  ],
+  "failed": 0
+}

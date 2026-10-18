@@ -1,0 +1,62 @@
+[
+  {
+    "name": "formal startup exposes farming without preview switch",
+    "pass": true
+  },
+  {
+    "name": "formal runtime uses approved soil and crop paths",
+    "pass": true
+  },
+  {
+    "name": "craft and building recipes validate",
+    "pass": true
+  },
+  {
+    "name": "existing full-bag pickup keeps ground item",
+    "pass": true
+  },
+  {
+    "name": "existing partial pickup persists exact remainder",
+    "pass": true
+  },
+  {
+    "name": "partial pickup reports actual received quantity",
+    "pass": true
+  },
+  {
+    "name": "existing pickaxe mining still commits",
+    "pass": true
+  },
+  {
+    "name": "existing mining wear unchanged",
+    "pass": true
+  },
+  {
+    "name": "shovel cannot mine ore",
+    "pass": true
+  },
+  {
+    "name": "existing shovel excavation still commits",
+    "pass": true
+  },
+  {
+    "name": "existing excavation wear unchanged",
+    "pass": true
+  },
+  {
+    "name": "wrong tool still cancels uncommitted mining",
+    "pass": true
+  },
+  {
+    "name": "committed recovery survives inventory refresh",
+    "pass": true
+  },
+  {
+    "name": "existing invalid or insufficient-material build has no consumption",
+    "pass": true
+  },
+  {
+    "name": "formal collection grants produce and seeds through unified feedback",
+    "pass": true
+  }
+]

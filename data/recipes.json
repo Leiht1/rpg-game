@@ -1,0 +1,108 @@
+[
+  {
+    "recipe_id": "hand_stone_axe",
+    "output_id": "stone_axe",
+    "output_count": 1,
+    "materials": {
+      "branch": 3,
+      "flint": 2,
+      "plant_fiber": 3
+    },
+    "category": "工具",
+    "conditions": [],
+    "default_unlocked": true,
+    "description": "将锋利燧石绑在木柄上，用于砍伐树木。",
+    "craft_time": 1.5
+  },
+  {
+    "recipe_id": "hand_stone_pickaxe",
+    "output_id": "stone_pickaxe",
+    "output_count": 1,
+    "materials": {
+      "branch": 4,
+      "flint": 3,
+      "plant_fiber": 4
+    },
+    "category": "工具",
+    "conditions": [],
+    "default_unlocked": true,
+    "description": "以燧石制作镐头，开采石矿与其他矿点。",
+    "craft_time": 1.5
+  },
+  {
+    "recipe_id": "hand_simple_shovel",
+    "output_id": "simple_shovel",
+    "output_count": 1,
+    "materials": {
+      "wood": 2,
+      "stone": 2,
+      "flint": 1,
+      "plant_fiber": 3
+    },
+    "category": "工具",
+    "conditions": [],
+    "default_unlocked": true,
+    "description": "以石片制作铲口，用燧石修整后绑在木柄上，挖掘半埋资源。",
+    "craft_time": 1.5
+  },
+  {
+    "recipe_id": "hand_field_lantern",
+    "output_id": "field_lantern",
+    "output_count": 1,
+    "materials": {
+      "branch": 3,
+      "plant_fiber": 4,
+      "flint": 1,
+      "relic_fragment": 2
+    },
+    "category": "野外用品",
+    "conditions": [],
+    "default_unlocked": true,
+    "description": "使用后开关随身暖光，帮助夜间探索。无需装备，不改变工具能力。",
+    "craft_time": 1.5
+  },
+  {
+    "recipe_id": "hand_leaf_fiber",
+    "output_id": "plant_fiber",
+    "output_count": 3,
+    "materials": {
+      "broad_leaf": 2
+    },
+    "category": "材料加工",
+    "conditions": [],
+    "default_unlocked": true,
+    "description": "将宽叶撕分成可捆绑工具的植物纤维。",
+    "craft_time": 1.5
+  },
+  {
+    "recipe_id": "hand_stone_hammer",
+    "output_id": "stone_hammer",
+    "output_count": 1,
+    "materials": {
+      "wood": 3,
+      "stone": 2,
+      "flint": 1
+    },
+    "category": "工具",
+    "conditions": [],
+    "default_unlocked": true,
+    "description": "拆除营地建筑的石锤。",
+    "craft_time": 1.5
+  },
+  {
+    "recipe_id": "bench_sleeping_bag",
+    "output_id": "sleeping_bag",
+    "output_count": 1,
+    "materials": {
+      "broad_leaf": 6,
+      "plant_fiber": 10
+    },
+    "category": "睡眠设施",
+    "conditions": [
+      "workbench"
+    ],
+    "default_unlocked": true,
+    "description": "一次性应急睡眠，最多3游戏小时，醒来后消失。",
+    "craft_time": 1.5
+  }
+]

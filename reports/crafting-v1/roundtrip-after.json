@@ -1,0 +1,129 @@
+{
+  "body": {
+    "build": 0.00000154314814814,
+    "damage_clock": 0.0,
+    "deprivation": 0.0,
+    "down": false,
+    "exhausted": false,
+    "health": 100.0,
+    "hunger": 99.9996990861111,
+    "illness": 0.0,
+    "rescue_clock": 0.0,
+    "reserve": 0.00000231470674373,
+    "rest_clock": 0.016666,
+    "stamina": 100.0,
+    "version": 1
+  },
+  "campfires": {
+    "objects": {},
+    "version": 1
+  },
+  "consumed": {
+    "craft-test:pickup": true
+  },
+  "equipment": {},
+  "equipment_quarantine": {},
+  "generator": "windrest-continent-0.6.0",
+  "harvest_version": "harvest-resources-2.1.0",
+  "harvested": {},
+  "hotbar_equipment": {},
+  "lantern_remaining": 1800.0,
+  "loose": {},
+  "map_cells": 1024,
+  "ore_nodes": {},
+  "props_version": "windrest-props-0.7.1",
+  "resource_hits": {
+    "craft-test:buried": 2.0
+  },
+  "resource_version": "natural-resources-0.3.1",
+  "seed": 271828,
+  "selected": 0,
+  "slots": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+      "count": 6,
+      "item_id": "broad_leaf"
+    },
+    {
+      "count": 29,
+      "item_id": "plant_fiber"
+    },
+    {
+      "count": 10,
+      "item_id": "branch"
+    },
+    {
+      "count": 7,
+      "item_id": "flint"
+    },
+    {
+      "count": 2,
+      "item_id": "wood"
+    },
+    {
+      "count": 2,
+      "item_id": "stone"
+    },
+    {
+      "count": 2,
+      "item_id": "relic_fragment"
+    },
+    {
+      "count": 1,
+      "durability": null,
+      "instance_id": "6111302243349337520",
+      "item_id": "stone_axe",
+      "state": {}
+    },
+    {
+      "count": 1,
+      "durability": null,
+      "instance_id": "5734726527398411174",
+      "item_id": "stone_pickaxe",
+      "state": {}
+    },
+    {
+      "count": 1,
+      "durability": null,
+      "instance_id": "8866342013303365903",
+      "item_id": "simple_shovel",
+      "state": {}
+    },
+    {
+      "count": 1,
+      "fuel": 1800.0,
+      "item_id": "field_lantern",
+      "lamp_id": "4370950783781965008"
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "tree_hits": {},
+  "version": 1
+}

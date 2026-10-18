@@ -1,0 +1,54 @@
+{
+  "art_status": "pending_user",
+  "checks": [
+    {
+      "name": "candidate internal green pixels0 wood_floor zoom1.0",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 stone_path zoom1.0",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 mixed zoom1.0",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 wood_floor zoom0.75",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 stone_path zoom0.75",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 mixed zoom0.75",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 wood_floor zoom1.25",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 stone_path zoom1.25",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 mixed zoom1.25",
+      "pass": true
+    },
+    {
+      "name": "candidate same logical occupancy 960",
+      "pass": true
+    },
+    {
+      "name": "candidate same logical occupancy 1280",
+      "pass": true
+    },
+    {
+      "name": "candidate same logical occupancy 1600",
+      "pass": true
+    }
+  ],
+  "failed": 0
+}

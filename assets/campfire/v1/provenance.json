@@ -1,0 +1,169 @@
+{
+  "version": "campfire-art-1.0.0",
+  "status": "integrated_per_explicit_task_visual_review_pending",
+  "route": "local:codex-cli",
+  "art_source": "host_image",
+  "model": "codex-image_gen; underlying image model undisclosed",
+  "estimateUsd": 0,
+  "actual_cost": "unknown",
+  "source": "art\\campfire-v1\\candidate-01\\generated.png",
+  "source_sha256": "338b74c7cd741f44fbcb6cc7c9de057621b6d58516ee061947414c6214526e4b",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "prompt": "art/campfire-v1/prompt.txt",
+  "receipt": "art/campfire-v1/candidate-01/job.json",
+  "processing": "Complete cell ownership crop, magenta key, aspect-preserving Lanczos to 256 canvas. No code-painted artwork. Lit reference retained; game uses unlit base plus generated flame.",
+  "files": [
+    {
+      "name": "base",
+      "cell": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "bbox": [
+        102,
+        217,
+        432,
+        421
+      ],
+      "size": [
+        240,
+        148
+      ],
+      "sha256": "b154ad38f24783278070f718d26a2dc8ced59ce66139024cf763b6e5542dfef3",
+      "safe_edges": true
+    },
+    {
+      "name": "lit_reference",
+      "cell": [
+        512,
+        0,
+        1024,
+        512
+      ],
+      "bbox": [
+        95,
+        131,
+        426,
+        424
+      ],
+      "size": [
+        240,
+        212
+      ],
+      "sha256": "192ddb81326a25f1f6f6471938a5eba3fdf3017481553dd063ab81ff5d7b8735",
+      "safe_edges": true
+    },
+    {
+      "name": "flame",
+      "cell": [
+        1024,
+        0,
+        1536,
+        512
+      ],
+      "bbox": [
+        172,
+        154,
+        352,
+        407
+      ],
+      "size": [
+        171,
+        240
+      ],
+      "sha256": "d2d7a01eb10d072d67ff9853c8686225f8300856aea2ec687b0bbecfde6d52c3",
+      "safe_edges": true
+    },
+    {
+      "name": "roasted_carrot",
+      "cell": [
+        0,
+        512,
+        512,
+        1024
+      ],
+      "bbox": [
+        130,
+        108,
+        407,
+        362
+      ],
+      "size": [
+        240,
+        220
+      ],
+      "sha256": "83ad11ec2ac8bed3d92697f64508591c3b91ffb41ec04b3be985072740d88789",
+      "safe_edges": true
+    },
+    {
+      "name": "roasted_mushroom",
+      "cell": [
+        512,
+        512,
+        1024,
+        1024
+      ],
+      "bbox": [
+        110,
+        118,
+        410,
+        364
+      ],
+      "size": [
+        240,
+        197
+      ],
+      "sha256": "6539fe7dfba4fdc8b6bdf7014be394dc89ac20f1a2c2385fc4ddfeb89ff244fc",
+      "safe_edges": true
+    },
+    {
+      "name": "icon",
+      "cell": [
+        1024,
+        512,
+        1536,
+        1024
+      ],
+      "bbox": [
+        103,
+        147,
+        384,
+        341
+      ],
+      "size": [
+        240,
+        166
+      ],
+      "sha256": "60d95df036c1d5cb7c947603739498775d1e24b21894b189de1330ce57da09ba",
+      "safe_edges": true
+    }
+  ],
+  "warnings": [],
+  "references": [
+    {
+      "file": "reports/broadleaf-v1/grass-contact.png",
+      "sha256": "624096f50eb598b8fcdc81f8236f0db75bd6a4f3dd46e143c996fb39f64eb2e5"
+    },
+    {
+      "file": "assets/environment/view_v01/tree_0.png",
+      "sha256": "ecaa9cc692f4b1e23d8e8ecbf8856a199e4bdf5e6fc42019eb4883361f8282d8"
+    },
+    {
+      "file": "assets/environment/view_v01/tree_1.png",
+      "sha256": "3d5b3d8b630fd5b37a71d8a466ca3e905adde177d882d84fb3d4001dccfcc9bf"
+    },
+    {
+      "file": "assets/environment/view_v01/rock_0.png",
+      "sha256": "ab4ae57cac51ff5dd1978b6f9bb2893b778cdb2a6df7541b5934d67d71a68243"
+    },
+    {
+      "file": "assets/environment/view_v01/rock_1.png",
+      "sha256": "a02161b0cb0ba825368e84781e387f12843245304ee396ec2ca89fc5ae4b6d28"
+    }
+  ]
+}

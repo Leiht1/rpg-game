@@ -1,0 +1,35 @@
+{
+  "status": "approved_user",
+  "scope": "static holding pose / scale / grip concept review, not runtime sprites or animation",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "route_label": "Codex (local CLI)",
+  "reported_model": "codex-image_gen",
+  "underlying_image_model": "unknown",
+  "actual_cost_usd": null,
+  "estimateUsd": 0.0,
+  "image_calls": 3,
+  "preview_sha256": "7b1b8d6ab19095a9c4951cc6beb7c03d5a8db346c2d544525ecd8f1da57bc2be",
+  "selected_for_review": "../../art/tools-held-v04/candidate-03/generated.png",
+  "jobs": [
+    "../../art/tools-held-v04/candidate-01/job.json",
+    "../../art/tools-held-v04/candidate-02/job.json",
+    "../../art/tools-held-v04/candidate-03/job.json"
+  ],
+  "prompts": [
+    "../../art/tools-held-v04/prompt.txt",
+    "../../art/tools-held-v04/refine-prompt.txt",
+    "../../art/tools-held-v04/refine-two-cells.txt"
+  ],
+  "actual_character_reference": "../../art/tools-held-v04/references/approved-character-front-side.png",
+  "limitations": [
+    "Only front and right-side static concepts, not four-direction actions.",
+    "Generated concept is not a replacement for approved rig/body textures.",
+    "The live left-arm draw order is defined by the corrected native scene, not by this illustration.",
+    "Two earlier drafts had wrong front-view gripping side and/or shovel grip/material; retained for provenance, not adopted.",
+    "User visual approval remains pending; no new held-tool art imported into character.tscn."
+  ],
+  "approved_on": "2026-10-17",
+  "approval": "用户在工具及持握候选展示后明确：接入游戏吧。",
+  "approval_scope": "Only these six tool PNGs and selected candidate-03 held-pose direction. Earlier incorrect held drafts not approved; full-body generated character not used as runtime art."
+}

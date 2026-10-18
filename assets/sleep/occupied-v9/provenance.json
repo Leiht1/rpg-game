@@ -1,0 +1,48 @@
+{
+  "status": "approved_formal",
+  "approval": "横向草席的被子太短了，头下面都漏出来了一节空的，再调整一下，然后就可以接入游戏了",
+  "approval_scope": "Current sleep facilities and occupied art, including explicitly authorized final horizontal mat hem extension; does not approve future art.",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "files": {
+    "wood_bed.png": {
+      "source": "prototypes\\sleep-occupied-v8\\final\\wood_bed.png",
+      "sha256": "70c43424a6f26a3cf4d12d195e175a640444edb4cca531b08d2c76463d1ded5b",
+      "source_sha256": "70c43424a6f26a3cf4d12d195e175a640444edb4cca531b08d2c76463d1ded5b"
+    },
+    "wood_bed-vertical.png": {
+      "source": "prototypes\\sleep-occupied-v6\\final\\wood_bed-vertical.png",
+      "sha256": "5ac399cb68a67666a5de4467e10c39e0ec843881dbe82cb8d913bb704f773dad",
+      "source_sha256": "5ac399cb68a67666a5de4467e10c39e0ec843881dbe82cb8d913bb704f773dad"
+    },
+    "straw_mat.png": {
+      "source": "prototypes\\sleep-formal-v9\\final\\straw_mat.png",
+      "sha256": "e08e10c23c762aa70375ca402217de1b03bb9605533d1d06dcd057faaa933c08",
+      "source_sha256": "e08e10c23c762aa70375ca402217de1b03bb9605533d1d06dcd057faaa933c08"
+    },
+    "straw_mat-vertical.png": {
+      "source": "prototypes\\sleep-occupied-v8\\final\\straw_mat-vertical.png",
+      "sha256": "6947e4b34d41c596e85778f01cbfbd7159f702b722b44ed31db9275d0788f454",
+      "source_sha256": "6947e4b34d41c596e85778f01cbfbd7159f702b722b44ed31db9275d0788f454"
+    },
+    "sleeping_bag.png": {
+      "source": "prototypes\\sleep-occupied-v5\\final\\sleeping_bag.png",
+      "sha256": "52e331bfa907806594b3e8cd7cac2a5eb502543dbf11679a349b1e8b59ded285",
+      "source_sha256": "52e331bfa907806594b3e8cd7cac2a5eb502543dbf11679a349b1e8b59ded285"
+    }
+  },
+  "final_mat_job": "art/sleep-formal-v9/raw/job.json",
+  "final_mat_transform": {
+    "bbox": [
+      15,
+      93,
+      240,
+      163
+    ],
+    "scale": 1.6977777777777778,
+    "xy": [
+      65,
+      68
+    ]
+  }
+}

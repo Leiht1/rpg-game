@@ -1,0 +1,421 @@
+{
+  "adapter": "NVIDIA GeForce RTX 5060",
+  "approach": "one live pure terrain screen copy; fragment-local hue/value adaptation of existing contact art; no new raster art",
+  "checks": [
+    {
+      "name": "one consistent upper/root material grass tree_01",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision grass tree_01",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material grass tree_03",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision grass tree_03",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material grass tree_04",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision grass tree_04",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material grass rock_01",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision grass rock_01",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only grass rock_01",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material grass rock_02",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision grass rock_02",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only grass rock_02",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material grass rock_03",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision grass rock_03",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only grass rock_03",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material grass rock_04",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision grass rock_04",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only grass rock_04",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material grass rock_05",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision grass rock_05",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only grass rock_05",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material grass rock_06",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision grass rock_06",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only grass rock_06",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material forest tree_01",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision forest tree_01",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material forest tree_03",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision forest tree_03",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material forest tree_04",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision forest tree_04",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material forest rock_01",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision forest rock_01",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only forest rock_01",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material forest rock_02",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision forest rock_02",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only forest rock_02",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material forest rock_03",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision forest rock_03",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only forest rock_03",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material forest rock_04",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision forest rock_04",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only forest rock_04",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material forest rock_05",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision forest rock_05",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only forest rock_05",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material forest rock_06",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision forest rock_06",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only forest rock_06",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material dirt tree_01",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision dirt tree_01",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material dirt tree_03",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision dirt tree_03",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material dirt tree_04",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision dirt tree_04",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material dirt rock_01",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision dirt rock_01",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only dirt rock_01",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material dirt rock_02",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision dirt rock_02",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only dirt rock_02",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material dirt rock_03",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision dirt rock_03",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only dirt rock_03",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material dirt rock_04",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision dirt rock_04",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only dirt rock_04",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material dirt rock_05",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision dirt rock_05",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only dirt rock_05",
+      "pass": true
+    },
+    {
+      "name": "one consistent upper/root material dirt rock_06",
+      "pass": true
+    },
+    {
+      "name": "unchanged collision dirt rock_06",
+      "pass": true
+    },
+    {
+      "name": "stone remains collision-only dirt rock_06",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 0",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 0",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 1",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 1",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 2",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 2",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 3",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 3",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 4",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 4",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 5",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 5",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 6",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 6",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 7",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 7",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 8",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 8",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 9",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 9",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 10",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 10",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 11",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 11",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 12",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 12",
+      "pass": true
+    },
+    {
+      "name": "colored contact remains fixed 13",
+      "pass": true
+    },
+    {
+      "name": "no hit color/white flash 13",
+      "pass": true
+    },
+    {
+      "name": "colored tree returns to rest",
+      "pass": true
+    },
+    {
+      "name": "all colored contact disappears with tree",
+      "pass": true
+    },
+    {
+      "name": "pure ground copy before shadows and objects",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "status": "pending_user"
+}

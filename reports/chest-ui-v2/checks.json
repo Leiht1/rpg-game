@@ -1,0 +1,82 @@
+[
+  {
+    "name": "place legal formal chest",
+    "pass": true
+  },
+  {
+    "name": "closed chest hides storage grid",
+    "pass": true
+  },
+  {
+    "name": "closed state retains approved original image",
+    "pass": true
+  },
+  {
+    "name": "E open uses persisted chest state and grid",
+    "pass": true
+  },
+  {
+    "name": "open state loads formal image with preview disabled",
+    "pass": true
+  },
+  {
+    "name": "smaller chest cells and compact frame",
+    "pass": true
+  },
+  {
+    "name": "grid remains above lid",
+    "pass": true
+  },
+  {
+    "name": "both bag panels draw above chest",
+    "pass": true
+  },
+  {
+    "name": "bag visual order matches row-major organize",
+    "pass": true
+  },
+  {
+    "name": "title moved into blank header",
+    "pass": true
+  },
+  {
+    "name": "both chest states share minification filtering",
+    "pass": true
+  },
+  {
+    "name": "E closes real targeted chest while bag remains open",
+    "pass": true
+  },
+  {
+    "name": "E reopens real chest with bag visible",
+    "pass": true
+  },
+  {
+    "name": "bag receives pointer above overlapping chest",
+    "pass": true
+  },
+  {
+    "name": "native drag remains active with bag visible",
+    "pass": true
+  },
+  {
+    "name": "native drag from smaller chest into bag",
+    "pass": true
+  },
+  {
+    "name": "native drag remains active with bag visible",
+    "pass": true
+  },
+  {
+    "name": "native drag bag to smaller chest bypasses ground catcher",
+    "pass": true
+  },
+  {
+    "name": "closing returns to closed state and hides grid",
+    "pass": true
+  },
+  {
+    "name": "isolated open chest save commits contents",
+    "pass": true
+  }
+]

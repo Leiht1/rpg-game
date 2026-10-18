@@ -1,0 +1,321 @@
+{
+  "checks": [
+    {
+      "name": "equip from hotbar stone_axe",
+      "pass": true
+    },
+    {
+      "name": "equipped alias menu says unequip stone_axe",
+      "pass": true
+    },
+    {
+      "name": "alias resolves real equipment slot stone_axe",
+      "pass": true
+    },
+    {
+      "name": "menu unequips same instance to its hotbar stone_axe",
+      "pass": true
+    },
+    {
+      "name": "unequip removes alias and retains durability stone_axe",
+      "pass": true
+    },
+    {
+      "name": "unequipped hotbar says equip stone_axe",
+      "pass": true
+    },
+    {
+      "name": "menu equips physical hotbar item again stone_axe",
+      "pass": true
+    },
+    {
+      "name": "equip from hotbar stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "equipped alias menu says unequip stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "alias resolves real equipment slot stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "menu unequips same instance to its hotbar stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "unequip removes alias and retains durability stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "unequipped hotbar says equip stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "menu equips physical hotbar item again stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "equip from hotbar simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "equipped alias menu says unequip simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "alias resolves real equipment slot simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "menu unequips same instance to its hotbar simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "unequip removes alias and retains durability simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "unequipped hotbar says equip simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "menu equips physical hotbar item again simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "equip from hotbar stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "equipped alias menu says unequip stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "alias resolves real equipment slot stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "menu unequips same instance to its hotbar stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "unequip removes alias and retains durability stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "unequipped hotbar says equip stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "menu equips physical hotbar item again stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "full bag still unequips into original hotbar",
+      "pass": true
+    },
+    {
+      "name": "stale unequip label cannot equip returned former item",
+      "pass": true
+    },
+    {
+      "name": "unbound equipped item stays when bag full",
+      "pass": true
+    },
+    {
+      "name": "hammer reference is existing native back clip",
+      "pass": true
+    },
+    {
+      "name": "back action shares hammer native clip mine",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose mineVisual/Pelvis",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose mineVisual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose mineVisual/Pelvis/ArmL",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose mineVisual/Pelvis/Head",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose mineVisual/LegL",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose mineVisual/LegR",
+      "pass": true
+    },
+    {
+      "name": "correct held tool on shared pose mine",
+      "pass": true
+    },
+    {
+      "name": "existing other view retained minefront",
+      "pass": true
+    },
+    {
+      "name": "existing other view retained mineright",
+      "pass": true
+    },
+    {
+      "name": "existing other view retained mineleft",
+      "pass": true
+    },
+    {
+      "name": "back action shares hammer native clip chop",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose chopVisual/Pelvis",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose chopVisual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose chopVisual/Pelvis/ArmL",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose chopVisual/Pelvis/Head",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose chopVisual/LegL",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose chopVisual/LegR",
+      "pass": true
+    },
+    {
+      "name": "correct held tool on shared pose chop",
+      "pass": true
+    },
+    {
+      "name": "existing other view retained chopfront",
+      "pass": true
+    },
+    {
+      "name": "existing other view retained chopright",
+      "pass": true
+    },
+    {
+      "name": "existing other view retained chopleft",
+      "pass": true
+    },
+    {
+      "name": "back action shares hammer native clip dig",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose digVisual/Pelvis",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose digVisual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose digVisual/Pelvis/ArmL",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose digVisual/Pelvis/Head",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose digVisual/LegL",
+      "pass": true
+    },
+    {
+      "name": "shared back contact pose digVisual/LegR",
+      "pass": true
+    },
+    {
+      "name": "correct held tool on shared pose dig",
+      "pass": true
+    },
+    {
+      "name": "existing other view retained digfront",
+      "pass": true
+    },
+    {
+      "name": "existing other view retained digright",
+      "pass": true
+    },
+    {
+      "name": "existing other view retained digleft",
+      "pass": true
+    },
+    {
+      "name": "original chop end time unchanged",
+      "pass": true
+    },
+    {
+      "name": "original digging end time unchanged",
+      "pass": true
+    },
+    {
+      "name": "original tree approachable from south",
+      "pass": true
+    },
+    {
+      "name": "original E chop chooses back toward northern tree",
+      "pass": true
+    },
+    {
+      "name": "back chop commits original hit once",
+      "pass": true
+    },
+    {
+      "name": "back chop costs original one durability",
+      "pass": true
+    },
+    {
+      "name": "original E starts northern target mine",
+      "pass": true
+    },
+    {
+      "name": "back action commits original contact mine",
+      "pass": true
+    },
+    {
+      "name": "back action no duplicate hit mine",
+      "pass": true
+    },
+    {
+      "name": "back action original durability mine",
+      "pass": true
+    },
+    {
+      "name": "original E starts northern target dig",
+      "pass": true
+    },
+    {
+      "name": "back action commits original contact dig",
+      "pass": true
+    },
+    {
+      "name": "back action no duplicate hit dig",
+      "pass": true
+    },
+    {
+      "name": "back action original durability dig",
+      "pass": true
+    }
+  ],
+  "failed": 0
+}

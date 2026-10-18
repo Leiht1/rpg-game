@@ -1,0 +1,26 @@
+[
+  {
+    "name": "new process restores only equipped axe capability",
+    "pass": true
+  },
+  {
+    "name": "new process restores exact instance ID and state",
+    "pass": true
+  },
+  {
+    "name": "new process preserves bag separately without copied axe",
+    "pass": true
+  },
+  {
+    "name": "unknown equipment quarantines without breaking valid equipment",
+    "pass": true
+  },
+  {
+    "name": "duplicated save rejects atomically and never overwrites source",
+    "pass": true
+  },
+  {
+    "name": "same equipment instance cannot also exist as a loose drop",
+    "pass": true
+  }
+]

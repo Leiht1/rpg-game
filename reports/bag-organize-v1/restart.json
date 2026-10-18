@@ -1,0 +1,70 @@
+[
+  {
+    "name": "empty bag no-op",
+    "pass": true
+  },
+  {
+    "name": "planning has no partial live mutation",
+    "pass": true
+  },
+  {
+    "name": "all counts and hotbar preserved",
+    "pass": true
+  },
+  {
+    "name": "wood merges under actual stack limit ninety-nine",
+    "pass": true
+  },
+  {
+    "name": "food first and stack limit thirty",
+    "pass": true
+  },
+  {
+    "name": "empty cells packed to end",
+    "pass": true
+  },
+  {
+    "name": "repeated sorting idempotent",
+    "pass": true
+  },
+  {
+    "name": "material overflow splits at ninety-nine",
+    "pass": true
+  },
+  {
+    "name": "full bag can consolidate",
+    "pass": true
+  },
+  {
+    "name": "same tools remain two unchanged instances in stable order",
+    "pass": true
+  },
+  {
+    "name": "lamps retain individual identity fuel and order",
+    "pass": true
+  },
+  {
+    "name": "equipped hotbar alias unchanged",
+    "pass": true
+  },
+  {
+    "name": "different metadata never coalesces",
+    "pass": true
+  },
+  {
+    "name": "independent process restores organized counts and placement",
+    "pass": true
+  },
+  {
+    "name": "restart retains hotbar and equipment references",
+    "pass": true
+  },
+  {
+    "name": "restart retains both tool durabilities",
+    "pass": true
+  },
+  {
+    "name": "restart retains two lamps without duplication",
+    "pass": true
+  }
+]

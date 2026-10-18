@@ -1,0 +1,23 @@
+{
+  "status": "approved_and_integrated",
+  "generator": "windrest-continent-0.6.0",
+  "visual_review": [
+    {
+      "seed": 1671081329,
+      "status": "needs_review",
+      "finding": "陆地11.40%，细长链状，腹地与多路线探索价值偏弱。保留真实结果，没有替换Seed。",
+      "cause": "树的长链嵌入叠加长宽适配，包围盒被少数延伸区域撑大；区域相接和图环路未形成足够宽广腹地。"
+    },
+    {
+      "scope": "all_seeds",
+      "status": "pending_user",
+      "finding": "部分海岸仍有圆润区域体拼接感。连接性数值通过，不代表整体自然程度自动通过。"
+    }
+  ],
+  "limits": [
+    "384²洪泛是采样证据，非像素级证明",
+    "E−V+1是图环数，不是可见内海数",
+    "海洋复用现有水面，无专用深海美术"
+  ],
+  "approval": "2026-10-16 用户明确要求接入游戏，保留已记录质量弱例。"
+}

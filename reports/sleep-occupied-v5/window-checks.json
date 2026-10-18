@@ -1,0 +1,502 @@
+[
+  {
+    "name": "no sleep choice window exists",
+    "pass": true
+  },
+  {
+    "name": "no lie or rise transition clips",
+    "pass": true
+  },
+  {
+    "name": "hand/workbench split retained",
+    "pass": true
+  },
+  {
+    "name": "real placement site sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "place original building manager sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "E interaction executes sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "same-call immediate sleep and IN_USE sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "enter sleep gives no instant energy sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "closed sleep locks action and shows zzz sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "repeated E start cannot duplicate session sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "held key repeat does not instantly cancel sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "body fully hidden and only current head plus rounded occupied prop displayed sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "current side head texture reused with closed eye sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "horizontal face points upward; vertical uses side profile sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "complete painted occupied silhouette replaces flat base without crop sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "quilt breathes while head/root stay still sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen sleeping_bag-horizontal(960, 540)",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen sleeping_bag-horizontal(1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen sleeping_bag-horizontal(1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "normal world time and gradual rate sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "paused sleep does not progress sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "any new key wakes in same call sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "standing rig restored instantly and sleeping head/quilt hidden sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "bag disappears immediately or reusable released sleeping_bag-horizontal",
+    "pass": true
+  },
+  {
+    "name": "real placement site straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "place original building manager straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "R build direction retained straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "E interaction executes straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "same-call immediate sleep and IN_USE straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "enter sleep gives no instant energy straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "closed sleep locks action and shows zzz straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "repeated E start cannot duplicate session straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "held key repeat does not instantly cancel straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "body fully hidden and only current head plus rounded occupied prop displayed straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "current side head texture reused with closed eye straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "horizontal face points upward; vertical uses side profile straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "complete painted occupied silhouette replaces flat base without crop straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "quilt breathes while head/root stay still straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen straw_mat-horizontal(960, 540)",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen straw_mat-horizontal(1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen straw_mat-horizontal(1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "normal world time and gradual rate straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "paused sleep does not progress straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "any new key wakes in same call straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "standing rig restored instantly and sleeping head/quilt hidden straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "bag disappears immediately or reusable released straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "empty facility drawing restored on wake straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "repeat use still instant straw_mat-horizontal",
+    "pass": true
+  },
+  {
+    "name": "real placement site straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "place original building manager straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "R build direction retained straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "E interaction executes straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "same-call immediate sleep and IN_USE straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "enter sleep gives no instant energy straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "closed sleep locks action and shows zzz straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "repeated E start cannot duplicate session straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "held key repeat does not instantly cancel straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "body fully hidden and only current head plus rounded occupied prop displayed straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "current side head texture reused with closed eye straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "horizontal face points upward; vertical uses side profile straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "complete painted occupied silhouette replaces flat base without crop straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "quilt breathes while head/root stay still straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen straw_mat-vertical(960, 540)",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen straw_mat-vertical(1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen straw_mat-vertical(1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "normal world time and gradual rate straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "paused sleep does not progress straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "any new key wakes in same call straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "standing rig restored instantly and sleeping head/quilt hidden straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "bag disappears immediately or reusable released straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "empty facility drawing restored on wake straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "repeat use still instant straw_mat-vertical",
+    "pass": true
+  },
+  {
+    "name": "real placement site wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "place original building manager wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "R build direction retained wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "E interaction executes wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "same-call immediate sleep and IN_USE wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "enter sleep gives no instant energy wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "closed sleep locks action and shows zzz wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "repeated E start cannot duplicate session wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "held key repeat does not instantly cancel wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "body fully hidden and only current head plus rounded occupied prop displayed wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "current side head texture reused with closed eye wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "horizontal face points upward; vertical uses side profile wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "complete painted occupied silhouette replaces flat base without crop wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "quilt breathes while head/root stay still wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen wood_bed-horizontal(960, 540)",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen wood_bed-horizontal(1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen wood_bed-horizontal(1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "normal world time and gradual rate wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "paused sleep does not progress wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "any new key wakes in same call wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "standing rig restored instantly and sleeping head/quilt hidden wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "bag disappears immediately or reusable released wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "empty facility drawing restored on wake wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "repeat use still instant wood_bed-horizontal",
+    "pass": true
+  },
+  {
+    "name": "real placement site wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "place original building manager wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "R build direction retained wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "E interaction executes wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "same-call immediate sleep and IN_USE wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "enter sleep gives no instant energy wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "closed sleep locks action and shows zzz wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "repeated E start cannot duplicate session wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "held key repeat does not instantly cancel wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "body fully hidden and only current head plus rounded occupied prop displayed wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "current side head texture reused with closed eye wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "horizontal face points upward; vertical uses side profile wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "complete painted occupied silhouette replaces flat base without crop wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "quilt breathes while head/root stay still wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen wood_bed-vertical(960, 540)",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen wood_bed-vertical(1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "zzz remains on screen wood_bed-vertical(1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "normal world time and gradual rate wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "paused sleep does not progress wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "any new key wakes in same call wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "standing rig restored instantly and sleeping head/quilt hidden wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "bag disappears immediately or reusable released wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "empty facility drawing restored on wake wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "repeat use still instant wood_bed-vertical",
+    "pass": true
+  },
+  {
+    "name": "actual physics refuses held movement during sleep",
+    "pass": true
+  },
+  {
+    "name": "wake key is consumed instead of opening another UI",
+    "pass": true
+  },
+  {
+    "name": "actual physics resumes immediately without rise delay",
+    "pass": true
+  },
+  {
+    "name": "forced sleep remains immediate",
+    "pass": true
+  },
+  {
+    "name": "forced wake does not consume unrelated facility",
+    "pass": true
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "status": "pending_user",
+  "scope": "独立可种植耕地候选；右侧残根耕地造型去除所有残留物",
+  "route": "generate2dsprite -> route_media -> local:codex-cli",
+  "source": "generation/generated.png",
+  "preview": "processed/clean.png",
+  "qa": "single sprite strict structural QA pass",
+  "integration": "未替换现有候选或正式资源，等待用户验收后继续开发"
+}

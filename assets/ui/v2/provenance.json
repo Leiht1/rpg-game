@@ -1,0 +1,133 @@
+{
+  "version": "core-ui-art-1.1.0",
+  "status": "integrated_user_requested_redraw_visual_review_pending",
+  "route": "local:codex-cli",
+  "art_source": "host_image",
+  "exact_image_model": "not exposed",
+  "source": "art\\ui-v1\\candidate-02\\generated.png",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "source_sha256": "b19c9ffa529ec74451febf6d4bdbb2fbbe7b306bb80e838a0fec786886b3982f",
+  "prompt": "art/ui-v1/prompt-redraw.txt",
+  "receipt": "art/ui-v1/candidate-02/job.json",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "2026-10-06",
+    "items": [],
+    "basis": "subscription quota call: no per-call USD price; counted by call caps"
+  },
+  "selection_reason": "Redrawn pale text zones, no green/leaf decoration, thin lightweight boundaries. Texture supports content; layout measures actual text separately.",
+  "processing": "Magenta key, complete ownership crop, equal aspect LANCZOS resize, 2px transparent safe margin; no repaint, rotation or stretching baked into assets.",
+  "warnings": [
+    "Returned 1254x1254 rather than requested 1024x1024; measured ownership crops are used."
+  ],
+  "files": [
+    {
+      "path": "assets\\ui\\v2\\panel.png",
+      "sha256": "2886631d4be3427197bdcf5bde5cf44909862024d39377ae658f1112cb27bb58",
+      "ownership_rect": [
+        40,
+        90,
+        620,
+        655
+      ],
+      "source_alpha_bbox": [
+        46,
+        50,
+        544,
+        534
+      ],
+      "runtime_size": [
+        256,
+        249
+      ],
+      "qa": {
+        "edge_alpha_zero": true,
+        "text_zone_min_luma": 0.9772305882352941,
+        "text_zone_min_alpha": 255,
+        "green_dominant_pixels": 22950
+      }
+    },
+    {
+      "path": "assets\\ui\\v2\\slot.png",
+      "sha256": "ed3bc38e82f307ae600a17428a480c6209285be54ba46c4a403bf3ea1568c6ba",
+      "ownership_rect": [
+        770,
+        220,
+        1100,
+        545
+      ],
+      "source_alpha_bbox": [
+        54,
+        45,
+        280,
+        274
+      ],
+      "runtime_size": [
+        95,
+        96
+      ],
+      "qa": {
+        "edge_alpha_zero": true,
+        "text_zone_min_luma": 0.9494603921568626,
+        "text_zone_min_alpha": 255,
+        "green_dominant_pixels": 3249
+      }
+    },
+    {
+      "path": "assets\\ui\\v2\\button.png",
+      "sha256": "54fddbfc636122e7085bcf37d233e9f44a4e51309e04f7b57402cb4d5fefd17c",
+      "ownership_rect": [
+        35,
+        800,
+        625,
+        1040
+      ],
+      "source_alpha_bbox": [
+        37,
+        66,
+        559,
+        189
+      ],
+      "runtime_size": [
+        256,
+        63
+      ],
+      "qa": {
+        "edge_alpha_zero": true,
+        "text_zone_min_luma": 0.9772305882352941,
+        "text_zone_min_alpha": 255,
+        "green_dominant_pixels": 5814
+      }
+    },
+    {
+      "path": "assets\\ui\\v2\\hotbar.png",
+      "sha256": "78e54ea0a468faa1cc51582e5902a297a9fe561e425321c8e35b4e20c224cae0",
+      "ownership_rect": [
+        630,
+        800,
+        1220,
+        1040
+      ],
+      "source_alpha_bbox": [
+        32,
+        66,
+        554,
+        189
+      ],
+      "runtime_size": [
+        512,
+        124
+      ],
+      "qa": {
+        "edge_alpha_zero": true,
+        "text_zone_min_luma": 0.9486266666666665,
+        "text_zone_min_alpha": 255,
+        "green_dominant_pixels": 23025
+      }
+    }
+  ]
+}

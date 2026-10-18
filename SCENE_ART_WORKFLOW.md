@@ -1,4 +1,6 @@
 # 场景美术生产入口
+
+制作新景物前阅读 [SCENERY_ART_PREFERENCES.md](SCENERY_ART_PREFERENCES.md)，沿用当前选版与用户偏好；区分明确反馈和推断，不以历史中间稿覆盖后续选择。
 2026-10-16 · 3.1 · ART_STYLE.md为唯一视觉标准，VIEW_REFERENCE.md为同一标准的参考样板。
 1. 定位正式运行引用，读取最新ART_STYLE.md和VIEW_REFERENCE.md；保留当前角色、地表及游戏镜头尺度。不得沿用历史提示词的偏正面观察要求。
 2. generate2dsprite能力检查与route_media受控生成；实际reference附上正式角色同屏、两树两石。明确3/4斜俯视近正交、左上光照；重画空间结构，不能旋转压扁现图。

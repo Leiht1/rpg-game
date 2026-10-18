@@ -1,0 +1,94 @@
+[
+  {
+    "name": "no text glyph substituting for energy icon",
+    "pass": true
+  },
+  {
+    "name": "body details has no active sleep button",
+    "pass": true
+  },
+  {
+    "name": "standalone voluntary sleep entry removed",
+    "pass": true
+  },
+  {
+    "name": "four real image icons including preview energy",
+    "pass": true
+  },
+  {
+    "name": "candidate image loaded at source resolution",
+    "pass": true
+  },
+  {
+    "name": "unapproved candidate not installed as formal art",
+    "pass": true
+  },
+  {
+    "name": "image HUD clear of dock (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "energy icon display 26 square (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "button-free detail fits (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "detail remains modal without bottom overlap (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "close restores original input (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "image HUD clear of dock (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "energy icon display 26 square (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "button-free detail fits (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "detail remains modal without bottom overlap (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "close restores original input (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "image HUD clear of dock (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "energy icon display 26 square (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "button-free detail fits (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "detail remains modal without bottom overlap (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "close restores original input (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "removing active entry preserves automatic forced sleep",
+    "pass": true
+  },
+  {
+    "name": "forced sleep still wakes normally",
+    "pass": true
+  }
+]

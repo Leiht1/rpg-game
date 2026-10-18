@@ -1,0 +1,26 @@
+[
+  {
+    "name": "independent process restores one camp",
+    "pass": true
+  },
+  {
+    "name": "equipped hotbar instance retained across process",
+    "pass": true
+  },
+  {
+    "name": "harvest histories retained across process",
+    "pass": true
+  },
+  {
+    "name": "mid-cooking progress fuel and ignition restored after process restart",
+    "pass": true
+  },
+  {
+    "name": "already committed raw ingredient remains consumed",
+    "pass": true
+  },
+  {
+    "name": "restored job completes from saved progress",
+    "pass": true
+  }
+]

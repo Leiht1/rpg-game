@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="风栖原野 V0.3"
+config/name="风栖原野 V0.4"
 config/description="卡通草地与景物融合 · Seed地图 · 连续挥砍与快速拾取"
 run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
@@ -22,6 +22,10 @@ window/size/viewport_height=720
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
+
+[physics]
+
+common/physics_interpolation=true
 
 [rendering]
 

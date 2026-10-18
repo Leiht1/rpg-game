@@ -1,0 +1,82 @@
+[
+  {
+    "id": "wild_berry",
+    "name": "野生浆果",
+    "old": {
+      "hunger": 3
+    },
+    "new": 8
+  },
+  {
+    "id": "brown_mushroom",
+    "name": "棕蘑菇",
+    "old": {
+      "hunger": 3
+    },
+    "new": 8
+  },
+  {
+    "id": "wild_carrot",
+    "name": "野胡萝卜",
+    "old": {
+      "hunger": 4
+    },
+    "new": 14
+  },
+  {
+    "id": "wild_apple",
+    "name": "野苹果",
+    "old": {
+      "hunger": 4
+    },
+    "new": 12
+  },
+  {
+    "id": "wildflower",
+    "name": "野花",
+    "old": {
+      "hunger": 1
+    },
+    "new": 1
+  },
+  {
+    "id": "roasted_carrot",
+    "name": "烤胡萝卜",
+    "old": {
+      "hunger": 12
+    },
+    "new": 26
+  },
+  {
+    "id": "roasted_mushroom",
+    "name": "烤蘑菇",
+    "old": {
+      "hunger": 10
+    },
+    "new": 22
+  },
+  {
+    "id": "herb_roasted_mushroom",
+    "name": "香草烤蘑菇",
+    "old": {
+      "hunger": 16
+    },
+    "new": 30
+  },
+  {
+    "id": "roasted_fruit_platter",
+    "name": "野果混合烤盘",
+    "old": {
+      "hunger": 20
+    },
+    "new": 36
+  },
+  {
+    "id": "field_harvest_platter",
+    "name": "原野丰收烤盘",
+    "old": {
+      "hunger": 24
+    },
+    "new": 40
+  }
+]

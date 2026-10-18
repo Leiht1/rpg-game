@@ -1,0 +1,194 @@
+[
+  {
+    "name": "real dry legal fire location available",
+    "pass": true
+  },
+  {
+    "name": "test fire placed with original item consumption",
+    "pass": true
+  },
+  {
+    "name": "native drag begins from slot 0",
+    "pass": true
+  },
+  {
+    "name": "hotbar drag starts right-hand throw when unarmed",
+    "pass": true
+  },
+  {
+    "name": "start and wind-up do not consume or refuel",
+    "pass": true
+  },
+  {
+    "name": "native directional throwing animation actually selected",
+    "pass": true
+  },
+  {
+    "name": "item in flight remains uncommitted",
+    "pass": true
+  },
+  {
+    "name": "impact consumes dragged stack and ignites with matching burn time",
+    "pass": true
+  },
+  {
+    "name": "impact committed through authoritative service",
+    "pass": true
+  },
+  {
+    "name": "one-shot recovery cleans temporary item sprite",
+    "pass": true
+  },
+  {
+    "name": "remaining-time bar fixed beneath fire",
+    "pass": true
+  },
+  {
+    "name": "fuel bar height is one third with width unchanged",
+    "pass": true
+  },
+  {
+    "name": "timeout extinguishes flame and empties persistent bar",
+    "pass": true
+  },
+  {
+    "name": "native drag begins from slot 8",
+    "pass": true
+  },
+  {
+    "name": "bag temporarily folds after dragging out to reveal fire",
+    "pass": true
+  },
+  {
+    "name": "bag restored after world drop",
+    "pass": true
+  },
+  {
+    "name": "bag drag routes to same throwing action",
+    "pass": true
+  },
+  {
+    "name": "bag fuel reignites expired fire",
+    "pass": true
+  },
+  {
+    "name": "native drag begins from slot 2",
+    "pass": true
+  },
+  {
+    "name": "main-hand equipment selects opposite left hand",
+    "pass": true
+  },
+  {
+    "name": "equipped tool stays visible in original main hand",
+    "pass": true
+  },
+  {
+    "name": "left throw refuels without replacing or consuming equipment",
+    "pass": true
+  },
+  {
+    "name": "native drag begins from slot 3",
+    "pass": true
+  },
+  {
+    "name": "noncombustible drop preserves source and creates no ground discard",
+    "pass": true
+  },
+  {
+    "name": "native drag begins from slot 4",
+    "pass": true
+  },
+  {
+    "name": "cancelled throw preserves all items and fuel",
+    "pass": true
+  },
+  {
+    "name": "opening map cancels uncommitted throw without consumption",
+    "pass": true
+  },
+  {
+    "name": "new toss begins after cancellation",
+    "pass": true
+  },
+  {
+    "name": "repeat request while throwing rejected",
+    "pass": true
+  },
+  {
+    "name": "source moved before impact rejects transaction without loss",
+    "pass": true
+  },
+  {
+    "name": "equipment change cancels uncommitted throw",
+    "pass": true
+  },
+  {
+    "name": "only quantity fitting fuel capacity is selected",
+    "pass": true
+  },
+  {
+    "name": "capacity overflow remains in original stack",
+    "pass": true
+  },
+  {
+    "name": "full fire rejects further items",
+    "pass": true
+  },
+  {
+    "name": "out-of-reach impact leaves items untouched",
+    "pass": true
+  },
+  {
+    "name": "real-time toss starts",
+    "pass": true
+  },
+  {
+    "name": "normal physics frames complete throw and atomic refuel",
+    "pass": true
+  },
+  {
+    "name": "native pose selected front left",
+    "pass": true
+  },
+  {
+    "name": "native pose selected front right",
+    "pass": true
+  },
+  {
+    "name": "native pose selected back left",
+    "pass": true
+  },
+  {
+    "name": "native pose selected back right",
+    "pass": true
+  },
+  {
+    "name": "native pose selected left left",
+    "pass": true
+  },
+  {
+    "name": "native pose selected left right",
+    "pass": true
+  },
+  {
+    "name": "native pose selected right left",
+    "pass": true
+  },
+  {
+    "name": "native pose selected right right",
+    "pass": true
+  },
+  {
+    "name": "left arm keeps original behind-body rendering contract",
+    "pass": true
+  },
+  {
+    "name": "cooking panel has no refuel ignition or extinguish buttons",
+    "pass": true
+  },
+  {
+    "name": "removed fire operations are unavailable through service as well",
+    "pass": true
+  }
+]

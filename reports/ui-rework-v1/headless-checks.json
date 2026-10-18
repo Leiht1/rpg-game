@@ -1,0 +1,130 @@
+[
+  {
+    "name": "B opens original moving bag",
+    "pass": true
+  },
+  {
+    "name": "new main art is formally referenced",
+    "pass": true
+  },
+  {
+    "name": "normal linen slot uses actual new texture",
+    "pass": true
+  },
+  {
+    "name": "selected hotbar uses separate painted state",
+    "pass": true
+  },
+  {
+    "name": "equipped tool reference has visual status",
+    "pass": true
+  },
+  {
+    "name": "bag hover/click keeps frame and scale 0",
+    "pass": true
+  },
+  {
+    "name": "bag hover/click keeps frame and scale 1",
+    "pass": true
+  },
+  {
+    "name": "bag hover/click keeps frame and scale 10",
+    "pass": true
+  },
+  {
+    "name": "native hover shows tooltip",
+    "pass": true
+  },
+  {
+    "name": "tooltip uses distinct paper note",
+    "pass": true
+  },
+  {
+    "name": "tooltip stays in screen",
+    "pass": true
+  },
+  {
+    "name": "moving pointer hides tooltip",
+    "pass": true
+  },
+  {
+    "name": "original native item drag begins",
+    "pass": true
+  },
+  {
+    "name": "native drag transfers stack without changing inventory logic",
+    "pass": true
+  },
+  {
+    "name": "right-click existing food use menu remains usable",
+    "pass": true
+  },
+  {
+    "name": "original food use consumes one",
+    "pass": true
+  },
+  {
+    "name": "hotbar switches original tool and visual marker",
+    "pass": true
+  },
+  {
+    "name": "C opens original crafting input guard",
+    "pass": true
+  },
+  {
+    "name": "insufficient state remains correctly disabled",
+    "pass": true
+  },
+  {
+    "name": "native painted button executes existing crafting",
+    "pass": true
+  },
+  {
+    "name": "existing data-driven category 全部",
+    "pass": true
+  },
+  {
+    "name": "existing data-driven category 工具",
+    "pass": true
+  },
+  {
+    "name": "existing data-driven category 野外用品",
+    "pass": true
+  },
+  {
+    "name": "existing data-driven category 材料加工",
+    "pass": true
+  },
+  {
+    "name": "recipe/category/quantity/feedback changes never resize or stretch crafting",
+    "pass": true
+  },
+  {
+    "name": "all button states reserve identical geometry",
+    "pass": true
+  },
+  {
+    "name": "all visible titles, quantities, recipe names and button texts fit allocated width",
+    "pass": true
+  },
+  {
+    "name": "closing restores original player input",
+    "pass": true
+  },
+  {
+    "name": "bag fits logical viewport (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "crafting fits logical viewport (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "bag fits logical viewport (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "crafting fits logical viewport (1600, 900)",
+    "pass": true
+  }
+]

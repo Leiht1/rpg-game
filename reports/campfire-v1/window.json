@@ -1,0 +1,282 @@
+[
+  {
+    "name": "item and recipe definitions valid",
+    "pass": true
+  },
+  {
+    "name": "removed pouch recipe stays absent",
+    "pass": true
+  },
+  {
+    "name": "cooked carrot improves hunger yield",
+    "pass": true
+  },
+  {
+    "name": "cooked mushroom improves hunger yield",
+    "pass": true
+  },
+  {
+    "name": "a legal real-world dry placement found near spawn",
+    "pass": true
+  },
+  {
+    "name": "campfire crafted through original timed crafting",
+    "pass": true
+  },
+  {
+    "name": "craft costs and output committed once",
+    "pass": true
+  },
+  {
+    "name": "item use enters actual placement preview",
+    "pass": true
+  },
+  {
+    "name": "placement blocks movement and creates art preview",
+    "pass": true
+  },
+  {
+    "name": "E cancels preview without consuming item",
+    "pass": true
+  },
+  {
+    "name": "spawn rejection preserves item",
+    "pass": true
+  },
+  {
+    "name": "player overlap rejected",
+    "pass": true
+  },
+  {
+    "name": "map boundary rejected",
+    "pass": true
+  },
+  {
+    "name": "left click confirms legal placement through actual UI handler",
+    "pass": true
+  },
+  {
+    "name": "successful placement consumes exactly one object",
+    "pass": true
+  },
+  {
+    "name": "repeated placement cannot duplicate object",
+    "pass": true
+  },
+  {
+    "name": "world object uses generated art and E interaction group",
+    "pass": true
+  },
+  {
+    "name": "existing campfire overlap rejected",
+    "pass": true
+  },
+  {
+    "name": "cannot ignite without fuel",
+    "pass": true
+  },
+  {
+    "name": "fuel addition without wood rejected",
+    "pass": true
+  },
+  {
+    "name": "wood atomically exchanged for 120 fuel seconds",
+    "pass": true
+  },
+  {
+    "name": "fuel impact automatically ignites fire",
+    "pass": true
+  },
+  {
+    "name": "flame visible when burning",
+    "pass": true
+  },
+  {
+    "name": "original E execution opens camp interface",
+    "pass": true
+  },
+  {
+    "name": "cooking UI owns input",
+    "pass": true
+  },
+  {
+    "name": "missing ingredient cannot start cooking",
+    "pass": true
+  },
+  {
+    "name": "start carrot cooking",
+    "pass": true
+  },
+  {
+    "name": "deduction and job coexist in same snapshot",
+    "pass": true
+  },
+  {
+    "name": "duplicate start cannot deduct ingredient twice",
+    "pass": true
+  },
+  {
+    "name": "fuel and progress share normal simulation seconds",
+    "pass": true
+  },
+  {
+    "name": "closing panel does not cancel cooking",
+    "pass": true
+  },
+  {
+    "name": "fuel expiry pauses cooking fuel and flame",
+    "pass": true
+  },
+  {
+    "name": "mid-cooking progress persisted with deducted ingredient",
+    "pass": true
+  },
+  {
+    "name": "real chunk unload releases world visual and flame nodes",
+    "pass": true
+  },
+  {
+    "name": "unload retains cooking state",
+    "pass": true
+  },
+  {
+    "name": "real chunk reload creates one visual only",
+    "pass": true
+  },
+  {
+    "name": "repeated chunk install remains idempotent",
+    "pass": true
+  },
+  {
+    "name": "cooking reaches exactly one ready product",
+    "pass": true
+  },
+  {
+    "name": "ready product survives continued fire",
+    "pass": true
+  },
+  {
+    "name": "full bag leaves product in campfire",
+    "pass": true
+  },
+  {
+    "name": "claim uses original inventory insertion",
+    "pass": true
+  },
+  {
+    "name": "repeat claim cannot duplicate product",
+    "pass": true
+  },
+  {
+    "name": "actual right-click use feeds through original BodyState",
+    "pass": true
+  },
+  {
+    "name": "fully healthy and full hunger does not consume cooked food",
+    "pass": true
+  },
+  {
+    "name": "second existing ingredient starts mushroom recipe",
+    "pass": true
+  },
+  {
+    "name": "fuel exhaustion advances only actual burn time then pauses and hides flame",
+    "pass": true
+  },
+  {
+    "name": "paused job keeps ingredient and progress",
+    "pass": true
+  },
+  {
+    "name": "new fuel automatically reignites exhausted camp",
+    "pass": true
+  },
+  {
+    "name": "resume produces and claims mushroom once",
+    "pass": true
+  },
+  {
+    "name": "cooked mushroom hotbar use follows existing food path",
+    "pass": true
+  },
+  {
+    "name": "environment pause prevents fuel advancement",
+    "pass": true
+  },
+  {
+    "name": "debug day preview prevents fuel advancement",
+    "pass": true
+  },
+  {
+    "name": "setting world hour does not catch up fuel",
+    "pass": true
+  },
+  {
+    "name": "environment shader receives burning camp light",
+    "pass": true
+  },
+  {
+    "name": "extinguish removes warm illumination",
+    "pass": true
+  },
+  {
+    "name": "same-process restart restores mid-cooking fuel progress and ignition",
+    "pass": true
+  },
+  {
+    "name": "equipped hotbar references preserved",
+    "pass": true
+  },
+  {
+    "name": "harvest and consumed history preserved",
+    "pass": true
+  },
+  {
+    "name": "previously claimed product is not regenerated on restore",
+    "pass": true
+  },
+  {
+    "name": "illegal or unknown camp data rejected: 999",
+    "pass": true
+  },
+  {
+    "name": "illegal or unknown camp data rejected: -1",
+    "pass": true
+  },
+  {
+    "name": "illegal or unknown camp data rejected: inf",
+    "pass": true
+  },
+  {
+    "name": "unknown camp version protects original source file",
+    "pass": true
+  },
+  {
+    "name": "old save initializes empty camps and retains equipped inventory",
+    "pass": true
+  },
+  {
+    "name": "fixed camp panel fits viewport (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "recipe changes keep panel dimensions (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "fixed camp panel fits viewport (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "recipe changes keep panel dimensions (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "fixed camp panel fits viewport (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "recipe changes keep panel dimensions (1600, 900)",
+    "pass": true
+  }
+]

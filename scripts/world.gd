@@ -16,6 +16,12 @@ var debug_label := Label.new()
 var loading_cover := ColorRect.new()
 var loading_label := Label.new()
 var map_view: Control
+var item_service: Node
+var camp_ui: Control
+var item_ui: Control
+var items_preview := false
+var tools_preview := false
+var environment_view: CanvasLayer
 var debug_on := false
 var started := false
 var occlusion_clock := 0.0
@@ -37,9 +43,15 @@ var benchmark_travel := 0.0
 var memory_samples: Array[Dictionary] = []
 var benchmark_north := false
 var persistent_world := true
-const WORLD_ID_PATH = "user://world-biome-v02.json"
+const WORLD_ID_PATH = "user://world-continent-v06.json"
+const LEGACY_WORLD_ID_PATH = "user://world-biome-v02.json"
+var migration_notice := ""
+var migrated_from := ""
 
 func _ready() -> void:
+	# Static streamed scenery and idle tweens do not need physics interpolation.
+	# The player explicitly enables it for its moving body, rig and camera.
+	physics_interpolation_mode=Node.PHYSICS_INTERPOLATION_MODE_OFF
 	load_world_identity()
 	parse_arguments()
 	if persistent_world: save_world_identity()
@@ -58,30 +70,96 @@ func _ready() -> void:
 	player.stream=stream
 	player.position=generator.spawn
 	object_root.add_child(player)
+	player.reset_physics_interpolation()
 	player.camera.reset_smoothing()
 	stream.update_target(player.position)
-	stream.spawn_drop(generator.spawn+Vector2(50,30),"initial")
 	setup_ui()
+	ui.layer=2
+	environment_view=preload("res://scripts/environment_view.gd").new()
+	add_child(environment_view)
+	environment_view.configure(self)
 	map_view=load("res://scripts/world_map.gd").new()
-	ui.add_child(map_view)
+	var map_layer := CanvasLayer.new()
+	map_layer.name="TopmostWorldMap"
+	map_layer.layer=10
+	add_child(map_layer)
+	map_layer.add_child(map_view)
 	map_view.configure(generator,player)
+	item_service=preload("res://scripts/item_service.gd").new()
+	add_child(item_service)
+	item_service.configure(self,items_preview)
+	if tools_preview:
+		for id in ["stone_axe","stone_pickaxe","simple_shovel"]: item_service.inventory.add(id,1)
+	if Engine.get_meta("camp_build_preview",false):
+		item_service.inventory.add("stone_hammer",1)
+		for id in ["stone","wood","plant_fiber","flint"]: item_service.inventory.add(id,500 if id!="flint" else 20)
+	item_ui=preload("res://scripts/item_ui.gd").new()
+	ui.add_child(item_ui)
+	item_ui.configure(self,item_service)
+	camp_ui=preload("res://scripts/campfire_ui.gd").new()
+	ui.add_child(camp_ui)
+	camp_ui.configure(self)
+	item_service.sleep_ui=preload("res://scripts/sleep_ui.gd").new()
+	ui.add_child(item_service.sleep_ui);item_service.sleep_ui.configure(item_service)
+	item_service.storage_ui=preload("res://scripts/camp_storage_ui.gd").new()
+	ui.add_child(item_service.storage_ui);item_service.storage_ui.configure(item_service)
+	# Pointer priority follows scene order as well as visual Z.
+	item_ui.ground_drop.reparent(ui)
+	ui.move_child(item_ui.ground_drop,item_ui.get_index())
+	ui.move_child(item_service.storage_ui,item_ui.get_index())
+	item_service.planting_ui=preload("res://scripts/planting_ui.gd").new()
+	ui.add_child(item_service.planting_ui);item_service.planting_ui.configure(item_service)
+	map_view.item_screen=item_ui
+	if OS.has_feature("debug"):
+		var resource_debug := preload("res://scripts/resource_debug.gd").new()
+		resource_debug.name="ResourceDebug"
+		add_child(resource_debug)
+		resource_debug.configure(self)
 	if benchmark:
 		player.automated=true
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 
+func _notification(what: int) -> void:
+	if what==NOTIFICATION_WM_CLOSE_REQUEST and is_instance_valid(item_service):
+		item_service.save_state()
+
 func load_world_identity(path: String = WORLD_ID_PATH) -> void:
 	world_seed=int(Time.get_unix_time_from_system()*1000)%2147483647
-	if not FileAccess.file_exists(path):return
-	var data=JSON.parse_string(FileAccess.get_file_as_string(path))
-	if data is Dictionary and str(data.get("generator","")).begins_with("windrest-biome-"):
-		world_seed=int(data.seed)
-		map_cells=clampi(int(data.get("map_cells",1024)),128,1024)
+	migration_notice=""
+	migrated_from=""
+	if FileAccess.file_exists(path):
+		var data=JSON.parse_string(FileAccess.get_file_as_string(path))
+		if data is Dictionary and str(data.get("generator",""))==Gen.VERSION and data.has("seed"):
+			world_seed=int(data.seed)
+			map_cells=clampi(int(data.get("map_cells",1024)),128,1024)
+			migrated_from=str(data.get("migrated_from",""))
+		else:
+			# Never overwrite an unknown/corrupt identity with a different algorithm.
+			persistent_world=false
+			migration_notice="世界版本不匹配，当前为临时 V0.6 世界；原存档已保留"
+		return
+	# Only the normal entry migrates the old identity; explicit test paths stay isolated.
+	if path==WORLD_ID_PATH:load_legacy_identity(LEGACY_WORLD_ID_PATH)
 
+func load_legacy_identity(path:String)->void:
+	if FileAccess.file_exists(path):
+		var legacy=JSON.parse_string(FileAccess.get_file_as_string(path))
+		if legacy is Dictionary and str(legacy.get("generator","")).begins_with("windrest-biome-") and legacy.has("seed"):
+			world_seed=int(legacy.seed)
+			map_cells=clampi(int(legacy.get("map_cells",1024)),128,1024)
+			migrated_from=str(legacy.generator)
+			migration_notice="已升级 V0.6 大陆，沿用旧 Seed；旧世界身份已保留"
 func save_world_identity(path: String = WORLD_ID_PATH) -> void:
-	save_json(path,{"seed":world_seed,"map_cells":map_cells,"generator":Gen.VERSION})
+	if not persistent_world:return
+	var identity:={"seed":world_seed,"map_cells":map_cells,"generator":Gen.VERSION,"props_version":Gen.PROP_VERSION}
+	if not migrated_from.is_empty():identity["migrated_from"]=migrated_from
+	save_json(path,identity)
 
 func parse_arguments() -> void:
 	for arg in OS.get_cmdline_user_args():
+		if arg=="--items-preview": items_preview=true
+		if arg=="--tools-preview": tools_preview=true; persistent_world=false
+		if arg=="--camp-build-preview": tools_preview=true;persistent_world=false;Engine.set_meta("camp_build_preview",true)
 		if arg.begins_with("--seed=") or arg.begins_with("--size=") or arg=="--benchmark":persistent_world=false
 		if arg.begins_with("--seed="): world_seed=int(arg.get_slice("=",1))
 		elif arg.begins_with("--size="): map_cells=clampi(int(arg.get_slice("=",1)),128,1024)
@@ -89,6 +167,9 @@ func parse_arguments() -> void:
 		elif arg.begins_with("--seconds="): benchmark_duration=float(arg.get_slice("=",1))
 		elif arg.begins_with("--report="): run_id=arg.get_slice("=",1)
 		elif arg=="--capture": benchmark_captures=true
+	if Engine.has_meta("resources_debug_seed"):
+		world_seed=int(Engine.get_meta("resources_debug_seed"))
+		persistent_world=false
 
 func setup_input() -> void:
 	var keys := {"run":[KEY_SHIFT],"interact":[KEY_E],"move_left":[KEY_A,KEY_LEFT],"move_right":[KEY_D,KEY_RIGHT],"move_up":[KEY_W,KEY_UP],"move_down":[KEY_S,KEY_DOWN]}
@@ -111,9 +192,10 @@ func make_label(node: Label, text_value: String, pos: Vector2, size: int) -> voi
 
 func setup_ui() -> void:
 	add_child(ui)
-	make_label(title,"风栖原野",Vector2(26,20),25)
-	make_label(hint,"WASD 移动 · 按住 Shift 奔跑 · E 砍树 / 拾取 · 滚轮缩放 · M 地图 · N 新世界 · F3 调试",Vector2(26,58),15)
-	make_label(debug_label,"",Vector2(26,100),16)
+	make_label(title,"风栖原野 · V0.4"+(" · 工具试用（临时）" if tools_preview else " · 物品预览存档" if items_preview else ""),Vector2(26,20),25)
+	if not migration_notice.is_empty():title.text+="  |  "+migration_notice
+	make_label(hint,"WASD 移动 · 按住 Shift 奔跑 · E 交互 · 滚轮缩放 · B 背包 · 1–8 快捷栏 · M 地图 · N 新世界 · F3 调试 · F4 环境",Vector2(26,58),15)
+	make_label(debug_label,"",Vector2(26,112),16)
 	debug_label.visible=debug_on
 	loading_cover.color=Color("6c8c62")
 	loading_cover.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -145,9 +227,10 @@ func _process(delta: float) -> void:
 			if is_instance_valid(prop) and prop!=player and prop.has_method("update_occlusion"): prop.update_occlusion(player.position)
 	if ui_clock>.25:
 		ui_clock=0
-		var target := stream.interaction_target(player.position)
-		hint.text="WASD 移动 · Shift 奔跑 · E 砍树 / 拾取 · 滚轮缩放 · M 地图 · N 新世界 · F3 调试"
-		if target!=null: hint.text += "  |  E 拾取木材" if target.is_in_group("drops") else "  |  E 砍树（大树四击 / 小树两击，可长按）"
+		var target := player.selected_target()
+		hint.text="WASD 移动 · Shift 奔跑 · E 交互 · 滚轮缩放 · B 背包 · 1–8 快捷栏 · M 地图 · N 新世界 · F3 调试 · F4 环境"
+		if target!=null: hint.text += "  |  "+preload("res://scripts/world_interaction.gd").caption(target,item_service.inventory)
+		if OS.has_feature("debug"): hint.text+=" · F7 资源分布"
 		var memory := OS.get_static_memory_usage()/1048576.0
 		peak_memory=maxf(peak_memory,memory)
 		debug_label.text="Seed %d  ·  %s  ·  %d×%d\n%s  (%.0f, %.0f)\n%d FPS · %.2f ms\n区块 %d · 对象 %d · 节点 %d\n内存 %.1f MiB · 前方待生成 %d\n挂载 %.2f ms · 后台生成 %.1f ms"%[
@@ -162,6 +245,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		debug_label.visible=debug_on
 
 	if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode==KEY_N and persistent_world:
+		if item_service: item_service.save_state()
 		world_seed=(world_seed+int(Time.get_ticks_msec())+1)%2147483647
 		save_world_identity()
 		get_tree().reload_current_scene()
@@ -231,3 +315,4 @@ func run_benchmark(delta: float) -> void:
 		print("BENCHMARK ",JSON.stringify(report))
 		if benchmark_captures: await capture("res://reports/%s-final.png"%run_id)
 		get_tree().quit()
+

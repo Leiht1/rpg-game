@@ -1,0 +1,32 @@
+[
+  {
+    "run": "headless",
+    "checks": 135,
+    "failed": 0
+  },
+  {
+    "run": "window",
+    "checks": 141,
+    "failed": 0
+  },
+  {
+    "run": "persistence-write",
+    "checks": 2,
+    "failed": 0
+  },
+  {
+    "run": "persistence-read",
+    "checks": 12,
+    "failed": 0
+  },
+  {
+    "run": "persistence-awake",
+    "checks": 6,
+    "failed": 0
+  },
+  {
+    "run": "persistence-legacy-read",
+    "checks": 5,
+    "failed": 0
+  }
+]

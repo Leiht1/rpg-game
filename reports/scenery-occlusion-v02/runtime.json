@@ -1,0 +1,908 @@
+{
+  "checks": [
+    {
+      "name": "front opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_01",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_01",
+      "pass": true
+    },
+    {
+      "name": "screenshot diagonal gap stays opaque",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_01-grass-0.8",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_01",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_01",
+      "pass": true
+    },
+    {
+      "name": "screenshot diagonal gap stays opaque",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_01-grass-1.0",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_01",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_01",
+      "pass": true
+    },
+    {
+      "name": "screenshot diagonal gap stays opaque",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_01-grass-1.15",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_01",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_01",
+      "pass": true
+    },
+    {
+      "name": "screenshot diagonal gap stays opaque",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_01-forest-0.8",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_01",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_01",
+      "pass": true
+    },
+    {
+      "name": "screenshot diagonal gap stays opaque",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_01-forest-1.0",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_01",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_01",
+      "pass": true
+    },
+    {
+      "name": "screenshot diagonal gap stays opaque",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_01-forest-1.15",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_01",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_01",
+      "pass": true
+    },
+    {
+      "name": "screenshot diagonal gap stays opaque",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_01-dirt-0.8",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_01",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_01",
+      "pass": true
+    },
+    {
+      "name": "screenshot diagonal gap stays opaque",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_01-dirt-1.0",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_01",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_01",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_01",
+      "pass": true
+    },
+    {
+      "name": "screenshot diagonal gap stays opaque",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_01-dirt-1.15",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_03",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_03",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_03-grass-0.8",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_03",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_03",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_03-grass-1.0",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_03",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_03",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_03-grass-1.15",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_03",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_03",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_03-forest-0.8",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_03",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_03",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_03-forest-1.0",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_03",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_03",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_03-forest-1.15",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_03",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_03",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_03-dirt-0.8",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_03",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_03",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_03-dirt-1.0",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_03",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_03",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_03",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_03-dirt-1.15",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_04",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_04",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_04-grass-0.8",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_04",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_04",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_04-grass-1.0",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_04",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_04",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_04-grass-1.15",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_04",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_04",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_04-forest-0.8",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_04",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_04",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_04-forest-1.0",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_04",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_04",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_04-forest-1.15",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_04",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_04",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_04-dirt-0.8",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_04",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_04",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_04-dirt-1.0",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    },
+    {
+      "name": "front opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "side opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "above visible crown opaque tree_04",
+      "pass": true
+    },
+    {
+      "name": "actual trunk overlap fades tree_04",
+      "pass": true
+    },
+    {
+      "name": "single whole-tree opacity tree_04",
+      "pass": true
+    },
+    {
+      "name": "no seam vs unsplit GPU sprite tree_04-dirt-1.15",
+      "pass": true
+    },
+    {
+      "name": "harvest fade not reset",
+      "pass": true
+    },
+    {
+      "name": "no stump after fade",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "max_gpu_channel_error": 1,
+  "seam_failures": 0
+}

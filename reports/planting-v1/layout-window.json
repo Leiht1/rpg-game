@@ -1,0 +1,66 @@
+[
+  {
+    "name": "soil and floor share same global grid (0.0, 0.0)",
+    "pass": true
+  },
+  {
+    "name": "soil and floor share same global grid (1.0, 1.0)",
+    "pass": true
+  },
+  {
+    "name": "soil and floor share same global grid (95.0, 63.0)",
+    "pass": true
+  },
+  {
+    "name": "soil and floor share same global grid (-1.0, -1.0)",
+    "pass": true
+  },
+  {
+    "name": "soil and floor share same global grid (-97.0, -65.0)",
+    "pass": true
+  },
+  {
+    "name": "horizontal and vertical planting spacing exactly matches floor STEP",
+    "pass": true
+  },
+  {
+    "name": "soil blocks floor in same ground cell",
+    "pass": true
+  },
+  {
+    "name": "floor blocks soil in same ground cell",
+    "pass": true
+  },
+  {
+    "name": "aligned field and floor serialize without occupancy collisions",
+    "pass": true
+  },
+  {
+    "name": "visible soil footprint is floor size minus two units at every edge",
+    "pass": true
+  },
+  {
+    "name": "transparent padding excluded before fitting requested footprint",
+    "pass": true
+  },
+  {
+    "name": "neighboring soil plots use identical independent texture, no auto join selection",
+    "pass": true
+  },
+  {
+    "name": "roots and idle state use exact same soil texture",
+    "pass": true
+  },
+  {
+    "name": "soil remains walkable like floor",
+    "pass": true
+  },
+  {
+    "name": "adjacent actual floor still joins actual floor",
+    "pass": true
+  },
+  {
+    "name": "soil neighbor never hides floor exposed front edge",
+    "pass": true
+  }
+]

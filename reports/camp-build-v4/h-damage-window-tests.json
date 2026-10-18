@@ -1,0 +1,137 @@
+{
+  "checks": [
+    {
+      "name": "H opens stone_gatefalse-1",
+      "pass": true
+    },
+    {
+      "name": "H same position closes stone_gatefalse-1",
+      "pass": true
+    },
+    {
+      "name": "H opens stone_gatefalse1",
+      "pass": true
+    },
+    {
+      "name": "H same position closes stone_gatefalse1",
+      "pass": true
+    },
+    {
+      "name": "gate timber distinguishable stone_gatefalse",
+      "pass": true
+    },
+    {
+      "name": "H unrelated actual obstacles remain blocking stone_gatefalse",
+      "pass": true
+    },
+    {
+      "name": "H opens stone_gatetrue-1",
+      "pass": true
+    },
+    {
+      "name": "H same position closes stone_gatetrue-1",
+      "pass": true
+    },
+    {
+      "name": "H opens stone_gatetrue1",
+      "pass": true
+    },
+    {
+      "name": "H same position closes stone_gatetrue1",
+      "pass": true
+    },
+    {
+      "name": "gate timber distinguishable stone_gatetrue",
+      "pass": true
+    },
+    {
+      "name": "H unrelated actual obstacles remain blocking stone_gatetrue",
+      "pass": true
+    },
+    {
+      "name": "H opens fence_gatefalse-1",
+      "pass": true
+    },
+    {
+      "name": "H same position closes fence_gatefalse-1",
+      "pass": true
+    },
+    {
+      "name": "H opens fence_gatefalse1",
+      "pass": true
+    },
+    {
+      "name": "H same position closes fence_gatefalse1",
+      "pass": true
+    },
+    {
+      "name": "gate timber distinguishable fence_gatefalse",
+      "pass": true
+    },
+    {
+      "name": "H unrelated actual obstacles remain blocking fence_gatefalse",
+      "pass": true
+    },
+    {
+      "name": "H opens fence_gatetrue-1",
+      "pass": true
+    },
+    {
+      "name": "H same position closes fence_gatetrue-1",
+      "pass": true
+    },
+    {
+      "name": "H opens fence_gatetrue1",
+      "pass": true
+    },
+    {
+      "name": "H same position closes fence_gatetrue1",
+      "pass": true
+    },
+    {
+      "name": "gate timber distinguishable fence_gatetrue",
+      "pass": true
+    },
+    {
+      "name": "H unrelated actual obstacles remain blocking fence_gatetrue",
+      "pass": true
+    },
+    {
+      "name": "damage bar actual3px stage0",
+      "pass": true
+    },
+    {
+      "name": "damage indicator above complete vertical prop stage0",
+      "pass": true
+    },
+    {
+      "name": "no duplicate stale building roots stage0",
+      "pass": true
+    },
+    {
+      "name": "damage bar actual3px stage1",
+      "pass": true
+    },
+    {
+      "name": "damage indicator above complete vertical prop stage1",
+      "pass": true
+    },
+    {
+      "name": "no duplicate stale building roots stage1",
+      "pass": true
+    },
+    {
+      "name": "damage bar actual3px stage2",
+      "pass": true
+    },
+    {
+      "name": "damage indicator above complete vertical prop stage2",
+      "pass": true
+    },
+    {
+      "name": "no duplicate stale building roots stage2",
+      "pass": true
+    }
+  ],
+  "failed": 0
+}

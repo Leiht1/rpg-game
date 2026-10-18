@@ -1,0 +1,326 @@
+{
+  "checks": [
+    {
+      "name": "front idle independent of world walk stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "portrait never mirrors/turns stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "front head stays visible stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "equipped tool updates in front portrait stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "front hand covers shaft stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "world retains own view/animation stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "front idle independent of world walk stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "portrait never mirrors/turns stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "front head stays visible stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "equipped tool updates in front portrait stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "front hand covers shaft stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "world retains own view/animation stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "front idle independent of world walk stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "portrait never mirrors/turns stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "front head stays visible stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "equipped tool updates in front portrait stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "front hand covers shaft stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "world retains own view/animation stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "front idle independent of world walk stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "portrait never mirrors/turns stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "front head stays visible stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "equipped tool updates in front portrait stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "front hand covers shaft stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "world retains own view/animation stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "unequip clears fixed-front tool stone_axe",
+      "pass": true
+    },
+    {
+      "name": "front idle independent of world walk stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "portrait never mirrors/turns stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "front head stays visible stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "equipped tool updates in front portrait stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "front hand covers shaft stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "world retains own view/animation stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "front idle independent of world walk stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "portrait never mirrors/turns stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "front head stays visible stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "equipped tool updates in front portrait stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "front hand covers shaft stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "world retains own view/animation stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "front idle independent of world walk stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "portrait never mirrors/turns stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "front head stays visible stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "equipped tool updates in front portrait stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "front hand covers shaft stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "world retains own view/animation stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "front idle independent of world walk stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "portrait never mirrors/turns stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "front head stays visible stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "equipped tool updates in front portrait stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "front hand covers shaft stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "world retains own view/animation stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "unequip clears fixed-front tool stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "front idle independent of world walk simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "portrait never mirrors/turns simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "front head stays visible simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "equipped tool updates in front portrait simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "front hand covers shaft simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "world retains own view/animation simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "front idle independent of world walk simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "portrait never mirrors/turns simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "front head stays visible simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "equipped tool updates in front portrait simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "front hand covers shaft simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "world retains own view/animation simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "front idle independent of world walk simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "portrait never mirrors/turns simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "front head stays visible simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "equipped tool updates in front portrait simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "front hand covers shaft simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "world retains own view/animation simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "front idle independent of world walk simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "portrait never mirrors/turns simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "front head stays visible simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "equipped tool updates in front portrait simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "front hand covers shaft simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "world retains own view/animation simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "unequip clears fixed-front tool simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "open bag still permits actual left movement",
+      "pass": true
+    },
+    {
+      "name": "actual left movement cannot turn portrait",
+      "pass": true
+    },
+    {
+      "name": "portrait remains equipment idle during world pickup",
+      "pass": true
+    },
+    {
+      "name": "reopening bag preserves front view",
+      "pass": true
+    },
+    {
+      "name": "fixed portrait does not block bag movement",
+      "pass": true
+    }
+  ],
+  "count": 80,
+  "failures": 0
+}

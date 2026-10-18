@@ -1,0 +1,190 @@
+{
+  "checks": [
+    {
+      "name": "fixture and tool preview never write formal state",
+      "pass": true
+    },
+    {
+      "name": "world and ItemService agree on candidate preview state",
+      "pass": true
+    },
+    {
+      "name": "all original slots and three equipment slots retained",
+      "pass": true
+    },
+    {
+      "name": "equipment top to bottom head weapon outfit",
+      "pass": true
+    },
+    {
+      "name": "three equipment cells aligned vertically",
+      "pass": true
+    },
+    {
+      "name": "equipment area has a separate full border",
+      "pass": true
+    },
+    {
+      "name": "head cell top aligns with first bag cell",
+      "pass": true
+    },
+    {
+      "name": "equipment title centered above character portrait",
+      "pass": true
+    },
+    {
+      "name": "slot label under cell 41",
+      "pass": true
+    },
+    {
+      "name": "slot label under cell 40",
+      "pass": true
+    },
+    {
+      "name": "slot label under cell 42",
+      "pass": true
+    },
+    {
+      "name": "equipment cells sit to left of character portrait",
+      "pass": true
+    },
+    {
+      "name": "visual reorder keeps logical slot identities unchanged",
+      "pass": true
+    },
+    {
+      "name": "visible slot names use weapon and outfit",
+      "pass": true
+    },
+    {
+      "name": "no unequipped or item-content labels in bag",
+      "pass": true
+    },
+    {
+      "name": "HUD and actor equipment text removed",
+      "pass": true
+    },
+    {
+      "name": "bag leaves original bottom hotbar visible",
+      "pass": true
+    },
+    {
+      "name": "candidate icon isolation stone_axe",
+      "pass": true
+    },
+    {
+      "name": "candidate world art isolation stone_axe",
+      "pass": true
+    },
+    {
+      "name": "candidate does not overwrite formal item art definition stone_axe",
+      "pass": true
+    },
+    {
+      "name": "three debug tools occupy original bag cells stone_axe",
+      "pass": true
+    },
+    {
+      "name": "candidate icon isolation stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "candidate world art isolation stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "candidate does not overwrite formal item art definition stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "three debug tools occupy original bag cells stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "candidate icon isolation simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "candidate world art isolation simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "candidate does not overwrite formal item art definition simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "three debug tools occupy original bag cells simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "portrait uses corrected rear arm hierarchy",
+      "pass": true
+    },
+    {
+      "name": "portrait retains rear-arm texture and mirroring",
+      "pass": true
+    },
+    {
+      "name": "native rear arm follows movement without manual sync 0",
+      "pass": true
+    },
+    {
+      "name": "native rear arm follows movement without manual sync 1",
+      "pass": true
+    },
+    {
+      "name": "native rear arm follows movement without manual sync 2",
+      "pass": true
+    },
+    {
+      "name": "native rear arm follows movement without manual sync 3",
+      "pass": true
+    },
+    {
+      "name": "native rear arm follows movement without manual sync 4",
+      "pass": true
+    },
+    {
+      "name": "native rear arm follows movement without manual sync 5",
+      "pass": true
+    },
+    {
+      "name": "right click equips illustrated axe into weapon cell",
+      "pass": true
+    },
+    {
+      "name": "equipped item still adds no persistent content label",
+      "pass": true
+    },
+    {
+      "name": "illustrated equipment retains hover card",
+      "pass": true
+    },
+    {
+      "name": "native illustrated tool drag begins",
+      "pass": true
+    },
+    {
+      "name": "reordered weapon cell supports native drag swap",
+      "pass": true
+    },
+    {
+      "name": "right click unequips from reordered weapon cell",
+      "pass": true
+    },
+    {
+      "name": "illustrated tool can use original discard path",
+      "pass": true
+    },
+    {
+      "name": "world tool art uses animated drop and preserves instance",
+      "pass": true
+    },
+    {
+      "name": "world tool exists after landing",
+      "pass": true
+    }
+  ],
+  "count": 46,
+  "failures": 0
+}

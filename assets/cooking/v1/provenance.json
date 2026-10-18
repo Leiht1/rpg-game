@@ -1,0 +1,114 @@
+{
+  "status": "approved_and_integrated",
+  "route": "local:codex-cli",
+  "art_source": "host_image",
+  "model": "codex-image_gen; underlying image model undisclosed",
+  "estimateUsd": 0,
+  "actual_cost": "unknown",
+  "source": "art\\cooking-discovery-v1\\candidate-01\\generated.png",
+  "source_sha256": "3329771bf08ba3d9da1a31632f837b24f77bc85cec318a64393fe7d5e273bd78",
+  "prompt": "art/cooking-discovery-v1/prompt.txt",
+  "receipt": "art/cooking-discovery-v1/candidate-01/job.json",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "processing": "Complete ownership cells, magenta extraction, aspect preserving Lanczos to 224px on 256px transparent canvas",
+  "files": [
+    {
+      "file": "herb_roasted_mushroom.png",
+      "cell": [
+        0,
+        0,
+        510,
+        1024
+      ],
+      "bbox": [
+        15,
+        293,
+        499,
+        702
+      ],
+      "sha256": "649c668af504378a497ed7bb17c3b63a8e6515fc58fe359f27aa73121d6f75e1",
+      "canvas": [
+        256,
+        256
+      ],
+      "alpha_bbox": [
+        16,
+        33,
+        240,
+        222
+      ],
+      "safe_edges": true
+    },
+    {
+      "file": "roasted_fruit_platter.png",
+      "cell": [
+        510,
+        0,
+        997,
+        1024
+      ],
+      "bbox": [
+        16,
+        281,
+        472,
+        713
+      ],
+      "sha256": "2cb189d758106b346159e44a6641ee90536329f4659830eff298c2b02831554a",
+      "canvas": [
+        256,
+        256
+      ],
+      "alpha_bbox": [
+        16,
+        22,
+        240,
+        234
+      ],
+      "safe_edges": true
+    },
+    {
+      "file": "field_harvest_platter.png",
+      "cell": [
+        997,
+        0,
+        1536,
+        1024
+      ],
+      "bbox": [
+        10,
+        274,
+        524,
+        715
+      ],
+      "sha256": "2ea963423585c0a7cbde7f2dcaf37d034cb6005e17b27e7ff974146501301a01",
+      "canvas": [
+        256,
+        256
+      ],
+      "alpha_bbox": [
+        16,
+        32,
+        240,
+        224
+      ],
+      "safe_edges": true
+    }
+  ],
+  "references": [
+    {
+      "file": "assets/campfire/v1/roasted_mushroom.png",
+      "sha256": "6539fe7dfba4fdc8b6bdf7014be394dc89ac20f1a2c2385fc4ddfeb89ff244fc"
+    },
+    {
+      "file": "assets/items/v03/wildflower_icon.png",
+      "sha256": "976391cbeed8c126792d535e9c04791459cf8dcb4bd4816fca34cec2e80ce744"
+    }
+  ],
+  "warnings": [
+    "WARN source_grid_alignment: right platter crosses nominal x=1024 boundary; measured ownership boundaries 510/997 preserve all subjects. Source margins below requested 15%; output padded to at least 16px."
+  ],
+  "approval": "2026-10-17 user: 可以，采用这三张图标"
+}

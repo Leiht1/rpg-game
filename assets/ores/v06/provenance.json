@@ -1,0 +1,170 @@
+{
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen; underlying image model unknown",
+  "estimateUsd": 0.0,
+  "actualCost": "unknown; subscription quota",
+  "authorization": "2026-10-17 user requested replacement of ordinary scenery rocks with large mineable stone/flint/copper/silver/gold resources, integrated into map. Subjective visual acceptance pending user.",
+  "source": "art/ores-v06/generated/job.json",
+  "prompt": "art/ores-v06/prompt.txt",
+  "ownership": "art/ores-v06/ownership.json",
+  "processing": "Exact ownership in blank gaps, soft magenta matte, 1px despill, shared uniform scale/feet anchors; rock canvas 256 bottom248, items trimmed+8px padding, overlays centered; no nonuniform scaling.",
+  "qa": {
+    "raw_nominal": "FAIL cross_cell_components=5 cross_cell_visible=5, WARN boundary_band=18375 safe_frame=5; preserved in raw-qc",
+    "initial_nominal_processing": "WARN, not shipped; preserved in processed",
+    "owned_sheet": "PASS all spill/edge/safe-frame checks",
+    "published_processing": "PASS including no clamping/source/output edge contact, key residue and key ring spill"
+  },
+  "files": [
+    {
+      "file": "assets/ores/v06/frame-01.png",
+      "sha256": "dbb0a9f75c202995f7c40f2ade420ef3120ec9be9aa3f5dad1817a4bc19dbfb6",
+      "source": "art/ores-v06/processed-owned/ore-1.png",
+      "bbox": [
+        58,
+        154,
+        178,
+        248
+      ],
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "assets/ores/v06/frame-02.png",
+      "sha256": "fce624ed91d36e5438ab18f122e9c226fd17ce66edfd1e19c12fada1b448291e",
+      "source": "art/ores-v06/processed-owned/ore-2.png",
+      "bbox": [
+        73,
+        136,
+        176,
+        248
+      ],
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "assets/ores/v06/frame-03.png",
+      "sha256": "80416a9ab56c8e161686854e85f11dc33202943d9aa0e690c795ecf1fd91f451",
+      "source": "art/ores-v06/processed-owned/ore-3.png",
+      "bbox": [
+        69,
+        122,
+        180,
+        248
+      ],
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "assets/ores/v06/frame-04.png",
+      "sha256": "6f0a4d3954d56d44ee32e430f0b7e26c9d61d9d8dbcf4c97ddcc03f2bd775055",
+      "source": "art/ores-v06/processed-owned/ore-4.png",
+      "bbox": [
+        71,
+        139,
+        180,
+        248
+      ],
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "assets/ores/v06/frame-05.png",
+      "sha256": "a82c880e22760311a064d417ba63e959833c37cdf1fc9b64b9a571fee1ced1e4",
+      "source": "art/ores-v06/processed-owned/ore-5.png",
+      "bbox": [
+        76,
+        144,
+        174,
+        248
+      ],
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "assets/ores/v06/frame-06.png",
+      "sha256": "edff77b261f18de389aadc7c05bf8c316af419bde75f93d6d332f83d76f30cc7",
+      "source": "art/ores-v06/processed-owned/ore-6.png",
+      "bbox": [
+        8,
+        8,
+        78,
+        71
+      ],
+      "size": [
+        86,
+        79
+      ]
+    },
+    {
+      "file": "assets/ores/v06/frame-07.png",
+      "sha256": "f181635f32d19c6347b0d1fa7f79adabacfd438fc7a43a585ba716f88cf5c985",
+      "source": "art/ores-v06/processed-owned/ore-7.png",
+      "bbox": [
+        8,
+        8,
+        78,
+        71
+      ],
+      "size": [
+        86,
+        79
+      ]
+    },
+    {
+      "file": "assets/ores/v06/frame-08.png",
+      "sha256": "ea3eaade0e09bbf10921c03c9d32ce1f50f0a99259f82a84d96cc8e78422e51d",
+      "source": "art/ores-v06/processed-owned/ore-8.png",
+      "bbox": [
+        8,
+        8,
+        76,
+        71
+      ],
+      "size": [
+        84,
+        79
+      ]
+    },
+    {
+      "file": "assets/ores/v06/frame-09.png",
+      "sha256": "d9538a75a30204da89683d18af0d55849620ba26cdcae48836715d5a7d07b225",
+      "source": "art/ores-v06/processed-owned/ore-9.png",
+      "bbox": [
+        94,
+        76,
+        162,
+        144
+      ],
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "assets/ores/v06/frame-10.png",
+      "sha256": "7c9d53a33357430de2abb74e35073c4dffbe211d35bb2c98aa2611d2ef5c1e37",
+      "source": "art/ores-v06/processed-owned/ore-10.png",
+      "bbox": [
+        86,
+        76,
+        169,
+        144
+      ],
+      "size": [
+        256,
+        256
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+	"checks": [
+		{
+			"name": "ground stack opens quantity without debit",
+			"pass": true
+		},
+		{
+			"name": "ground permits full stack",
+			"pass": true
+		},
+		{
+			"name": "zero disabled",
+			"pass": true
+		},
+		{
+			"name": "excess rejected",
+			"pass": true
+		},
+		{
+			"name": "ground discards requested three only",
+			"pass": true
+		},
+		{
+			"name": "duplicate confirm no debit",
+			"pass": true
+		},
+		{
+			"name": "cancel no debit",
+			"pass": true
+		},
+		{
+			"name": "changed source rejected",
+			"pass": true
+		},
+		{
+			"name": "existing split keeps distinct limits and label",
+			"pass": true
+		},
+		{
+			"name": "fuel waits for quantity before throw",
+			"pass": true
+		},
+		{
+			"name": "fuel confirmation starts requested gesture without early debit",
+			"pass": true
+		},
+		{
+			"name": "impact consumes two and adds exact fuel",
+			"pass": true
+		},
+		{
+			"name": "fuel cancel no action or debit",
+			"pass": true
+		},
+		{
+			"name": "insufficient fuel capacity refuses without consuming",
+			"pass": true
+		},
+		{
+			"name": "nonfuel stack rejected without ground fallback",
+			"pass": true
+		},
+		{
+			"name": "single fuel throws without quantity dialog",
+			"pass": true
+		},
+		{
+			"name": "single ground item drops directly",
+			"pass": true
+		},
+		{
+			"name": "selected ingredient icon eighteen pixels",
+			"pass": true
+		},
+		{
+			"name": "popup ingredient icon eighteen pixels",
+			"pass": true
+		}
+	],
+	"count": 19,
+	"failed": 0
+}

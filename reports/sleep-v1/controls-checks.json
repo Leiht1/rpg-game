@@ -1,0 +1,62 @@
+[
+  {
+    "name": "native physics fixture site",
+    "pass": true
+  },
+  {
+    "name": "native physics starts sleep",
+    "pass": true
+  },
+  {
+    "name": "actual physics refuses held movement and sprint during sleep",
+    "pass": true
+  },
+  {
+    "name": "native collider stays fixed during breathing",
+    "pass": true
+  },
+  {
+    "name": "actual pause stops sleep and world together",
+    "pass": true
+  },
+  {
+    "name": "native E input requests rising",
+    "pass": true
+  },
+  {
+    "name": "movement remains locked through rising",
+    "pass": true
+  },
+  {
+    "name": "actual physics resumes held movement after rise",
+    "pass": true
+  },
+  {
+    "name": "native B input opens inventory after waking",
+    "pass": true
+  },
+  {
+    "name": "wake restores face and clears all sleep visual layers",
+    "pass": true
+  },
+  {
+    "name": "choice modal blocks outside craft button clicks",
+    "pass": true
+  },
+  {
+    "name": "choice modal rejects inventory drag",
+    "pass": true
+  },
+  {
+    "name": "sleep blocks mouse inventory drag",
+    "pass": true
+  },
+  {
+    "name": "native wake button remains clickable through central lock",
+    "pass": true
+  },
+  {
+    "name": "button wake returns input",
+    "pass": true
+  }
+]

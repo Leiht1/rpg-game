@@ -1,0 +1,27 @@
+[
+  {
+    "id": "main_hand",
+    "name": "武器",
+    "types": [
+      "tool",
+      "weapon"
+    ],
+    "ui_order": 1
+  },
+  {
+    "id": "head",
+    "name": "头饰",
+    "types": [
+      "headwear"
+    ],
+    "ui_order": 0
+  },
+  {
+    "id": "outfit",
+    "name": "服装",
+    "types": [
+      "outfit"
+    ],
+    "ui_order": 2
+  }
+]

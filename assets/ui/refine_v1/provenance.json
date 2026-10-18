@@ -1,0 +1,130 @@
+{
+  "version": "core-ui-art-2.1.0",
+  "status": "integrated_per_current_task_visual_review_pending",
+  "route": "local:codex-cli",
+  "art_source": "host_image",
+  "exact_image_model": "not exposed",
+  "source": "art\\ui-rework-v1\\refine-01\\generated.png",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "source_sha256": "76bb9b6ee188225ef23f63ee58fe81f277c0c3bc0b2c2d7474459e9bdaa8da39",
+  "prompt": "art/ui-rework-v1/prompt-refine.txt",
+  "receipt": "art/ui-rework-v1/refine-01/job.json",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "2026-10-06",
+    "items": [],
+    "basis": "subscription quota call: no per-call USD price; counted by call caps"
+  },
+  "selection_reason": "Corner caps/stitches removed from item slots, thin continuous linen rim, straight soft-clipped paper-slip buttons and separate light navigation pads. Main paper/note/edge sprig preserved.",
+  "processing": "Measured complete ownership crops, chroma alpha, equal scale LANCZOS; slot states share 64x64 canvas to keep fine rim at display size. No repaint or nonuniform baked scale.",
+  "warnings": [
+    "Generator returned 1254x1254 instead of requested 1024x1024, and wide button exceeds nominal quadrant. Complete measured ownership crops used, no visible paint cut."
+  ],
+  "files": [
+    {
+      "file": "assets\\ui\\refine_v1\\slot.png",
+      "ownership": [
+        50,
+        50,
+        600,
+        620
+      ],
+      "source_bbox": [
+        39,
+        51,
+        513,
+        526
+      ],
+      "runtime_size": [
+        64,
+        64
+      ],
+      "sha256": "4f8e5db14c055c06d9f9778a1d0393103edc2820e34b3b5dc7855196f9dc7edc",
+      "qa": {
+        "transparent_outer_edge": true,
+        "content_alpha_min": 255,
+        "content_luma_min": 0.9222
+      }
+    },
+    {
+      "file": "assets\\ui\\refine_v1\\slot_selected.png",
+      "ownership": [
+        660,
+        50,
+        1220,
+        620
+      ],
+      "source_bbox": [
+        33,
+        51,
+        507,
+        526
+      ],
+      "runtime_size": [
+        64,
+        64
+      ],
+      "sha256": "99b76e45e927ece553ee4ec961dbcb0864f047bd9d7b7422d4fb4404ef4d98b3",
+      "qa": {
+        "transparent_outer_edge": true,
+        "content_alpha_min": 255,
+        "content_luma_min": 0.9432
+      }
+    },
+    {
+      "file": "assets\\ui\\refine_v1\\button.png",
+      "ownership": [
+        20,
+        760,
+        700,
+        1080
+      ],
+      "source_bbox": [
+        45,
+        58,
+        644,
+        260
+      ],
+      "runtime_size": [
+        229,
+        80
+      ],
+      "sha256": "a25e67a3db92da942c4fbf707fe2ae616d313ae138e963dd5827520880bb45e9",
+      "qa": {
+        "transparent_outer_edge": true,
+        "content_alpha_min": 255,
+        "content_luma_min": 0.9138
+      }
+    },
+    {
+      "file": "assets\\ui\\refine_v1\\nav_button.png",
+      "ownership": [
+        720,
+        680,
+        1180,
+        1160
+      ],
+      "source_bbox": [
+        51,
+        54,
+        420,
+        422
+      ],
+      "runtime_size": [
+        80,
+        80
+      ],
+      "sha256": "27c151fb17bd594aaffb96772d01202d9a08c13a9c629189f990f0dee6dcff59",
+      "qa": {
+        "transparent_outer_edge": true,
+        "content_alpha_min": 255,
+        "content_luma_min": 0.925
+      }
+    }
+  ],
+  "runtime_review": "reports/ui-rework-v1/REPORT.md"
+}

@@ -1,0 +1,2134 @@
+[
+  {
+    "name": "new body defaults",
+    "pass": true
+  },
+  {
+    "name": "ten minutes exploration slow hunger no health loss",
+    "pass": true
+  },
+  {
+    "name": "short zero hunger never damages health",
+    "pass": true
+  },
+  {
+    "name": "days of deprivation eventually cause interval disease damage",
+    "pass": true
+  },
+  {
+    "name": "nutrition immediately stops disease damage",
+    "pass": true
+  },
+  {
+    "name": "solo downed recovery restores action without inventory",
+    "pass": true
+  },
+  {
+    "name": "sprint exhausts and blocks labor",
+    "pass": true
+  },
+  {
+    "name": "rest recovers beyond resume threshold",
+    "pass": true
+  },
+  {
+    "name": "hunger reduces recovery continuously with nonzero floor",
+    "pass": true
+  },
+  {
+    "name": "one mining labor event costs six",
+    "pass": true
+  },
+  {
+    "name": "full body round trip",
+    "pass": true
+  },
+  {
+    "name": "invalid finite state rejected health",
+    "pass": true
+  },
+  {
+    "name": "invalid finite state rejected build",
+    "pass": true
+  },
+  {
+    "name": "invalid finite state rejected illness",
+    "pass": true
+  },
+  {
+    "name": "future body version protected",
+    "pass": true
+  },
+  {
+    "name": "one meal never changes body build",
+    "pass": true
+  },
+  {
+    "name": "long shortage smoothly changes body",
+    "pass": true
+  },
+  {
+    "name": "full health and hunger refuse unnecessary food",
+    "pass": true
+  },
+  {
+    "name": "food consumes once through shared body interface",
+    "pass": true
+  },
+  {
+    "name": "food clamps at maximum",
+    "pass": true
+  },
+  {
+    "name": "lantern identity and fuel preserved",
+    "pass": true
+  },
+  {
+    "name": "night dark enough to value lantern",
+    "pass": true
+  },
+  {
+    "name": "debug time jump and paused frames do not consume body",
+    "pass": true
+  },
+  {
+    "name": "environment day preview excludes gameplay body",
+    "pass": true
+  },
+  {
+    "name": "successful authority charge once mine",
+    "pass": true
+  },
+  {
+    "name": "missed out-of-reach labor never charges mine",
+    "pass": true
+  },
+  {
+    "name": "zero stamina authority blocks mine",
+    "pass": true
+  },
+  {
+    "name": "successful authority charge once dig",
+    "pass": true
+  },
+  {
+    "name": "missed out-of-reach labor never charges dig",
+    "pass": true
+  },
+  {
+    "name": "zero stamina authority blocks dig",
+    "pass": true
+  },
+  {
+    "name": "zero stamina permits walking but blocks sprint",
+    "pass": true
+  },
+  {
+    "name": "real running spends shared stamina",
+    "pass": true
+  },
+  {
+    "name": "opened lamp burns exact time",
+    "pass": true
+  },
+  {
+    "name": "lamp HUD icon and unlabeled bar visible",
+    "pass": true
+  },
+  {
+    "name": "blocked stale running flags do not spend stamina",
+    "pass": true
+  },
+  {
+    "name": "closing lamp hides HUD",
+    "pass": true
+  },
+  {
+    "name": "new lamp has independent full duration",
+    "pass": true
+  },
+  {
+    "name": "active lamp follows inventory move",
+    "pass": true
+  },
+  {
+    "name": "removing active lamp switches off despite spare",
+    "pass": true
+  },
+  {
+    "name": "lamp context says open",
+    "pass": true
+  },
+  {
+    "name": "lamp context says close",
+    "pass": true
+  },
+  {
+    "name": "old leaf accent hidden",
+    "pass": true
+  },
+  {
+    "name": "atomic save restores body and original inventory",
+    "pass": true
+  },
+  {
+    "name": "legacy body-free snapshot defaults healthy",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front  -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front  -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front  -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front  -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front chop -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front chop -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front chop -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front chop -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front mine -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front mine -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front mine -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front mine -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front dig -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front dig -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front dig -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front dig -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back  -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back  -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back  -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back  -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back chop -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back chop -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back chop -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back chop -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back mine -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back mine -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back mine -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back mine -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back dig -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back dig -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back dig -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back dig -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left  -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left  -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left  -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left  -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left chop -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left chop -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left chop -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left chop -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left mine -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left mine -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left mine -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left mine -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left dig -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left dig -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left dig -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left dig -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right  -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right  -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right  -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right  -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right chop -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right chop -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right chop -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right chop -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right mine -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right mine -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right mine -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right mine -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right dig -1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right dig -1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right dig -1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right dig -1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front  0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front  0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front  0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front  0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front chop 0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front chop 0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front chop 0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front chop 0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front mine 0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front mine 0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front mine 0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front mine 0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front dig 0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front dig 0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front dig 0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front dig 0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back  0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back  0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back  0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back  0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back chop 0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back chop 0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back chop 0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back chop 0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back mine 0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back mine 0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back mine 0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back mine 0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back dig 0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back dig 0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back dig 0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back dig 0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left  0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left  0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left  0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left  0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left chop 0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left chop 0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left chop 0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left chop 0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left mine 0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left mine 0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left mine 0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left mine 0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left dig 0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left dig 0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left dig 0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left dig 0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right  0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right  0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right  0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right  0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right chop 0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right chop 0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right chop 0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right chop 0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right mine 0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right mine 0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right mine 0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right mine 0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right dig 0.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right dig 0.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right dig 0.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right dig 0.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front  1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front  1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front  1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front  1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front chop 1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front chop 1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front chop 1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front chop 1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front mine 1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front mine 1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front mine 1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front mine 1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front dig 1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front dig 1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front dig 1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained front dig 1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back  1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back  1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back  1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back  1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back chop 1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back chop 1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back chop 1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back chop 1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back mine 1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back mine 1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back mine 1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back mine 1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back dig 1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back dig 1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back dig 1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained back dig 1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left  1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left  1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left  1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left  1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left chop 1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left chop 1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left chop 1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left chop 1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left mine 1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left mine 1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left mine 1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left mine 1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left dig 1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left dig 1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left dig 1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained left dig 1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right  1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right  1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right  1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right  1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right chop 1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right chop 1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right chop 1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right chop 1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right mine 1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right mine 1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right mine 1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right mine 1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right dig 1.0 0.00",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right dig 1.0 0.20",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right dig 1.0 0.40",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "visual shape retained right dig 1.0 0.65",
+    "pass": true
+  },
+  {
+    "name": "root and parent joint preserved",
+    "pass": true
+  },
+  {
+    "name": "HUD opens input protected details",
+    "pass": true
+  },
+  {
+    "name": "detail panel intercepts hotbar input",
+    "pass": true
+  },
+  {
+    "name": "details close restores input",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe walk right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_axe run right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe walk right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip stone_pickaxe run right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel walk right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run front",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run back",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run left",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run right",
+    "pass": true
+  },
+  {
+    "name": "visual body preserves animated grip simple_shovel run right",
+    "pass": true
+  },
+  {
+    "name": "HUD within safe screen (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "body HUD avoids hotbar (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "HUD within safe screen (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "body HUD avoids hotbar (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "HUD within safe screen (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "body HUD avoids hotbar (1600, 900)",
+    "pass": true
+  }
+]

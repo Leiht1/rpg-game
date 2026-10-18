@@ -1,0 +1,98 @@
+[
+  {
+    "name": "insufficient recipe retains light card hand_stone_axe",
+    "pass": true
+  },
+  {
+    "name": "recipe has no duplicate native tooltip hand_stone_axe",
+    "pass": true
+  },
+  {
+    "name": "insufficient recipe retains light card hand_stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "recipe has no duplicate native tooltip hand_stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "insufficient recipe retains light card hand_simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "recipe has no duplicate native tooltip hand_simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "insufficient recipe retains light card hand_field_lantern",
+    "pass": true
+  },
+  {
+    "name": "recipe has no duplicate native tooltip hand_field_lantern",
+    "pass": true
+  },
+  {
+    "name": "insufficient recipe retains light card hand_supply_pouch",
+    "pass": true
+  },
+  {
+    "name": "recipe has no duplicate native tooltip hand_supply_pouch",
+    "pass": true
+  },
+  {
+    "name": "insufficient recipe retains light card hand_leaf_fiber",
+    "pass": true
+  },
+  {
+    "name": "recipe has no duplicate native tooltip hand_leaf_fiber",
+    "pass": true
+  },
+  {
+    "name": "selected recipe has explicit visible marker",
+    "pass": true
+  },
+  {
+    "name": "previous recipe clears selected state",
+    "pass": true
+  },
+  {
+    "name": "selected card uses separately painted golden rim",
+    "pass": true
+  },
+  {
+    "name": "recipe state margins stable 0",
+    "pass": true
+  },
+  {
+    "name": "recipe state margins stable 1",
+    "pass": true
+  },
+  {
+    "name": "recipe state margins stable 2",
+    "pass": true
+  },
+  {
+    "name": "recipe state margins stable 3",
+    "pass": true
+  },
+  {
+    "name": "hover keeps tooltip empty and frame fixed",
+    "pass": true
+  },
+  {
+    "name": "world target hint is shown through existing logic",
+    "pass": true
+  },
+  {
+    "name": "world hint references new single-sheet image",
+    "pass": true
+  },
+  {
+    "name": "world hint is distinct from existing item hover note",
+    "pass": true
+  },
+  {
+    "name": "single-layer hint stays compact around one text line",
+    "pass": true
+  }
+]

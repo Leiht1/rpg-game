@@ -1,0 +1,142 @@
+[
+  {
+    "name": "timed recipe definitions valid",
+    "pass": true
+  },
+  {
+    "name": "invalid craft duration rejected 0",
+    "pass": true
+  },
+  {
+    "name": "invalid craft duration rejected -1",
+    "pass": true
+  },
+  {
+    "name": "invalid craft duration rejected fast",
+    "pass": true
+  },
+  {
+    "name": "invalid craft duration rejected 31",
+    "pass": true
+  },
+  {
+    "name": "invalid craft duration rejected inf",
+    "pass": true
+  },
+  {
+    "name": "invalid/missing-material request never starts [\"missing\", 1]",
+    "pass": true
+  },
+  {
+    "name": "invalid/missing-material request never starts [\"hand_leaf_fiber\", 0]",
+    "pass": true
+  },
+  {
+    "name": "invalid/missing-material request never starts [\"hand_leaf_fiber\", 100]",
+    "pass": true
+  },
+  {
+    "name": "invalid/missing-material request never starts [\"hand_stone_axe\", 1]",
+    "pass": true
+  },
+  {
+    "name": "batch begins progress",
+    "pass": true
+  },
+  {
+    "name": "start does not consume or produce",
+    "pass": true
+  },
+  {
+    "name": "partial progress does not change inventory",
+    "pass": true
+  },
+  {
+    "name": "repeated starts cannot reset or duplicate job 0",
+    "pass": true
+  },
+  {
+    "name": "repeated starts cannot reset or duplicate job 1",
+    "pass": true
+  },
+  {
+    "name": "repeated starts cannot reset or duplicate job 2",
+    "pass": true
+  },
+  {
+    "name": "repeated starts cannot reset or duplicate job 3",
+    "pass": true
+  },
+  {
+    "name": "repeated starts cannot reset or duplicate job 4",
+    "pass": true
+  },
+  {
+    "name": "full bar atomically commits exact complete batch",
+    "pass": true
+  },
+  {
+    "name": "success is emitted exactly once",
+    "pass": true
+  },
+  {
+    "name": "future frames cannot produce again",
+    "pass": true
+  },
+  {
+    "name": "cancel before completion leaves exact inventory",
+    "pass": true
+  },
+  {
+    "name": "completion rechecks changed ingredients without partial edits",
+    "pass": true
+  },
+  {
+    "name": "completion rechecks capacity without consuming ingredients",
+    "pass": true
+  },
+  {
+    "name": "protected save at completion blocks exchange",
+    "pass": true
+  },
+  {
+    "name": "cancel during full-progress signal prevents stale commit",
+    "pass": true
+  },
+  {
+    "name": "actual process advances visible bar before inventory changes",
+    "pass": true
+  },
+  {
+    "name": "in-progress UI blocks repeated buttons and quantity changes",
+    "pass": true
+  },
+  {
+    "name": "in-progress selection stays locked",
+    "pass": true
+  },
+  {
+    "name": "progress start keeps panel geometry",
+    "pass": true
+  },
+  {
+    "name": "actual clock completion produces batch and success at full bar",
+    "pass": true
+  },
+  {
+    "name": "completion keeps frame size and restores controls",
+    "pass": true
+  },
+  {
+    "name": "closing UI cancels timer and preserves materials",
+    "pass": true
+  },
+  {
+    "name": "closing timed crafting restores original world input",
+    "pass": true
+  },
+  {
+    "name": "reopening is idle with usable original recipe",
+    "pass": true
+  }
+]

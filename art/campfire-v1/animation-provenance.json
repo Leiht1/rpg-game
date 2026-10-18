@@ -1,0 +1,20 @@
+{
+  "source": "assets/hero/cartoon/character.tscn",
+  "builder": "tools/build_campfire_throw.gd",
+  "output": "assets/hero/cartoon/campfire_throw.tres",
+  "sha256": "2351aad876f4066af9e4b8878737e2727ee269f257372dbd521671992b004175",
+  "source_rig_sha256": "ca333699ff9fa7cf9975f322569cffa6ac3013ccc20edfa0a9eba58048d3e1b3",
+  "type": "Godot native AnimationLibrary, original body part images",
+  "clips": [
+    "front_throw_left",
+    "front_throw_right",
+    "back_throw_left",
+    "back_throw_right",
+    "side_throw_left",
+    "side_throw_right"
+  ],
+  "duration": 0.95,
+  "release": 0.42,
+  "impact": 0.7,
+  "world_left": "existing Visual mirror"
+}

@@ -1,0 +1,334 @@
+[
+  {
+    "name": "item definitions valid and unique",
+    "pass": true
+  },
+  {
+    "name": "preview building menu enabled",
+    "pass": true
+  },
+  {
+    "name": "legal plot location found",
+    "pass": true
+  },
+  {
+    "name": "shovel cannot till",
+    "pass": true
+  },
+  {
+    "name": "failed till save restores plot and pickaxe durability",
+    "pass": true
+  },
+  {
+    "name": "pickaxe tills using building transaction",
+    "pass": true
+  },
+  {
+    "name": "tilling costs one pickaxe durability",
+    "pass": true
+  },
+  {
+    "name": "occupied plot cannot be built twice",
+    "pass": true
+  },
+  {
+    "name": "invalid location rejected",
+    "pass": true
+  },
+  {
+    "name": "missing seed cannot sow",
+    "pass": true
+  },
+  {
+    "name": "original building preview supports tilling",
+    "pass": true
+  },
+  {
+    "name": "number key selects seeds without consuming or showing use failure",
+    "pass": true
+  },
+  {
+    "name": "sow carrot",
+    "pass": true
+  },
+  {
+    "name": "consume exactly one seed carrot",
+    "pass": true
+  },
+  {
+    "name": "growing plot rejects second sow carrot",
+    "pass": true
+  },
+  {
+    "name": "immature crop has no hint or action carrot",
+    "pass": true
+  },
+  {
+    "name": "middle stage uses configured time carrot",
+    "pass": true
+  },
+  {
+    "name": "crop state validates carrot",
+    "pass": true
+  },
+  {
+    "name": "JSON roundtrip accepted carrot",
+    "pass": true
+  },
+  {
+    "name": "mature crop pickup carrot",
+    "pass": true
+  },
+  {
+    "name": "harvest carrot",
+    "pass": true
+  },
+  {
+    "name": "produce and sustainable seeds carrot",
+    "pass": true
+  },
+  {
+    "name": "harvest leaves roots carrot",
+    "pass": true
+  },
+  {
+    "name": "wrong tool cannot clear or duplicate harvest carrot",
+    "pass": true
+  },
+  {
+    "name": "shovel clears roots carrot",
+    "pass": true
+  },
+  {
+    "name": "clear restores idle plot and costs durability carrot",
+    "pass": true
+  },
+  {
+    "name": "sow potato",
+    "pass": true
+  },
+  {
+    "name": "consume exactly one seed potato",
+    "pass": true
+  },
+  {
+    "name": "growing plot rejects second sow potato",
+    "pass": true
+  },
+  {
+    "name": "immature crop has no hint or action potato",
+    "pass": true
+  },
+  {
+    "name": "middle stage uses configured time potato",
+    "pass": true
+  },
+  {
+    "name": "crop state validates potato",
+    "pass": true
+  },
+  {
+    "name": "JSON roundtrip accepted potato",
+    "pass": true
+  },
+  {
+    "name": "mature crop pickup potato",
+    "pass": true
+  },
+  {
+    "name": "harvest potato",
+    "pass": true
+  },
+  {
+    "name": "produce and sustainable seeds potato",
+    "pass": true
+  },
+  {
+    "name": "harvest leaves roots potato",
+    "pass": true
+  },
+  {
+    "name": "wrong tool cannot clear or duplicate harvest potato",
+    "pass": true
+  },
+  {
+    "name": "shovel clears roots potato",
+    "pass": true
+  },
+  {
+    "name": "clear restores idle plot and costs durability potato",
+    "pass": true
+  },
+  {
+    "name": "sow cabbage",
+    "pass": true
+  },
+  {
+    "name": "consume exactly one seed cabbage",
+    "pass": true
+  },
+  {
+    "name": "growing plot rejects second sow cabbage",
+    "pass": true
+  },
+  {
+    "name": "immature crop has no hint or action cabbage",
+    "pass": true
+  },
+  {
+    "name": "middle stage uses configured time cabbage",
+    "pass": true
+  },
+  {
+    "name": "crop state validates cabbage",
+    "pass": true
+  },
+  {
+    "name": "JSON roundtrip accepted cabbage",
+    "pass": true
+  },
+  {
+    "name": "mature crop pickup cabbage",
+    "pass": true
+  },
+  {
+    "name": "harvest cabbage",
+    "pass": true
+  },
+  {
+    "name": "produce and sustainable seeds cabbage",
+    "pass": true
+  },
+  {
+    "name": "harvest leaves roots cabbage",
+    "pass": true
+  },
+  {
+    "name": "wrong tool cannot clear or duplicate harvest cabbage",
+    "pass": true
+  },
+  {
+    "name": "shovel clears roots cabbage",
+    "pass": true
+  },
+  {
+    "name": "clear restores idle plot and costs durability cabbage",
+    "pass": true
+  },
+  {
+    "name": "paused simulation does not grow",
+    "pass": true
+  },
+  {
+    "name": "growth follows real gameplay minutes",
+    "pass": true
+  },
+  {
+    "name": "full bag does not lose crop",
+    "pass": true
+  },
+  {
+    "name": "failed harvest save rolls back rewards and crop",
+    "pass": true
+  },
+  {
+    "name": "failed sow save restores seed and idle state",
+    "pass": true
+  },
+  {
+    "name": "failed clear save restores roots and shovel durability",
+    "pass": true
+  },
+  {
+    "name": "chunk unload/reinstall preserves mature state",
+    "pass": true
+  },
+  {
+    "name": "mature plot selected by original E targeting",
+    "pass": true
+  },
+  {
+    "name": "mature crop starts original character pickup action",
+    "pass": true
+  },
+  {
+    "name": "pickup action commits harvest at existing animation point",
+    "pass": true
+  },
+  {
+    "name": "root cleaning starts dig without held-key repeat",
+    "pass": true
+  },
+  {
+    "name": "dig action clears roots at existing animation point",
+    "pass": true
+  },
+  {
+    "name": "hammer removes idle plot without harvest",
+    "pass": true
+  },
+  {
+    "name": "hammer removes growing plot without harvest",
+    "pass": true
+  },
+  {
+    "name": "hammer removes mature plot without harvest",
+    "pass": true
+  },
+  {
+    "name": "hammer removes roots plot without harvest",
+    "pass": true
+  },
+  {
+    "name": "wild harvest obtains seeds",
+    "pass": true
+  },
+  {
+    "name": "natural produce and seeds share obtained queue",
+    "pass": true
+  },
+  {
+    "name": "existing crafting still starts",
+    "pass": true
+  },
+  {
+    "name": "crafting uses unified obtained event",
+    "pass": true
+  },
+  {
+    "name": "cooking claim uses same obtained event",
+    "pass": true
+  },
+  {
+    "name": "cooking repeat claim has no extra reward",
+    "pass": true
+  },
+  {
+    "name": "obtained UI above ordinary panels",
+    "pass": true
+  },
+  {
+    "name": "obtained UI centered above hotbar",
+    "pass": true
+  },
+  {
+    "name": "multiple rewards retained in FIFO",
+    "pass": true
+  },
+  {
+    "name": "FIFO displays correct next icon name and count",
+    "pass": true
+  },
+  {
+    "name": "reward remains above open backpack",
+    "pass": true
+  },
+  {
+    "name": "visual crop field uses exact floor spacing in both directions",
+    "pass": true
+  },
+  {
+    "name": "rendered crop region has no released-texture white squares",
+    "pass": true
+  }
+]

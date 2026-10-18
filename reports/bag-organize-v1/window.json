@@ -1,0 +1,142 @@
+[
+  {
+    "name": "empty bag no-op",
+    "pass": true
+  },
+  {
+    "name": "planning has no partial live mutation",
+    "pass": true
+  },
+  {
+    "name": "all counts and hotbar preserved",
+    "pass": true
+  },
+  {
+    "name": "wood merges under actual stack limit ninety-nine",
+    "pass": true
+  },
+  {
+    "name": "food first and stack limit thirty",
+    "pass": true
+  },
+  {
+    "name": "empty cells packed to end",
+    "pass": true
+  },
+  {
+    "name": "repeated sorting idempotent",
+    "pass": true
+  },
+  {
+    "name": "material overflow splits at ninety-nine",
+    "pass": true
+  },
+  {
+    "name": "full bag can consolidate",
+    "pass": true
+  },
+  {
+    "name": "same tools remain two unchanged instances in stable order",
+    "pass": true
+  },
+  {
+    "name": "lamps retain individual identity fuel and order",
+    "pass": true
+  },
+  {
+    "name": "equipped hotbar alias unchanged",
+    "pass": true
+  },
+  {
+    "name": "different metadata never coalesces",
+    "pass": true
+  },
+  {
+    "name": "failed save rolls back whole sort",
+    "pass": true
+  },
+  {
+    "name": "protected source blocks sort",
+    "pass": true
+  },
+  {
+    "name": "active craft blocks sort",
+    "pass": true
+  },
+  {
+    "name": "active throw blocks stale source relocation",
+    "pass": true
+  },
+  {
+    "name": "sleep blocks sort",
+    "pass": true
+  },
+  {
+    "name": "open item modal blocks sort",
+    "pass": true
+  },
+  {
+    "name": "actual button merges and sorts without count changes",
+    "pass": true
+  },
+  {
+    "name": "lit lamp follows identity after relocation",
+    "pass": true
+  },
+  {
+    "name": "same lamp burns after relocation",
+    "pass": true
+  },
+  {
+    "name": "repeated button idempotent",
+    "pass": true
+  },
+  {
+    "name": "formal energy PNG without preview switch",
+    "pass": true
+  },
+  {
+    "name": "no sleep button reintroduced",
+    "pass": true
+  },
+  {
+    "name": "organized full snapshot saved atomically for restart",
+    "pass": true
+  },
+  {
+    "name": "sort button fits viewport (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "header button clear of slots (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "sorting does not resize bag (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "sort button fits viewport (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "header button clear of slots (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "sorting does not resize bag (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "sort button fits viewport (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "header button clear of slots (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "sorting does not resize bag (1600, 900)",
+    "pass": true
+  }
+]

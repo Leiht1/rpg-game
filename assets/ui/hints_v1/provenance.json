@@ -1,0 +1,36 @@
+{
+  "version": "ui-target-hint-1.0.0",
+  "status": "integrated_per_user_request_visual_review_pending",
+  "route": "local:codex-cli",
+  "art_source": "host_image",
+  "source": "art\\ui-hints-v1\\candidate-01\\generated.png",
+  "source_size": [
+    2182,
+    721
+  ],
+  "prompt": "art/ui-hints-v1/prompt.txt",
+  "receipt": "art/ui-hints-v1/candidate-01/job.json",
+  "source_sha256": "5fa885acb23390ce96882bc2450d008d4a10b9c32c0836af231b54723dc31b18",
+  "file": "assets/ui/hints_v1/target_hint.png",
+  "sha256": "0b32d68633d2b4d5e20f9bbb2e13e770d49f5f8aef5b2db214ed442b14e96d4d",
+  "bbox": [
+    178,
+    137,
+    2006,
+    580
+  ],
+  "runtime_size": [
+    256,
+    65
+  ],
+  "processing": "Full silhouette chroma key, tight crop, equal aspect LANCZOS downscale, 2px alpha safety edge. No code painting.",
+  "design": "One single continuous light paper sheet, no offset backing or folded lower-right corner.",
+  "qa": {
+    "transparent_outer_edge": true,
+    "content_alpha_min": 255,
+    "content_luma_min": 0.924998431372549
+  },
+  "warnings": [
+    "WARN source_size_mismatch: value=2182x721, requested=1024x1024; file=art/ui-hints-v1/candidate-01/generated.png. Full measured silhouette used."
+  ]
+}

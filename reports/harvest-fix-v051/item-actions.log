@@ -1,0 +1,110 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.88 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5060
+
+ERROR: destroy removes whole stack without a world drop
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:94)
+       [2] click (res://tests/test_item_actions_v031.gd:31)
+       [3] button (res://tests/test_item_actions_v031.gd:27)
+       [4] frames (res://tests/test_item_actions_v031.gd:14)
+ERROR: old Ctrl right no longer discards
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:96)
+       [2] click (res://tests/test_item_actions_v031.gd:31)
+       [3] button (res://tests/test_item_actions_v031.gd:27)
+       [4] frames (res://tests/test_item_actions_v031.gd:14)
+ERROR: invalid split rejected 0
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:105)
+       [2] key (res://tests/test_item_actions_v031.gd:39)
+       [3] frames (res://tests/test_item_actions_v031.gd:14)
+ERROR: invalid split rejected 9
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:105)
+       [2] key (res://tests/test_item_actions_v031.gd:39)
+       [3] frames (res://tests/test_item_actions_v031.gd:14)
+ERROR: invalid split rejected -2
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:105)
+       [2] key (res://tests/test_item_actions_v031.gd:39)
+       [3] frames (res://tests/test_item_actions_v031.gd:14)
+ERROR: invalid split rejected 1.5
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:105)
+       [2] key (res://tests/test_item_actions_v031.gd:39)
+       [3] frames (res://tests/test_item_actions_v031.gd:14)
+ERROR: invalid split rejected abc
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:105)
+       [2] key (res://tests/test_item_actions_v031.gd:39)
+       [3] frames (res://tests/test_item_actions_v031.gd:14)
+ERROR: split creates separate bag stack without count loss
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:109)
+       [2] click (res://tests/test_item_actions_v031.gd:31)
+       [3] button (res://tests/test_item_actions_v031.gd:27)
+       [4] frames (res://tests/test_item_actions_v031.gd:14)
+ERROR: Escape cancels split without closing bag
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:115)
+       [2] key (res://tests/test_item_actions_v031.gd:39)
+       [3] frames (res://tests/test_item_actions_v031.gd:14)
+ERROR: dropping on panel padding cancels
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:133)
+       [2] drag_to (res://tests/test_item_actions_v031.gd:49)
+       [3] button (res://tests/test_item_actions_v031.gd:27)
+       [4] frames (res://tests/test_item_actions_v031.gd:14)
+ERROR: dropping on navigation cancels
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:135)
+       [2] drag_to (res://tests/test_item_actions_v031.gd:49)
+       [3] button (res://tests/test_item_actions_v031.gd:27)
+       [4] frames (res://tests/test_item_actions_v031.gd:14)
+ERROR: native bag drag onto ground discards whole stack
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:137)
+       [2] drag_to (res://tests/test_item_actions_v031.gd:49)
+       [3] button (res://tests/test_item_actions_v031.gd:27)
+       [4] frames (res://tests/test_item_actions_v031.gd:14)
+ERROR: player drop visible
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:141)
+       [2] drag_to (res://tests/test_item_actions_v031.gd:49)
+       [3] button (res://tests/test_item_actions_v031.gd:27)
+       [4] frames (res://tests/test_item_actions_v031.gd:14)
+ERROR: hotbar drag onto ground discards whole stack
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_item_actions_v031.gd:12)
+       [1] run (res://tests/test_item_actions_v031.gd:157)
+       [2] drag_to (res://tests/test_item_actions_v031.gd:49)
+       [3] button (res://tests/test_item_actions_v031.gd:27)
+       [4] frames (res://tests/test_item_actions_v031.gd:14)
+ITEM_ACTIONS 46 checks / 14 failures

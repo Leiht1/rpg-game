@@ -1,0 +1,17 @@
+{
+  "checks": [
+    {
+      "name": "fresh process loads automatic swing snapshot",
+      "pass": true
+    },
+    {
+      "name": "fresh process restores automatically selected open side",
+      "pass": true
+    },
+    {
+      "name": "fresh process visual and collision use restored angle",
+      "pass": true
+    }
+  ],
+  "failed": 0
+}

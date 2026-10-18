@@ -1,0 +1,14 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.88 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5060
+
+FORCED CLOCK 60.0000000000257 energy 38.9999999999995 elapsed 180.0
+NIGHT CLOCK 360.000000000024 energy 100.0 elapsed 480.0
+PAPER (960, 540) actual (520.0, 494.0) scale (1.0, 1.0) rect [P: (380.0, 113.0), S: (520.0, 494.0)]
+ERROR: detail fits (960, 540)
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_body_v2.gd:9)
+       [1] run (res://tests/test_body_v2.gd:143)
+PAPER (1280, 720) actual (520.0, 494.0) scale (1.0, 1.0) rect [P: (380.0, 113.0), S: (520.0, 494.0)]
+PAPER (1600, 900) actual (520.0, 494.0) scale (1.0, 1.0) rect [P: (380.0, 113.0), S: (520.0, 494.0)]
+BODY V2 window: 113 checks; 1 failures

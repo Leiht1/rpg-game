@@ -1,0 +1,10 @@
+{
+  "status": "pending_user",
+  "route": "local:codex-cli",
+  "source": "art/chest-open-v1/generation/generated.png",
+  "reference": "assets/buildings/v2/wood_chest.png",
+  "processing": "generate2dsprite soft matte; crop transparent margins only",
+  "runtime_width": 80,
+  "runtime_bottom": 8,
+  "sha256": "c0f83ff97ca8bb495a890d9ac230b29a97dd2c4c5664e2fdb6aa01563040b1bb"
+}

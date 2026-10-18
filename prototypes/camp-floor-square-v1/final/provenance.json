@@ -1,0 +1,86 @@
+{
+  "status": "pending_user",
+  "date": "2026-10-18",
+  "route": "local:codex-cli",
+  "returned_model": "codex-image_gen",
+  "source": "art/camp-floor-square-v1/candidate-04/generated.png",
+  "source_sha256": "06dce2cca9663a0ac5cd7e7f52f91826b11d215ce3f075be5fe3b47664409bf8",
+  "processing": "generate2dsprite soft key + despill1; explicit purpose-built atlas top/front ownership, uniform 96/636 scale, no warp/mirror/fill",
+  "references": [
+    {
+      "file": "assets/buildings/v1/frame-11.png",
+      "sha256": "cc3c70f8fd83fa2eb90cdcb59b992b52996e44712b1800f479ba03c26e6be7a5"
+    },
+    {
+      "file": "assets/buildings/v1/frame-12.png",
+      "sha256": "834f56e8eee74c5f65fc61aea6d770ca8e9678c125b108881173360f0b2c969d"
+    },
+    {
+      "file": "reports/camp-refine-v5/camp-candidate-day.png",
+      "sha256": "48670506342fa92bd2cc2a9736a873024280b74f46ddac10181174aec8f98277"
+    },
+    {
+      "file": "art/camp-floor-square-v1/environment-reference.png",
+      "sha256": "5bd71e758dfd6a9028c33782d265172d41d996ade3fd32dc0c1eb204a0deb5ed"
+    }
+  ],
+  "frames": [
+    {
+      "file": "wood-top.png",
+      "source_rect": [
+        90,
+        255,
+        636,
+        424
+      ],
+      "size": [
+        636,
+        424
+      ],
+      "sha256": "819a0a00cc1ecc5695276d3ce767f394af9856841531cf9bbe346fd7c742c490"
+    },
+    {
+      "file": "wood-front.png",
+      "source_rect": [
+        90,
+        679,
+        636,
+        21
+      ],
+      "size": [
+        636,
+        21
+      ],
+      "sha256": "bd4c2d049445c2026c87a5297e2bb7e5908c0b19ef4ce523e66e0504fd1c9b4a"
+    },
+    {
+      "file": "stone-top.png",
+      "source_rect": [
+        812,
+        255,
+        636,
+        424
+      ],
+      "size": [
+        636,
+        424
+      ],
+      "sha256": "da69300426cdc50bfd88411828099c6a0f9e7afead70318abec65e48120d69e7"
+    },
+    {
+      "file": "stone-front.png",
+      "source_rect": [
+        812,
+        679,
+        636,
+        21
+      ],
+      "size": [
+        636,
+        21
+      ],
+      "sha256": "a08fc2fe129ca8922e95bd5fca5383555485f3c7ff186668595a743f89912b09"
+    }
+  ],
+  "qa_warning": "raw spill safe_frame: value2,threshold0; no crossing/cutoff. Process strict QA pass. Doctor environment warnings retained."
+}

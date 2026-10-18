@@ -1,0 +1,54 @@
+[
+  {
+    "name": "build and craft buttons have same actual dimensions",
+    "pass": true
+  },
+  {
+    "name": "button identifies build shortcut",
+    "pass": true
+  },
+  {
+    "name": "native V opens building and protects world input",
+    "pass": true
+  },
+  {
+    "name": "building close hint matches shortcut",
+    "pass": true
+  },
+  {
+    "name": "held V repeat does not toggle repeatedly",
+    "pass": true
+  },
+  {
+    "name": "C switches building to crafting",
+    "pass": true
+  },
+  {
+    "name": "V switches crafting to building",
+    "pass": true
+  },
+  {
+    "name": "second V closes building and restores movement",
+    "pass": true
+  },
+  {
+    "name": "build button uses same toggle as V",
+    "pass": true
+  },
+  {
+    "name": "Esc closes building",
+    "pass": true
+  },
+  {
+    "name": "V switches bag to building",
+    "pass": true
+  },
+  {
+    "name": "equal buttons at (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "equal buttons at (1280, 720)",
+    "pass": true
+  }
+]

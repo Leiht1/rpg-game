@@ -1,0 +1,498 @@
+{
+  "checks": [
+    {
+      "name": "verification uses normal formal entry",
+      "pass": true
+    },
+    {
+      "name": "formal icon and world PNG stone_axe",
+      "pass": true
+    },
+    {
+      "name": "correct formal held tool stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "grip registered on opaque shaft stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "tool shaft behind hand stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "legacy axe hidden stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "held stance never accumulates drift stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "walking retains equipped tool stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "pickup frees the hand stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "tool returns after pickup stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "capability unchanged stone_axe front",
+      "pass": true
+    },
+    {
+      "name": "correct formal held tool stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "grip registered on opaque shaft stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "tool shaft behind hand stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "legacy axe hidden stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "held stance never accumulates drift stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "walking retains equipped tool stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "pickup frees the hand stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "tool returns after pickup stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "capability unchanged stone_axe right",
+      "pass": true
+    },
+    {
+      "name": "correct formal held tool stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "grip registered on opaque shaft stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "tool shaft behind hand stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "legacy axe hidden stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "held stance never accumulates drift stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "walking retains equipped tool stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "pickup frees the hand stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "tool returns after pickup stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "capability unchanged stone_axe left",
+      "pass": true
+    },
+    {
+      "name": "correct formal held tool stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "grip registered on opaque shaft stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "tool shaft behind hand stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "legacy axe hidden stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "held stance never accumulates drift stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "walking retains equipped tool stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "pickup frees the hand stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "tool returns after pickup stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "capability unchanged stone_axe back",
+      "pass": true
+    },
+    {
+      "name": "live bag preview matches held registration stone_axe",
+      "pass": true
+    },
+    {
+      "name": "portrait hand occludes shaft stone_axe",
+      "pass": true
+    },
+    {
+      "name": "formal icon and world PNG stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "correct formal held tool stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "grip registered on opaque shaft stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "tool shaft behind hand stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "legacy axe hidden stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "held stance never accumulates drift stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "walking retains equipped tool stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "pickup frees the hand stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "tool returns after pickup stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "capability unchanged stone_pickaxe front",
+      "pass": true
+    },
+    {
+      "name": "correct formal held tool stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "grip registered on opaque shaft stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "tool shaft behind hand stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "legacy axe hidden stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "held stance never accumulates drift stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "walking retains equipped tool stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "pickup frees the hand stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "tool returns after pickup stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "capability unchanged stone_pickaxe right",
+      "pass": true
+    },
+    {
+      "name": "correct formal held tool stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "grip registered on opaque shaft stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "tool shaft behind hand stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "legacy axe hidden stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "held stance never accumulates drift stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "walking retains equipped tool stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "pickup frees the hand stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "tool returns after pickup stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "capability unchanged stone_pickaxe left",
+      "pass": true
+    },
+    {
+      "name": "correct formal held tool stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "grip registered on opaque shaft stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "tool shaft behind hand stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "legacy axe hidden stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "held stance never accumulates drift stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "walking retains equipped tool stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "pickup frees the hand stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "tool returns after pickup stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "capability unchanged stone_pickaxe back",
+      "pass": true
+    },
+    {
+      "name": "live bag preview matches held registration stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "portrait hand occludes shaft stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "formal icon and world PNG simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "correct formal held tool simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "grip registered on opaque shaft simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "tool shaft behind hand simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "legacy axe hidden simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "held stance never accumulates drift simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "walking retains equipped tool simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "pickup frees the hand simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "tool returns after pickup simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "capability unchanged simple_shovel front",
+      "pass": true
+    },
+    {
+      "name": "correct formal held tool simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "grip registered on opaque shaft simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "tool shaft behind hand simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "legacy axe hidden simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "held stance never accumulates drift simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "walking retains equipped tool simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "pickup frees the hand simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "tool returns after pickup simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "capability unchanged simple_shovel right",
+      "pass": true
+    },
+    {
+      "name": "correct formal held tool simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "grip registered on opaque shaft simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "tool shaft behind hand simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "legacy axe hidden simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "held stance never accumulates drift simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "walking retains equipped tool simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "pickup frees the hand simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "tool returns after pickup simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "capability unchanged simple_shovel left",
+      "pass": true
+    },
+    {
+      "name": "correct formal held tool simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "grip registered on opaque shaft simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "tool shaft behind hand simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "legacy axe hidden simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "held stance never accumulates drift simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "walking retains equipped tool simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "pickup frees the hand simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "tool returns after pickup simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "capability unchanged simple_shovel back",
+      "pass": true
+    },
+    {
+      "name": "live bag preview matches held registration simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "portrait hand occludes shaft simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "unequip clears visible held tool",
+      "pass": true
+    },
+    {
+      "name": "save restore immediately restores held tool and capability",
+      "pass": true
+    },
+    {
+      "name": "clear formal ore point available",
+      "pass": true
+    },
+    {
+      "name": "actual E mining holds the pickaxe",
+      "pass": true
+    },
+    {
+      "name": "actual mining creates existing material exactly once",
+      "pass": true
+    }
+  ],
+  "count": 123,
+  "failures": []
+}

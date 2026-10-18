@@ -1,0 +1,2496 @@
+{
+  "art_source": "host_image via controlled route_media",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "precise_backend": "unknown",
+  "estimateUsd": 0,
+  "cost_note": "subscription quota; not a verified quota-use measurement",
+  "jobs": [
+    {
+      "schemaVersion": 2,
+      "provider": "openai",
+      "kind": "image",
+      "route": "codex-cli",
+      "requestedModel": "codex-image_gen",
+      "options": {
+        "tool": "image_gen"
+      },
+      "promptSha256": "f21f5f11991a7d26e1f38e7b72d3c310eaa0c9b0ea328f4b97a38b188e64aa9e",
+      "references": [
+        {
+          "sha256": "4342a241e1116549df02b165fae6d43a4d63afce3c24243c07173c3148cb762b",
+          "bytes": 863538
+        },
+        {
+          "sha256": "307d7b04dec1a4a08be306d0f96164d64d9214fe92119165983f1315e748050c",
+          "bytes": 1571666
+        },
+        {
+          "sha256": "ecaa9cc692f4b1e23d8e8ecbf8856a199e4bdf5e6fc42019eb4883361f8282d8",
+          "bytes": 45784
+        }
+      ],
+      "fingerprint": "7b29b63ebe5a56128883e8b0fa0448d50e1c997fca7747de6bac6cf1cd92a376",
+      "estimate": {
+        "usd": 0.0,
+        "currency": "USD",
+        "pricesVersion": "2026-10-06",
+        "items": [],
+        "basis": "subscription quota call: no per-call USD price; counted by call caps"
+      },
+      "consent": {
+        "provider": "openai",
+        "model": "codex-image_gen",
+        "calls": 1,
+        "estimateUsd": 0.0,
+        "route": "codex-cli",
+        "quota": true,
+        "account": "the user's own Codex sign-in (ChatGPT)",
+        "note": "uses the subscription quota of that sign-in, never API credit"
+      },
+      "artSource": "host_image",
+      "execution": "execute",
+      "status": "done",
+      "receipt": {
+        "startedAt": "2026-10-16T13:25:18.989Z",
+        "submittedAt": "2026-10-16T13:25:19.004Z",
+        "completedAt": "2026-10-16T13:26:21.020Z",
+        "wallMs": 62031,
+        "providerMs": 62000,
+        "attempt": 1,
+        "purpose": "route_media image",
+        "toolVersion": "cli_media/0.4.0",
+        "outcomeCode": "ok"
+      },
+      "ledger": {
+        "projectDir": "../../../..",
+        "reservationId": "a1740b2afc39462fba02c074f545421d",
+        "status": "done"
+      },
+      "cliRun": {
+        "tool": "codex",
+        "runId": "a68e38d080ec4a16be4e997ac1cfcdba",
+        "cwd": "<tmp>/forge-cli-a68e38d080ec-731acea3",
+        "startedAt": "2026-10-16T13:25:18.989Z",
+        "version": "0.163.0-alpha.10.2",
+        "versionText": "codex-cli 0.163.0-alpha.10.2",
+        "recipe": "codex-exec-imagegen/1",
+        "home": "CODEX_HOME",
+        "verifiedBefore": true,
+        "threadId": "01a144e3-72fa-7ca2-86e7-c5a6c09b116c"
+      },
+      "adoption": {
+        "method": "native-run-folder",
+        "source": "CODEX_HOME/generated_images/01a144e3-72fa-7ca2-86e7-c5a6c09b116c/exec-452deff3-c092-415d-904a-d30c880a879a.png",
+        "sourceSha256": "b74e7b10efee51f5a33424b78235ae769304daa0d32b231c22f82163c99a94b7",
+        "sourceMtime": "2026-10-16T13:26:14Z",
+        "freshAfter": "2026-10-16T13:25:19.005Z",
+        "checks": [
+          "inside the CLI's own folder for this run",
+          "no symlink or junction",
+          "regular file of a sane size",
+          "newer than the run",
+          "magic bytes",
+          "decodes",
+          "exactly one output",
+          "exclusive copy with matching sha256"
+        ],
+        "finalAnswerNamesFile": true
+      },
+      "artifact": {
+        "path": "generated.png",
+        "sha256": "b74e7b10efee51f5a33424b78235ae769304daa0d32b231c22f82163c99a94b7",
+        "bytes": 1664409,
+        "format": "PNG",
+        "size": [
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "provider": "openai",
+      "kind": "image",
+      "route": "codex-cli",
+      "requestedModel": "codex-image_gen",
+      "options": {
+        "tool": "image_gen"
+      },
+      "promptSha256": "7f964b14beced9237e70e9631a974a5b44e7a2c3b33036e6d771ac4e8f8e3a89",
+      "references": [
+        {
+          "sha256": "b74e7b10efee51f5a33424b78235ae769304daa0d32b231c22f82163c99a94b7",
+          "bytes": 1664409
+        },
+        {
+          "sha256": "4342a241e1116549df02b165fae6d43a4d63afce3c24243c07173c3148cb762b",
+          "bytes": 863538
+        }
+      ],
+      "fingerprint": "4a4b5d85746725d644ae80d243831e85c5a39b3f3771ce51e44aac68e07da603",
+      "estimate": {
+        "usd": 0.0,
+        "currency": "USD",
+        "pricesVersion": "2026-10-06",
+        "items": [],
+        "basis": "subscription quota call: no per-call USD price; counted by call caps"
+      },
+      "consent": {
+        "provider": "openai",
+        "model": "codex-image_gen",
+        "calls": 1,
+        "estimateUsd": 0.0,
+        "route": "codex-cli",
+        "quota": true,
+        "account": "the user's own Codex sign-in (ChatGPT)",
+        "note": "uses the subscription quota of that sign-in, never API credit"
+      },
+      "artSource": "host_image",
+      "execution": "execute",
+      "status": "done",
+      "receipt": {
+        "startedAt": "2026-10-16T13:28:25.780Z",
+        "submittedAt": "2026-10-16T13:28:25.794Z",
+        "completedAt": "2026-10-16T13:29:35.155Z",
+        "wallMs": 69375,
+        "providerMs": 69328,
+        "attempt": 1,
+        "purpose": "route_media image",
+        "toolVersion": "cli_media/0.4.0",
+        "outcomeCode": "ok"
+      },
+      "ledger": {
+        "projectDir": "../../../..",
+        "reservationId": "9d6872dff003410d829f9877cfa02650",
+        "status": "done"
+      },
+      "cliRun": {
+        "tool": "codex",
+        "runId": "e23a0c73b516456bbbc6a3c1c9a518b1",
+        "cwd": "<tmp>/forge-cli-e23a0c73b516-5d6d79da",
+        "startedAt": "2026-10-16T13:28:25.780Z",
+        "version": "0.163.0-alpha.10.2",
+        "versionText": "codex-cli 0.163.0-alpha.10.2",
+        "recipe": "codex-exec-imagegen/1",
+        "home": "CODEX_HOME",
+        "verifiedBefore": true,
+        "threadId": "01a144e6-4c87-7070-9577-aae467468c38"
+      },
+      "adoption": {
+        "method": "native-run-folder",
+        "source": "CODEX_HOME/generated_images/01a144e6-4c87-7070-9577-aae467468c38/exec-db2fb5d4-c9c5-49bb-9888-787c921bc1cd.png",
+        "sourceSha256": "5bc76821f32f73596b640418c21cf3c60d26fedd1b32703a2b3412ef94608507",
+        "sourceMtime": "2026-10-16T13:29:28Z",
+        "freshAfter": "2026-10-16T13:28:25.797Z",
+        "checks": [
+          "inside the CLI's own folder for this run",
+          "no symlink or junction",
+          "regular file of a sane size",
+          "newer than the run",
+          "magic bytes",
+          "decodes",
+          "exactly one output",
+          "exclusive copy with matching sha256"
+        ],
+        "finalAnswerNamesFile": true
+      },
+      "artifact": {
+        "path": "generated.png",
+        "sha256": "5bc76821f32f73596b640418c21cf3c60d26fedd1b32703a2b3412ef94608507",
+        "bytes": 1481363,
+        "format": "PNG",
+        "size": [
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "provider": "openai",
+      "kind": "image",
+      "route": "codex-cli",
+      "requestedModel": "codex-image_gen",
+      "options": {
+        "tool": "image_gen"
+      },
+      "promptSha256": "e2a48a07df4539b5476039c41e9f928211b0fb11bdf3749e1cf10798d1165885",
+      "references": [
+        {
+          "sha256": "4342a241e1116549df02b165fae6d43a4d63afce3c24243c07173c3148cb762b",
+          "bytes": 863538
+        },
+        {
+          "sha256": "307d7b04dec1a4a08be306d0f96164d64d9214fe92119165983f1315e748050c",
+          "bytes": 1571666
+        },
+        {
+          "sha256": "ab4ae57cac51ff5dd1978b6f9bb2893b778cdb2a6df7541b5934d67d71a68243",
+          "bytes": 7157
+        }
+      ],
+      "fingerprint": "fb6927175f141c2411c792cf6ad81364f0e8cf4d6ab78233bd83d23a7ffbdab7",
+      "estimate": {
+        "usd": 0.0,
+        "currency": "USD",
+        "pricesVersion": "2026-10-06",
+        "items": [],
+        "basis": "subscription quota call: no per-call USD price; counted by call caps"
+      },
+      "consent": {
+        "provider": "openai",
+        "model": "codex-image_gen",
+        "calls": 1,
+        "estimateUsd": 0.0,
+        "route": "codex-cli",
+        "quota": true,
+        "account": "the user's own Codex sign-in (ChatGPT)",
+        "note": "uses the subscription quota of that sign-in, never API credit"
+      },
+      "artSource": "host_image",
+      "execution": "execute",
+      "status": "done",
+      "receipt": {
+        "startedAt": "2026-10-16T13:25:55.065Z",
+        "submittedAt": "2026-10-16T13:25:55.078Z",
+        "completedAt": "2026-10-16T13:27:11.721Z",
+        "wallMs": 76656,
+        "providerMs": 76625,
+        "attempt": 1,
+        "purpose": "route_media image",
+        "toolVersion": "cli_media/0.4.0",
+        "outcomeCode": "ok"
+      },
+      "ledger": {
+        "projectDir": "../../../..",
+        "reservationId": "c5328ec221cb417a815b520d6db2493f",
+        "status": "done"
+      },
+      "cliRun": {
+        "tool": "codex",
+        "runId": "a8facebd92654a068ff7a5ddbc80da67",
+        "cwd": "<tmp>/forge-cli-a8facebd9265-dbe62aed",
+        "startedAt": "2026-10-16T13:25:55.065Z",
+        "version": "0.163.0-alpha.10.2",
+        "versionText": "codex-cli 0.163.0-alpha.10.2",
+        "recipe": "codex-exec-imagegen/1",
+        "home": "CODEX_HOME",
+        "verifiedBefore": true,
+        "threadId": "01a144e3-fff0-7fe2-bba4-0db7fe3a6807"
+      },
+      "adoption": {
+        "method": "native-run-folder",
+        "source": "CODEX_HOME/generated_images/01a144e3-fff0-7fe2-bba4-0db7fe3a6807/exec-9da15034-5ee2-4e50-97e8-a7f623d2e651.png",
+        "sourceSha256": "f574f44de429fd1d5fc4330989919201da29a6700df9fb72739998cac77e0caa",
+        "sourceMtime": "2026-10-16T13:27:00Z",
+        "freshAfter": "2026-10-16T13:25:55.081Z",
+        "checks": [
+          "inside the CLI's own folder for this run",
+          "no symlink or junction",
+          "regular file of a sane size",
+          "newer than the run",
+          "magic bytes",
+          "decodes",
+          "exactly one output",
+          "exclusive copy with matching sha256"
+        ],
+        "finalAnswerNamesFile": true
+      },
+      "artifact": {
+        "path": "generated.png",
+        "sha256": "f574f44de429fd1d5fc4330989919201da29a6700df9fb72739998cac77e0caa",
+        "bytes": 1459994,
+        "format": "PNG",
+        "size": [
+          1536,
+          1024
+        ]
+      }
+    }
+  ],
+  "qa": {
+    "prototypes\\environment-variety-v01\\art\\rocks-spill\\sheet-qc.json": {
+      "schema": "generate2dsprite.sheet_qc.v1",
+      "check": "spill",
+      "status": "warn",
+      "method": "8-connected components at alpha > 127 (solid) and > 16 (visible edge) on the raw sheet; a component belongs to the cell holding most of its pixels; cells are forge_core.rounded_grid_boxes; specks are forge_core.alpha_hygiene('both') counts",
+      "notProven": [
+        "Whether an overhang is intended art such as a tail or weapon trail.",
+        "Whether a cell's pose, anatomy or identity is correct; run sheet_qc.py frames and look at the frames.",
+        "That a different crop or slicing method would be safe: only the nominal grid was measured."
+      ],
+      "checks": [
+        {
+          "id": "cross_cell_components",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "cells": [],
+          "note": "solid parts crossing a cell line are cut or misassigned when the sheet is sliced"
+        },
+        {
+          "id": "cross_cell_visible",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "note": "the same test on the visible edge (alpha > 16)"
+        },
+        {
+          "id": "sheet_edge",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "note": "art touching the sheet border was cut by the image edge"
+        },
+        {
+          "id": "empty_cells",
+          "status": "pass",
+          "value": [],
+          "threshold": [],
+          "note": "the first 6 cells must each hold a subject"
+        },
+        {
+          "id": "boundary_band",
+          "status": "warn",
+          "value": 142,
+          "threshold": 0,
+          "note": "solid pixels within 10 px of a cell line; a different crop or rounding can cut them"
+        },
+        {
+          "id": "safe_frame",
+          "status": "warn",
+          "value": 6,
+          "threshold": 0,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+        },
+        {
+          "id": "faint_specks",
+          "status": "pass",
+          "value": {
+            "floor_px": 0,
+            "detached_components": 0
+          },
+          "threshold": 0,
+          "note": "alpha haze and detached specks; process removes them with --alpha-hygiene both"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "../rocks-01/generated.png",
+          "sha256": "f574f44de429fd1d5fc4330989919201da29a6700df9fb72739998cac77e0caa",
+          "bytes": 1459994
+        }
+      ],
+      "outputs": [
+        {
+          "path": "spill-overlay.png",
+          "sha256": "ae25230fc81bf9203a18ad6e993d9a43e957902e02f6e6a8503180b688daef45",
+          "bytes": 596860
+        }
+      ],
+      "tool": {
+        "name": "sheet_qc.py",
+        "version": "0.4.0"
+      },
+      "image": {
+        "sha256": "f574f44de429fd1d5fc4330989919201da29a6700df9fb72739998cac77e0caa",
+        "size": [
+          1536,
+          1024
+        ],
+        "source_mode": "RGB",
+        "bit_depth": 8,
+        "conversion": "RGB -> RGBA",
+        "keyed": {
+          "key": "magenta",
+          "quality": "soft",
+          "key_rgb": [
+            251,
+            3,
+            250
+          ],
+          "opaque_key_px": 0
+        }
+      },
+      "grid": {
+        "rows": 2,
+        "cols": 3,
+        "cell_boxes": [
+          [
+            0,
+            0,
+            512,
+            512
+          ],
+          [
+            512,
+            0,
+            1024,
+            512
+          ],
+          [
+            1024,
+            0,
+            1536,
+            512
+          ],
+          [
+            0,
+            512,
+            512,
+            1024
+          ],
+          [
+            512,
+            512,
+            1024,
+            1024
+          ],
+          [
+            1024,
+            512,
+            1536,
+            1024
+          ]
+        ],
+        "rounding": "half-up (forge_core.rounded_grid_boxes)"
+      },
+      "params": {
+        "alpha_threshold": 127,
+        "edge_threshold": 16,
+        "min_area": 64,
+        "band_px": 10,
+        "safe_margin": 0.15,
+        "expect": 6,
+        "connectivity": 8
+      },
+      "cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "index": 0,
+          "box": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "owned_components": 1,
+          "owned_area": 61913,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            44,
+            227,
+            508,
+            416
+          ],
+          "margins_px": {
+            "left": 44,
+            "top": 227,
+            "right": 4,
+            "bottom": 96
+          },
+          "margins_frac": {
+            "left": 0.0859,
+            "top": 0.4434,
+            "right": 0.0078,
+            "bottom": 0.1875
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "index": 1,
+          "box": [
+            512,
+            0,
+            1024,
+            512
+          ],
+          "owned_components": 1,
+          "owned_area": 77973,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            586,
+            138,
+            951,
+            425
+          ],
+          "margins_px": {
+            "left": 74,
+            "top": 138,
+            "right": 73,
+            "bottom": 87
+          },
+          "margins_frac": {
+            "left": 0.1445,
+            "top": 0.2695,
+            "right": 0.1426,
+            "bottom": 0.1699
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "index": 2,
+          "box": [
+            1024,
+            0,
+            1536,
+            512
+          ],
+          "owned_components": 1,
+          "owned_area": 74195,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            1062,
+            148,
+            1494,
+            418
+          ],
+          "margins_px": {
+            "left": 38,
+            "top": 148,
+            "right": 42,
+            "bottom": 94
+          },
+          "margins_frac": {
+            "left": 0.0742,
+            "top": 0.2891,
+            "right": 0.082,
+            "bottom": 0.1836
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "index": 3,
+          "box": [
+            0,
+            512,
+            512,
+            1024
+          ],
+          "owned_components": 1,
+          "owned_area": 89499,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            40,
+            635,
+            503,
+            901
+          ],
+          "margins_px": {
+            "left": 40,
+            "top": 123,
+            "right": 9,
+            "bottom": 123
+          },
+          "margins_frac": {
+            "left": 0.0781,
+            "top": 0.2402,
+            "right": 0.0176,
+            "bottom": 0.2402
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "index": 4,
+          "box": [
+            512,
+            512,
+            1024,
+            1024
+          ],
+          "owned_components": 1,
+          "owned_area": 82290,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            626,
+            557,
+            926,
+            927
+          ],
+          "margins_px": {
+            "left": 114,
+            "top": 45,
+            "right": 98,
+            "bottom": 97
+          },
+          "margins_frac": {
+            "left": 0.2227,
+            "top": 0.0879,
+            "right": 0.1914,
+            "bottom": 0.1895
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "index": 5,
+          "box": [
+            1024,
+            512,
+            1536,
+            1024
+          ],
+          "owned_components": 1,
+          "owned_area": 51587,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            1100,
+            679,
+            1438,
+            903
+          ],
+          "margins_px": {
+            "left": 76,
+            "top": 167,
+            "right": 98,
+            "bottom": 121
+          },
+          "margins_frac": {
+            "left": 0.1484,
+            "top": 0.3262,
+            "right": 0.1914,
+            "bottom": 0.2363
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        }
+      ],
+      "crossing_components": [],
+      "visible_crossing_components": [],
+      "boundary_band": [
+        {
+          "axis": "x",
+          "at": 512,
+          "solid_px": 142
+        },
+        {
+          "axis": "x",
+          "at": 1024,
+          "solid_px": 0
+        },
+        {
+          "axis": "y",
+          "at": 512,
+          "solid_px": 0
+        }
+      ],
+      "specks": {
+        "floor_px": 0,
+        "detached_px": 0,
+        "detached_components": 0,
+        "max_removed_alpha": 0,
+        "soft_alpha_histogram": {
+          "1-4": 0,
+          "5-15": 0,
+          "16-63": 367,
+          "64-127": 1988
+        }
+      }
+    },
+    "prototypes\\environment-variety-v01\\art\\trees-spill\\sheet-qc.json": {
+      "schema": "generate2dsprite.sheet_qc.v1",
+      "check": "spill",
+      "status": "fail",
+      "method": "8-connected components at alpha > 127 (solid) and > 16 (visible edge) on the raw sheet; a component belongs to the cell holding most of its pixels; cells are forge_core.rounded_grid_boxes; specks are forge_core.alpha_hygiene('both') counts",
+      "notProven": [
+        "Whether an overhang is intended art such as a tail or weapon trail.",
+        "Whether a cell's pose, anatomy or identity is correct; run sheet_qc.py frames and look at the frames.",
+        "That a different crop or slicing method would be safe: only the nominal grid was measured."
+      ],
+      "checks": [
+        {
+          "id": "cross_cell_components",
+          "status": "fail",
+          "value": 1,
+          "threshold": 0,
+          "cells": [
+            [
+              1,
+              0
+            ]
+          ],
+          "note": "solid parts crossing a cell line are cut or misassigned when the sheet is sliced"
+        },
+        {
+          "id": "cross_cell_visible",
+          "status": "fail",
+          "value": 1,
+          "threshold": 0,
+          "note": "the same test on the visible edge (alpha > 16)"
+        },
+        {
+          "id": "sheet_edge",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "note": "art touching the sheet border was cut by the image edge"
+        },
+        {
+          "id": "empty_cells",
+          "status": "pass",
+          "value": [],
+          "threshold": [],
+          "note": "the first 4 cells must each hold a subject"
+        },
+        {
+          "id": "boundary_band",
+          "status": "warn",
+          "value": 1789,
+          "threshold": 0,
+          "note": "solid pixels within 13 px of a cell line; a different crop or rounding can cut them"
+        },
+        {
+          "id": "safe_frame",
+          "status": "warn",
+          "value": 4,
+          "threshold": 0,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+        },
+        {
+          "id": "faint_specks",
+          "status": "pass",
+          "value": {
+            "floor_px": 0,
+            "detached_components": 0
+          },
+          "threshold": 0,
+          "note": "alpha haze and detached specks; process removes them with --alpha-hygiene both"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "../trees-01/generated.png",
+          "sha256": "b74e7b10efee51f5a33424b78235ae769304daa0d32b231c22f82163c99a94b7",
+          "bytes": 1664409
+        }
+      ],
+      "outputs": [
+        {
+          "path": "spill-overlay.png",
+          "sha256": "aa4f9d4c26cb76a028142c56875577448d9991f919ad0787bb04f2ccba307165",
+          "bytes": 858896
+        }
+      ],
+      "tool": {
+        "name": "sheet_qc.py",
+        "version": "0.4.0"
+      },
+      "image": {
+        "sha256": "b74e7b10efee51f5a33424b78235ae769304daa0d32b231c22f82163c99a94b7",
+        "size": [
+          1254,
+          1254
+        ],
+        "source_mode": "RGB",
+        "bit_depth": 8,
+        "conversion": "RGB -> RGBA",
+        "keyed": {
+          "key": "magenta",
+          "quality": "soft",
+          "key_rgb": [
+            252,
+            3,
+            251
+          ],
+          "opaque_key_px": 0
+        }
+      },
+      "grid": {
+        "rows": 2,
+        "cols": 2,
+        "cell_boxes": [
+          [
+            0,
+            0,
+            627,
+            627
+          ],
+          [
+            627,
+            0,
+            1254,
+            627
+          ],
+          [
+            0,
+            627,
+            627,
+            1254
+          ],
+          [
+            627,
+            627,
+            1254,
+            1254
+          ]
+        ],
+        "rounding": "half-up (forge_core.rounded_grid_boxes)"
+      },
+      "params": {
+        "alpha_threshold": 127,
+        "edge_threshold": 16,
+        "min_area": 64,
+        "band_px": 13,
+        "safe_margin": 0.15,
+        "expect": 4,
+        "connectivity": 8
+      },
+      "cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "index": 0,
+          "box": [
+            0,
+            0,
+            627,
+            627
+          ],
+          "owned_components": 1,
+          "owned_area": 73981,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [
+            {
+              "label": 3,
+              "owner_cell": [
+                1,
+                0
+              ],
+              "pixels_in_this_cell": 46
+            }
+          ],
+          "expected": true,
+          "owned_bbox": [
+            205,
+            50,
+            487,
+            566
+          ],
+          "margins_px": {
+            "left": 205,
+            "top": 50,
+            "right": 140,
+            "bottom": 61
+          },
+          "margins_frac": {
+            "left": 0.327,
+            "top": 0.0797,
+            "right": 0.2233,
+            "bottom": 0.0973
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "index": 1,
+          "box": [
+            627,
+            0,
+            1254,
+            627
+          ],
+          "owned_components": 1,
+          "owned_area": 133993,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            635,
+            173,
+            1205,
+            566
+          ],
+          "margins_px": {
+            "left": 8,
+            "top": 173,
+            "right": 49,
+            "bottom": 61
+          },
+          "margins_frac": {
+            "left": 0.0128,
+            "top": 0.2759,
+            "right": 0.0781,
+            "bottom": 0.0973
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "index": 2,
+          "box": [
+            0,
+            627,
+            627,
+            1254
+          ],
+          "owned_components": 1,
+          "owned_area": 176085,
+          "components_over_line": 1,
+          "pixels_over_line": 545,
+          "overhang_px": 12,
+          "visible_pixels_over_line": 610,
+          "visible_overhang_px": 12,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            47,
+            623,
+            639,
+            1161
+          ],
+          "margins_px": {
+            "left": 47,
+            "top": -4,
+            "right": -12,
+            "bottom": 93
+          },
+          "margins_frac": {
+            "left": 0.075,
+            "top": -0.0064,
+            "right": -0.0191,
+            "bottom": 0.1483
+          },
+          "cut_by_cell_edge": true,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "index": 3,
+          "box": [
+            627,
+            627,
+            1254,
+            1254
+          ],
+          "owned_components": 1,
+          "owned_area": 106516,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [
+            {
+              "label": 3,
+              "owner_cell": [
+                1,
+                0
+              ],
+              "pixels_in_this_cell": 499
+            }
+          ],
+          "expected": true,
+          "owned_bbox": [
+            722,
+            669,
+            1194,
+            1161
+          ],
+          "margins_px": {
+            "left": 95,
+            "top": 42,
+            "right": 60,
+            "bottom": 93
+          },
+          "margins_frac": {
+            "left": 0.1515,
+            "top": 0.067,
+            "right": 0.0957,
+            "bottom": 0.1483
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        }
+      ],
+      "crossing_components": [
+        {
+          "label": 3,
+          "area": 176085,
+          "bbox": [
+            47,
+            623,
+            639,
+            1161
+          ],
+          "owner_cell": [
+            1,
+            0
+          ],
+          "pixels_per_cell": {
+            "0": 46,
+            "2": 175540,
+            "3": 499
+          },
+          "pixels_over_line": 545,
+          "overhang_px": 12,
+          "overhang_sides": {
+            "left": 0,
+            "top": 4,
+            "right": 12,
+            "bottom": 0
+          },
+          "touches_sheet_edge": false
+        }
+      ],
+      "visible_crossing_components": [
+        {
+          "label": 3,
+          "area": 177794,
+          "bbox": [
+            47,
+            622,
+            639,
+            1161
+          ],
+          "owner_cell": [
+            1,
+            0
+          ],
+          "pixels_per_cell": {
+            "0": 63,
+            "2": 177184,
+            "3": 547
+          },
+          "pixels_over_line": 610,
+          "overhang_px": 12,
+          "overhang_sides": {
+            "left": 0,
+            "top": 5,
+            "right": 12,
+            "bottom": 0
+          },
+          "touches_sheet_edge": false
+        }
+      ],
+      "boundary_band": [
+        {
+          "axis": "x",
+          "at": 627,
+          "solid_px": 1789
+        },
+        {
+          "axis": "y",
+          "at": 627,
+          "solid_px": 764
+        }
+      ],
+      "specks": {
+        "floor_px": 0,
+        "detached_px": 0,
+        "detached_components": 0,
+        "max_removed_alpha": 0,
+        "soft_alpha_histogram": {
+          "1-4": 0,
+          "5-15": 0,
+          "16-63": 1065,
+          "64-127": 4914
+        }
+      }
+    },
+    "prototypes\\environment-variety-v01\\art\\trees-spill-02\\sheet-qc.json": {
+      "schema": "generate2dsprite.sheet_qc.v1",
+      "check": "spill",
+      "status": "warn",
+      "method": "8-connected components at alpha > 127 (solid) and > 16 (visible edge) on the raw sheet; a component belongs to the cell holding most of its pixels; cells are forge_core.rounded_grid_boxes; specks are forge_core.alpha_hygiene('both') counts",
+      "notProven": [
+        "Whether an overhang is intended art such as a tail or weapon trail.",
+        "Whether a cell's pose, anatomy or identity is correct; run sheet_qc.py frames and look at the frames.",
+        "That a different crop or slicing method would be safe: only the nominal grid was measured."
+      ],
+      "checks": [
+        {
+          "id": "cross_cell_components",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "cells": [],
+          "note": "solid parts crossing a cell line are cut or misassigned when the sheet is sliced"
+        },
+        {
+          "id": "cross_cell_visible",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "note": "the same test on the visible edge (alpha > 16)"
+        },
+        {
+          "id": "sheet_edge",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "note": "art touching the sheet border was cut by the image edge"
+        },
+        {
+          "id": "empty_cells",
+          "status": "pass",
+          "value": [],
+          "threshold": [],
+          "note": "the first 4 cells must each hold a subject"
+        },
+        {
+          "id": "boundary_band",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "note": "solid pixels within 13 px of a cell line; a different crop or rounding can cut them"
+        },
+        {
+          "id": "safe_frame",
+          "status": "warn",
+          "value": 2,
+          "threshold": 0,
+          "cells": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+        },
+        {
+          "id": "faint_specks",
+          "status": "pass",
+          "value": {
+            "floor_px": 0,
+            "detached_components": 0
+          },
+          "threshold": 0,
+          "note": "alpha haze and detached specks; process removes them with --alpha-hygiene both"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "../trees-02/generated.png",
+          "sha256": "5bc76821f32f73596b640418c21cf3c60d26fedd1b32703a2b3412ef94608507",
+          "bytes": 1481363
+        }
+      ],
+      "outputs": [
+        {
+          "path": "spill-overlay.png",
+          "sha256": "ffbc6b2c34a18e9c6250c3f199811259d325457c33d3339c5de14c220ff2b948",
+          "bytes": 496692
+        }
+      ],
+      "tool": {
+        "name": "sheet_qc.py",
+        "version": "0.4.0"
+      },
+      "image": {
+        "sha256": "5bc76821f32f73596b640418c21cf3c60d26fedd1b32703a2b3412ef94608507",
+        "size": [
+          1254,
+          1254
+        ],
+        "source_mode": "RGB",
+        "bit_depth": 8,
+        "conversion": "RGB -> RGBA",
+        "keyed": {
+          "key": "magenta",
+          "quality": "soft",
+          "key_rgb": [
+            252,
+            3,
+            251
+          ],
+          "opaque_key_px": 0
+        }
+      },
+      "grid": {
+        "rows": 2,
+        "cols": 2,
+        "cell_boxes": [
+          [
+            0,
+            0,
+            627,
+            627
+          ],
+          [
+            627,
+            0,
+            1254,
+            627
+          ],
+          [
+            0,
+            627,
+            627,
+            1254
+          ],
+          [
+            627,
+            627,
+            1254,
+            1254
+          ]
+        ],
+        "rounding": "half-up (forge_core.rounded_grid_boxes)"
+      },
+      "params": {
+        "alpha_threshold": 127,
+        "edge_threshold": 16,
+        "min_area": 64,
+        "band_px": 13,
+        "safe_margin": 0.15,
+        "expect": 4,
+        "connectivity": 8
+      },
+      "cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "index": 0,
+          "box": [
+            0,
+            0,
+            627,
+            627
+          ],
+          "owned_components": 1,
+          "owned_area": 41923,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            233,
+            124,
+            446,
+            508
+          ],
+          "margins_px": {
+            "left": 233,
+            "top": 124,
+            "right": 181,
+            "bottom": 119
+          },
+          "margins_frac": {
+            "left": 0.3716,
+            "top": 0.1978,
+            "right": 0.2887,
+            "bottom": 0.1898
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": true
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "index": 1,
+          "box": [
+            627,
+            0,
+            1254,
+            627
+          ],
+          "owned_components": 1,
+          "owned_area": 72804,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            714,
+            219,
+            1133,
+            508
+          ],
+          "margins_px": {
+            "left": 87,
+            "top": 219,
+            "right": 121,
+            "bottom": 119
+          },
+          "margins_frac": {
+            "left": 0.1388,
+            "top": 0.3493,
+            "right": 0.193,
+            "bottom": 0.1898
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "index": 2,
+          "box": [
+            0,
+            627,
+            627,
+            1254
+          ],
+          "owned_components": 1,
+          "owned_area": 82448,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            131,
+            734,
+            538,
+            1097
+          ],
+          "margins_px": {
+            "left": 131,
+            "top": 107,
+            "right": 89,
+            "bottom": 157
+          },
+          "margins_frac": {
+            "left": 0.2089,
+            "top": 0.1707,
+            "right": 0.1419,
+            "bottom": 0.2504
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "index": 3,
+          "box": [
+            627,
+            627,
+            1254,
+            1254
+          ],
+          "owned_components": 1,
+          "owned_area": 51048,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            778,
+            750,
+            1102,
+            1091
+          ],
+          "margins_px": {
+            "left": 151,
+            "top": 123,
+            "right": 152,
+            "bottom": 163
+          },
+          "margins_frac": {
+            "left": 0.2408,
+            "top": 0.1962,
+            "right": 0.2424,
+            "bottom": 0.26
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": true
+        }
+      ],
+      "crossing_components": [],
+      "visible_crossing_components": [],
+      "boundary_band": [
+        {
+          "axis": "x",
+          "at": 627,
+          "solid_px": 0
+        },
+        {
+          "axis": "y",
+          "at": 627,
+          "solid_px": 0
+        }
+      ],
+      "specks": {
+        "floor_px": 0,
+        "detached_px": 0,
+        "detached_components": 0,
+        "max_removed_alpha": 0,
+        "soft_alpha_histogram": {
+          "1-4": 0,
+          "5-15": 0,
+          "16-63": 801,
+          "64-127": 3369
+        }
+      }
+    },
+    "prototypes\\environment-variety-v01\\art\\rocks-processed\\pipeline-meta.json": {
+      "status": "warn",
+      "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+      "notProven": [
+        "pose quality, anatomy, identity and facing",
+        "loop seam, phase order and timing at game size",
+        "colour fidelity of keyed edges beyond the matte_qa residue counts",
+        "that the subject is complete where it does not touch a cell edge"
+      ],
+      "checks": [
+        {
+          "id": "empty_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "paste_clamped_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "output_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "source_edge_touch_frames",
+          "status": "warn",
+          "value": [
+            [
+              0,
+              0
+            ]
+          ],
+          "threshold": []
+        },
+        {
+          "id": "body_scale_cv",
+          "status": "skipped",
+          "value": 0.20752710643403482,
+          "threshold": null
+        },
+        {
+          "id": "anchor_y_std",
+          "status": "skipped",
+          "value": 0.027981740477918227,
+          "threshold": null
+        },
+        {
+          "id": "key_residue",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0
+        },
+        {
+          "id": "key_ring_spill",
+          "status": "pass",
+          "value": 0.0,
+          "threshold": 0.01
+        }
+      ],
+      "inputs": [
+        {
+          "path": "raw-sheet.png",
+          "sha256": "f574f44de429fd1d5fc4330989919201da29a6700df9fb72739998cac77e0caa",
+          "bytes": 1459994
+        }
+      ],
+      "outputs": [
+        {
+          "path": "sheet-1.png",
+          "sha256": "112f240d5da5bea75354b91f4e3135b457b2b42af6465b983db0daf427eca95f",
+          "bytes": 95536
+        },
+        {
+          "path": "sheet-2.png",
+          "sha256": "87e71be5bb36984dec687830888d293ddcd508c5813ee808384370050eaf6966",
+          "bytes": 114332
+        },
+        {
+          "path": "sheet-3.png",
+          "sha256": "6c961ad1e7ac63b6937d53e7fd23d610d057d2394da5f5fe15648bbcd8bb1012",
+          "bytes": 111615
+        },
+        {
+          "path": "sheet-4.png",
+          "sha256": "42e11f51711de59d6cf6854bc4a7848f0d9ed9110553603d35d56cf404171c2f",
+          "bytes": 127981
+        },
+        {
+          "path": "sheet-5.png",
+          "sha256": "0056f77f8dbbc0b1ecae8e2f22d5e29bc7deb2d08322e87a0b0f9def60de5a24",
+          "bytes": 120014
+        },
+        {
+          "path": "sheet-6.png",
+          "sha256": "bd1fbf6c021ad85bc244a27956b2d5b8b751a4dcbbe7cab39ee27272e3c98198",
+          "bytes": 82817
+        },
+        {
+          "path": "sheet-transparent.png",
+          "sha256": "d8b077975ac8b53437366e8d14eb431435f585cbefd1beafe307587bc8d04eb2",
+          "bytes": 650661
+        }
+      ],
+      "tool": {
+        "name": "generate2dsprite.py process",
+        "version": "0.4.0"
+      }
+    },
+    "prototypes\\environment-variety-v01\\art\\rocks-processed-02\\pipeline-meta.json": {
+      "status": "pass",
+      "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+      "notProven": [
+        "pose quality, anatomy, identity and facing",
+        "loop seam, phase order and timing at game size",
+        "colour fidelity of keyed edges beyond the matte_qa residue counts",
+        "that the subject is complete where it does not touch a cell edge"
+      ],
+      "checks": [
+        {
+          "id": "empty_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "paste_clamped_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "output_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "source_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "body_scale_cv",
+          "status": "skipped",
+          "value": 0.20858009102691694,
+          "threshold": null
+        },
+        {
+          "id": "anchor_y_std",
+          "status": "skipped",
+          "value": 0.027544525782950753,
+          "threshold": null
+        },
+        {
+          "id": "key_residue",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0
+        },
+        {
+          "id": "key_ring_spill",
+          "status": "pass",
+          "value": 0.0,
+          "threshold": 0.01
+        }
+      ],
+      "inputs": [
+        {
+          "path": "raw-sheet.png",
+          "sha256": "f574f44de429fd1d5fc4330989919201da29a6700df9fb72739998cac77e0caa",
+          "bytes": 1459994
+        }
+      ],
+      "outputs": [
+        {
+          "path": "sheet-1.png",
+          "sha256": "caa31bbef6399d772797d79df0202cca60376a16b4b3d3eddba7b62e2c82c0fb",
+          "bytes": 93409
+        },
+        {
+          "path": "sheet-2.png",
+          "sha256": "05f0f7977bcc15ceb67a9a989b6b0714d6484ea4bcb8524822114d972871c414",
+          "bytes": 111208
+        },
+        {
+          "path": "sheet-3.png",
+          "sha256": "aa33c622ff37bb7c8a18f9ab369faf11f8b022eba2c17c384079b863529f9124",
+          "bytes": 108830
+        },
+        {
+          "path": "sheet-4.png",
+          "sha256": "b1b6924bd6e09ac9c042462ebc31114c726e9b7f43fa862416fec090a9029af2",
+          "bytes": 124437
+        },
+        {
+          "path": "sheet-5.png",
+          "sha256": "9003f989978dd4a5d05a3639e6bdb4beddb24badd8dbd4609c3f34ec0ac409ff",
+          "bytes": 116934
+        },
+        {
+          "path": "sheet-6.png",
+          "sha256": "f557ac77de8a36ce274508e4532b41e4af05b43a5cb71033a2d1280850d99751",
+          "bytes": 80690
+        },
+        {
+          "path": "sheet-transparent.png",
+          "sha256": "d251fb6b20ade1090b05d372c442223a152f54f65e81096f6b7befc093c758a0",
+          "bytes": 633997
+        }
+      ],
+      "tool": {
+        "name": "generate2dsprite.py process",
+        "version": "0.4.0"
+      }
+    },
+    "prototypes\\environment-variety-v01\\art\\trees-processed\\pipeline-meta.json": {
+      "status": "warn",
+      "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+      "notProven": [
+        "pose quality, anatomy, identity and facing",
+        "loop seam, phase order and timing at game size",
+        "colour fidelity of keyed edges beyond the matte_qa residue counts",
+        "that the subject is complete where it does not touch a cell edge"
+      ],
+      "checks": [
+        {
+          "id": "empty_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "paste_clamped_frames",
+          "status": "warn",
+          "value": [
+            [
+              0,
+              0
+            ]
+          ],
+          "threshold": []
+        },
+        {
+          "id": "output_edge_touch_frames",
+          "status": "warn",
+          "value": [
+            [
+              0,
+              0
+            ]
+          ],
+          "threshold": []
+        },
+        {
+          "id": "source_edge_touch_frames",
+          "status": "warn",
+          "value": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "threshold": []
+        },
+        {
+          "id": "body_scale_cv",
+          "status": "skipped",
+          "value": 0.13277497802426214,
+          "threshold": null
+        },
+        {
+          "id": "anchor_y_std",
+          "status": "skipped",
+          "value": 0.02584814216478193,
+          "threshold": null
+        },
+        {
+          "id": "key_residue",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0
+        },
+        {
+          "id": "key_ring_spill",
+          "status": "pass",
+          "value": 0.0,
+          "threshold": 0.01
+        }
+      ],
+      "inputs": [
+        {
+          "path": "raw-sheet.png",
+          "sha256": "b74e7b10efee51f5a33424b78235ae769304daa0d32b231c22f82163c99a94b7",
+          "bytes": 1664409
+        }
+      ],
+      "outputs": [
+        {
+          "path": "sheet-1.png",
+          "sha256": "9ec332628f71401fcf0c8da25ef3724303f599ff13d94ae1a21e2bfd9bbe4260",
+          "bytes": 117329
+        },
+        {
+          "path": "sheet-2.png",
+          "sha256": "4ad34148b62898d470ed6964fc5f9426d44ce0eb34700a4a9595bf582adc5806",
+          "bytes": 175168
+        },
+        {
+          "path": "sheet-3.png",
+          "sha256": "c1c45424ce43af98bf14d48f077ac1c4e001fdd25d24c2ac7152beb744e99c34",
+          "bytes": 223150
+        },
+        {
+          "path": "sheet-4.png",
+          "sha256": "9c38f91afc96bd70754e431232d51c555d8b6ef4bb3918277c0fdbeec87aa7c9",
+          "bytes": 163461
+        },
+        {
+          "path": "sheet-transparent.png",
+          "sha256": "5b436480d9f36711b0dc64abef4381adaec614d1458449fb2f4bd816e8a7dca9",
+          "bytes": 681869
+        }
+      ],
+      "tool": {
+        "name": "generate2dsprite.py process",
+        "version": "0.4.0"
+      }
+    },
+    "prototypes\\environment-variety-v01\\art\\trees-processed-02\\pipeline-meta.json": {
+      "status": "pass",
+      "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+      "notProven": [
+        "pose quality, anatomy, identity and facing",
+        "loop seam, phase order and timing at game size",
+        "colour fidelity of keyed edges beyond the matte_qa residue counts",
+        "that the subject is complete where it does not touch a cell edge"
+      ],
+      "checks": [
+        {
+          "id": "empty_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "paste_clamped_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "output_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "source_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "body_scale_cv",
+          "status": "skipped",
+          "value": 0.10105846258403425,
+          "threshold": null
+        },
+        {
+          "id": "anchor_y_std",
+          "status": "skipped",
+          "value": 0.03207685065569183,
+          "threshold": null
+        },
+        {
+          "id": "key_residue",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0
+        },
+        {
+          "id": "key_ring_spill",
+          "status": "pass",
+          "value": 0.0,
+          "threshold": 0.01
+        }
+      ],
+      "inputs": [
+        {
+          "path": "raw-sheet.png",
+          "sha256": "5bc76821f32f73596b640418c21cf3c60d26fedd1b32703a2b3412ef94608507",
+          "bytes": 1481363
+        }
+      ],
+      "outputs": [
+        {
+          "path": "sheet-1.png",
+          "sha256": "263b589e8769222690593af4c48cafcb86babff398b80c3031eb914a97cb51ea",
+          "bytes": 73405
+        },
+        {
+          "path": "sheet-2.png",
+          "sha256": "6ba5d9cce4560be9b90df906b30713bc5ae0b24f049a3c7ed3475a53429b164f",
+          "bytes": 107062
+        },
+        {
+          "path": "sheet-3.png",
+          "sha256": "592d6169cc39e6ebebf48f32f12db05bb5501f2f349991ae3d2d6ddf9ec46409",
+          "bytes": 122457
+        },
+        {
+          "path": "sheet-4.png",
+          "sha256": "71f5d028be8bf1ff1f2fb49adc00aed7bd902df08f2afd0008322ef89363727f",
+          "bytes": 89715
+        },
+        {
+          "path": "sheet-transparent.png",
+          "sha256": "bbd422b4a67973890fbbac80ebab08d1e0fe73006c897cfb2ca0090270cae06f",
+          "bytes": 391345
+        }
+      ],
+      "tool": {
+        "name": "generate2dsprite.py process",
+        "version": "0.4.0"
+      }
+    }
+  },
+  "warnings_and_failures": [
+    {
+      "file": "prototypes\\environment-variety-v01\\art\\rocks-spill\\sheet-qc.json",
+      "id": "boundary_band",
+      "status": "warn",
+      "value": 142,
+      "threshold": 0,
+      "note": "solid pixels within 10 px of a cell line; a different crop or rounding can cut them"
+    },
+    {
+      "file": "prototypes\\environment-variety-v01\\art\\rocks-spill\\sheet-qc.json",
+      "id": "safe_frame",
+      "status": "warn",
+      "value": 6,
+      "threshold": 0,
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+    },
+    {
+      "file": "prototypes\\environment-variety-v01\\art\\trees-spill\\sheet-qc.json",
+      "id": "cross_cell_components",
+      "status": "fail",
+      "value": 1,
+      "threshold": 0,
+      "cells": [
+        [
+          1,
+          0
+        ]
+      ],
+      "note": "solid parts crossing a cell line are cut or misassigned when the sheet is sliced"
+    },
+    {
+      "file": "prototypes\\environment-variety-v01\\art\\trees-spill\\sheet-qc.json",
+      "id": "cross_cell_visible",
+      "status": "fail",
+      "value": 1,
+      "threshold": 0,
+      "note": "the same test on the visible edge (alpha > 16)"
+    },
+    {
+      "file": "prototypes\\environment-variety-v01\\art\\trees-spill\\sheet-qc.json",
+      "id": "boundary_band",
+      "status": "warn",
+      "value": 1789,
+      "threshold": 0,
+      "note": "solid pixels within 13 px of a cell line; a different crop or rounding can cut them"
+    },
+    {
+      "file": "prototypes\\environment-variety-v01\\art\\trees-spill\\sheet-qc.json",
+      "id": "safe_frame",
+      "status": "warn",
+      "value": 4,
+      "threshold": 0,
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+    },
+    {
+      "file": "prototypes\\environment-variety-v01\\art\\trees-spill-02\\sheet-qc.json",
+      "id": "safe_frame",
+      "status": "warn",
+      "value": 2,
+      "threshold": 0,
+      "cells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+    },
+    {
+      "file": "prototypes\\environment-variety-v01\\art\\rocks-processed\\pipeline-meta.json",
+      "id": "source_edge_touch_frames",
+      "status": "warn",
+      "value": [
+        [
+          0,
+          0
+        ]
+      ],
+      "threshold": []
+    },
+    {
+      "file": "prototypes\\environment-variety-v01\\art\\trees-processed\\pipeline-meta.json",
+      "id": "paste_clamped_frames",
+      "status": "warn",
+      "value": [
+        [
+          0,
+          0
+        ]
+      ],
+      "threshold": []
+    },
+    {
+      "file": "prototypes\\environment-variety-v01\\art\\trees-processed\\pipeline-meta.json",
+      "id": "output_edge_touch_frames",
+      "status": "warn",
+      "value": [
+        [
+          0,
+          0
+        ]
+      ],
+      "threshold": []
+    },
+    {
+      "file": "prototypes\\environment-variety-v01\\art\\trees-processed\\pipeline-meta.json",
+      "id": "source_edge_touch_frames",
+      "status": "warn",
+      "value": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "threshold": []
+    }
+  ],
+  "manifest": [
+    {
+      "id": "tree_01",
+      "name": "高瘦幼树",
+      "kind": "tree",
+      "file": "tree_01.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "source_bbox": [
+        183,
+        205,
+        340,
+        488
+      ],
+      "display_bbox": [
+        75,
+        51,
+        188,
+        255
+      ],
+      "scale": 0.72,
+      "offset": [
+        75,
+        51
+      ],
+      "sha256": "52ad5927f88af1605fc145d9c9edc5b449e6b65a01a0c3731c315c5f711bb6e9",
+      "surface": "grass",
+      "status": "pending_user"
+    },
+    {
+      "id": "tree_02",
+      "name": "矮胖阔冠树",
+      "kind": "tree",
+      "file": "tree_02.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "source_bbox": [
+        98,
+        274,
+        408,
+        488
+      ],
+      "display_bbox": [
+        14,
+        101,
+        237,
+        255
+      ],
+      "scale": 0.72,
+      "offset": [
+        14,
+        101
+      ],
+      "sha256": "439179d9bc2efb83b5be5c340d4c954a34f2040320df9fa5d38546530e75f94f",
+      "surface": "grass",
+      "status": "pending_user"
+    },
+    {
+      "id": "tree_03",
+      "name": "高大开展树",
+      "kind": "tree",
+      "file": "tree_03.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "source_bbox": [
+        106,
+        219,
+        407,
+        487
+      ],
+      "display_bbox": [
+        20,
+        62,
+        237,
+        255
+      ],
+      "scale": 0.72,
+      "offset": [
+        20,
+        62
+      ],
+      "sha256": "7913ab40726f71404cb88c08a2fac2f4a9cd9544b89f4aa45d8461541e4e09ec",
+      "surface": "grass",
+      "status": "pending_user"
+    },
+    {
+      "id": "tree_04",
+      "name": "疏冠分叉树",
+      "kind": "tree",
+      "file": "tree_04.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "source_bbox": [
+        150,
+        235,
+        389,
+        487
+      ],
+      "display_bbox": [
+        52,
+        74,
+        224,
+        255
+      ],
+      "scale": 0.72,
+      "offset": [
+        52,
+        74
+      ],
+      "sha256": "8f17d2f2ab4e673b152d0e85ea3ad214d3fbe3b1f724ed5f5e4937e7314f3292",
+      "surface": "grass",
+      "status": "pending_user"
+    },
+    {
+      "id": "rock_01",
+      "name": "低矮扁石",
+      "kind": "rock",
+      "file": "rock_01.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "source_bbox": [
+        29,
+        315,
+        448,
+        487
+      ],
+      "display_bbox": [
+        10,
+        58,
+        111,
+        99
+      ],
+      "scale": 0.24,
+      "offset": [
+        10,
+        58
+      ],
+      "sha256": "c03d924a3fdafa645fc3df19cb885d00e2cea85fe51cdb64b8022e12855e292c",
+      "surface": "grass",
+      "status": "pending_user"
+    },
+    {
+      "id": "rock_02",
+      "name": "敦实孤石",
+      "kind": "rock",
+      "file": "rock_02.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "source_bbox": [
+        82,
+        227,
+        413,
+        488
+      ],
+      "display_bbox": [
+        22,
+        36,
+        101,
+        99
+      ],
+      "scale": 0.24,
+      "offset": [
+        22,
+        36
+      ],
+      "sha256": "247aed10dbdb73d548764c17ad445ac8fe7f8445c5d1cf155a2f97a8d92a35f4",
+      "surface": "grass",
+      "status": "pending_user"
+    },
+    {
+      "id": "rock_03",
+      "name": "楔形石",
+      "kind": "rock",
+      "file": "rock_03.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "source_bbox": [
+        44,
+        244,
+        433,
+        488
+      ],
+      "display_bbox": [
+        13,
+        40,
+        106,
+        99
+      ],
+      "scale": 0.24,
+      "offset": [
+        13,
+        40
+      ],
+      "sha256": "a554b603f941d09f73b913e5de81916cf0249f3e92a00ea6b09ef44551e5df2f",
+      "surface": "grass",
+      "status": "pending_user"
+    },
+    {
+      "id": "rock_04",
+      "name": "双肩连体石",
+      "kind": "rock",
+      "file": "rock_04.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "source_bbox": [
+        33,
+        247,
+        450,
+        488
+      ],
+      "display_bbox": [
+        10,
+        41,
+        110,
+        99
+      ],
+      "scale": 0.24,
+      "offset": [
+        10,
+        41
+      ],
+      "sha256": "44952fbfa544c81a6c3f6f50df43928f5232b57562f566c57144bc530886041d",
+      "surface": "grass",
+      "status": "pending_user"
+    },
+    {
+      "id": "rock_05",
+      "name": "窄高石",
+      "kind": "rock",
+      "file": "rock_05.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "source_bbox": [
+        116,
+        154,
+        387,
+        488
+      ],
+      "display_bbox": [
+        30,
+        19,
+        95,
+        99
+      ],
+      "scale": 0.24,
+      "offset": [
+        30,
+        19
+      ],
+      "sha256": "789151fcbc33e9993f05a75fe46fe10fd1f7b10d7f4e9ba2d6432b9196aacd90",
+      "surface": "grass",
+      "status": "pending_user"
+    },
+    {
+      "id": "rock_06",
+      "name": "缺角碎石",
+      "kind": "rock",
+      "file": "rock_06.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "source_bbox": [
+        145,
+        285,
+        450,
+        487
+      ],
+      "display_bbox": [
+        37,
+        51,
+        110,
+        99
+      ],
+      "scale": 0.24,
+      "offset": [
+        37,
+        51
+      ],
+      "sha256": "f65cbc5a0686ca550f73f9f0dcc051dba66f286f3455f8423bad126fb67ce881",
+      "surface": "grass",
+      "status": "pending_user"
+    }
+  ],
+  "status": "pending_user",
+  "selected_sources": [
+    "trees-02",
+    "rocks-01"
+  ],
+  "not_used": [
+    "trees-01 crossed cell boundaries",
+    "trees-processed initial defective extraction",
+    "rocks-processed default trim warning; superseded without cropping"
+  ]
+}

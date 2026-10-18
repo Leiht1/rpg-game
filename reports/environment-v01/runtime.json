@@ -1,0 +1,626 @@
+{
+  "adapter": "NVIDIA GeForce RTX 5060",
+  "capture_wall_ms_mean": 372.3068125,
+  "checks": [
+    {
+      "name": "bounded prop nodes grass",
+      "pass": true
+    },
+    {
+      "name": "Y sort enabled grass",
+      "pass": true
+    },
+    {
+      "name": "bounded prop nodes forest",
+      "pass": true
+    },
+    {
+      "name": "Y sort enabled forest",
+      "pass": true
+    },
+    {
+      "name": "bounded prop nodes dirt",
+      "pass": true
+    },
+    {
+      "name": "Y sort enabled dirt",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 0",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 0",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 1",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 1",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 2",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 2",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 3",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 3",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 4",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 4",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 5",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 5",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 6",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 6",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 7",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 7",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 8",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 8",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 9",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 9",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 10",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 10",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 11",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 11",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 12",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 12",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 13",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 13",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 14",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 14",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 15",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 15",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 16",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 16",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 17",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 17",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 18",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 18",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed contact frame 19",
+      "pass": true
+    },
+    {
+      "name": "tree-hit fixed footprint frame 19",
+      "pass": true
+    },
+    {
+      "name": "tree returns to idle",
+      "pass": true
+    },
+    {
+      "name": "bend returns to zero",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed contact frame 0",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed footprint frame 0",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed contact frame 1",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed footprint frame 1",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed contact frame 2",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed footprint frame 2",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed contact frame 3",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed footprint frame 3",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed contact frame 4",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed footprint frame 4",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed contact frame 5",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed footprint frame 5",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed contact frame 6",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed footprint frame 6",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed contact frame 7",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed footprint frame 7",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed contact frame 8",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed footprint frame 8",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed contact frame 9",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed footprint frame 9",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed contact frame 10",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed footprint frame 10",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed contact frame 11",
+      "pass": true
+    },
+    {
+      "name": "tree-fade fixed footprint frame 11",
+      "pass": true
+    },
+    {
+      "name": "whole tree and contact fade in place without stump",
+      "pass": true
+    },
+    {
+      "name": "final removal never rotates tree",
+      "pass": true
+    },
+    {
+      "name": "zero root mesh displacement y=-16.0",
+      "pass": true
+    },
+    {
+      "name": "zero root mesh displacement y=-8.0",
+      "pass": true
+    },
+    {
+      "name": "zero root mesh displacement y=0.0",
+      "pass": true
+    },
+    {
+      "name": "zero root mesh displacement y=8.0",
+      "pass": true
+    },
+    {
+      "name": "recreation preserves texture and collision",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 201:216",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 200:217",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 201:218",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 207:221",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 202:222",
+      "pass": true
+    },
+    {
+      "name": "formal props unaffected by policy 447349832",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 159:128",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 157:129",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 158:129",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 159:129",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 155:131",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 156:131",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 153:133",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 158:133",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 159:133",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 154:134",
+      "pass": true
+    },
+    {
+      "name": "formal props unaffected by policy 447349832",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 136:160",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 138:160",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 140:161",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 142:161",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 136:162",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 138:163",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 142:164",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 136:165",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 137:167",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 447349832 139:167",
+      "pass": true
+    },
+    {
+      "name": "formal props unaffected by policy 447349832",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 147:64",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 145:65",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 146:65",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 148:65",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 149:66",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 149:67",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 151:68",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 144:71",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 150:71",
+      "pass": true
+    },
+    {
+      "name": "formal props unaffected by policy 1332185389",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 136:168",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 138:168",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 136:169",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 137:169",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 138:169",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 139:169",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 140:169",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 141:169",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 142:169",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 136:170",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 137:170",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 139:170",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 136:172",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 136:173",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 138:173",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 141:173",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 139:174",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 140:174",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 141:174",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 138:175",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 141:175",
+      "pass": true
+    },
+    {
+      "name": "formal props unaffected by policy 1332185389",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 136:216",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 141:216",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 142:217",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 141:219",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 136:220",
+      "pass": true
+    },
+    {
+      "name": "policy stable across worker 1332185389 140:221",
+      "pass": true
+    },
+    {
+      "name": "formal props unaffected by policy 1332185389",
+      "pass": true
+    },
+    {
+      "name": "bare rock cannot grow broadleaf",
+      "pass": true
+    },
+    {
+      "name": "snow broadleaf reserved",
+      "pass": true
+    },
+    {
+      "name": "water excludes rocks",
+      "pass": true
+    },
+    {
+      "name": "explicit mountain soil pocket allows tree",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "generator_version": "windrest-continent-0.6.0",
+  "idle_frame_median_ms": 8.335,
+  "idle_frame_p95_ms": 8.368,
+  "performance_limit": "120FPS cap; 120 idle frame deltas, two-object lab only, not full-world FPS or GPU overhead measurement",
+  "policy": [
+    {
+      "adapted": 25,
+      "excluded": 0,
+      "seed": 447349832
+    },
+    {
+      "adapted": 33,
+      "excluded": 3,
+      "seed": 1332185389
+    }
+  ],
+  "policy_version": "environment-policy-0.1.0",
+  "status": "pending_user"
+}

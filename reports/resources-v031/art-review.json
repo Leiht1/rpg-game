@@ -1,0 +1,718 @@
+{
+  "art_source": "existing",
+  "new_image_calls": 0,
+  "original_route": "controlled route_media -> Codex (local CLI), 2026-10-17 V0.3",
+  "original_provenance": "prototypes/items-v03/provenance.json",
+  "candidate_status": "pending_user",
+  "assets": [
+    {
+      "item_id": "wild_berry",
+      "kind": "icon",
+      "file": "prototypes\\items-v03\\visuals\\wild_berry_icon.png",
+      "size": [
+        97,
+        99
+      ],
+      "bbox": [
+        0,
+        0,
+        97,
+        99
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "1f529a29c652461c18493bfa29aa0d3420cbb9c0b4f5a214a5b66b78ab89f3f1",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "wild_berry",
+      "kind": "world",
+      "file": "prototypes\\items-v03\\visuals\\wild_berry_world.png",
+      "size": [
+        99,
+        87
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        87
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "1f264cddb47986d35288781475dafae592d289fe191916e2524f3e8a43a061d9",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "brown_mushroom",
+      "kind": "icon",
+      "file": "prototypes\\items-v03\\visuals\\brown_mushroom_icon.png",
+      "size": [
+        95,
+        99
+      ],
+      "bbox": [
+        0,
+        0,
+        95,
+        99
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "d90397fa24615525591dd8f77f322921b90f8319c5807e65607ab0ba3b82d6dd",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "brown_mushroom",
+      "kind": "world",
+      "file": "prototypes\\items-v03\\visuals\\brown_mushroom_world.png",
+      "size": [
+        99,
+        73
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        73
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "1c59314ed2fdb2207b2156b5716f20733191d7c21f6bbe3e4d1f33063e099247",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "wild_carrot",
+      "kind": "icon",
+      "file": "prototypes\\items-v03\\visuals\\wild_carrot_icon.png",
+      "size": [
+        90,
+        99
+      ],
+      "bbox": [
+        0,
+        0,
+        90,
+        99
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "98f6efb049337f508293aa928509094df9d95d2494d677b8b88528bb53f69116",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "wild_carrot",
+      "kind": "world",
+      "file": "prototypes\\items-v03\\visuals\\wild_carrot_world.png",
+      "size": [
+        99,
+        86
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        86
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "9d37ca4185efd050669a2dbb61b447f3063373a4840296c634c8f9cef106e67b",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "wild_apple",
+      "kind": "icon",
+      "file": "prototypes\\items-v03\\visuals\\wild_apple_icon.png",
+      "size": [
+        98,
+        99
+      ],
+      "bbox": [
+        0,
+        0,
+        98,
+        99
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "05cee13ac7ad24d594e482572ec578025cd0fdedde68318ce9402b55366351f2",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "wild_apple",
+      "kind": "world",
+      "file": "prototypes\\items-v03\\visuals\\wild_apple_world.png",
+      "size": [
+        99,
+        56
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        56
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "08b9de7f91b853e9a0cc7fadc053af500441daf8454e7ac8838d11acab8cd52a",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "wood",
+      "kind": "icon",
+      "file": "prototypes\\items-v03\\visuals\\wood_icon.png",
+      "size": [
+        99,
+        72
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        72
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "5fbaba73a97e221e8e8d439c525cd516bcf5566b85044ba92fb7e865a98633c2",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "wood",
+      "kind": "world",
+      "file": "prototypes\\items-v03\\visuals\\wood_world.png",
+      "size": [
+        99,
+        66
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        66
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "898613b361b4cd0980dba5db45c426c28c8ab3754aa426affd69862bc1d522a9",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "branch",
+      "kind": "icon",
+      "file": "prototypes\\items-v03\\visuals\\branch_icon.png",
+      "size": [
+        99,
+        91
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        91
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "a95d4f7512245002bb7eb077b051fe5d6f60a48b1c20f2fce467e2e6045bfa12",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "branch",
+      "kind": "world",
+      "file": "prototypes\\items-v03\\visuals\\branch_world.png",
+      "size": [
+        99,
+        50
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        50
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "c20419ee7d2e3526aa1c9634a0bb8580968f6d483c51be777840f0e28c20b869",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "stone",
+      "kind": "icon",
+      "file": "prototypes\\items-v03\\visuals\\stone_icon.png",
+      "size": [
+        99,
+        78
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        78
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "46ee8587e105d5b132dfb1318808bc41c8c06645150137a02ca9a4d29d498c11",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "stone",
+      "kind": "world",
+      "file": "prototypes\\items-v03\\visuals\\stone_world.png",
+      "size": [
+        99,
+        58
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        58
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "359f18ea83b38571631ee3e16e5561bd8dae5e2b65757edfda6987c219d13d1a",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "plant_fiber",
+      "kind": "icon",
+      "file": "prototypes\\items-v03\\visuals\\plant_fiber_icon.png",
+      "size": [
+        99,
+        85
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        85
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "83e089dab773c06a0e1a18e67b53ceb78fc2c536c13b343adfe9cc332bd17bbf",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "plant_fiber",
+      "kind": "world",
+      "file": "prototypes\\items-v03\\visuals\\plant_fiber_world.png",
+      "size": [
+        99,
+        87
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        87
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "6e585a343046ecb96f9508c0d05e5adff6b2f5d144b9c490f14a38e4778f0631",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "flint",
+      "kind": "icon",
+      "file": "prototypes\\items-v03\\visuals\\flint_icon.png",
+      "size": [
+        93,
+        99
+      ],
+      "bbox": [
+        0,
+        0,
+        93,
+        99
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "1e75faeb16099f50123f73f13fdd37c42b71525c58a1a30165bb74303b24d7db",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "flint",
+      "kind": "world",
+      "file": "prototypes\\items-v03\\visuals\\flint_world.png",
+      "size": [
+        99,
+        55
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        55
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "8e5ade91ceac8844177dd42f51cd390e1f9b11779a84f2ee59e4667bf3b14886",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "broad_leaf",
+      "kind": "icon",
+      "file": "prototypes\\items-v03\\visuals\\broad_leaf_icon.png",
+      "size": [
+        99,
+        90
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        90
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "1b055c752ddd342a4c38b0d3a1386fd5d3338b3fa5c22f3988edafded0d7dd4e",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "broad_leaf",
+      "kind": "world",
+      "file": "prototypes\\items-v03\\visuals\\broad_leaf_world.png",
+      "size": [
+        99,
+        79
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        79
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "5a86e15c80f4740c6a01e3fb2c0ade5dcd916444e299eef94e4553ff2196ae08",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "pine_cone",
+      "kind": "icon",
+      "file": "prototypes\\items-v03\\visuals\\pine_cone_icon.png",
+      "size": [
+        85,
+        99
+      ],
+      "bbox": [
+        0,
+        0,
+        85,
+        99
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "7b6a1177cf662ebac423787fef7b783e181d3f8bbba4865934252ca7acf5a426",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "pine_cone",
+      "kind": "world",
+      "file": "prototypes\\items-v03\\visuals\\pine_cone_world.png",
+      "size": [
+        99,
+        63
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        63
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "e608fac930fe596b3c7fc761accdc4280e2c9a7588c5bac1bb2493f15ead9d6c",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "wildflower",
+      "kind": "icon",
+      "file": "prototypes\\items-v03\\visuals\\wildflower_icon.png",
+      "size": [
+        72,
+        99
+      ],
+      "bbox": [
+        0,
+        0,
+        72,
+        99
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "976391cbeed8c126792d535e9c04791459cf8dcb4bd4816fca34cec2e80ce744",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    },
+    {
+      "item_id": "wildflower",
+      "kind": "world",
+      "file": "prototypes\\items-v03\\visuals\\wildflower_world.png",
+      "size": [
+        99,
+        96
+      ],
+      "bbox": [
+        0,
+        0,
+        99,
+        96
+      ],
+      "source_cropped_to_alpha": true,
+      "runtime_transparent_margin_source_px": 8,
+      "sha256": "8761cfd998bc538faaa95154a326df8624fc29f67cd9ee5e40f461ee5ee785e4",
+      "status": "pending_user",
+      "note": "AtlasTexture adds empty canvas, keeps world content width and contact bottom; PNG unchanged."
+    }
+  ],
+  "historical_qa": [
+    {
+      "file": "art\\items-v03\\spill-01\\sheet-qc.json",
+      "id": "cross_cell_components",
+      "status": "fail",
+      "value": 7,
+      "threshold": 0,
+      "cells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "note": "solid parts crossing a cell line are cut or misassigned when the sheet is sliced"
+    },
+    {
+      "file": "art\\items-v03\\spill-01\\sheet-qc.json",
+      "id": "cross_cell_visible",
+      "status": "fail",
+      "value": 7,
+      "threshold": 0,
+      "note": "the same test on the visible edge (alpha > 16)"
+    },
+    {
+      "file": "art\\items-v03\\spill-01\\sheet-qc.json",
+      "id": "boundary_band",
+      "status": "warn",
+      "value": 3392,
+      "threshold": 0,
+      "note": "solid pixels within 5 px of a cell line; a different crop or rounding can cut them"
+    },
+    {
+      "file": "art\\items-v03\\spill-01\\sheet-qc.json",
+      "id": "safe_frame",
+      "status": "warn",
+      "value": 23,
+      "threshold": 0,
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+    },
+    {
+      "file": "art\\items-v03\\spill-02\\sheet-qc.json",
+      "id": "safe_frame",
+      "status": "warn",
+      "value": 14,
+      "threshold": 0,
+      "cells": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+    }
+  ],
+  "limits": [
+    "Original sheet crossing failures and regrid safe_frame warnings retained.",
+    "Padding cannot repair missing anatomy; no source subjects were redrawn.",
+    "Contact colour, source identity, view and small-scale readability await user review."
+  ]
+}

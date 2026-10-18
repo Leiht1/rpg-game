@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "breath_seconds": 3.6,
+  "nap_minutes": 60,
+  "target_energy": 70,
+  "full_energy": 95,
+  "facilities": {
+    "sleeping_bag": {
+      "rate": 10.0,
+      "max_minutes": 180.0,
+      "surface_y": -3.0,
+      "footprint": [
+        175,
+        75
+      ],
+      "one_use": true,
+      "visual_scale": 0.390625,
+      "collision_rect": [
+        -87.5,
+        -42.96875,
+        175,
+        60.546875
+      ]
+    },
+    "straw_mat": {
+      "rate": 13.0,
+      "max_minutes": 600.0,
+      "surface_y": -3.0,
+      "footprint": [
+        175,
+        75
+      ],
+      "vertical_footprint": [
+        75,
+        138
+      ],
+      "one_use": false,
+      "visual_scale": 0.390625,
+      "collision_rect": [
+        -87.5,
+        -21.09375,
+        175,
+        32.421875
+      ],
+      "vertical_collision_rect": [
+        -43.75,
+        -79.6875,
+        87.5,
+        98.828125
+      ]
+    },
+    "wood_bed": {
+      "rate": 17.0,
+      "max_minutes": 600.0,
+      "surface_y": -19.0,
+      "footprint": [
+        200,
+        94
+      ],
+      "vertical_footprint": [
+        88,
+        150
+      ],
+      "one_use": false,
+      "visual_scale": 0.390625,
+      "collision_rect": [
+        -87.5,
+        -43.75,
+        175,
+        42.1875
+      ],
+      "vertical_collision_rect": [
+        -43.75,
+        -96.875,
+        87.5,
+        110.546875
+      ]
+    },
+    "forced": {
+      "rate": 13.0,
+      "max_minutes": 180.0,
+      "surface_y": 0.0,
+      "footprint": [
+        0,
+        0
+      ],
+      "one_use": false
+    }
+  },
+  "legacy_phase_seconds": {
+    "align": 0.65,
+    "lie": 1.4,
+    "wake": 1.25
+  }
+}

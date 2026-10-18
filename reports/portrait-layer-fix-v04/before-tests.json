@@ -1,0 +1,488 @@
+{
+  "checks": [
+    {
+      "name": "portrait pixels match live native pose stone_axe front idle",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe front idle Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe front idle Visual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe front idle Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_axe front walk",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe front walk Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe front walk Visual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe front walk Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_axe right idle",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_axe right idle Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe right idle Visual/Pelvis/ArmR",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_axe right idle Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_axe right walk",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_axe right walk Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe right walk Visual/Pelvis/ArmR",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_axe right walk Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_axe left idle",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_axe left idle Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe left idle Visual/Pelvis/ArmR",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_axe left idle Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_axe left walk",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_axe left walk Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe left walk Visual/Pelvis/ArmR",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_axe left walk Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_axe back idle",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe back idle Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe back idle Visual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe back idle Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_axe back walk",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe back walk Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe back walk Visual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_axe back walk Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_pickaxe front idle",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe front idle Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe front idle Visual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe front idle Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_pickaxe front walk",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe front walk Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe front walk Visual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe front walk Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_pickaxe right idle",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_pickaxe right idle Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe right idle Visual/Pelvis/ArmR",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_pickaxe right idle Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_pickaxe right walk",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_pickaxe right walk Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe right walk Visual/Pelvis/ArmR",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_pickaxe right walk Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_pickaxe left idle",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_pickaxe left idle Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe left idle Visual/Pelvis/ArmR",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_pickaxe left idle Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_pickaxe left walk",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_pickaxe left walk Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe left walk Visual/Pelvis/ArmR",
+      "pass": false
+    },
+    {
+      "name": "draw order matches stone_pickaxe left walk Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_pickaxe back idle",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe back idle Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe back idle Visual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe back idle Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose stone_pickaxe back walk",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe back walk Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe back walk Visual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "draw order matches stone_pickaxe back walk Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose simple_shovel front idle",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel front idle Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel front idle Visual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel front idle Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose simple_shovel front walk",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel front walk Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel front walk Visual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel front walk Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose simple_shovel right idle",
+      "pass": false
+    },
+    {
+      "name": "draw order matches simple_shovel right idle Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel right idle Visual/Pelvis/ArmR",
+      "pass": false
+    },
+    {
+      "name": "draw order matches simple_shovel right idle Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose simple_shovel right walk",
+      "pass": false
+    },
+    {
+      "name": "draw order matches simple_shovel right walk Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel right walk Visual/Pelvis/ArmR",
+      "pass": false
+    },
+    {
+      "name": "draw order matches simple_shovel right walk Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose simple_shovel left idle",
+      "pass": false
+    },
+    {
+      "name": "draw order matches simple_shovel left idle Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel left idle Visual/Pelvis/ArmR",
+      "pass": false
+    },
+    {
+      "name": "draw order matches simple_shovel left idle Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose simple_shovel left walk",
+      "pass": false
+    },
+    {
+      "name": "draw order matches simple_shovel left walk Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel left walk Visual/Pelvis/ArmR",
+      "pass": false
+    },
+    {
+      "name": "draw order matches simple_shovel left walk Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose simple_shovel back idle",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel back idle Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel back idle Visual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel back idle Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    },
+    {
+      "name": "portrait pixels match live native pose simple_shovel back walk",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel back walk Visual/ArmLBehind",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel back walk Visual/Pelvis/ArmR",
+      "pass": true
+    },
+    {
+      "name": "draw order matches simple_shovel back walk Visual/Pelvis/ArmR/HeldTool",
+      "pass": true
+    }
+  ],
+  "count": 96,
+  "failures": 24,
+  "pixel_comparisons": [
+    {
+      "case": "stone_axe front idle",
+      "different_pixels": 0
+    },
+    {
+      "case": "stone_axe front walk",
+      "different_pixels": 0
+    },
+    {
+      "case": "stone_axe right idle",
+      "different_pixels": 134
+    },
+    {
+      "case": "stone_axe right walk",
+      "different_pixels": 110
+    },
+    {
+      "case": "stone_axe left idle",
+      "different_pixels": 134
+    },
+    {
+      "case": "stone_axe left walk",
+      "different_pixels": 110
+    },
+    {
+      "case": "stone_axe back idle",
+      "different_pixels": 0
+    },
+    {
+      "case": "stone_axe back walk",
+      "different_pixels": 0
+    },
+    {
+      "case": "stone_pickaxe front idle",
+      "different_pixels": 0
+    },
+    {
+      "case": "stone_pickaxe front walk",
+      "different_pixels": 0
+    },
+    {
+      "case": "stone_pickaxe right idle",
+      "different_pixels": 196
+    },
+    {
+      "case": "stone_pickaxe right walk",
+      "different_pixels": 186
+    },
+    {
+      "case": "stone_pickaxe left idle",
+      "different_pixels": 196
+    },
+    {
+      "case": "stone_pickaxe left walk",
+      "different_pixels": 186
+    },
+    {
+      "case": "stone_pickaxe back idle",
+      "different_pixels": 0
+    },
+    {
+      "case": "stone_pickaxe back walk",
+      "different_pixels": 0
+    },
+    {
+      "case": "simple_shovel front idle",
+      "different_pixels": 0
+    },
+    {
+      "case": "simple_shovel front walk",
+      "different_pixels": 0
+    },
+    {
+      "case": "simple_shovel right idle",
+      "different_pixels": 141
+    },
+    {
+      "case": "simple_shovel right walk",
+      "different_pixels": 115
+    },
+    {
+      "case": "simple_shovel left idle",
+      "different_pixels": 141
+    },
+    {
+      "case": "simple_shovel left walk",
+      "different_pixels": 115
+    },
+    {
+      "case": "simple_shovel back idle",
+      "different_pixels": 0
+    },
+    {
+      "case": "simple_shovel back walk",
+      "different_pixels": 0
+    }
+  ]
+}

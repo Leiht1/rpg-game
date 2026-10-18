@@ -1,0 +1,72 @@
+{
+  "status": "pending_user",
+  "approval": null,
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "job": "art/sleep-occupied-v8/raw/job.json",
+  "transforms": [
+    {
+      "name": "wood_bed",
+      "bbox": [
+        31,
+        167,
+        481,
+        344
+      ],
+      "scale": 0.9955555555555555,
+      "xy": [
+        32,
+        40
+      ],
+      "canvas": [
+        512,
+        256
+      ]
+    },
+    {
+      "name": "straw_mat",
+      "bbox": [
+        31,
+        186,
+        481,
+        326
+      ],
+      "scale": 0.8488888888888889,
+      "xy": [
+        65,
+        68
+      ],
+      "canvas": [
+        512,
+        256
+      ]
+    },
+    {
+      "name": "straw_mat-vertical",
+      "bbox": [
+        82,
+        31,
+        429,
+        481
+      ],
+      "scale": 0.6455331412103746,
+      "xy": [
+        16,
+        62
+      ],
+      "canvas": [
+        256,
+        416
+      ]
+    }
+  ],
+  "files": {
+    "straw_mat-vertical.png": "6947e4b34d41c596e85778f01cbfbd7159f702b722b44ed31db9275d0788f454",
+    "straw_mat.png": "079487450d7b9c937b4c2b6f8df2899e48ff878e8e97faf7cbe09370f01c5e8d",
+    "wood_bed.png": "70c43424a6f26a3cf4d12d195e175a640444edb4cca531b08d2c76463d1ded5b"
+  },
+  "notes": [
+    "Artist source did not follow equal rows; ownership boundaries 0/480/800/1536 retained all three complete props. Repacked with magenta padding before soft keying.",
+    "Three head-end shortened blankets, original orange bed and cream mat palette. Successful vertical wood bed V6 and sleeping bag V5 unchanged."
+  ]
+}

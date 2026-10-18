@@ -1,0 +1,563 @@
+{
+  "checks": [
+    {
+      "name": "one visible rear tool stone_axe0.0",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_axe0.0",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_axe0.0",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_axe0.12",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_axe0.12",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_axe0.12",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_axe0.28",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_axe0.28",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_axe0.28",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_axe0.48",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_axe0.48",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_axe0.48",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_axe0.65",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_axe0.65",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_axe0.65",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_axe0.82",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_axe0.82",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_axe0.82",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_axe0.98",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_axe0.98",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_axe0.98",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_axe-1.0",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_axe-1.0",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_axe-1.0",
+      "pass": true
+    },
+    {
+      "name": "GPU leg overlap restored stone_axe",
+      "pass": true
+    },
+    {
+      "name": "rear idle/movement stone_axe",
+      "pass": true
+    },
+    {
+      "name": "rear idle/movement stone_axewalk",
+      "pass": true
+    },
+    {
+      "name": "rear idle/movement stone_axerun",
+      "pass": true
+    },
+    {
+      "name": "other direction restores native tool stone_axefront",
+      "pass": true
+    },
+    {
+      "name": "other direction restores native tool stone_axeleft",
+      "pass": true
+    },
+    {
+      "name": "other direction restores native tool stone_axeright",
+      "pass": true
+    },
+    {
+      "name": "pickup hides rear tool stone_axe",
+      "pass": true
+    },
+    {
+      "name": "unequip hides rear tool stone_axe",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_pickaxe0.0",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_pickaxe0.0",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_pickaxe0.0",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_pickaxe0.12",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_pickaxe0.12",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_pickaxe0.12",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_pickaxe0.28",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_pickaxe0.28",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_pickaxe0.28",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_pickaxe0.48",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_pickaxe0.48",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_pickaxe0.48",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_pickaxe0.65",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_pickaxe0.65",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_pickaxe0.65",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_pickaxe0.82",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_pickaxe0.82",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_pickaxe0.82",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_pickaxe0.98",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_pickaxe0.98",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_pickaxe0.98",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_pickaxe-1.0",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_pickaxe-1.0",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_pickaxe-1.0",
+      "pass": true
+    },
+    {
+      "name": "GPU leg overlap restored stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "rear idle/movement stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "rear idle/movement stone_pickaxewalk",
+      "pass": true
+    },
+    {
+      "name": "rear idle/movement stone_pickaxerun",
+      "pass": true
+    },
+    {
+      "name": "other direction restores native tool stone_pickaxefront",
+      "pass": true
+    },
+    {
+      "name": "other direction restores native tool stone_pickaxeleft",
+      "pass": true
+    },
+    {
+      "name": "other direction restores native tool stone_pickaxeright",
+      "pass": true
+    },
+    {
+      "name": "pickup hides rear tool stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "unequip hides rear tool stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool simple_shovel0.0",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs simple_shovel0.0",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform simple_shovel0.0",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool simple_shovel0.12",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs simple_shovel0.12",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform simple_shovel0.12",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool simple_shovel0.28",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs simple_shovel0.28",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform simple_shovel0.28",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool simple_shovel0.48",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs simple_shovel0.48",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform simple_shovel0.48",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool simple_shovel0.65",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs simple_shovel0.65",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform simple_shovel0.65",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool simple_shovel0.82",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs simple_shovel0.82",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform simple_shovel0.82",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool simple_shovel0.98",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs simple_shovel0.98",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform simple_shovel0.98",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool simple_shovel-1.0",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs simple_shovel-1.0",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform simple_shovel-1.0",
+      "pass": true
+    },
+    {
+      "name": "GPU leg overlap restored simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "rear idle/movement simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "rear idle/movement simple_shovelwalk",
+      "pass": true
+    },
+    {
+      "name": "rear idle/movement simple_shovelrun",
+      "pass": true
+    },
+    {
+      "name": "other direction restores native tool simple_shovelfront",
+      "pass": true
+    },
+    {
+      "name": "other direction restores native tool simple_shovelleft",
+      "pass": true
+    },
+    {
+      "name": "other direction restores native tool simple_shovelright",
+      "pass": true
+    },
+    {
+      "name": "pickup hides rear tool simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "unequip hides rear tool simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_hammer0.0",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_hammer0.0",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_hammer0.0",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_hammer0.12",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_hammer0.12",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_hammer0.12",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_hammer0.28",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_hammer0.28",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_hammer0.28",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_hammer0.48",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_hammer0.48",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_hammer0.48",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_hammer0.65",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_hammer0.65",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_hammer0.65",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_hammer0.82",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_hammer0.82",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_hammer0.82",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_hammer0.98",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_hammer0.98",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_hammer0.98",
+      "pass": true
+    },
+    {
+      "name": "one visible rear tool stone_hammer-1.0",
+      "pass": true
+    },
+    {
+      "name": "local order behind both legs stone_hammer-1.0",
+      "pass": true
+    },
+    {
+      "name": "exact animated grip transform stone_hammer-1.0",
+      "pass": true
+    },
+    {
+      "name": "GPU leg overlap restored stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "rear idle/movement stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "rear idle/movement stone_hammerwalk",
+      "pass": true
+    },
+    {
+      "name": "rear idle/movement stone_hammerrun",
+      "pass": true
+    },
+    {
+      "name": "other direction restores native tool stone_hammerfront",
+      "pass": true
+    },
+    {
+      "name": "other direction restores native tool stone_hammerleft",
+      "pass": true
+    },
+    {
+      "name": "other direction restores native tool stone_hammerright",
+      "pass": true
+    },
+    {
+      "name": "pickup hides rear tool stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "unequip hides rear tool stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "GPU reproduced and repaired actual overlap",
+      "pass": true
+    }
+  ],
+  "failed": 0,
+  "pixels": [
+    {
+      "details": [],
+      "remaining_wrong_leg_pixels": 0,
+      "repaired_leg_pixels": 511,
+      "tool": "stone_axe"
+    },
+    {
+      "details": [],
+      "remaining_wrong_leg_pixels": 0,
+      "repaired_leg_pixels": 570,
+      "tool": "stone_pickaxe"
+    },
+    {
+      "details": [],
+      "remaining_wrong_leg_pixels": 0,
+      "repaired_leg_pixels": 1049,
+      "tool": "simple_shovel"
+    },
+    {
+      "details": [],
+      "remaining_wrong_leg_pixels": 0,
+      "repaired_leg_pixels": 424,
+      "tool": "stone_hammer"
+    }
+  ]
+}

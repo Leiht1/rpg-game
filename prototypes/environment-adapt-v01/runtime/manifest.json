@@ -1,0 +1,713 @@
+[
+  {
+    "id": "tree_01",
+    "name": "高瘦幼树",
+    "kind": "tree",
+    "surface": "grass",
+    "file": "tree_01_grass.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "contact_height": 40,
+    "sha256": "52ad5927f88af1605fc145d9c9edc5b449e6b65a01a0c3731c315c5f711bb6e9",
+    "green_contact_px": 366,
+    "status": "selected",
+    "registration": {
+      "source": "selected original",
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "tree_01",
+    "name": "高瘦幼树",
+    "kind": "tree",
+    "surface": "forest",
+    "file": "tree_01_forest.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "contact_height": 40,
+    "sha256": "4c558ae11e0c410a758816fc2889c65a65d15ce69799ab976ade55ed8d18481d",
+    "green_contact_px": 271,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/trees-processed/raw-sheet-clean.png",
+      "cell": [
+        0,
+        0
+      ],
+      "isotropic_scale": 0.4594594594594595,
+      "offset": [
+        20.29729729729729,
+        30.324324324324323
+      ],
+      "join_row": 216,
+      "blend_rows": 6,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "tree_01",
+    "name": "高瘦幼树",
+    "kind": "tree",
+    "surface": "dirt",
+    "file": "tree_01_dirt.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "contact_height": 40,
+    "sha256": "459fe5ed1c8e9f3f703ea3d8f0f5d015603666d6a6df07e74eabfcb84d183524",
+    "green_contact_px": 0,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/trees-processed/raw-sheet-clean.png",
+      "cell": [
+        1,
+        0
+      ],
+      "isotropic_scale": 0.4657534246575342,
+      "offset": [
+        18.349315068493155,
+        39.35616438356166
+      ],
+      "join_row": 216,
+      "blend_rows": 6,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "tree_03",
+    "name": "高大开展树",
+    "kind": "tree",
+    "surface": "grass",
+    "file": "tree_03_grass.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "contact_height": 40,
+    "sha256": "7913ab40726f71404cb88c08a2fac2f4a9cd9544b89f4aa45d8461541e4e09ec",
+    "green_contact_px": 500,
+    "status": "selected",
+    "registration": {
+      "source": "selected original",
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "tree_03",
+    "name": "高大开展树",
+    "kind": "tree",
+    "surface": "forest",
+    "file": "tree_03_forest.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "contact_height": 40,
+    "sha256": "d315f0915aebda4640bf5708450dc40210f9a870eb3a28583001a3831f0e7ff3",
+    "green_contact_px": 328,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/trees-processed/raw-sheet-clean.png",
+      "cell": [
+        0,
+        1
+      ],
+      "isotropic_scale": 0.45093457943925236,
+      "offset": [
+        7.669392523364479,
+        34.04205607476635
+      ],
+      "join_row": 216,
+      "blend_rows": 6,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "tree_03",
+    "name": "高大开展树",
+    "kind": "tree",
+    "surface": "dirt",
+    "file": "tree_03_dirt.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "contact_height": 40,
+    "sha256": "15b4de1093fac802fe93e28575695caacaf9d0f76278f17f22a0a097e7cbb299",
+    "green_contact_px": 7,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/trees-processed/raw-sheet-clean.png",
+      "cell": [
+        1,
+        1
+      ],
+      "isotropic_scale": 0.45734597156398105,
+      "offset": [
+        6.60189573459715,
+        43.24881516587678
+      ],
+      "join_row": 216,
+      "blend_rows": 6,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "tree_04",
+    "name": "疏冠分叉树",
+    "kind": "tree",
+    "surface": "grass",
+    "file": "tree_04_grass.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "contact_height": 40,
+    "sha256": "8f17d2f2ab4e673b152d0e85ea3ad214d3fbe3b1f724ed5f5e4937e7314f3292",
+    "green_contact_px": 416,
+    "status": "selected",
+    "registration": {
+      "source": "selected original",
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "tree_04",
+    "name": "疏冠分叉树",
+    "kind": "tree",
+    "surface": "forest",
+    "file": "tree_04_forest.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "contact_height": 40,
+    "sha256": "119fd41ecede651d4c47303f355debef3a6b530fe6ce2b29ebf5023a4e123e05",
+    "green_contact_px": 257,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/trees-processed/raw-sheet-clean.png",
+      "cell": [
+        0,
+        2
+      ],
+      "isotropic_scale": 0.4469135802469136,
+      "offset": [
+        10.844444444444449,
+        36.459259259259255
+      ],
+      "join_row": 216,
+      "blend_rows": 6,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "tree_04",
+    "name": "疏冠分叉树",
+    "kind": "tree",
+    "surface": "dirt",
+    "file": "tree_04_dirt.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "contact_height": 40,
+    "sha256": "c8ca3ecd986df335518348b404356efde1b3042efd418976d8a5811f2e8b8673",
+    "green_contact_px": 2,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/trees-processed/raw-sheet-clean.png",
+      "cell": [
+        1,
+        2
+      ],
+      "isotropic_scale": 0.4525,
+      "offset": [
+        9.361249999999998,
+        45.49250000000001
+      ],
+      "join_row": 216,
+      "blend_rows": 6,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_01",
+    "name": "低矮扁石",
+    "kind": "rock",
+    "surface": "grass",
+    "file": "rock_01_grass.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "c03d924a3fdafa645fc3df19cb885d00e2cea85fe51cdb64b8022e12855e292c",
+    "green_contact_px": 145,
+    "status": "selected",
+    "registration": {
+      "source": "selected original",
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_01",
+    "name": "低矮扁石",
+    "kind": "rock",
+    "surface": "forest",
+    "file": "rock_01_forest.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "afd2d2905ca3e70a37a1b6ea9ecd5560830760278bebdb802b1ee0b8a50419bd",
+    "green_contact_px": 174,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/rocks-processed/raw-sheet-clean.png",
+      "cell": [
+        0,
+        0
+      ],
+      "isotropic_scale": 0.3504273504273504,
+      "offset": [
+        -4.354700854700852,
+        -1.9230769230769198
+      ],
+      "join_row": 76,
+      "blend_rows": 4,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_01",
+    "name": "低矮扁石",
+    "kind": "rock",
+    "surface": "dirt",
+    "file": "rock_01_dirt.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "cf749e4d78ff7f6fc794e1f91b1d2b6d729a43f7cde519eeb0a4ca8d101ca29c",
+    "green_contact_px": 45,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/rocks-processed/raw-sheet-clean.png",
+      "cell": [
+        2,
+        0
+      ],
+      "isotropic_scale": 0.35964912280701755,
+      "offset": [
+        -6.6140350877193015,
+        -3.5
+      ],
+      "join_row": 76,
+      "blend_rows": 4,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_02",
+    "name": "敦实孤石",
+    "kind": "rock",
+    "surface": "grass",
+    "file": "rock_02_grass.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "247aed10dbdb73d548764c17ad445ac8fe7f8445c5d1cf155a2f97a8d92a35f4",
+    "green_contact_px": 133,
+    "status": "selected",
+    "registration": {
+      "source": "selected original",
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_02",
+    "name": "敦实孤石",
+    "kind": "rock",
+    "surface": "forest",
+    "file": "rock_02_forest.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "b3146fcc01de0151d7cca798a9f6e856ed182c3b225756ebda76feb37071ee8b",
+    "green_contact_px": 135,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/rocks-processed/raw-sheet-clean.png",
+      "cell": [
+        0,
+        1
+      ],
+      "isotropic_scale": 0.3423913043478261,
+      "offset": [
+        -2.000000000000007,
+        -0.9782608695652186
+      ],
+      "join_row": 76,
+      "blend_rows": 4,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_02",
+    "name": "敦实孤石",
+    "kind": "rock",
+    "surface": "dirt",
+    "file": "rock_02_dirt.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "ee4ccc4536e346df8dda52bc83c7aa1d4c6c6fd79c7064cf046b1845ba8d8afa",
+    "green_contact_px": 21,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/rocks-processed/raw-sheet-clean.png",
+      "cell": [
+        2,
+        1
+      ],
+      "isotropic_scale": 0.34615384615384615,
+      "offset": [
+        -2.865384615384613,
+        -1.3846153846153868
+      ],
+      "join_row": 76,
+      "blend_rows": 4,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_03",
+    "name": "楔形石",
+    "kind": "rock",
+    "surface": "grass",
+    "file": "rock_03_grass.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "a554b603f941d09f73b913e5de81916cf0249f3e92a00ea6b09ef44551e5df2f",
+    "green_contact_px": 119,
+    "status": "selected",
+    "registration": {
+      "source": "selected original",
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_03",
+    "name": "楔形石",
+    "kind": "rock",
+    "surface": "forest",
+    "file": "rock_03_forest.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "d91fe553527aea9d49f5f956c1d5b7d0b788ccfe8da82088f4f7503eb640695b",
+    "green_contact_px": 124,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/rocks-processed/raw-sheet-clean.png",
+      "cell": [
+        0,
+        2
+      ],
+      "isotropic_scale": 0.33714285714285713,
+      "offset": [
+        -0.6857142857142833,
+        -0.4571428571428555
+      ],
+      "join_row": 76,
+      "blend_rows": 4,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_03",
+    "name": "楔形石",
+    "kind": "rock",
+    "surface": "dirt",
+    "file": "rock_03_dirt.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "36ba03dd1d277e0d311e98523016d6bd194b937776ad1cd7453b85ac8382e9f5",
+    "green_contact_px": 54,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/rocks-processed/raw-sheet-clean.png",
+      "cell": [
+        2,
+        2
+      ],
+      "isotropic_scale": 0.3390804597701149,
+      "offset": [
+        -1.3735632183907995,
+        -1.0287356321838956
+      ],
+      "join_row": 76,
+      "blend_rows": 4,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_04",
+    "name": "双肩连体石",
+    "kind": "rock",
+    "surface": "grass",
+    "file": "rock_04_grass.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "44952fbfa544c81a6c3f6f50df43928f5232b57562f566c57144bc530886041d",
+    "green_contact_px": 163,
+    "status": "selected",
+    "registration": {
+      "source": "selected original",
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_04",
+    "name": "双肩连体石",
+    "kind": "rock",
+    "surface": "forest",
+    "file": "rock_04_forest.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "81c7b91b0e7c0d78d273c0c1d5dd4c630ccb7af88501fea44c5e4304da5c806a",
+    "green_contact_px": 153,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/rocks-processed/raw-sheet-clean.png",
+      "cell": [
+        1,
+        0
+      ],
+      "isotropic_scale": 0.3352601156069364,
+      "offset": [
+        -0.17630057803468446,
+        -0.5722543352601122
+      ],
+      "join_row": 76,
+      "blend_rows": 4,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_04",
+    "name": "双肩连体石",
+    "kind": "rock",
+    "surface": "dirt",
+    "file": "rock_04_dirt.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "4385742f6e7ef2033e85d11d61a082deefafa3d399df8b49e39c48aab1d1c4b9",
+    "green_contact_px": 22,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/rocks-processed/raw-sheet-clean.png",
+      "cell": [
+        3,
+        0
+      ],
+      "isotropic_scale": 0.3333333333333333,
+      "offset": [
+        0.5,
+        -0.3333333333333286
+      ],
+      "join_row": 76,
+      "blend_rows": 4,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_05",
+    "name": "窄高石",
+    "kind": "rock",
+    "surface": "grass",
+    "file": "rock_05_grass.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "789151fcbc33e9993f05a75fe46fe10fd1f7b10d7f4e9ba2d6432b9196aacd90",
+    "green_contact_px": 208,
+    "status": "selected",
+    "registration": {
+      "source": "selected original",
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_05",
+    "name": "窄高石",
+    "kind": "rock",
+    "surface": "forest",
+    "file": "rock_05_forest.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "668556b45d5c32b77dd2fe7ec98e34f9cb89df9740878ff8ef3ea8152134b973",
+    "green_contact_px": 132,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/rocks-processed/raw-sheet-clean.png",
+      "cell": [
+        1,
+        1
+      ],
+      "isotropic_scale": 0.3404255319148936,
+      "offset": [
+        -1.7021276595744723,
+        -2.4468085106382915
+      ],
+      "join_row": 76,
+      "blend_rows": 4,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_05",
+    "name": "窄高石",
+    "kind": "rock",
+    "surface": "dirt",
+    "file": "rock_05_dirt.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "0d60b84efa2226ea752abc8a91d415f2f62b9250d4604e5e019358ac780e87f1",
+    "green_contact_px": 25,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/rocks-processed/raw-sheet-clean.png",
+      "cell": [
+        3,
+        1
+      ],
+      "isotropic_scale": 0.3404255319148936,
+      "offset": [
+        -1.8723404255319167,
+        -2.1063829787234027
+      ],
+      "join_row": 76,
+      "blend_rows": 4,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_06",
+    "name": "缺角碎石",
+    "kind": "rock",
+    "surface": "grass",
+    "file": "rock_06_grass.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "f65cbc5a0686ca550f73f9f0dcc051dba66f286f3455f8423bad126fb67ce881",
+    "green_contact_px": 119,
+    "status": "selected",
+    "registration": {
+      "source": "selected original",
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_06",
+    "name": "缺角碎石",
+    "kind": "rock",
+    "surface": "forest",
+    "file": "rock_06_forest.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "689f4fc33d6813392a07e8383c18b65b04bad870883b91631b9882a028477d73",
+    "green_contact_px": 116,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/rocks-processed/raw-sheet-clean.png",
+      "cell": [
+        1,
+        2
+      ],
+      "isotropic_scale": 0.32653061224489793,
+      "offset": [
+        3.4897959183673493,
+        -0.2653061224489761
+      ],
+      "join_row": 76,
+      "blend_rows": 4,
+      "body_unchanged": true
+    }
+  },
+  {
+    "id": "rock_06",
+    "name": "缺角碎石",
+    "kind": "rock",
+    "surface": "dirt",
+    "file": "rock_06_dirt.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "contact_height": 24,
+    "sha256": "586f74175a0244196ee6472418051dfab5228c61a557d9b10dab44e7e18bfeff",
+    "green_contact_px": 32,
+    "status": "shape_selected_adapter_pending",
+    "registration": {
+      "source": "art/rocks-processed/raw-sheet-clean.png",
+      "cell": [
+        3,
+        2
+      ],
+      "isotropic_scale": 0.3333333333333333,
+      "offset": [
+        2.5,
+        -1.3333333333333286
+      ],
+      "join_row": 76,
+      "blend_rows": 4,
+      "body_unchanged": true
+    }
+  }
+]

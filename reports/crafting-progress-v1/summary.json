@@ -1,0 +1,53 @@
+{
+  "engine": "Godot 4.7.2 Stable",
+  "date": "2026-10-17",
+  "checks": [
+    {
+      "name": "制作/库存",
+      "count": 114,
+      "failures": 0,
+      "source": "reports/crafting-v1/headless-tests.json"
+    },
+    {
+      "name": "制作进度",
+      "count": 37,
+      "failures": 0,
+      "source": "reports/crafting-progress-v1/headless-checks.json"
+    },
+    {
+      "name": "制作工具实用",
+      "count": 16,
+      "failures": 0,
+      "source": "reports/crafting-progress-v1/crafted-tools-runtime.json"
+    },
+    {
+      "name": "重启写入",
+      "count": 8,
+      "failures": 0,
+      "source": "reports/crafting-v1/restart-write.json"
+    },
+    {
+      "name": "重启读取",
+      "count": 8,
+      "failures": 0,
+      "source": "reports/crafting-v1/restart-read.json"
+    },
+    {
+      "name": "UI布局",
+      "count": 32,
+      "failures": 0,
+      "source": "reports/ui-rework-v1/headless-checks.json"
+    },
+    {
+      "name": "背包操作",
+      "count": 55,
+      "failures": 0,
+      "source": "reports/harvest-fix-v051/item-actions-headless.json"
+    }
+  ],
+  "count": 270,
+  "failures": 0,
+  "window_progress_recheck": 35,
+  "window_source": "reports/crafting-progress-v1/window-checks.json",
+  "note": "Check-item counts across scoped suites; not exhaustive coverage. Crafted tool test uses Engine.time_scale=3 only in its headless fixture."
+}

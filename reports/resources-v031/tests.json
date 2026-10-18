@@ -1,0 +1,113 @@
+{
+	"checks": 5434,
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"samples": [
+		{
+			"by_ecology": {
+				"forest": {
+					"branch": 17,
+					"broad_leaf": 22,
+					"brown_mushroom": 11,
+					"wild_berry": 9
+				},
+				"meadow": {
+					"branch": 27,
+					"plant_fiber": 28,
+					"stone": 6,
+					"wild_berry": 2,
+					"wild_carrot": 26,
+					"wildflower": 47
+				},
+				"mountain": {
+					"branch": 8,
+					"flint": 1,
+					"stone": 61,
+					"wildflower": 4
+				}
+			},
+			"chunks": 51,
+			"empty_chunks": 1,
+			"generation_max_ms": 100.696,
+			"navigation_ms": 1685.832,
+			"resources": 269,
+			"seed": 271828,
+			"spawn_visible": 2
+		},
+		{
+			"by_ecology": {
+				"forest": {
+					"branch": 29,
+					"broad_leaf": 37,
+					"brown_mushroom": 18,
+					"wild_apple": 1,
+					"wild_berry": 4
+				},
+				"meadow": {
+					"branch": 26,
+					"plant_fiber": 27,
+					"stone": 5,
+					"wild_berry": 4,
+					"wild_carrot": 30,
+					"wildflower": 29
+				},
+				"mountain": {
+					"branch": 4,
+					"flint": 3,
+					"stone": 48,
+					"wildflower": 1
+				},
+				"shore": {
+					"plant_fiber": 2
+				}
+			},
+			"chunks": 45,
+			"empty_chunks": 1,
+			"generation_max_ms": 48.386,
+			"navigation_ms": 1353.225,
+			"resources": 268,
+			"seed": 447349832,
+			"spawn_visible": 1
+		},
+		{
+			"by_ecology": {
+				"forest": {
+					"branch": 57,
+					"broad_leaf": 38,
+					"brown_mushroom": 21,
+					"plant_fiber": 2,
+					"wild_apple": 1,
+					"wild_berry": 13,
+					"wild_carrot": 1
+				},
+				"meadow": {
+					"branch": 24,
+					"plant_fiber": 27,
+					"stone": 12,
+					"wild_berry": 5,
+					"wild_carrot": 16,
+					"wildflower": 23
+				},
+				"mountain": {
+					"branch": 5,
+					"broad_leaf": 1,
+					"flint": 5,
+					"plant_fiber": 1,
+					"stone": 78,
+					"wild_carrot": 1,
+					"wildflower": 3
+				},
+				"shore": {
+					"plant_fiber": 3
+				}
+			},
+			"chunks": 54,
+			"empty_chunks": 1,
+			"generation_max_ms": 43.787,
+			"navigation_ms": 794.986,
+			"resources": 337,
+			"seed": 1671081329,
+			"spawn_visible": 2
+		}
+	]
+}

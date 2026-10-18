@@ -1,0 +1,224 @@
+[
+  {
+    "file": "art\\items-v03\\spill-01\\sheet-qc.json",
+    "id": "cross_cell_components",
+    "status": "fail",
+    "value": 7,
+    "threshold": 0,
+    "cells": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "note": "solid parts crossing a cell line are cut or misassigned when the sheet is sliced"
+  },
+  {
+    "file": "art\\items-v03\\spill-01\\sheet-qc.json",
+    "id": "cross_cell_visible",
+    "status": "fail",
+    "value": 7,
+    "threshold": 0,
+    "note": "the same test on the visible edge (alpha > 16)"
+  },
+  {
+    "file": "art\\items-v03\\spill-01\\sheet-qc.json",
+    "id": "boundary_band",
+    "status": "warn",
+    "value": 3392,
+    "threshold": 0,
+    "note": "solid pixels within 5 px of a cell line; a different crop or rounding can cut them"
+  },
+  {
+    "file": "art\\items-v03\\spill-01\\sheet-qc.json",
+    "id": "safe_frame",
+    "status": "warn",
+    "value": 23,
+    "threshold": 0,
+    "cells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+  },
+  {
+    "file": "art\\items-v03\\spill-02\\sheet-qc.json",
+    "id": "safe_frame",
+    "status": "warn",
+    "value": 14,
+    "threshold": 0,
+    "cells": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+  }
+]

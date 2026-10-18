@@ -1,0 +1,14 @@
+[
+  {
+    "name": "new process accepts formal open chest save",
+    "pass": true
+  },
+  {
+    "name": "restart restores open grid and contents",
+    "pass": true
+  },
+  {
+    "name": "restart draws formal open texture without preview flag",
+    "pass": true
+  }
+]

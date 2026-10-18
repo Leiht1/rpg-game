@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "details": "",
+      "name": "found unobstructed coast probe",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 447349832",
+      "pass": true
+    },
+    {
+      "details": 38.8094787597656,
+      "name": "normal physics stops at ocean",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "feet remain on dry side",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "ocean target is impassable",
+      "pass": true
+    },
+    {
+      "details": 0,
+      "name": "land ocean water source matches collision classification",
+      "pass": true
+    }
+  ],
+  "distance": 38.8094787597656,
+  "end": "(11777.42, 11688.11)",
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "seed": 447349832,
+  "start": "(11808.0, 11712.0)"
+}

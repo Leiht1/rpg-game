@@ -1,0 +1,63 @@
+{
+  "status": "pending_user",
+  "route": "local:codex-cli",
+  "art_source": "host_image",
+  "returned_model": "codex-image_gen",
+  "date": "2026-10-18",
+  "frames": [
+    {
+      "kind": "wood_chest",
+      "file": "wood_chest.png",
+      "size": [
+        217,
+        166
+      ],
+      "source": "art/camp-align-v1/candidate-01/generated.png",
+      "sha256": "cb2114ce8abc8fb02b695ac80fec290f072b988a79e9cefceea7eb5d13b3a091"
+    },
+    {
+      "kind": "workbench",
+      "file": "workbench.png",
+      "size": [
+        217,
+        180
+      ],
+      "source": "art/camp-align-v1/candidate-01/generated.png",
+      "sha256": "b45afdfd93e2f9334578be5c6d9dbfdc23d5ac1164fe67d395b2f8e4df194b65"
+    },
+    {
+      "kind": "wood_fence_vertical",
+      "file": "wood_fence_vertical.png",
+      "size": [
+        44,
+        217
+      ],
+      "source": "art/camp-align-v1/candidate-01/generated.png",
+      "sha256": "ca4e028a9ce3a724c4ebb23695025970c58d3b17b7898e2a4c6d53e02e8c670d"
+    },
+    {
+      "kind": "fence_gate_vertical",
+      "file": "fence_gate_vertical.png",
+      "size": [
+        42,
+        217
+      ],
+      "source": "art/camp-align-v1/candidate-02/generated.png",
+      "sha256": "0d330e4f054f7d94d2e3aafd1b72eac1379693eeb00c6d1080be1c63613c97b0"
+    }
+  ],
+  "processing": "prototypes/camp-align-v1/final/pipeline-meta.json",
+  "ownership": {
+    "x": [
+      0,
+      627,
+      1254
+    ],
+    "y": [
+      0,
+      560,
+      1254
+    ]
+  },
+  "note": "Original 16 approved PNGs unchanged. No formal runtime references this candidate directory. Source nominal 2x2 first spill failed; measured empty row band and repacking preserves complete subjects. Candidate02 gate corrects post X alignment; first three retain candidate01."
+}

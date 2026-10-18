@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-17",
+  "engine": "Godot 4.7.2 Stable",
+  "window_checks": 32,
+  "failures": 0,
+  "dependencies": {
+    "campfire": 74,
+    "drag": 49,
+    "body": 533
+  },
+  "flame_pixel_comparison": {
+    "lower_samples": 235,
+    "lower_changed": 0,
+    "upper_changed": 470
+  },
+  "no_new_png_art": true,
+  "report": "REPORT.md"
+}

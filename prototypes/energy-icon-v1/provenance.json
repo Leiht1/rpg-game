@@ -1,0 +1,42 @@
+{
+  "status": "approved_user",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen; underlying model undisclosed",
+  "estimateUsd": 0.0,
+  "actual_cost": "unknown; subscription quota",
+  "source": "art/energy-icon-v1/candidate-01/generated.png",
+  "source_sha256": "3febb216bdc9804bf268ca844bc5fda5b2a742cf82e94b6326ceef93159bfb86",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "requested_size": [
+    1024,
+    1024
+  ],
+  "warning": "source_size_mismatch: value=1254x1254, requested=1024x1024",
+  "prompt": "art/energy-icon-v1/prompt.txt",
+  "receipt": "art/energy-icon-v1/candidate-01/job.json",
+  "candidate": "prototypes/energy-icon-v1/processed/clean.png",
+  "candidate_sha256": "31d2e854a556340ba87156c3c807aad551a3822ca08920891d6549ef7a12f342",
+  "references": [
+    {
+      "path": "assets/ui/body_v1/health.png",
+      "sha256": "43fabcc604c89f037fdfb7fab4f133e475c14ccf89ba4f3ea6c567021b5b5ec0"
+    },
+    {
+      "path": "assets/ui/body_v1/hunger.png",
+      "sha256": "2805d28e0742546f37251920dc527ec38a0bb1ad6506dac571db94fbc93f51fd"
+    },
+    {
+      "path": "assets/ui/body_v1/stamina.png",
+      "sha256": "af8989c468bc43f3ee2252f82d12c1835517d56d406ab2e9334493048d8ecf26"
+    }
+  ],
+  "approval": {
+    "quote": "接入吧，背包新增一个一键整理功能，自动排列当前道具，同类型道具合并",
+    "date": "2026-10-18",
+    "scope": "This crescent/star candidate only; formal record assets/ui/body_v2/provenance.json"
+  }
+}

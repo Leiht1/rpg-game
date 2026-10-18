@@ -1,0 +1,35 @@
+{
+  "all_moving": true,
+  "floor_filter": true,
+  "pass": true,
+  "samples": [
+    {
+      "camera": "(39397.49, 23101.44)",
+      "direction": "(1.0, 0.0)",
+      "displacement": "(5.167969, 0.0)",
+      "moving": true,
+      "running": true
+    },
+    {
+      "camera": "(39348.32, 23101.44)",
+      "direction": "(-1.0, 0.0)",
+      "displacement": "(-5.167969, 0.0)",
+      "moving": true,
+      "running": true
+    },
+    {
+      "camera": "(39327.03, 23171.22)",
+      "direction": "(0.0, 1.0)",
+      "displacement": "(0.0, 5.166016)",
+      "moving": true,
+      "running": true
+    },
+    {
+      "camera": "(39326.79, 23123.07)",
+      "direction": "(0.0, -1.0)",
+      "displacement": "(0.0, -5.166016)",
+      "moving": true,
+      "running": true
+    }
+  ]
+}

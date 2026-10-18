@@ -1,0 +1,22 @@
+[
+  {
+    "name": "independent process restores one camp",
+    "pass": true
+  },
+  {
+    "name": "equipped hotbar instance retained across process",
+    "pass": true
+  },
+  {
+    "name": "harvest histories retained across process",
+    "pass": true
+  },
+  {
+    "name": "claimed state survives process restart",
+    "pass": true
+  },
+  {
+    "name": "claimed food cannot be regenerated or claimed again",
+    "pass": true
+  }
+]

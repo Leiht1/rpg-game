@@ -1,0 +1,31 @@
+{
+  "status": "pending_user",
+  "approval": null,
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "job": "art/sleep-occupied-v6/vertical-bed-refined-raw/job.json",
+  "source": "art\\sleep-occupied-v6\\vertical-bed-refined-processed\\clean.png",
+  "bbox": [
+    53,
+    15,
+    202,
+    240
+  ],
+  "scale": 1.5033557046979866,
+  "xy": [
+    16,
+    86
+  ],
+  "canvas": [
+    256,
+    512
+  ],
+  "files": {
+    "wood_bed-vertical.png": "5ac399cb68a67666a5de4467e10c39e0ec843881dbe82cb8d913bb704f773dad"
+  },
+  "notes": [
+    "Vertical bed quilt head-end shortened with shallow curved top meeting head lower edge; refined image generation job retained.",
+    "Horizontal heads final net upward shift five world units from V5 (seven up, then two down at user request).",
+    "No breathing shader or body movement; only zzz floats. Reuse current side head subtree; new art remains pending_user."
+  ]
+}

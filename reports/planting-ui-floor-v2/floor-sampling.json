@@ -1,0 +1,49 @@
+{
+  "mipmap_error": 9331.76098389924,
+  "old_error": 44165.8157422692,
+  "pass": true,
+  "ratio": 0.211289225095603,
+  "reference": "same PNG resized once to actual 96x64 with Lanczos, rendered at same 8 subpixel offsets; RGB absolute error, not perceptual ghosting score",
+  "samples": [
+    {
+      "mipmap_error": 1506.57254636288,
+      "offset": "(0.0, 0.0)",
+      "old_error": 4625.90979190916
+    },
+    {
+      "mipmap_error": 1467.93725584447,
+      "offset": "(0.25, 0.0)",
+      "old_error": 4734.27450517938
+    },
+    {
+      "mipmap_error": 1438.64706144482,
+      "offset": "(0.5, 0.0)",
+      "old_error": 4747.525482025
+    },
+    {
+      "mipmap_error": 1463.12157203257,
+      "offset": "(0.75, 0.0)",
+      "old_error": 4740.82744175196
+    },
+    {
+      "mipmap_error": 902.349065922201,
+      "offset": "(0.0, 0.5)",
+      "old_error": 6247.18434052914
+    },
+    {
+      "mipmap_error": 859.200048021972,
+      "offset": "(0.25, 0.5)",
+      "old_error": 6373.309824761
+    },
+    {
+      "mipmap_error": 840.078482806683,
+      "offset": "(0.5, 0.5)",
+      "old_error": 6371.02747173235
+    },
+    {
+      "mipmap_error": 853.85495146364,
+      "offset": "(0.75, 0.5)",
+      "old_error": 6325.75688438118
+    }
+  ]
+}

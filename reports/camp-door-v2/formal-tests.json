@@ -1,0 +1,1077 @@
+{
+  "checks": [
+    {
+      "name": "formal startup exposes ten buildings and hammer without preview",
+      "pass": true
+    },
+    {
+      "name": "formal startup uses approved asset paths",
+      "pass": true
+    },
+    {
+      "name": "all item craft building data validates",
+      "pass": true
+    },
+    {
+      "name": "nine new buildings and existing campfire",
+      "pass": true
+    },
+    {
+      "name": "initial durability stone_axe",
+      "pass": true
+    },
+    {
+      "name": "legacy null migrates stone_axe",
+      "pass": true
+    },
+    {
+      "name": "instance loses one stone_axe",
+      "pass": true
+    },
+    {
+      "name": "wrong instance no wear stone_axe",
+      "pass": true
+    },
+    {
+      "name": "last use removes tool and hotbar alias stone_axe",
+      "pass": true
+    },
+    {
+      "name": "initial durability stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "legacy null migrates stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "instance loses one stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "wrong instance no wear stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "last use removes tool and hotbar alias stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "initial durability simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "legacy null migrates simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "instance loses one simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "wrong instance no wear simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "last use removes tool and hotbar alias simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "initial durability stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "legacy null migrates stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "instance loses one stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "wrong instance no wear stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "last use removes tool and hotbar alias stone_hammer",
+      "pass": true
+    },
+    {
+      "name": "invalid durability rejected",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 1",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 2",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 3",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 4",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 5",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 6",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 7",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 8",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 9",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 10",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 11",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 12",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 13",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 14",
+      "pass": true
+    },
+    {
+      "name": "endpoint graph all connection masks 15",
+      "pass": true
+    },
+    {
+      "name": "find legal real terrain building site",
+      "pass": true
+    },
+    {
+      "name": "wall place debit exactly six",
+      "pass": true
+    },
+    {
+      "name": "stable building instance ID",
+      "pass": true
+    },
+    {
+      "name": "duplicate occupancy no debit",
+      "pass": true
+    },
+    {
+      "name": "door replacement only positive delta",
+      "pass": true
+    },
+    {
+      "name": "door replacement preserves instance",
+      "pass": true
+    },
+    {
+      "name": "closed gate collision blocks channel",
+      "pass": true
+    },
+    {
+      "name": "gate opens",
+      "pass": true
+    },
+    {
+      "name": "open gate moves leaf collision clear of channel",
+      "pass": true
+    },
+    {
+      "name": "gate cannot close on actor",
+      "pass": true
+    },
+    {
+      "name": "gate closes from safe position",
+      "pass": true
+    },
+    {
+      "name": "protected content consumes no hammer wear",
+      "pass": true
+    },
+    {
+      "name": "effective demolition hit 1",
+      "pass": true
+    },
+    {
+      "name": "effective demolition hit 2",
+      "pass": true
+    },
+    {
+      "name": "effective demolition hit 3",
+      "pass": true
+    },
+    {
+      "name": "partial damage persists per hit",
+      "pass": true
+    },
+    {
+      "name": "last durability completes demolition then breaks hammer",
+      "pass": true
+    },
+    {
+      "name": "door refunds floor fifty percent as real world entries",
+      "pass": true
+    },
+    {
+      "name": "repeat demolition cannot refund twice",
+      "pass": true
+    },
+    {
+      "name": "native continuous stroke independently debits successful segments",
+      "pass": true
+    },
+    {
+      "name": "continuous stroke revisits do not duplicate debit",
+      "pass": true
+    },
+    {
+      "name": "cancel stroke keeps only committed segments",
+      "pass": true
+    },
+    {
+      "name": "native floor stroke debits four per successful cell",
+      "pass": true
+    },
+    {
+      "name": "material shortage retains first segment without overspending",
+      "pass": true
+    },
+    {
+      "name": "find chest site",
+      "pass": true
+    },
+    {
+      "name": "place functional chest",
+      "pass": true
+    },
+    {
+      "name": "chest stores same tool instance durability",
+      "pass": true
+    },
+    {
+      "name": "nonempty chest protected",
+      "pass": true
+    },
+    {
+      "name": "nonempty real chest rejects hit before durability",
+      "pass": true
+    },
+    {
+      "name": "chest retrieves tool without reset",
+      "pass": true
+    },
+    {
+      "name": "stale transfer snapshot rejected",
+      "pass": true
+    },
+    {
+      "name": "equipped tool directly enters chest without reset",
+      "pass": true
+    },
+    {
+      "name": "chest tool directly equips without reset",
+      "pass": true
+    },
+    {
+      "name": "equipped hotbar alias moves actual instance into chest and clears link",
+      "pass": true
+    },
+    {
+      "name": "hotbar to chest to bag keeps durability73",
+      "pass": true
+    },
+    {
+      "name": "chest merges stacks",
+      "pass": true
+    },
+    {
+      "name": "building snapshot validation",
+      "pass": true
+    },
+    {
+      "name": "unknown building version protected",
+      "pass": true
+    },
+    {
+      "name": "duplicate chest tool instance rejected",
+      "pass": true
+    },
+    {
+      "name": "chest split preserves total",
+      "pass": true
+    },
+    {
+      "name": "chest internal drag merges",
+      "pass": true
+    },
+    {
+      "name": "chest full stack split rejected",
+      "pass": true
+    },
+    {
+      "name": "failed chest save rolls back contents",
+      "pass": true
+    },
+    {
+      "name": "failed placement save rolls back occupancy and all materials",
+      "pass": true
+    },
+    {
+      "name": "standard 6x6 camp material balance",
+      "pass": true
+    },
+    {
+      "name": "unload reload retains stable chest contents",
+      "pass": true
+    },
+    {
+      "name": "atomic snapshot write",
+      "pass": true
+    },
+    {
+      "name": "atomic snapshot reload restores buildings and durability",
+      "pass": true
+    },
+    {
+      "name": "unknown future building version protects source",
+      "pass": true
+    },
+    {
+      "name": "fuelled campfire protects hammer durability",
+      "pass": true
+    },
+    {
+      "name": "paused cooking campfire protects hammer durability",
+      "pass": true
+    },
+    {
+      "name": "ready cooking campfire protects hammer durability",
+      "pass": true
+    },
+    {
+      "name": "native final mine yields before tool break",
+      "pass": true
+    },
+    {
+      "name": "native complete stone outcrop yield 12 to16",
+      "pass": true
+    },
+    {
+      "name": "completed ore cannot duplicate rewards",
+      "pass": true
+    },
+    {
+      "name": "native final dig yields before shovel break",
+      "pass": true
+    },
+    {
+      "name": "native final chop yields before axe break",
+      "pass": true
+    },
+    {
+      "name": "native tree batch yields4 to6 wood",
+      "pass": true
+    },
+    {
+      "name": "deterministic flint approximately30percent sample",
+      "pass": true
+    },
+    {
+      "name": "bag cell exact live durability73",
+      "pass": true
+    },
+    {
+      "name": "equipped cell exact live durability25",
+      "pass": true
+    },
+    {
+      "name": "storage fixed logic canvas 960",
+      "pass": true
+    },
+    {
+      "name": "storage fixed logic canvas 1280",
+      "pass": true
+    },
+    {
+      "name": "storage fixed logic canvas 1600",
+      "pass": true
+    },
+    {
+      "name": "storage cell exact live durability41",
+      "pass": true
+    },
+    {
+      "name": "storage quantity rejects zero",
+      "pass": true
+    },
+    {
+      "name": "storage quantity accepts legal partial stack",
+      "pass": true
+    },
+    {
+      "name": "south gate inward resolves toward enclosed camp",
+      "pass": true
+    },
+    {
+      "name": "south gate outward resolves away from camp",
+      "pass": true
+    },
+    {
+      "name": "all authored showcase modules install once",
+      "pass": true
+    },
+    {
+      "name": "showcase single gate opens",
+      "pass": true
+    },
+    {
+      "name": "write complete camp for separate process restart",
+      "pass": true
+    },
+    {
+      "name": "door reachable side one stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "opens away from person on side one stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "animation repeat guarded stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "mid animation visual and collision tip agree stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "same standing position closes stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side two stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "opposite side chooses opposite swing stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "real swept path blocks closing stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "closes when path clear on side two stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "closed collision follows hinge angle stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "one blocked side falls back to other side stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "obstacle removal permits closing stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "leaf strips independently Y sorted stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "sort follows actual rotated leaf contacts stone_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side one stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "opens away from person on side one stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "animation repeat guarded stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "mid animation visual and collision tip agree stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "same standing position closes stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side two stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "opposite side chooses opposite swing stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "real swept path blocks closing stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "closes when path clear on side two stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "closed collision follows hinge angle stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "one blocked side falls back to other side stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "obstacle removal permits closing stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "leaf strips independently Y sorted stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "sort follows actual rotated leaf contacts stone_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side one stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "opens away from person on side one stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "animation repeat guarded stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "mid animation visual and collision tip agree stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "same standing position closes stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side two stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "opposite side chooses opposite swing stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "real swept path blocks closing stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "closes when path clear on side two stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "closed collision follows hinge angle stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "one blocked side falls back to other side stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "obstacle removal permits closing stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "leaf strips independently Y sorted stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "sort follows actual rotated leaf contacts stone_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side one stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "opens away from person on side one stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "animation repeat guarded stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "mid animation visual and collision tip agree stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "same standing position closes stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side two stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "opposite side chooses opposite swing stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "real swept path blocks closing stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "closes when path clear on side two stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "closed collision follows hinge angle stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "one blocked side falls back to other side stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "obstacle removal permits closing stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "leaf strips independently Y sorted stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "sort follows actual rotated leaf contacts stone_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side one fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "opens away from person on side one fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "animation repeat guarded fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "mid animation visual and collision tip agree fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "same standing position closes fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side two fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "opposite side chooses opposite swing fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "real swept path blocks closing fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "closes when path clear on side two fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "closed collision follows hinge angle fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "one blocked side falls back to other side fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "obstacle removal permits closing fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "leaf strips independently Y sorted fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "sort follows actual rotated leaf contacts fence_gate vertical=false swing=-1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side one fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "opens away from person on side one fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "animation repeat guarded fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "mid animation visual and collision tip agree fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "same standing position closes fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side two fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "opposite side chooses opposite swing fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "real swept path blocks closing fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "closes when path clear on side two fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "closed collision follows hinge angle fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "one blocked side falls back to other side fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "obstacle removal permits closing fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "leaf strips independently Y sorted fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "sort follows actual rotated leaf contacts fence_gate vertical=false swing=1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side one fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "opens away from person on side one fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "animation repeat guarded fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "mid animation visual and collision tip agree fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "same standing position closes fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side two fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "opposite side chooses opposite swing fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "real swept path blocks closing fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "closes when path clear on side two fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "closed collision follows hinge angle fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "one blocked side falls back to other side fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "obstacle removal permits closing fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "leaf strips independently Y sorted fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "sort follows actual rotated leaf contacts fence_gate vertical=true swing=-1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side one fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "opens away from person on side one fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "animation repeat guarded fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "mid animation visual and collision tip agree fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "same standing position closes fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "door reachable side two fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "opposite side chooses opposite swing fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "real swept path blocks closing fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "closes when path clear on side two fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "closed collision follows hinge angle fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "one blocked side falls back to other side fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "obstacle removal permits closing fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "leaf strips independently Y sorted fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "sort follows actual rotated leaf contacts fence_gate vertical=true swing=1",
+      "pass": true
+    },
+    {
+      "name": "horizontal wall middle no repeated end post",
+      "pass": true
+    },
+    {
+      "name": "horizontal exposed end keeps end post",
+      "pass": true
+    },
+    {
+      "name": "structure no inspect without hammer",
+      "pass": true
+    },
+    {
+      "name": "structure shows E only with equipped hammer",
+      "pass": true
+    },
+    {
+      "name": "existing recipe retained wood_floor",
+      "pass": true
+    },
+    {
+      "name": "movement allowed while placing wood_floor",
+      "pass": true
+    },
+    {
+      "name": "preview uses same unscaled runtime renderer wood_floor",
+      "pass": true
+    },
+    {
+      "name": "preview has no world collision or interactions wood_floor",
+      "pass": true
+    },
+    {
+      "name": "actual physics moves during build wood_floor",
+      "pass": true
+    },
+    {
+      "name": "existing recipe retained stone_path",
+      "pass": true
+    },
+    {
+      "name": "movement allowed while placing stone_path",
+      "pass": true
+    },
+    {
+      "name": "preview uses same unscaled runtime renderer stone_path",
+      "pass": true
+    },
+    {
+      "name": "preview has no world collision or interactions stone_path",
+      "pass": true
+    },
+    {
+      "name": "actual physics moves during build stone_path",
+      "pass": true
+    },
+    {
+      "name": "existing recipe retained camp_torch",
+      "pass": true
+    },
+    {
+      "name": "movement allowed while placing camp_torch",
+      "pass": true
+    },
+    {
+      "name": "preview uses same unscaled runtime renderer camp_torch",
+      "pass": true
+    },
+    {
+      "name": "preview has no world collision or interactions camp_torch",
+      "pass": true
+    },
+    {
+      "name": "actual physics moves during build camp_torch",
+      "pass": true
+    },
+    {
+      "name": "existing recipe retained wood_chest",
+      "pass": true
+    },
+    {
+      "name": "movement allowed while placing wood_chest",
+      "pass": true
+    },
+    {
+      "name": "preview uses same unscaled runtime renderer wood_chest",
+      "pass": true
+    },
+    {
+      "name": "preview has no world collision or interactions wood_chest",
+      "pass": true
+    },
+    {
+      "name": "actual physics moves during build wood_chest",
+      "pass": true
+    },
+    {
+      "name": "existing recipe retained workbench",
+      "pass": true
+    },
+    {
+      "name": "movement allowed while placing workbench",
+      "pass": true
+    },
+    {
+      "name": "preview uses same unscaled runtime renderer workbench",
+      "pass": true
+    },
+    {
+      "name": "preview has no world collision or interactions workbench",
+      "pass": true
+    },
+    {
+      "name": "actual physics moves during build workbench",
+      "pass": true
+    },
+    {
+      "name": "unchanged building snapshot schema available",
+      "pass": true
+    },
+    {
+      "name": "formal approved v2 texture wood_fence_vertical",
+      "pass": true
+    },
+    {
+      "name": "formal approved v2 texture fence_gate_vertical",
+      "pass": true
+    },
+    {
+      "name": "formal approved v2 texture wood_chest",
+      "pass": true
+    },
+    {
+      "name": "formal approved v2 texture workbench",
+      "pass": true
+    },
+    {
+      "name": "F6 button label +99",
+      "pass": true
+    },
+    {
+      "name": "one F6 click adds99",
+      "pass": true
+    },
+    {
+      "name": "second F6 click adds99",
+      "pass": true
+    },
+    {
+      "name": "F6 full inventory no overflow",
+      "pass": true
+    },
+    {
+      "name": "both swing paths blocked no open",
+      "pass": true
+    },
+    {
+      "name": "cleared door opens away from player",
+      "pass": true
+    },
+    {
+      "name": "closes with selected swing retained",
+      "pass": true
+    },
+    {
+      "name": "next opening reevaluates side after crossing",
+      "pass": true
+    },
+    {
+      "name": "edge-on timber texture uses adopted side art",
+      "pass": true
+    },
+    {
+      "name": "persist automatically chosen swing",
+      "pass": true
+    }
+  ],
+  "failed": 0
+}

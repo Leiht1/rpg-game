@@ -1,0 +1,34 @@
+{
+  "status": "partially_approved_user",
+  "route": "local:codex-cli",
+  "source": "art/planting-v1/generation",
+  "processing": "generate2dsprite process sheet 4x4, soft key, all components; raw 1254x1254 regrouped by inspected ownership to 1536x1536; strict geometry QA pass",
+  "sha256": {
+    "soil.png": "77122e560db350105ec07b500e3669a10698404ac0328bc8fbb2c053c3dfd1b4",
+    "roots.png": "a27a8131188dfc5214f42df05238b1d3bc7c3881130fa8426c557a3c46e1b7ee",
+    "carrot_0.png": "446298c89674419ab6bba878eed6917e9b0d1e4a830cbbb85132e70bc6fafba8",
+    "carrot_1.png": "e122f5efe450d455593a79caaadedd94da136edcc0de88315c33c868290068f7",
+    "carrot_2.png": "40eb76e12d5333b2a7ce27a17574f84339f74cbe22be84539a51ea37bca1aa33",
+    "potato_0.png": "6ab82057f2f4927bbca44592b343167c785aae812348b39a4b79c43e23cfc0fd",
+    "potato_1.png": "afcd15bb1c23353b8942eb256336d2ad589804325df51027603d95fa06a981be",
+    "potato_2.png": "16a8b91b92692aa5c88dbef2636c3ed2eda3173d57c0e018ea4e94188c0037b6",
+    "cabbage_0.png": "618037a7eb11f1b28242d1fd5950e577f703887d61603542ef66a97b5c836564",
+    "cabbage_1.png": "f58d719b0e12e7769b055f1f31512384dda97c3abb930b57d3246b02b8ba2a81",
+    "cabbage_2.png": "3c28b1a5674b59c9946f728890e6a99d45e732b87f66eab1183dbe6ce9e0005f",
+    "carrot_seed.png": "9d26450f06e5be166cdee8e2f09b0a7a2375f361af7017d743763713369902b6",
+    "potato_seed.png": "f1c88a42a0af25c87fd169e7e6cb04b6b9ab62e1f767f87377c46e2b64fb71eb",
+    "cabbage_seed.png": "4ba0b7a89d3a158424b9d929e0a55a25c323a6cf7871993b671192ca690d7eaa",
+    "potato.png": "6f51384c1299ad76e3673b30a5364df69278726c58ce3c87398db87e4e594e7d",
+    "cabbage.png": "3dcb2f757cf2f2b0412a19aeecbbfa24f5c5a85049fa9b25ab733779a2577f69"
+  },
+  "approved_quote": "可以 直接接入游戏吧",
+  "approved_files": [
+    "carrot_seed.png",
+    "potato_seed.png",
+    "cabbage_seed.png",
+    "potato.png",
+    "cabbage.png"
+  ],
+  "formal_provenance": "assets/planting/v3/provenance.json",
+  "approved_scope": "仅carrot_seed/potato_seed/cabbage_seed/potato/cabbage五个图标；其余旧图不在本次批准内"
+}

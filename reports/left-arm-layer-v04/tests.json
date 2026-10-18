@@ -1,0 +1,894 @@
+{
+  "checks": [
+    {
+      "name": "rear arm draws before left leg sibling",
+      "pass": true
+    },
+    {
+      "name": "rear arm shares behind-parent pass with legs",
+      "pass": true
+    },
+    {
+      "name": "rear arm keeps world Y sort depth without global negative z",
+      "pass": true
+    },
+    {
+      "name": "all eighteen approved clips retained",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_breathe 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_breathe 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_breathe 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_breathe 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_breathe 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_breathe 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_breathe 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_breathe 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_breathe 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_breathe 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_breathe 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_breathe 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_chop 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_chop 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_chop 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_chop 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_chop 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_chop 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_chop 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_chop 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_chop 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_chop 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_chop 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_chop 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_chop_link 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_chop_link 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_chop_link 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_chop_link 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_chop_link 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_chop_link 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_chop_link 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_chop_link 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_chop_link 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_chop_link 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_chop_link 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_chop_link 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_pickup 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_pickup 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_pickup 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_pickup 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_pickup 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_pickup 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_pickup 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_pickup 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_pickup 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_pickup 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_pickup 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_pickup 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_run 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_run 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_run 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_run 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_run 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_run 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_run 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_run 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_run 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_run 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_run 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_run 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_walk 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_walk 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_walk 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_walk 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_walk 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_walk 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_walk 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_walk 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_walk 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_walk 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose back_walk 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip back_walk 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_breathe 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_breathe 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_breathe 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_breathe 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_breathe 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_breathe 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_breathe 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_breathe 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_breathe 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_breathe 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_breathe 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_breathe 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_chop 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_chop 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_chop 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_chop 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_chop 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_chop 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_chop 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_chop 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_chop 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_chop 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_chop 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_chop 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_chop_link 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_chop_link 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_chop_link 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_chop_link 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_chop_link 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_chop_link 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_chop_link 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_chop_link 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_chop_link 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_chop_link 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_chop_link 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_chop_link 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_pickup 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_pickup 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_pickup 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_pickup 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_pickup 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_pickup 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_pickup 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_pickup 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_pickup 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_pickup 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_pickup 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_pickup 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_run 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_run 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_run 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_run 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_run 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_run 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_run 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_run 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_run 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_run 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_run 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_run 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_walk 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_walk 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_walk 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_walk 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_walk 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_walk 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_walk 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_walk 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_walk 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_walk 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose front_walk 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip front_walk 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_breathe 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_breathe 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_breathe 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_breathe 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_breathe 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_breathe 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_breathe 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_breathe 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_breathe 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_breathe 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_breathe 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_breathe 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_chop 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_chop 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_chop 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_chop 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_chop 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_chop 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_chop 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_chop 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_chop 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_chop 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_chop 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_chop 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_chop_link 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_chop_link 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_chop_link 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_chop_link 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_chop_link 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_chop_link 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_chop_link 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_chop_link 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_chop_link 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_chop_link 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_chop_link 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_chop_link 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_pickup 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_pickup 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_pickup 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_pickup 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_pickup 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_pickup 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_pickup 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_pickup 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_pickup 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_pickup 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_pickup 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_pickup 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_run 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_run 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_run 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_run 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_run 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_run 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_run 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_run 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_run 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_run 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_run 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_run 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_walk 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_walk 0.0 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_walk 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_walk 0.0 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_walk 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_walk 0.35 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_walk 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_walk 0.35 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_walk 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_walk 0.72 mirrored=false",
+      "pass": true
+    },
+    {
+      "name": "same arm pose side_walk 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "same texture and flip side_walk 0.72 mirrored=true",
+      "pass": true
+    },
+    {
+      "name": "old draw order paints arm over leg at identical overlap",
+      "pass": true
+    },
+    {
+      "name": "new draw order paints leg over rear arm at identical overlap",
+      "pass": true
+    }
+  ],
+  "count": 222,
+  "failures": 0
+}

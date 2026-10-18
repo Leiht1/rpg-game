@@ -1,0 +1,266 @@
+[
+  {
+    "name": "bag opens two independent panels",
+    "pass": true
+  },
+  {
+    "name": "inventory fixed right equipment fixed left",
+    "pass": true
+  },
+  {
+    "name": "right panel fits above hotbar",
+    "pass": true
+  },
+  {
+    "name": "reordered visuals preserve logical slot indices",
+    "pass": true
+  },
+  {
+    "name": "inventory ordered horizontally in four columns",
+    "pass": true
+  },
+  {
+    "name": "mouse movement cannot drag bag",
+    "pass": true
+  },
+  {
+    "name": "real campfire is behind destination bag cell",
+    "pass": true
+  },
+  {
+    "name": "inventory region cannot become world or fire drop",
+    "pass": true
+  },
+  {
+    "name": "direct ground drop guard preserves hotbar and avoids quantity modal",
+    "pass": true
+  },
+  {
+    "name": "native drag remains active with bag visible",
+    "pass": true
+  },
+  {
+    "name": "hotbar drag to bag moves stack without hiding panels",
+    "pass": true
+  },
+  {
+    "name": "equipment region also blocks ground drop",
+    "pass": true
+  },
+  {
+    "name": "native hotbar to bag drag never feeds underlying fire",
+    "pass": true
+  },
+  {
+    "name": "campfire hammer feedback uses transient health bar",
+    "pass": true
+  },
+  {
+    "name": "campfire health bar also expires after two seconds",
+    "pass": true
+  },
+  {
+    "name": "place real legal chest",
+    "pass": true
+  },
+  {
+    "name": "chest has independent nine slots and no duplicate inventory",
+    "pass": true
+  },
+  {
+    "name": "chest slots use smaller actual dimensions",
+    "pass": true
+  },
+  {
+    "name": "chest title centered on compact panel",
+    "pass": true
+  },
+  {
+    "name": "chest frame tightly fits header and nine slots",
+    "pass": true
+  },
+  {
+    "name": "opening chest persists state without closing bag or blocking movement",
+    "pass": true
+  },
+  {
+    "name": "chest slots render above lid",
+    "pass": true
+  },
+  {
+    "name": "panel anchor is chest world position",
+    "pass": true
+  },
+  {
+    "name": "moving player keeps panel fixed to chest",
+    "pass": true
+  },
+  {
+    "name": "walking away does not close chest",
+    "pass": true
+  },
+  {
+    "name": "distant chest transfer remains protected",
+    "pass": true
+  },
+  {
+    "name": "bag transfers into primary chest grid",
+    "pass": true
+  },
+  {
+    "name": "legacy overflow offers retrieval page",
+    "pass": true
+  },
+  {
+    "name": "legacy page exposes only old three cells",
+    "pass": true
+  },
+  {
+    "name": "legacy cells refuse deposits or swaps",
+    "pass": true
+  },
+  {
+    "name": "legacy item can be withdrawn without loss",
+    "pass": true
+  },
+  {
+    "name": "failed close save rolls back open state",
+    "pass": true
+  },
+  {
+    "name": "closing chest hides only chest grid",
+    "pass": true
+  },
+  {
+    "name": "chest close preserves bag",
+    "pass": true
+  },
+  {
+    "name": "isolated chest save commits open state and contents",
+    "pass": true
+  },
+  {
+    "name": "releasing E finishes one strike without repeating",
+    "pass": true
+  },
+  {
+    "name": "unstruck building has no health bar",
+    "pass": true
+  },
+  {
+    "name": "successful hammer strike shows health bar",
+    "pass": true
+  },
+  {
+    "name": "bar remains until two seconds",
+    "pass": true
+  },
+  {
+    "name": "bar disappears after two seconds",
+    "pass": true
+  },
+  {
+    "name": "new hit restarts timeout",
+    "pass": true
+  },
+  {
+    "name": "damaged reconstructed building does not show stale bar",
+    "pass": true
+  },
+  {
+    "name": "real frame processing expires hammer health bar",
+    "pass": true
+  },
+  {
+    "name": "hammer starts repeatable action on E",
+    "pass": true
+  },
+  {
+    "name": "holding E completes repeated real strikes and demolition",
+    "pass": true
+  },
+  {
+    "name": "destroyed target cannot begin a new strike",
+    "pass": true
+  },
+  {
+    "name": "legal sleep placement [\"wood_bed\", false]",
+    "pass": true
+  },
+  {
+    "name": "head/upper approach can move along outside [\"wood_bed\", false]",
+    "pass": true
+  },
+  {
+    "name": "bed ground footprint still blocks entry [\"wood_bed\", false]",
+    "pass": true
+  },
+  {
+    "name": "head/upper approach can E interact [\"wood_bed\", false]",
+    "pass": true
+  },
+  {
+    "name": "head/upper sleep controller accepts same footprint [\"wood_bed\", false]",
+    "pass": true
+  },
+  {
+    "name": "legal sleep placement [\"wood_bed\", true]",
+    "pass": true
+  },
+  {
+    "name": "head/upper approach can move along outside [\"wood_bed\", true]",
+    "pass": true
+  },
+  {
+    "name": "bed ground footprint still blocks entry [\"wood_bed\", true]",
+    "pass": true
+  },
+  {
+    "name": "head/upper approach can E interact [\"wood_bed\", true]",
+    "pass": true
+  },
+  {
+    "name": "head/upper sleep controller accepts same footprint [\"wood_bed\", true]",
+    "pass": true
+  },
+  {
+    "name": "legal sleep placement [\"straw_mat\", false]",
+    "pass": true
+  },
+  {
+    "name": "head/upper approach can move along outside [\"straw_mat\", false]",
+    "pass": true
+  },
+  {
+    "name": "bed ground footprint still blocks entry [\"straw_mat\", false]",
+    "pass": true
+  },
+  {
+    "name": "head/upper approach can E interact [\"straw_mat\", false]",
+    "pass": true
+  },
+  {
+    "name": "head/upper sleep controller accepts same footprint [\"straw_mat\", false]",
+    "pass": true
+  },
+  {
+    "name": "legal sleep placement [\"straw_mat\", true]",
+    "pass": true
+  },
+  {
+    "name": "head/upper approach can move along outside [\"straw_mat\", true]",
+    "pass": true
+  },
+  {
+    "name": "bed ground footprint still blocks entry [\"straw_mat\", true]",
+    "pass": true
+  },
+  {
+    "name": "head/upper approach can E interact [\"straw_mat\", true]",
+    "pass": true
+  },
+  {
+    "name": "head/upper sleep controller accepts same footprint [\"straw_mat\", true]",
+    "pass": true
+  }
+]

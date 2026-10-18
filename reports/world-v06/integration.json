@@ -1,0 +1,132 @@
+{
+  "adapter": "NVIDIA GeForce RTX 5060",
+  "checks": [
+    {
+      "details": "",
+      "name": "formal equals approved candidate and worker 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "approved props retained 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "formal equals approved candidate and worker 447349832",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "approved props retained 447349832",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "formal equals approved candidate and worker 1671081329",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "approved props retained 1671081329",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "formal version",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "legacy identity remains byte identical",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "migration saves seed size and explicit version",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "migration visible notice",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "V06 identity restart restores seed size",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "unknown identity protected from silent replacement",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 447349832",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "formal entry and streaming use V06",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "formal M opens",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "formal map complete fit",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "formal M cache equals live continent",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "formal map zoom pan clamp",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "formal M closes",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "stream settled 447349832",
+      "pass": true
+    },
+    {
+      "details": 1803.21350097656,
+      "name": "formal normal physics crosses chunks",
+      "pass": true
+    },
+    {
+      "details": [
+        0,
+        0
+      ],
+      "name": "formal streaming no viewport gaps or stalls",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "generator": "windrest-continent-0.6.0",
+  "metrics": {
+    "last_chunk_build_ms": 47.007,
+    "loading_stops": 0,
+    "map_max_slice_ms": 3.251,
+    "map_total_build_ms": 1037.857,
+    "max_install_ms": 1.096,
+    "missing_view_frames": 0,
+    "normal_distance": 1803.21350097656,
+    "physics_frames": 674
+  },
+  "renderer": "gl_compatibility"
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "cross_cell_components",
+    "status": "fail",
+    "value": 1,
+    "threshold": 0,
+    "file": "spill/sheet-qc.json"
+  },
+  {
+    "id": "cross_cell_visible",
+    "status": "fail",
+    "value": 1,
+    "threshold": 0,
+    "file": "spill/sheet-qc.json"
+  },
+  {
+    "id": "boundary_band",
+    "status": "warn",
+    "value": 556,
+    "threshold": 0,
+    "file": "spill/sheet-qc.json"
+  },
+  {
+    "id": "safe_frame",
+    "status": "warn",
+    "value": 2,
+    "threshold": 0,
+    "file": "spill/sheet-qc.json"
+  },
+  {
+    "id": "boundary_band",
+    "status": "warn",
+    "value": 896,
+    "threshold": 0,
+    "file": "vertical-spill/sheet-qc.json"
+  },
+  {
+    "id": "safe_frame",
+    "status": "warn",
+    "value": 1,
+    "threshold": 0,
+    "file": "vertical-spill/sheet-qc.json"
+  },
+  {
+    "id": "source_edge_touch_frames",
+    "status": "warn",
+    "value": [
+      [
+        1,
+        0
+      ]
+    ],
+    "threshold": [],
+    "file": "vertical-processed/pipeline-meta.json"
+  }
+]

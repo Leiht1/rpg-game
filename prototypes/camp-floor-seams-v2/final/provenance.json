@@ -1,0 +1,36 @@
+{
+  "status": "approved_user",
+  "date": "2026-10-18",
+  "route": "local:codex-cli",
+  "returned_model": "codex-image_gen",
+  "geometry": "same 96x64 top, same 21*96/636 front height, old front PNG byte-identical; no warp/mirror/fill",
+  "frames": [
+    {
+      "file": "wood-top.png",
+      "source": "art/camp-floor-seams-v2/wood/generated.png",
+      "sha256": "15e4ffb02ea99d9740e4a3c34a48e04141b149d9abcd065555e686964d4da8c4",
+      "front_unchanged": false
+    },
+    {
+      "file": "wood-front.png",
+      "source": "prototypes/camp-floor-square-v1/final/wood-front.png",
+      "sha256": "bd4c2d049445c2026c87a5297e2bb7e5908c0b19ef4ce523e66e0504fd1c9b4a",
+      "front_unchanged": true
+    },
+    {
+      "file": "stone-top.png",
+      "source": "art/camp-floor-seams-v2/stone/generated.png",
+      "sha256": "1249110bc4d93ae32c427c775f56ccbc6bf2e13636c7f6d8b7d030911598651e",
+      "front_unchanged": false
+    },
+    {
+      "file": "stone-front.png",
+      "source": "prototypes/camp-floor-square-v1/final/stone-front.png",
+      "sha256": "a08fc2fe129ca8922e95bd5fca5383555485f3c7ff186668595a743f89912b09",
+      "front_unchanged": true
+    }
+  ],
+  "approval_quote": "可以的，可以接入游戏了",
+  "approval_date": "2026-10-18",
+  "formal_destination": "assets/buildings/v3"
+}

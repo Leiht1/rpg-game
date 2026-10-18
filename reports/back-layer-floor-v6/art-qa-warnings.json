@@ -1,0 +1,44 @@
+[
+  {
+    "file": "art/camp-floor-square-v1/candidate-04/spill/sheet-qc.json",
+    "id": "safe_frame",
+    "status": "warn",
+    "value": 2,
+    "threshold": 0,
+    "cells": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+  },
+  {
+    "file": "prototypes/camp-floor-seams-v2/wood-processed-safe/pipeline-meta.json",
+    "id": "source_edge_touch_frames",
+    "status": "warn",
+    "value": [
+      [
+        0,
+        0
+      ]
+    ],
+    "threshold": []
+  },
+  {
+    "file": "prototypes/camp-floor-seams-v2/stone-processed/pipeline-meta.json",
+    "id": "source_edge_touch_frames",
+    "status": "warn",
+    "value": [
+      [
+        0,
+        0
+      ]
+    ],
+    "threshold": []
+  }
+]

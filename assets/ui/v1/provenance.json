@@ -1,0 +1,114 @@
+{
+  "version": "core-ui-art-1.0.0",
+  "status": "integrated_per_current_task_visual_review_pending",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "exact_image_model": "not exposed",
+  "source": "art\\ui-v1\\candidate-01\\generated.png",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "source_sha256": "319353fdace24567cc5f381247674660c750558389e9357b7454b1f4cfec3729",
+  "prompt": "art/ui-v1/prompt.txt",
+  "receipt": "art/ui-v1/candidate-01/job.json",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "2026-10-06",
+    "items": [],
+    "basis": "subscription quota call: no per-call USD price; counted by call caps"
+  },
+  "selection_reason": "Coherent wood/linen/sage kit with quiet centers; independent ownership crops avoid nominal quadrant truncation.",
+  "processing": "Chroma key, ownership crop, equal aspect Lanczos downscale, transparent 2px padding. No repaint/rotation/nonuniform scaling.",
+  "files": [
+    {
+      "file": "assets\\ui\\v1\\panel.png",
+      "ownership_rect": [
+        24,
+        36,
+        655,
+        642
+      ],
+      "alpha_bbox": [
+        27,
+        38,
+        604,
+        571
+      ],
+      "size": [
+        256,
+        240
+      ],
+      "sha256": "e57f7e8fced6a4a3f0ff715ea4e8ea1062eb67f4ffde8bc41b650326fe719256",
+      "safe_margin_px": 2
+    },
+    {
+      "file": "assets\\ui\\v1\\slot.png",
+      "ownership_rect": [
+        675,
+        36,
+        1238,
+        630
+      ],
+      "alpha_bbox": [
+        18,
+        44,
+        531,
+        556
+      ],
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "6f04b18517f69395549b37623edc3dd8399bdc8dc46939ae9c69836632767462",
+      "safe_margin_px": 2
+    },
+    {
+      "file": "assets\\ui\\v1\\button.png",
+      "ownership_rect": [
+        20,
+        660,
+        715,
+        1060
+      ],
+      "alpha_bbox": [
+        22,
+        158,
+        669,
+        351
+      ],
+      "size": [
+        192,
+        64
+      ],
+      "sha256": "459c316d131cb32e77f49715c6e5b2094e1c2e8ec282c4d784c5040ace1b4b72",
+      "safe_margin_px": 2
+    },
+    {
+      "file": "assets\\ui\\v1\\field_lantern.png",
+      "ownership_rect": [
+        785,
+        650,
+        1130,
+        1190
+      ],
+      "alpha_bbox": [
+        52,
+        49,
+        290,
+        502
+      ],
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "16a71a38aa9d05c6e34c84c987174c9f39dbcf64538cbee78240b589f7d2ca52",
+      "safe_margin_px": 2
+    }
+  ],
+  "warnings": [
+    "Returned 1254x1254 instead of requested 1024x1024. Nominal grid crosses button; ownership crops used."
+  ],
+  "external_assets": []
+}

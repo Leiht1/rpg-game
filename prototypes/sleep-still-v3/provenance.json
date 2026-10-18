@@ -1,0 +1,59 @@
+{
+  "status": "pending_user",
+  "approval": null,
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "reference_sha256": "bed567ab3d0fd63e1da47da60ae0f5466b50e17dab5b9061d22c9d725cf3e7bd",
+  "jobs": [
+    "art\\sleep-still-v3\\vertical-raw\\job.json",
+    "art\\sleep-still-v3\\horizontal-raw\\job.json"
+  ],
+  "transforms": [
+    {
+      "direction": "vertical",
+      "source": "art\\sleep-still-v3\\vertical-processed\\clean.png",
+      "bbox": [
+        61,
+        15,
+        194,
+        240
+      ],
+      "scale": 1.443609022556391,
+      "xy": [
+        32,
+        45
+      ],
+      "canvas": [
+        256,
+        416
+      ]
+    },
+    {
+      "direction": "horizontal",
+      "source": "art\\sleep-still-v3\\horizontal-processed\\clean.png",
+      "bbox": [
+        15,
+        76,
+        240,
+        179
+      ],
+      "scale": 1.7777777777777777,
+      "xy": [
+        56,
+        36
+      ],
+      "canvas": [
+        512,
+        256
+      ]
+    }
+  ],
+  "files": {
+    "sleep-horizontal.png": "d85e43a64348c9434646ecd6a30c86eedd319432534577f6c8605ce6f9bbe92f",
+    "sleep-vertical.png": "3a5fc39c28b45a7016d384a8b353a79248bfe6e134c858376362d843c42edae8"
+  },
+  "notes": [
+    "Two separately generated whole-body stills. No standing character parts, pose rotation, head replacement or skeletal sleep animation.",
+    "Runtime continuous chest-local UV breathing only; source closed eyes remain painted. New candidate not promoted to formal assets."
+  ]
+}

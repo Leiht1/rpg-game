@@ -1,0 +1,3624 @@
+{
+  "selection": {
+    "selected": [
+      {
+        "id": "tree_01",
+        "name": "高瘦幼树",
+        "kind": "tree",
+        "file": "tree_01.png",
+        "canvas": [
+          256,
+          256
+        ],
+        "source_bbox": [
+          183,
+          205,
+          340,
+          488
+        ],
+        "display_bbox": [
+          75,
+          51,
+          188,
+          255
+        ],
+        "scale": 0.72,
+        "offset": [
+          75,
+          51
+        ],
+        "sha256": "52ad5927f88af1605fc145d9c9edc5b449e6b65a01a0c3731c315c5f711bb6e9",
+        "surface": "grass",
+        "status": "shape_selected",
+        "interaction": "tree_chop"
+      },
+      {
+        "id": "tree_03",
+        "name": "高大开展树",
+        "kind": "tree",
+        "file": "tree_03.png",
+        "canvas": [
+          256,
+          256
+        ],
+        "source_bbox": [
+          106,
+          219,
+          407,
+          487
+        ],
+        "display_bbox": [
+          20,
+          62,
+          237,
+          255
+        ],
+        "scale": 0.72,
+        "offset": [
+          20,
+          62
+        ],
+        "sha256": "7913ab40726f71404cb88c08a2fac2f4a9cd9544b89f4aa45d8461541e4e09ec",
+        "surface": "grass",
+        "status": "shape_selected",
+        "interaction": "tree_chop"
+      },
+      {
+        "id": "tree_04",
+        "name": "疏冠分叉树",
+        "kind": "tree",
+        "file": "tree_04.png",
+        "canvas": [
+          256,
+          256
+        ],
+        "source_bbox": [
+          150,
+          235,
+          389,
+          487
+        ],
+        "display_bbox": [
+          52,
+          74,
+          224,
+          255
+        ],
+        "scale": 0.72,
+        "offset": [
+          52,
+          74
+        ],
+        "sha256": "8f17d2f2ab4e673b152d0e85ea3ad214d3fbe3b1f724ed5f5e4937e7314f3292",
+        "surface": "grass",
+        "status": "shape_selected",
+        "interaction": "tree_chop"
+      },
+      {
+        "id": "rock_01",
+        "name": "低矮扁石",
+        "kind": "rock",
+        "file": "rock_01.png",
+        "canvas": [
+          128,
+          100
+        ],
+        "source_bbox": [
+          29,
+          315,
+          448,
+          487
+        ],
+        "display_bbox": [
+          10,
+          58,
+          111,
+          99
+        ],
+        "scale": 0.24,
+        "offset": [
+          10,
+          58
+        ],
+        "sha256": "c03d924a3fdafa645fc3df19cb885d00e2cea85fe51cdb64b8022e12855e292c",
+        "surface": "grass",
+        "status": "shape_selected",
+        "interaction": "collision_only"
+      },
+      {
+        "id": "rock_02",
+        "name": "敦实孤石",
+        "kind": "rock",
+        "file": "rock_02.png",
+        "canvas": [
+          128,
+          100
+        ],
+        "source_bbox": [
+          82,
+          227,
+          413,
+          488
+        ],
+        "display_bbox": [
+          22,
+          36,
+          101,
+          99
+        ],
+        "scale": 0.24,
+        "offset": [
+          22,
+          36
+        ],
+        "sha256": "247aed10dbdb73d548764c17ad445ac8fe7f8445c5d1cf155a2f97a8d92a35f4",
+        "surface": "grass",
+        "status": "shape_selected",
+        "interaction": "collision_only"
+      },
+      {
+        "id": "rock_03",
+        "name": "楔形石",
+        "kind": "rock",
+        "file": "rock_03.png",
+        "canvas": [
+          128,
+          100
+        ],
+        "source_bbox": [
+          44,
+          244,
+          433,
+          488
+        ],
+        "display_bbox": [
+          13,
+          40,
+          106,
+          99
+        ],
+        "scale": 0.24,
+        "offset": [
+          13,
+          40
+        ],
+        "sha256": "a554b603f941d09f73b913e5de81916cf0249f3e92a00ea6b09ef44551e5df2f",
+        "surface": "grass",
+        "status": "shape_selected",
+        "interaction": "collision_only"
+      },
+      {
+        "id": "rock_04",
+        "name": "双肩连体石",
+        "kind": "rock",
+        "file": "rock_04.png",
+        "canvas": [
+          128,
+          100
+        ],
+        "source_bbox": [
+          33,
+          247,
+          450,
+          488
+        ],
+        "display_bbox": [
+          10,
+          41,
+          110,
+          99
+        ],
+        "scale": 0.24,
+        "offset": [
+          10,
+          41
+        ],
+        "sha256": "44952fbfa544c81a6c3f6f50df43928f5232b57562f566c57144bc530886041d",
+        "surface": "grass",
+        "status": "shape_selected",
+        "interaction": "collision_only"
+      },
+      {
+        "id": "rock_05",
+        "name": "窄高石",
+        "kind": "rock",
+        "file": "rock_05.png",
+        "canvas": [
+          128,
+          100
+        ],
+        "source_bbox": [
+          116,
+          154,
+          387,
+          488
+        ],
+        "display_bbox": [
+          30,
+          19,
+          95,
+          99
+        ],
+        "scale": 0.24,
+        "offset": [
+          30,
+          19
+        ],
+        "sha256": "789151fcbc33e9993f05a75fe46fe10fd1f7b10d7f4e9ba2d6432b9196aacd90",
+        "surface": "grass",
+        "status": "shape_selected",
+        "interaction": "collision_only"
+      },
+      {
+        "id": "rock_06",
+        "name": "缺角碎石",
+        "kind": "rock",
+        "file": "rock_06.png",
+        "canvas": [
+          128,
+          100
+        ],
+        "source_bbox": [
+          145,
+          285,
+          450,
+          487
+        ],
+        "display_bbox": [
+          37,
+          51,
+          110,
+          99
+        ],
+        "scale": 0.24,
+        "offset": [
+          37,
+          51
+        ],
+        "sha256": "f65cbc5a0686ca550f73f9f0dcc051dba66f286f3455f8423bad126fb67ce881",
+        "surface": "grass",
+        "status": "shape_selected",
+        "interaction": "collision_only"
+      }
+    ],
+    "rejected": [
+      "tree_02"
+    ],
+    "authority": "用户明确不要矮胖阔冠树，其余保留；普通石头只碰撞不交互",
+    "adapters_status": "pending_user"
+  },
+  "art_source": "host_image through controlled route_media",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "precise_backend": "unknown",
+  "estimateUsd": 0,
+  "cost_note": "local subscription; no independent quota measurement",
+  "jobs": [
+    {
+      "schemaVersion": 2,
+      "provider": "openai",
+      "kind": "image",
+      "route": "codex-cli",
+      "requestedModel": "codex-image_gen",
+      "options": {
+        "tool": "image_gen"
+      },
+      "promptSha256": "79d2c83ead352b50787b0784c6e21061d91bddf9b09ed7e75fd3c0e4c2fbaba9",
+      "references": [
+        {
+          "sha256": "09444e94440e916d72b5ec21d2ca9dabff6df0f5ceb0dd75c6a288997f1bc51d",
+          "bytes": 178090
+        },
+        {
+          "sha256": "8d40aacefe8f98965a1b6e431f90ee86ec2bd7d48605c4e956ff61f2e95f4bc8",
+          "bytes": 1014492
+        },
+        {
+          "sha256": "307d7b04dec1a4a08be306d0f96164d64d9214fe92119165983f1315e748050c",
+          "bytes": 1571666
+        }
+      ],
+      "fingerprint": "e9e69fd5920fa117156a0613bd181c2641602350f338e77bbfc2667d72363489",
+      "estimate": {
+        "usd": 0.0,
+        "currency": "USD",
+        "pricesVersion": "2026-10-06",
+        "items": [],
+        "basis": "subscription quota call: no per-call USD price; counted by call caps"
+      },
+      "consent": {
+        "provider": "openai",
+        "model": "codex-image_gen",
+        "calls": 1,
+        "estimateUsd": 0.0,
+        "route": "codex-cli",
+        "quota": true,
+        "account": "the user's own Codex sign-in (ChatGPT)",
+        "note": "uses the subscription quota of that sign-in, never API credit"
+      },
+      "artSource": "host_image",
+      "execution": "execute",
+      "status": "done",
+      "receipt": {
+        "startedAt": "2026-10-16T13:38:53.217Z",
+        "submittedAt": "2026-10-16T13:38:53.228Z",
+        "completedAt": "2026-10-16T13:40:01.752Z",
+        "wallMs": 68534,
+        "providerMs": 68500,
+        "attempt": 1,
+        "purpose": "route_media image",
+        "toolVersion": "cli_media/0.4.0",
+        "outcomeCode": "ok"
+      },
+      "ledger": {
+        "projectDir": "../../../..",
+        "reservationId": "7a0829528d7b4926b505f80ab56a7a84",
+        "status": "done"
+      },
+      "cliRun": {
+        "tool": "codex",
+        "runId": "f936941869fd4087bc842e71a93d2f74",
+        "cwd": "<tmp>/forge-cli-f936941869fd-a745940a",
+        "startedAt": "2026-10-16T13:38:53.217Z",
+        "version": "0.163.0-alpha.10.2",
+        "versionText": "codex-cli 0.163.0-alpha.10.2",
+        "recipe": "codex-exec-imagegen/1",
+        "home": "CODEX_HOME",
+        "verifiedBefore": true,
+        "threadId": "01a144ef-df71-7750-977c-349fef3f5bba"
+      },
+      "adoption": {
+        "method": "native-run-folder",
+        "source": "CODEX_HOME/generated_images/01a144ef-df71-7750-977c-349fef3f5bba/exec-95b1e34e-2226-4ce4-ac1d-a7b9da86a75a.png",
+        "sourceSha256": "5bafb87a1c3ac907bcb258e9c872f442f1caaf27080fe2bdaa415d303879af7e",
+        "sourceMtime": "2026-10-16T13:39:54Z",
+        "freshAfter": "2026-10-16T13:38:53.230Z",
+        "checks": [
+          "inside the CLI's own folder for this run",
+          "no symlink or junction",
+          "regular file of a sane size",
+          "newer than the run",
+          "magic bytes",
+          "decodes",
+          "exactly one output",
+          "exclusive copy with matching sha256"
+        ],
+        "finalAnswerNamesFile": true
+      },
+      "artifact": {
+        "path": "generated.png",
+        "sha256": "5bafb87a1c3ac907bcb258e9c872f442f1caaf27080fe2bdaa415d303879af7e",
+        "bytes": 1731397,
+        "format": "PNG",
+        "size": [
+          1536,
+          1024
+        ]
+      }
+    },
+    {
+      "schemaVersion": 2,
+      "provider": "openai",
+      "kind": "image",
+      "route": "codex-cli",
+      "requestedModel": "codex-image_gen",
+      "options": {
+        "tool": "image_gen"
+      },
+      "promptSha256": "3682e120d1227f2de95e16ad2b3b6a435b6ed1bd6aad93c65d02929b153a658f",
+      "references": [
+        {
+          "sha256": "b9d184ffe4d1e08bff65a9ffb4d1596c3d6292e75d09995f4929e5f209477081",
+          "bytes": 80702
+        },
+        {
+          "sha256": "8d40aacefe8f98965a1b6e431f90ee86ec2bd7d48605c4e956ff61f2e95f4bc8",
+          "bytes": 1014492
+        },
+        {
+          "sha256": "307d7b04dec1a4a08be306d0f96164d64d9214fe92119165983f1315e748050c",
+          "bytes": 1571666
+        }
+      ],
+      "fingerprint": "b927635248ab455cc15d75cd71e55e9e52e67eb5b5b23da034bb39247d8b6e62",
+      "estimate": {
+        "usd": 0.0,
+        "currency": "USD",
+        "pricesVersion": "2026-10-06",
+        "items": [],
+        "basis": "subscription quota call: no per-call USD price; counted by call caps"
+      },
+      "consent": {
+        "provider": "openai",
+        "model": "codex-image_gen",
+        "calls": 1,
+        "estimateUsd": 0.0,
+        "route": "codex-cli",
+        "quota": true,
+        "account": "the user's own Codex sign-in (ChatGPT)",
+        "note": "uses the subscription quota of that sign-in, never API credit"
+      },
+      "artSource": "host_image",
+      "execution": "execute",
+      "status": "done",
+      "receipt": {
+        "startedAt": "2026-10-16T13:39:47.752Z",
+        "submittedAt": "2026-10-16T13:39:47.762Z",
+        "completedAt": "2026-10-16T13:41:00.648Z",
+        "wallMs": 72896,
+        "providerMs": 72859,
+        "attempt": 1,
+        "purpose": "route_media image",
+        "toolVersion": "cli_media/0.4.0",
+        "outcomeCode": "ok"
+      },
+      "ledger": {
+        "projectDir": "../../../..",
+        "reservationId": "d13d4849816c4fe1813d48e83b5a82f5",
+        "status": "done"
+      },
+      "cliRun": {
+        "tool": "codex",
+        "runId": "ec0fe00f854d4d919545e6328dc47e91",
+        "cwd": "<tmp>/forge-cli-ec0fe00f854d-1a72c46c",
+        "startedAt": "2026-10-16T13:39:47.752Z",
+        "version": "0.163.0-alpha.10.2",
+        "versionText": "codex-cli 0.163.0-alpha.10.2",
+        "recipe": "codex-exec-imagegen/1",
+        "home": "CODEX_HOME",
+        "verifiedBefore": true,
+        "threadId": "01a144f0-b47d-7830-8ed1-7ae73e151a7f"
+      },
+      "adoption": {
+        "method": "native-run-folder",
+        "source": "CODEX_HOME/generated_images/01a144f0-b47d-7830-8ed1-7ae73e151a7f/exec-ee66dbe2-bfa2-4736-bf31-580ba40c8038.png",
+        "sourceSha256": "af7a975020cc395c0b04ee7d7733aaf2401574d37768a5274c9c41447545e14b",
+        "sourceMtime": "2026-10-16T13:40:48Z",
+        "freshAfter": "2026-10-16T13:39:47.764Z",
+        "checks": [
+          "inside the CLI's own folder for this run",
+          "no symlink or junction",
+          "regular file of a sane size",
+          "newer than the run",
+          "magic bytes",
+          "decodes",
+          "exactly one output",
+          "exclusive copy with matching sha256"
+        ],
+        "finalAnswerNamesFile": true
+      },
+      "artifact": {
+        "path": "generated.png",
+        "sha256": "af7a975020cc395c0b04ee7d7733aaf2401574d37768a5274c9c41447545e14b",
+        "bytes": 1466250,
+        "format": "PNG",
+        "size": [
+          1086,
+          1448
+        ]
+      }
+    }
+  ],
+  "qa": {
+    "prototypes\\environment-adapt-v01\\art\\rocks-spill\\sheet-qc.json": {
+      "schema": "generate2dsprite.sheet_qc.v1",
+      "check": "spill",
+      "status": "warn",
+      "method": "8-connected components at alpha > 127 (solid) and > 16 (visible edge) on the raw sheet; a component belongs to the cell holding most of its pixels; cells are forge_core.rounded_grid_boxes; specks are forge_core.alpha_hygiene('both') counts",
+      "notProven": [
+        "Whether an overhang is intended art such as a tail or weapon trail.",
+        "Whether a cell's pose, anatomy or identity is correct; run sheet_qc.py frames and look at the frames.",
+        "That a different crop or slicing method would be safe: only the nominal grid was measured."
+      ],
+      "checks": [
+        {
+          "id": "cross_cell_components",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "cells": [],
+          "note": "solid parts crossing a cell line are cut or misassigned when the sheet is sliced"
+        },
+        {
+          "id": "cross_cell_visible",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "note": "the same test on the visible edge (alpha > 16)"
+        },
+        {
+          "id": "sheet_edge",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "note": "art touching the sheet border was cut by the image edge"
+        },
+        {
+          "id": "empty_cells",
+          "status": "pass",
+          "value": [],
+          "threshold": [],
+          "note": "the first 12 cells must each hold a subject"
+        },
+        {
+          "id": "boundary_band",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "note": "solid pixels within 7 px of a cell line; a different crop or rounding can cut them"
+        },
+        {
+          "id": "safe_frame",
+          "status": "warn",
+          "value": 8,
+          "threshold": 0,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              2
+            ]
+          ],
+          "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+        },
+        {
+          "id": "faint_specks",
+          "status": "pass",
+          "value": {
+            "floor_px": 0,
+            "detached_components": 0
+          },
+          "threshold": 0,
+          "note": "alpha haze and detached specks; process removes them with --alpha-hygiene both"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "../rocks-01/generated.png",
+          "sha256": "af7a975020cc395c0b04ee7d7733aaf2401574d37768a5274c9c41447545e14b",
+          "bytes": 1466250
+        }
+      ],
+      "outputs": [
+        {
+          "path": "spill-overlay.png",
+          "sha256": "69178fee339e4763ad3a84ad081890ce50fa69b73a7470fa42256124bebb758c",
+          "bytes": 544219
+        }
+      ],
+      "tool": {
+        "name": "sheet_qc.py",
+        "version": "0.4.0"
+      },
+      "image": {
+        "sha256": "af7a975020cc395c0b04ee7d7733aaf2401574d37768a5274c9c41447545e14b",
+        "size": [
+          1086,
+          1448
+        ],
+        "source_mode": "RGB",
+        "bit_depth": 8,
+        "conversion": "RGB -> RGBA",
+        "keyed": {
+          "key": "magenta",
+          "quality": "soft",
+          "key_rgb": [
+            252,
+            4,
+            251
+          ],
+          "opaque_key_px": 0
+        }
+      },
+      "grid": {
+        "rows": 4,
+        "cols": 3,
+        "cell_boxes": [
+          [
+            0,
+            0,
+            362,
+            362
+          ],
+          [
+            362,
+            0,
+            724,
+            362
+          ],
+          [
+            724,
+            0,
+            1086,
+            362
+          ],
+          [
+            0,
+            362,
+            362,
+            724
+          ],
+          [
+            362,
+            362,
+            724,
+            724
+          ],
+          [
+            724,
+            362,
+            1086,
+            724
+          ],
+          [
+            0,
+            724,
+            362,
+            1086
+          ],
+          [
+            362,
+            724,
+            724,
+            1086
+          ],
+          [
+            724,
+            724,
+            1086,
+            1086
+          ],
+          [
+            0,
+            1086,
+            362,
+            1448
+          ],
+          [
+            362,
+            1086,
+            724,
+            1448
+          ],
+          [
+            724,
+            1086,
+            1086,
+            1448
+          ]
+        ],
+        "rounding": "half-up (forge_core.rounded_grid_boxes)"
+      },
+      "params": {
+        "alpha_threshold": 127,
+        "edge_threshold": 16,
+        "min_area": 64,
+        "band_px": 7,
+        "safe_margin": 0.15,
+        "expect": 12,
+        "connectivity": 8
+      },
+      "cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "index": 0,
+          "box": [
+            0,
+            0,
+            362,
+            362
+          ],
+          "owned_components": 1,
+          "owned_area": 24553,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            36,
+            171,
+            325,
+            288
+          ],
+          "margins_px": {
+            "left": 36,
+            "top": 171,
+            "right": 37,
+            "bottom": 74
+          },
+          "margins_frac": {
+            "left": 0.0994,
+            "top": 0.4724,
+            "right": 0.1022,
+            "bottom": 0.2044
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "index": 1,
+          "box": [
+            362,
+            0,
+            724,
+            362
+          ],
+          "owned_components": 1,
+          "owned_area": 31327,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            432,
+            109,
+            662,
+            291
+          ],
+          "margins_px": {
+            "left": 70,
+            "top": 109,
+            "right": 62,
+            "bottom": 71
+          },
+          "margins_frac": {
+            "left": 0.1934,
+            "top": 0.3011,
+            "right": 0.1713,
+            "bottom": 0.1961
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": true
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "index": 2,
+          "box": [
+            724,
+            0,
+            1086,
+            362
+          ],
+          "owned_components": 1,
+          "owned_area": 30249,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            765,
+            121,
+            1034,
+            294
+          ],
+          "margins_px": {
+            "left": 41,
+            "top": 121,
+            "right": 52,
+            "bottom": 68
+          },
+          "margins_frac": {
+            "left": 0.1133,
+            "top": 0.3343,
+            "right": 0.1436,
+            "bottom": 0.1878
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "index": 3,
+          "box": [
+            0,
+            362,
+            362,
+            724
+          ],
+          "owned_components": 1,
+          "owned_area": 37945,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            31,
+            486,
+            326,
+            659
+          ],
+          "margins_px": {
+            "left": 31,
+            "top": 124,
+            "right": 36,
+            "bottom": 65
+          },
+          "margins_frac": {
+            "left": 0.0856,
+            "top": 0.3425,
+            "right": 0.0994,
+            "bottom": 0.1796
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "index": 4,
+          "box": [
+            362,
+            362,
+            724,
+            724
+          ],
+          "owned_components": 1,
+          "owned_area": 33664,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            455,
+            426,
+            650,
+            659
+          ],
+          "margins_px": {
+            "left": 93,
+            "top": 64,
+            "right": 74,
+            "bottom": 65
+          },
+          "margins_frac": {
+            "left": 0.2569,
+            "top": 0.1768,
+            "right": 0.2044,
+            "bottom": 0.1796
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": true
+        },
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "index": 5,
+          "box": [
+            724,
+            362,
+            1086,
+            724
+          ],
+          "owned_components": 1,
+          "owned_area": 21665,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            826,
+            520,
+            1044,
+            665
+          ],
+          "margins_px": {
+            "left": 102,
+            "top": 158,
+            "right": 42,
+            "bottom": 59
+          },
+          "margins_frac": {
+            "left": 0.2818,
+            "top": 0.4365,
+            "right": 0.116,
+            "bottom": 0.163
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "index": 6,
+          "box": [
+            0,
+            724,
+            362,
+            1086
+          ],
+          "owned_components": 1,
+          "owned_area": 24341,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            36,
+            895,
+            325,
+            1009
+          ],
+          "margins_px": {
+            "left": 36,
+            "top": 171,
+            "right": 37,
+            "bottom": 77
+          },
+          "margins_frac": {
+            "left": 0.0994,
+            "top": 0.4724,
+            "right": 0.1022,
+            "bottom": 0.2127
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "index": 7,
+          "box": [
+            362,
+            724,
+            724,
+            1086
+          ],
+          "owned_components": 1,
+          "owned_area": 30900,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            434,
+            833,
+            662,
+            1014
+          ],
+          "margins_px": {
+            "left": 72,
+            "top": 109,
+            "right": 62,
+            "bottom": 72
+          },
+          "margins_frac": {
+            "left": 0.1989,
+            "top": 0.3011,
+            "right": 0.1713,
+            "bottom": 0.1989
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": true
+        },
+        {
+          "cell": [
+            2,
+            2
+          ],
+          "index": 8,
+          "box": [
+            724,
+            724,
+            1086,
+            1086
+          ],
+          "owned_components": 1,
+          "owned_area": 30011,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            765,
+            845,
+            1034,
+            1018
+          ],
+          "margins_px": {
+            "left": 41,
+            "top": 121,
+            "right": 52,
+            "bottom": 68
+          },
+          "margins_frac": {
+            "left": 0.1133,
+            "top": 0.3343,
+            "right": 0.1436,
+            "bottom": 0.1878
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            3,
+            0
+          ],
+          "index": 9,
+          "box": [
+            0,
+            1086,
+            362,
+            1448
+          ],
+          "owned_components": 1,
+          "owned_area": 37303,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            31,
+            1211,
+            326,
+            1383
+          ],
+          "margins_px": {
+            "left": 31,
+            "top": 125,
+            "right": 36,
+            "bottom": 65
+          },
+          "margins_frac": {
+            "left": 0.0856,
+            "top": 0.3453,
+            "right": 0.0994,
+            "bottom": 0.1796
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            3,
+            1
+          ],
+          "index": 10,
+          "box": [
+            362,
+            1086,
+            724,
+            1448
+          ],
+          "owned_components": 1,
+          "owned_area": 32951,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            455,
+            1149,
+            646,
+            1383
+          ],
+          "margins_px": {
+            "left": 93,
+            "top": 63,
+            "right": 78,
+            "bottom": 65
+          },
+          "margins_frac": {
+            "left": 0.2569,
+            "top": 0.174,
+            "right": 0.2155,
+            "bottom": 0.1796
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": true
+        },
+        {
+          "cell": [
+            3,
+            2
+          ],
+          "index": 11,
+          "box": [
+            724,
+            1086,
+            1086,
+            1448
+          ],
+          "owned_components": 1,
+          "owned_area": 21338,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            827,
+            1244,
+            1044,
+            1387
+          ],
+          "margins_px": {
+            "left": 103,
+            "top": 158,
+            "right": 42,
+            "bottom": 61
+          },
+          "margins_frac": {
+            "left": 0.2845,
+            "top": 0.4365,
+            "right": 0.116,
+            "bottom": 0.1685
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        }
+      ],
+      "crossing_components": [],
+      "visible_crossing_components": [],
+      "boundary_band": [
+        {
+          "axis": "x",
+          "at": 362,
+          "solid_px": 0
+        },
+        {
+          "axis": "x",
+          "at": 724,
+          "solid_px": 0
+        },
+        {
+          "axis": "y",
+          "at": 362,
+          "solid_px": 0
+        },
+        {
+          "axis": "y",
+          "at": 724,
+          "solid_px": 0
+        },
+        {
+          "axis": "y",
+          "at": 1086,
+          "solid_px": 0
+        }
+      ],
+      "specks": {
+        "floor_px": 0,
+        "detached_px": 0,
+        "detached_components": 0,
+        "max_removed_alpha": 0,
+        "soft_alpha_histogram": {
+          "1-4": 0,
+          "5-15": 0,
+          "16-63": 453,
+          "64-127": 3455
+        }
+      }
+    },
+    "prototypes\\environment-adapt-v01\\art\\roots-contact-spill\\sheet-qc.json": {
+      "schema": "generate2dsprite.sheet_qc.v1",
+      "check": "spill",
+      "status": "warn",
+      "method": "8-connected components at alpha > 127 (solid) and > 16 (visible edge) on the raw sheet; a component belongs to the cell holding most of its pixels; cells are forge_core.rounded_grid_boxes; specks are forge_core.alpha_hygiene('both') counts",
+      "notProven": [
+        "Whether an overhang is intended art such as a tail or weapon trail.",
+        "Whether a cell's pose, anatomy or identity is correct; run sheet_qc.py frames and look at the frames.",
+        "That a different crop or slicing method would be safe: only the nominal grid was measured."
+      ],
+      "checks": [
+        {
+          "id": "cross_cell_components",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "cells": [],
+          "note": "solid parts crossing a cell line are cut or misassigned when the sheet is sliced"
+        },
+        {
+          "id": "cross_cell_visible",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "note": "the same test on the visible edge (alpha > 16)"
+        },
+        {
+          "id": "sheet_edge",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "note": "art touching the sheet border was cut by the image edge"
+        },
+        {
+          "id": "empty_cells",
+          "status": "pass",
+          "value": [],
+          "threshold": [],
+          "note": "the first 6 cells must each hold a subject"
+        },
+        {
+          "id": "boundary_band",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "note": "solid pixels within 10 px of a cell line; a different crop or rounding can cut them"
+        },
+        {
+          "id": "safe_frame",
+          "status": "warn",
+          "value": 6,
+          "threshold": 0,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+        },
+        {
+          "id": "faint_specks",
+          "status": "pass",
+          "value": {
+            "floor_px": 0,
+            "detached_components": 0
+          },
+          "threshold": 0,
+          "note": "alpha haze and detached specks; process removes them with --alpha-hygiene both"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "../roots-contact-source.png",
+          "sha256": "65bf3fc2cac52279a59509fa9ced44bc7d832048e58e0d10ebb0921949c0a51d",
+          "bytes": 138097
+        }
+      ],
+      "outputs": [
+        {
+          "path": "spill-overlay.png",
+          "sha256": "de6cb5dab541bcbe4cc5f205b0b3d098cf0597a9f1b38b5c7cfc59d4eb5151ee",
+          "bytes": 116150
+        }
+      ],
+      "tool": {
+        "name": "sheet_qc.py",
+        "version": "0.4.0"
+      },
+      "image": {
+        "sha256": "65bf3fc2cac52279a59509fa9ced44bc7d832048e58e0d10ebb0921949c0a51d",
+        "size": [
+          1536,
+          1024
+        ],
+        "source_mode": "RGBA",
+        "bit_depth": 8,
+        "conversion": "none",
+        "keyed": null
+      },
+      "grid": {
+        "rows": 2,
+        "cols": 3,
+        "cell_boxes": [
+          [
+            0,
+            0,
+            512,
+            512
+          ],
+          [
+            512,
+            0,
+            1024,
+            512
+          ],
+          [
+            1024,
+            0,
+            1536,
+            512
+          ],
+          [
+            0,
+            512,
+            512,
+            1024
+          ],
+          [
+            512,
+            512,
+            1024,
+            1024
+          ],
+          [
+            1024,
+            512,
+            1536,
+            1024
+          ]
+        ],
+        "rounding": "half-up (forge_core.rounded_grid_boxes)"
+      },
+      "params": {
+        "alpha_threshold": 127,
+        "edge_threshold": 16,
+        "min_area": 64,
+        "band_px": 10,
+        "safe_margin": 0.15,
+        "expect": 6,
+        "connectivity": 8
+      },
+      "cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "index": 0,
+          "box": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "owned_components": 1,
+          "owned_area": 7197,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            170,
+            384,
+            293,
+            488
+          ],
+          "margins_px": {
+            "left": 170,
+            "top": 384,
+            "right": 219,
+            "bottom": 24
+          },
+          "margins_frac": {
+            "left": 0.332,
+            "top": 0.75,
+            "right": 0.4277,
+            "bottom": 0.0469
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "index": 1,
+          "box": [
+            512,
+            0,
+            1024,
+            512
+          ],
+          "owned_components": 2,
+          "owned_area": 12286,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            649,
+            384,
+            865,
+            489
+          ],
+          "margins_px": {
+            "left": 137,
+            "top": 384,
+            "right": 159,
+            "bottom": 23
+          },
+          "margins_frac": {
+            "left": 0.2676,
+            "top": 0.75,
+            "right": 0.3105,
+            "bottom": 0.0449
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "index": 2,
+          "box": [
+            1024,
+            0,
+            1536,
+            512
+          ],
+          "owned_components": 1,
+          "owned_area": 8357,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            1213,
+            384,
+            1353,
+            489
+          ],
+          "margins_px": {
+            "left": 189,
+            "top": 384,
+            "right": 183,
+            "bottom": 23
+          },
+          "margins_frac": {
+            "left": 0.3691,
+            "top": 0.75,
+            "right": 0.3574,
+            "bottom": 0.0449
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "index": 3,
+          "box": [
+            0,
+            512,
+            512,
+            1024
+          ],
+          "owned_components": 1,
+          "owned_area": 5069,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            168,
+            896,
+            291,
+            975
+          ],
+          "margins_px": {
+            "left": 168,
+            "top": 384,
+            "right": 221,
+            "bottom": 49
+          },
+          "margins_frac": {
+            "left": 0.3281,
+            "top": 0.75,
+            "right": 0.4316,
+            "bottom": 0.0957
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "index": 4,
+          "box": [
+            512,
+            512,
+            1024,
+            1024
+          ],
+          "owned_components": 1,
+          "owned_area": 8509,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            694,
+            896,
+            860,
+            975
+          ],
+          "margins_px": {
+            "left": 182,
+            "top": 384,
+            "right": 164,
+            "bottom": 49
+          },
+          "margins_frac": {
+            "left": 0.3555,
+            "top": 0.75,
+            "right": 0.3203,
+            "bottom": 0.0957
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "index": 5,
+          "box": [
+            1024,
+            512,
+            1536,
+            1024
+          ],
+          "owned_components": 1,
+          "owned_area": 5833,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            1211,
+            896,
+            1344,
+            975
+          ],
+          "margins_px": {
+            "left": 187,
+            "top": 384,
+            "right": 192,
+            "bottom": 49
+          },
+          "margins_frac": {
+            "left": 0.3652,
+            "top": 0.75,
+            "right": 0.375,
+            "bottom": 0.0957
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        }
+      ],
+      "crossing_components": [],
+      "visible_crossing_components": [],
+      "boundary_band": [
+        {
+          "axis": "x",
+          "at": 512,
+          "solid_px": 0
+        },
+        {
+          "axis": "x",
+          "at": 1024,
+          "solid_px": 0
+        },
+        {
+          "axis": "y",
+          "at": 512,
+          "solid_px": 0
+        }
+      ],
+      "specks": {
+        "floor_px": 0,
+        "detached_px": 0,
+        "detached_components": 0,
+        "max_removed_alpha": 0,
+        "soft_alpha_histogram": {
+          "1-4": 0,
+          "5-15": 0,
+          "16-63": 193,
+          "64-127": 923
+        }
+      }
+    },
+    "prototypes\\environment-adapt-v01\\art\\trees-spill\\sheet-qc.json": {
+      "schema": "generate2dsprite.sheet_qc.v1",
+      "check": "spill",
+      "status": "fail",
+      "method": "8-connected components at alpha > 127 (solid) and > 16 (visible edge) on the raw sheet; a component belongs to the cell holding most of its pixels; cells are forge_core.rounded_grid_boxes; specks are forge_core.alpha_hygiene('both') counts",
+      "notProven": [
+        "Whether an overhang is intended art such as a tail or weapon trail.",
+        "Whether a cell's pose, anatomy or identity is correct; run sheet_qc.py frames and look at the frames.",
+        "That a different crop or slicing method would be safe: only the nominal grid was measured."
+      ],
+      "checks": [
+        {
+          "id": "cross_cell_components",
+          "status": "fail",
+          "value": 2,
+          "threshold": 0,
+          "cells": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "note": "solid parts crossing a cell line are cut or misassigned when the sheet is sliced"
+        },
+        {
+          "id": "cross_cell_visible",
+          "status": "fail",
+          "value": 2,
+          "threshold": 0,
+          "note": "the same test on the visible edge (alpha > 16)"
+        },
+        {
+          "id": "sheet_edge",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0,
+          "note": "art touching the sheet border was cut by the image edge"
+        },
+        {
+          "id": "empty_cells",
+          "status": "pass",
+          "value": [],
+          "threshold": [],
+          "note": "the first 6 cells must each hold a subject"
+        },
+        {
+          "id": "boundary_band",
+          "status": "warn",
+          "value": 1618,
+          "threshold": 0,
+          "note": "solid pixels within 10 px of a cell line; a different crop or rounding can cut them"
+        },
+        {
+          "id": "safe_frame",
+          "status": "warn",
+          "value": 6,
+          "threshold": 0,
+          "cells": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+        },
+        {
+          "id": "faint_specks",
+          "status": "pass",
+          "value": {
+            "floor_px": 0,
+            "detached_components": 0
+          },
+          "threshold": 0,
+          "note": "alpha haze and detached specks; process removes them with --alpha-hygiene both"
+        }
+      ],
+      "inputs": [
+        {
+          "path": "../trees-01/generated.png",
+          "sha256": "5bafb87a1c3ac907bcb258e9c872f442f1caaf27080fe2bdaa415d303879af7e",
+          "bytes": 1731397
+        }
+      ],
+      "outputs": [
+        {
+          "path": "spill-overlay.png",
+          "sha256": "0225e909913836deb3ada7feea2f56030f243e522f888a261d2bb79271bc0ea5",
+          "bytes": 927956
+        }
+      ],
+      "tool": {
+        "name": "sheet_qc.py",
+        "version": "0.4.0"
+      },
+      "image": {
+        "sha256": "5bafb87a1c3ac907bcb258e9c872f442f1caaf27080fe2bdaa415d303879af7e",
+        "size": [
+          1536,
+          1024
+        ],
+        "source_mode": "RGB",
+        "bit_depth": 8,
+        "conversion": "RGB -> RGBA",
+        "keyed": {
+          "key": "magenta",
+          "quality": "soft",
+          "key_rgb": [
+            252,
+            3,
+            251
+          ],
+          "opaque_key_px": 0
+        }
+      },
+      "grid": {
+        "rows": 2,
+        "cols": 3,
+        "cell_boxes": [
+          [
+            0,
+            0,
+            512,
+            512
+          ],
+          [
+            512,
+            0,
+            1024,
+            512
+          ],
+          [
+            1024,
+            0,
+            1536,
+            512
+          ],
+          [
+            0,
+            512,
+            512,
+            1024
+          ],
+          [
+            512,
+            512,
+            1024,
+            1024
+          ],
+          [
+            1024,
+            512,
+            1536,
+            1024
+          ]
+        ],
+        "rounding": "half-up (forge_core.rounded_grid_boxes)"
+      },
+      "params": {
+        "alpha_threshold": 127,
+        "edge_threshold": 16,
+        "min_area": 64,
+        "band_px": 10,
+        "safe_margin": 0.15,
+        "expect": 6,
+        "connectivity": 8
+      },
+      "cells": [
+        {
+          "cell": [
+            0,
+            0
+          ],
+          "index": 0,
+          "box": [
+            0,
+            0,
+            512,
+            512
+          ],
+          "owned_components": 1,
+          "owned_area": 59241,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            109,
+            46,
+            363,
+            488
+          ],
+          "margins_px": {
+            "left": 109,
+            "top": 46,
+            "right": 149,
+            "bottom": 24
+          },
+          "margins_frac": {
+            "left": 0.2129,
+            "top": 0.0898,
+            "right": 0.291,
+            "bottom": 0.0469
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "index": 1,
+          "box": [
+            512,
+            0,
+            1024,
+            512
+          ],
+          "owned_components": 1,
+          "owned_area": 120883,
+          "components_over_line": 1,
+          "pixels_over_line": 145,
+          "overhang_px": 6,
+          "visible_pixels_over_line": 168,
+          "visible_overhang_px": 6,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            532,
+            62,
+            1030,
+            489
+          ],
+          "margins_px": {
+            "left": 20,
+            "top": 62,
+            "right": -6,
+            "bottom": 23
+          },
+          "margins_frac": {
+            "left": 0.0391,
+            "top": 0.1211,
+            "right": -0.0117,
+            "bottom": 0.0449
+          },
+          "cut_by_cell_edge": true,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "index": 2,
+          "box": [
+            1024,
+            0,
+            1536,
+            512
+          ],
+          "owned_components": 1,
+          "owned_area": 72193,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [
+            {
+              "label": 2,
+              "owner_cell": [
+                0,
+                1
+              ],
+              "pixels_in_this_cell": 145
+            }
+          ],
+          "expected": true,
+          "owned_bbox": [
+            1110,
+            85,
+            1498,
+            489
+          ],
+          "margins_px": {
+            "left": 86,
+            "top": 85,
+            "right": 38,
+            "bottom": 23
+          },
+          "margins_frac": {
+            "left": 0.168,
+            "top": 0.166,
+            "right": 0.0742,
+            "bottom": 0.0449
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "index": 3,
+          "box": [
+            0,
+            512,
+            512,
+            1024
+          ],
+          "owned_components": 1,
+          "owned_area": 58723,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            110,
+            537,
+            363,
+            975
+          ],
+          "margins_px": {
+            "left": 110,
+            "top": 25,
+            "right": 149,
+            "bottom": 49
+          },
+          "margins_frac": {
+            "left": 0.2148,
+            "top": 0.0488,
+            "right": 0.291,
+            "bottom": 0.0957
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            1
+          ],
+          "index": 4,
+          "box": [
+            512,
+            512,
+            1024,
+            1024
+          ],
+          "owned_components": 1,
+          "owned_area": 120009,
+          "components_over_line": 1,
+          "pixels_over_line": 155,
+          "overhang_px": 6,
+          "visible_pixels_over_line": 186,
+          "visible_overhang_px": 6,
+          "intruders": [],
+          "expected": true,
+          "owned_bbox": [
+            532,
+            553,
+            1030,
+            975
+          ],
+          "margins_px": {
+            "left": 20,
+            "top": 41,
+            "right": -6,
+            "bottom": 49
+          },
+          "margins_frac": {
+            "left": 0.0391,
+            "top": 0.0801,
+            "right": -0.0117,
+            "bottom": 0.0957
+          },
+          "cut_by_cell_edge": true,
+          "inside_safe_frame": false
+        },
+        {
+          "cell": [
+            1,
+            2
+          ],
+          "index": 5,
+          "box": [
+            1024,
+            512,
+            1536,
+            1024
+          ],
+          "owned_components": 1,
+          "owned_area": 71291,
+          "components_over_line": 0,
+          "pixels_over_line": 0,
+          "overhang_px": 0,
+          "visible_pixels_over_line": 0,
+          "visible_overhang_px": 0,
+          "intruders": [
+            {
+              "label": 5,
+              "owner_cell": [
+                1,
+                1
+              ],
+              "pixels_in_this_cell": 155
+            }
+          ],
+          "expected": true,
+          "owned_bbox": [
+            1109,
+            576,
+            1497,
+            975
+          ],
+          "margins_px": {
+            "left": 85,
+            "top": 64,
+            "right": 39,
+            "bottom": 49
+          },
+          "margins_frac": {
+            "left": 0.166,
+            "top": 0.125,
+            "right": 0.0762,
+            "bottom": 0.0957
+          },
+          "cut_by_cell_edge": false,
+          "inside_safe_frame": false
+        }
+      ],
+      "crossing_components": [
+        {
+          "label": 2,
+          "area": 120883,
+          "bbox": [
+            532,
+            62,
+            1030,
+            489
+          ],
+          "owner_cell": [
+            0,
+            1
+          ],
+          "pixels_per_cell": {
+            "1": 120738,
+            "2": 145
+          },
+          "pixels_over_line": 145,
+          "overhang_px": 6,
+          "overhang_sides": {
+            "left": 0,
+            "top": 0,
+            "right": 6,
+            "bottom": 0
+          },
+          "touches_sheet_edge": false
+        },
+        {
+          "label": 5,
+          "area": 120009,
+          "bbox": [
+            532,
+            553,
+            1030,
+            975
+          ],
+          "owner_cell": [
+            1,
+            1
+          ],
+          "pixels_per_cell": {
+            "4": 119854,
+            "5": 155
+          },
+          "pixels_over_line": 155,
+          "overhang_px": 6,
+          "overhang_sides": {
+            "left": 0,
+            "top": 0,
+            "right": 6,
+            "bottom": 0
+          },
+          "touches_sheet_edge": false
+        }
+      ],
+      "visible_crossing_components": [
+        {
+          "label": 2,
+          "area": 122060,
+          "bbox": [
+            531,
+            62,
+            1030,
+            490
+          ],
+          "owner_cell": [
+            0,
+            1
+          ],
+          "pixels_per_cell": {
+            "1": 121892,
+            "2": 168
+          },
+          "pixels_over_line": 168,
+          "overhang_px": 6,
+          "overhang_sides": {
+            "left": 0,
+            "top": 0,
+            "right": 6,
+            "bottom": 0
+          },
+          "touches_sheet_edge": false
+        },
+        {
+          "label": 5,
+          "area": 121188,
+          "bbox": [
+            531,
+            553,
+            1030,
+            975
+          ],
+          "owner_cell": [
+            1,
+            1
+          ],
+          "pixels_per_cell": {
+            "4": 121002,
+            "5": 186
+          },
+          "pixels_over_line": 186,
+          "overhang_px": 6,
+          "overhang_sides": {
+            "left": 0,
+            "top": 0,
+            "right": 6,
+            "bottom": 0
+          },
+          "touches_sheet_edge": false
+        }
+      ],
+      "boundary_band": [
+        {
+          "axis": "x",
+          "at": 512,
+          "solid_px": 0
+        },
+        {
+          "axis": "x",
+          "at": 1024,
+          "solid_px": 1618
+        },
+        {
+          "axis": "y",
+          "at": 512,
+          "solid_px": 0
+        }
+      ],
+      "specks": {
+        "floor_px": 0,
+        "detached_px": 0,
+        "detached_components": 0,
+        "max_removed_alpha": 0,
+        "soft_alpha_histogram": {
+          "1-4": 0,
+          "5-15": 0,
+          "16-63": 1327,
+          "64-127": 5098
+        }
+      }
+    },
+    "prototypes\\environment-adapt-v01\\art\\rocks-processed\\pipeline-meta.json": {
+      "status": "pass",
+      "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+      "notProven": [
+        "pose quality, anatomy, identity and facing",
+        "loop seam, phase order and timing at game size",
+        "colour fidelity of keyed edges beyond the matte_qa residue counts",
+        "that the subject is complete where it does not touch a cell edge"
+      ],
+      "checks": [
+        {
+          "id": "empty_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "paste_clamped_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "output_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "source_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "body_scale_cv",
+          "status": "skipped",
+          "value": 0.2113094400567233,
+          "threshold": null
+        },
+        {
+          "id": "anchor_y_std",
+          "status": "skipped",
+          "value": 0.014398246566401368,
+          "threshold": null
+        },
+        {
+          "id": "key_residue",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0
+        },
+        {
+          "id": "key_ring_spill",
+          "status": "pass",
+          "value": 0.0,
+          "threshold": 0.01
+        }
+      ],
+      "inputs": [
+        {
+          "path": "raw-sheet.png",
+          "sha256": "af7a975020cc395c0b04ee7d7733aaf2401574d37768a5274c9c41447545e14b",
+          "bytes": 1466250
+        }
+      ],
+      "outputs": [
+        {
+          "path": "sheet-1.png",
+          "sha256": "7eee36713d3349c3f45104b1c16dc36d5d0272cd3aadc06d8ddfa4d9e1326d87",
+          "bytes": 81046
+        },
+        {
+          "path": "sheet-2.png",
+          "sha256": "a1b2d639e1057770ce51231ddc176f3086fba67aa5fc9c0ce540ec39f5621d52",
+          "bytes": 95100
+        },
+        {
+          "path": "sheet-3.png",
+          "sha256": "6de221364012a02c3c8403f0da08293e529770869a358adcb04c59727db373cf",
+          "bytes": 94937
+        },
+        {
+          "path": "sheet-4.png",
+          "sha256": "37efb20260ce12ea22b84d1f0e214b1b7e18d053490bd88026f58c3cb52c6a3c",
+          "bytes": 109545
+        },
+        {
+          "path": "sheet-5.png",
+          "sha256": "debc3469f9202b09a2ee730a710bc6a7fc5b47b5557db7137a2e8e939f6e3507",
+          "bytes": 99640
+        },
+        {
+          "path": "sheet-6.png",
+          "sha256": "c1ee0f32686823237583aa2f961a8fcfa0ee8df408342fef529ed449d0b73f8b",
+          "bytes": 71907
+        },
+        {
+          "path": "sheet-7.png",
+          "sha256": "ab5cff973142a352b8d1c6d90aa93d3b778725abcac3d4be9a38d08c27181fbf",
+          "bytes": 73836
+        },
+        {
+          "path": "sheet-8.png",
+          "sha256": "c7d331fa60644431fecbac4f753858db7675f8cf59677e708c75643a37dac350",
+          "bytes": 88544
+        },
+        {
+          "path": "sheet-9.png",
+          "sha256": "1f200c4621ef63fb28c5d676287f845c2a4275fe90039713c6d5da2889e72b53",
+          "bytes": 87798
+        },
+        {
+          "path": "sheet-10.png",
+          "sha256": "9aad3e4e00a9d8a1a84eec4104e72e1e14f77b87b30af6f2af9b866dbfe566f5",
+          "bytes": 101337
+        },
+        {
+          "path": "sheet-11.png",
+          "sha256": "91d2f3d839dbad91f707c5c5ed064fcf6ea34c0451adffe658be3b4a4a8b7188",
+          "bytes": 90590
+        },
+        {
+          "path": "sheet-12.png",
+          "sha256": "cfe1b19560dfc626c0b90fe75e44c4db60730a46603cf6f1afe43191b52e125a",
+          "bytes": 66611
+        },
+        {
+          "path": "sheet-transparent.png",
+          "sha256": "9f033f6bdc937bbc4d1f89426e6cf8633815de4fdce0d6253883c56dda12fcaf",
+          "bytes": 1051254
+        }
+      ],
+      "tool": {
+        "name": "generate2dsprite.py process",
+        "version": "0.4.0"
+      }
+    },
+    "prototypes\\environment-adapt-v01\\art\\trees-processed\\pipeline-meta.json": {
+      "status": "warn",
+      "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+      "notProven": [
+        "pose quality, anatomy, identity and facing",
+        "loop seam, phase order and timing at game size",
+        "colour fidelity of keyed edges beyond the matte_qa residue counts",
+        "that the subject is complete where it does not touch a cell edge"
+      ],
+      "checks": [
+        {
+          "id": "empty_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "paste_clamped_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "output_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "source_edge_touch_frames",
+          "status": "warn",
+          "value": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "threshold": []
+        },
+        {
+          "id": "body_scale_cv",
+          "status": "skipped",
+          "value": 0.038301557495866285,
+          "threshold": null
+        },
+        {
+          "id": "anchor_y_std",
+          "status": "skipped",
+          "value": 0.02572438554704472,
+          "threshold": null
+        },
+        {
+          "id": "key_residue",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0
+        },
+        {
+          "id": "key_ring_spill",
+          "status": "pass",
+          "value": 0.0,
+          "threshold": 0.01
+        }
+      ],
+      "inputs": [
+        {
+          "path": "raw-sheet.png",
+          "sha256": "5bafb87a1c3ac907bcb258e9c872f442f1caaf27080fe2bdaa415d303879af7e",
+          "bytes": 1731397
+        }
+      ],
+      "outputs": [
+        {
+          "path": "sheet-1.png",
+          "sha256": "ec48c942d2898c00c13ec6a80935d418e3e4c132777bae075559ad55c92ce637",
+          "bytes": 131365
+        },
+        {
+          "path": "sheet-2.png",
+          "sha256": "cb77113eb534bc7fa660531517e6367eb62fcd1292e71679e63e6e22c42a9912",
+          "bytes": 224015
+        },
+        {
+          "path": "sheet-3.png",
+          "sha256": "82f2b1af4fc51a204cd606648a774990ffefee4951bc8dc8f3ea535a2c70084b",
+          "bytes": 161820
+        },
+        {
+          "path": "sheet-4.png",
+          "sha256": "50007acd0e4ec57f34fc1ced82125e3c0caa3e5c69a5fbe4f9386dfabc2f962a",
+          "bytes": 126833
+        },
+        {
+          "path": "sheet-5.png",
+          "sha256": "5ea68683d711350598784d3ec6edf842729bcbec812655ddd44ee32bb83a2113",
+          "bytes": 217866
+        },
+        {
+          "path": "sheet-6.png",
+          "sha256": "a79b95b21b24927de22674cf0dd1fb959f5fa02c687a1ab9154db03671457f7a",
+          "bytes": 156515
+        },
+        {
+          "path": "sheet-transparent.png",
+          "sha256": "bd2352741130aea4906dfd6f8c8359a2ed672026f99f1d09e579ada2e19a0161",
+          "bytes": 1016884
+        }
+      ],
+      "tool": {
+        "name": "generate2dsprite.py process",
+        "version": "0.4.0"
+      }
+    }
+  },
+  "warnings_and_failures": [
+    {
+      "file": "prototypes\\environment-adapt-v01\\art\\rocks-spill\\sheet-qc.json",
+      "id": "safe_frame",
+      "status": "warn",
+      "value": 8,
+      "threshold": 0,
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+    },
+    {
+      "file": "prototypes\\environment-adapt-v01\\art\\roots-contact-spill\\sheet-qc.json",
+      "id": "safe_frame",
+      "status": "warn",
+      "value": 6,
+      "threshold": 0,
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+    },
+    {
+      "file": "prototypes\\environment-adapt-v01\\art\\trees-spill\\sheet-qc.json",
+      "id": "cross_cell_components",
+      "status": "fail",
+      "value": 2,
+      "threshold": 0,
+      "cells": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "note": "solid parts crossing a cell line are cut or misassigned when the sheet is sliced"
+    },
+    {
+      "file": "prototypes\\environment-adapt-v01\\art\\trees-spill\\sheet-qc.json",
+      "id": "cross_cell_visible",
+      "status": "fail",
+      "value": 2,
+      "threshold": 0,
+      "note": "the same test on the visible edge (alpha > 16)"
+    },
+    {
+      "file": "prototypes\\environment-adapt-v01\\art\\trees-spill\\sheet-qc.json",
+      "id": "boundary_band",
+      "status": "warn",
+      "value": 1618,
+      "threshold": 0,
+      "note": "solid pixels within 10 px of a cell line; a different crop or rounding can cut them"
+    },
+    {
+      "file": "prototypes\\environment-adapt-v01\\art\\trees-spill\\sheet-qc.json",
+      "id": "safe_frame",
+      "status": "warn",
+      "value": 6,
+      "threshold": 0,
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+    },
+    {
+      "file": "prototypes\\environment-adapt-v01\\art\\trees-processed\\pipeline-meta.json",
+      "id": "source_edge_touch_frames",
+      "status": "warn",
+      "value": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "threshold": []
+    }
+  ],
+  "final_alpha_checks": [
+    {
+      "file": "tree_01_grass.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "tree_01_forest.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "tree_01_dirt.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "tree_03_grass.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "tree_03_forest.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "tree_03_dirt.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "tree_04_grass.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "tree_04_forest.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "tree_04_dirt.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_01_grass.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_01_forest.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_01_dirt.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_02_grass.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_02_forest.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_02_dirt.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_03_grass.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_03_forest.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_03_dirt.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_04_grass.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_04_forest.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_04_dirt.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_05_grass.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_05_forest.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_05_dirt.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_06_grass.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_06_forest.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    },
+    {
+      "file": "rock_06_dirt.png",
+      "opaque_magenta_px": 0,
+      "upper_unchanged": true
+    }
+  ],
+  "registered_assets": [
+    {
+      "id": "tree_01",
+      "name": "高瘦幼树",
+      "kind": "tree",
+      "surface": "grass",
+      "file": "tree_01_grass.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "contact_height": 40,
+      "sha256": "52ad5927f88af1605fc145d9c9edc5b449e6b65a01a0c3731c315c5f711bb6e9",
+      "green_contact_px": 366,
+      "status": "selected",
+      "registration": {
+        "source": "selected original",
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "tree_01",
+      "name": "高瘦幼树",
+      "kind": "tree",
+      "surface": "forest",
+      "file": "tree_01_forest.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "contact_height": 40,
+      "sha256": "4c558ae11e0c410a758816fc2889c65a65d15ce69799ab976ade55ed8d18481d",
+      "green_contact_px": 271,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/trees-processed/raw-sheet-clean.png",
+        "cell": [
+          0,
+          0
+        ],
+        "isotropic_scale": 0.4594594594594595,
+        "offset": [
+          20.29729729729729,
+          30.324324324324323
+        ],
+        "join_row": 216,
+        "blend_rows": 6,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "tree_01",
+      "name": "高瘦幼树",
+      "kind": "tree",
+      "surface": "dirt",
+      "file": "tree_01_dirt.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "contact_height": 40,
+      "sha256": "459fe5ed1c8e9f3f703ea3d8f0f5d015603666d6a6df07e74eabfcb84d183524",
+      "green_contact_px": 0,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/trees-processed/raw-sheet-clean.png",
+        "cell": [
+          1,
+          0
+        ],
+        "isotropic_scale": 0.4657534246575342,
+        "offset": [
+          18.349315068493155,
+          39.35616438356166
+        ],
+        "join_row": 216,
+        "blend_rows": 6,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "tree_03",
+      "name": "高大开展树",
+      "kind": "tree",
+      "surface": "grass",
+      "file": "tree_03_grass.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "contact_height": 40,
+      "sha256": "7913ab40726f71404cb88c08a2fac2f4a9cd9544b89f4aa45d8461541e4e09ec",
+      "green_contact_px": 500,
+      "status": "selected",
+      "registration": {
+        "source": "selected original",
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "tree_03",
+      "name": "高大开展树",
+      "kind": "tree",
+      "surface": "forest",
+      "file": "tree_03_forest.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "contact_height": 40,
+      "sha256": "d315f0915aebda4640bf5708450dc40210f9a870eb3a28583001a3831f0e7ff3",
+      "green_contact_px": 328,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/trees-processed/raw-sheet-clean.png",
+        "cell": [
+          0,
+          1
+        ],
+        "isotropic_scale": 0.45093457943925236,
+        "offset": [
+          7.669392523364479,
+          34.04205607476635
+        ],
+        "join_row": 216,
+        "blend_rows": 6,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "tree_03",
+      "name": "高大开展树",
+      "kind": "tree",
+      "surface": "dirt",
+      "file": "tree_03_dirt.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "contact_height": 40,
+      "sha256": "15b4de1093fac802fe93e28575695caacaf9d0f76278f17f22a0a097e7cbb299",
+      "green_contact_px": 7,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/trees-processed/raw-sheet-clean.png",
+        "cell": [
+          1,
+          1
+        ],
+        "isotropic_scale": 0.45734597156398105,
+        "offset": [
+          6.60189573459715,
+          43.24881516587678
+        ],
+        "join_row": 216,
+        "blend_rows": 6,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "tree_04",
+      "name": "疏冠分叉树",
+      "kind": "tree",
+      "surface": "grass",
+      "file": "tree_04_grass.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "contact_height": 40,
+      "sha256": "8f17d2f2ab4e673b152d0e85ea3ad214d3fbe3b1f724ed5f5e4937e7314f3292",
+      "green_contact_px": 416,
+      "status": "selected",
+      "registration": {
+        "source": "selected original",
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "tree_04",
+      "name": "疏冠分叉树",
+      "kind": "tree",
+      "surface": "forest",
+      "file": "tree_04_forest.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "contact_height": 40,
+      "sha256": "119fd41ecede651d4c47303f355debef3a6b530fe6ce2b29ebf5023a4e123e05",
+      "green_contact_px": 257,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/trees-processed/raw-sheet-clean.png",
+        "cell": [
+          0,
+          2
+        ],
+        "isotropic_scale": 0.4469135802469136,
+        "offset": [
+          10.844444444444449,
+          36.459259259259255
+        ],
+        "join_row": 216,
+        "blend_rows": 6,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "tree_04",
+      "name": "疏冠分叉树",
+      "kind": "tree",
+      "surface": "dirt",
+      "file": "tree_04_dirt.png",
+      "canvas": [
+        256,
+        256
+      ],
+      "contact_height": 40,
+      "sha256": "c8ca3ecd986df335518348b404356efde1b3042efd418976d8a5811f2e8b8673",
+      "green_contact_px": 2,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/trees-processed/raw-sheet-clean.png",
+        "cell": [
+          1,
+          2
+        ],
+        "isotropic_scale": 0.4525,
+        "offset": [
+          9.361249999999998,
+          45.49250000000001
+        ],
+        "join_row": 216,
+        "blend_rows": 6,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_01",
+      "name": "低矮扁石",
+      "kind": "rock",
+      "surface": "grass",
+      "file": "rock_01_grass.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "c03d924a3fdafa645fc3df19cb885d00e2cea85fe51cdb64b8022e12855e292c",
+      "green_contact_px": 145,
+      "status": "selected",
+      "registration": {
+        "source": "selected original",
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_01",
+      "name": "低矮扁石",
+      "kind": "rock",
+      "surface": "forest",
+      "file": "rock_01_forest.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "afd2d2905ca3e70a37a1b6ea9ecd5560830760278bebdb802b1ee0b8a50419bd",
+      "green_contact_px": 174,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/rocks-processed/raw-sheet-clean.png",
+        "cell": [
+          0,
+          0
+        ],
+        "isotropic_scale": 0.3504273504273504,
+        "offset": [
+          -4.354700854700852,
+          -1.9230769230769198
+        ],
+        "join_row": 76,
+        "blend_rows": 4,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_01",
+      "name": "低矮扁石",
+      "kind": "rock",
+      "surface": "dirt",
+      "file": "rock_01_dirt.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "cf749e4d78ff7f6fc794e1f91b1d2b6d729a43f7cde519eeb0a4ca8d101ca29c",
+      "green_contact_px": 45,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/rocks-processed/raw-sheet-clean.png",
+        "cell": [
+          2,
+          0
+        ],
+        "isotropic_scale": 0.35964912280701755,
+        "offset": [
+          -6.6140350877193015,
+          -3.5
+        ],
+        "join_row": 76,
+        "blend_rows": 4,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_02",
+      "name": "敦实孤石",
+      "kind": "rock",
+      "surface": "grass",
+      "file": "rock_02_grass.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "247aed10dbdb73d548764c17ad445ac8fe7f8445c5d1cf155a2f97a8d92a35f4",
+      "green_contact_px": 133,
+      "status": "selected",
+      "registration": {
+        "source": "selected original",
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_02",
+      "name": "敦实孤石",
+      "kind": "rock",
+      "surface": "forest",
+      "file": "rock_02_forest.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "b3146fcc01de0151d7cca798a9f6e856ed182c3b225756ebda76feb37071ee8b",
+      "green_contact_px": 135,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/rocks-processed/raw-sheet-clean.png",
+        "cell": [
+          0,
+          1
+        ],
+        "isotropic_scale": 0.3423913043478261,
+        "offset": [
+          -2.000000000000007,
+          -0.9782608695652186
+        ],
+        "join_row": 76,
+        "blend_rows": 4,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_02",
+      "name": "敦实孤石",
+      "kind": "rock",
+      "surface": "dirt",
+      "file": "rock_02_dirt.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "ee4ccc4536e346df8dda52bc83c7aa1d4c6c6fd79c7064cf046b1845ba8d8afa",
+      "green_contact_px": 21,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/rocks-processed/raw-sheet-clean.png",
+        "cell": [
+          2,
+          1
+        ],
+        "isotropic_scale": 0.34615384615384615,
+        "offset": [
+          -2.865384615384613,
+          -1.3846153846153868
+        ],
+        "join_row": 76,
+        "blend_rows": 4,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_03",
+      "name": "楔形石",
+      "kind": "rock",
+      "surface": "grass",
+      "file": "rock_03_grass.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "a554b603f941d09f73b913e5de81916cf0249f3e92a00ea6b09ef44551e5df2f",
+      "green_contact_px": 119,
+      "status": "selected",
+      "registration": {
+        "source": "selected original",
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_03",
+      "name": "楔形石",
+      "kind": "rock",
+      "surface": "forest",
+      "file": "rock_03_forest.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "d91fe553527aea9d49f5f956c1d5b7d0b788ccfe8da82088f4f7503eb640695b",
+      "green_contact_px": 124,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/rocks-processed/raw-sheet-clean.png",
+        "cell": [
+          0,
+          2
+        ],
+        "isotropic_scale": 0.33714285714285713,
+        "offset": [
+          -0.6857142857142833,
+          -0.4571428571428555
+        ],
+        "join_row": 76,
+        "blend_rows": 4,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_03",
+      "name": "楔形石",
+      "kind": "rock",
+      "surface": "dirt",
+      "file": "rock_03_dirt.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "36ba03dd1d277e0d311e98523016d6bd194b937776ad1cd7453b85ac8382e9f5",
+      "green_contact_px": 54,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/rocks-processed/raw-sheet-clean.png",
+        "cell": [
+          2,
+          2
+        ],
+        "isotropic_scale": 0.3390804597701149,
+        "offset": [
+          -1.3735632183907995,
+          -1.0287356321838956
+        ],
+        "join_row": 76,
+        "blend_rows": 4,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_04",
+      "name": "双肩连体石",
+      "kind": "rock",
+      "surface": "grass",
+      "file": "rock_04_grass.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "44952fbfa544c81a6c3f6f50df43928f5232b57562f566c57144bc530886041d",
+      "green_contact_px": 163,
+      "status": "selected",
+      "registration": {
+        "source": "selected original",
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_04",
+      "name": "双肩连体石",
+      "kind": "rock",
+      "surface": "forest",
+      "file": "rock_04_forest.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "81c7b91b0e7c0d78d273c0c1d5dd4c630ccb7af88501fea44c5e4304da5c806a",
+      "green_contact_px": 153,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/rocks-processed/raw-sheet-clean.png",
+        "cell": [
+          1,
+          0
+        ],
+        "isotropic_scale": 0.3352601156069364,
+        "offset": [
+          -0.17630057803468446,
+          -0.5722543352601122
+        ],
+        "join_row": 76,
+        "blend_rows": 4,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_04",
+      "name": "双肩连体石",
+      "kind": "rock",
+      "surface": "dirt",
+      "file": "rock_04_dirt.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "4385742f6e7ef2033e85d11d61a082deefafa3d399df8b49e39c48aab1d1c4b9",
+      "green_contact_px": 22,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/rocks-processed/raw-sheet-clean.png",
+        "cell": [
+          3,
+          0
+        ],
+        "isotropic_scale": 0.3333333333333333,
+        "offset": [
+          0.5,
+          -0.3333333333333286
+        ],
+        "join_row": 76,
+        "blend_rows": 4,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_05",
+      "name": "窄高石",
+      "kind": "rock",
+      "surface": "grass",
+      "file": "rock_05_grass.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "789151fcbc33e9993f05a75fe46fe10fd1f7b10d7f4e9ba2d6432b9196aacd90",
+      "green_contact_px": 208,
+      "status": "selected",
+      "registration": {
+        "source": "selected original",
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_05",
+      "name": "窄高石",
+      "kind": "rock",
+      "surface": "forest",
+      "file": "rock_05_forest.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "668556b45d5c32b77dd2fe7ec98e34f9cb89df9740878ff8ef3ea8152134b973",
+      "green_contact_px": 132,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/rocks-processed/raw-sheet-clean.png",
+        "cell": [
+          1,
+          1
+        ],
+        "isotropic_scale": 0.3404255319148936,
+        "offset": [
+          -1.7021276595744723,
+          -2.4468085106382915
+        ],
+        "join_row": 76,
+        "blend_rows": 4,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_05",
+      "name": "窄高石",
+      "kind": "rock",
+      "surface": "dirt",
+      "file": "rock_05_dirt.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "0d60b84efa2226ea752abc8a91d415f2f62b9250d4604e5e019358ac780e87f1",
+      "green_contact_px": 25,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/rocks-processed/raw-sheet-clean.png",
+        "cell": [
+          3,
+          1
+        ],
+        "isotropic_scale": 0.3404255319148936,
+        "offset": [
+          -1.8723404255319167,
+          -2.1063829787234027
+        ],
+        "join_row": 76,
+        "blend_rows": 4,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_06",
+      "name": "缺角碎石",
+      "kind": "rock",
+      "surface": "grass",
+      "file": "rock_06_grass.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "f65cbc5a0686ca550f73f9f0dcc051dba66f286f3455f8423bad126fb67ce881",
+      "green_contact_px": 119,
+      "status": "selected",
+      "registration": {
+        "source": "selected original",
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_06",
+      "name": "缺角碎石",
+      "kind": "rock",
+      "surface": "forest",
+      "file": "rock_06_forest.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "689f4fc33d6813392a07e8383c18b65b04bad870883b91631b9882a028477d73",
+      "green_contact_px": 116,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/rocks-processed/raw-sheet-clean.png",
+        "cell": [
+          1,
+          2
+        ],
+        "isotropic_scale": 0.32653061224489793,
+        "offset": [
+          3.4897959183673493,
+          -0.2653061224489761
+        ],
+        "join_row": 76,
+        "blend_rows": 4,
+        "body_unchanged": true
+      }
+    },
+    {
+      "id": "rock_06",
+      "name": "缺角碎石",
+      "kind": "rock",
+      "surface": "dirt",
+      "file": "rock_06_dirt.png",
+      "canvas": [
+        128,
+        100
+      ],
+      "contact_height": 24,
+      "sha256": "586f74175a0244196ee6472418051dfab5228c61a557d9b10dab44e7e18bfeff",
+      "green_contact_px": 32,
+      "status": "shape_selected_adapter_pending",
+      "registration": {
+        "source": "art/rocks-processed/raw-sheet-clean.png",
+        "cell": [
+          3,
+          2
+        ],
+        "isotropic_scale": 0.3333333333333333,
+        "offset": [
+          2.5,
+          -1.3333333333333286
+        ],
+        "join_row": 76,
+        "blend_rows": 4,
+        "body_unchanged": true
+      }
+    }
+  ],
+  "body_policy": "original chosen upper art copied byte-for-byte; only contact drawings used from new image generation",
+  "source_exception": "Full generated tree crowns cross cells and are NOT used. Explicit lower-cell root ownership extraction has no cross-cell FAIL; its safe_frame WARN remains. Generated upper crowns are discarded, not approved."
+}

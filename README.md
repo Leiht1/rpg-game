@@ -1,3 +1,21 @@
+> 2026-10-17 · 篝火与烹饪V1：C制作简易篝火（木4/石6/燧1），使用后左键放置；把快捷栏/背包可燃物拖到火堆上，角色投掷续燃，持主手工具时改左手。燃时条常驻火堆下方，厚度为前版1/3；燃尽自动熄灭。靠近E烹饪烤胡萝卜/烤蘑菇，完成领取再右键食用，进度/燃料/待领保存在原快照。[玩法规则](CAMPFIRE_SYSTEM.md) · [实景与交付](reports/campfire-v1/index.html)。
+
+> 2026-10-17 · 制作V1：C或快捷栏“C 制作”打开六配方面板（含篝火，小型补给包仅可拾取），每笔1.5秒，按钮上方进度满后整体扣料/入包；关闭取消未完成制作，材料不动。UI保持已确认纸布风格与固定尺寸。[配方规则](CRAFTING_SYSTEM.md) · [进度实景与验收](reports/crafting-progress-v1/index.html)。
+
+> 2026-10-17：工具美术与原生持握已按“接入游戏吧”授权正式接入。双击 **Start-Playtest.cmd**，F6添加工具，B右键装备或拖入武器格即可在人物和预览中看到。斧头砍树、镐子采矿、拾取时暂收工具，卸下清除。**Start-Tools-Preview.cmd**仍是自动提供三工具的临时试用，不导入正式存档。[正式实景与验收](reports/tools-formal-v04/index.html)。
+
+> 2026-10-17 最新修正：左手置于身体部件最下层，保持原动作；装备区独立边框，标题在人像上方居中，槽名移至格下，头饰与背包首格顶边对齐。[新布局与持握候选](reports/equipment-panel-v04/index.html)。工具持握图仅供姿势/比例审阅，尚未接入正式人物动作。
+
+> 2026-10-17 最新：装备槽在人物预览左侧竖排“头饰、武器、服装”，移除装备内容/未装备文字，保留悬停卡片。工具美术候选请双击 **Start-Tools-Preview.cmd**，B打开即可看到三工具；这是同Seed临时试用，不写正式存档。新图仍待视觉确认，正式入口未推广。[候选与新布局](reports/tools-v04/index.html)。
+
+> 2026-10-17 · V0.4：B打开左道具/右装备与实时人物预览，支持拖动交换、右键装备/卸下。F6添加石斧/石镐/简易铲子，并可显式放置测试燧石矿点；关闭图鉴，把工具装备到主手，靠近目标按E。空手/镐不能砍树，斧不能采矿，任何主手都可拾取。普通景观石不变。新服装/头饰画稿、工具图标和复杂工具动作尚未制作，当前原生文字标识及兼容外观接口不等于美术验收。详见 [装备规则](EQUIPMENT_SYSTEM.md) 与 [验收报告](reports/equipment-v04/index.html)。
+
+> 2026-10-17 最新补充：背包打开时可WASD移动；地图在最上层，完整覆盖快捷栏/时间HUD，M/Esc关闭；湖泊和河流也能出现雨滴扩散弧线。[本轮实景](reports/bag-map-water-rain/index.html)。
+
+> 2026-10-17 最新：24张物品画稿已确认并接入正式游戏。双击 **Start-Playtest.cmd** 试玩；拖动背包/快捷栏物品到地面丢弃整组并播放脚边掉落效果，右键菜单“使用 / 销毁”，Ctrl+左键输入数量拆分，背包标题栏可拖动。详见 [本轮实景与验收](reports/item-actions-v031/index.html)、[ITEM_SYSTEM.md](ITEM_SYSTEM.md)。自然层版本、正式背包和采集记录保持；不导入预览存档。
+
+> 当前大陆：V0.6 不规则大陆（用户于2026-10-16确认接入）。双击 **Start-Playtest.cmd** 游玩，正式入口仍为 scenes/world.tscn。生成器 `windrest-continent-0.6.0`；M查看完整大陆，N创建新Seed。沿用旧Seed/尺寸生成新大陆，旧布局不会保持；旧身份文件原样保留，新身份保存到 `user://world-continent-v06.json`，首次显示升级提示。角色、美术、移动、砍树与拾取保持。接入验证见 `reports/world-v06/integration.json`，大陆对照见 `reports/world-v06/index.html`。下文V0.5及更早说明均为历史。
+
 > 已接入统一斜俯视树石与湖岸 V0.2，搭配多区域节点世界 V0.5；双击 Start-Playtest.cmd 体验。当前已验收的角色、树石与湖岸资源随正式项目提交。
 
 > 当前正式版：多区域节点世界 V0.5。双击 **Start-Playtest.cmd** 游玩；**N** 新世界，正常重启沿用保存的 Seed；WASD / Shift / E / M 保持。当前生成器 `windrest-biome-0.5.0`，详见 MAP_SYSTEM.md。当前验收数据见 reports/world-v05/generation.json 和 runtime.json；截图比较页保留在本地。以下旧版本记录保留追溯。
@@ -51,4 +69,30 @@ Godot --path . --max-fps 60 --script tests/capture_scene_cartoon.gd
 
 
 当前地面候选预览：双击 Start-Ground-Preview.cmd，1旧版/2A/3B，0出生点、4森林/5山地/6水岸。WASD、Shift、E、M沿用；Start-Playtest.cmd仍为旧地面正式体验。候选生产门槛见 SCENE_ART_WORKFLOW.md，未选定不全图推广。
+
+
+> 2026-10-16 接地美术更新：用户授权第二版接入试用，正式运行scene-grounding-0.1.0。树石底缘实时采样脚边地表色，保持V0.6地图/角色/碰撞和资源交互。验证与三类生态实景见reports/grounding-integration；上方“美术保持”指接地更新前的历史接入说明。
+
+## 2026-10-16 · 当前景物已接入
+正常双击 Start-Playtest.cmd，正式游戏使用 scene-contact-1.0.0（三树六石，各草地/林下/连续泥土边）。泥地是用户选回的dirt-02，草地与林下保留多组草叶落叶。树只晃动、砍完渐隐，无闪光；普通石头只碰撞。大陆生成器仍 windrest-continent-0.6.0，已有Seed身份保持。实际画面和相关验证见 reports/environment-game-v01/index.html；当前专项 tests/test_scenery_integration.gd及tests/test_grounding_interactions.gd，旧grounding共享材质/旧图接口检查属于历史版本。
+
+## 世界环境 V0.2（2026-10-16）
+双击Start-Playtest.cmd直接试玩，沿用V0.6大陆与scene-contact-1.0.0景物。新增60分钟一天、柔和昼夜、晴阴雨渐变和雨声；左上圆盘显示昼夜/天气/天数。F4打开环境调试（仅开发构建），可设时、暂停、倍速、快速预览及切换天气。环境每15秒和正常退出保存，重启恢复；地图和交互原有保存范围不变。说明见WORLD_ENVIRONMENT.md，截图与专项报告见reports/world-environment。
+
+2026-10-16 最新天气修订：已取消阴天，F4仅晴/雨，两者25秒渐变。雨丝减量、随机间隔，添加少量白色落地扩散断弧；雨声为稀疏立体声水滴短音、极弱底噪。原存档兼容迁移，日期与时间保持。最新实景及可试听雨声见 reports/rain-v02/index.html，旧三天气报告仅作历史。
+
+2026-10-16 雨效修订3：雨丝调亮并略拉长，保持原稀疏随机密度；合成雨声已移除，暂时无雨声，不用电子音替代。当前记录reports/rain-v03；旧试听文件仅属被否定的历史版本，不再由游戏加载。
+
+2026-10-17 最新天气：晴朗 / 小雨 / 雷暴雨。原雨改为小雨；落地白色断弧提亮。雷暴雨雨量约5倍、环境更暗、圆盘图标增加闪电，每45–90现实秒短暂双闪一次（总长不超过0.28秒，UI不闪）。F4可强制三天气及预览一次闪电，仍暂不加雨声/雷声。旧存档兼容迁移，最新实景与专项reports/storm-v01/index.html；Start-Playtest.cmd启动方式保持。
+
+
+## 2026-10-17 · 物品系统 V0.3 与新版 UI
+B或快捷栏右侧的小背包按钮开关背包。32格背包、8格快捷栏；快捷栏初始留空，玩家拖动放入物品。拾取优先补快捷栏已有同类堆叠，再补背包堆叠及空格，不自动填空快捷格。1–8直接使用对应物品，食物消耗一份；右键也可使用。格内仅图标/数量，0.15秒悬停后出现有统一边框的信息卡；所有状态固定格子尺寸。F6为debug图鉴。
+新物品美术与自然资源尚待确认，双击Start-Items-Preview.cmd试玩完整候选（独立预览存档），普通Start-Playtest.cmd只用已确认木材美术。详见ITEM_SYSTEM.md与reports/items-v03/index.html。
+# V0.3.1 自然资源试玩（2026-10-17）
+
+- 正式入口：[Start-Playtest.cmd](Start-Playtest.cmd)，现在可发现并按E采集/拾取自然资源；未获美术确认的资源使用“临·名称”开发标记，木材沿用已确认图。
+- 美术预览：[Start-Items-Preview.cmd](Start-Items-Preview.cmd)，同一生成规则、独立预览存档，24张候选画稿仍待用户确认。
+- B背包，1–8快捷使用；Ctrl+右键格子放下1个；F7资源分布、拒绝原因、ID、采集状态和临时Seed，F3/F4/F6保持。
+- 五类实景、对照图及专项报告：[reports/resources-v031/index.html](reports/resources-v031/index.html)。规则：[NATURAL_RESOURCE_ECOLOGY.md](NATURAL_RESOURCE_ECOLOGY.md)、[ITEM_SYSTEM.md](ITEM_SYSTEM.md)。本轮不开发配方、工具、种植、生长或季节。
 

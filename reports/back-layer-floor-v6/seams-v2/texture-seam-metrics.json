@@ -1,0 +1,59 @@
+{
+  "metrics": {
+    "wood": {
+      "before": {
+        "top_size": [
+          636,
+          424
+        ],
+        "top_ratio": 1.5,
+        "mean_seam_rgb_delta": 20.640625,
+        "mean_internal_horizontal_rgb_delta": 3.2055372807017544
+      },
+      "after": {
+        "top_size": [
+          1536,
+          1024
+        ],
+        "top_ratio": 1.5,
+        "mean_seam_rgb_delta": 7.463541666666667,
+        "mean_internal_horizontal_rgb_delta": 3.415625
+      }
+    },
+    "stone": {
+      "before": {
+        "top_size": [
+          636,
+          424
+        ],
+        "top_ratio": 1.5,
+        "mean_seam_rgb_delta": 35.536458333333336,
+        "mean_internal_horizontal_rgb_delta": 9.854111842105263
+      },
+      "after": {
+        "top_size": [
+          1536,
+          1024
+        ],
+        "top_ratio": 1.5,
+        "mean_seam_rgb_delta": 23.0,
+        "mean_internal_horizontal_rgb_delta": 11.568640350877192
+      }
+    }
+  },
+  "locked_geometry": [
+    {
+      "material": "wood",
+      "same_front_bytes": true,
+      "sha256": "bd4c2d049445c2026c87a5297e2bb7e5908c0b19ef4ce523e66e0504fd1c9b4a",
+      "world_front_height": 3.169811320754717
+    },
+    {
+      "material": "stone",
+      "same_front_bytes": true,
+      "sha256": "a08fc2fe129ca8922e95bd5fca5383555485f3c7ff186668595a743f89912b09",
+      "world_front_height": 3.169811320754717
+    }
+  ],
+  "note": "RGB delta in 0..255 at 96x64 game size. Lower is a symptom of improved continuity, not subjective approval or exact periodicity."
+}

@@ -1,0 +1,973 @@
+{
+  "adapter": "NVIDIA GeForce RTX 5060",
+  "checks": [
+    {
+      "name": "no color/flash shader path",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 0",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 0",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 0",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 1",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 1",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 1",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 2",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 2",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 2",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 3",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 3",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 3",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 4",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 4",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 4",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 5",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 5",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 5",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 6",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 6",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 6",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 7",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 7",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 7",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 8",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 8",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 8",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 9",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 9",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 9",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 10",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 10",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 10",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 11",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 11",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 11",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 12",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 12",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 12",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 13",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 13",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 13",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 14",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 14",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 14",
+      "pass": true
+    },
+    {
+      "name": "fixed root 0 frame 15",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 0 frame 15",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 0 frame 15",
+      "pass": true
+    },
+    {
+      "name": "returns to rest 0",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 0 frame 0",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 0 frame 1",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 0 frame 2",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 0 frame 3",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 0 frame 4",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 0 frame 5",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 0 frame 6",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 0 frame 7",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 0 frame 8",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 0 frame 9",
+      "pass": true
+    },
+    {
+      "name": "fully hidden 0",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 0",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 0",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 0",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 1",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 1",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 1",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 2",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 2",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 2",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 3",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 3",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 3",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 4",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 4",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 4",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 5",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 5",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 5",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 6",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 6",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 6",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 7",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 7",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 7",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 8",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 8",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 8",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 9",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 9",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 9",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 10",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 10",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 10",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 11",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 11",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 11",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 12",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 12",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 12",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 13",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 13",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 13",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 14",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 14",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 14",
+      "pass": true
+    },
+    {
+      "name": "fixed root 1 frame 15",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 1 frame 15",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 1 frame 15",
+      "pass": true
+    },
+    {
+      "name": "returns to rest 1",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 1 frame 0",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 1 frame 1",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 1 frame 2",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 1 frame 3",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 1 frame 4",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 1 frame 5",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 1 frame 6",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 1 frame 7",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 1 frame 8",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 1 frame 9",
+      "pass": true
+    },
+    {
+      "name": "fully hidden 1",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 0",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 0",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 0",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 1",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 1",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 1",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 2",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 2",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 2",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 3",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 3",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 3",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 4",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 4",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 4",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 5",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 5",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 5",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 6",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 6",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 6",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 7",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 7",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 7",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 8",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 8",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 8",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 9",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 9",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 9",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 10",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 10",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 10",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 11",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 11",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 11",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 12",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 12",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 12",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 13",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 13",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 13",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 14",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 14",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 14",
+      "pass": true
+    },
+    {
+      "name": "fixed root 2 frame 15",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 2 frame 15",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 2 frame 15",
+      "pass": true
+    },
+    {
+      "name": "returns to rest 2",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 2 frame 0",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 2 frame 1",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 2 frame 2",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 2 frame 3",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 2 frame 4",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 2 frame 5",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 2 frame 6",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 2 frame 7",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 2 frame 8",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 2 frame 9",
+      "pass": true
+    },
+    {
+      "name": "fully hidden 2",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 0",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 0",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 0",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 1",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 1",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 1",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 2",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 2",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 2",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 3",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 3",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 3",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 4",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 4",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 4",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 5",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 5",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 5",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 6",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 6",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 6",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 7",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 7",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 7",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 8",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 8",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 8",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 9",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 9",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 9",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 10",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 10",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 10",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 11",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 11",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 11",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 12",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 12",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 12",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 13",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 13",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 13",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 14",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 14",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 14",
+      "pass": true
+    },
+    {
+      "name": "fixed root 3 frame 15",
+      "pass": true
+    },
+    {
+      "name": "fixed footprint 3 frame 15",
+      "pass": true
+    },
+    {
+      "name": "no color modulation 3 frame 15",
+      "pass": true
+    },
+    {
+      "name": "returns to rest 3",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 3 frame 0",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 3 frame 1",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 3 frame 2",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 3 frame 3",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 3 frame 4",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 3 frame 5",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 3 frame 6",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 3 frame 7",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 3 frame 8",
+      "pass": true
+    },
+    {
+      "name": "fade alpha only 3 frame 9",
+      "pass": true
+    },
+    {
+      "name": "fully hidden 3",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "scope": "4 candidate trees/6 static ordinary rocks; no formal integration",
+  "status": "pending_user"
+}

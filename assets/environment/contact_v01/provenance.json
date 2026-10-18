@@ -1,0 +1,36 @@
+{
+  "version": "scene-contact-1.0.0",
+  "approval": "用户要求树和石头泥地恢复连成一片的版本，然后全部接入游戏",
+  "surfaces": [
+    {
+      "surface": "grass",
+      "source_image": "prototypes\\environment-contact-natural-v01\\art\\grass-02\\generated.png",
+      "source_sha256": "364a0db51eb9f97713cc04ea5e115ff472acafcde4bb0b9e29dcaab0b27d4a9f",
+      "receipt": "prototypes\\environment-contact-natural-v01\\art\\grass-02\\job.json",
+      "prompt_directory": "prototypes\\environment-contact-natural-v01\\prompts"
+    },
+    {
+      "surface": "forest",
+      "source_image": "prototypes\\environment-contact-natural-v01\\art\\forest-02\\generated.png",
+      "source_sha256": "fe1b24447ebc6ec405bbcfcb799fd91004d2102c947e7c1557b39d0ff430c282",
+      "receipt": "prototypes\\environment-contact-natural-v01\\art\\forest-02\\job.json",
+      "prompt_directory": "prototypes\\environment-contact-natural-v01\\prompts"
+    },
+    {
+      "surface": "dirt",
+      "source_image": "prototypes\\environment-contact-natural-v01\\art\\dirt-02\\generated.png",
+      "source_sha256": "3933bfc68ba3c62e8a74156f73914f1355de21af141ac36125751f81d1b726c5",
+      "receipt": "prototypes\\environment-contact-natural-v01\\art\\dirt-02\\job.json",
+      "prompt_directory": "prototypes\\environment-contact-natural-v01\\prompts"
+    }
+  ],
+  "dirt_selection": "dirt-02 continuous connected soil, no detached cleanup, replaces dirt-03/04",
+  "upper_sources": "prototypes/environment-variety-v01/runtime",
+  "rejected_variant": "tree_02",
+  "generation_this_turn": 0,
+  "map_generator": "windrest-continent-0.6.0 unchanged; visual catalog keyed by immutable position/seed",
+  "route": "local:codex-cli",
+  "receipt_model": "codex-image_gen",
+  "exact_backend": "unknown",
+  "external_assets_added": false
+}

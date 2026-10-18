@@ -1,0 +1,15 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ERROR: atomic roundtrip retains crafted inventory and equipment
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_crafting_v1.gd:12)
+       [1] run (res://tests/test_crafting_v1.gd:190)
+       [2] frames (res://tests/test_crafting_v1.gd:14)
+ERROR: crafting keeps world resource and drop state
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_crafting_v1.gd:12)
+       [1] run (res://tests/test_crafting_v1.gd:191)
+       [2] frames (res://tests/test_crafting_v1.gd:14)
+CRAFTING V1 headless: 114 checks, 2 failures

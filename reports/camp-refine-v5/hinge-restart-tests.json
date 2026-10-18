@@ -1,0 +1,17 @@
+{
+  "checks": [
+    {
+      "name": "fresh process alternate hinge snapshot accepted",
+      "pass": true
+    },
+    {
+      "name": "fresh process chosen hinge and open restore",
+      "pass": true
+    },
+    {
+      "name": "fresh process collider renderer same restored hinge angle",
+      "pass": true
+    }
+  ],
+  "failed": 0
+}

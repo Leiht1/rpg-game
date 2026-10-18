@@ -1,0 +1,149 @@
+{
+  "status": "pending_user",
+  "approval": null,
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "jobs": [
+    "art\\sleep-occupied-v5\\horizontal-raw\\job.json",
+    "art\\sleep-occupied-v5\\vertical-raw\\job.json"
+  ],
+  "transforms": [
+    {
+      "name": "wood_bed",
+      "source": "horizontal-processed/sheet-1.png",
+      "bbox": [
+        31,
+        165,
+        481,
+        346
+      ],
+      "scale": 0.9955555555555555,
+      "xy": [
+        32,
+        38
+      ],
+      "canvas": [
+        512,
+        256
+      ],
+      "target_bbox": [
+        32,
+        36,
+        480,
+        220
+      ]
+    },
+    {
+      "name": "straw_mat",
+      "source": "horizontal-processed/sheet-2.png",
+      "bbox": [
+        31,
+        183,
+        481,
+        328
+      ],
+      "scale": 0.8482758620689655,
+      "xy": [
+        65,
+        66
+      ],
+      "canvas": [
+        512,
+        256
+      ],
+      "target_bbox": [
+        32,
+        66,
+        480,
+        189
+      ]
+    },
+    {
+      "name": "sleeping_bag",
+      "source": "horizontal-processed/sheet-3.png",
+      "bbox": [
+        31,
+        180,
+        481,
+        331
+      ],
+      "scale": 0.9955555555555555,
+      "xy": [
+        32,
+        52
+      ],
+      "canvas": [
+        512,
+        256
+      ],
+      "target_bbox": [
+        32,
+        50,
+        480,
+        205
+      ]
+    },
+    {
+      "name": "wood_bed-vertical",
+      "source": "vertical-processed/sheet-1.png",
+      "bbox": [
+        108,
+        31,
+        404,
+        481
+      ],
+      "scale": 0.7567567567567568,
+      "xy": [
+        16,
+        85
+      ],
+      "canvas": [
+        256,
+        512
+      ],
+      "target_bbox": [
+        16,
+        76,
+        240,
+        435
+      ]
+    },
+    {
+      "name": "straw_mat-vertical",
+      "source": "vertical-processed/sheet-2.png",
+      "bbox": [
+        92,
+        31,
+        420,
+        481
+      ],
+      "scale": 0.6829268292682927,
+      "xy": [
+        16,
+        54
+      ],
+      "canvas": [
+        256,
+        416
+      ],
+      "target_bbox": [
+        16,
+        46,
+        240,
+        369
+      ]
+    }
+  ],
+  "files": {
+    "sleeping_bag.png": "52e331bfa907806594b3e8cd7cac2a5eb502543dbf11679a349b1e8b59ded285",
+    "straw_mat-vertical.png": "0cd43aefcf34d9e1e67acedeaf7c89c57567dfc89374ffaad822cbec88a92f60",
+    "straw_mat.png": "cbf02d4a0251ebc555344364bf5cea1fa268c94dab876a3f36d8450cef4496c5",
+    "wood_bed-vertical.png": "54a6dd6f9c2888ce0805d5ef56729c8053629bec760fa1a672be1670384ad507",
+    "wood_bed.png": "bf06d39e77ddb6adb269bde797e096e47a151f4631467cc3f5b1efd28be49963"
+  },
+  "notes": [
+    "Five separately painted occupied props: same orange bed quilt, cream mat blanket matching pillow, sage occupied sleeping bag.",
+    "No baked character, skin, hair or clothing; current head is resolved at runtime.",
+    "Complete curved silhouettes retained with uniform scaling; no rectangular blanket crops, no recolored bed quilt for mat."
+  ]
+}

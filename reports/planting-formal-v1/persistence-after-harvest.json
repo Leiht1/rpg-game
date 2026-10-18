@@ -1,0 +1,22 @@
+[
+  {
+    "name": "third process loads harvested snapshot",
+    "pass": true
+  },
+  {
+    "name": "harvested mature crop remains roots after another restart",
+    "pass": true
+  },
+  {
+    "name": "one harvest reward restored exactly once",
+    "pass": true
+  },
+  {
+    "name": "unharvested crop does not grow while process is closed",
+    "pass": true
+  },
+  {
+    "name": "other roots retained independently",
+    "pass": true
+  }
+]

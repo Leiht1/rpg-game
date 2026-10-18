@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "name": "one visible tool contact rendering mineright",
+      "pass": true
+    },
+    {
+      "name": "tool sorts in front of target with local world Y mineright",
+      "pass": true
+    },
+    {
+      "name": "contact tool preserves exact native pose/mirror mineright",
+      "pass": true
+    },
+    {
+      "name": "original hand covers shaft once mineright",
+      "pass": true
+    },
+    {
+      "name": "cancel restores original body render mineright",
+      "pass": true
+    },
+    {
+      "name": "one visible tool contact rendering mineleft",
+      "pass": true
+    },
+    {
+      "name": "tool sorts in front of target with local world Y mineleft",
+      "pass": true
+    },
+    {
+      "name": "contact tool preserves exact native pose/mirror mineleft",
+      "pass": true
+    },
+    {
+      "name": "original hand covers shaft once mineleft",
+      "pass": true
+    },
+    {
+      "name": "cancel restores original body render mineleft",
+      "pass": true
+    },
+    {
+      "name": "one visible tool contact rendering digright",
+      "pass": true
+    },
+    {
+      "name": "tool sorts in front of target with local world Y digright",
+      "pass": true
+    },
+    {
+      "name": "contact tool preserves exact native pose/mirror digright",
+      "pass": true
+    },
+    {
+      "name": "original hand covers shaft once digright",
+      "pass": true
+    },
+    {
+      "name": "cancel restores original body render digright",
+      "pass": true
+    },
+    {
+      "name": "one visible tool contact rendering digleft",
+      "pass": true
+    },
+    {
+      "name": "tool sorts in front of target with local world Y digleft",
+      "pass": true
+    },
+    {
+      "name": "contact tool preserves exact native pose/mirror digleft",
+      "pass": true
+    },
+    {
+      "name": "original hand covers shaft once digleft",
+      "pass": true
+    },
+    {
+      "name": "cancel restores original body render digleft",
+      "pass": true
+    }
+  ],
+  "count": 20,
+  "failures": []
+}

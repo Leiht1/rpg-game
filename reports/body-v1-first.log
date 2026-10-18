@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ERROR: sprint exhausts and blocks labor
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_body_v1.gd:10)
+       [1] units (res://tests/test_body_v1.gd:31)
+       [2] run (res://tests/test_body_v1.gd:57)
+BODY V1 headless: 425 checks; 1 failures

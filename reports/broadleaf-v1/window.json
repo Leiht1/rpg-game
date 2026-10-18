@@ -1,0 +1,751 @@
+{
+  "checks": [
+    {
+      "name": "explicit version and one-dig/four-leaf definition",
+      "pass": true
+    },
+    {
+      "name": "twenty seconds running spends only 25 stamina",
+      "pass": true
+    },
+    {
+      "name": "twenty seconds rest recovers slowly",
+      "pass": true
+    },
+    {
+      "name": "full stamina supports 66 mining hits",
+      "pass": true
+    },
+    {
+      "name": "wildflower consumes one and restores exactly one hunger only",
+      "pass": true
+    },
+    {
+      "name": "full hunger never wastes wildflowers",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:17:24:0",
+      "pass": true
+    },
+    {
+      "name": "same-seed worker result 271828(11, 16)",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:21:26:1",
+      "pass": true
+    },
+    {
+      "name": "same-seed worker result 271828(14, 17)",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:23:25:0",
+      "pass": true
+    },
+    {
+      "name": "same-seed worker result 271828(15, 17)",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:17:27:0",
+      "pass": true
+    },
+    {
+      "name": "same-seed worker result 271828(11, 18)",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:18:27:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:19:28:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:16:28:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:23:29:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:19:30:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:22:30:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:30:37:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:31:36:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:32:36:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:31:37:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:30:38:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:15:44:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:27:24:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:30:25:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:31:25:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:31:25:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:32:26:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:27:28:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:28:28:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:29:28:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:28:29:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:31:30:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:25:16:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:28:17:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:24:18:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:25:19:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:28:18:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:29:19:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:23:21:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:24:21:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:24:22:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:25:22:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:26:22:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:28:22:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:36:26:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:38:26:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:37:28:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:51:26:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:52:27:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:54:27:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:51:29:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:52:29:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:48:38:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:50:38:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:52:37:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:48:40:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:50:40:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:54:40:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:48:42:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:52:43:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:54:43:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:48:44:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 271828broadleaf:1:52:44:0",
+      "pass": true
+    },
+    {
+      "name": "few clumps per grass-region sample 271828",
+      "pass": true
+    },
+    {
+      "name": "cross-chunk 260 spacing 271828",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:27:23:1",
+      "pass": true
+    },
+    {
+      "name": "same-seed worker result 447349832(18, 15)",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:30:22:1",
+      "pass": true
+    },
+    {
+      "name": "same-seed worker result 447349832(20, 15)",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:32:23:0",
+      "pass": true
+    },
+    {
+      "name": "same-seed worker result 447349832(21, 15)",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:29:24:1",
+      "pass": true
+    },
+    {
+      "name": "same-seed worker result 447349832(19, 16)",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:32:24:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:30:27:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:38:33:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:37:34:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:40:35:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:36:37:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:40:36:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:40:36:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:35:38:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:35:38:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:39:38:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:21:36:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:24:36:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:24:37:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:26:37:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:22:38:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:23:37:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:27:37:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:28:37:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:24:40:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:34:35:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:32:36:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:32:36:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:32:37:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:34:37:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:31:38:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:32:38:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:31:39:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:33:40:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:30:41:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:34:40:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:35:41:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:38:40:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:37:42:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:34:43:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:37:44:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:40:44:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:47:40:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:45:40:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:46:42:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:42:43:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:47:44:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:42:46:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:49:40:0",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:52:41:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:48:44:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:52:45:1",
+      "pass": true
+    },
+    {
+      "name": "plant restricted to grass interior 447349832broadleaf:1:51:46:0",
+      "pass": true
+    },
+    {
+      "name": "few clumps per grass-region sample 447349832",
+      "pass": true
+    },
+    {
+      "name": "cross-chunk 260 spacing 447349832",
+      "pass": true
+    },
+    {
+      "name": "actual complete world generation contains reachable clumps",
+      "pass": true
+    },
+    {
+      "name": "body HUD bottom aligns with hotbar (960, 540)",
+      "pass": true
+    },
+    {
+      "name": "aligned HUD avoids dock (960, 540)",
+      "pass": true
+    },
+    {
+      "name": "dock remains within screen (960, 540)",
+      "pass": true
+    },
+    {
+      "name": "body status centered (960, 540)",
+      "pass": true
+    },
+    {
+      "name": "body HUD bottom aligns with hotbar (1280, 720)",
+      "pass": true
+    },
+    {
+      "name": "aligned HUD avoids dock (1280, 720)",
+      "pass": true
+    },
+    {
+      "name": "dock remains within screen (1280, 720)",
+      "pass": true
+    },
+    {
+      "name": "body status centered (1280, 720)",
+      "pass": true
+    },
+    {
+      "name": "body HUD bottom aligns with hotbar (1600, 900)",
+      "pass": true
+    },
+    {
+      "name": "aligned HUD avoids dock (1600, 900)",
+      "pass": true
+    },
+    {
+      "name": "dock remains within screen (1600, 900)",
+      "pass": true
+    },
+    {
+      "name": "body status centered (1600, 900)",
+      "pass": true
+    },
+    {
+      "name": "first seed has a real sample for scene integration",
+      "pass": true
+    },
+    {
+      "name": "surface plant has intact art and no buried soil veil",
+      "pass": true
+    },
+    {
+      "name": "unarmed dig cannot harvest",
+      "pass": true
+    },
+    {
+      "name": "unarmed authoritative attempt produces nothing",
+      "pass": true
+    },
+    {
+      "name": "dig contact never shifts plant root",
+      "pass": true
+    },
+    {
+      "name": "actual selector targets new plant",
+      "pass": true
+    },
+    {
+      "name": "one native shovel action completes plant at authoritative hit",
+      "pass": true
+    },
+    {
+      "name": "plant uses new one-point digging cost",
+      "pass": true
+    },
+    {
+      "name": "exact four broad leaves in original world-drop path",
+      "pass": true
+    },
+    {
+      "name": "completed plant cannot duplicate rewards",
+      "pass": true
+    },
+    {
+      "name": "original pickup puts all four leaves in inventory",
+      "pass": true
+    },
+    {
+      "name": "four dug leaves start existing two-batch fiber recipe",
+      "pass": true
+    },
+    {
+      "name": "existing timed recipe converts four leaves to six fibers",
+      "pass": true
+    },
+    {
+      "name": "consumed plant does not respawn on chunk reload",
+      "pass": true
+    },
+    {
+      "name": "2.0 save retains inventory and harvest history after 2.1 upgrade",
+      "pass": true
+    }
+  ],
+  "counts": [
+    {
+      "clumps_before_existing_harvest_exclusion": 57,
+      "sample_chunks": 200,
+      "seed": 271828
+    },
+    {
+      "clumps_before_existing_harvest_exclusion": 52,
+      "sample_chunks": 151,
+      "seed": 447349832
+    }
+  ],
+  "failures": 0,
+  "samples": [
+    {
+      "coord": [
+        11,
+        16
+      ],
+      "row": {
+        "id": "broadleaf:1:17:24:0",
+        "kind": "broadleaf_clump",
+        "priority": 0.00280676642563509,
+        "x": 13571.4375,
+        "y": 19091.93359375
+      },
+      "seed": 271828
+    },
+    {
+      "coord": [
+        14,
+        17
+      ],
+      "row": {
+        "id": "broadleaf:1:21:26:1",
+        "kind": "broadleaf_clump",
+        "priority": 0.507723539838439,
+        "x": 16348.1396484375,
+        "y": 20489.2578125
+      },
+      "seed": 271828
+    },
+    {
+      "coord": [
+        15,
+        17
+      ],
+      "row": {
+        "id": "broadleaf:1:23:25:0",
+        "kind": "broadleaf_clump",
+        "priority": 0.603862903362076,
+        "x": 18393.095703125,
+        "y": 19873.71484375
+      },
+      "seed": 271828
+    },
+    {
+      "coord": [
+        11,
+        18
+      ],
+      "row": {
+        "id": "broadleaf:1:17:27:0",
+        "kind": "broadleaf_clump",
+        "priority": 0.745918135971724,
+        "x": 13404.197265625,
+        "y": 21106.6875
+      },
+      "seed": 271828
+    },
+    {
+      "coord": [
+        18,
+        15
+      ],
+      "row": {
+        "id": "broadleaf:1:27:23:1",
+        "kind": "broadleaf_clump",
+        "priority": 0.539970892732949,
+        "x": 21095.0859375,
+        "y": 17810.671875
+      },
+      "seed": 447349832
+    },
+    {
+      "coord": [
+        20,
+        15
+      ],
+      "row": {
+        "id": "broadleaf:1:30:22:1",
+        "kind": "broadleaf_clump",
+        "priority": 0.46775210484292,
+        "x": 23295.73046875,
+        "y": 17309.515625
+      },
+      "seed": 447349832
+    },
+    {
+      "coord": [
+        21,
+        15
+      ],
+      "row": {
+        "id": "broadleaf:1:32:23:0",
+        "kind": "broadleaf_clump",
+        "priority": 0.857419415310686,
+        "x": 25192.765625,
+        "y": 18168.828125
+      },
+      "seed": 447349832
+    },
+    {
+      "coord": [
+        19,
+        16
+      ],
+      "row": {
+        "id": "broadleaf:1:29:24:1",
+        "kind": "broadleaf_clump",
+        "priority": 0.0573882791480926,
+        "x": 22333.55078125,
+        "y": 18737.8828125
+      },
+      "seed": 447349832
+    }
+  ]
+}

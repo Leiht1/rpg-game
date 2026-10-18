@@ -1,0 +1,86 @@
+{
+  "art_status": "approved_user",
+  "checks": [
+    {
+      "name": "candidate internal green pixels0 wood_floor zoom1.0",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 stone_path zoom1.0",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 mixed zoom1.0",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 wood_floor zoom0.75",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 stone_path zoom0.75",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 mixed zoom0.75",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 wood_floor zoom1.25",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 stone_path zoom1.25",
+      "pass": true
+    },
+    {
+      "name": "candidate internal green pixels0 mixed zoom1.25",
+      "pass": true
+    },
+    {
+      "name": "candidate same logical occupancy 960",
+      "pass": true
+    },
+    {
+      "name": "candidate same logical occupancy 1280",
+      "pass": true
+    },
+    {
+      "name": "candidate same logical occupancy 1600",
+      "pass": true
+    },
+    {
+      "name": "formal mixed contiguous floor hides interior lip",
+      "pass": true
+    },
+    {
+      "name": "demolition refresh exposes remaining real material lip",
+      "pass": true
+    },
+    {
+      "name": "rebuild hides lip again without residual ground band",
+      "pass": true
+    },
+    {
+      "name": "placement preview sees formal neighboring floor",
+      "pass": true
+    },
+    {
+      "name": "preview uses adopted formal texture path",
+      "pass": true
+    },
+    {
+      "name": "save adopted floor through original atomic snapshot",
+      "pass": true
+    },
+    {
+      "name": "same-process load retains floor positions orientations occupancy",
+      "pass": true
+    },
+    {
+      "name": "load reconstructs contiguous surface and exposed lip rules",
+      "pass": true
+    }
+  ],
+  "failed": 0
+}

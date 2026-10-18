@@ -3,9 +3,13 @@ extends Node2D
 
 const Gen = preload("res://scripts/world_generator.gd")
 const Ground = preload("res://scripts/ground_decals.gd")
-const Prop = preload("res://scripts/nature_prop.gd")
+const Prop = preload("res://scripts/scenery_prop.gd")
+const Scenery = preload("res://scripts/scenery_catalog.gd")
+const GroundingMask = preload("res://scripts/grounding_mask.gd")
+const Canopy = preload("res://scripts/canopy_shadows.gd")
+const PROP_SHADER = preload("res://scripts/grounded_prop.gdshader")
 const TERRAIN_SHADER = preload("res://scripts/terrain.gdshader")
-const ART_VERSION := "scene-view-0.2.0"
+const ART_VERSION := "scene-contact-1.0.0"
 const FILES := ["tree_0","tree_1","rock_0","rock_1","tuft_0","tuft_1","tuft_2"]
 var candidate_mode := 0
 var preview_enabled := false
@@ -18,8 +22,10 @@ var ready_data: Array[Dictionary] = []
 var requested: Array[Vector2i] = []
 var mutex := Mutex.new()
 var textures: Array[Texture2D] = []
+var scenery_textures := {}
 var ground_atlas: Texture2D
 var shared_material := ShaderMaterial.new()
+var prop_material := ShaderMaterial.new()
 var target_center := Vector2i(-999,-999)
 var keep_radius := 2
 var object_count := 0
@@ -27,20 +33,32 @@ var total_loaded := 0
 var total_unloaded := 0
 var last_build_ms := 0.0
 var last_install_ms := 0.0
+var last_grounding_refresh_ms := 0.0
 var max_install_ms := 0.0
 var quitting := false
 var harvested := {}
 var tree_hits := {}
 var drops: Array[Node2D]=[]
 var collected_wood := 0
+var items: Node
 
 func configure(gen: WildGenerator, sort_root: Node2D) -> void:
 	generator=gen
 	ground_atlas=load("res://assets/environment/ground_v03/ground_atlas.png")
 	object_root=sort_root
+	prop_material.shader=PROP_SHADER
+	var ground_copy:=BackBufferCopy.new()
+	ground_copy.name="PureGroundColorCopy"
+	ground_copy.z_index=-1
+	ground_copy.copy_mode=BackBufferCopy.COPY_MODE_VIEWPORT
+	add_child(ground_copy)
 	for file in FILES:
 		var folder := "view_v01" if file.begins_with("tree_") or file.begins_with("rock_") else "stylized_v3"
 		textures.append(load("res://assets/environment/%s/%s.png"%[folder,file]))
+	for id in Scenery.IDS:
+		for surface in ["grass","forest","dirt"]:
+			var key:String=id+"_"+surface
+			scenery_textures[key]=load("res://assets/environment/contact_v01/"+key+".png")
 	shared_material.shader=TERRAIN_SHADER
 	shared_material.set_shader_parameter("spawn_tex",load("res://assets/environment/stylized_v3/grass.png"))
 	shared_material.set_shader_parameter("ground_origin",generator.spawn)
@@ -91,8 +109,14 @@ func _generate(coord: Vector2i) -> void:
 	# Each worker owns its noises; no RenderingServer or scene nodes here.
 	var local_gen := Gen.new(generator.world_seed,generator.map_cells,generator.plan_snapshot())
 	var packet := local_gen.build_chunk(coord)
+	var mask_start:=Time.get_ticks_usec()
+	# Worker uses only immutable generator data. Harvested edits are reconciled on install.
+	packet["grounding_mask"]=GroundingMask.build(local_gen,coord,{})
+	packet["build_ms"]+=(Time.get_ticks_usec()-mask_start)/1000.0
 	var empty_stamps:Array[Dictionary]=[] # Approved surface replaces legacy stamps.
 	packet["ground_stamps"]=empty_stamps
+	if items:
+		packet["resource_distribution"]=items.build_distribution(local_gen,items.rules,items.reachable,coord)
 	mutex.lock()
 	ready_data.append(packet)
 	mutex.unlock()
@@ -112,6 +136,10 @@ func install_chunk(packet: Dictionary) -> void:
 	var material:=shared_material.duplicate() as ShaderMaterial
 	material.set_shader_parameter("environment_tex",ImageTexture.create_from_image(packet.environment))
 	material.set_shader_parameter("chunk_origin",Vector2(coord)*Gen.CHUNK_PX)
+	var mask:Image
+	if packet.has("grounding_mask") and harvested.is_empty():mask=packet.grounding_mask
+	else:mask=GroundingMask.build(generator,coord,harvested)
+	material.set_shader_parameter("grounding_mask",ImageTexture.create_from_image(mask))
 	terrain.material=material
 	add_child(terrain)
 	var ground=Ground.new()
@@ -132,30 +160,28 @@ func install_chunk(packet: Dictionary) -> void:
 		if entry.kind>=4:
 			prop.visible=entry.position.distance_to(generator.spawn)>160 and (str(entry.id).begins_with("clearing:") or generator.random_at(roundi(entry.position.x),roundi(entry.position.y),682)<.20)
 		prop.detail_seed=generator.random_at(roundi(entry.position.x),roundi(entry.position.y),93)
-		prop.texture=textures[entry.kind]
+		if entry.kind<4:
+			var appearance:Dictionary=Scenery.appearance(generator,entry)
+			prop.variant_id=appearance.id;prop.surface=appearance.surface
+			prop.texture=scenery_textures[appearance.id+"_"+appearance.surface]
+		else:prop.texture=textures[entry.kind]
 		prop.position=entry.position
 		prop.display_size=Vector2(prop.texture.get_size())*entry.scale
+		if entry.kind<4:
+			prop.prepare()
+			prop.shadow_changed.connect(_refresh_canopy.bind(1.,coord))
 		object_root.add_child(prop)
 		props.append(prop)
 		if entry.kind<4:
 			prop.add_to_group("trees" if entry.kind<2 else "rocks")
-			var obstacle := StaticBody2D.new()
-			obstacle.name="FootprintBody"
-			prop.add_child(obstacle)
-			var shape := CollisionPolygon2D.new()
-			shape.name="Footprint"
-			var points: PackedVector2Array
-			if entry.kind<2:
-				points=PackedVector2Array([Vector2(-18,-3),Vector2(-14,-14),Vector2(13,-14),Vector2(19,-4),Vector2(14,5),Vector2(-12,6)])
-			else:
-				var w: float=prop.display_size.x*.46
-				var h: float=prop.display_size.y*.27
-				points=PackedVector2Array([Vector2(-w*.95,-h*.3),Vector2(-w*.7,-h),Vector2(w*.55,-h*1.1),Vector2(w,-h*.25),Vector2(w*.75,4),Vector2(-w*.55,7)])
-			if entry.kind<2:
-				for i in points.size(): points[i]*=entry.scale
-			shape.polygon=points
-			obstacle.add_child(shape)
+
 	loaded[coord]={"terrain":terrain,"ground":ground,"body":body,"props":props}
+	var crown=Canopy.new()
+	crown.name="GroundCanopy_%d_%d"%[coord.x,coord.y]
+	crown.z_index=-1
+	crown.props=props
+	add_child(crown)
+	loaded[coord]["canopy"]=crown
 	if preview_enabled:
 		var layer=load("res://scripts/ground_candidate.gd").new()
 		layer.z_index=-1
@@ -168,15 +194,28 @@ func install_chunk(packet: Dictionary) -> void:
 	ordered.sort_custom(func(a,b):return a.y<b.y or (a.y==b.y and a.x<b.x))
 	for key in ordered:move_child(loaded[key].ground,get_child_count()-1)
 	object_count+=props.size()
+	if items:
+		if packet.has("resource_distribution"):
+			items.chunk_cache[coord]=packet.resource_distribution
+			items.generation_ms=packet.resource_distribution.ms
+		items.install_chunk(coord)
 	total_loaded+=1
 	last_build_ms=packet.build_ms
 	last_install_ms=(Time.get_ticks_usec()-start)/1000.0
 	max_install_ms=maxf(max_install_ms,last_install_ms)
 
 func unload_chunk(coord: Vector2i) -> void:
+	if items: items.release_cache(coord)
+	for drop in drops.duplicate():
+		if is_instance_valid(drop) and chunk_at(drop.position)==coord:
+			drops.erase(drop)
+			drop.queue_free()
+	for ore in get_tree().get_nodes_in_group("harvest_visuals"):
+		if ore.get_meta("ore_id","")!="" and chunk_at(ore.position)==coord: ore.queue_free()
 	var entry: Dictionary=loaded[coord]
 	object_count-=entry.props.size()
 	if entry.has("candidate"): entry.candidate.queue_free()
+	entry.canopy.queue_free()
 	entry.terrain.queue_free()
 	entry.ground.queue_free()
 	entry.body.queue_free()
@@ -200,22 +239,8 @@ func _exit_tree() -> void:
 	quitting=true
 	for id in tasks.values(): WorkerThreadPool.wait_for_task_completion(id)
 
-func interaction_target(at: Vector2) -> Node2D:
-	var best: Node2D
-	var distance := INF
-	for drop in drops:
-		if not is_instance_valid(drop) or drop.get_meta("collected",false): continue
-		var offset := drop.position-at
-		if offset.length()<42 and absf(offset.y)<30 and offset.length()<distance and clear_reach(at,drop.position):
-			best=drop
-			distance=offset.length()
-	if best!=null: return best
-	for tree in get_tree().get_nodes_in_group("trees"):
-		var offset: Vector2=tree.position-at
-		if tree_in_reach(at,tree) and offset.length()<distance:
-			best=tree
-			distance=offset.length()
-	return best
+func interaction_target(at: Vector2, facing: String = "front", pointer: Vector2 = Vector2.INF) -> Node2D:
+	return preload("res://scripts/world_interaction.gd").target(self,at,facing,pointer)
 
 func tree_in_reach(at: Vector2, tree: Node2D) -> bool:
 	return is_instance_valid(tree) and tree.is_in_group("trees") and at.distance_to(tree.position)<62 and clear_reach(at,tree.position,tree)
@@ -232,42 +257,91 @@ func clear_reach(from: Vector2,to: Vector2,target: Node2D=null) -> bool:
 
 func chop_tree(tree: Node2D) -> void:
 	if not is_instance_valid(tree) or not tree.is_in_group("trees"): return
+	if items and not items.inventory.has_capability("chop"): return
 	var id: String=tree.get_meta("prop_id")
 	if harvested.has(id): return
+	if items and not items.body.can_labor("chop",items.world.player.action=="chop"): return
+	if items: items.body.spend_labor("chop")
 	tree_hits[id]=int(tree_hits.get(id,0))+1
-	var tween:=create_tween()
-	tween.tween_property(tree,"rotation",.025,.07)
-	tween.tween_property(tree,"rotation",0.0,.12)
-	# tree_0 is the broad large tree; tree_1 is the smaller slender tree.
-	var required := 4 if tree.kind==0 else 2
+	tree.hit()
+	if items:
+		var held: Dictionary=items.inventory.equipment.get("main_hand",{})
+		items.inventory.wear_held(str(held.get("instance_id","")),"chop")
+	if items: items.dirty=true
+	var required:int=tree.required_hits
 	var hits := int(tree_hits[id])
 	if hits%2==0:
 		spawn_drop(tree.position+Vector2(-28 if hits==2 else 28,18),id+":hit%d"%hits)
 	if hits<required: return
 	harvested[id]=true
+	call_deferred("refresh_grounding",tree.position)
 	tree.remove_from_group("trees")
-	tree.get_node("FootprintBody").queue_free()
-	tween.tween_property(tree,"modulate:a",0.0,.3)
-	# Hide but retain the streamed node until chunk unload; no stale array references.
-	tween.tween_callback(tree.hide)
+	tree.fade_out()
+	if items: items.save_state()
+
+func _refresh_canopy(_alpha:float,coord:Vector2i)->void:
+	if loaded.has(coord):loaded[coord].canopy.queue_redraw()
+
+func refresh_grounding(at:Vector2)->void:
+	var start:=Time.get_ticks_usec()
+	var center:=chunk_at(at)
+	for y in range(center.y-1,center.y+2):
+		for x in range(center.x-1,center.x+2):
+			var c:=Vector2i(x,y)
+			if loaded.has(c) and Rect2(Vector2(c)*Gen.CHUNK_PX,Vector2.ONE*Gen.CHUNK_PX).grow(124.).has_point(at):
+				var mask:=GroundingMask.build(generator,c,harvested)
+				loaded[c].terrain.material.set_shader_parameter("grounding_mask",ImageTexture.create_from_image(mask))
+	last_grounding_refresh_ms=(Time.get_ticks_usec()-start)/1000.0
 
 func spawn_drop(at: Vector2,id: String) -> Node2D:
-	var drop := Sprite2D.new()
-	drop.name="DropWood_"+id.replace(":","_")
-	drop.texture=load("res://assets/environment/cartoon_v2/wood.png")
-	drop.position=at
-	drop.offset=Vector2(0,-5)
+	if items:
+		if items.consumed.has(id): return null
+		var entry := {"id":id,"item_id":"wood","count":4+int(abs(id.hash())%3),"x":at.x,"y":at.y}
+		items.loose[id]=entry
+		return create_item_drop(entry)
+	var entry := {"id":id,"item_id":"wood","count":1,"x":at.x,"y":at.y}
+	return create_item_drop(entry)
+
+func create_item_drop(entry: Dictionary) -> Node2D:
+	for existing in drops:
+		if is_instance_valid(existing) and existing.get_meta("drop_id","")==str(entry.id): return existing
+	var gathered: bool = items!=null and not entry.get("natural",false) and items.rules.resources.get(str(entry.item_id),{}).get("mode","")=="harvest"
+	# Gathered goods are small loose objects, not a replanted bush or whole plant.
+	var tex: Texture2D = items.texture(str(entry.item_id),"loose" if gathered else "world") if items else load("res://assets/environment/cartoon_v2/wood.png")
+	var drop: Node2D
+	if tex:
+		var object := preload("res://scripts/item_drop.gd").new()
+		var width := 20.0 if gathered else float(items.database.item(entry.item_id).world_size) if items else float(tex.get_width())
+		object.setup(tex,width,8.0 if tex is AtlasTexture else 0.0)
+		drop=object
+	else:
+		var marker := preload("res://scripts/resource_marker.gd").new()
+		marker.caption=items.database.item(entry.item_id).name
+		marker.growing=entry.get("mode","pickup")=="harvest"
+		marker.tint=Color("b5cf90") if marker.growing else Color("e7c48e")
+		drop=marker
+	drop.name="Resource_"+str(entry.id).replace(":","_")
+	drop.position=Vector2(entry.x,entry.y)
+	if entry.has("instance"): drop.set_meta("instance",entry.instance.duplicate(true))
+	for key in ["item_id","count","natural"]: drop.set_meta(key,entry.get(key,false if key=="natural" else 1))
+	drop.set_meta("mode",entry.get("mode","pickup"))
+	drop.set_meta("origin",entry.get("origin","natural" if entry.get("natural",false) else "drop"))
+	drop.set_meta("drop_id",str(entry.id))
 	drop.add_to_group("drops")
 	object_root.add_child(drop)
 	drops.append(drop)
+	if entry.get("drop_animation",false) and drop.has_method("animate_drop"): drop.animate_drop()
 	return drop
 
-func pickup_drop(drop: Node2D) -> void:
-	if not is_instance_valid(drop) or drop.get_meta("collected",false): return
+func pickup_drop(drop: Node2D) -> bool:
+	if not is_instance_valid(drop) or drop.get_meta("collected",false): return false
+	if items:
+		return items.pickup(drop)
 	drop.set_meta("collected",true)
 	drops.erase(drop)
 	collected_wood+=1
 	drop.queue_free()
+	return true
 
 func set_candidate(mode:int)->void:
 	candidate_mode=mode

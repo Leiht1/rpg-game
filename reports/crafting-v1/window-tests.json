@@ -1,0 +1,458 @@
+[
+  {
+    "name": "six valid real recipes, no invalid items",
+    "pass": true
+  },
+  {
+    "name": "categories derive from actual recipes",
+    "pass": true
+  },
+  {
+    "name": "invalid output rejected",
+    "pass": true
+  },
+  {
+    "name": "invalid ingredient rejected",
+    "pass": true
+  },
+  {
+    "name": "fractional output rejected",
+    "pass": true
+  },
+  {
+    "name": "negative ingredient rejected",
+    "pass": true
+  },
+  {
+    "name": "preview does not mutate hand_stone_axe",
+    "pass": true
+  },
+  {
+    "name": "batch commits hand_stone_axe",
+    "pass": true
+  },
+  {
+    "name": "exact batch output and one inventory signal hand_stone_axe",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_stone_axe:branch",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_stone_axe:flint",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_stone_axe:plant_fiber",
+    "pass": true
+  },
+  {
+    "name": "tool count remains one hand_stone_axe",
+    "pass": true
+  },
+  {
+    "name": "tool count remains one hand_stone_axe",
+    "pass": true
+  },
+  {
+    "name": "tool count remains one hand_stone_axe",
+    "pass": true
+  },
+  {
+    "name": "three distinct instance identities hand_stone_axe",
+    "pass": true
+  },
+  {
+    "name": "no automatic assignment of hotbar hand_stone_axe",
+    "pass": true
+  },
+  {
+    "name": "preview does not mutate hand_stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "batch commits hand_stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "exact batch output and one inventory signal hand_stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_stone_pickaxe:branch",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_stone_pickaxe:flint",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_stone_pickaxe:plant_fiber",
+    "pass": true
+  },
+  {
+    "name": "tool count remains one hand_stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "tool count remains one hand_stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "tool count remains one hand_stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "three distinct instance identities hand_stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "no automatic assignment of hotbar hand_stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "preview does not mutate hand_simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "batch commits hand_simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "exact batch output and one inventory signal hand_simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_simple_shovel:wood",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_simple_shovel:stone",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_simple_shovel:bone_fragment",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_simple_shovel:plant_fiber",
+    "pass": true
+  },
+  {
+    "name": "tool count remains one hand_simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "tool count remains one hand_simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "tool count remains one hand_simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "three distinct instance identities hand_simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "no automatic assignment of hotbar hand_simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "preview does not mutate hand_field_lantern",
+    "pass": true
+  },
+  {
+    "name": "batch commits hand_field_lantern",
+    "pass": true
+  },
+  {
+    "name": "exact batch output and one inventory signal hand_field_lantern",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_field_lantern:branch",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_field_lantern:plant_fiber",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_field_lantern:flint",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_field_lantern:relic_fragment",
+    "pass": true
+  },
+  {
+    "name": "no automatic assignment of hotbar hand_field_lantern",
+    "pass": true
+  },
+  {
+    "name": "preview does not mutate hand_supply_pouch",
+    "pass": true
+  },
+  {
+    "name": "batch commits hand_supply_pouch",
+    "pass": true
+  },
+  {
+    "name": "exact batch output and one inventory signal hand_supply_pouch",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_supply_pouch:wild_carrot",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_supply_pouch:flint",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_supply_pouch:relic_fragment",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_supply_pouch:plant_fiber",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_supply_pouch:broad_leaf",
+    "pass": true
+  },
+  {
+    "name": "no automatic assignment of hotbar hand_supply_pouch",
+    "pass": true
+  },
+  {
+    "name": "preview does not mutate hand_leaf_fiber",
+    "pass": true
+  },
+  {
+    "name": "batch commits hand_leaf_fiber",
+    "pass": true
+  },
+  {
+    "name": "exact batch output and one inventory signal hand_leaf_fiber",
+    "pass": true
+  },
+  {
+    "name": "exact ingredient consumption hand_leaf_fiber:broad_leaf",
+    "pass": true
+  },
+  {
+    "name": "no automatic assignment of hotbar hand_leaf_fiber",
+    "pass": true
+  },
+  {
+    "name": "invalid/missing-material failure preserves inventory [\"missing\", 1]",
+    "pass": true
+  },
+  {
+    "name": "invalid/missing-material failure preserves inventory [\"hand_leaf_fiber\", 0]",
+    "pass": true
+  },
+  {
+    "name": "invalid/missing-material failure preserves inventory [\"hand_leaf_fiber\", 100]",
+    "pass": true
+  },
+  {
+    "name": "invalid/missing-material failure preserves inventory [\"hand_stone_axe\", 1]",
+    "pass": true
+  },
+  {
+    "name": "service transaction succeeds",
+    "pass": true
+  },
+  {
+    "name": "duplicate request cannot produce output 0",
+    "pass": true
+  },
+  {
+    "name": "duplicate request cannot produce output 1",
+    "pass": true
+  },
+  {
+    "name": "duplicate request cannot produce output 2",
+    "pass": true
+  },
+  {
+    "name": "duplicate request cannot produce output 3",
+    "pass": true
+  },
+  {
+    "name": "duplicate request cannot produce output 4",
+    "pass": true
+  },
+  {
+    "name": "duplicate request cannot produce output 5",
+    "pass": true
+  },
+  {
+    "name": "duplicate request cannot produce output 6",
+    "pass": true
+  },
+  {
+    "name": "duplicate request cannot produce output 7",
+    "pass": true
+  },
+  {
+    "name": "protected save blocks crafting",
+    "pass": true
+  },
+  {
+    "name": "future facility conditions do not bypass",
+    "pass": true
+  },
+  {
+    "name": "full bag rollback includes would-be partial stack",
+    "pass": true
+  },
+  {
+    "name": "freed ingredient slot holds remainder after existing stack",
+    "pass": true
+  },
+  {
+    "name": "full bag uses existing stack room",
+    "pass": true
+  },
+  {
+    "name": "signal reentry cannot submit another transaction",
+    "pass": true
+  },
+  {
+    "name": "original 40 storage and three equipment controls retained",
+    "pass": true
+  },
+  {
+    "name": "formal bag and slots use generated texture styles",
+    "pass": true
+  },
+  {
+    "name": "tooltip uses same generated panel art",
+    "pass": true
+  },
+  {
+    "name": "C opens crafting and blocks player",
+    "pass": true
+  },
+  {
+    "name": "crafting blocks movement and E interaction",
+    "pass": true
+  },
+  {
+    "name": "native mouse selects data-driven category",
+    "pass": true
+  },
+  {
+    "name": "insufficient ingredients disable button and explain",
+    "pass": true
+  },
+  {
+    "name": "inventory signal updates recipe without polling",
+    "pass": true
+  },
+  {
+    "name": "native batch click exact quantities",
+    "pass": true
+  },
+  {
+    "name": "native single craft ignores selected batch size",
+    "pass": true
+  },
+  {
+    "name": "UI suppresses accidental rapid repeat",
+    "pass": true
+  },
+  {
+    "name": "M transitions from crafting to original map",
+    "pass": true
+  },
+  {
+    "name": "Esc restores world input",
+    "pass": true
+  },
+  {
+    "name": "world crafts stone_axe",
+    "pass": true
+  },
+  {
+    "name": "crafted tool moves to hotbar and equips original capability chop",
+    "pass": true
+  },
+  {
+    "name": "crafted tool keeps one hotbar equipment reference stone_axe",
+    "pass": true
+  },
+  {
+    "name": "world crafts stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "crafted tool moves to hotbar and equips original capability mine",
+    "pass": true
+  },
+  {
+    "name": "crafted tool keeps one hotbar equipment reference stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "world crafts simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "crafted tool moves to hotbar and equips original capability dig",
+    "pass": true
+  },
+  {
+    "name": "crafted tool keeps one hotbar equipment reference simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "real usable lantern crafted",
+    "pass": true
+  },
+  {
+    "name": "original use interface turns light on",
+    "pass": true
+  },
+  {
+    "name": "lantern drives actual world illumination",
+    "pass": true
+  },
+  {
+    "name": "second use turns light off without consuming",
+    "pass": true
+  },
+  {
+    "name": "tooltip stays in viewport",
+    "pass": true
+  },
+  {
+    "name": "atomic roundtrip retains crafted inventory and equipment",
+    "pass": true
+  },
+  {
+    "name": "crafting keeps world resource and drop state",
+    "pass": true
+  },
+  {
+    "name": "craft panel fits viewport (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "HUD fits viewport (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "craft panel fits viewport (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "HUD fits viewport (1600, 900)",
+    "pass": true
+  }
+]

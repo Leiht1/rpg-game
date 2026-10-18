@@ -1,0 +1,234 @@
+{
+  "checks": [
+    {
+      "name": "visuals/stone_axe_icon.png real alpha and visible subject",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_axe_icon.png eight pixel safe border",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_axe_icon.png no opaque magenta residue",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_axe_icon.png provenance checksum",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_pickaxe_icon.png real alpha and visible subject",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_pickaxe_icon.png eight pixel safe border",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_pickaxe_icon.png no opaque magenta residue",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_pickaxe_icon.png provenance checksum",
+      "pass": true
+    },
+    {
+      "name": "visuals/simple_shovel_icon.png real alpha and visible subject",
+      "pass": true
+    },
+    {
+      "name": "visuals/simple_shovel_icon.png eight pixel safe border",
+      "pass": true
+    },
+    {
+      "name": "visuals/simple_shovel_icon.png no opaque magenta residue",
+      "pass": true
+    },
+    {
+      "name": "visuals/simple_shovel_icon.png provenance checksum",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_axe_world.png real alpha and visible subject",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_axe_world.png eight pixel safe border",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_axe_world.png no opaque magenta residue",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_axe_world.png provenance checksum",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_pickaxe_world.png real alpha and visible subject",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_pickaxe_world.png eight pixel safe border",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_pickaxe_world.png no opaque magenta residue",
+      "pass": true
+    },
+    {
+      "name": "visuals/stone_pickaxe_world.png provenance checksum",
+      "pass": true
+    },
+    {
+      "name": "visuals/simple_shovel_world.png real alpha and visible subject",
+      "pass": true
+    },
+    {
+      "name": "visuals/simple_shovel_world.png eight pixel safe border",
+      "pass": true
+    },
+    {
+      "name": "visuals/simple_shovel_world.png no opaque magenta residue",
+      "pass": true
+    },
+    {
+      "name": "visuals/simple_shovel_world.png provenance checksum",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched branch_icon.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched branch_world.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched broad_leaf_icon.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched broad_leaf_world.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched brown_mushroom_icon.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched brown_mushroom_world.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched flint_icon.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched flint_world.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched pine_cone_icon.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched pine_cone_world.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched plant_fiber_icon.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched plant_fiber_world.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched stone_icon.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched stone_world.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched wildflower_icon.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched wildflower_world.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched wild_apple_icon.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched wild_apple_world.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched wild_berry_icon.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched wild_berry_world.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched wild_carrot_icon.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched wild_carrot_world.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched wood_icon.png",
+      "pass": true
+    },
+    {
+      "name": "approved original untouched wood_world.png",
+      "pass": true
+    }
+  ],
+  "count": 48,
+  "failures": 0,
+  "raw_warning": [
+    {
+      "id": "safe_frame",
+      "status": "warn",
+      "value": 6,
+      "threshold": 0,
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+    }
+  ],
+  "note": "Static, different prop identities; motion-frame identity QC is not applicable. Existing raw margin warning retained."
+}

@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "name": "fixture and tool preview never write formal state",
+      "pass": true
+    },
+    {
+      "name": "world and ItemService agree on candidate preview state",
+      "pass": true
+    },
+    {
+      "name": "all original slots and three equipment slots retained",
+      "pass": true
+    },
+    {
+      "name": "equipment top to bottom head weapon outfit",
+      "pass": true
+    },
+    {
+      "name": "three equipment cells aligned vertically",
+      "pass": true
+    },
+    {
+      "name": "equipment cells sit to left of character portrait",
+      "pass": true
+    },
+    {
+      "name": "visual reorder keeps logical slot identities unchanged",
+      "pass": true
+    },
+    {
+      "name": "visible slot names use weapon and outfit",
+      "pass": true
+    },
+    {
+      "name": "no unequipped or item-content labels in bag",
+      "pass": true
+    },
+    {
+      "name": "HUD and actor equipment text removed",
+      "pass": true
+    },
+    {
+      "name": "bag leaves original bottom hotbar visible",
+      "pass": true
+    },
+    {
+      "name": "candidate icon isolation stone_axe",
+      "pass": true
+    },
+    {
+      "name": "candidate world art isolation stone_axe",
+      "pass": true
+    },
+    {
+      "name": "candidate does not overwrite formal item art definition stone_axe",
+      "pass": true
+    },
+    {
+      "name": "three debug tools occupy original bag cells stone_axe",
+      "pass": true
+    },
+    {
+      "name": "candidate icon isolation stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "candidate world art isolation stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "candidate does not overwrite formal item art definition stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "three debug tools occupy original bag cells stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "candidate icon isolation simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "candidate world art isolation simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "candidate does not overwrite formal item art definition simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "three debug tools occupy original bag cells simple_shovel",
+      "pass": true
+    }
+  ],
+  "count": 23,
+  "failures": 0
+}

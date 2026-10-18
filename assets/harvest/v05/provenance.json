@@ -1,0 +1,253 @@
+{
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "underlying image model unknown",
+  "estimateUsd": 0.0,
+  "actualCost": "unknown; subscription quota",
+  "authorization": "2026-10-17 user explicitly requests new assets integrated into playable mining/digging; aesthetic acceptance pending user",
+  "source": "art/harvest-v05/generated/job.json",
+  "prompt": "art/harvest-v05/prompt.txt",
+  "processing": "soft magenta matte, 1px despill, registered shared 0.797069597 scale to 256 canvas; stage triplet common integer ground shift, icons trimmed with 8px padding; no nonuniform scale",
+  "qa": [
+    "raw safe_frame WARN value=18 threshold=0 files=art/harvest-v05/raw-qc/sheet-qc.json; no cross-cell/edge contact",
+    "processed pipeline qa_status=pass; see art/harvest-v05/processed/pipeline-meta.json",
+    "Mixed-prop character-frame diagnostic: identity_head_ratio FAIL, torso_drift/row_baseline/seam WARN; inapplicable character-motion metrics, exact values/thresholds in reports/harvest-v05/ART_QA.md. Retained without concealing failure."
+  ],
+  "files": [
+    {
+      "path": "assets/harvest/v05/frame-01.png",
+      "sha256": "f38e69cd8e74d3886d11d1a51f17fe5ded933e21e4ecf869d14711c897e29f2c",
+      "bbox": [
+        38,
+        112,
+        231,
+        248
+      ],
+      "source": "art/harvest-v05/processed/harvest-1.png",
+      "registration_shift_y": 14
+    },
+    {
+      "path": "assets/harvest/v05/frame-02.png",
+      "sha256": "41a2f117288e54b79047839a28a5fa23edd4ce41a0005a3da28cc19ebe01991c",
+      "bbox": [
+        37,
+        112,
+        229,
+        248
+      ],
+      "source": "art/harvest-v05/processed/harvest-2.png",
+      "registration_shift_y": 14
+    },
+    {
+      "path": "assets/harvest/v05/frame-03.png",
+      "sha256": "4f1012d924cc29045a80bd899ecd9b5be465bb6a839b7db5cfe6ef493edec847",
+      "bbox": [
+        33,
+        112,
+        226,
+        248
+      ],
+      "source": "art/harvest-v05/processed/harvest-3.png",
+      "registration_shift_y": 14
+    },
+    {
+      "path": "assets/harvest/v05/frame-04.png",
+      "sha256": "c00c1de32a713070077b03b939bae0bdb5ec9fb1a5a5cc857e5a1f0013201582",
+      "bbox": [
+        34,
+        107,
+        231,
+        248
+      ],
+      "source": "art/harvest-v05/processed/harvest-4.png",
+      "registration_shift_y": 9
+    },
+    {
+      "path": "assets/harvest/v05/frame-05.png",
+      "sha256": "734ce556e3e9e258ff01aa8a010c161b15ce69dd26b05a50d1c982f14ebad52c",
+      "bbox": [
+        41,
+        98,
+        238,
+        241
+      ],
+      "source": "art/harvest-v05/processed/harvest-5.png",
+      "registration_shift_y": 9
+    },
+    {
+      "path": "assets/harvest/v05/frame-06.png",
+      "sha256": "6ed67771eb56e7cf9204fa0df50ebcc76577bd2d53183efe63b459e6404433ee",
+      "bbox": [
+        38,
+        98,
+        237,
+        241
+      ],
+      "source": "art/harvest-v05/processed/harvest-6.png",
+      "registration_shift_y": 9
+    },
+    {
+      "path": "assets/harvest/v05/frame-07.png",
+      "sha256": "b8484a276b0524407d02788fa98b8c305dedf2d2d14b84770339b141131d3301",
+      "bbox": [
+        8,
+        8,
+        182,
+        131
+      ],
+      "source": "art/harvest-v05/processed/harvest-7.png"
+    },
+    {
+      "path": "assets/harvest/v05/frame-08.png",
+      "sha256": "dc316ce11cb1814048ccb15639afea451e0f40ed1d2634aff85913986a1d0b0c",
+      "bbox": [
+        8,
+        8,
+        170,
+        145
+      ],
+      "source": "art/harvest-v05/processed/harvest-8.png"
+    },
+    {
+      "path": "assets/harvest/v05/frame-09.png",
+      "sha256": "cdb129a1992a4ae17e3a16cd26c1f54830523b027d2b02ce724897487e81a16e",
+      "bbox": [
+        56,
+        100,
+        216,
+        233
+      ],
+      "source": "art/harvest-v05/processed/harvest-9.png",
+      "registration_shift_y": 10
+    },
+    {
+      "path": "assets/harvest/v05/frame-10.png",
+      "sha256": "42ce6a1b2305b999cea0e7063bc91d7bf2144bacc5ba1b23cada337467ef4920",
+      "bbox": [
+        54,
+        84,
+        222,
+        239
+      ],
+      "source": "art/harvest-v05/processed/harvest-10.png",
+      "registration_shift_y": 10
+    },
+    {
+      "path": "assets/harvest/v05/frame-11.png",
+      "sha256": "54c618116e0747bf780312b74fcc98c9aae6e429f572b0b895dcba82261d9570",
+      "bbox": [
+        48,
+        73,
+        226,
+        248
+      ],
+      "source": "art/harvest-v05/processed/harvest-11.png",
+      "registration_shift_y": 10
+    },
+    {
+      "path": "assets/harvest/v05/frame-12.png",
+      "sha256": "f566f421ee449d8d9124cb93cdceb3a06db7550dbead038c0f851fb7ea64a89a",
+      "bbox": [
+        8,
+        8,
+        174,
+        166
+      ],
+      "source": "art/harvest-v05/processed/harvest-12.png"
+    },
+    {
+      "path": "assets/harvest/v05/frame-13.png",
+      "sha256": "c058f3a2d5869114f7a5747b43a5d178191a58c6a102ed89c2b3298f1d6fa7c5",
+      "bbox": [
+        53,
+        142,
+        222,
+        246
+      ],
+      "source": "art/harvest-v05/processed/harvest-13.png",
+      "registration_shift_y": 38
+    },
+    {
+      "path": "assets/harvest/v05/frame-14.png",
+      "sha256": "cc7408282ad1fe0ebfed66e6c276ea54b375f0bab255392307d086aa2f32a7ba",
+      "bbox": [
+        48,
+        125,
+        222,
+        248
+      ],
+      "source": "art/harvest-v05/processed/harvest-14.png",
+      "registration_shift_y": 38
+    },
+    {
+      "path": "assets/harvest/v05/frame-15.png",
+      "sha256": "6111220750dab2cb8a1688cf3ff969f8bd1f9ff8655e00e36a31590916f23c0c",
+      "bbox": [
+        46,
+        125,
+        219,
+        246
+      ],
+      "source": "art/harvest-v05/processed/harvest-15.png",
+      "registration_shift_y": 38
+    },
+    {
+      "path": "assets/harvest/v05/frame-16.png",
+      "sha256": "35c256beee25c5b97878b02dedb668e5cbb50d88dfd897049fadeb9fa1327da8",
+      "bbox": [
+        8,
+        8,
+        157,
+        119
+      ],
+      "source": "art/harvest-v05/processed/harvest-16.png"
+    },
+    {
+      "path": "assets/harvest/v05/frame-17.png",
+      "sha256": "4a89d93073837d7e625a82060da143aa9609c68772af1b5f067b0e3766ed5092",
+      "bbox": [
+        51,
+        109,
+        229,
+        233
+      ],
+      "source": "art/harvest-v05/processed/harvest-17.png",
+      "registration_shift_y": 29
+    },
+    {
+      "path": "assets/harvest/v05/frame-18.png",
+      "sha256": "4b787518d65fa460e210710b10e59c123e83856e0688e23ff1caab5020881281",
+      "bbox": [
+        49,
+        86,
+        218,
+        242
+      ],
+      "source": "art/harvest-v05/processed/harvest-18.png",
+      "registration_shift_y": 29
+    },
+    {
+      "path": "assets/harvest/v05/frame-19.png",
+      "sha256": "6dafeb8244f36b545a3a1a7a603ede6bac75cd1e295a1bb2424b99b02fb15b55",
+      "bbox": [
+        46,
+        86,
+        213,
+        248
+      ],
+      "source": "art/harvest-v05/processed/harvest-19.png",
+      "registration_shift_y": 29
+    },
+    {
+      "path": "assets/harvest/v05/frame-20.png",
+      "sha256": "0c69923df87badc64647fa1deec88f63fb29be77098ca9eead36e0eb0093aa6a",
+      "bbox": [
+        8,
+        8,
+        172,
+        123
+      ],
+      "source": "art/harvest-v05/processed/harvest-20.png"
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "metrics": [
+    {
+      "surface": "grass",
+      "changed_pixels": 2630,
+      "changed_outside_contact": 0,
+      "mean_RGB_error_to_ground_before": 38.764131812420786,
+      "mean_RGB_error_to_ground_after": 15.968314321926488,
+      "metric_limit": "0-255 channel absolute error on changed pixels only; not perceptual or artistic approval"
+    },
+    {
+      "surface": "forest",
+      "changed_pixels": 2994,
+      "changed_outside_contact": 0,
+      "mean_RGB_error_to_ground_before": 35.82910264974393,
+      "mean_RGB_error_to_ground_after": 17.255733689601424,
+      "metric_limit": "0-255 channel absolute error on changed pixels only; not perceptual or artistic approval"
+    },
+    {
+      "surface": "dirt",
+      "changed_pixels": 1289,
+      "changed_outside_contact": 0,
+      "mean_RGB_error_to_ground_before": 40.17351952417895,
+      "mean_RGB_error_to_ground_after": 24.11998965606413,
+      "metric_limit": "0-255 channel absolute error on changed pixels only; not perceptual or artistic approval"
+    }
+  ],
+  "fixed_contact_pixel_checks": [
+    {
+      "frame": "hit-00.png",
+      "fixed_contact_pixels_identical": true
+    },
+    {
+      "frame": "hit-01.png",
+      "fixed_contact_pixels_identical": true
+    },
+    {
+      "frame": "hit-02.png",
+      "fixed_contact_pixels_identical": true
+    },
+    {
+      "frame": "hit-03.png",
+      "fixed_contact_pixels_identical": true
+    },
+    {
+      "frame": "hit-04.png",
+      "fixed_contact_pixels_identical": true
+    },
+    {
+      "frame": "hit-05.png",
+      "fixed_contact_pixels_identical": true
+    },
+    {
+      "frame": "hit-06.png",
+      "fixed_contact_pixels_identical": true
+    },
+    {
+      "frame": "hit-07.png",
+      "fixed_contact_pixels_identical": true
+    },
+    {
+      "frame": "hit-08.png",
+      "fixed_contact_pixels_identical": true
+    },
+    {
+      "frame": "hit-09.png",
+      "fixed_contact_pixels_identical": true
+    },
+    {
+      "frame": "hit-10.png",
+      "fixed_contact_pixels_identical": true
+    },
+    {
+      "frame": "hit-11.png",
+      "fixed_contact_pixels_identical": true
+    },
+    {
+      "frame": "hit-12.png",
+      "fixed_contact_pixels_identical": true
+    },
+    {
+      "frame": "hit-13.png",
+      "fixed_contact_pixels_identical": true
+    }
+  ],
+  "unchanged_art_hashes": [
+    {
+      "file": "tree_01_grass.png",
+      "unchanged": true
+    },
+    {
+      "file": "tree_01_forest.png",
+      "unchanged": true
+    },
+    {
+      "file": "tree_01_dirt.png",
+      "unchanged": true
+    },
+    {
+      "file": "tree_03_grass.png",
+      "unchanged": true
+    },
+    {
+      "file": "tree_03_forest.png",
+      "unchanged": true
+    },
+    {
+      "file": "tree_03_dirt.png",
+      "unchanged": true
+    },
+    {
+      "file": "tree_04_grass.png",
+      "unchanged": true
+    },
+    {
+      "file": "tree_04_forest.png",
+      "unchanged": true
+    },
+    {
+      "file": "tree_04_dirt.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_01_grass.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_01_forest.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_01_dirt.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_02_grass.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_02_forest.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_02_dirt.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_03_grass.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_03_forest.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_03_dirt.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_04_grass.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_04_forest.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_04_dirt.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_05_grass.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_05_forest.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_05_dirt.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_06_grass.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_06_forest.png",
+      "unchanged": true
+    },
+    {
+      "file": "rock_06_dirt.png",
+      "unchanged": true
+    }
+  ],
+  "runtime": {
+    "checks": 103,
+    "failures": 0
+  },
+  "performance": "one viewport copy per rendered frame; GPU/full forest overhead not measured",
+  "source": "existing selected 27 PNGs, all unchanged; no image generation; no new alpha shapes or ground decals"
+}

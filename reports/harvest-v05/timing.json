@@ -1,0 +1,25 @@
+{
+  "engine": "4.7.2-stable (official)",
+  "generation_samples": [
+    {
+      "all_resource_ms": 76.382,
+      "chunk": "(17, 12)",
+      "harvest_ms": 48.636,
+      "new_nodes": 1
+    },
+    {
+      "all_resource_ms": 59.176,
+      "chunk": "(18, 12)",
+      "harvest_ms": 31.03,
+      "new_nodes": 1
+    },
+    {
+      "all_resource_ms": 46.589,
+      "chunk": "(17, 13)",
+      "harvest_ms": 29.705,
+      "new_nodes": 3
+    }
+  ],
+  "note": "Three resource-layer worker samples, not an FPS benchmark; terrain/scenery costs excluded.",
+  "pouch_capacity_message": true
+}

@@ -1,0 +1,209 @@
+{
+  "checks": [
+    {
+      "name": "21 stable item definitions including three raw metal ores",
+      "pass": true
+    },
+    {
+      "name": "real metal icon/drop visual copper_ore",
+      "pass": true
+    },
+    {
+      "name": "real metal icon/drop visual silver_ore",
+      "pass": true
+    },
+    {
+      "name": "real metal icon/drop visual gold_ore",
+      "pass": true
+    },
+    {
+      "name": "formal loaded world contains no old scenery rocks",
+      "pass": true
+    },
+    {
+      "name": "formal loaded world contains no generated loose stone/flint",
+      "pass": true
+    },
+    {
+      "name": "old save upgrades without losing equipped tool/hotbar reference",
+      "pass": true
+    },
+    {
+      "name": "old buried progress and consumed history retained",
+      "pass": true
+    },
+    {
+      "name": "next atomic write records upgraded resource/prop policy",
+      "pass": true
+    },
+    {
+      "name": "actual brown dirt region found for native mine/visual checks",
+      "pass": true
+    },
+    {
+      "name": "actual dirt terrain loaded",
+      "pass": true
+    },
+    {
+      "name": "quality-scaled hit count stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "E selects mineable large outcrop stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "one native impact keeps fixed large body stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "side tool remains drawn in front of large mine stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "held E completes exactly configured hits stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "one exact configured reward batch stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "existing E picks mined material into original inventory stone_outcropnative:ore:stone_outcrop:loot:0",
+      "pass": true
+    },
+    {
+      "name": "quality-scaled hit count flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "E selects mineable large outcrop flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "one native impact keeps fixed large body flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "side tool remains drawn in front of large mine flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "held E completes exactly configured hits flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "one exact configured reward batch flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "existing E picks mined material into original inventory flint_outcropnative:ore:flint_outcrop:loot:0",
+      "pass": true
+    },
+    {
+      "name": "existing E picks mined material into original inventory flint_outcropnative:ore:flint_outcrop:loot:1",
+      "pass": true
+    },
+    {
+      "name": "quality-scaled hit count copper_outcrop",
+      "pass": true
+    },
+    {
+      "name": "E selects mineable large outcrop copper_outcrop",
+      "pass": true
+    },
+    {
+      "name": "one native impact keeps fixed large body copper_outcrop",
+      "pass": true
+    },
+    {
+      "name": "side tool remains drawn in front of large mine copper_outcrop",
+      "pass": true
+    },
+    {
+      "name": "held E completes exactly configured hits copper_outcrop",
+      "pass": true
+    },
+    {
+      "name": "one exact configured reward batch copper_outcrop",
+      "pass": true
+    },
+    {
+      "name": "existing E picks mined material into original inventory copper_outcropnative:ore:copper_outcrop:loot:0",
+      "pass": true
+    },
+    {
+      "name": "quality-scaled hit count silver_outcrop",
+      "pass": true
+    },
+    {
+      "name": "E selects mineable large outcrop silver_outcrop",
+      "pass": true
+    },
+    {
+      "name": "one native impact keeps fixed large body silver_outcrop",
+      "pass": true
+    },
+    {
+      "name": "side tool remains drawn in front of large mine silver_outcrop",
+      "pass": true
+    },
+    {
+      "name": "held E completes exactly configured hits silver_outcrop",
+      "pass": true
+    },
+    {
+      "name": "one exact configured reward batch silver_outcrop",
+      "pass": true
+    },
+    {
+      "name": "existing E picks mined material into original inventory silver_outcropnative:ore:silver_outcrop:loot:0",
+      "pass": true
+    },
+    {
+      "name": "quality-scaled hit count gold_outcrop",
+      "pass": true
+    },
+    {
+      "name": "E selects mineable large outcrop gold_outcrop",
+      "pass": true
+    },
+    {
+      "name": "one native impact keeps fixed large body gold_outcrop",
+      "pass": true
+    },
+    {
+      "name": "side tool remains drawn in front of large mine gold_outcrop",
+      "pass": true
+    },
+    {
+      "name": "held E completes exactly configured hits gold_outcrop",
+      "pass": true
+    },
+    {
+      "name": "one exact configured reward batch gold_outcrop",
+      "pass": true
+    },
+    {
+      "name": "existing E picks mined material into original inventory gold_outcropnative:ore:gold_outcrop:loot:0",
+      "pass": true
+    },
+    {
+      "name": "new ore inventory persists copper_ore",
+      "pass": true
+    },
+    {
+      "name": "new ore inventory persists silver_ore",
+      "pass": true
+    },
+    {
+      "name": "new ore inventory persists gold_ore",
+      "pass": true
+    }
+  ],
+  "count": 50,
+  "display": "headless",
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "time_scale": 4.0
+}

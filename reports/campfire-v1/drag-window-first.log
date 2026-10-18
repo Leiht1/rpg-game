@@ -1,0 +1,11 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.88 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5060
+
+ERROR: native drag begins from slot 3
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] drag (res://tests/test_campfire_drag_v1.gd:27)
+       [2] motion (res://tests/test_campfire_drag_v1.gd:20)
+       [3] frames (res://tests/test_campfire_drag_v1.gd:17)
+CAMPFIRE DRAG: 44 checks; 1 failures

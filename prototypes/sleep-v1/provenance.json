@@ -1,0 +1,121 @@
+{
+  "status": "pending_user",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "sources": [
+    "art/sleep-v1/raw/job.json",
+    "art/sleep-v1/vertical-raw/job.json"
+  ],
+  "transforms": [
+    {
+      "name": "sleeping_bag",
+      "source": "processed/sheet-1.png",
+      "bbox": [
+        31,
+        178,
+        481,
+        334
+      ],
+      "scale": 0.9955555555555555,
+      "canvas": [
+        512,
+        256
+      ],
+      "xy": [
+        32,
+        50
+      ]
+    },
+    {
+      "name": "straw_mat",
+      "source": "processed/sheet-2.png",
+      "bbox": [
+        31,
+        194,
+        481,
+        318
+      ],
+      "scale": 0.9955555555555555,
+      "canvas": [
+        512,
+        256
+      ],
+      "xy": [
+        32,
+        66
+      ]
+    },
+    {
+      "name": "wood_bed",
+      "source": "processed/sheet-3.png",
+      "bbox": [
+        31,
+        163,
+        481,
+        348
+      ],
+      "scale": 0.9955555555555555,
+      "canvas": [
+        512,
+        256
+      ],
+      "xy": [
+        32,
+        36
+      ]
+    },
+    {
+      "name": "straw_mat-vertical",
+      "source": "vertical-processed-v2/sheet-1.png",
+      "bbox": [
+        100,
+        31,
+        412,
+        481
+      ],
+      "scale": 0.717948717948718,
+      "canvas": [
+        256,
+        416
+      ],
+      "xy": [
+        16,
+        46
+      ]
+    },
+    {
+      "name": "wood_bed-vertical",
+      "source": "vertical-processed-v2/sheet-2.png",
+      "bbox": [
+        115,
+        31,
+        396,
+        481
+      ],
+      "scale": 0.797153024911032,
+      "canvas": [
+        256,
+        512
+      ],
+      "xy": [
+        16,
+        76
+      ]
+    }
+  ],
+  "approval": null,
+  "files": {
+    "sleeping_bag-front.png": "b85b0a68f684ef9439f70d45a4d8ae727f84a5cd3c34361e8ef8491b2b696e98",
+    "sleeping_bag.png": "c6dd97229643df9fe5a38a80770b42e8d061af15dc7dd2588820abf95c9e53d1",
+    "straw_mat-vertical.png": "316afe0f3bd0446f44d58611b3754bf6b27f3ab5896244f9b311dd544a6a7b73",
+    "straw_mat.png": "9b0fd5eedefdbc0cd0f1028b0bd0d9276b06b8b232cab4e55f628be26c1cd865",
+    "wood_bed-front.png": "7f983a39713d57b5e0fb2656b77a2f2f0b3ad0f61ef435d18b4f7cba03530603",
+    "wood_bed-vertical-front.png": "ea1ea5b476e97010ed7cf505ea0b9fda72b70c8b34f1da2961dfdd03ecb7da6d",
+    "wood_bed-vertical.png": "3b572f1ec68f70211404190d8ce8873698965cdc7043e0cd3e21fbf22c62c71d",
+    "wood_bed.png": "9f096788f97b960973d22fe4057724952a3654cb20c853b70f483a71f8126b7b"
+  },
+  "qa_notes": [
+    "Original horizontal grid crossed uniform row boundaries; ownership crops retained all pixels.",
+    "Vertical source boundary_band and safe_frame warnings retained; final registered canvases have explicit alpha margins."
+  ]
+}

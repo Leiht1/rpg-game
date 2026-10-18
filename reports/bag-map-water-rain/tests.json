@@ -1,0 +1,153 @@
+{
+	"checks": [
+		{
+			"name": "open bag permits movement",
+			"pass": true
+		},
+		{
+			"name": "WASD movement with bag open: move_up",
+			"pass": true
+		},
+		{
+			"name": "WASD movement with bag open: move_left",
+			"pass": true
+		},
+		{
+			"name": "WASD movement with bag open: move_down",
+			"pass": true
+		},
+		{
+			"name": "WASD movement with bag open: move_right",
+			"pass": true
+		},
+		{
+			"name": "quantity input pauses movement",
+			"pass": true
+		},
+		{
+			"name": "quantity input prevents accidental walking",
+			"pass": true
+		},
+		{
+			"name": "cancel quantity input restores bag movement",
+			"pass": true
+		},
+		{
+			"name": "debug text field pauses movement",
+			"pass": true
+		},
+		{
+			"name": "leaving debug text field restores bag movement",
+			"pass": true
+		},
+		{
+			"name": "M opens map and closes bag",
+			"pass": true
+		},
+		{
+			"name": "map layer above hotbar and clock",
+			"pass": true
+		},
+		{
+			"name": "map still pauses movement",
+			"pass": true
+		},
+		{
+			"name": "map visually covers HUD at (80, 90)",
+			"pass": true
+		},
+		{
+			"name": "map visually covers HUD at (450, 655)",
+			"pass": true
+		},
+		{
+			"name": "map zoom still works",
+			"pass": true
+		},
+		{
+			"name": "map blocks hidden hotbar button clicks",
+			"pass": true
+		},
+		{
+			"name": "Escape closes map and restores movement",
+			"pass": true
+		},
+		{
+			"name": "bag movement still works after map close",
+			"pass": true
+		},
+		{
+			"name": "real lake and river available",
+			"pass": true
+		},
+		{
+			"name": "lake water chunks loaded",
+			"pass": true
+		},
+		{
+			"name": "lake test position is water",
+			"pass": true
+		},
+		{
+			"name": "lake rain emitter schedules water arcs",
+			"pass": true
+		},
+		{
+			"name": "lake falling rain produces live water arcs",
+			"pass": true
+		},
+		{
+			"name": "lake normal runtime rain makes visible water arcs",
+			"pass": true
+		},
+		{
+			"name": "lake fixed pools unchanged",
+			"pass": true
+		},
+		{
+			"name": "river water chunks loaded",
+			"pass": true
+		},
+		{
+			"name": "river test position is water",
+			"pass": true
+		},
+		{
+			"name": "river rain emitter schedules water arcs",
+			"pass": true
+		},
+		{
+			"name": "river falling rain produces live water arcs",
+			"pass": true
+		},
+		{
+			"name": "river normal runtime rain makes visible water arcs",
+			"pass": true
+		},
+		{
+			"name": "river fixed pools unchanged",
+			"pass": true
+		}
+	],
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"renderer": "gl_compatibility",
+	"water": [
+		{
+			"normal_runtime_water_arcs": 3,
+			"pool_rain": 256,
+			"pool_splash": 128,
+			"scheduled_water_hits": 18,
+			"surface": "lake",
+			"water_arcs": 18
+		},
+		{
+			"normal_runtime_water_arcs": 3,
+			"pool_rain": 256,
+			"pool_splash": 128,
+			"scheduled_water_hits": 17,
+			"surface": "river",
+			"water_arcs": 17
+		}
+	]
+}

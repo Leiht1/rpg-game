@@ -1,0 +1,66 @@
+[
+  {
+    "name": "start actual timed tool stone_axe",
+    "pass": true
+  },
+  {
+    "name": "timed tool reaches original inventory stone_axe",
+    "pass": true
+  },
+  {
+    "name": "start actual timed tool stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "timed tool reaches original inventory stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "start actual timed tool simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "timed tool reaches original inventory simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "crafted tools are distinct native instances",
+    "pass": true
+  },
+  {
+    "name": "reachable original tree exists",
+    "pass": true
+  },
+  {
+    "name": "crafted equipped axe commits native E chop",
+    "pass": true
+  },
+  {
+    "name": "crafted tool selects original target mine",
+    "pass": true
+  },
+  {
+    "name": "crafted tool completes configured native hits mine",
+    "pass": true
+  },
+  {
+    "name": "native resource rewards created exactly after completion mine",
+    "pass": true
+  },
+  {
+    "name": "crafted tool selects original target dig",
+    "pass": true
+  },
+  {
+    "name": "crafted tool completes configured native hits dig",
+    "pass": true
+  },
+  {
+    "name": "native resource rewards created exactly after completion dig",
+    "pass": true
+  },
+  {
+    "name": "crafted tool does not block ordinary E pickup",
+    "pass": true
+  }
+]

@@ -1,0 +1,542 @@
+[
+  {
+    "name": "hunger hours 8 active false",
+    "pass": true
+  },
+  {
+    "name": "energy hours 8 active false",
+    "pass": true
+  },
+  {
+    "name": "one day no immediate disease 8 false",
+    "pass": true
+  },
+  {
+    "name": "hunger hours 8 active true",
+    "pass": true
+  },
+  {
+    "name": "energy hours 8 active true",
+    "pass": true
+  },
+  {
+    "name": "one day no immediate disease 8 true",
+    "pass": true
+  },
+  {
+    "name": "hunger hours 16 active false",
+    "pass": true
+  },
+  {
+    "name": "energy hours 16 active false",
+    "pass": true
+  },
+  {
+    "name": "one day no immediate disease 16 false",
+    "pass": true
+  },
+  {
+    "name": "hunger hours 16 active true",
+    "pass": true
+  },
+  {
+    "name": "energy hours 16 active true",
+    "pass": true
+  },
+  {
+    "name": "one day no immediate disease 16 true",
+    "pass": true
+  },
+  {
+    "name": "hunger hours 24 active false",
+    "pass": true
+  },
+  {
+    "name": "energy hours 24 active false",
+    "pass": true
+  },
+  {
+    "name": "one day no immediate disease 24 false",
+    "pass": true
+  },
+  {
+    "name": "hunger hours 24 active true",
+    "pass": true
+  },
+  {
+    "name": "energy hours 24 active true",
+    "pass": true
+  },
+  {
+    "name": "one day no immediate disease 24 true",
+    "pass": true
+  },
+  {
+    "name": "ordinary movement and waiting have same base rate",
+    "pass": true
+  },
+  {
+    "name": "forced threshold 27-32 hours active false",
+    "pass": true
+  },
+  {
+    "name": "forced threshold 27-32 hours active true",
+    "pass": true
+  },
+  {
+    "name": "full refuses wild_berry",
+    "pass": true
+  },
+  {
+    "name": "hotbar one effect wild_berry",
+    "pass": true
+  },
+  {
+    "name": "food only hunger wild_berry",
+    "pass": true
+  },
+  {
+    "name": "bag single clamps wild_berry",
+    "pass": true
+  },
+  {
+    "name": "full refuses brown_mushroom",
+    "pass": true
+  },
+  {
+    "name": "hotbar one effect brown_mushroom",
+    "pass": true
+  },
+  {
+    "name": "food only hunger brown_mushroom",
+    "pass": true
+  },
+  {
+    "name": "bag single clamps brown_mushroom",
+    "pass": true
+  },
+  {
+    "name": "full refuses wild_carrot",
+    "pass": true
+  },
+  {
+    "name": "hotbar one effect wild_carrot",
+    "pass": true
+  },
+  {
+    "name": "food only hunger wild_carrot",
+    "pass": true
+  },
+  {
+    "name": "bag single clamps wild_carrot",
+    "pass": true
+  },
+  {
+    "name": "full refuses wild_apple",
+    "pass": true
+  },
+  {
+    "name": "hotbar one effect wild_apple",
+    "pass": true
+  },
+  {
+    "name": "food only hunger wild_apple",
+    "pass": true
+  },
+  {
+    "name": "bag single clamps wild_apple",
+    "pass": true
+  },
+  {
+    "name": "full refuses wildflower",
+    "pass": true
+  },
+  {
+    "name": "hotbar one effect wildflower",
+    "pass": true
+  },
+  {
+    "name": "food only hunger wildflower",
+    "pass": true
+  },
+  {
+    "name": "bag single clamps wildflower",
+    "pass": true
+  },
+  {
+    "name": "full refuses roasted_carrot",
+    "pass": true
+  },
+  {
+    "name": "hotbar one effect roasted_carrot",
+    "pass": true
+  },
+  {
+    "name": "food only hunger roasted_carrot",
+    "pass": true
+  },
+  {
+    "name": "bag single clamps roasted_carrot",
+    "pass": true
+  },
+  {
+    "name": "full refuses roasted_mushroom",
+    "pass": true
+  },
+  {
+    "name": "hotbar one effect roasted_mushroom",
+    "pass": true
+  },
+  {
+    "name": "food only hunger roasted_mushroom",
+    "pass": true
+  },
+  {
+    "name": "bag single clamps roasted_mushroom",
+    "pass": true
+  },
+  {
+    "name": "full refuses herb_roasted_mushroom",
+    "pass": true
+  },
+  {
+    "name": "hotbar one effect herb_roasted_mushroom",
+    "pass": true
+  },
+  {
+    "name": "food only hunger herb_roasted_mushroom",
+    "pass": true
+  },
+  {
+    "name": "bag single clamps herb_roasted_mushroom",
+    "pass": true
+  },
+  {
+    "name": "full refuses roasted_fruit_platter",
+    "pass": true
+  },
+  {
+    "name": "hotbar one effect roasted_fruit_platter",
+    "pass": true
+  },
+  {
+    "name": "food only hunger roasted_fruit_platter",
+    "pass": true
+  },
+  {
+    "name": "bag single clamps roasted_fruit_platter",
+    "pass": true
+  },
+  {
+    "name": "full refuses field_harvest_platter",
+    "pass": true
+  },
+  {
+    "name": "hotbar one effect field_harvest_platter",
+    "pass": true
+  },
+  {
+    "name": "food only hunger field_harvest_platter",
+    "pass": true
+  },
+  {
+    "name": "bag single clamps field_harvest_platter",
+    "pass": true
+  },
+  {
+    "name": "all ten actual edible foods enumerated",
+    "pass": true
+  },
+  {
+    "name": "50 simulated seconds sprint",
+    "pass": true
+  },
+  {
+    "name": "stamina delay and recovery retained",
+    "pass": true
+  },
+  {
+    "name": "forced cannot wake before three hours",
+    "pass": true
+  },
+  {
+    "name": "forced wakes after three hours with 39 energy",
+    "pass": true
+  },
+  {
+    "name": "no repeated fainting",
+    "pass": true
+  },
+  {
+    "name": "night 22 to 06 eight hours",
+    "pass": true
+  },
+  {
+    "name": "eight hours restores full clamps",
+    "pass": true
+  },
+  {
+    "name": "early night prioritizes six AM within ten hours",
+    "pass": true
+  },
+  {
+    "name": "day nap three hours",
+    "pass": true
+  },
+  {
+    "name": "sleep state full round trip",
+    "pass": true
+  },
+  {
+    "name": "v1 defaults healthy energy",
+    "pass": true
+  },
+  {
+    "name": "reject infinite energy",
+    "pass": true
+  },
+  {
+    "name": "reject infinite sleep_elapsed",
+    "pass": true
+  },
+  {
+    "name": "reject infinite sleep_duration",
+    "pass": true
+  },
+  {
+    "name": "unknown body version protected",
+    "pass": true
+  },
+  {
+    "name": "short zero hunger safe",
+    "pass": true
+  },
+  {
+    "name": "prolonged zero hunger disease",
+    "pass": true
+  },
+  {
+    "name": "nutrition stops disease damage",
+    "pass": true
+  },
+  {
+    "name": "sleep and low health care cooperate",
+    "pass": true
+  },
+  {
+    "name": "paused and set time do not catch up body",
+    "pass": true
+  },
+  {
+    "name": "debug preview excludes body",
+    "pass": true
+  },
+  {
+    "name": "preview speed excluded from atomic snapshot",
+    "pass": true
+  },
+  {
+    "name": "efficiency tier 100",
+    "pass": true
+  },
+  {
+    "name": "efficiency tier 50",
+    "pass": true
+  },
+  {
+    "name": "efficiency tier 25",
+    "pass": true
+  },
+  {
+    "name": "efficiency tier 10",
+    "pass": true
+  },
+  {
+    "name": "real physics speed penalties",
+    "pass": true
+  },
+  {
+    "name": "real labor clock synced 100",
+    "pass": true
+  },
+  {
+    "name": "real labor clock synced 25",
+    "pass": true
+  },
+  {
+    "name": "real labor clock synced 10",
+    "pass": true
+  },
+  {
+    "name": "sleep waits for pickup transaction",
+    "pass": true
+  },
+  {
+    "name": "sleep waits for craft commit",
+    "pass": true
+  },
+  {
+    "name": "forced sleep closes UI placement and locks input",
+    "pass": true
+  },
+  {
+    "name": "sleep blocks movement and item use",
+    "pass": true
+  },
+  {
+    "name": "sleep clock and body same twelve game minutes",
+    "pass": true
+  },
+  {
+    "name": "sleep advances rain fuel and cooked task",
+    "pass": true
+  },
+  {
+    "name": "claim grants food without applying food effect",
+    "pass": true
+  },
+  {
+    "name": "claim cannot duplicate",
+    "pass": true
+  },
+  {
+    "name": "wakeup unlock and accelerated overshoot discarded",
+    "pass": true
+  },
+  {
+    "name": "forced total three hours world time",
+    "pass": true
+  },
+  {
+    "name": "manual basic sleep needs no bed",
+    "pass": true
+  },
+  {
+    "name": "night sleep next morning six",
+    "pass": true
+  },
+  {
+    "name": "day sleep only three hours",
+    "pass": true
+  },
+  {
+    "name": "exhausted still walks",
+    "pass": true
+  },
+  {
+    "name": "slow real hit exactly once mine",
+    "pass": true
+  },
+  {
+    "name": "no extra hit or wear mine",
+    "pass": true
+  },
+  {
+    "name": "unchanged stamina cost mine",
+    "pass": true
+  },
+  {
+    "name": "pending action safely settles at zero energy mine",
+    "pass": true
+  },
+  {
+    "name": "force waits for action end mine",
+    "pass": true
+  },
+  {
+    "name": "force enters after native action completes mine",
+    "pass": true
+  },
+  {
+    "name": "sleep never repeats prior action settlement mine",
+    "pass": true
+  },
+  {
+    "name": "slow real hit exactly once dig",
+    "pass": true
+  },
+  {
+    "name": "no extra hit or wear dig",
+    "pass": true
+  },
+  {
+    "name": "unchanged stamina cost dig",
+    "pass": true
+  },
+  {
+    "name": "pending action safely settles at zero energy dig",
+    "pass": true
+  },
+  {
+    "name": "force waits for action end dig",
+    "pass": true
+  },
+  {
+    "name": "force enters after native action completes dig",
+    "pass": true
+  },
+  {
+    "name": "sleep never repeats prior action settlement dig",
+    "pass": true
+  },
+  {
+    "name": "real approachable tree for slowed chop",
+    "pass": true
+  },
+  {
+    "name": "slowed real chop one hit",
+    "pass": true
+  },
+  {
+    "name": "slowed chop same durability and stamina",
+    "pass": true
+  },
+  {
+    "name": "sleep closes storage without hiding reusable root",
+    "pass": true
+  },
+  {
+    "name": "storage usable after waking",
+    "pass": true
+  },
+  {
+    "name": "failed initial save rolls back sleep state",
+    "pass": true
+  },
+  {
+    "name": "HUD clear of dock (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "four bars fit (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "detail fits (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "HUD clear of dock (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "four bars fit (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "detail fits (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "HUD clear of dock (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "four bars fit (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "detail fits (1600, 900)",
+    "pass": true
+  }
+]

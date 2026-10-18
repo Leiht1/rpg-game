@@ -1,0 +1,14 @@
+[
+  {
+    "name": "new process restores destroyed plot as absent",
+    "pass": true
+  },
+  {
+    "name": "new process does not refund planted seed",
+    "pass": true
+  },
+  {
+    "name": "new process has no harvest or seed drops from demolition",
+    "pass": true
+  }
+]

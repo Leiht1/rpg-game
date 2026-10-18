@@ -1,0 +1,1193 @@
+[
+  {
+    "item_id": "wild_berry",
+    "name": "野生浆果",
+    "category": "food",
+    "description": "酸甜的小浆果，采自草地和林缘的低矮浆果灌木。",
+    "icon": "res://assets/items/v03/wild_berry_icon.png",
+    "world_visual": "res://assets/items/v03/wild_berry_world.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "food",
+      "wild"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "habitat": "meadow_edge",
+      "chance": 0.18,
+      "source": "浆果灌木"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "brown_mushroom",
+    "name": "棕蘑菇",
+    "category": "food",
+    "description": "林下落叶间长出的棕色食用蘑菇。",
+    "icon": "res://assets/items/v03/brown_mushroom_icon.png",
+    "world_visual": "res://assets/items/v03/brown_mushroom_world.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "food",
+      "wild"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "habitat": "forest",
+      "chance": 0.18,
+      "source": "林下菌簇"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 27,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "wild_carrot",
+    "name": "野胡萝卜",
+    "category": "food",
+    "description": "草地中生长的野胡萝卜，拔起后可食用。",
+    "icon": "res://assets/items/v03/wild_carrot_icon.png",
+    "world_visual": "res://assets/items/v03/wild_carrot_world.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "food",
+      "wild"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "habitat": "meadow",
+      "chance": 0.12,
+      "source": "胡萝卜植株"
+    },
+    "effects": {
+      "hunger": 4
+    },
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "wild_apple",
+    "name": "野苹果",
+    "category": "food",
+    "description": "森林中少量来源树下的成熟落果，未来可由专用果树替代。",
+    "icon": "res://assets/items/v03/wild_apple_icon.png",
+    "world_visual": "res://assets/items/v03/wild_apple_world.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "food",
+      "wild"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "habitat": "apple_source",
+      "chance": 0.35,
+      "source": "固定来源树附近的地面落果"
+    },
+    "effects": {
+      "hunger": 4
+    },
+    "world_size": 20,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "wood",
+    "name": "木材",
+    "category": "material",
+    "description": "从树干收集的短木料，适合作为基础材料。",
+    "icon": "res://assets/items/v03/wood_icon.png",
+    "world_visual": "res://assets/items/v03/wood_world.png",
+    "max_stack": 99,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "wood",
+      "craft"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "habitat": "chop",
+      "chance": 0,
+      "source": "砍树掉落"
+    },
+    "effects": {},
+    "world_size": 27,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "branch",
+    "name": "树枝",
+    "category": "material",
+    "description": "自然脱落的小树枝，可用作未来工具的柄材。",
+    "icon": "res://assets/items/v03/branch_icon.png",
+    "world_visual": "res://assets/items/v03/branch_world.png",
+    "max_stack": 99,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "wood",
+      "craft"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "habitat": "tree",
+      "chance": 0.3,
+      "source": "原野和森林中自然散落的枝条"
+    },
+    "effects": {},
+    "world_size": 26,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "stone",
+    "name": "石块",
+    "category": "material",
+    "description": "开采石矿获得的普通石料，可收集的基础材料。",
+    "icon": "res://assets/items/v03/stone_icon.png",
+    "world_visual": "res://assets/items/v03/stone_world.png",
+    "max_stack": 99,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "ore",
+      "material"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "石矿开采（5次）；燧石矿少量伴生石料"
+    },
+    "effects": {},
+    "world_size": 18,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "plant_fiber",
+    "name": "植物纤维",
+    "category": "material",
+    "description": "从草本植株中整理出的柔韧纤维。",
+    "icon": "res://assets/items/v03/plant_fiber_icon.png",
+    "world_visual": "res://assets/items/v03/plant_fiber_world.png",
+    "max_stack": 99,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "wood",
+      "craft"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "habitat": "meadow",
+      "chance": 0.2,
+      "source": "纤维草本"
+    },
+    "effects": {},
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "flint",
+    "name": "燧石",
+    "category": "material",
+    "description": "开采燧石矿获得的锐边燧石，可收集的石制材料。",
+    "icon": "res://assets/items/v03/flint_icon.png",
+    "world_visual": "res://assets/items/v03/flint_world.png",
+    "max_stack": 99,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "ore",
+      "material"
+    ],
+    "rarity": "uncommon",
+    "drop_rules": {
+      "source": "燧石矿开采（7次）"
+    },
+    "effects": {},
+    "world_size": 15,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "broad_leaf",
+    "name": "宽叶",
+    "category": "natural",
+    "description": "完整的宽叶，可加工为植物纤维。草地区域的宽叶丛需装备铲子挖掘，一次获得4片。",
+    "icon": "res://assets/items/v03/broad_leaf_icon.png",
+    "world_visual": "res://assets/items/v03/broad_leaf_world.png",
+    "max_stack": 50,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "plant",
+      "collect"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "habitat": "forest_edge",
+      "chance": 0.16,
+      "source": "草地宽叶丛（铲子挖掘），或原有林下宽叶植物"
+    },
+    "effects": {},
+    "world_size": 35,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "pine_cone",
+    "name": "松果",
+    "category": "natural",
+    "description": "成熟松果，保留未来用途；当前缺少可信针叶树来源，暂不自然生成。",
+    "icon": "res://assets/items/v03/pine_cone_icon.png",
+    "world_visual": "res://assets/items/v03/pine_cone_world.png",
+    "max_stack": 50,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "plant",
+      "collect"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "habitat": "tree",
+      "chance": 0.2,
+      "source": "等待针叶树来源接入；当前不自然生成"
+    },
+    "effects": {},
+    "world_size": 18,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "wildflower",
+    "name": "野花",
+    "category": "natural",
+    "description": "从原野花丛采集的小野花，可以食用，恢复1点饥饿。",
+    "icon": "res://assets/items/v03/wildflower_icon.png",
+    "world_visual": "res://assets/items/v03/wildflower_world.png",
+    "max_stack": 50,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "plant",
+      "collect"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "habitat": "meadow",
+      "chance": 0.14,
+      "source": "自然花丛"
+    },
+    "effects": {
+      "hunger": 1
+    },
+    "world_size": 32,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "stone_axe",
+    "name": "石斧",
+    "category": "tool",
+    "description": "装备到武器槽后可砍伐树木。",
+    "icon": "res://assets/tools/v04/stone_axe_icon.png",
+    "world_visual": "res://assets/tools/v04/stone_axe_world.png",
+    "world_size": 24,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "equipment",
+      "tool"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作 / F6 调试物品库"
+    },
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "tool",
+    "capabilities": [
+      "chop"
+    ],
+    "action_id": "chop",
+    "visual_id": "tool:stone_axe",
+    "stats": {},
+    "durability": 100
+  },
+  {
+    "item_id": "stone_pickaxe",
+    "name": "石镐",
+    "category": "tool",
+    "description": "装备到武器槽后可开采矿点，不能砍树。",
+    "icon": "res://assets/tools/v04/stone_pickaxe_icon.png",
+    "world_visual": "res://assets/tools/v04/stone_pickaxe_world.png",
+    "world_size": 24,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "equipment",
+      "tool"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作 / F6 调试物品库"
+    },
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "tool",
+    "capabilities": [
+      "mine"
+    ],
+    "action_id": "mine",
+    "visual_id": "tool:stone_pickaxe",
+    "stats": {},
+    "durability": 100
+  },
+  {
+    "item_id": "simple_shovel",
+    "name": "简易铲子",
+    "category": "tool",
+    "description": "装备到武器槽后可挖掘半埋根茎、骨片和补给包。",
+    "icon": "res://assets/tools/v04/simple_shovel_icon.png",
+    "world_visual": "res://assets/tools/v04/simple_shovel_world.png",
+    "world_size": 24,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "equipment",
+      "tool"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作 / F6 调试物品库"
+    },
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "tool",
+    "capabilities": [
+      "dig"
+    ],
+    "action_id": "dig",
+    "visual_id": "tool:simple_shovel",
+    "stats": {},
+    "durability": 100
+  },
+  {
+    "item_id": "bone_fragment",
+    "name": "骨片",
+    "category": "material",
+    "description": "从半埋骨骸中挖出的旧骨片，可收集的材料。",
+    "icon": "res://assets/harvest/v05/frame-07.png",
+    "world_visual": "res://assets/harvest/v05/frame-07.png",
+    "max_stack": 50,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "excavated"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "埋藏物挖掘"
+    },
+    "world_size": 22,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "relic_fragment",
+    "name": "遗物碎片",
+    "category": "material",
+    "description": "带有旧纹样的铜质碎片，来自埋藏遗物。",
+    "icon": "res://assets/harvest/v05/frame-08.png",
+    "world_visual": "res://assets/harvest/v05/frame-08.png",
+    "max_stack": 50,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "excavated"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "埋藏物挖掘"
+    },
+    "world_size": 22,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "supply_pouch",
+    "name": "小型补给包",
+    "category": "material",
+    "description": "旧帆布补给包。使用后获得野胡萝卜×2、燧石×1、遗物碎片×2；空间不足时保持原样。",
+    "icon": "res://assets/harvest/v05/frame-12.png",
+    "world_visual": "res://assets/harvest/v05/frame-12.png",
+    "max_stack": 10,
+    "usable": true,
+    "use_action": "unpack",
+    "consumable": true,
+    "tags": [
+      "excavated"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "埋藏物挖掘"
+    },
+    "world_size": 25,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "contents": {
+      "wild_carrot": 2,
+      "flint": 1,
+      "relic_fragment": 2
+    }
+  },
+  {
+    "item_id": "copper_ore",
+    "name": "铜矿石",
+    "category": "material",
+    "description": "从泥土区域铜矿开采出的原矿，含铜色矿物与少量氧化纹理。",
+    "icon": "res://assets/ores/v06/frame-06.png",
+    "world_visual": "res://assets/ores/v06/frame-06.png",
+    "max_stack": 50,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "ore",
+      "material"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "铜矿（9次）"
+    },
+    "effects": {},
+    "world_size": 25,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "silver_ore",
+    "name": "银矿石",
+    "category": "material",
+    "description": "从泥土区域银矿开采出的浅银色原矿。",
+    "icon": "res://assets/ores/v06/frame-07.png",
+    "world_visual": "res://assets/ores/v06/frame-07.png",
+    "max_stack": 50,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "ore",
+      "material"
+    ],
+    "rarity": "uncommon",
+    "drop_rules": {
+      "source": "银矿（12次）"
+    },
+    "effects": {},
+    "world_size": 25,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "gold_ore",
+    "name": "金矿石",
+    "category": "material",
+    "description": "从泥土区域稀有金矿开采出的含金原矿。",
+    "icon": "res://assets/ores/v06/frame-08.png",
+    "world_visual": "res://assets/ores/v06/frame-08.png",
+    "max_stack": 50,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "ore",
+      "material"
+    ],
+    "rarity": "rare",
+    "drop_rules": {
+      "source": "金矿（16次）"
+    },
+    "effects": {},
+    "world_size": 25,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "field_lantern",
+    "name": "野营提灯",
+    "category": "utility",
+    "description": "打开后提供较大范围暖光，每盏可累计照明30分钟；关闭后停止消耗。无需装备，移出背包时熄灭，剩余燃时随物品保存，重新进入游戏默认关闭。",
+    "icon": "res://assets/ui/v1/field_lantern.png",
+    "world_visual": "res://assets/ui/v1/field_lantern.png",
+    "world_size": 24,
+    "max_stack": 1,
+    "usable": true,
+    "use_action": "light",
+    "consumable": false,
+    "tags": [
+      "exploration",
+      "lighting"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作"
+    },
+    "effects": {},
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "simple_campfire",
+    "name": "简易篝火",
+    "category": "utility",
+    "description": "使用后在干燥空地放置；将可燃物拖入火堆即可点燃续燃，靠近按E烹饪。",
+    "icon": "res://assets/campfire/v1/icon.png",
+    "world_visual": "res://assets/campfire/v1/icon.png",
+    "max_stack": 10,
+    "usable": true,
+    "use_action": "place_campfire",
+    "consumable": true,
+    "tags": [
+      "camp"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作"
+    },
+    "effects": {},
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "roasted_carrot",
+    "name": "烤胡萝卜",
+    "category": "food",
+    "description": "烤得香甜的胡萝卜。",
+    "icon": "res://assets/campfire/v1/roasted_carrot.png",
+    "world_visual": "res://assets/campfire/v1/roasted_carrot.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 12
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "roasted_mushroom",
+    "name": "烤蘑菇",
+    "category": "food",
+    "description": "温热柔软的烤蘑菇。",
+    "icon": "res://assets/campfire/v1/roasted_mushroom.png",
+    "world_visual": "res://assets/campfire/v1/roasted_mushroom.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 10
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "herb_roasted_mushroom",
+    "name": "香草烤蘑菇",
+    "category": "food",
+    "description": "野花作为可食用草本搭配烤制的野外料理。",
+    "icon": "res://assets/cooking/v1/herb_roasted_mushroom.png",
+    "world_visual": "res://assets/cooking/v1/herb_roasted_mushroom.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 16
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "roasted_fruit_platter",
+    "name": "野果混合烤盘",
+    "category": "food",
+    "description": "野花作为可食用草本搭配烤制的野外料理。",
+    "icon": "res://assets/cooking/v1/roasted_fruit_platter.png",
+    "world_visual": "res://assets/cooking/v1/roasted_fruit_platter.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 20
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "field_harvest_platter",
+    "name": "原野丰收烤盘",
+    "category": "food",
+    "description": "野花作为可食用草本搭配烤制的野外料理。",
+    "icon": "res://assets/cooking/v1/field_harvest_platter.png",
+    "world_visual": "res://assets/cooking/v1/field_harvest_platter.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 24
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "stone_wall",
+    "name": "石墙",
+    "category": "material",
+    "description": "围合露天营地的石墙，自动连接端头、转角、三通与十字。",
+    "icon": "res://assets/buildings/v1/frame-01.png",
+    "world_visual": "res://assets/buildings/v1/frame-01.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "stone_gate",
+    "name": "石墙门",
+    "category": "material",
+    "description": "单扇门，E开关；R转向、F选择开启侧。替换石墙只补材料差额。",
+    "icon": "res://assets/buildings/v1/frame-07.png",
+    "world_visual": "res://assets/buildings/v1/frame-07.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "wood_fence",
+    "name": "木栅栏",
+    "category": "material",
+    "description": "划分营地区域的木栅栏，可与石墙自然连接。",
+    "icon": "res://assets/buildings/v1/frame-03.png",
+    "world_visual": "res://assets/buildings/v1/frame-03.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "fence_gate",
+    "name": "木栅栏门",
+    "category": "material",
+    "description": "木栅栏单扇门；替换栅栏只补材料差额。R转向、F选择开启侧。",
+    "icon": "res://assets/buildings/v1/frame-09.png",
+    "world_visual": "res://assets/buildings/v1/frame-09.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "wood_floor",
+    "name": "木地板",
+    "category": "material",
+    "description": "占用一个独立建筑格，可拖动连续铺设。",
+    "icon": "res://assets/buildings/v1/frame-11.png",
+    "world_visual": "res://assets/buildings/v1/frame-11.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "stone_path",
+    "name": "石板路",
+    "category": "material",
+    "description": "占用一个独立建筑格，可拖动连续铺设。",
+    "icon": "res://assets/buildings/v1/frame-12.png",
+    "world_visual": "res://assets/buildings/v1/frame-12.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "wood_chest",
+    "name": "木箱",
+    "category": "material",
+    "description": "独立12格储物，支持拖拽、堆叠与工具耐久保存；清空后才能拆除。",
+    "icon": "res://assets/buildings/v2/wood_chest.png",
+    "world_visual": "res://assets/buildings/v2/wood_chest.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "workbench",
+    "name": "工作台",
+    "category": "material",
+    "description": "靠近按E打开原制作面板；徒手制作仍可随时使用。",
+    "icon": "res://assets/buildings/v2/workbench.png",
+    "world_visual": "res://assets/buildings/v2/workbench.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "camp_torch",
+    "name": "营地火把",
+    "category": "material",
+    "description": "固定的营地照明，夜间提供暖光；本版无需添加燃料。",
+    "icon": "res://assets/buildings/v1/frame-15.png",
+    "world_visual": "res://assets/buildings/v1/frame-15.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "stone_hammer",
+    "name": "石锤",
+    "category": "tool",
+    "description": "敲击拆除玩家营地建筑；不用于采集自然资源。",
+    "icon": "res://assets/buildings/v1/frame-16.png",
+    "world_visual": "res://assets/buildings/v1/frame-16.png",
+    "world_size": 24,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "equipment",
+      "tool"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作 / F6 调试物品库"
+    },
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "tool",
+    "capabilities": [
+      "demolish"
+    ],
+    "action_id": "demolish",
+    "visual_id": "tool:stone_hammer",
+    "stats": {},
+    "durability": 100
+  }
+]

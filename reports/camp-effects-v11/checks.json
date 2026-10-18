@@ -1,0 +1,238 @@
+[
+  {
+    "name": "only configured default viewport; no resolution switching",
+    "pass": true
+  },
+  {
+    "name": "torch retains approved PNG with local flame shader",
+    "pass": true
+  },
+  {
+    "name": "torch animates shader phase without whole-object motion",
+    "pass": true
+  },
+  {
+    "name": "placement preview shares animated torch geometry",
+    "pass": true
+  },
+  {
+    "name": "GPU cup rope and shaft pixels fixed",
+    "pass": true
+  },
+  {
+    "name": "GPU upper flame visibly moves",
+    "pass": true
+  },
+  {
+    "name": "fuel bar six units closer with width preserved",
+    "pass": true
+  },
+  {
+    "name": "fuel bar rendered height exactly half actual previous control",
+    "pass": true
+  },
+  {
+    "name": "fuel values and capacity unchanged",
+    "pass": true
+  },
+  {
+    "name": "camp light radius 200 to 250",
+    "pass": true
+  },
+  {
+    "name": "actual environment shader receives expanded camp radius",
+    "pass": true
+  },
+  {
+    "name": "existing storm fuel consumption still updates moved bar",
+    "pass": true
+  },
+  {
+    "name": "real last strike commits workbench",
+    "pass": true
+  },
+  {
+    "name": "refunds anchored at original building center workbench",
+    "pass": true
+  },
+  {
+    "name": "original refunds with no persisted animation flag workbench",
+    "pass": true
+  },
+  {
+    "name": "new refund nodes animate without moving landing roots workbench",
+    "pass": true
+  },
+  {
+    "name": "airborne refund cannot be picked early workbench",
+    "pass": true
+  },
+  {
+    "name": "single original tool wear workbench",
+    "pass": true
+  },
+  {
+    "name": "refund flight settles at same center workbench",
+    "pass": true
+  },
+  {
+    "name": "restored settled refund does not replay flight workbench",
+    "pass": true
+  },
+  {
+    "name": "settled centered refund remains collectible workbench",
+    "pass": true
+  },
+  {
+    "name": "real last strike commits stone_wall",
+    "pass": true
+  },
+  {
+    "name": "refunds anchored at original building center stone_wall",
+    "pass": true
+  },
+  {
+    "name": "original refunds with no persisted animation flag stone_wall",
+    "pass": true
+  },
+  {
+    "name": "new refund nodes animate without moving landing roots stone_wall",
+    "pass": true
+  },
+  {
+    "name": "airborne refund cannot be picked early stone_wall",
+    "pass": true
+  },
+  {
+    "name": "single original tool wear stone_wall",
+    "pass": true
+  },
+  {
+    "name": "refund flight settles at same center stone_wall",
+    "pass": true
+  },
+  {
+    "name": "restored settled refund does not replay flight stone_wall",
+    "pass": true
+  },
+  {
+    "name": "settled centered refund remains collectible stone_wall",
+    "pass": true
+  },
+  {
+    "name": "real last strike commits wood_fence",
+    "pass": true
+  },
+  {
+    "name": "refunds anchored at original building center wood_fence",
+    "pass": true
+  },
+  {
+    "name": "original refunds with no persisted animation flag wood_fence",
+    "pass": true
+  },
+  {
+    "name": "new refund nodes animate without moving landing roots wood_fence",
+    "pass": true
+  },
+  {
+    "name": "airborne refund cannot be picked early wood_fence",
+    "pass": true
+  },
+  {
+    "name": "single original tool wear wood_fence",
+    "pass": true
+  },
+  {
+    "name": "refund flight settles at same center wood_fence",
+    "pass": true
+  },
+  {
+    "name": "restored settled refund does not replay flight wood_fence",
+    "pass": true
+  },
+  {
+    "name": "settled centered refund remains collectible wood_fence",
+    "pass": true
+  },
+  {
+    "name": "real last strike commits wood_floor",
+    "pass": true
+  },
+  {
+    "name": "refunds anchored at original building center wood_floor",
+    "pass": true
+  },
+  {
+    "name": "original refunds with no persisted animation flag wood_floor",
+    "pass": true
+  },
+  {
+    "name": "new refund nodes animate without moving landing roots wood_floor",
+    "pass": true
+  },
+  {
+    "name": "airborne refund cannot be picked early wood_floor",
+    "pass": true
+  },
+  {
+    "name": "single original tool wear wood_floor",
+    "pass": true
+  },
+  {
+    "name": "refund flight settles at same center wood_floor",
+    "pass": true
+  },
+  {
+    "name": "restored settled refund does not replay flight wood_floor",
+    "pass": true
+  },
+  {
+    "name": "settled centered refund remains collectible wood_floor",
+    "pass": true
+  },
+  {
+    "name": "real last strike commits campfire",
+    "pass": true
+  },
+  {
+    "name": "refunds anchored at original building center campfire",
+    "pass": true
+  },
+  {
+    "name": "original refunds with no persisted animation flag campfire",
+    "pass": true
+  },
+  {
+    "name": "new refund nodes animate without moving landing roots campfire",
+    "pass": true
+  },
+  {
+    "name": "airborne refund cannot be picked early campfire",
+    "pass": true
+  },
+  {
+    "name": "single original tool wear campfire",
+    "pass": true
+  },
+  {
+    "name": "refund flight settles at same center campfire",
+    "pass": true
+  },
+  {
+    "name": "restored settled refund does not replay flight campfire",
+    "pass": true
+  },
+  {
+    "name": "settled centered refund remains collectible campfire",
+    "pass": true
+  },
+  {
+    "name": "save failure restores building damage",
+    "pass": true
+  },
+  {
+    "name": "save failure restores loot and tool wear",
+    "pass": true
+  }
+]

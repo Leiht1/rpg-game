@@ -1,0 +1,130 @@
+[
+  {
+    "name": "actual food benefit wild_carrot +4",
+    "pass": true
+  },
+  {
+    "name": "full hunger preserves wild_carrot",
+    "pass": true
+  },
+  {
+    "name": "actual food benefit wild_apple +4",
+    "pass": true
+  },
+  {
+    "name": "full hunger preserves wild_apple",
+    "pass": true
+  },
+  {
+    "name": "actual food benefit wild_berry +3",
+    "pass": true
+  },
+  {
+    "name": "full hunger preserves wild_berry",
+    "pass": true
+  },
+  {
+    "name": "actual food benefit brown_mushroom +3",
+    "pass": true
+  },
+  {
+    "name": "full hunger preserves brown_mushroom",
+    "pass": true
+  },
+  {
+    "name": "actual food benefit wildflower +1",
+    "pass": true
+  },
+  {
+    "name": "full hunger preserves wildflower",
+    "pass": true
+  },
+  {
+    "name": "actual food benefit roasted_carrot +12",
+    "pass": true
+  },
+  {
+    "name": "full hunger preserves roasted_carrot",
+    "pass": true
+  },
+  {
+    "name": "actual food benefit roasted_mushroom +10",
+    "pass": true
+  },
+  {
+    "name": "full hunger preserves roasted_mushroom",
+    "pass": true
+  },
+  {
+    "name": "clear small rain and storm multipliers configured",
+    "pass": true
+  },
+  {
+    "name": "weather blend smoothly interpolates fuel multiplier",
+    "pass": true
+  },
+  {
+    "name": "clear fuel and cooking unchanged",
+    "pass": true
+  },
+  {
+    "name": "small rain burns faster without speeding cooking",
+    "pass": true
+  },
+  {
+    "name": "storm burns twice as fast with normal cooking",
+    "pass": true
+  },
+  {
+    "name": "storm depletion advances only actual available cooking seconds",
+    "pass": true
+  },
+  {
+    "name": "extinguished rainy camp remains paused",
+    "pass": true
+  },
+  {
+    "name": "unlit fire does not lose fuel even in storm",
+    "pass": true
+  },
+  {
+    "name": "zero time cannot consume rainy fuel",
+    "pass": true
+  },
+  {
+    "name": "actual environment adapter supplies small rain exposure",
+    "pass": true
+  },
+  {
+    "name": "actual environment adapter supplies storm exposure",
+    "pass": true
+  },
+  {
+    "name": "pause still excludes rainy fuel consumption",
+    "pass": true
+  },
+  {
+    "name": "debug day preview still excludes rainy fuel consumption",
+    "pass": true
+  },
+  {
+    "name": "rain uses existing valid save fields without new state version",
+    "pass": true
+  },
+  {
+    "name": "animation no longer scales translates or fades whole flame",
+    "pass": true
+  },
+  {
+    "name": "native flame shader receives animation phase",
+    "pass": true
+  },
+  {
+    "name": "rendered flame lower band remains pixel stationary",
+    "pass": true
+  },
+  {
+    "name": "rendered flame upper silhouette visibly changes",
+    "pass": true
+  }
+]

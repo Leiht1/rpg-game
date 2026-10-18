@@ -1,0 +1,34 @@
+{
+	"checks": [
+		{
+			"name": "fresh process save writable",
+			"pass": true
+		},
+		{
+			"name": "fresh process discoveries retained",
+			"pass": true
+		},
+		{
+			"name": "fresh process pending output retained",
+			"pass": true
+		},
+		{
+			"name": "fresh process claimed herb output retained",
+			"pass": true
+		},
+		{
+			"name": "fresh process pending output claims",
+			"pass": true
+		},
+		{
+			"name": "fresh process repeat claim refused",
+			"pass": true
+		},
+		{
+			"name": "fresh process exactly one output",
+			"pass": true
+		}
+	],
+	"count": 7,
+	"failed": 0
+}

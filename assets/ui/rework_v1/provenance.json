@@ -1,0 +1,181 @@
+{
+  "version": "core-ui-art-2.0.0",
+  "status": "integrated_per_current_task_visual_review_pending",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "exact_image_model": "not exposed",
+  "source": "art\\ui-rework-v1\\candidate-01\\generated.png",
+  "source_size": [
+    1536,
+    1024
+  ],
+  "source_sha256": "2e440c8c09e9782dfb5f95914bda7b1a5c723961908fcfde38366166f0c2d1dd",
+  "prompt": "art/ui-rework-v1/prompt.txt",
+  "receipt": "art/ui-rework-v1/candidate-01/job.json",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "2026-10-06",
+    "items": [],
+    "basis": "subscription quota call: no per-call USD price; counted by call caps"
+  },
+  "processing": "Chroma key, complete measured ownership crops, equal-scale LANCZOS resize and 2px alpha padding. Slot states share a 96px registration canvas. No repaint, rotation or baked non-uniform scaling.",
+  "selection_reason": "Illustrated notebook paper, linen inserts and cloth tabs have distinct material structures; no wood beams, no text in images, corners and body treated separately.",
+  "warnings": [
+    "Some generated silhouettes do not meet the requested 48px nominal cell padding; complete measured ownership rectangles keep all visible paint with positive clear margins."
+  ],
+  "files": [
+    {
+      "file": "assets\\ui\\rework_v1\\panel.png",
+      "ownership": [
+        16,
+        16,
+        500,
+        490
+      ],
+      "bbox_in_ownership": [
+        35,
+        30,
+        467,
+        441
+      ],
+      "runtime_size": [
+        256,
+        244
+      ],
+      "sha256": "87356706b27fd845a88aaf4654f06f11d75dd1a1dabf6b19b87d32349257dd52",
+      "qa": {
+        "transparent_outer_edge": true,
+        "center_min_alpha": 255,
+        "center_luma_min": 0.8998
+      }
+    },
+    {
+      "file": "assets\\ui\\rework_v1\\slot.png",
+      "ownership": [
+        555,
+        50,
+        984,
+        460
+      ],
+      "bbox_in_ownership": [
+        48,
+        41,
+        379,
+        360
+      ],
+      "runtime_size": [
+        96,
+        96
+      ],
+      "sha256": "4b3ac985d60cce5b05d27b188ea951135e69454ef330e6272d8b293a550dd49d",
+      "qa": {
+        "transparent_outer_edge": true,
+        "center_min_alpha": 255,
+        "center_luma_min": 0.8895
+      }
+    },
+    {
+      "file": "assets\\ui\\rework_v1\\slot_selected.png",
+      "ownership": [
+        1065,
+        50,
+        1490,
+        460
+      ],
+      "bbox_in_ownership": [
+        50,
+        41,
+        381,
+        360
+      ],
+      "runtime_size": [
+        96,
+        96
+      ],
+      "sha256": "de5be348dbd4ad19b1638df1bb02a067cda6704c56d0f4963ba1c85538592112",
+      "qa": {
+        "transparent_outer_edge": true,
+        "center_min_alpha": 255,
+        "center_luma_min": 0.9345
+      }
+    },
+    {
+      "file": "assets\\ui\\rework_v1\\button.png",
+      "ownership": [
+        4,
+        615,
+        510,
+        865
+      ],
+      "bbox_in_ownership": [
+        16,
+        56,
+        496,
+        205
+      ],
+      "runtime_size": [
+        256,
+        82
+      ],
+      "sha256": "2cb996ecb708a7b4fbca9b6507cfc03a02129b2ff30e1f4a3c5ce0f20ad17ae5",
+      "qa": {
+        "transparent_outer_edge": true,
+        "center_min_alpha": 255,
+        "center_luma_min": 0.9029
+      }
+    },
+    {
+      "file": "assets\\ui\\rework_v1\\tooltip.png",
+      "ownership": [
+        550,
+        495,
+        1000,
+        990
+      ],
+      "bbox_in_ownership": [
+        30,
+        35,
+        410,
+        468
+      ],
+      "runtime_size": [
+        256,
+        291
+      ],
+      "sha256": "992b08491c3d3ec5dc00fdde7fe618031629110678d2a110f790b4af8c8b2587",
+      "qa": {
+        "transparent_outer_edge": true,
+        "center_min_alpha": 255,
+        "center_luma_min": 0.9088
+      }
+    },
+    {
+      "file": "assets\\ui\\rework_v1\\accent.png",
+      "ownership": [
+        1100,
+        600,
+        1460,
+        910
+      ],
+      "bbox_in_ownership": [
+        75,
+        39,
+        315,
+        264
+      ],
+      "runtime_size": [
+        96,
+        90
+      ],
+      "sha256": "e8d8735c27352e81c71ba7f918fd879f61dc22021fbf52ffac0f34d4783a6a89",
+      "qa": {
+        "transparent_outer_edge": true,
+        "center_min_alpha": 0,
+        "center_luma_min": 0.0
+      }
+    }
+  ],
+  "external_assets": [],
+  "runtime_review": "reports/ui-rework-v1/REPORT.md"
+}

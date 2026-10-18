@@ -1,0 +1,121 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+DRAG_DIAGNOSTIC (640.0, 260.0) canvas [X: (1.0, 0.0), Y: (0.0, 1.0), O: (-18912.32, -13369.08)] at (19552.32, 13654.08) mouse (18912.32, 13089.08) loose { "player:1792234921069:1": { "id": "player:1792234921069:1", "item_id": "wood", "count": 3, "x": 19580.3203125, "y": 13747.080078125, "origin": "player", "mode": "pickup" } } action 
+ERROR: hotbar drag starts right-hand throw when unarmed
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:66)
+       [2] drag (res://tests/test_campfire_drag_v1.gd:31)
+       [3] button (res://tests/test_campfire_drag_v1.gd:23)
+       [4] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: start and wind-up do not consume or refuel
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:67)
+       [2] drag (res://tests/test_campfire_drag_v1.gd:31)
+       [3] button (res://tests/test_campfire_drag_v1.gd:23)
+       [4] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: native directional throwing animation actually selected
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:69)
+       [2] step (res://tests/test_campfire_drag_v1.gd:38)
+       [3] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: item in flight remains uncommitted
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:71)
+       [2] step (res://tests/test_campfire_drag_v1.gd:38)
+       [3] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: impact consumes dragged stack and ignites with matching burn time
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:73)
+       [2] step (res://tests/test_campfire_drag_v1.gd:38)
+       [3] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: impact committed through authoritative service
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:74)
+       [2] step (res://tests/test_campfire_drag_v1.gd:38)
+       [3] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: remaining-time bar fixed beneath fire
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:78)
+       [2] step (res://tests/test_campfire_drag_v1.gd:38)
+       [3] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: bag drag routes to same throwing action
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:85)
+       [2] drag (res://tests/test_campfire_drag_v1.gd:31)
+       [3] button (res://tests/test_campfire_drag_v1.gd:23)
+       [4] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: bag fuel reignites expired fire
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:87)
+       [2] step (res://tests/test_campfire_drag_v1.gd:38)
+       [3] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: main-hand equipment selects opposite left hand
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:93)
+       [2] drag (res://tests/test_campfire_drag_v1.gd:31)
+       [3] button (res://tests/test_campfire_drag_v1.gd:23)
+       [4] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: left throw refuels without replacing or consuming equipment
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:98)
+       [2] step (res://tests/test_campfire_drag_v1.gd:38)
+       [3] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: noncombustible drop preserves source and creates no ground discard
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:103)
+       [2] drag (res://tests/test_campfire_drag_v1.gd:31)
+       [3] button (res://tests/test_campfire_drag_v1.gd:23)
+       [4] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: cancelled throw preserves all items and fuel
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:106)
+       [2] step (res://tests/test_campfire_drag_v1.gd:38)
+       [3] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: new toss begins after cancellation
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:108)
+       [2] step (res://tests/test_campfire_drag_v1.gd:38)
+       [3] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: source moved before impact rejects transaction without loss
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:111)
+       [2] step (res://tests/test_campfire_drag_v1.gd:38)
+       [3] frames (res://tests/test_campfire_drag_v1.gd:17)
+ERROR: equipment change cancels uncommitted throw
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_campfire_drag_v1.gd:15)
+       [1] run (res://tests/test_campfire_drag_v1.gd:118)
+       [2] step (res://tests/test_campfire_drag_v1.gd:38)
+       [3] frames (res://tests/test_campfire_drag_v1.gd:17)
+CAMPFIRE DRAG: 44 checks; 16 failures

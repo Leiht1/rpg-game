@@ -1,0 +1,11 @@
+from pathlib import Path
+s=Path('tests/sleep_v8_fixture.gd').read_text(encoding='utf8').replace('res://reports/sleep-occupied-v8/','res://reports/sleep-formal-v9/')
+Path('tests/sleep_formal_v9_fixture.gd').write_text(s,encoding='utf8')
+s=Path('tests/test_sleep_quilt_zoom_v8.gd').read_text(encoding='utf8').replace('res://tests/sleep_v8_fixture.gd','res://tests/sleep_formal_v9_fixture.gd').replace('Engine.set_meta("sleep_preview",true)','Engine.set_meta("sleep_preview",false)').replace('SLEEP QUILT ZOOM V8','SLEEP FORMAL V9')
+s=s.replace('\troot.size=default_size();', '''	check(s.camps.build_book.recipes.build_straw_mat.default_unlocked and s.camps.build_book.recipes.build_wood_bed.default_unlocked,"formal bed/mat construction unlocked without preview")
+	check(s.craft_book.recipes.bench_sleeping_bag.default_unlocked and not s.craft_book.available().any(func(r):return r.recipe_id=="bench_sleeping_bag") and s.craft_book.available("全部",true).any(func(r):return r.recipe_id=="bench_sleeping_bag"),"formal sleeping bag workbench only, hand cannot craft")
+	check(ResourceLoader.exists(s.database.item("sleeping_bag").icon),"formal sleeping bag inventory icon exists")
+	root.size=default_size();''',1)
+s=s.replace('\t\tvar pose: Transform2D=head.transform;', '''		check(quilt.texture.resource_path.begins_with("res://assets/sleep/occupied-v9/") and preload("res://scripts/sleep_controller.gd").art_path(kind+("-vertical" if vertical else "")).begins_with("res://assets/sleep/v1/"),"formal base and occupied art with preview disabled "+label)
+		var pose: Transform2D=head.transform;''')
+Path('tests/test_sleep_formal_v9.gd').write_text(s,encoding='utf8')

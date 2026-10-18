@@ -1,0 +1,50 @@
+{
+  "engine": "4.7.2 Stable",
+  "date": "2026-10-17",
+  "results": {
+    "core_headless": {
+      "checks": 74,
+      "failed": 0,
+      "file": "headless.json",
+      "log": "headless-final-close.log"
+    },
+    "core_window": {
+      "checks": 70,
+      "failed": 0,
+      "file": "window.json"
+    },
+    "drag_headless": {
+      "checks": 48,
+      "failed": 0,
+      "file": "drag-headless.json"
+    },
+    "drag_window": {
+      "checks": 48,
+      "failed": 0,
+      "file": "drag-window.json"
+    },
+    "persist_mid": {
+      "checks": 6,
+      "failed": 0,
+      "file": "persistence-mid.json"
+    },
+    "persist_ready": {
+      "checks": 6,
+      "failed": 0,
+      "file": "persistence-ready.json"
+    },
+    "persist_claimed": {
+      "checks": 5,
+      "failed": 0,
+      "file": "persistence-claimed.json"
+    }
+  },
+  "dependencies": {
+    "crafting": 37,
+    "body": 533,
+    "item_actions": 58
+  },
+  "report": "REPORT.md",
+  "visual_review": "pending_user",
+  "performance_benchmark": "not_run"
+}

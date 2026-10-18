@@ -1,0 +1,38 @@
+[
+  {
+    "name": "fresh process restores exact crafted snapshot",
+    "pass": true
+  },
+  {
+    "name": "fresh process preserves hotbar reference and tool ability",
+    "pass": true
+  },
+  {
+    "name": "tool instance state survives restart",
+    "pass": true
+  },
+  {
+    "name": "lantern item persists; session light defaults off",
+    "pass": true
+  },
+  {
+    "name": "static recipes and UI state do not pollute save",
+    "pass": true
+  },
+  {
+    "name": "restart cancels unfinished progress without spending materials or producing output",
+    "pass": true
+  },
+  {
+    "name": "acquired pouch survives restart without a recipe",
+    "pass": true
+  },
+  {
+    "name": "future save protection still prevents overwrite",
+    "pass": true
+  },
+  {
+    "name": "protected load also prevents new crafting edits",
+    "pass": true
+  }
+]

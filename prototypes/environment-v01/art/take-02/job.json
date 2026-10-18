@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "route": "codex-cli",
+  "requestedModel": "codex-image_gen",
+  "options": {
+    "tool": "image_gen"
+  },
+  "promptSha256": "9698e7c119a678c478252c2dedab9a566d366a9caa954c128cd036fc7d519561",
+  "references": [
+    {
+      "sha256": "a43483724c844af4b6bc7284befad741014160c1d72fbc71bfd1e33f4e26e2f5",
+      "bytes": 1588808
+    },
+    {
+      "sha256": "52ab2adef654b2a999fd700bf74ffb8a9207911c565cbe9d562b4299a2621f75",
+      "bytes": 935742
+    }
+  ],
+  "fingerprint": "57381eb27c85fc3aa1831f57052e73a4282a92548b2c2eadc78cfa7e5dd6ddbb",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "2026-10-06",
+    "items": [],
+    "basis": "subscription quota call: no per-call USD price; counted by call caps"
+  },
+  "consent": {
+    "provider": "openai",
+    "model": "codex-image_gen",
+    "calls": 1,
+    "estimateUsd": 0.0,
+    "route": "codex-cli",
+    "quota": true,
+    "account": "the user's own Codex sign-in (ChatGPT)",
+    "note": "uses the subscription quota of that sign-in, never API credit"
+  },
+  "artSource": "host_image",
+  "execution": "execute",
+  "status": "done",
+  "receipt": {
+    "startedAt": "2026-10-16T13:08:33.307Z",
+    "submittedAt": "2026-10-16T13:08:33.320Z",
+    "completedAt": "2026-10-16T13:09:27.756Z",
+    "wallMs": 54449,
+    "providerMs": 54406,
+    "attempt": 1,
+    "purpose": "route_media image",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "ok"
+  },
+  "ledger": {
+    "projectDir": "../../../..",
+    "reservationId": "33ca1ee09d57439c8a81effdb643fe23",
+    "status": "done"
+  },
+  "cliRun": {
+    "tool": "codex",
+    "runId": "882e8ce2ebe849b397439ef48c15bb1d",
+    "cwd": "<tmp>/forge-cli-882e8ce2ebe8-7b904f0f",
+    "startedAt": "2026-10-16T13:08:33.307Z",
+    "version": "0.163.0-alpha.10.2",
+    "versionText": "codex-cli 0.163.0-alpha.10.2",
+    "recipe": "codex-exec-imagegen/1",
+    "home": "CODEX_HOME",
+    "verifiedBefore": true,
+    "threadId": "01a144d4-1a6d-7c63-93d6-9908f5c5e87f"
+  },
+  "adoption": {
+    "method": "native-run-folder",
+    "source": "CODEX_HOME/generated_images/01a144d4-1a6d-7c63-93d6-9908f5c5e87f/exec-094f9fde-70dc-42ab-84fd-0a46f6877548.png",
+    "sourceSha256": "307d7b04dec1a4a08be306d0f96164d64d9214fe92119165983f1315e748050c",
+    "sourceMtime": "2026-10-16T13:09:19Z",
+    "freshAfter": "2026-10-16T13:08:33.321Z",
+    "checks": [
+      "inside the CLI's own folder for this run",
+      "no symlink or junction",
+      "regular file of a sane size",
+      "newer than the run",
+      "magic bytes",
+      "decodes",
+      "exactly one output",
+      "exclusive copy with matching sha256"
+    ],
+    "finalAnswerNamesFile": true
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "307d7b04dec1a4a08be306d0f96164d64d9214fe92119165983f1315e748050c",
+    "bytes": 1571666,
+    "format": "PNG",
+    "size": [
+      1536,
+      1024
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-18",
+  "user_quote": "可以就这版作为可以种植的吧，然后有残留的色调跟这版保持一致。继续后面的开发，记得土地的排列方式要跟地板一样",
+  "scope": "soil-v4获准；残根按照最新指示派生；不将本次批准扩大到尚未确认的作物/种子/收获物候选",
+  "route": "generate2dsprite -> route_media -> local:codex-cli",
+  "files": {
+    "soil.png": {
+      "source": "art/planting-soil-v4/processed/clean.png",
+      "sha256": "5465ce4500341c4e97d39e95b0633a718687926db676b213b1970d78d9a1cd47",
+      "authorization": "approved_user",
+      "note": "获准PNG逐字节迁入"
+    },
+    "roots.png": {
+      "source": "art/planting-roots-v2/processed/clean.png",
+      "sha256": "cab1cffb3d23b5e648f52ee2d8634934583e515dc936c32de37f432f0feca664",
+      "authorization": "requested_derivative",
+      "note": "按本轮要求，仅残根叠层，不含泥土；底层共用获准soil.png以保证色调完全一致；非额外主观验收结论"
+    }
+  },
+  "final_adoption": {
+    "date": "2026-10-18",
+    "user_quote": "可以 直接接入游戏吧",
+    "note": "本次采用当前92x60、压暗泥土及共用底层残根；旧土V4保留不重新启用。其余14图见v3独立范围。"
+  }
+}

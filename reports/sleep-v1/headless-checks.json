@@ -1,0 +1,482 @@
+[
+  {
+    "name": "registered item craft build data valid",
+    "pass": true
+  },
+  {
+    "name": "hand book hides station recipes",
+    "pass": true
+  },
+  {
+    "name": "workbench includes hand and exclusive sleeping bag",
+    "pass": true
+  },
+  {
+    "name": "service rejects hand sleeping bag",
+    "pass": true
+  },
+  {
+    "name": "find actual legal terrain workbenchfalse",
+    "pass": true
+  },
+  {
+    "name": "atomic place workbenchfalse ",
+    "pass": true
+  },
+  {
+    "name": "E station context exposes bag recipe",
+    "pass": true
+  },
+  {
+    "name": "valid station authorizes bag",
+    "pass": true
+  },
+  {
+    "name": "start station sleeping bag craft",
+    "pass": true
+  },
+  {
+    "name": "bag crafted into original inventory",
+    "pass": true
+  },
+  {
+    "name": "leaving station cancels without output or debit",
+    "pass": true
+  },
+  {
+    "name": "C hand UI hides bag after station close",
+    "pass": true
+  },
+  {
+    "name": "backpack use starts native bag ghost",
+    "pass": true
+  },
+  {
+    "name": "cancel preview no debit",
+    "pass": true
+  },
+  {
+    "name": "hotbar use starts same placement",
+    "pass": true
+  },
+  {
+    "name": "bag legal terrain found",
+    "pass": true
+  },
+  {
+    "name": "boundary failure no item debit",
+    "pass": true
+  },
+  {
+    "name": "bag commit debits one",
+    "pass": true
+  },
+  {
+    "name": "stale repeat no duplicate bag",
+    "pass": true
+  },
+  {
+    "name": "same interaction sleep caption",
+    "pass": true
+  },
+  {
+    "name": "actual selected E target opens sleep UI",
+    "pass": true
+  },
+  {
+    "name": "cancel choice preserves placed bag",
+    "pass": true
+  },
+  {
+    "name": "bag reservation accepted",
+    "pass": true
+  },
+  {
+    "name": "reserve before sleep no recovery",
+    "pass": true
+  },
+  {
+    "name": "reentry rejected",
+    "pass": true
+  },
+  {
+    "name": "cancel alignment preserves unused bag",
+    "pass": true
+  },
+  {
+    "name": "reserve again",
+    "pass": true
+  },
+  {
+    "name": "lie completes before bag IN_USE",
+    "pass": true
+  },
+  {
+    "name": "sleep symbols and native breathing start together",
+    "pass": true
+  },
+  {
+    "name": "occupied bag cannot demolish",
+    "pass": true
+  },
+  {
+    "name": "60 elapsed seconds =24 game minutes and +4 bag energy",
+    "pass": true
+  },
+  {
+    "name": "manual wake hides zzz starts rise",
+    "pass": true
+  },
+  {
+    "name": "wake releases state and input",
+    "pass": true
+  },
+  {
+    "name": "used bag consumed after rise",
+    "pass": true
+  },
+  {
+    "name": "no end-of-sleep bonus",
+    "pass": true
+  },
+  {
+    "name": "find actual legal terrain straw_matfalse",
+    "pass": true
+  },
+  {
+    "name": "atomic place straw_matfalse ",
+    "pass": true
+  },
+  {
+    "name": "orientation persisted straw_matfalse",
+    "pass": true
+  },
+  {
+    "name": "footprint follows direction straw_matfalse",
+    "pass": true
+  },
+  {
+    "name": "R changes build preview straw_matfalse",
+    "pass": true
+  },
+  {
+    "name": "sleep reusable straw_matfalse",
+    "pass": true
+  },
+  {
+    "name": "lie phase no zzz straw_matfalse",
+    "pass": true
+  },
+  {
+    "name": "sleep phase zzz straw_matfalse",
+    "pass": true
+  },
+  {
+    "name": "posture matches facility orientation straw_matfalse",
+    "pass": true
+  },
+  {
+    "name": "time based rate straw_matfalse",
+    "pass": true
+  },
+  {
+    "name": "pause freezes clock and sleep straw_matfalse",
+    "pass": true
+  },
+  {
+    "name": "zzz fits window straw_matfalse(960, 540)",
+    "pass": true
+  },
+  {
+    "name": "zzz fits window straw_matfalse(1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "zzz fits window straw_matfalse(1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "wake releases state and input",
+    "pass": true
+  },
+  {
+    "name": "reusable released straw_matfalse",
+    "pass": true
+  },
+  {
+    "name": "repeated sleep accepted straw_matfalse",
+    "pass": true
+  },
+  {
+    "name": "pre-lie cancellation releases reusable straw_matfalse",
+    "pass": true
+  },
+  {
+    "name": "find actual legal terrain straw_mattrue",
+    "pass": true
+  },
+  {
+    "name": "atomic place straw_mattrue ",
+    "pass": true
+  },
+  {
+    "name": "orientation persisted straw_mattrue",
+    "pass": true
+  },
+  {
+    "name": "footprint follows direction straw_mattrue",
+    "pass": true
+  },
+  {
+    "name": "R changes build preview straw_mattrue",
+    "pass": true
+  },
+  {
+    "name": "sleep reusable straw_mattrue",
+    "pass": true
+  },
+  {
+    "name": "lie phase no zzz straw_mattrue",
+    "pass": true
+  },
+  {
+    "name": "sleep phase zzz straw_mattrue",
+    "pass": true
+  },
+  {
+    "name": "posture matches facility orientation straw_mattrue",
+    "pass": true
+  },
+  {
+    "name": "time based rate straw_mattrue",
+    "pass": true
+  },
+  {
+    "name": "pause freezes clock and sleep straw_mattrue",
+    "pass": true
+  },
+  {
+    "name": "zzz fits window straw_mattrue(960, 540)",
+    "pass": true
+  },
+  {
+    "name": "zzz fits window straw_mattrue(1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "zzz fits window straw_mattrue(1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "wake releases state and input",
+    "pass": true
+  },
+  {
+    "name": "reusable released straw_mattrue",
+    "pass": true
+  },
+  {
+    "name": "repeated sleep accepted straw_mattrue",
+    "pass": true
+  },
+  {
+    "name": "pre-lie cancellation releases reusable straw_mattrue",
+    "pass": true
+  },
+  {
+    "name": "find actual legal terrain wood_bedfalse",
+    "pass": true
+  },
+  {
+    "name": "atomic place wood_bedfalse ",
+    "pass": true
+  },
+  {
+    "name": "orientation persisted wood_bedfalse",
+    "pass": true
+  },
+  {
+    "name": "footprint follows direction wood_bedfalse",
+    "pass": true
+  },
+  {
+    "name": "R changes build preview wood_bedfalse",
+    "pass": true
+  },
+  {
+    "name": "sleep reusable wood_bedfalse",
+    "pass": true
+  },
+  {
+    "name": "lie phase no zzz wood_bedfalse",
+    "pass": true
+  },
+  {
+    "name": "sleep phase zzz wood_bedfalse",
+    "pass": true
+  },
+  {
+    "name": "posture matches facility orientation wood_bedfalse",
+    "pass": true
+  },
+  {
+    "name": "time based rate wood_bedfalse",
+    "pass": true
+  },
+  {
+    "name": "pause freezes clock and sleep wood_bedfalse",
+    "pass": true
+  },
+  {
+    "name": "zzz fits window wood_bedfalse(960, 540)",
+    "pass": true
+  },
+  {
+    "name": "zzz fits window wood_bedfalse(1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "zzz fits window wood_bedfalse(1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "wake releases state and input",
+    "pass": true
+  },
+  {
+    "name": "reusable released wood_bedfalse",
+    "pass": true
+  },
+  {
+    "name": "repeated sleep accepted wood_bedfalse",
+    "pass": true
+  },
+  {
+    "name": "pre-lie cancellation releases reusable wood_bedfalse",
+    "pass": true
+  },
+  {
+    "name": "find actual legal terrain wood_bedtrue",
+    "pass": true
+  },
+  {
+    "name": "atomic place wood_bedtrue ",
+    "pass": true
+  },
+  {
+    "name": "orientation persisted wood_bedtrue",
+    "pass": true
+  },
+  {
+    "name": "footprint follows direction wood_bedtrue",
+    "pass": true
+  },
+  {
+    "name": "R changes build preview wood_bedtrue",
+    "pass": true
+  },
+  {
+    "name": "sleep reusable wood_bedtrue",
+    "pass": true
+  },
+  {
+    "name": "lie phase no zzz wood_bedtrue",
+    "pass": true
+  },
+  {
+    "name": "sleep phase zzz wood_bedtrue",
+    "pass": true
+  },
+  {
+    "name": "posture matches facility orientation wood_bedtrue",
+    "pass": true
+  },
+  {
+    "name": "time based rate wood_bedtrue",
+    "pass": true
+  },
+  {
+    "name": "pause freezes clock and sleep wood_bedtrue",
+    "pass": true
+  },
+  {
+    "name": "zzz fits window wood_bedtrue(960, 540)",
+    "pass": true
+  },
+  {
+    "name": "zzz fits window wood_bedtrue(1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "zzz fits window wood_bedtrue(1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "wake releases state and input",
+    "pass": true
+  },
+  {
+    "name": "reusable released wood_bedtrue",
+    "pass": true
+  },
+  {
+    "name": "repeated sleep accepted wood_bedtrue",
+    "pass": true
+  },
+  {
+    "name": "pre-lie cancellation releases reusable wood_bedtrue",
+    "pass": true
+  },
+  {
+    "name": "target stops at exact energy ceiling",
+    "pass": true
+  },
+  {
+    "name": "wake releases state and input",
+    "pass": true
+  },
+  {
+    "name": "real wall time proves no sleeping multiplier",
+    "pass": true
+  },
+  {
+    "name": "real trace energy matches sole world clock",
+    "pass": true
+  },
+  {
+    "name": "normal camp fuel and cooking during sleep",
+    "pass": true
+  },
+  {
+    "name": "normal independent lamp fuel during sleep",
+    "pass": true
+  },
+  {
+    "name": "wake releases state and input",
+    "pass": true
+  },
+  {
+    "name": "energy zero triggers shared forced lie",
+    "pass": true
+  },
+  {
+    "name": "forced sleep enters same breathing state",
+    "pass": true
+  },
+  {
+    "name": "unsafe early forced wake rejected",
+    "pass": true
+  },
+  {
+    "name": "forced three game hours restore approximately39 normally",
+    "pass": true
+  },
+  {
+    "name": "wake releases state and input",
+    "pass": true
+  },
+  {
+    "name": "forced sleep leaves unrelated bed intact",
+    "pass": true
+  }
+]

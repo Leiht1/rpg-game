@@ -1,0 +1,104 @@
+{
+  "method": "Real framebuffer detection of 6x6 magenta debug foot marker, last 850ms of 1800ms constant-speed segments. Camera smoothing retained; baseline 60Hz physics /120FPS render; fixed 60,120,144 FPS. Marker is not a game asset. Integer-pixel measurement, not proof of subjective display blur.",
+  "results": [
+    {
+      "run": "baseline",
+      "movement": "walk",
+      "frames": 103,
+      "x_range_px": 0.0,
+      "y_range_px": 2.0,
+      "missing_markers": 0,
+      "loading_stops": 0
+    },
+    {
+      "run": "baseline",
+      "movement": "run",
+      "frames": 103,
+      "x_range_px": 1.0,
+      "y_range_px": 3.0,
+      "missing_markers": 0,
+      "loading_stops": 0
+    },
+    {
+      "run": "fixed",
+      "movement": "walk",
+      "frames": 103,
+      "x_range_px": 0.0,
+      "y_range_px": 0.0,
+      "missing_markers": 0,
+      "loading_stops": 0
+    },
+    {
+      "run": "fixed",
+      "movement": "run",
+      "frames": 102,
+      "x_range_px": 0.0,
+      "y_range_px": 0.0,
+      "missing_markers": 0,
+      "loading_stops": 0
+    },
+    {
+      "run": "fixed-144-zoom165",
+      "movement": "walk",
+      "frames": 117,
+      "x_range_px": 0.0,
+      "y_range_px": 0.0,
+      "missing_markers": 0,
+      "loading_stops": 0
+    },
+    {
+      "run": "fixed-144-zoom165",
+      "movement": "run",
+      "frames": 123,
+      "x_range_px": 0.0,
+      "y_range_px": 0.0,
+      "missing_markers": 0,
+      "loading_stops": 0
+    },
+    {
+      "run": "fixed-60-zoom065",
+      "movement": "walk",
+      "frames": 50,
+      "x_range_px": 0.0,
+      "y_range_px": 0.0,
+      "missing_markers": 0,
+      "loading_stops": 0
+    },
+    {
+      "run": "fixed-60-zoom065",
+      "movement": "run",
+      "frames": 52,
+      "x_range_px": 0.0,
+      "y_range_px": 0.0,
+      "missing_markers": 0,
+      "loading_stops": 0
+    }
+  ],
+  "checks": [
+    {
+      "name": "fixed/walk",
+      "pass": true
+    },
+    {
+      "name": "fixed/run",
+      "pass": true
+    },
+    {
+      "name": "fixed-144-zoom165/walk",
+      "pass": true
+    },
+    {
+      "name": "fixed-144-zoom165/run",
+      "pass": true
+    },
+    {
+      "name": "fixed-60-zoom065/walk",
+      "pass": true
+    },
+    {
+      "name": "fixed-60-zoom065/run",
+      "pass": true
+    }
+  ],
+  "failures": 0
+}

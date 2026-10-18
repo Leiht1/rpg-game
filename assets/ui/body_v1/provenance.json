@@ -1,0 +1,52 @@
+{
+  "route": "local:codex-cli",
+  "art_source": "host_image",
+  "model": "codex-image_gen (underlying model undisclosed)",
+  "source": "art\\body-v1\\candidate-01\\generated.png",
+  "prompt": "art/body-v1/prompt.txt",
+  "receipt": "art/body-v1/candidate-01/job.json",
+  "status": "integrated_per_task_visual_review_pending",
+  "source_size": [
+    2172,
+    724
+  ],
+  "warnings": [
+    "WARN source_size_mismatch: value=2172x724, requested=1536x1024; file=art/body-v1/candidate-01/generated.png"
+  ],
+  "processing": "Equal ownership thirds, full silhouette chroma key, aspect-preserving downscale with alpha safety edge. No code painting.",
+  "files": [
+    {
+      "file": "assets\\ui\\body_v1\\health.png",
+      "bbox": [
+        213,
+        116,
+        596,
+        608
+      ],
+      "sha256": "43fabcc604c89f037fdfb7fab4f133e475c14ccf89ba4f3ea6c567021b5b5ec0",
+      "edge_alpha_clear": true
+    },
+    {
+      "file": "assets\\ui\\body_v1\\hunger.png",
+      "bbox": [
+        99,
+        169,
+        634,
+        574
+      ],
+      "sha256": "2805d28e0742546f37251920dc527ec38a0bb1ad6506dac571db94fbc93f51fd",
+      "edge_alpha_clear": true
+    },
+    {
+      "file": "assets\\ui\\body_v1\\stamina.png",
+      "bbox": [
+        133,
+        117,
+        540,
+        603
+      ],
+      "sha256": "af8989c468bc43f3ee2252f82d12c1835517d56d406ab2e9334493048d8ecf26",
+      "edge_alpha_clear": true
+    }
+  ]
+}

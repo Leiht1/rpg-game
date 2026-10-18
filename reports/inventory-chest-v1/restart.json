@@ -1,0 +1,14 @@
+[
+  {
+    "name": "restart accepts chest open field without protecting save",
+    "pass": true
+  },
+  {
+    "name": "restart retains open state and legacy overflow",
+    "pass": true
+  },
+  {
+    "name": "restart restores chest panel from chest state",
+    "pass": true
+  }
+]

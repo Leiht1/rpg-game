@@ -1,0 +1,135 @@
+{
+  "stone_wall": {
+    "name": "石墙",
+    "layer": "edge",
+    "cost": {
+      "stone": 6
+    },
+    "hits": 4,
+    "frame": 1
+  },
+  "stone_gate": {
+    "name": "石墙门",
+    "layer": "edge",
+    "cost": {
+      "stone": 6,
+      "wood": 6,
+      "plant_fiber": 3
+    },
+    "hits": 4,
+    "frame": 7,
+    "door": true,
+    "replaces": "stone_wall"
+  },
+  "wood_fence": {
+    "name": "木栅栏",
+    "layer": "edge",
+    "cost": {
+      "wood": 5,
+      "plant_fiber": 2
+    },
+    "hits": 2,
+    "frame": 3
+  },
+  "fence_gate": {
+    "name": "木栅栏门",
+    "layer": "edge",
+    "cost": {
+      "wood": 8,
+      "plant_fiber": 3
+    },
+    "hits": 3,
+    "frame": 9,
+    "door": true,
+    "replaces": "wood_fence"
+  },
+  "wood_floor": {
+    "name": "木地板",
+    "layer": "ground",
+    "cost": {
+      "wood": 4
+    },
+    "hits": 2,
+    "frame": 11
+  },
+  "stone_path": {
+    "name": "石板路",
+    "layer": "ground",
+    "cost": {
+      "stone": 5
+    },
+    "hits": 2,
+    "frame": 12
+  },
+  "wood_chest": {
+    "name": "木箱",
+    "layer": "free",
+    "cost": {
+      "wood": 10,
+      "plant_fiber": 4
+    },
+    "hits": 3,
+    "frame": 13
+  },
+  "workbench": {
+    "name": "工作台",
+    "layer": "free",
+    "cost": {
+      "wood": 12,
+      "stone": 8,
+      "plant_fiber": 4
+    },
+    "hits": 3,
+    "frame": 14
+  },
+  "camp_torch": {
+    "name": "营地火把",
+    "layer": "free",
+    "cost": {
+      "wood": 4,
+      "plant_fiber": 3
+    },
+    "hits": 2,
+    "frame": 15
+  },
+  "sleeping_bag": {
+    "name": "便携睡袋",
+    "layer": "free",
+    "cost": {
+      "sleeping_bag": 1
+    },
+    "hits": 2,
+    "frame": 0,
+    "sleep": true
+  },
+  "straw_mat": {
+    "name": "草席",
+    "layer": "free",
+    "cost": {
+      "broad_leaf": 8,
+      "plant_fiber": 8
+    },
+    "hits": 2,
+    "frame": 0,
+    "sleep": true
+  },
+  "wood_bed": {
+    "name": "木床",
+    "layer": "free",
+    "cost": {
+      "wood": 24,
+      "plant_fiber": 12,
+      "broad_leaf": 8
+    },
+    "hits": 4,
+    "frame": 0,
+    "sleep": true
+  },
+  "tilled_soil": {
+    "name": "耕地",
+    "layer": "ground",
+    "cost": {},
+    "hits": 1,
+    "frame": 0
+  }
+}

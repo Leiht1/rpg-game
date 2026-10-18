@@ -1,0 +1,354 @@
+{
+	"checks": [
+		{
+			"name": "database validates",
+			"pass": true
+		},
+		{
+			"name": "output exists roast_carrot",
+			"pass": true
+		},
+		{
+			"name": "ingredient exists roast_carrot/wild_carrot",
+			"pass": true
+		},
+		{
+			"name": "output exists herb_mushroom",
+			"pass": true
+		},
+		{
+			"name": "ingredient exists herb_mushroom/brown_mushroom",
+			"pass": true
+		},
+		{
+			"name": "ingredient exists herb_mushroom/wildflower",
+			"pass": true
+		},
+		{
+			"name": "output exists fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "ingredient exists fruit_platter/wild_berry",
+			"pass": true
+		},
+		{
+			"name": "ingredient exists fruit_platter/wild_apple",
+			"pass": true
+		},
+		{
+			"name": "ingredient exists fruit_platter/wildflower",
+			"pass": true
+		},
+		{
+			"name": "output exists harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "ingredient exists harvest_platter/wild_carrot",
+			"pass": true
+		},
+		{
+			"name": "ingredient exists harvest_platter/brown_mushroom",
+			"pass": true
+		},
+		{
+			"name": "ingredient exists harvest_platter/wild_berry",
+			"pass": true
+		},
+		{
+			"name": "ingredient exists harvest_platter/wildflower",
+			"pass": true
+		},
+		{
+			"name": "exactly four active recipes",
+			"pass": true
+		},
+		{
+			"name": "hunger-only wild_berry",
+			"pass": true
+		},
+		{
+			"name": "hunger-only brown_mushroom",
+			"pass": true
+		},
+		{
+			"name": "hunger-only wild_carrot",
+			"pass": true
+		},
+		{
+			"name": "hunger-only wild_apple",
+			"pass": true
+		},
+		{
+			"name": "hunger-only wildflower",
+			"pass": true
+		},
+		{
+			"name": "hunger-only roasted_carrot",
+			"pass": true
+		},
+		{
+			"name": "hunger-only roasted_mushroom",
+			"pass": true
+		},
+		{
+			"name": "hunger-only herb_roasted_mushroom",
+			"pass": true
+		},
+		{
+			"name": "hunger-only roasted_fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "hunger-only field_harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "carrot remains twelve",
+			"pass": true
+		},
+		{
+			"name": "legacy mushroom remains ten",
+			"pass": true
+		},
+		{
+			"name": "new hunger herb_roasted_mushroom",
+			"pass": true
+		},
+		{
+			"name": "unique icon loads herb_roasted_mushroom",
+			"pass": true
+		},
+		{
+			"name": "new hunger roasted_fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "unique icon loads roasted_fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "new hunger field_harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "unique icon loads field_harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "reverse order matches",
+			"pass": true
+		},
+		{
+			"name": "old mushroom combination disabled",
+			"pass": true
+		},
+		{
+			"name": "fractional counts rejected",
+			"pass": true
+		},
+		{
+			"name": "extra material rejected",
+			"pass": true
+		},
+		{
+			"name": "legacy start refused without debit",
+			"pass": true
+		},
+		{
+			"name": "book cannot start hidden recipe",
+			"pass": true
+		},
+		{
+			"name": "invalid combination unchanged",
+			"pass": true
+		},
+		{
+			"name": "start disk failure rollback",
+			"pass": true
+		},
+		{
+			"name": "hidden combination starts",
+			"pass": true
+		},
+		{
+			"name": "start does not discover",
+			"pass": true
+		},
+		{
+			"name": "repeated start no second debit",
+			"pass": true
+		},
+		{
+			"name": "hidden cooking output not leaked",
+			"pass": true
+		},
+		{
+			"name": "four recipe cards plus future placeholders",
+			"pass": true
+		},
+		{
+			"name": "free controls stay inside left column",
+			"pass": true
+		},
+		{
+			"name": "hidden card has no real name or icon",
+			"pass": true
+		},
+		{
+			"name": "native quantity text input reaches focused editor",
+			"pass": true
+		},
+		{
+			"name": "quantity edit updates selected material count",
+			"pass": true
+		},
+		{
+			"name": "extinguished pauses without discovery",
+			"pass": true
+		},
+		{
+			"name": "closed window completion discovers",
+			"pass": true
+		},
+		{
+			"name": "ready and discovery saved together",
+			"pass": true
+		},
+		{
+			"name": "save reload restores discovery and ready",
+			"pass": true
+		},
+		{
+			"name": "full bag retains output no obtained event",
+			"pass": true
+		},
+		{
+			"name": "claim disk failure rollback",
+			"pass": true
+		},
+		{
+			"name": "claim once awards once",
+			"pass": true
+		},
+		{
+			"name": "repeat claim no award",
+			"pass": true
+		},
+		{
+			"name": "old mushroom eats hunger-only",
+			"pass": true
+		},
+		{
+			"name": "legacy paid task yields original item",
+			"pass": true
+		},
+		{
+			"name": "known book herb recipe starts",
+			"pass": true
+		},
+		{
+			"name": "herb claim works",
+			"pass": true
+		},
+		{
+			"name": "matching recipe with missing ingredient consumes nothing",
+			"pass": true
+		},
+		{
+			"name": "native choice signal selects real inventory ingredient",
+			"pass": true
+		},
+		{
+			"name": "duplicate ingredient disabled in other slots",
+			"pass": true
+		},
+		{
+			"name": "native choice removal clears selection",
+			"pass": true
+		},
+		{
+			"name": "known recipe starts via free mode button",
+			"pass": true
+		},
+		{
+			"name": "repeated UI start cannot debit twice",
+			"pass": true
+		},
+		{
+			"name": "closing and reopening retains task without debit",
+			"pass": true
+		},
+		{
+			"name": "free known recipe output claims via UI",
+			"pass": true
+		},
+		{
+			"name": "four material hidden harvest starts",
+			"pass": true
+		},
+		{
+			"name": "harvest completion discovers",
+			"pass": true
+		},
+		{
+			"name": "completion reveals output and recipe card",
+			"pass": true
+		},
+		{
+			"name": "fixed panel (1280, 720)",
+			"pass": true
+		},
+		{
+			"name": "free controls no overlap (1280, 720)",
+			"pass": true
+		},
+		{
+			"name": "fixed panel (960, 540)",
+			"pass": true
+		},
+		{
+			"name": "free controls no overlap (960, 540)",
+			"pass": true
+		},
+		{
+			"name": "fixed panel (1600, 900)",
+			"pass": true
+		},
+		{
+			"name": "free controls no overlap (1600, 900)",
+			"pass": true
+		},
+		{
+			"name": "new schema validates",
+			"pass": true
+		},
+		{
+			"name": "future discovery version refused",
+			"pass": true
+		},
+		{
+			"name": "unknown discovery refused",
+			"pass": true
+		},
+		{
+			"name": "old schema still accepted",
+			"pass": true
+		},
+		{
+			"name": "old save without discovery fields loads ready task safely",
+			"pass": true
+		},
+		{
+			"name": "future discovery schema protects source save",
+			"pass": true
+		},
+		{
+			"name": "protected future source remains untouched",
+			"pass": true
+		}
+	],
+	"count": 87,
+	"failed": 0
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "new process accepts snapshot",
+    "pass": true
+  },
+  {
+    "name": "third process no duplicated sleep or recovery",
+    "pass": true
+  },
+  {
+    "name": "inventory and equipment survive all stages",
+    "pass": true
+  },
+  {
+    "name": "real v1 file migrates to healthy awake state",
+    "pass": true
+  },
+  {
+    "name": "migration preserves camp food and harvest",
+    "pass": true
+  },
+  {
+    "name": "migrated file saves version two",
+    "pass": true
+  }
+]

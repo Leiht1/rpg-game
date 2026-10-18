@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "name": "fresh process loads all39 camp instances",
+      "pass": true
+    },
+    {
+      "name": "fresh process restores gate open",
+      "pass": true
+    },
+    {
+      "name": "fresh process restores wall damage",
+      "pass": true
+    },
+    {
+      "name": "fresh process first chest tool73",
+      "pass": true
+    },
+    {
+      "name": "fresh process independent second chest tool41",
+      "pass": true
+    },
+    {
+      "name": "fresh process restores ground demolition materials",
+      "pass": true
+    },
+    {
+      "name": "repeated full snapshot load does not duplicate instances",
+      "pass": true
+    }
+  ],
+  "failed": 0
+}

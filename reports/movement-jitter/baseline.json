@@ -1,0 +1,1863 @@
+{
+  "camera_callback": 1,
+  "camera_smoothing": true,
+  "engine": "4.7.2-stable (official)",
+  "interpolation": false,
+  "samples": [
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21970.18, 19391.4)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6108995
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21970.18, 19391.4)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6117528
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21968.93, 19394.49)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6125917
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21968.93, 19394.49)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6133800
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21967.68, 19397.58)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6142225
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21967.68, 19397.58)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6150466
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21966.43, 19400.67)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6160131
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21966.43, 19400.67)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6167616
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21965.18, 19403.76)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6175720
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21965.18, 19403.76)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6183764
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21963.93, 19406.85)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6192290
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21963.93, 19406.85)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6200463
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21962.68, 19409.94)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6209171
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21962.68, 19409.94)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6217243
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21961.43, 19413.03)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6226039
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21961.43, 19413.03)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6233646
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21960.18, 19416.12)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6243362
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21960.18, 19416.12)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6252074
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21958.93, 19419.21)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6259850
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21958.93, 19419.21)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6268316
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21957.68, 19422.3)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6276511
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21957.68, 19422.3)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6284716
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21956.43, 19425.39)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6293484
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21956.43, 19425.39)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6301610
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21955.18, 19428.48)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6310104
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21955.18, 19428.48)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6318378
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21953.93, 19431.57)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6326736
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21953.93, 19431.57)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6335303
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21952.68, 19434.66)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6343567
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21952.68, 19434.66)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6351681
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21951.43, 19437.75)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6360029
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21951.43, 19437.75)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6368239
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21950.18, 19440.84)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6376871
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21950.18, 19440.84)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6384652
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21948.93, 19443.93)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6393380
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21948.93, 19443.93)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6401584
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21947.68, 19447.02)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6410006
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21947.68, 19447.02)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6418500
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21946.43, 19450.11)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6426613
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21946.43, 19450.11)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6434994
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21945.18, 19453.2)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6443295
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21945.18, 19453.2)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6451325
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21943.93, 19456.29)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6460151
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21943.93, 19456.29)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6468229
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21942.68, 19459.38)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6476533
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21942.68, 19459.38)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6484625
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21941.43, 19462.46)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6493148
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21941.43, 19462.46)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6501512
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21940.18, 19465.55)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6509966
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21940.18, 19465.55)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6518038
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21938.93, 19468.64)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6526592
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21938.93, 19468.64)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6534779
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21937.68, 19471.73)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6543523
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21937.68, 19471.73)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6551503
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21936.43, 19474.82)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6559919
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21936.43, 19474.82)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6568222
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21935.18, 19477.91)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6576598
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21935.18, 19477.91)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6584696
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21933.93, 19481.0)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6593243
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21933.93, 19481.0)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6601538
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21932.68, 19484.09)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6609887
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21932.68, 19484.09)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6617966
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21931.43, 19487.18)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6626623
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21931.43, 19487.18)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6634766
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21930.18, 19490.27)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6643234
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21930.18, 19490.27)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6651672
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21928.93, 19493.36)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6660049
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21928.93, 19493.36)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6668824
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21927.68, 19496.45)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6676659
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21927.68, 19496.45)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6684742
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21926.43, 19499.54)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6693268
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21926.43, 19499.54)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6700633
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21925.18, 19502.63)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6710170
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21925.18, 19502.63)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6718953
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21923.93, 19505.72)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6726644
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21923.93, 19505.72)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6734851
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21922.68, 19508.81)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6743148
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21922.68, 19508.81)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6751381
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21921.43, 19511.9)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6759929
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21921.43, 19511.9)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6768270
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21920.18, 19514.99)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6773931
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21920.18, 19514.99)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6782676
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21918.93, 19518.08)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6791058
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21918.93, 19518.08)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6798689
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21917.68, 19521.17)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6808119
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21917.68, 19521.17)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6815541
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21916.43, 19524.26)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6824531
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21916.43, 19524.26)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6833186
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21915.18, 19527.35)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6841601
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21915.18, 19527.35)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6849071
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21913.93, 19530.44)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6857935
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21913.93, 19530.44)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6865141
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21912.68, 19533.53)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6875872
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21912.68, 19533.53)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6882270
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21911.43, 19536.62)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6890547
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21911.43, 19536.62)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6898676
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21910.18, 19539.71)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6908100
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21910.18, 19539.71)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6916491
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21908.93, 19542.8)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6924224
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21908.93, 19542.8)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6933271
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21907.68, 19545.89)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6940450
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21907.68, 19545.89)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 383.5,
+      "time": 6948998
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21906.43, 19548.98)",
+      "run": false,
+      "screen_x": 629.5,
+      "screen_y": 385.5,
+      "time": 6958045
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21796.11, 19822.07)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 396.5,
+      "time": 7915348
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21794.17, 19826.86)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 7923924
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21794.17, 19826.86)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 396.5,
+      "time": 7931910
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21792.23, 19831.65)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 7940456
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21792.23, 19831.65)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 396.5,
+      "time": 7948564
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21790.3, 19836.44)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 7957456
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21790.3, 19836.44)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 396.5,
+      "time": 7965345
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21788.36, 19841.23)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 7973976
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21788.36, 19841.23)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 396.5,
+      "time": 7981956
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21786.43, 19846.02)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 7990422
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21786.43, 19846.02)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 396.5,
+      "time": 7998778
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21784.49, 19850.81)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8007211
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21784.49, 19850.81)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8015435
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21782.56, 19855.61)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8023911
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21782.56, 19855.61)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8032061
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21780.62, 19860.4)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8041032
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21780.62, 19860.4)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8048756
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21778.69, 19865.19)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8057804
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21778.69, 19865.19)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8065290
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21776.75, 19869.98)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8073779
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21776.75, 19869.98)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8082523
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21774.81, 19874.77)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8090759
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21774.81, 19874.77)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8098632
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21772.88, 19879.56)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8107168
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21772.88, 19879.56)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8115340
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21770.94, 19884.35)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8124037
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21770.94, 19884.35)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8131962
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21769.01, 19889.14)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8140480
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21769.01, 19889.14)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8148761
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21767.07, 19893.93)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8157551
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21767.07, 19893.93)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8165361
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21765.14, 19898.72)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8173883
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21765.14, 19898.72)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8181892
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21763.2, 19903.52)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8190656
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21763.2, 19903.52)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8198695
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21761.27, 19908.31)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8207294
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21761.27, 19908.31)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8215534
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21759.33, 19913.1)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8223832
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21759.33, 19913.1)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8232024
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21757.39, 19917.89)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8240515
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21757.39, 19917.89)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8248892
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21755.46, 19922.68)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8257235
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21755.46, 19922.68)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8265311
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21753.52, 19927.47)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8273746
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21753.52, 19927.47)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8282018
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21751.59, 19932.26)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8290661
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21751.59, 19932.26)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8299003
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21749.65, 19937.05)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8307147
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21749.65, 19937.05)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8315600
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21747.72, 19941.84)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8323906
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21747.72, 19941.84)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8332138
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21745.78, 19946.63)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8340645
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21745.78, 19946.63)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8348680
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21743.85, 19951.43)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8357382
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21743.85, 19951.43)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8365460
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21741.91, 19956.22)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8374125
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21741.91, 19956.22)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8382398
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21739.97, 19961.01)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8390446
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21739.97, 19961.01)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8398811
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21738.04, 19965.8)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8407359
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21738.04, 19965.8)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8415420
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21736.1, 19970.59)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8424088
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21736.1, 19970.59)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8432158
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21734.17, 19975.38)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8440848
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21734.17, 19975.38)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8448825
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21732.23, 19980.17)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8457274
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21732.23, 19980.17)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8465539
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21730.3, 19984.96)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8473818
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21730.3, 19984.96)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8482141
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21728.36, 19989.75)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8490722
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21728.36, 19989.75)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8499059
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21726.43, 19994.54)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8507409
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21726.43, 19994.54)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8515660
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21724.49, 19999.34)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8523799
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21724.49, 19999.34)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8531932
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21722.55, 20004.13)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8540487
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21722.55, 20004.13)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8548900
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21720.62, 20008.92)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8557722
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21720.62, 20008.92)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8566019
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21718.68, 20013.71)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8574359
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21718.68, 20013.71)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8582030
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21716.75, 20018.5)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8590724
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21716.75, 20018.5)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8598700
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21714.81, 20023.29)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8607441
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21714.81, 20023.29)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8615392
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21712.88, 20028.08)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8624073
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21712.88, 20028.08)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8632242
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21710.94, 20032.87)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8640501
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21710.94, 20032.87)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8648652
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21709.01, 20037.66)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8657153
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21709.01, 20037.66)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8665282
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21707.07, 20042.46)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8674160
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21707.07, 20042.46)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8682030
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21705.13, 20047.25)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8690566
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21705.13, 20047.25)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8698890
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21703.2, 20052.04)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8707182
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21703.2, 20052.04)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8715677
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21701.26, 20056.83)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8723824
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21701.26, 20056.83)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8732226
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21699.33, 20061.62)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8740511
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21699.33, 20061.62)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8748824
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21697.39, 20066.41)",
+      "run": true,
+      "screen_x": 623.5,
+      "screen_y": 399.5,
+      "time": 8757470
+    },
+    {
+      "loading": false,
+      "pixels": 36,
+      "position": "(21697.39, 20066.41)",
+      "run": true,
+      "screen_x": 624.5,
+      "screen_y": 397.5,
+      "time": 8765396
+    }
+  ],
+  "seconds": 3.991
+}

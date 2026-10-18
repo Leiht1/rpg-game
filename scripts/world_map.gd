@@ -13,6 +13,7 @@ var center := Vector2.ZERO
 var dragging := false
 var font := ThemeDB.fallback_font
 var map_rect := Rect2()
+var item_screen: Control
 
 func configure(gen: WildGenerator, actor: WildPlayer) -> void:
 	generator=gen
@@ -43,10 +44,11 @@ func _process(_delta: float) -> void:
 	if visible: queue_redraw()
 
 func open_map() -> void:
+	if item_screen: item_screen.close_panels()
 	center=player.position
 	zoom=1.0
 	player.input_blocked=true
-	if player.action=="chop": player.cancel_action()
+	if player.action in ["chop","throw"]: player.cancel_action()
 	player.chop_buffer=0.0
 	show()
 	queue_redraw()
@@ -54,7 +56,8 @@ func open_map() -> void:
 func close_map() -> void:
 	hide()
 	dragging=false
-	player.input_blocked=false
+	if item_screen: item_screen.update_input_block()
+	else: player.input_blocked=false
 
 func world_to_screen(p: Vector2) -> Vector2:
 	return map_rect.get_center()+(p-center)/generator.extent*map_rect.size.x*zoom
@@ -65,7 +68,7 @@ func clamp_center() -> void:
 
 func _draw() -> void:
 	clamp_center()
-	draw_rect(Rect2(Vector2.ZERO,size),Color(.12,.19,.14,.94))
+	draw_rect(Rect2(Vector2.ZERO,size),Color(.12,.19,.14,1.0))
 	var side := minf(size.x-100,size.y-150)
 	map_rect=Rect2((size-Vector2.ONE*side)*.5,Vector2.ONE*side)
 	var span := generator.extent/zoom
@@ -88,10 +91,12 @@ func _draw() -> void:
 		draw_circle(actor_pos,5,Color("ffdf74"))
 		draw_line(actor_pos,actor_pos+Vector2(0,-13),Color("fff9db"),2,true)
 	draw_string(font,Vector2(40,36),"风栖原野 · 地图     北 ↑",HORIZONTAL_ALIGNMENT_LEFT,-1,24,Color("f1efd3"))
-	draw_string(font,Vector2(40,size.y-48),"草原  浅绿   |   森林  深绿   |   山地  灰褐   |   河流 / 湖泊  蓝色",HORIZONTAL_ALIGNMENT_LEFT,-1,17,Color("e4e5c2"))
+	draw_string(font,Vector2(40,size.y-48),"草原  浅绿   |   森林  深绿   |   山地  灰褐   |   海洋 / 河流 / 湖泊  蓝色",HORIZONTAL_ALIGNMENT_LEFT,-1,17,Color("e4e5c2"))
 	draw_string(font,Vector2(40,size.y-22),"滚轮缩放 · 拖动查看 · M / Esc 关闭    Seed %d    坐标 %.0f, %.0f    %.1f×%s"%[generator.world_seed,player.position.x,player.position.y,zoom,"    地形绘制中…" if row<resolution else ""],HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("e4e5c2"))
 
 func _input(event: InputEvent) -> void:
+	if item_screen and item_screen.service.body.sleep_active(): return
+	if item_screen and (item_screen.item_modal_open() or get_viewport().gui_is_dragging()): return
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.physical_keycode==KEY_M:
 			if visible: close_map()
@@ -112,4 +117,5 @@ func _input(event: InputEvent) -> void:
 		center-=event.relative*generator.extent/maxf(map_rect.size.x*zoom,1)
 	clamp_center()
 	get_viewport().set_input_as_handled()
+
 

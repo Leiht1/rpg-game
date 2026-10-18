@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "name": "nearby second target cannot steal locked hit",
+      "pass": true
+    },
+    {
+      "name": "same action cannot submit a second hit",
+      "pass": true
+    },
+    {
+      "name": "target removed before impact cancels safely",
+      "pass": true
+    },
+    {
+      "name": "target removed after impact allows safe recovery end",
+      "pass": true
+    },
+    {
+      "name": "dedicated native directional body clip frontmine",
+      "pass": true
+    },
+    {
+      "name": "dedicated native directional body clip frontdig",
+      "pass": true
+    },
+    {
+      "name": "dedicated native directional body clip backmine",
+      "pass": true
+    },
+    {
+      "name": "dedicated native directional body clip backdig",
+      "pass": true
+    },
+    {
+      "name": "dedicated native directional body clip rightmine",
+      "pass": true
+    },
+    {
+      "name": "dedicated native directional body clip rightdig",
+      "pass": true
+    },
+    {
+      "name": "dedicated native directional body clip leftmine",
+      "pass": true
+    },
+    {
+      "name": "dedicated native directional body clip leftdig",
+      "pass": true
+    },
+    {
+      "name": "chunk unload releases finished resource and transient soil effects",
+      "pass": true
+    },
+    {
+      "name": "full bag keeps all ground rewards",
+      "pass": true
+    },
+    {
+      "name": "partial pickup leaves persisted remainder",
+      "pass": true
+    },
+    {
+      "name": "legacy save missing harvest fields keeps inventory/drop edits",
+      "pass": true
+    },
+    {
+      "name": "unknown harvest version is protected from overwrite",
+      "pass": true
+    }
+  ],
+  "count": 17,
+  "failures": []
+}

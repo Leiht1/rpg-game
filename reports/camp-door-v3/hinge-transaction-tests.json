@@ -1,0 +1,45 @@
+{
+  "checks": [
+    {
+      "name": "failed save rolls back open swing and absent legacy hinge field",
+      "pass": true
+    },
+    {
+      "name": "failed save does not move visual or collider hinge",
+      "pass": true
+    },
+    {
+      "name": "retry after failed save selects clear alternate hinge",
+      "pass": true
+    },
+    {
+      "name": "alternate hinge closes before obstacle test",
+      "pass": true
+    },
+    {
+      "name": "real obstacles block hinge 0 swing -1",
+      "pass": true
+    },
+    {
+      "name": "real obstacles block hinge 0 swing 1",
+      "pass": true
+    },
+    {
+      "name": "real obstacles block hinge 1 swing -1",
+      "pass": true
+    },
+    {
+      "name": "real obstacles block hinge 1 swing 1",
+      "pass": true
+    },
+    {
+      "name": "all four actual paths blocked refuses opening",
+      "pass": true
+    },
+    {
+      "name": "removing actual obstacles restores operation",
+      "pass": true
+    }
+  ],
+  "failed": 0
+}

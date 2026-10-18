@@ -1,0 +1,34 @@
+[
+  {
+    "name": "saved player version remains writable",
+    "pass": true
+  },
+  {
+    "name": "attributes survive process restart",
+    "pass": true
+  },
+  {
+    "name": "body and energy reserve survive restart",
+    "pass": true
+  },
+  {
+    "name": "disease interval and nutrition survive restart",
+    "pass": true
+  },
+  {
+    "name": "individual lamp fuel survives restart",
+    "pass": true
+  },
+  {
+    "name": "equipped hotbar instance survives restart",
+    "pass": true
+  },
+  {
+    "name": "harvest history survives restart",
+    "pass": true
+  },
+  {
+    "name": "unknown body version refuses writes and preserves source",
+    "pass": true
+  }
+]

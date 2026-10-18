@@ -1,0 +1,26 @@
+[
+  {
+    "name": "independent process restores one camp",
+    "pass": true
+  },
+  {
+    "name": "equipped hotbar instance retained across process",
+    "pass": true
+  },
+  {
+    "name": "harvest histories retained across process",
+    "pass": true
+  },
+  {
+    "name": "unclaimed product survives another process restart",
+    "pass": true
+  },
+  {
+    "name": "saved ready product can be claimed",
+    "pass": true
+  },
+  {
+    "name": "claim adds exactly one to existing cooked stack",
+    "pass": true
+  }
+]

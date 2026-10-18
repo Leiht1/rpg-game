@@ -1,0 +1,121 @@
+{
+  "adapter": "NVIDIA GeForce RTX 5060",
+  "art_source": "existing approved view_v01; procedural Godot drawing; no image generation",
+  "center": [
+    20819.6640625,
+    20888.078125
+  ],
+  "checks": [
+    {
+      "name": "natural mixed scene contains both types",
+      "pass": true
+    },
+    {
+      "name": "unchanged origin and collision EnvTree_143_144",
+      "pass": true
+    },
+    {
+      "name": "stable cached alpha footprint EnvTree_143_144",
+      "pass": true
+    },
+    {
+      "name": "unchanged origin and collision EnvTree_142_146",
+      "pass": true
+    },
+    {
+      "name": "stable cached alpha footprint EnvTree_142_146",
+      "pass": true
+    },
+    {
+      "name": "unchanged origin and collision EnvRock_142_142",
+      "pass": true
+    },
+    {
+      "name": "stable cached alpha footprint EnvRock_142_142",
+      "pass": true
+    },
+    {
+      "name": "unchanged origin and collision EnvRock_140_146",
+      "pass": true
+    },
+    {
+      "name": "stable cached alpha footprint EnvRock_140_146",
+      "pass": true
+    },
+    {
+      "name": "generator unchanged",
+      "pass": true
+    },
+    {
+      "name": "at most 12 study objects",
+      "pass": true
+    },
+    {
+      "name": "actual chunk unload reinstall preserves position, alpha footprint and coordinate seed",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "max_install_ms": 1.097,
+  "objects": [
+    {
+      "detail_seed": 0.626313928340708,
+      "foot": [
+        0.0,
+        6.10917663574219
+      ],
+      "id": "143:144",
+      "kind": 0,
+      "position": [
+        20680.20703125,
+        20823.017578125
+      ],
+      "width": 18.1325323486328
+    },
+    {
+      "detail_seed": 0.355232210995272,
+      "foot": [
+        0.0,
+        5.85546875
+      ],
+      "id": "142:146",
+      "kind": 1,
+      "position": [
+        20536.619140625,
+        21080.203125
+      ],
+      "width": 23.2969704437256
+    },
+    {
+      "detail_seed": 0.195824644153856,
+      "foot": [
+        0.0,
+        6.11791610717773
+      ],
+      "id": "142:142",
+      "kind": 2,
+      "position": [
+        20499.12109375,
+        20513.140625
+      ],
+      "width": 25.1304247283936
+    },
+    {
+      "detail_seed": 0.635878734586704,
+      "foot": [
+        0.0,
+        6.14633178710938
+      ],
+      "id": "140:146",
+      "kind": 3,
+      "position": [
+        20237.931640625,
+        21064.400390625
+      ],
+      "width": 17.0562259674072
+    }
+  ],
+  "scope": "Stage A only; no formal scripts or assets changed",
+  "seed": 447349832,
+  "status": "pending_user"
+}

@@ -1,0 +1,765 @@
+{
+  "checks": [
+    {
+      "name": "unique database: existing 15 plus bone/relic/pouch",
+      "pass": true
+    },
+    {
+      "name": "six real inventory/drop visuals stone",
+      "pass": true
+    },
+    {
+      "name": "six real inventory/drop visuals flint",
+      "pass": true
+    },
+    {
+      "name": "six real inventory/drop visuals wild_carrot",
+      "pass": true
+    },
+    {
+      "name": "six real inventory/drop visuals bone_fragment",
+      "pass": true
+    },
+    {
+      "name": "six real inventory/drop visuals relic_fragment",
+      "pass": true
+    },
+    {
+      "name": "six real inventory/drop visuals supply_pouch",
+      "pass": true
+    },
+    {
+      "name": "pouch opens through existing use_slot",
+      "pass": true
+    },
+    {
+      "name": "pouch fixed rewards correct",
+      "pass": true
+    },
+    {
+      "name": "root food keeps existing eat behavior",
+      "pass": true
+    },
+    {
+      "name": "relic material cannot be consumed",
+      "pass": true
+    },
+    {
+      "name": "full bag pouch transaction rolls back all rewards and source",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind minefront0",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind minefront1",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind minefront2",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind minefront3",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind minefront4",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineback0",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineback1",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineback2",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineback3",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineback4",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineright0",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineright1",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineright2",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineright3",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineright4",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineleft0",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineleft1",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineleft2",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineleft3",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind mineleft4",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digfront0",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digfront1",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digfront2",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digfront3",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digfront4",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digback0",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digback1",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digback2",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digback3",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digback4",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digright0",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digright1",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digright2",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digright3",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digright4",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digleft0",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digleft1",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digleft2",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digleft3",
+      "pass": true
+    },
+    {
+      "name": "left arm stays behind digleft4",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:26:19:1",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:25:20:1",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:26:20:2",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:25:18:0",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:25:19:0",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:25:19:1",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:26:17:2",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:26:17:3",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:27:19:1",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:27:20:2",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:28:20:3",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:27:18:1",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:27:17:1",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:27:17:2",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:28:17:1",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:28:17:3",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:24:16:0",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:24:17:0",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:24:17:3",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:24:19:1",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:25:21:1",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:25:21:2",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:26:21:3",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:26:22:1",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:22:18:0",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:22:18:2",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:23:18:0",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:23:18:1",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:23:19:1",
+      "pass": true
+    },
+    {
+      "name": "formal candidate dry/shore clearance harvest:1:23:19:2",
+      "pass": true
+    },
+    {
+      "name": "formal loaded chunks naturally contain harvestable resources",
+      "pass": true
+    },
+    {
+      "name": "same Seed worker distributions identical",
+      "pass": true
+    },
+    {
+      "name": "old natural distribution preserved by extra layer",
+      "pass": true
+    },
+    {
+      "name": "wrong capability rejects stone_outcrop stone_axe",
+      "pass": true
+    },
+    {
+      "name": "wrong capability rejects stone_outcrop simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "empty hand rejects stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "stable explicit E target stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "native E starts dedicated action stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "repeated E commits once stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "action locks movement and facing stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "resource remains anchored stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "damage/reveal stage advances stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "partial progress survives actual chunk unload/reinstall stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "unequip cancels pending hit stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "leaving reach interrupts before impact stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "resource finishes after configured hit count stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "exactly one configured reward batch stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "completed target never respawns stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "reward uses original E pickup stone_outcrop",
+      "pass": true
+    },
+    {
+      "name": "wrong capability rejects flint_outcrop stone_axe",
+      "pass": true
+    },
+    {
+      "name": "wrong capability rejects flint_outcrop simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "empty hand rejects flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "stable explicit E target flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "native E starts dedicated action flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "repeated E commits once flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "action locks movement and facing flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "resource remains anchored flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "damage/reveal stage advances flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "partial progress survives actual chunk unload/reinstall flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "unequip cancels pending hit flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "leaving reach interrupts before impact flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "resource finishes after configured hit count flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "exactly one configured reward batch flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "completed target never respawns flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "reward uses original E pickup flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "reward uses original E pickup flint_outcrop",
+      "pass": true
+    },
+    {
+      "name": "wrong capability rejects buried_root stone_axe",
+      "pass": true
+    },
+    {
+      "name": "wrong capability rejects buried_root stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "empty hand rejects buried_root",
+      "pass": true
+    },
+    {
+      "name": "stable explicit E target buried_root",
+      "pass": true
+    },
+    {
+      "name": "native E starts dedicated action buried_root",
+      "pass": true
+    },
+    {
+      "name": "repeated E commits once buried_root",
+      "pass": true
+    },
+    {
+      "name": "action locks movement and facing buried_root",
+      "pass": true
+    },
+    {
+      "name": "resource remains anchored buried_root",
+      "pass": true
+    },
+    {
+      "name": "damage/reveal stage advances buried_root",
+      "pass": true
+    },
+    {
+      "name": "partial progress survives actual chunk unload/reinstall buried_root",
+      "pass": true
+    },
+    {
+      "name": "unequip cancels pending hit buried_root",
+      "pass": true
+    },
+    {
+      "name": "leaving reach interrupts before impact buried_root",
+      "pass": true
+    },
+    {
+      "name": "resource finishes after configured hit count buried_root",
+      "pass": true
+    },
+    {
+      "name": "exactly one configured reward batch buried_root",
+      "pass": true
+    },
+    {
+      "name": "completed target never respawns buried_root",
+      "pass": true
+    },
+    {
+      "name": "reward uses original E pickup buried_root",
+      "pass": true
+    },
+    {
+      "name": "wrong capability rejects buried_bone stone_axe",
+      "pass": true
+    },
+    {
+      "name": "wrong capability rejects buried_bone stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "empty hand rejects buried_bone",
+      "pass": true
+    },
+    {
+      "name": "stable explicit E target buried_bone",
+      "pass": true
+    },
+    {
+      "name": "native E starts dedicated action buried_bone",
+      "pass": true
+    },
+    {
+      "name": "repeated E commits once buried_bone",
+      "pass": true
+    },
+    {
+      "name": "action locks movement and facing buried_bone",
+      "pass": true
+    },
+    {
+      "name": "resource remains anchored buried_bone",
+      "pass": true
+    },
+    {
+      "name": "damage/reveal stage advances buried_bone",
+      "pass": true
+    },
+    {
+      "name": "partial progress survives actual chunk unload/reinstall buried_bone",
+      "pass": true
+    },
+    {
+      "name": "unequip cancels pending hit buried_bone",
+      "pass": true
+    },
+    {
+      "name": "leaving reach interrupts before impact buried_bone",
+      "pass": true
+    },
+    {
+      "name": "resource finishes after configured hit count buried_bone",
+      "pass": true
+    },
+    {
+      "name": "exactly one configured reward batch buried_bone",
+      "pass": true
+    },
+    {
+      "name": "completed target never respawns buried_bone",
+      "pass": true
+    },
+    {
+      "name": "reward uses original E pickup buried_bone",
+      "pass": true
+    },
+    {
+      "name": "wrong capability rejects buried_supply stone_axe",
+      "pass": true
+    },
+    {
+      "name": "wrong capability rejects buried_supply stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "empty hand rejects buried_supply",
+      "pass": true
+    },
+    {
+      "name": "stable explicit E target buried_supply",
+      "pass": true
+    },
+    {
+      "name": "native E starts dedicated action buried_supply",
+      "pass": true
+    },
+    {
+      "name": "repeated E commits once buried_supply",
+      "pass": true
+    },
+    {
+      "name": "action locks movement and facing buried_supply",
+      "pass": true
+    },
+    {
+      "name": "resource remains anchored buried_supply",
+      "pass": true
+    },
+    {
+      "name": "damage/reveal stage advances buried_supply",
+      "pass": true
+    },
+    {
+      "name": "partial progress survives actual chunk unload/reinstall buried_supply",
+      "pass": true
+    },
+    {
+      "name": "unequip cancels pending hit buried_supply",
+      "pass": true
+    },
+    {
+      "name": "leaving reach interrupts before impact buried_supply",
+      "pass": true
+    },
+    {
+      "name": "resource finishes after configured hit count buried_supply",
+      "pass": true
+    },
+    {
+      "name": "exactly one configured reward batch buried_supply",
+      "pass": true
+    },
+    {
+      "name": "completed target never respawns buried_supply",
+      "pass": true
+    },
+    {
+      "name": "reward uses original E pickup buried_supply",
+      "pass": true
+    },
+    {
+      "name": "reward uses original E pickup buried_supply",
+      "pass": true
+    },
+    {
+      "name": "atomic file reload preserves hits and depleted nodes",
+      "pass": true
+    },
+    {
+      "name": "existing axe tree hit/drop path still works",
+      "pass": true
+    },
+    {
+      "name": "bag preview remains fixed front idle",
+      "pass": true
+    }
+  ],
+  "count": 170,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "natural_loaded": 30,
+  "sample_chunks": [
+    {
+      "coord": "(15, 22)",
+      "count": 7
+    },
+    {
+      "coord": "(13, 18)",
+      "count": 4
+    },
+    {
+      "coord": "(9, 14)",
+      "count": 0
+    },
+    {
+      "coord": "(7, 11)",
+      "count": 3
+    },
+    {
+      "coord": "(19, 24)",
+      "count": 4
+    },
+    {
+      "coord": "(17, 27)",
+      "count": 1
+    },
+    {
+      "coord": "(11, 25)",
+      "count": 3
+    },
+    {
+      "coord": "(10, 29)",
+      "count": 3
+    },
+    {
+      "coord": "(19, 18)",
+      "count": 3
+    },
+    {
+      "coord": "(17, 12)",
+      "count": 1
+    },
+    {
+      "coord": "(20, 10)",
+      "count": 6
+    },
+    {
+      "coord": "(25, 18)",
+      "count": 2
+    },
+    {
+      "coord": "(30, 19)",
+      "count": 2
+    },
+    {
+      "coord": "(35, 19)",
+      "count": 3
+    },
+    {
+      "coord": "(31, 23)",
+      "count": 4
+    },
+    {
+      "coord": "(34, 27)",
+      "count": 3
+    },
+    {
+      "coord": "(33, 32)",
+      "count": 5
+    }
+  ],
+  "sampled_kinds": {
+    "buried_bone": 12,
+    "buried_root": 25,
+    "buried_supply": 4,
+    "flint_outcrop": 10,
+    "stone_outcrop": 33
+  }
+}

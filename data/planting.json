@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "crops": {
+    "carrot": {
+      "name": "胡萝卜",
+      "seed": "carrot_seed",
+      "produce": "wild_carrot",
+      "minutes": 360,
+      "stage_minutes": 120.0,
+      "yield_count": 4,
+      "seed_count": 2
+    },
+    "potato": {
+      "name": "土豆",
+      "seed": "potato_seed",
+      "produce": "potato",
+      "minutes": 480,
+      "stage_minutes": 160.0,
+      "yield_count": 5,
+      "seed_count": 2
+    },
+    "cabbage": {
+      "name": "卷心菜",
+      "seed": "cabbage_seed",
+      "produce": "cabbage",
+      "minutes": 600,
+      "stage_minutes": 200.0,
+      "yield_count": 4,
+      "seed_count": 2
+    }
+  },
+  "wild_sources": [
+    "wild_carrot",
+    "wildflower",
+    "plant_fiber"
+  ],
+  "wild_seed_count": 2,
+  "plot_inset": 2
+}

@@ -1,0 +1,63 @@
+{
+  "status": "approved_formal",
+  "approval": "横向草席的被子太短了，头下面都漏出来了一节空的，再调整一下，然后就可以接入游戏了",
+  "approval_scope": "Current sleep facilities and occupied art, including explicitly authorized final horizontal mat hem extension; does not approve future art.",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "files": {
+    "sleeping_bag-front.png": {
+      "source": "prototypes\\sleep-v1\\final\\sleeping_bag-front.png",
+      "sha256": "b85b0a68f684ef9439f70d45a4d8ae727f84a5cd3c34361e8ef8491b2b696e98",
+      "source_sha256": "b85b0a68f684ef9439f70d45a4d8ae727f84a5cd3c34361e8ef8491b2b696e98"
+    },
+    "sleeping_bag.png": {
+      "source": "prototypes\\sleep-v1\\final\\sleeping_bag.png",
+      "sha256": "c6dd97229643df9fe5a38a80770b42e8d061af15dc7dd2588820abf95c9e53d1",
+      "source_sha256": "c6dd97229643df9fe5a38a80770b42e8d061af15dc7dd2588820abf95c9e53d1"
+    },
+    "straw_mat-vertical.png": {
+      "source": "prototypes\\sleep-v1\\final\\straw_mat-vertical.png",
+      "sha256": "316afe0f3bd0446f44d58611b3754bf6b27f3ab5896244f9b311dd544a6a7b73",
+      "source_sha256": "316afe0f3bd0446f44d58611b3754bf6b27f3ab5896244f9b311dd544a6a7b73"
+    },
+    "straw_mat.png": {
+      "source": "prototypes\\sleep-v1\\final\\straw_mat.png",
+      "sha256": "9b0fd5eedefdbc0cd0f1028b0bd0d9276b06b8b232cab4e55f628be26c1cd865",
+      "source_sha256": "9b0fd5eedefdbc0cd0f1028b0bd0d9276b06b8b232cab4e55f628be26c1cd865"
+    },
+    "wood_bed-front.png": {
+      "source": "prototypes\\sleep-v1\\final\\wood_bed-front.png",
+      "sha256": "7f983a39713d57b5e0fb2656b77a2f2f0b3ad0f61ef435d18b4f7cba03530603",
+      "source_sha256": "7f983a39713d57b5e0fb2656b77a2f2f0b3ad0f61ef435d18b4f7cba03530603"
+    },
+    "wood_bed-vertical-front.png": {
+      "source": "prototypes\\sleep-v1\\final\\wood_bed-vertical-front.png",
+      "sha256": "ea1ea5b476e97010ed7cf505ea0b9fda72b70c8b34f1da2961dfdd03ecb7da6d",
+      "source_sha256": "ea1ea5b476e97010ed7cf505ea0b9fda72b70c8b34f1da2961dfdd03ecb7da6d"
+    },
+    "wood_bed-vertical.png": {
+      "source": "prototypes\\sleep-v1\\final\\wood_bed-vertical.png",
+      "sha256": "3b572f1ec68f70211404190d8ce8873698965cdc7043e0cd3e21fbf22c62c71d",
+      "source_sha256": "3b572f1ec68f70211404190d8ce8873698965cdc7043e0cd3e21fbf22c62c71d"
+    },
+    "wood_bed.png": {
+      "source": "prototypes\\sleep-v1\\final\\wood_bed.png",
+      "sha256": "9f096788f97b960973d22fe4057724952a3654cb20c853b70f483a71f8126b7b",
+      "source_sha256": "9f096788f97b960973d22fe4057724952a3654cb20c853b70f483a71f8126b7b"
+    }
+  },
+  "final_mat_job": "art/sleep-formal-v9/raw/job.json",
+  "final_mat_transform": {
+    "bbox": [
+      15,
+      93,
+      240,
+      163
+    ],
+    "scale": 1.6977777777777778,
+    "xy": [
+      65,
+      68
+    ]
+  }
+}

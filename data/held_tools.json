@@ -1,0 +1,74 @@
+{
+  "tool:stone_axe": {
+    "texture": "res://assets/tools/v04/stone_axe_icon.png",
+    "grip_px": [
+      48,
+      112
+    ],
+    "scale": 0.24,
+    "rotation_degrees": 0,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": -20,
+      "back": -20,
+      "side": -30
+    }
+  },
+  "tool:stone_pickaxe": {
+    "texture": "res://assets/tools/v04/stone_pickaxe_icon.png",
+    "grip_px": [
+      48,
+      119
+    ],
+    "scale": 0.26,
+    "rotation_degrees": 0,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": -20,
+      "back": -20,
+      "side": -30
+    }
+  },
+  "tool:simple_shovel": {
+    "texture": "res://assets/tools/v04/simple_shovel_icon.png",
+    "grip_px": [
+      126,
+      54
+    ],
+    "scale": 0.34,
+    "rotation_degrees": 180,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": -20,
+      "back": -20,
+      "side": -30
+    }
+  },
+  "tool:stone_hammer": {
+    "texture": "res://assets/buildings/v1/frame-16.png",
+    "grip_px": [
+      48,
+      158
+    ],
+    "scale": 0.22,
+    "rotation_degrees": 0,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": -20,
+      "back": -20,
+      "side": -30
+    }
+  }
+}

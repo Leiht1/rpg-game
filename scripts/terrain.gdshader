@@ -1,5 +1,6 @@
 shader_type canvas_item;
 uniform sampler2D environment_tex:filter_linear,repeat_disable;
+uniform sampler2D grounding_mask:filter_linear,repeat_disable;
 uniform vec2 chunk_origin=vec2(0.);
 uniform vec2 ground_origin=vec2(0.);
 uniform sampler2D forest_tex:filter_linear,repeat_enable;
@@ -41,6 +42,14 @@ void fragment(){
  base=mix(base,grass,w.r*clearing*.19);
  base=mix(base,shore,(w.b*.18+w.g*.12)*exposed);
  base*=1.+(.5-env.x)*.075;
+
+ float quiet=texture(grounding_mask,UV).r;
+ if(quiet>.001 && w.a<.30){
+  vec3 calm=(sample_ground(meadow_tex,p+vec2(18.,0.))+sample_ground(meadow_tex,p-vec2(18.,0.))+sample_ground(meadow_tex,p+vec2(0.,18.))+sample_ground(meadow_tex,p-vec2(0.,18.)))*w.b;
+  calm+=(sample_ground(forest_tex,p+vec2(18.,0.))+sample_ground(forest_tex,p-vec2(18.,0.))+sample_ground(forest_tex,p+vec2(0.,18.))+sample_ground(forest_tex,p-vec2(0.,18.)))*w.r;
+  calm+=(sample_ground(rock_tex,p+vec2(18.,0.))+sample_ground(rock_tex,p-vec2(18.,0.))+sample_ground(rock_tex,p+vec2(0.,18.))+sample_ground(rock_tex,p-vec2(0.,18.)))*w.g;
+  base=mix(base,calm/(4.*max(.001,w.r+w.g+w.b)),quiet*.42*(1.-smoothstep(.05,.3,w.a)));
+ }
 
  // A horizontal water plane bounded by the new world-space natural contour.
  // Look 14 world units north: the far bank hides a short strip of water below it.

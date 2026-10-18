@@ -1,0 +1,62 @@
+[
+  {
+    "name": "new process accepts saved crop snapshot",
+    "pass": true
+  },
+  {
+    "name": "four plot states survive process restart",
+    "pass": true
+  },
+  {
+    "name": "idle restored",
+    "pass": true
+  },
+  {
+    "name": "growth restored exactly without offline growth",
+    "pass": true
+  },
+  {
+    "name": "maturity restored",
+    "pass": true
+  },
+  {
+    "name": "roots restored",
+    "pass": true
+  },
+  {
+    "name": "inventory restored without duplicate seeds",
+    "pass": true
+  },
+  {
+    "name": "negative progress rejected",
+    "pass": true
+  },
+  {
+    "name": "unknown crop rejected",
+    "pass": true
+  },
+  {
+    "name": "contradictory crop and roots rejected",
+    "pass": true
+  },
+  {
+    "name": "overgrown progress rejected",
+    "pass": true
+  },
+  {
+    "name": "old buildings without crop fields remain valid",
+    "pass": true
+  },
+  {
+    "name": "harvest restored mature crop through real interaction",
+    "pass": true
+  },
+  {
+    "name": "restored crop grants configured produce and seeds once",
+    "pass": true
+  },
+  {
+    "name": "repeated restored crop harvest refused",
+    "pass": true
+  }
+]

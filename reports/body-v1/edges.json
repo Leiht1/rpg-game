@@ -1,0 +1,78 @@
+[
+  {
+    "name": "active lantern can be dropped through original service",
+    "pass": true
+  },
+  {
+    "name": "dropping active lamp closes light",
+    "pass": true
+  },
+  {
+    "name": "lamp dropped as original world item",
+    "pass": true
+  },
+  {
+    "name": "lamp picked up using original service",
+    "pass": true
+  },
+  {
+    "name": "drop and pickup preserve individual fuel",
+    "pass": true
+  },
+  {
+    "name": "actual original tree available",
+    "pass": true
+  },
+  {
+    "name": "actual successful tree authority spends one",
+    "pass": true
+  },
+  {
+    "name": "detail frame stays stable [100, 100, 0, 0, false]",
+    "pass": true
+  },
+  {
+    "name": "status text cannot stretch HUD [100, 100, 0, 0, false]",
+    "pass": true
+  },
+  {
+    "name": "detail frame stays stable [90, 20, 0.8, 0.5, false]",
+    "pass": true
+  },
+  {
+    "name": "status text cannot stretch HUD [90, 20, 0.8, 0.5, false]",
+    "pass": true
+  },
+  {
+    "name": "detail frame stays stable [14, 0, 2.0, 3.0, true]",
+    "pass": true
+  },
+  {
+    "name": "status text cannot stretch HUD [14, 0, 2.0, 3.0, true]",
+    "pass": true
+  },
+  {
+    "name": "detail frame stays stable [70, 80, 0.8, 0.5, false]",
+    "pass": true
+  },
+  {
+    "name": "status text cannot stretch HUD [70, 80, 0.8, 0.5, false]",
+    "pass": true
+  },
+  {
+    "name": "invalid lamp fuel protects source -1.0",
+    "pass": true
+  },
+  {
+    "name": "invalid lamp fuel protects source 2000.0",
+    "pass": true
+  },
+  {
+    "name": "invalid lamp fuel protects source broken",
+    "pass": true
+  },
+  {
+    "name": "harvest count removed from visible caption",
+    "pass": true
+  }
+]

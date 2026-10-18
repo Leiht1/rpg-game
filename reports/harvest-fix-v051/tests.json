@@ -1,0 +1,294 @@
+{
+  "checks": [
+    {
+      "name": "hotkey equips stone_axe0",
+      "pass": true
+    },
+    {
+      "name": "hotbar icon remains same equipped instance stone_axe0",
+      "pass": true
+    },
+    {
+      "name": "exactly three single-owned tool instances 0stone_axe",
+      "pass": true
+    },
+    {
+      "name": "hotkey equips stone_pickaxe0",
+      "pass": true
+    },
+    {
+      "name": "hotbar icon remains same equipped instance stone_pickaxe0",
+      "pass": true
+    },
+    {
+      "name": "exactly three single-owned tool instances 0stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "hotkey equips simple_shovel0",
+      "pass": true
+    },
+    {
+      "name": "hotbar icon remains same equipped instance simple_shovel0",
+      "pass": true
+    },
+    {
+      "name": "exactly three single-owned tool instances 0simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "hotkey equips stone_axe1",
+      "pass": true
+    },
+    {
+      "name": "hotbar icon remains same equipped instance stone_axe1",
+      "pass": true
+    },
+    {
+      "name": "exactly three single-owned tool instances 1stone_axe",
+      "pass": true
+    },
+    {
+      "name": "hotkey equips stone_pickaxe1",
+      "pass": true
+    },
+    {
+      "name": "hotbar icon remains same equipped instance stone_pickaxe1",
+      "pass": true
+    },
+    {
+      "name": "exactly three single-owned tool instances 1stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "hotkey equips simple_shovel1",
+      "pass": true
+    },
+    {
+      "name": "hotbar icon remains same equipped instance simple_shovel1",
+      "pass": true
+    },
+    {
+      "name": "exactly three single-owned tool instances 1simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "hotkey equips stone_axe2",
+      "pass": true
+    },
+    {
+      "name": "hotbar icon remains same equipped instance stone_axe2",
+      "pass": true
+    },
+    {
+      "name": "exactly three single-owned tool instances 2stone_axe",
+      "pass": true
+    },
+    {
+      "name": "hotkey equips stone_pickaxe2",
+      "pass": true
+    },
+    {
+      "name": "hotbar icon remains same equipped instance stone_pickaxe2",
+      "pass": true
+    },
+    {
+      "name": "exactly three single-owned tool instances 2stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "hotkey equips simple_shovel2",
+      "pass": true
+    },
+    {
+      "name": "hotbar icon remains same equipped instance simple_shovel2",
+      "pass": true
+    },
+    {
+      "name": "exactly three single-owned tool instances 2simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "hotkey equips stone_axe3",
+      "pass": true
+    },
+    {
+      "name": "hotbar icon remains same equipped instance stone_axe3",
+      "pass": true
+    },
+    {
+      "name": "exactly three single-owned tool instances 3stone_axe",
+      "pass": true
+    },
+    {
+      "name": "hotkey equips stone_pickaxe3",
+      "pass": true
+    },
+    {
+      "name": "hotbar icon remains same equipped instance stone_pickaxe3",
+      "pass": true
+    },
+    {
+      "name": "exactly three single-owned tool instances 3stone_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "hotkey equips simple_shovel3",
+      "pass": true
+    },
+    {
+      "name": "hotbar icon remains same equipped instance simple_shovel3",
+      "pass": true
+    },
+    {
+      "name": "exactly three single-owned tool instances 3simple_shovel",
+      "pass": true
+    },
+    {
+      "name": "aliased tools pass duplicate-safe restore",
+      "pass": true
+    },
+    {
+      "name": "hotbar links restore and previous tool returns to own key",
+      "pass": true
+    },
+    {
+      "name": "active alias moves to empty hotbar without cloning",
+      "pass": true
+    },
+    {
+      "name": "drag active alias to bag unequips single instance",
+      "pass": true
+    },
+    {
+      "name": "unbound previous equipment returns to free bag slot",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap stone_outcrop0",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap stone_outcrop1",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap stone_outcrop2",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap stone_outcrop3",
+      "pass": true
+    },
+    {
+      "name": "held E begins second native cycle mine",
+      "pass": true
+    },
+    {
+      "name": "release finishes current cycle and stops mine",
+      "pass": true
+    },
+    {
+      "name": "held E completes resource once mine",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap flint_outcrop0",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap flint_outcrop1",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap flint_outcrop2",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap flint_outcrop3",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap flint_outcrop4",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap buried_root0",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap buried_root1",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap buried_root2",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap buried_bone0",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap buried_bone1",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap buried_bone2",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap buried_bone3",
+      "pass": true
+    },
+    {
+      "name": "held E begins second native cycle dig",
+      "pass": true
+    },
+    {
+      "name": "release finishes current cycle and stops dig",
+      "pass": true
+    },
+    {
+      "name": "held E completes resource once dig",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap buried_supply0",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap buried_supply1",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap buried_supply2",
+      "pass": true
+    },
+    {
+      "name": "no stage translation or silhouette swap buried_supply3",
+      "pass": true
+    },
+    {
+      "name": "native number key switches and retains icon 49",
+      "pass": true
+    },
+    {
+      "name": "native number key switches and retains icon 50",
+      "pass": true
+    },
+    {
+      "name": "native number key switches and retains icon 51",
+      "pass": true
+    },
+    {
+      "name": "native number key switches and retains icon 49",
+      "pass": true
+    },
+    {
+      "name": "disk restore keeps active shortcut reference without duplicate",
+      "pass": true
+    }
+  ],
+  "count": 72,
+  "failures": []
+}

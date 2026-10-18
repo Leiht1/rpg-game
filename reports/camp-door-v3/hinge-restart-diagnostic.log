@@ -1,0 +1,13 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ERROR: fresh process alternate hinge snapshot accepted
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_camp_door_v3.gd:11)
+       [1] run (res://tests/test_camp_door_v3.gd:41)
+       [2] frames (res://tests/test_camp_door_v3.gd:13)
+SCRIPT ERROR: Invalid access to property or key 'corner' on a base object of type 'Dictionary'.
+   at: run (res://tests/test_camp_door_v3.gd:42)
+   GDScript backtrace (most recent call first):
+       [0] run (res://tests/test_camp_door_v3.gd:42)
+       [1] frames (res://tests/test_camp_door_v3.gd:13)

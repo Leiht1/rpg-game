@@ -1,0 +1,752 @@
+WorkerThreadPool: 10 threads, 3 max low-priority.
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+Using "default" pen tablet driver...
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+CORE API HASH: 2004498165
+EDITOR API HASH: 1696660745
+Loading resource: res://tests/test_camp_build_v1.gd remapped: res://tests/test_camp_build_v1.gd
+Completed load for: 'res://tests/test_camp_build_v1.gd' remapped 'res://tests/test_camp_build_v1.gd' at thread -1
+SceneTreeFTI: traversal method DEFAULT
+Loaded system CA certificates
+Loading resource: res://tests/world_v06_formal_fixture.gd remapped: res://tests/world_v06_formal_fixture.gd
+Loading resource: res://scripts/grounded_prop.gdshader remapped: res://scripts/grounded_prop.gdshader
+Completed load for: 'res://scripts/grounded_prop.gdshader' remapped 'res://scripts/grounded_prop.gdshader' at thread -1
+Loading resource: res://scripts/terrain.gdshader remapped: res://scripts/terrain.gdshader
+Completed load for: 'res://scripts/terrain.gdshader' remapped 'res://scripts/terrain.gdshader' at thread -1
+Loading resource: res://scripts/scenery_contact.gdshader remapped: res://scripts/scenery_contact.gdshader
+Completed load for: 'res://scripts/scenery_contact.gdshader' remapped 'res://scripts/scenery_contact.gdshader' at thread -1
+Loading resource: res://scripts/world_environment.gdshader remapped: res://scripts/world_environment.gdshader
+Completed load for: 'res://scripts/world_environment.gdshader' remapped 'res://scripts/world_environment.gdshader' at thread -1
+Loading resource: res://scripts/campfire_flame.gdshader remapped: res://scripts/campfire_flame.gdshader
+Completed load for: 'res://scripts/campfire_flame.gdshader' remapped 'res://scripts/campfire_flame.gdshader' at thread -1
+Loading resource: res://scripts/harvest_hit.gdshader remapped: res://scripts/harvest_hit.gdshader
+Completed load for: 'res://scripts/harvest_hit.gdshader' remapped 'res://scripts/harvest_hit.gdshader' at thread -1
+Loading resource: res://scripts/grass_contact.gdshader remapped: res://scripts/grass_contact.gdshader
+Completed load for: 'res://scripts/grass_contact.gdshader' remapped 'res://scripts/grass_contact.gdshader' at thread -1
+Loading resource: res://scripts/buried_soil.gdshader remapped: res://scripts/buried_soil.gdshader
+Completed load for: 'res://scripts/buried_soil.gdshader' remapped 'res://scripts/buried_soil.gdshader' at thread -1
+Completed load for: 'res://tests/world_v06_formal_fixture.gd' remapped 'res://tests/world_v06_formal_fixture.gd' at thread -1
+Loading resource: res://assets/environment/ground_v03/ground_atlas.png remapped: res://assets/environment/ground_v03/ground_atlas.png
+Loading resource: res://.godot/imported/ground_atlas.png-d99b85f311391ee9266a1307aa2986da.ctex remapped: res://.godot/imported/ground_atlas.png-d99b85f311391ee9266a1307aa2986da.ctex
+Completed load for: 'res://assets/environment/ground_v03/ground_atlas.png' remapped 'res://assets/environment/ground_v03/ground_atlas.png' at thread -1
+Loading resource: res://assets/environment/view_v01/tree_0.png remapped: res://assets/environment/view_v01/tree_0.png
+Loading resource: res://.godot/imported/tree_0.png-ab6e77332b5365a760e3db8be1bf1e46.ctex remapped: res://.godot/imported/tree_0.png-ab6e77332b5365a760e3db8be1bf1e46.ctex
+Completed load for: 'res://assets/environment/view_v01/tree_0.png' remapped 'res://assets/environment/view_v01/tree_0.png' at thread -1
+Loading resource: res://assets/environment/view_v01/tree_1.png remapped: res://assets/environment/view_v01/tree_1.png
+Loading resource: res://.godot/imported/tree_1.png-40afeb9a00bfc69a20b688411c2860b8.ctex remapped: res://.godot/imported/tree_1.png-40afeb9a00bfc69a20b688411c2860b8.ctex
+Completed load for: 'res://assets/environment/view_v01/tree_1.png' remapped 'res://assets/environment/view_v01/tree_1.png' at thread -1
+Loading resource: res://assets/environment/view_v01/rock_0.png remapped: res://assets/environment/view_v01/rock_0.png
+Loading resource: res://.godot/imported/rock_0.png-fbe3239de449a451beae6629ecb85602.ctex remapped: res://.godot/imported/rock_0.png-fbe3239de449a451beae6629ecb85602.ctex
+Completed load for: 'res://assets/environment/view_v01/rock_0.png' remapped 'res://assets/environment/view_v01/rock_0.png' at thread -1
+Loading resource: res://assets/environment/view_v01/rock_1.png remapped: res://assets/environment/view_v01/rock_1.png
+Loading resource: res://.godot/imported/rock_1.png-a2ec48247bf93267fa70fa2491ef247e.ctex remapped: res://.godot/imported/rock_1.png-a2ec48247bf93267fa70fa2491ef247e.ctex
+Completed load for: 'res://assets/environment/view_v01/rock_1.png' remapped 'res://assets/environment/view_v01/rock_1.png' at thread -1
+Loading resource: res://assets/environment/stylized_v3/tuft_0.png remapped: res://assets/environment/stylized_v3/tuft_0.png
+Loading resource: res://.godot/imported/tuft_0.png-2f1ae7406647cc3fe5c906298726eafa.ctex remapped: res://.godot/imported/tuft_0.png-2f1ae7406647cc3fe5c906298726eafa.ctex
+Completed load for: 'res://assets/environment/stylized_v3/tuft_0.png' remapped 'res://assets/environment/stylized_v3/tuft_0.png' at thread -1
+Loading resource: res://assets/environment/stylized_v3/tuft_1.png remapped: res://assets/environment/stylized_v3/tuft_1.png
+Loading resource: res://.godot/imported/tuft_1.png-037c88a64cee60eba74832386a9e08d2.ctex remapped: res://.godot/imported/tuft_1.png-037c88a64cee60eba74832386a9e08d2.ctex
+Completed load for: 'res://assets/environment/stylized_v3/tuft_1.png' remapped 'res://assets/environment/stylized_v3/tuft_1.png' at thread -1
+Loading resource: res://assets/environment/stylized_v3/tuft_2.png remapped: res://assets/environment/stylized_v3/tuft_2.png
+Loading resource: res://.godot/imported/tuft_2.png-759a7f452ac5dc1c1c585cf578802d9f.ctex remapped: res://.godot/imported/tuft_2.png-759a7f452ac5dc1c1c585cf578802d9f.ctex
+Completed load for: 'res://assets/environment/stylized_v3/tuft_2.png' remapped 'res://assets/environment/stylized_v3/tuft_2.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/tree_01_grass.png remapped: res://assets/environment/contact_v01/tree_01_grass.png
+Loading resource: res://.godot/imported/tree_01_grass.png-4aa0bf9a7eeff383e26accae467c9edd.ctex remapped: res://.godot/imported/tree_01_grass.png-4aa0bf9a7eeff383e26accae467c9edd.ctex
+Completed load for: 'res://assets/environment/contact_v01/tree_01_grass.png' remapped 'res://assets/environment/contact_v01/tree_01_grass.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/tree_01_forest.png remapped: res://assets/environment/contact_v01/tree_01_forest.png
+Loading resource: res://.godot/imported/tree_01_forest.png-2a8a959994887ca5d938e1220ff23191.ctex remapped: res://.godot/imported/tree_01_forest.png-2a8a959994887ca5d938e1220ff23191.ctex
+Completed load for: 'res://assets/environment/contact_v01/tree_01_forest.png' remapped 'res://assets/environment/contact_v01/tree_01_forest.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/tree_01_dirt.png remapped: res://assets/environment/contact_v01/tree_01_dirt.png
+Loading resource: res://.godot/imported/tree_01_dirt.png-393046f1e66930f1d826e4eae5fea876.ctex remapped: res://.godot/imported/tree_01_dirt.png-393046f1e66930f1d826e4eae5fea876.ctex
+Completed load for: 'res://assets/environment/contact_v01/tree_01_dirt.png' remapped 'res://assets/environment/contact_v01/tree_01_dirt.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/tree_03_grass.png remapped: res://assets/environment/contact_v01/tree_03_grass.png
+Loading resource: res://.godot/imported/tree_03_grass.png-8e980a2ab4d7c3187eb6a8fc897cf967.ctex remapped: res://.godot/imported/tree_03_grass.png-8e980a2ab4d7c3187eb6a8fc897cf967.ctex
+Completed load for: 'res://assets/environment/contact_v01/tree_03_grass.png' remapped 'res://assets/environment/contact_v01/tree_03_grass.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/tree_03_forest.png remapped: res://assets/environment/contact_v01/tree_03_forest.png
+Loading resource: res://.godot/imported/tree_03_forest.png-1f4875499f86d79be21fcc9c6573b2b8.ctex remapped: res://.godot/imported/tree_03_forest.png-1f4875499f86d79be21fcc9c6573b2b8.ctex
+Completed load for: 'res://assets/environment/contact_v01/tree_03_forest.png' remapped 'res://assets/environment/contact_v01/tree_03_forest.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/tree_03_dirt.png remapped: res://assets/environment/contact_v01/tree_03_dirt.png
+Loading resource: res://.godot/imported/tree_03_dirt.png-0d78cd256efdd9b0235799e0802f6f9c.ctex remapped: res://.godot/imported/tree_03_dirt.png-0d78cd256efdd9b0235799e0802f6f9c.ctex
+Completed load for: 'res://assets/environment/contact_v01/tree_03_dirt.png' remapped 'res://assets/environment/contact_v01/tree_03_dirt.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/tree_04_grass.png remapped: res://assets/environment/contact_v01/tree_04_grass.png
+Loading resource: res://.godot/imported/tree_04_grass.png-bc072785d9dd518306b3273836493c88.ctex remapped: res://.godot/imported/tree_04_grass.png-bc072785d9dd518306b3273836493c88.ctex
+Completed load for: 'res://assets/environment/contact_v01/tree_04_grass.png' remapped 'res://assets/environment/contact_v01/tree_04_grass.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/tree_04_forest.png remapped: res://assets/environment/contact_v01/tree_04_forest.png
+Loading resource: res://.godot/imported/tree_04_forest.png-d70b88d4b50d593624637fbca7f38f61.ctex remapped: res://.godot/imported/tree_04_forest.png-d70b88d4b50d593624637fbca7f38f61.ctex
+Completed load for: 'res://assets/environment/contact_v01/tree_04_forest.png' remapped 'res://assets/environment/contact_v01/tree_04_forest.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/tree_04_dirt.png remapped: res://assets/environment/contact_v01/tree_04_dirt.png
+Loading resource: res://.godot/imported/tree_04_dirt.png-0969629d4c919480c597c8467149f614.ctex remapped: res://.godot/imported/tree_04_dirt.png-0969629d4c919480c597c8467149f614.ctex
+Completed load for: 'res://assets/environment/contact_v01/tree_04_dirt.png' remapped 'res://assets/environment/contact_v01/tree_04_dirt.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_01_grass.png remapped: res://assets/environment/contact_v01/rock_01_grass.png
+Loading resource: res://.godot/imported/rock_01_grass.png-5b6e9773375130821e7c7cef5de3c280.ctex remapped: res://.godot/imported/rock_01_grass.png-5b6e9773375130821e7c7cef5de3c280.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_01_grass.png' remapped 'res://assets/environment/contact_v01/rock_01_grass.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_01_forest.png remapped: res://assets/environment/contact_v01/rock_01_forest.png
+Loading resource: res://.godot/imported/rock_01_forest.png-a1c3a9b485d41d04e62da06545bf4bf8.ctex remapped: res://.godot/imported/rock_01_forest.png-a1c3a9b485d41d04e62da06545bf4bf8.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_01_forest.png' remapped 'res://assets/environment/contact_v01/rock_01_forest.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_01_dirt.png remapped: res://assets/environment/contact_v01/rock_01_dirt.png
+Loading resource: res://.godot/imported/rock_01_dirt.png-d5aaa29c1d6113eba79ae00a2af801a7.ctex remapped: res://.godot/imported/rock_01_dirt.png-d5aaa29c1d6113eba79ae00a2af801a7.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_01_dirt.png' remapped 'res://assets/environment/contact_v01/rock_01_dirt.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_02_grass.png remapped: res://assets/environment/contact_v01/rock_02_grass.png
+Loading resource: res://.godot/imported/rock_02_grass.png-cee741485b650dd01293b6717ef48763.ctex remapped: res://.godot/imported/rock_02_grass.png-cee741485b650dd01293b6717ef48763.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_02_grass.png' remapped 'res://assets/environment/contact_v01/rock_02_grass.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_02_forest.png remapped: res://assets/environment/contact_v01/rock_02_forest.png
+Loading resource: res://.godot/imported/rock_02_forest.png-96eb7da9be4cca3bb3ce376e866ae5da.ctex remapped: res://.godot/imported/rock_02_forest.png-96eb7da9be4cca3bb3ce376e866ae5da.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_02_forest.png' remapped 'res://assets/environment/contact_v01/rock_02_forest.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_02_dirt.png remapped: res://assets/environment/contact_v01/rock_02_dirt.png
+Loading resource: res://.godot/imported/rock_02_dirt.png-e492d9492661a5d44148d0a983272e3a.ctex remapped: res://.godot/imported/rock_02_dirt.png-e492d9492661a5d44148d0a983272e3a.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_02_dirt.png' remapped 'res://assets/environment/contact_v01/rock_02_dirt.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_03_grass.png remapped: res://assets/environment/contact_v01/rock_03_grass.png
+Loading resource: res://.godot/imported/rock_03_grass.png-0b9ef67b50935c876496b830b3f15820.ctex remapped: res://.godot/imported/rock_03_grass.png-0b9ef67b50935c876496b830b3f15820.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_03_grass.png' remapped 'res://assets/environment/contact_v01/rock_03_grass.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_03_forest.png remapped: res://assets/environment/contact_v01/rock_03_forest.png
+Loading resource: res://.godot/imported/rock_03_forest.png-a885f1e4d55201026ad12171b1469035.ctex remapped: res://.godot/imported/rock_03_forest.png-a885f1e4d55201026ad12171b1469035.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_03_forest.png' remapped 'res://assets/environment/contact_v01/rock_03_forest.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_03_dirt.png remapped: res://assets/environment/contact_v01/rock_03_dirt.png
+Loading resource: res://.godot/imported/rock_03_dirt.png-aeac5474ba5b7446c05ff21a54e5a348.ctex remapped: res://.godot/imported/rock_03_dirt.png-aeac5474ba5b7446c05ff21a54e5a348.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_03_dirt.png' remapped 'res://assets/environment/contact_v01/rock_03_dirt.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_04_grass.png remapped: res://assets/environment/contact_v01/rock_04_grass.png
+Loading resource: res://.godot/imported/rock_04_grass.png-030fd64e9fbcc51b0eee5ca21dfc8cc9.ctex remapped: res://.godot/imported/rock_04_grass.png-030fd64e9fbcc51b0eee5ca21dfc8cc9.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_04_grass.png' remapped 'res://assets/environment/contact_v01/rock_04_grass.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_04_forest.png remapped: res://assets/environment/contact_v01/rock_04_forest.png
+Loading resource: res://.godot/imported/rock_04_forest.png-68f2e5b9be732d08a424adcf3bc4c100.ctex remapped: res://.godot/imported/rock_04_forest.png-68f2e5b9be732d08a424adcf3bc4c100.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_04_forest.png' remapped 'res://assets/environment/contact_v01/rock_04_forest.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_04_dirt.png remapped: res://assets/environment/contact_v01/rock_04_dirt.png
+Loading resource: res://.godot/imported/rock_04_dirt.png-8a1cdb278b30d71dedc54ef88fac99b2.ctex remapped: res://.godot/imported/rock_04_dirt.png-8a1cdb278b30d71dedc54ef88fac99b2.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_04_dirt.png' remapped 'res://assets/environment/contact_v01/rock_04_dirt.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_05_grass.png remapped: res://assets/environment/contact_v01/rock_05_grass.png
+Loading resource: res://.godot/imported/rock_05_grass.png-d67e2cb033e88380033cd6afde3b39ba.ctex remapped: res://.godot/imported/rock_05_grass.png-d67e2cb033e88380033cd6afde3b39ba.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_05_grass.png' remapped 'res://assets/environment/contact_v01/rock_05_grass.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_05_forest.png remapped: res://assets/environment/contact_v01/rock_05_forest.png
+Loading resource: res://.godot/imported/rock_05_forest.png-41f2c867113ac9842a65e5245b59263f.ctex remapped: res://.godot/imported/rock_05_forest.png-41f2c867113ac9842a65e5245b59263f.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_05_forest.png' remapped 'res://assets/environment/contact_v01/rock_05_forest.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_05_dirt.png remapped: res://assets/environment/contact_v01/rock_05_dirt.png
+Loading resource: res://.godot/imported/rock_05_dirt.png-41b2484d37d2f6c9215a21ea17e06ebe.ctex remapped: res://.godot/imported/rock_05_dirt.png-41b2484d37d2f6c9215a21ea17e06ebe.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_05_dirt.png' remapped 'res://assets/environment/contact_v01/rock_05_dirt.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_06_grass.png remapped: res://assets/environment/contact_v01/rock_06_grass.png
+Loading resource: res://.godot/imported/rock_06_grass.png-d0f7f45f5db7b594c7cda6e7256b5729.ctex remapped: res://.godot/imported/rock_06_grass.png-d0f7f45f5db7b594c7cda6e7256b5729.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_06_grass.png' remapped 'res://assets/environment/contact_v01/rock_06_grass.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_06_forest.png remapped: res://assets/environment/contact_v01/rock_06_forest.png
+Loading resource: res://.godot/imported/rock_06_forest.png-a13b2eb6f5c0c88b9ccb5bdc325683b7.ctex remapped: res://.godot/imported/rock_06_forest.png-a13b2eb6f5c0c88b9ccb5bdc325683b7.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_06_forest.png' remapped 'res://assets/environment/contact_v01/rock_06_forest.png' at thread -1
+Loading resource: res://assets/environment/contact_v01/rock_06_dirt.png remapped: res://assets/environment/contact_v01/rock_06_dirt.png
+Loading resource: res://.godot/imported/rock_06_dirt.png-1cbacdb3bd5311815194e07ff1ec6d9b.ctex remapped: res://.godot/imported/rock_06_dirt.png-1cbacdb3bd5311815194e07ff1ec6d9b.ctex
+Completed load for: 'res://assets/environment/contact_v01/rock_06_dirt.png' remapped 'res://assets/environment/contact_v01/rock_06_dirt.png' at thread -1
+Loading resource: res://assets/environment/stylized_v3/grass.png remapped: res://assets/environment/stylized_v3/grass.png
+Loading resource: res://.godot/imported/grass.png-872342cc8acc18635eaee3ee1b4cc0dd.ctex remapped: res://.godot/imported/grass.png-872342cc8acc18635eaee3ee1b4cc0dd.ctex
+Completed load for: 'res://assets/environment/stylized_v3/grass.png' remapped 'res://assets/environment/stylized_v3/grass.png' at thread -1
+Loading resource: res://assets/environment/biome_v02/forest.png remapped: res://assets/environment/biome_v02/forest.png
+Loading resource: res://.godot/imported/forest.png-d9935c496e9ac5b4b7d47cb16123babf.ctex remapped: res://.godot/imported/forest.png-d9935c496e9ac5b4b7d47cb16123babf.ctex
+Completed load for: 'res://assets/environment/biome_v02/forest.png' remapped 'res://assets/environment/biome_v02/forest.png' at thread -1
+Loading resource: res://assets/environment/biome_v02/highland.png remapped: res://assets/environment/biome_v02/highland.png
+Loading resource: res://.godot/imported/highland.png-96618485fb2ab7c66347a43e201d18db.ctex remapped: res://.godot/imported/highland.png-96618485fb2ab7c66347a43e201d18db.ctex
+Completed load for: 'res://assets/environment/biome_v02/highland.png' remapped 'res://assets/environment/biome_v02/highland.png' at thread -1
+Loading resource: res://assets/environment/biome_v02/open_field.png remapped: res://assets/environment/biome_v02/open_field.png
+Loading resource: res://.godot/imported/open_field.png-e77d737e39813b5115da73e538e390ec.ctex remapped: res://.godot/imported/open_field.png-e77d737e39813b5115da73e538e390ec.ctex
+Completed load for: 'res://assets/environment/biome_v02/open_field.png' remapped 'res://assets/environment/biome_v02/open_field.png' at thread -1
+Loading resource: res://assets/environment/biome_v02/shore.png remapped: res://assets/environment/biome_v02/shore.png
+Loading resource: res://.godot/imported/shore.png-0552ffd242f267fd124a389a22174944.ctex remapped: res://.godot/imported/shore.png-0552ffd242f267fd124a389a22174944.ctex
+Completed load for: 'res://assets/environment/biome_v02/shore.png' remapped 'res://assets/environment/biome_v02/shore.png' at thread -1
+Loading resource: res://assets/hero/cartoon/character.tscn remapped: res://assets/hero/cartoon/character.tscn
+Loading resource: res://assets/hero/cartoon/art/front_leg.png remapped: res://assets/hero/cartoon/art/front_leg.png
+Loading resource: res://.godot/imported/front_leg.png-fb63038a83da222621625784d942af88.ctex remapped: res://.godot/imported/front_leg.png-fb63038a83da222621625784d942af88.ctex
+Completed load for: 'res://assets/hero/cartoon/art/front_leg.png' remapped 'res://assets/hero/cartoon/art/front_leg.png' at thread -1
+Loading resource: res://assets/hero/cartoon/art/front_torso.png remapped: res://assets/hero/cartoon/art/front_torso.png
+Loading resource: res://.godot/imported/front_torso.png-dc62fa5cc71e7386509a4062790149b1.ctex remapped: res://.godot/imported/front_torso.png-dc62fa5cc71e7386509a4062790149b1.ctex
+Completed load for: 'res://assets/hero/cartoon/art/front_torso.png' remapped 'res://assets/hero/cartoon/art/front_torso.png' at thread -1
+Loading resource: res://assets/hero/cartoon/art/front_head.png remapped: res://assets/hero/cartoon/art/front_head.png
+Loading resource: res://.godot/imported/front_head.png-f6b7c2931e5e09c4eae2f10f39c657f8.ctex remapped: res://.godot/imported/front_head.png-f6b7c2931e5e09c4eae2f10f39c657f8.ctex
+Completed load for: 'res://assets/hero/cartoon/art/front_head.png' remapped 'res://assets/hero/cartoon/art/front_head.png' at thread -1
+Loading resource: res://assets/hero/cartoon/art/front_arm.png remapped: res://assets/hero/cartoon/art/front_arm.png
+Loading resource: res://.godot/imported/front_arm.png-e5a7552c893a0c84ae25c267a7d150b0.ctex remapped: res://.godot/imported/front_arm.png-e5a7552c893a0c84ae25c267a7d150b0.ctex
+Completed load for: 'res://assets/hero/cartoon/art/front_arm.png' remapped 'res://assets/hero/cartoon/art/front_arm.png' at thread -1
+Loading resource: res://assets/environment/cartoon_v2/axe.png remapped: res://assets/environment/cartoon_v2/axe.png
+Loading resource: res://.godot/imported/axe.png-18e0471fb421f9cfb9f07a1c247ff731.ctex remapped: res://.godot/imported/axe.png-18e0471fb421f9cfb9f07a1c247ff731.ctex
+Completed load for: 'res://assets/environment/cartoon_v2/axe.png' remapped 'res://assets/environment/cartoon_v2/axe.png' at thread -1
+Loading resource: res://assets/hero/cartoon/art/back_head.png remapped: res://assets/hero/cartoon/art/back_head.png
+Loading resource: res://.godot/imported/back_head.png-6b305a7cacadf70e270373a6d8284659.ctex remapped: res://.godot/imported/back_head.png-6b305a7cacadf70e270373a6d8284659.ctex
+Completed load for: 'res://assets/hero/cartoon/art/back_head.png' remapped 'res://assets/hero/cartoon/art/back_head.png' at thread -1
+Loading resource: res://assets/hero/cartoon/art/side_head.png remapped: res://assets/hero/cartoon/art/side_head.png
+Loading resource: res://.godot/imported/side_head.png-50ccc389e8b4d207159bad564136c831.ctex remapped: res://.godot/imported/side_head.png-50ccc389e8b4d207159bad564136c831.ctex
+Completed load for: 'res://assets/hero/cartoon/art/side_head.png' remapped 'res://assets/hero/cartoon/art/side_head.png' at thread -1
+Loading resource: res://assets/hero/cartoon/art/side_torso.png remapped: res://assets/hero/cartoon/art/side_torso.png
+Loading resource: res://.godot/imported/side_torso.png-3862cde998aa288f4d02967d2ab7638d.ctex remapped: res://.godot/imported/side_torso.png-3862cde998aa288f4d02967d2ab7638d.ctex
+Completed load for: 'res://assets/hero/cartoon/art/side_torso.png' remapped 'res://assets/hero/cartoon/art/side_torso.png' at thread -1
+Loading resource: res://assets/hero/cartoon/art/side_arm.png remapped: res://assets/hero/cartoon/art/side_arm.png
+Loading resource: res://.godot/imported/side_arm.png-bdb121092316c3fd0107e3b05a580d46.ctex remapped: res://.godot/imported/side_arm.png-bdb121092316c3fd0107e3b05a580d46.ctex
+Completed load for: 'res://assets/hero/cartoon/art/side_arm.png' remapped 'res://assets/hero/cartoon/art/side_arm.png' at thread -1
+Loading resource: res://assets/hero/cartoon/art/side_leg.png remapped: res://assets/hero/cartoon/art/side_leg.png
+Loading resource: res://.godot/imported/side_leg.png-405b97961c3e88d1aeb1b0800a0b52af.ctex remapped: res://.godot/imported/side_leg.png-405b97961c3e88d1aeb1b0800a0b52af.ctex
+Completed load for: 'res://assets/hero/cartoon/art/side_leg.png' remapped 'res://assets/hero/cartoon/art/side_leg.png' at thread -1
+Completed load for: 'res://assets/hero/cartoon/character.tscn' remapped 'res://assets/hero/cartoon/character.tscn' at thread -1
+Loading resource: res://assets/environment/cartoon_v2/wood.png remapped: res://assets/environment/cartoon_v2/wood.png
+Loading resource: res://.godot/imported/wood.png-14228010ec00fdf581af4db15db0e80b.ctex remapped: res://.godot/imported/wood.png-14228010ec00fdf581af4db15db0e80b.ctex
+Completed load for: 'res://assets/environment/cartoon_v2/wood.png' remapped 'res://assets/environment/cartoon_v2/wood.png' at thread -1
+Loading resource: res://assets/hero/cartoon/harvest_actions.tres remapped: res://assets/hero/cartoon/harvest_actions.tres
+Completed load for: 'res://assets/hero/cartoon/harvest_actions.tres' remapped 'res://assets/hero/cartoon/harvest_actions.tres' at thread -1
+Loading resource: res://assets/hero/cartoon/campfire_throw.tres remapped: res://assets/hero/cartoon/campfire_throw.tres
+Completed load for: 'res://assets/hero/cartoon/campfire_throw.tres' remapped 'res://assets/hero/cartoon/campfire_throw.tres' at thread -1
+Loading resource: res://scripts/world_map.gd remapped: res://scripts/world_map.gd
+Completed load for: 'res://scripts/world_map.gd' remapped 'res://scripts/world_map.gd' at thread -1
+Loading resource: res://assets/ui/refine_v1/button.png remapped: res://assets/ui/refine_v1/button.png
+Loading resource: res://.godot/imported/button.png-f7073276c6ba26ea83aaa3d22035a0a4.ctex remapped: res://.godot/imported/button.png-f7073276c6ba26ea83aaa3d22035a0a4.ctex
+Completed load for: 'res://assets/ui/refine_v1/button.png' remapped 'res://assets/ui/refine_v1/button.png' at thread -1
+Loading resource: res://assets/ui/rework_v1/slot.png remapped: res://assets/ui/rework_v1/slot.png
+Loading resource: res://.godot/imported/slot.png-1ff0c599a0bcbc473d3fa57ed949cbe1.ctex remapped: res://.godot/imported/slot.png-1ff0c599a0bcbc473d3fa57ed949cbe1.ctex
+Completed load for: 'res://assets/ui/rework_v1/slot.png' remapped 'res://assets/ui/rework_v1/slot.png' at thread -1
+Loading resource: res://assets/ui/refine_v1/slot_selected.png remapped: res://assets/ui/refine_v1/slot_selected.png
+Loading resource: res://.godot/imported/slot_selected.png-1f680ca9bc006a3231a71ae801adc407.ctex remapped: res://.godot/imported/slot_selected.png-1f680ca9bc006a3231a71ae801adc407.ctex
+Completed load for: 'res://assets/ui/refine_v1/slot_selected.png' remapped 'res://assets/ui/refine_v1/slot_selected.png' at thread -1
+Loading resource: res://assets/ui/refine_v1/slot.png remapped: res://assets/ui/refine_v1/slot.png
+Loading resource: res://.godot/imported/slot.png-bc8f8eb9e1c3d88af3c8aadc59b70625.ctex remapped: res://.godot/imported/slot.png-bc8f8eb9e1c3d88af3c8aadc59b70625.ctex
+Completed load for: 'res://assets/ui/refine_v1/slot.png' remapped 'res://assets/ui/refine_v1/slot.png' at thread -1
+Loading resource: res://assets/ui/refine_v1/nav_button.png remapped: res://assets/ui/refine_v1/nav_button.png
+Loading resource: res://.godot/imported/nav_button.png-1f39669b73292d5a5ed36f509e1abfc2.ctex remapped: res://.godot/imported/nav_button.png-1f39669b73292d5a5ed36f509e1abfc2.ctex
+Completed load for: 'res://assets/ui/refine_v1/nav_button.png' remapped 'res://assets/ui/refine_v1/nav_button.png' at thread -1
+Loading resource: res://assets/ui/rework_v1/accent.png remapped: res://assets/ui/rework_v1/accent.png
+Loading resource: res://.godot/imported/accent.png-aa59162e920356f3aadea81672cdaf4f.ctex remapped: res://.godot/imported/accent.png-aa59162e920356f3aadea81672cdaf4f.ctex
+Completed load for: 'res://assets/ui/rework_v1/accent.png' remapped 'res://assets/ui/rework_v1/accent.png' at thread -1
+Loading resource: res://assets/ui/body_v1/health.png remapped: res://assets/ui/body_v1/health.png
+Loading resource: res://.godot/imported/health.png-98097a58e7b62287ac4bf68ed9cf9af3.ctex remapped: res://.godot/imported/health.png-98097a58e7b62287ac4bf68ed9cf9af3.ctex
+Completed load for: 'res://assets/ui/body_v1/health.png' remapped 'res://assets/ui/body_v1/health.png' at thread -1
+Loading resource: res://assets/ui/body_v1/hunger.png remapped: res://assets/ui/body_v1/hunger.png
+Loading resource: res://.godot/imported/hunger.png-f9d98fd6483f3ee81992a178cc773ac5.ctex remapped: res://.godot/imported/hunger.png-f9d98fd6483f3ee81992a178cc773ac5.ctex
+Completed load for: 'res://assets/ui/body_v1/hunger.png' remapped 'res://assets/ui/body_v1/hunger.png' at thread -1
+Loading resource: res://assets/ui/body_v1/stamina.png remapped: res://assets/ui/body_v1/stamina.png
+Loading resource: res://.godot/imported/stamina.png-6c5f8ed0d4aa69defa49c18cdecb9daa.ctex remapped: res://.godot/imported/stamina.png-6c5f8ed0d4aa69defa49c18cdecb9daa.ctex
+Completed load for: 'res://assets/ui/body_v1/stamina.png' remapped 'res://assets/ui/body_v1/stamina.png' at thread -1
+Loading resource: res://assets/ui/v1/field_lantern.png remapped: res://assets/ui/v1/field_lantern.png
+Loading resource: res://.godot/imported/field_lantern.png-45bdf705069515267b0094f27a0c98c9.ctex remapped: res://.godot/imported/field_lantern.png-45bdf705069515267b0094f27a0c98c9.ctex
+Completed load for: 'res://assets/ui/v1/field_lantern.png' remapped 'res://assets/ui/v1/field_lantern.png' at thread -1
+Loading resource: res://assets/ui/rework_v1/panel.png remapped: res://assets/ui/rework_v1/panel.png
+Loading resource: res://.godot/imported/panel.png-7514ed5cbf3842552036e150a457f396.ctex remapped: res://.godot/imported/panel.png-7514ed5cbf3842552036e150a457f396.ctex
+Completed load for: 'res://assets/ui/rework_v1/panel.png' remapped 'res://assets/ui/rework_v1/panel.png' at thread -1
+Loading resource: res://assets/hero/cartoon/character.tscn remapped: res://assets/hero/cartoon/character.tscn
+Completed load for: 'res://assets/hero/cartoon/character.tscn' remapped 'res://assets/hero/cartoon/character.tscn' at thread -1
+Loading resource: res://assets/items/v03/wild_berry_icon.png remapped: res://assets/items/v03/wild_berry_icon.png
+Loading resource: res://.godot/imported/wild_berry_icon.png-62ce4cf43b8485f3bff82f5bdc644b71.ctex remapped: res://.godot/imported/wild_berry_icon.png-62ce4cf43b8485f3bff82f5bdc644b71.ctex
+Completed load for: 'res://assets/items/v03/wild_berry_icon.png' remapped 'res://assets/items/v03/wild_berry_icon.png' at thread -1
+Loading resource: res://assets/items/v03/brown_mushroom_icon.png remapped: res://assets/items/v03/brown_mushroom_icon.png
+Loading resource: res://.godot/imported/brown_mushroom_icon.png-1bbf94befcb29596600da4654d114674.ctex remapped: res://.godot/imported/brown_mushroom_icon.png-1bbf94befcb29596600da4654d114674.ctex
+Completed load for: 'res://assets/items/v03/brown_mushroom_icon.png' remapped 'res://assets/items/v03/brown_mushroom_icon.png' at thread -1
+Loading resource: res://assets/items/v03/wild_carrot_icon.png remapped: res://assets/items/v03/wild_carrot_icon.png
+Loading resource: res://.godot/imported/wild_carrot_icon.png-149dc3c0fc482f6d4411d6ef58c500eb.ctex remapped: res://.godot/imported/wild_carrot_icon.png-149dc3c0fc482f6d4411d6ef58c500eb.ctex
+Completed load for: 'res://assets/items/v03/wild_carrot_icon.png' remapped 'res://assets/items/v03/wild_carrot_icon.png' at thread -1
+Loading resource: res://assets/items/v03/wild_apple_icon.png remapped: res://assets/items/v03/wild_apple_icon.png
+Loading resource: res://.godot/imported/wild_apple_icon.png-1b9bbce85bea958e8e0a99dc7b7e5a92.ctex remapped: res://.godot/imported/wild_apple_icon.png-1b9bbce85bea958e8e0a99dc7b7e5a92.ctex
+Completed load for: 'res://assets/items/v03/wild_apple_icon.png' remapped 'res://assets/items/v03/wild_apple_icon.png' at thread -1
+Loading resource: res://assets/items/v03/wood_icon.png remapped: res://assets/items/v03/wood_icon.png
+Loading resource: res://.godot/imported/wood_icon.png-38826d22f980d57e696355a836f841ac.ctex remapped: res://.godot/imported/wood_icon.png-38826d22f980d57e696355a836f841ac.ctex
+Completed load for: 'res://assets/items/v03/wood_icon.png' remapped 'res://assets/items/v03/wood_icon.png' at thread -1
+Loading resource: res://assets/items/v03/branch_icon.png remapped: res://assets/items/v03/branch_icon.png
+Loading resource: res://.godot/imported/branch_icon.png-ef064fe0c37534e1ff78f61455460ae3.ctex remapped: res://.godot/imported/branch_icon.png-ef064fe0c37534e1ff78f61455460ae3.ctex
+Completed load for: 'res://assets/items/v03/branch_icon.png' remapped 'res://assets/items/v03/branch_icon.png' at thread -1
+Loading resource: res://assets/items/v03/stone_icon.png remapped: res://assets/items/v03/stone_icon.png
+Loading resource: res://.godot/imported/stone_icon.png-e58274bf27500750910fc1532d0771aa.ctex remapped: res://.godot/imported/stone_icon.png-e58274bf27500750910fc1532d0771aa.ctex
+Completed load for: 'res://assets/items/v03/stone_icon.png' remapped 'res://assets/items/v03/stone_icon.png' at thread -1
+Loading resource: res://assets/items/v03/plant_fiber_icon.png remapped: res://assets/items/v03/plant_fiber_icon.png
+Loading resource: res://.godot/imported/plant_fiber_icon.png-86120b385bba4ffc6a337fe829690950.ctex remapped: res://.godot/imported/plant_fiber_icon.png-86120b385bba4ffc6a337fe829690950.ctex
+Completed load for: 'res://assets/items/v03/plant_fiber_icon.png' remapped 'res://assets/items/v03/plant_fiber_icon.png' at thread -1
+Loading resource: res://assets/items/v03/flint_icon.png remapped: res://assets/items/v03/flint_icon.png
+Loading resource: res://.godot/imported/flint_icon.png-cb5648677dce98c0c8a59de17fd1eaeb.ctex remapped: res://.godot/imported/flint_icon.png-cb5648677dce98c0c8a59de17fd1eaeb.ctex
+Completed load for: 'res://assets/items/v03/flint_icon.png' remapped 'res://assets/items/v03/flint_icon.png' at thread -1
+Loading resource: res://assets/items/v03/broad_leaf_icon.png remapped: res://assets/items/v03/broad_leaf_icon.png
+Loading resource: res://.godot/imported/broad_leaf_icon.png-a8d7ebf6834c0b6e7b32ce4515f7bd36.ctex remapped: res://.godot/imported/broad_leaf_icon.png-a8d7ebf6834c0b6e7b32ce4515f7bd36.ctex
+Completed load for: 'res://assets/items/v03/broad_leaf_icon.png' remapped 'res://assets/items/v03/broad_leaf_icon.png' at thread -1
+Loading resource: res://assets/items/v03/pine_cone_icon.png remapped: res://assets/items/v03/pine_cone_icon.png
+Loading resource: res://.godot/imported/pine_cone_icon.png-467c854e180b757e32e8f3477a91c390.ctex remapped: res://.godot/imported/pine_cone_icon.png-467c854e180b757e32e8f3477a91c390.ctex
+Completed load for: 'res://assets/items/v03/pine_cone_icon.png' remapped 'res://assets/items/v03/pine_cone_icon.png' at thread -1
+Loading resource: res://assets/items/v03/wildflower_icon.png remapped: res://assets/items/v03/wildflower_icon.png
+Loading resource: res://.godot/imported/wildflower_icon.png-43208c209ca37d8cdfd1cea385243e8c.ctex remapped: res://.godot/imported/wildflower_icon.png-43208c209ca37d8cdfd1cea385243e8c.ctex
+Completed load for: 'res://assets/items/v03/wildflower_icon.png' remapped 'res://assets/items/v03/wildflower_icon.png' at thread -1
+Loading resource: res://assets/tools/v04/stone_axe_icon.png remapped: res://assets/tools/v04/stone_axe_icon.png
+Loading resource: res://.godot/imported/stone_axe_icon.png-2da86290bc4ba548dec5a53960b0ccb1.ctex remapped: res://.godot/imported/stone_axe_icon.png-2da86290bc4ba548dec5a53960b0ccb1.ctex
+Completed load for: 'res://assets/tools/v04/stone_axe_icon.png' remapped 'res://assets/tools/v04/stone_axe_icon.png' at thread -1
+Loading resource: res://assets/tools/v04/stone_pickaxe_icon.png remapped: res://assets/tools/v04/stone_pickaxe_icon.png
+Loading resource: res://.godot/imported/stone_pickaxe_icon.png-2fe4a2a6bd1cc1ab4cf3c5e1716d6624.ctex remapped: res://.godot/imported/stone_pickaxe_icon.png-2fe4a2a6bd1cc1ab4cf3c5e1716d6624.ctex
+Completed load for: 'res://assets/tools/v04/stone_pickaxe_icon.png' remapped 'res://assets/tools/v04/stone_pickaxe_icon.png' at thread -1
+Loading resource: res://assets/tools/v04/simple_shovel_icon.png remapped: res://assets/tools/v04/simple_shovel_icon.png
+Loading resource: res://.godot/imported/simple_shovel_icon.png-49e1159b49fefb81c365a0f79fc8a5c5.ctex remapped: res://.godot/imported/simple_shovel_icon.png-49e1159b49fefb81c365a0f79fc8a5c5.ctex
+Completed load for: 'res://assets/tools/v04/simple_shovel_icon.png' remapped 'res://assets/tools/v04/simple_shovel_icon.png' at thread -1
+Loading resource: res://assets/harvest/v05/frame-07.png remapped: res://assets/harvest/v05/frame-07.png
+Loading resource: res://.godot/imported/frame-07.png-63528683c9afda7697ee6af532f36adc.ctex remapped: res://.godot/imported/frame-07.png-63528683c9afda7697ee6af532f36adc.ctex
+Completed load for: 'res://assets/harvest/v05/frame-07.png' remapped 'res://assets/harvest/v05/frame-07.png' at thread -1
+Loading resource: res://assets/harvest/v05/frame-08.png remapped: res://assets/harvest/v05/frame-08.png
+Loading resource: res://.godot/imported/frame-08.png-3e8b9c156e8607808c50891a54b140d4.ctex remapped: res://.godot/imported/frame-08.png-3e8b9c156e8607808c50891a54b140d4.ctex
+Completed load for: 'res://assets/harvest/v05/frame-08.png' remapped 'res://assets/harvest/v05/frame-08.png' at thread -1
+Loading resource: res://assets/harvest/v05/frame-12.png remapped: res://assets/harvest/v05/frame-12.png
+Loading resource: res://.godot/imported/frame-12.png-54159ecb15ec3f99566e1fb19caf6895.ctex remapped: res://.godot/imported/frame-12.png-54159ecb15ec3f99566e1fb19caf6895.ctex
+Completed load for: 'res://assets/harvest/v05/frame-12.png' remapped 'res://assets/harvest/v05/frame-12.png' at thread -1
+Loading resource: res://assets/ores/v06/frame-06.png remapped: res://assets/ores/v06/frame-06.png
+Loading resource: res://.godot/imported/frame-06.png-2e61d482fa4eded0f014a2a1fef9686c.ctex remapped: res://.godot/imported/frame-06.png-2e61d482fa4eded0f014a2a1fef9686c.ctex
+Completed load for: 'res://assets/ores/v06/frame-06.png' remapped 'res://assets/ores/v06/frame-06.png' at thread -1
+Loading resource: res://assets/ores/v06/frame-07.png remapped: res://assets/ores/v06/frame-07.png
+Loading resource: res://.godot/imported/frame-07.png-c20472dbaaccb120dcc40b99bc9c9a14.ctex remapped: res://.godot/imported/frame-07.png-c20472dbaaccb120dcc40b99bc9c9a14.ctex
+Completed load for: 'res://assets/ores/v06/frame-07.png' remapped 'res://assets/ores/v06/frame-07.png' at thread -1
+Loading resource: res://assets/ores/v06/frame-08.png remapped: res://assets/ores/v06/frame-08.png
+Loading resource: res://.godot/imported/frame-08.png-0c088a4d75ed67e36b4064d1d2a8c68f.ctex remapped: res://.godot/imported/frame-08.png-0c088a4d75ed67e36b4064d1d2a8c68f.ctex
+Completed load for: 'res://assets/ores/v06/frame-08.png' remapped 'res://assets/ores/v06/frame-08.png' at thread -1
+Loading resource: res://assets/campfire/v1/icon.png remapped: res://assets/campfire/v1/icon.png
+Loading resource: res://.godot/imported/icon.png-15697bd8ced4b5c2160ee03da91c11a6.ctex remapped: res://.godot/imported/icon.png-15697bd8ced4b5c2160ee03da91c11a6.ctex
+Completed load for: 'res://assets/campfire/v1/icon.png' remapped 'res://assets/campfire/v1/icon.png' at thread -1
+Loading resource: res://assets/campfire/v1/roasted_carrot.png remapped: res://assets/campfire/v1/roasted_carrot.png
+Loading resource: res://.godot/imported/roasted_carrot.png-777f4be6f9c2290bd97933f2d267a680.ctex remapped: res://.godot/imported/roasted_carrot.png-777f4be6f9c2290bd97933f2d267a680.ctex
+Completed load for: 'res://assets/campfire/v1/roasted_carrot.png' remapped 'res://assets/campfire/v1/roasted_carrot.png' at thread -1
+Loading resource: res://assets/campfire/v1/roasted_mushroom.png remapped: res://assets/campfire/v1/roasted_mushroom.png
+Loading resource: res://.godot/imported/roasted_mushroom.png-fb81ada1052390f6378a15dbca170d08.ctex remapped: res://.godot/imported/roasted_mushroom.png-fb81ada1052390f6378a15dbca170d08.ctex
+Completed load for: 'res://assets/campfire/v1/roasted_mushroom.png' remapped 'res://assets/campfire/v1/roasted_mushroom.png' at thread -1
+Loading resource: res://assets/cooking/v1/herb_roasted_mushroom.png remapped: res://assets/cooking/v1/herb_roasted_mushroom.png
+Loading resource: res://.godot/imported/herb_roasted_mushroom.png-8e8ec5b96aefaf0b387913425270ed4c.ctex remapped: res://.godot/imported/herb_roasted_mushroom.png-8e8ec5b96aefaf0b387913425270ed4c.ctex
+Completed load for: 'res://assets/cooking/v1/herb_roasted_mushroom.png' remapped 'res://assets/cooking/v1/herb_roasted_mushroom.png' at thread -1
+Loading resource: res://assets/cooking/v1/roasted_fruit_platter.png remapped: res://assets/cooking/v1/roasted_fruit_platter.png
+Loading resource: res://.godot/imported/roasted_fruit_platter.png-4cb678fc1a3004249d59a196f9ccbc0c.ctex remapped: res://.godot/imported/roasted_fruit_platter.png-4cb678fc1a3004249d59a196f9ccbc0c.ctex
+Completed load for: 'res://assets/cooking/v1/roasted_fruit_platter.png' remapped 'res://assets/cooking/v1/roasted_fruit_platter.png' at thread -1
+Loading resource: res://assets/cooking/v1/field_harvest_platter.png remapped: res://assets/cooking/v1/field_harvest_platter.png
+Loading resource: res://.godot/imported/field_harvest_platter.png-4cbdf4640984fa12113759087aa762ee.ctex remapped: res://.godot/imported/field_harvest_platter.png-4cbdf4640984fa12113759087aa762ee.ctex
+Completed load for: 'res://assets/cooking/v1/field_harvest_platter.png' remapped 'res://assets/cooking/v1/field_harvest_platter.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-01.png remapped: res://prototypes/camp-build-v1/frame-01.png
+Loading resource: res://.godot/imported/frame-01.png-2286f10cd86ca3da1cf799289a841af7.ctex remapped: res://.godot/imported/frame-01.png-2286f10cd86ca3da1cf799289a841af7.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-01.png' remapped 'res://prototypes/camp-build-v1/frame-01.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-07.png remapped: res://prototypes/camp-build-v1/frame-07.png
+Loading resource: res://.godot/imported/frame-07.png-aea0e2b5e2af1c84f37fdd8a8e533b13.ctex remapped: res://.godot/imported/frame-07.png-aea0e2b5e2af1c84f37fdd8a8e533b13.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-07.png' remapped 'res://prototypes/camp-build-v1/frame-07.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-03.png remapped: res://prototypes/camp-build-v1/frame-03.png
+Loading resource: res://.godot/imported/frame-03.png-cd6e988012cb31b402f913b98a57ee2a.ctex remapped: res://.godot/imported/frame-03.png-cd6e988012cb31b402f913b98a57ee2a.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-03.png' remapped 'res://prototypes/camp-build-v1/frame-03.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-09.png remapped: res://prototypes/camp-build-v1/frame-09.png
+Loading resource: res://.godot/imported/frame-09.png-1790d1e9f9916a3bf01c93c71296b010.ctex remapped: res://.godot/imported/frame-09.png-1790d1e9f9916a3bf01c93c71296b010.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-09.png' remapped 'res://prototypes/camp-build-v1/frame-09.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-11.png remapped: res://prototypes/camp-build-v1/frame-11.png
+Loading resource: res://.godot/imported/frame-11.png-a3c0a5c9dd320b2af4d8202f7862c55f.ctex remapped: res://.godot/imported/frame-11.png-a3c0a5c9dd320b2af4d8202f7862c55f.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-11.png' remapped 'res://prototypes/camp-build-v1/frame-11.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-12.png remapped: res://prototypes/camp-build-v1/frame-12.png
+Loading resource: res://.godot/imported/frame-12.png-4745d19163300be95a5acef1e37a85f8.ctex remapped: res://.godot/imported/frame-12.png-4745d19163300be95a5acef1e37a85f8.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-12.png' remapped 'res://prototypes/camp-build-v1/frame-12.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-13.png remapped: res://prototypes/camp-build-v1/frame-13.png
+Loading resource: res://.godot/imported/frame-13.png-e87b25f2dab7d4580825684ff69dbf2c.ctex remapped: res://.godot/imported/frame-13.png-e87b25f2dab7d4580825684ff69dbf2c.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-13.png' remapped 'res://prototypes/camp-build-v1/frame-13.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-14.png remapped: res://prototypes/camp-build-v1/frame-14.png
+Loading resource: res://.godot/imported/frame-14.png-4c71cc9aa8846924884034217ac71bfe.ctex remapped: res://.godot/imported/frame-14.png-4c71cc9aa8846924884034217ac71bfe.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-14.png' remapped 'res://prototypes/camp-build-v1/frame-14.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-15.png remapped: res://prototypes/camp-build-v1/frame-15.png
+Loading resource: res://.godot/imported/frame-15.png-8dc17dddfd61c97b6e4bb148243bd67f.ctex remapped: res://.godot/imported/frame-15.png-8dc17dddfd61c97b6e4bb148243bd67f.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-15.png' remapped 'res://prototypes/camp-build-v1/frame-15.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-16.png remapped: res://prototypes/camp-build-v1/frame-16.png
+Loading resource: res://.godot/imported/frame-16.png-2f7ee66b47783772662b7e28addbb3c7.ctex remapped: res://.godot/imported/frame-16.png-2f7ee66b47783772662b7e28addbb3c7.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-16.png' remapped 'res://prototypes/camp-build-v1/frame-16.png' at thread -1
+Loading resource: res://assets/ui/hints_v1/target_hint.png remapped: res://assets/ui/hints_v1/target_hint.png
+Loading resource: res://.godot/imported/target_hint.png-ab39593a530f1cfe88e24ead4a10a63a.ctex remapped: res://.godot/imported/target_hint.png-ab39593a530f1cfe88e24ead4a10a63a.ctex
+Completed load for: 'res://assets/ui/hints_v1/target_hint.png' remapped 'res://assets/ui/hints_v1/target_hint.png' at thread -1
+Loading resource: res://assets/ui/rework_v1/tooltip.png remapped: res://assets/ui/rework_v1/tooltip.png
+Loading resource: res://.godot/imported/tooltip.png-fa484e1d66ceda17c4936af8642e86a4.ctex remapped: res://.godot/imported/tooltip.png-fa484e1d66ceda17c4936af8642e86a4.ctex
+Completed load for: 'res://assets/ui/rework_v1/tooltip.png' remapped 'res://assets/ui/rework_v1/tooltip.png' at thread -1
+Loading resource: res://assets/harvest/v05/frame-09.png remapped: res://assets/harvest/v05/frame-09.png
+Loading resource: res://.godot/imported/frame-09.png-5daaeee7dc75e76f313f8baed7a5bcd6.ctex remapped: res://.godot/imported/frame-09.png-5daaeee7dc75e76f313f8baed7a5bcd6.ctex
+Completed load for: 'res://assets/harvest/v05/frame-09.png' remapped 'res://assets/harvest/v05/frame-09.png' at thread -1
+Loading resource: res://assets/harvest/v05/frame-10.png remapped: res://assets/harvest/v05/frame-10.png
+Loading resource: res://.godot/imported/frame-10.png-c3cab1f3a3c2d584391a4ca0b92728cd.ctex remapped: res://.godot/imported/frame-10.png-c3cab1f3a3c2d584391a4ca0b92728cd.ctex
+Completed load for: 'res://assets/harvest/v05/frame-10.png' remapped 'res://assets/harvest/v05/frame-10.png' at thread -1
+Loading resource: res://assets/harvest/v05/frame-11.png remapped: res://assets/harvest/v05/frame-11.png
+Loading resource: res://.godot/imported/frame-11.png-cc4300c2d0d61fbe7fad0beb5ecacfd1.ctex remapped: res://.godot/imported/frame-11.png-cc4300c2d0d61fbe7fad0beb5ecacfd1.ctex
+Completed load for: 'res://assets/harvest/v05/frame-11.png' remapped 'res://assets/harvest/v05/frame-11.png' at thread -1
+Loading resource: res://assets/ores/v06/frame-01.png remapped: res://assets/ores/v06/frame-01.png
+Loading resource: res://.godot/imported/frame-01.png-4eef22a07214416cc6f79a9f594c5eb7.ctex remapped: res://.godot/imported/frame-01.png-4eef22a07214416cc6f79a9f594c5eb7.ctex
+Completed load for: 'res://assets/ores/v06/frame-01.png' remapped 'res://assets/ores/v06/frame-01.png' at thread -1
+Loading resource: res://assets/ores/v06/frame-09.png remapped: res://assets/ores/v06/frame-09.png
+Loading resource: res://.godot/imported/frame-09.png-479e997a22fb1051d2f1c57bca005f89.ctex remapped: res://.godot/imported/frame-09.png-479e997a22fb1051d2f1c57bca005f89.ctex
+Completed load for: 'res://assets/ores/v06/frame-09.png' remapped 'res://assets/ores/v06/frame-09.png' at thread -1
+Loading resource: res://assets/harvest/broadleaf_v1/plant.png remapped: res://assets/harvest/broadleaf_v1/plant.png
+Loading resource: res://.godot/imported/plant.png-153be2fc1434a7915202970a1ea0cb88.ctex remapped: res://.godot/imported/plant.png-153be2fc1434a7915202970a1ea0cb88.ctex
+Completed load for: 'res://assets/harvest/broadleaf_v1/plant.png' remapped 'res://assets/harvest/broadleaf_v1/plant.png' at thread -1
+Loading resource: res://assets/items/v03/wild_carrot_world.png remapped: res://assets/items/v03/wild_carrot_world.png
+Loading resource: res://.godot/imported/wild_carrot_world.png-55dc45676e6fefed60576d1a822edf18.ctex remapped: res://.godot/imported/wild_carrot_world.png-55dc45676e6fefed60576d1a822edf18.ctex
+Completed load for: 'res://assets/items/v03/wild_carrot_world.png' remapped 'res://assets/items/v03/wild_carrot_world.png' at thread -1
+Loading resource: res://assets/items/v03/wildflower_world.png remapped: res://assets/items/v03/wildflower_world.png
+Loading resource: res://.godot/imported/wildflower_world.png-d585e22c3ad2ff63be0af315ca9a9677.ctex remapped: res://.godot/imported/wildflower_world.png-d585e22c3ad2ff63be0af315ca9a9677.ctex
+Completed load for: 'res://assets/items/v03/wildflower_world.png' remapped 'res://assets/items/v03/wildflower_world.png' at thread -1
+Loading resource: res://assets/harvest/v05/frame-13.png remapped: res://assets/harvest/v05/frame-13.png
+Loading resource: res://.godot/imported/frame-13.png-5a051ec6e77923a35657726f56d8aae8.ctex remapped: res://.godot/imported/frame-13.png-5a051ec6e77923a35657726f56d8aae8.ctex
+Completed load for: 'res://assets/harvest/v05/frame-13.png' remapped 'res://assets/harvest/v05/frame-13.png' at thread -1
+Loading resource: res://assets/harvest/v05/frame-14.png remapped: res://assets/harvest/v05/frame-14.png
+Loading resource: res://.godot/imported/frame-14.png-bf113890392a15bc5a9a05abb8626719.ctex remapped: res://.godot/imported/frame-14.png-bf113890392a15bc5a9a05abb8626719.ctex
+Completed load for: 'res://assets/harvest/v05/frame-14.png' remapped 'res://assets/harvest/v05/frame-14.png' at thread -1
+Loading resource: res://assets/harvest/v05/frame-15.png remapped: res://assets/harvest/v05/frame-15.png
+Loading resource: res://.godot/imported/frame-15.png-e0d89f1e91194e5eae3507266cfc27a8.ctex remapped: res://.godot/imported/frame-15.png-e0d89f1e91194e5eae3507266cfc27a8.ctex
+Completed load for: 'res://assets/harvest/v05/frame-15.png' remapped 'res://assets/harvest/v05/frame-15.png' at thread -1
+Loading resource: res://assets/ores/v06/frame-02.png remapped: res://assets/ores/v06/frame-02.png
+Loading resource: res://.godot/imported/frame-02.png-b3bab6f2f960d8d0468ec777317d770c.ctex remapped: res://.godot/imported/frame-02.png-b3bab6f2f960d8d0468ec777317d770c.ctex
+Completed load for: 'res://assets/ores/v06/frame-02.png' remapped 'res://assets/ores/v06/frame-02.png' at thread -1
+Loading resource: res://assets/items/v03/branch_world.png remapped: res://assets/items/v03/branch_world.png
+Loading resource: res://.godot/imported/branch_world.png-c10271939e66ccdcaa22738267bea329.ctex remapped: res://.godot/imported/branch_world.png-c10271939e66ccdcaa22738267bea329.ctex
+Completed load for: 'res://assets/items/v03/branch_world.png' remapped 'res://assets/items/v03/branch_world.png' at thread -1
+Loading resource: res://assets/items/v03/plant_fiber_world.png remapped: res://assets/items/v03/plant_fiber_world.png
+Loading resource: res://.godot/imported/plant_fiber_world.png-a40ce4e8c6084a62abc6146ef31e1c74.ctex remapped: res://.godot/imported/plant_fiber_world.png-a40ce4e8c6084a62abc6146ef31e1c74.ctex
+Completed load for: 'res://assets/items/v03/plant_fiber_world.png' remapped 'res://assets/items/v03/plant_fiber_world.png' at thread -1
+Loading resource: res://assets/harvest/v05/frame-17.png remapped: res://assets/harvest/v05/frame-17.png
+Loading resource: res://.godot/imported/frame-17.png-b517b93059e66837e00e224fbe3f115b.ctex remapped: res://.godot/imported/frame-17.png-b517b93059e66837e00e224fbe3f115b.ctex
+Completed load for: 'res://assets/harvest/v05/frame-17.png' remapped 'res://assets/harvest/v05/frame-17.png' at thread -1
+Loading resource: res://assets/harvest/v05/frame-18.png remapped: res://assets/harvest/v05/frame-18.png
+Loading resource: res://.godot/imported/frame-18.png-b4b1ba00042c3377408797073abcd9c3.ctex remapped: res://.godot/imported/frame-18.png-b4b1ba00042c3377408797073abcd9c3.ctex
+Completed load for: 'res://assets/harvest/v05/frame-18.png' remapped 'res://assets/harvest/v05/frame-18.png' at thread -1
+Loading resource: res://assets/harvest/v05/frame-19.png remapped: res://assets/harvest/v05/frame-19.png
+Loading resource: res://.godot/imported/frame-19.png-ae78635aa8cde438d6f9f3ba66a693e1.ctex remapped: res://.godot/imported/frame-19.png-ae78635aa8cde438d6f9f3ba66a693e1.ctex
+Completed load for: 'res://assets/harvest/v05/frame-19.png' remapped 'res://assets/harvest/v05/frame-19.png' at thread -1
+Loading resource: res://assets/items/v03/wild_berry_world.png remapped: res://assets/items/v03/wild_berry_world.png
+Loading resource: res://.godot/imported/wild_berry_world.png-141121ebe62d0d3bf3520879210d55a7.ctex remapped: res://.godot/imported/wild_berry_world.png-141121ebe62d0d3bf3520879210d55a7.ctex
+Completed load for: 'res://assets/items/v03/wild_berry_world.png' remapped 'res://assets/items/v03/wild_berry_world.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-05.png remapped: res://prototypes/camp-build-v1/frame-05.png
+Loading resource: res://.godot/imported/frame-05.png-cc1cbb8f73b10fad49f76d9fee9d7b90.ctex remapped: res://.godot/imported/frame-05.png-cc1cbb8f73b10fad49f76d9fee9d7b90.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-05.png' remapped 'res://prototypes/camp-build-v1/frame-05.png' at thread -1
+Loading resource: res://assets/items/v03/stone_world.png remapped: res://assets/items/v03/stone_world.png
+Loading resource: res://.godot/imported/stone_world.png-d7e7996e2e1aa327b9ce5b1d0fc31359.ctex remapped: res://.godot/imported/stone_world.png-d7e7996e2e1aa327b9ce5b1d0fc31359.ctex
+Completed load for: 'res://assets/items/v03/stone_world.png' remapped 'res://assets/items/v03/stone_world.png' at thread -1
+Loading resource: res://assets/items/v03/wood_world.png remapped: res://assets/items/v03/wood_world.png
+Loading resource: res://.godot/imported/wood_world.png-167c224a74fe1bcc2837985d8f08047d.ctex remapped: res://.godot/imported/wood_world.png-167c224a74fe1bcc2837985d8f08047d.ctex
+Completed load for: 'res://assets/items/v03/wood_world.png' remapped 'res://assets/items/v03/wood_world.png' at thread -1
+SCRIPT ERROR: Invalid access to property or key 'build:6445153536561256795' on a base object of type 'Dictionary'.
+   at: caption (res://scripts/world_interaction.gd:59)
+   GDScript backtrace (most recent call first):
+       [0] caption (res://scripts/world_interaction.gd:59)
+       [1] update_target_tip (res://scripts/item_ui.gd:380)
+       [2] _process (res://scripts/item_ui.gd:351)
+Loading resource: res://prototypes/camp-build-v1/frame-02.png remapped: res://prototypes/camp-build-v1/frame-02.png
+Loading resource: res://.godot/imported/frame-02.png-954159c74e910a3fd5437202cecef0bd.ctex remapped: res://.godot/imported/frame-02.png-954159c74e910a3fd5437202cecef0bd.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-02.png' remapped 'res://prototypes/camp-build-v1/frame-02.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-06.png remapped: res://prototypes/camp-build-v1/frame-06.png
+Loading resource: res://.godot/imported/frame-06.png-8dcf2d9d0ca39c964fb587f6d1434191.ctex remapped: res://.godot/imported/frame-06.png-8dcf2d9d0ca39c964fb587f6d1434191.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-06.png' remapped 'res://prototypes/camp-build-v1/frame-06.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-04.png remapped: res://prototypes/camp-build-v1/frame-04.png
+Loading resource: res://.godot/imported/frame-04.png-3f9e82e00269cb7c275ab13eba52dfcc.ctex remapped: res://.godot/imported/frame-04.png-3f9e82e00269cb7c275ab13eba52dfcc.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-04.png' remapped 'res://prototypes/camp-build-v1/frame-04.png' at thread -1
+Loading resource: res://prototypes/camp-build-v1/frame-08.png remapped: res://prototypes/camp-build-v1/frame-08.png
+Loading resource: res://.godot/imported/frame-08.png-04f648733129254a6c2db8f9c92ed2ef.ctex remapped: res://.godot/imported/frame-08.png-04f648733129254a6c2db8f9c92ed2ef.ctex
+Completed load for: 'res://prototypes/camp-build-v1/frame-08.png' remapped 'res://prototypes/camp-build-v1/frame-08.png' at thread -1
+CAMP BUILD V1: 74 checks, 0 failed
+XR: Clearing primary interface
+XR: Removed interface "Native mobile"
+XR: Removed interface "OpenXR"
+ERROR: 16 RID allocations of type 'P11GodotBody2D' were leaked at exit.
+ERROR: 9 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.
+ERROR: 5 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.
+ERROR: 1 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.
+Leaked instance: FontFile:9223372059034256215 - Reference count: 86
+Leaked instance: StyleBoxFlat:9223372061097854305 - Reference count: 86
+Leaked instance: StyleBoxFlat:9223372061114631522 - Reference count: 86
+Leaked instance: Image:9223372101363173054 - Reference count: 1
+Leaked instance: Image:9223372101413504703 - Reference count: 1
+Leaked instance: Image:9223372101447059137 - Reference count: 1
+Leaked instance: Image:9223372101497390788 - Reference count: 1
+Leaked instance: Image:9223372110255097940 - Reference count: 1
+Leaked instance: Image:9223372235916446014 - Reference count: 1
+Leaked instance: Object:189867756018
+Leaked instance: ProgressBar:189850978862 - Node path: 
+Leaked instance: Image:9223372127653071799 - Reference count: 1
+Leaked instance: Image:9223372128458378198 - Reference count: 1
+Leaked instance: CollisionShape2D:212802211274 - Node path: 
+Leaked instance: ProgressBar:212818988491 - Node path: 
+Leaked instance: Object:212751879628
+Leaked instance: StaticBody2D:212785434062 - Node path: 
+Leaked instance: StaticBody2D:212701547983 - Node path: 
+Leaked instance: CollisionShape2D:212718325200 - Node path: 
+Leaked instance: ProgressBar:212735102417 - Node path: 
+Leaked instance: ProgressBar:212651216338 - Node path: 
+Leaked instance: Object:212667993555
+Leaked instance: StaticBody2D:212617661910 - Node path: 
+Leaked instance: CollisionShape2D:212634439127 - Node path: 
+Leaked instance: ProgressBar:212567330316 - Node path: 
+Leaked instance: Object:212584107533
+Leaked instance: CollisionShape2D:212466667022 - Node path: 
+Leaked instance: ProgressBar:212483444239 - Node path: 
+Leaked instance: StaticBody2D:212533775888 - Node path: 
+Leaked instance: Object:212500221457
+Leaked instance: CollisionShape2D:212550553107 - Node path: 
+Leaked instance: StaticBody2D:212449889814 - Node path: 
+Leaked instance: Image:9223372155570360252 - Reference count: 1
+Leaked instance: ImageTexture:9223372235446686409 - Reference count: 1
+Leaked instance: Image:9223372235429909230 - Reference count: 1
+Leaked instance: Image:9223372235547349743 - Reference count: 1
+Leaked instance: ImageTexture:9223372235597681394 - Reference count: 1
+Leaked instance: Image:9223372235614458611 - Reference count: 1
+Leaked instance: ImageTexture:9223372235530572532 - Reference count: 1
+Leaked instance: Image:9223372235664790261 - Reference count: 1
+Leaked instance: ImageTexture:9223372235648013050 - Reference count: 1
+Leaked instance: TextLine:9223372170837627646 - Reference count: 1
+Leaked instance: TextLine:9223372170904736514 - Reference count: 1
+Leaked instance: TextLine:9223372170921513731 - Reference count: 1
+Leaked instance: TextLine:9223372170938290948 - Reference count: 1
+Leaked instance: Image:9223372170988622597 - Reference count: 1
+Leaked instance: TextLine:9223372170971845382 - Reference count: 1
+Leaked instance: ImageTexture:9223372235866116880 - Reference count: 1
+Leaked instance: Image:9223372235882894097 - Reference count: 1
+Leaked instance: ProgressBar:186579424450 - Node path: 
+Leaked instance: ProgressBar:173140874676 - Node path: 
+Leaked instance: Object:173157651893
+Leaked instance: Object:186596201910
+Leaked instance: ProgressBar:174063621562 - Node path: 
+Leaked instance: Object:174080398779
+Leaked instance: ImageTexture:9223372235899672001 - Reference count: 1
+Leaked instance: ProgressBar:190991832557 - Node path: 
+Leaked instance: Object:191008609774
+Leaked instance: Image:9223372235463464434 - Reference count: 1
+Leaked instance: ImageTexture:9223372235396355573 - Reference count: 1
+Leaked instance: Image:9223372235413132790 - Reference count: 1
+WARNING: 75 RIDs of type "CanvasItem" were leaked.
+   at: _free_rids (servers/rendering/renderer_canvas_cull.cpp:2735)
+WARNING: 155 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+Leaked instance: ImageTexture:9223372235329246711 - Reference count: 1
+Leaked instance: Image:9223372235346023928 - Reference count: 1
+Leaked instance: Image:9223372235312469500 - Reference count: 1
+Leaked instance: ImageTexture:9223372247308179060 - Reference count: 1
+Leaked instance: Image:9223372247324956277 - Reference count: 1
+Leaked instance: Object:212835768128
+Leaked instance: StaticBody2D:212869322562 - Node path: 
+Leaked instance: CollisionShape2D:212886099779 - Node path: 
+Leaked instance: ProgressBar:212902876996 - Node path: 
+Leaked instance: Object:212919654213
+Leaked instance: StaticBody2D:212953208647 - Node path: 
+Leaked instance: CollisionShape2D:212969985864 - Node path: 
+Leaked instance: ProgressBar:212986763081 - Node path: 
+Leaked instance: Object:213003540298
+Leaked instance: StaticBody2D:213037094732 - Node path: 
+Leaked instance: CollisionShape2D:213053871949 - Node path: 
+Leaked instance: ProgressBar:213070649166 - Node path: 
+Leaked instance: Object:213087426383
+Leaked instance: StaticBody2D:213120980817 - Node path: 
+Leaked instance: CollisionShape2D:213137758034 - Node path: 
+Leaked instance: ProgressBar:213154535251 - Node path: 
+Leaked instance: Object:213171312468
+Leaked instance: StaticBody2D:213204866902 - Node path: 
+Leaked instance: CollisionShape2D:213221644119 - Node path: 
+Leaked instance: ProgressBar:213238421336 - Node path: 
+Leaked instance: Object:213255198553
+Leaked instance: StaticBody2D:213288752987 - Node path: 
+Leaked instance: CollisionShape2D:213305530204 - Node path: 
+Leaked instance: ProgressBar:213322307421 - Node path: 
+Leaked instance: Object:213339084638
+Leaked instance: StaticBody2D:213372639072 - Node path: 
+Leaked instance: CollisionShape2D:213389416289 - Node path: 
+Leaked instance: ProgressBar:213406193506 - Node path: 
+Leaked instance: Object:213422970723
+Leaked instance: StaticBody2D:213456525157 - Node path: 
+Leaked instance: CollisionShape2D:213473302374 - Node path: 
+Leaked instance: ProgressBar:213490079591 - Node path: 
+Leaked instance: Object:213506856808
+Leaked instance: StaticBody2D:213540411242 - Node path: 
+Leaked instance: CollisionShape2D:213557188459 - Node path: 
+Leaked instance: ProgressBar:213573965676 - Node path: 
+Leaked instance: Object:213590742893
+Leaked instance: StaticBody2D:213624297327 - Node path: 
+Leaked instance: CollisionShape2D:213641074544 - Node path: 
+Leaked instance: ProgressBar:213657851761 - Node path: 
+Leaked instance: Object:213674628978
+Leaked instance: StaticBody2D:213708183412 - Node path: 
+Leaked instance: CollisionShape2D:213724960629 - Node path: 
+Leaked instance: ProgressBar:213741737846 - Node path: 
+Leaked instance: Object:213758515063
+Leaked instance: ProgressBar:213825623931 - Node path: 
+Leaked instance: Object:213842401148
+Leaked instance: ProgressBar:213926287233 - Node path: 
+Leaked instance: Object:213943064450
+Leaked instance: ProgressBar:214026950535 - Node path: 
+Leaked instance: Object:214043727752
+Leaked instance: ProgressBar:214127613837 - Node path: 
+Leaked instance: Object:214144391054
+Leaked instance: ProgressBar:214228277139 - Node path: 
+Leaked instance: Object:214245054356
+Leaked instance: ProgressBar:214328940441 - Node path: 
+Leaked instance: Object:214345717658
+Leaked instance: ProgressBar:214429603743 - Node path: 
+Leaked instance: Object:214446380960
+Leaked instance: ProgressBar:214530267045 - Node path: 
+Leaked instance: Object:214547044262
+Leaked instance: ProgressBar:214630930347 - Node path: 
+Leaked instance: Object:214647707564
+Leaked instance: ProgressBar:214731593649 - Node path: 
+Leaked instance: Object:214748370866
+Leaked instance: ProgressBar:214832256951 - Node path: 
+Leaked instance: Object:214849034168
+Leaked instance: ProgressBar:214932920253 - Node path: 
+Leaked instance: Object:214949697470
+Leaked instance: ProgressBar:215033583555 - Node path: 
+Leaked instance: Object:215050360772
+Leaked instance: ProgressBar:215134246857 - Node path: 
+Leaked instance: Object:215151024074
+Leaked instance: ProgressBar:215234910159 - Node path: 
+Leaked instance: Object:215251687376
+Leaked instance: ProgressBar:215335573461 - Node path: 
+Leaked instance: Object:215352350678
+Leaked instance: ProgressBar:215436236763 - Node path: 
+Leaked instance: Object:215453013980
+Leaked instance: ProgressBar:215536900065 - Node path: 
+Leaked instance: Object:215553677282
+Leaked instance: ProgressBar:215637563367 - Node path: 
+Leaked instance: Object:215654340584
+Leaked instance: ProgressBar:215738226669 - Node path: 
+Leaked instance: Object:215755003886
+Leaked instance: ProgressBar:215838889971 - Node path: 
+Leaked instance: Object:215855667188
+Leaked instance: ProgressBar:215939553273 - Node path: 
+Leaked instance: Object:215956330490
+Hint: Leaked instances typically happen when nodes are removed from the scene tree (with `remove_child()`) but not freed (with `free()` or `queue_free()`).
+Orphan StringName: background (static: 0, total: 43)
+Orphan StringName: font_size (static: 0, total: 43)
+Orphan StringName: Font (static: 0, total: 1)
+Orphan StringName: font_outline_color (static: 0, total: 43)
+Orphan StringName: fill (static: 0, total: 43)
+Orphan StringName: font (static: 0, total: 43)
+Orphan StringName: outline_size (static: 0, total: 43)
+Orphan StringName: font_color (static: 0, total: 43)
+StringName: 8 unclaimed string names at exit.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)
+ERROR: Cannot get path of node as it is not in a scene tree.
+   at: get_path (scene/main/node.cpp:2431)

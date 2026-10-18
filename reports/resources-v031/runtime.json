@@ -1,0 +1,167 @@
+{
+	"adapter": "NVIDIA GeForce RTX 5060",
+	"checks": [
+		{
+			"name": "visible streaming ready",
+			"pass": true
+		},
+		{
+			"name": "all five real map locations found",
+			"pass": true
+		},
+		{
+			"name": "visible streaming ready",
+			"pass": true
+		},
+		{
+			"name": "visible streaming ready",
+			"pass": true
+		},
+		{
+			"name": "visible streaming ready",
+			"pass": true
+		},
+		{
+			"name": "visible streaming ready",
+			"pass": true
+		},
+		{
+			"name": "visible streaming ready",
+			"pass": true
+		},
+		{
+			"name": "formal map has visible resources",
+			"pass": true
+		},
+		{
+			"name": "formal art not implicitly approved",
+			"pass": true
+		},
+		{
+			"name": "F7 resource overlay",
+			"pass": true
+		},
+		{
+			"name": "natural plant available for E",
+			"pass": true
+		},
+		{
+			"name": "visible streaming ready",
+			"pass": true
+		},
+		{
+			"name": "E starts differentiated harvest",
+			"pass": true
+		},
+		{
+			"name": "E harvest commits world edit",
+			"pass": true
+		},
+		{
+			"name": "E harvest enters bag",
+			"pass": true
+		},
+		{
+			"name": "Ctrl right click drops one from bag",
+			"pass": true
+		},
+		{
+			"name": "E retrieves player discarded item",
+			"pass": true
+		},
+		{
+			"name": "actual unload/reload keeps harvested state",
+			"pass": true
+		},
+		{
+			"name": "visible streaming ready",
+			"pass": true
+		},
+		{
+			"name": "full bag E retains resource and suppresses success feedback",
+			"pass": true
+		},
+		{
+			"name": "full bag leaves harvest record untouched",
+			"pass": true
+		},
+		{
+			"name": "preview and formal distributions identical",
+			"pass": true
+		},
+		{
+			"name": "visible streaming ready",
+			"pass": true
+		},
+		{
+			"name": "visible streaming ready",
+			"pass": true
+		},
+		{
+			"name": "visible streaming ready",
+			"pass": true
+		},
+		{
+			"name": "visible streaming ready",
+			"pass": true
+		},
+		{
+			"name": "visible streaming ready",
+			"pass": true
+		},
+		{
+			"name": "movement speeds unchanged",
+			"pass": true
+		},
+		{
+			"name": "storm weather still installed",
+			"pass": true
+		}
+	],
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"locations": {
+		"forest": {
+			"biome": "森林",
+			"chunk": "(9, 14)",
+			"x": 11240.6572265625,
+			"y": 16270.638671875
+		},
+		"meadow": {
+			"biome": "草原",
+			"chunk": "(13, 18)",
+			"x": 15917.751953125,
+			"y": 20822.203125
+		},
+		"mountain": {
+			"biome": "山地",
+			"chunk": "(15, 22)",
+			"x": 17579.75390625,
+			"y": 25690.451171875
+		},
+		"shore": {
+			"biome": "草原",
+			"chunk": "(22, 22)",
+			"x": 25353.19921875,
+			"y": 25681.990234375
+		},
+		"spawn": {
+			"biome": "草原",
+			"chunk": "(17, 12)",
+			"x": 20152.3203125,
+			"y": 14254.080078125
+		}
+	},
+	"performance": {
+		"frames": 180,
+		"max_chunk_install_ms": 6.136,
+		"max_ms": 16.869,
+		"median_ms": 16.666,
+		"memory_mib": 68.7459678649902,
+		"navigation_ms": 1472.365,
+		"nodes": 731,
+		"note": "Settled shoreline, rendered, 60 FPS cap; includes frame waiting, not whole-world stress.",
+		"p95_ms": 16.737
+	},
+	"renderer": "gl_compatibility"
+}

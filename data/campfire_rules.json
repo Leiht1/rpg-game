@@ -1,0 +1,81 @@
+{
+  "max_fuel": 1200.0,
+  "rain_burn_multiplier": 1.5,
+  "storm_burn_multiplier": 2.0,
+  "fuel_items": {
+    "wood": 120.0,
+    "branch": 30.0,
+    "plant_fiber": 15.0,
+    "broad_leaf": 10.0,
+    "pine_cone": 45.0,
+    "wildflower": 5.0,
+    "wild_berry": 10.0,
+    "brown_mushroom": 10.0,
+    "wild_carrot": 15.0,
+    "wild_apple": 15.0,
+    "roasted_carrot": 15.0,
+    "roasted_mushroom": 10.0
+  },
+  "place_range": 180.0,
+  "player_clearance": 48.0,
+  "spawn_clearance": 160.0,
+  "path_clearance": 100.0,
+  "ground_clearance": 48.0,
+  "obstacle_clearance": 42.0,
+  "collision_radius": 18.0,
+  "interaction_range": 88.0,
+  "display_width": 88.0,
+  "light_radius": 250.0,
+  "recipes": {
+    "roast_carrot": {
+      "name": "烤胡萝卜",
+      "materials": {
+        "wild_carrot": 1
+      },
+      "output": "roasted_carrot",
+      "seconds": 12.0
+    },
+    "roast_mushroom": {
+      "name": "烤蘑菇",
+      "materials": {
+        "brown_mushroom": 1
+      },
+      "output": "roasted_mushroom",
+      "seconds": 10.0,
+      "legacy_only": true
+    },
+    "herb_mushroom": {
+      "name": "香草烤蘑菇",
+      "materials": {
+        "brown_mushroom": 2,
+        "wildflower": 1
+      },
+      "output": "herb_roasted_mushroom",
+      "seconds": 10.0,
+      "default_unlocked": true
+    },
+    "fruit_platter": {
+      "name": "野果混合烤盘",
+      "materials": {
+        "wild_berry": 2,
+        "wild_apple": 1,
+        "wildflower": 1
+      },
+      "output": "roasted_fruit_platter",
+      "seconds": 16.0,
+      "default_unlocked": false
+    },
+    "harvest_platter": {
+      "name": "原野丰收烤盘",
+      "materials": {
+        "wild_carrot": 1,
+        "brown_mushroom": 1,
+        "wild_berry": 1,
+        "wildflower": 1
+      },
+      "output": "field_harvest_platter",
+      "seconds": 20.0,
+      "default_unlocked": false
+    }
+  }
+}

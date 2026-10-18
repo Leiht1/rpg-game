@@ -1,0 +1,224 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>风栖原野 · 物品系统 V0.3</title><style>body{background:#f5f0e3;color:#3e4939;font:16px/1.7 system-ui;margin:32px auto;max-width:1180px}img{max-width:100%;border:2px solid #aa9875;border-radius:12px}section{margin:28px 0}a{color:#557445}pre{white-space:pre-wrap;background:#e8dfcb;padding:16px;border-radius:10px}.tag{background:#d9e4cb;padding:8px 14px;border-radius:8px}</style><h1>风栖原野 · 物品系统 V0.3</h1><p class="tag">功能与 UI 已实现；新增物品美术 pending_user，未正式批量推广。</p><p>背包 B · 8 个快捷格初始留空 · 只通过玩家拖动放入 · 1–8直接使用 · 右键食用 · F6 图鉴。拾取优先补快捷栏已有同类堆叠，空快捷格只由玩家拖入；右侧小背包按钮对齐，悬停0.15秒。格子约52px，无格内名称；背包/快捷栏底座/悬停卡统一实底、描边和圆角。</p><p><a href="../../Start-Items-Preview.cmd">启动独立物品预览</a> · <a href="../../ITEM_SYSTEM.md">规则与限制</a> · <a href="tests.json">专项测试</a> · <a href="capture.log">实景与交互日志</a></p><section><h2>新版背包：32格，快捷栏保持空白</h2><img src="bag-empty-hotbar.png" alt="新版背包：32格，快捷栏保持空白"></section><section><h2>统一边框的悬停信息卡</h2><img src="item-hover-card.png" alt="统一边框的悬停信息卡"></section><section><h2>拖放后右键食用：只减少一份</h2><img src="bag-drag-and-eat.png" alt="拖放后右键食用：只减少一份"></section><section><h2>独立快捷栏底座</h2><img src="hotbar.png" alt="独立快捷栏底座"></section><section><h2>同一套图鉴界面</h2><img src="catalog.png" alt="同一套图鉴界面"></section><section><h2>真实游戏镜头中的12种地面候选（角色下方两排为展示摆放，其余为自然生成）</h2><img src="world-candidates.png" alt="真实游戏镜头中的12种地面候选（角色下方两排为展示摆放，其余为自然生成）"></section><section><h2>生成与美术检查</h2><p>Codex (local CLI) 受控 route_media，一次订阅额度调用；模型名 codex-image_gen，底层精确型号未知，账本0美元为额度口径，不代表实际成本确定。24张切格与去底通过 process QA；视觉仍须用户确认。原始排版跨格，保留失败报告，按实测所有权矩形重排后无跨格；safe_frame 14项超过建议安全区警告仍保留。以下为全部已发布美术检查 WARN/FAIL：</p><pre>[
+  {
+    &quot;file&quot;: &quot;art\\items-v03\\spill-01\\sheet-qc.json&quot;,
+    &quot;id&quot;: &quot;cross_cell_components&quot;,
+    &quot;status&quot;: &quot;fail&quot;,
+    &quot;value&quot;: 7,
+    &quot;threshold&quot;: 0,
+    &quot;cells&quot;: [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    &quot;note&quot;: &quot;solid parts crossing a cell line are cut or misassigned when the sheet is sliced&quot;
+  },
+  {
+    &quot;file&quot;: &quot;art\\items-v03\\spill-01\\sheet-qc.json&quot;,
+    &quot;id&quot;: &quot;cross_cell_visible&quot;,
+    &quot;status&quot;: &quot;fail&quot;,
+    &quot;value&quot;: 7,
+    &quot;threshold&quot;: 0,
+    &quot;note&quot;: &quot;the same test on the visible edge (alpha &gt; 16)&quot;
+  },
+  {
+    &quot;file&quot;: &quot;art\\items-v03\\spill-01\\sheet-qc.json&quot;,
+    &quot;id&quot;: &quot;boundary_band&quot;,
+    &quot;status&quot;: &quot;warn&quot;,
+    &quot;value&quot;: 3392,
+    &quot;threshold&quot;: 0,
+    &quot;note&quot;: &quot;solid pixels within 5 px of a cell line; a different crop or rounding can cut them&quot;
+  },
+  {
+    &quot;file&quot;: &quot;art\\items-v03\\spill-01\\sheet-qc.json&quot;,
+    &quot;id&quot;: &quot;safe_frame&quot;,
+    &quot;status&quot;: &quot;warn&quot;,
+    &quot;value&quot;: 23,
+    &quot;threshold&quot;: 0,
+    &quot;cells&quot;: [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        0
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    &quot;note&quot;: &quot;owned art closer than 15% of the cell to its edge; ask for more margin next time&quot;
+  },
+  {
+    &quot;file&quot;: &quot;art\\items-v03\\spill-02\\sheet-qc.json&quot;,
+    &quot;id&quot;: &quot;safe_frame&quot;,
+    &quot;status&quot;: &quot;warn&quot;,
+    &quot;value&quot;: 14,
+    &quot;threshold&quot;: 0,
+    &quot;cells&quot;: [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        1
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    &quot;note&quot;: &quot;owned art closer than 15% of the cell to its edge; ask for more margin next time&quot;
+  }
+]</pre><p><a href="../../prototypes/items-v03/provenance.json">来源与哈希</a> · <a href="../../art/items-v03/processed-01/pipeline-meta.json">24帧处理QA</a> · <a href="../../art/items-v03/doctor.json">能力检查（含环境缺项）</a></p></section><p>未新增生命值/饥饿值、制作、装备或其他玩法。苹果来源只关联固定现有树，没有专门挂果树画稿；松果也未新增针叶树种。未测本轮FPS/全Seed长时性能，不将功能验证当作美术验收。</p></html>

@@ -1,0 +1,124 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.88 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5060
+
+ERROR: portrait pixels match live native pose stone_axe right idle
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:50)
+ERROR: draw order matches stone_axe right idle Visual/Pelvis/ArmR
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:54)
+ERROR: portrait pixels match live native pose stone_axe right walk
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:50)
+ERROR: draw order matches stone_axe right walk Visual/Pelvis/ArmR
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:54)
+ERROR: portrait pixels match live native pose stone_axe left idle
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:50)
+ERROR: draw order matches stone_axe left idle Visual/Pelvis/ArmR
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:54)
+ERROR: portrait pixels match live native pose stone_axe left walk
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:50)
+ERROR: draw order matches stone_axe left walk Visual/Pelvis/ArmR
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:54)
+ERROR: portrait pixels match live native pose stone_pickaxe right idle
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:50)
+ERROR: draw order matches stone_pickaxe right idle Visual/Pelvis/ArmR
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:54)
+ERROR: portrait pixels match live native pose stone_pickaxe right walk
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:50)
+ERROR: draw order matches stone_pickaxe right walk Visual/Pelvis/ArmR
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:54)
+ERROR: portrait pixels match live native pose stone_pickaxe left idle
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:50)
+ERROR: draw order matches stone_pickaxe left idle Visual/Pelvis/ArmR
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:54)
+ERROR: portrait pixels match live native pose stone_pickaxe left walk
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:50)
+ERROR: draw order matches stone_pickaxe left walk Visual/Pelvis/ArmR
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:54)
+ERROR: portrait pixels match live native pose simple_shovel right idle
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:50)
+ERROR: draw order matches simple_shovel right idle Visual/Pelvis/ArmR
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:54)
+ERROR: portrait pixels match live native pose simple_shovel right walk
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:50)
+ERROR: draw order matches simple_shovel right walk Visual/Pelvis/ArmR
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:54)
+ERROR: portrait pixels match live native pose simple_shovel left idle
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:50)
+ERROR: draw order matches simple_shovel left idle Visual/Pelvis/ArmR
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:54)
+ERROR: portrait pixels match live native pose simple_shovel left walk
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:50)
+ERROR: draw order matches simple_shovel left walk Visual/Pelvis/ArmR
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_portrait_layer_v04.gd:10)
+       [1] run (res://tests/test_portrait_layer_v04.gd:54)
+PORTRAIT_LAYER 96 checks; 24 failures

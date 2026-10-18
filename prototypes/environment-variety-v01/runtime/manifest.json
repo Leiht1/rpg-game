@@ -1,0 +1,302 @@
+[
+  {
+    "id": "tree_01",
+    "name": "高瘦幼树",
+    "kind": "tree",
+    "file": "tree_01.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "source_bbox": [
+      183,
+      205,
+      340,
+      488
+    ],
+    "display_bbox": [
+      75,
+      51,
+      188,
+      255
+    ],
+    "scale": 0.72,
+    "offset": [
+      75,
+      51
+    ],
+    "sha256": "52ad5927f88af1605fc145d9c9edc5b449e6b65a01a0c3731c315c5f711bb6e9",
+    "surface": "grass",
+    "status": "pending_user"
+  },
+  {
+    "id": "tree_02",
+    "name": "矮胖阔冠树",
+    "kind": "tree",
+    "file": "tree_02.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "source_bbox": [
+      98,
+      274,
+      408,
+      488
+    ],
+    "display_bbox": [
+      14,
+      101,
+      237,
+      255
+    ],
+    "scale": 0.72,
+    "offset": [
+      14,
+      101
+    ],
+    "sha256": "439179d9bc2efb83b5be5c340d4c954a34f2040320df9fa5d38546530e75f94f",
+    "surface": "grass",
+    "status": "pending_user"
+  },
+  {
+    "id": "tree_03",
+    "name": "高大开展树",
+    "kind": "tree",
+    "file": "tree_03.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "source_bbox": [
+      106,
+      219,
+      407,
+      487
+    ],
+    "display_bbox": [
+      20,
+      62,
+      237,
+      255
+    ],
+    "scale": 0.72,
+    "offset": [
+      20,
+      62
+    ],
+    "sha256": "7913ab40726f71404cb88c08a2fac2f4a9cd9544b89f4aa45d8461541e4e09ec",
+    "surface": "grass",
+    "status": "pending_user"
+  },
+  {
+    "id": "tree_04",
+    "name": "疏冠分叉树",
+    "kind": "tree",
+    "file": "tree_04.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "source_bbox": [
+      150,
+      235,
+      389,
+      487
+    ],
+    "display_bbox": [
+      52,
+      74,
+      224,
+      255
+    ],
+    "scale": 0.72,
+    "offset": [
+      52,
+      74
+    ],
+    "sha256": "8f17d2f2ab4e673b152d0e85ea3ad214d3fbe3b1f724ed5f5e4937e7314f3292",
+    "surface": "grass",
+    "status": "pending_user"
+  },
+  {
+    "id": "rock_01",
+    "name": "低矮扁石",
+    "kind": "rock",
+    "file": "rock_01.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "source_bbox": [
+      29,
+      315,
+      448,
+      487
+    ],
+    "display_bbox": [
+      10,
+      58,
+      111,
+      99
+    ],
+    "scale": 0.24,
+    "offset": [
+      10,
+      58
+    ],
+    "sha256": "c03d924a3fdafa645fc3df19cb885d00e2cea85fe51cdb64b8022e12855e292c",
+    "surface": "grass",
+    "status": "pending_user"
+  },
+  {
+    "id": "rock_02",
+    "name": "敦实孤石",
+    "kind": "rock",
+    "file": "rock_02.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "source_bbox": [
+      82,
+      227,
+      413,
+      488
+    ],
+    "display_bbox": [
+      22,
+      36,
+      101,
+      99
+    ],
+    "scale": 0.24,
+    "offset": [
+      22,
+      36
+    ],
+    "sha256": "247aed10dbdb73d548764c17ad445ac8fe7f8445c5d1cf155a2f97a8d92a35f4",
+    "surface": "grass",
+    "status": "pending_user"
+  },
+  {
+    "id": "rock_03",
+    "name": "楔形石",
+    "kind": "rock",
+    "file": "rock_03.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "source_bbox": [
+      44,
+      244,
+      433,
+      488
+    ],
+    "display_bbox": [
+      13,
+      40,
+      106,
+      99
+    ],
+    "scale": 0.24,
+    "offset": [
+      13,
+      40
+    ],
+    "sha256": "a554b603f941d09f73b913e5de81916cf0249f3e92a00ea6b09ef44551e5df2f",
+    "surface": "grass",
+    "status": "pending_user"
+  },
+  {
+    "id": "rock_04",
+    "name": "双肩连体石",
+    "kind": "rock",
+    "file": "rock_04.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "source_bbox": [
+      33,
+      247,
+      450,
+      488
+    ],
+    "display_bbox": [
+      10,
+      41,
+      110,
+      99
+    ],
+    "scale": 0.24,
+    "offset": [
+      10,
+      41
+    ],
+    "sha256": "44952fbfa544c81a6c3f6f50df43928f5232b57562f566c57144bc530886041d",
+    "surface": "grass",
+    "status": "pending_user"
+  },
+  {
+    "id": "rock_05",
+    "name": "窄高石",
+    "kind": "rock",
+    "file": "rock_05.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "source_bbox": [
+      116,
+      154,
+      387,
+      488
+    ],
+    "display_bbox": [
+      30,
+      19,
+      95,
+      99
+    ],
+    "scale": 0.24,
+    "offset": [
+      30,
+      19
+    ],
+    "sha256": "789151fcbc33e9993f05a75fe46fe10fd1f7b10d7f4e9ba2d6432b9196aacd90",
+    "surface": "grass",
+    "status": "pending_user"
+  },
+  {
+    "id": "rock_06",
+    "name": "缺角碎石",
+    "kind": "rock",
+    "file": "rock_06.png",
+    "canvas": [
+      128,
+      100
+    ],
+    "source_bbox": [
+      145,
+      285,
+      450,
+      487
+    ],
+    "display_bbox": [
+      37,
+      51,
+      110,
+      99
+    ],
+    "scale": 0.24,
+    "offset": [
+      37,
+      51
+    ],
+    "sha256": "f65cbc5a0686ca550f73f9f0dcc051dba66f286f3455f8423bad126fb67ce881",
+    "surface": "grass",
+    "status": "pending_user"
+  }
+]

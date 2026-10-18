@@ -1,0 +1,146 @@
+{
+  "status": "approved_user",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "route_label": "Codex (local CLI)",
+  "model_reported": "codex-image_gen",
+  "underlying_image_model": "unknown",
+  "actual_cost_usd": null,
+  "estimateUsd": 0.0,
+  "quota": "subscription",
+  "source": "../../art/tools-v04/candidate-01/generated.png",
+  "job": "../../art/tools-v04/candidate-01/job.json",
+  "prompt": "../../art/tools-v04/prompt.txt",
+  "processing": "../../art/tools-v04/processed/pipeline-meta.json",
+  "raw_qa": "../../art/tools-v04/raw-qc/sheet-qc.json",
+  "raw_warnings": [
+    {
+      "id": "safe_frame",
+      "status": "warn",
+      "value": 6,
+      "threshold": 0,
+      "cells": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+    }
+  ],
+  "notes": [
+    "Raw safe_frame WARN value=6 threshold=0: margins under requested 15%; no cross-cell parts or cuts.",
+    "Soft matte, 1px despill, shared isotropic scale, center registration.",
+    "No character redraw or grip animation. Preview only, pending user visual approval.",
+    "Final PNGs remove empty transparent margins only, then add eight source-pixel safe padding. No visible pixels removed, no new scaling/rotation. Runtime adds its existing AtlasTexture safety margin."
+  ],
+  "files": [
+    {
+      "file": "visuals/stone_axe_icon.png",
+      "source": "../../art/tools-v04/processed/tool-1.png",
+      "alpha_bbox": [
+        49,
+        56,
+        207,
+        199
+      ],
+      "padding": 8,
+      "rotation": 0,
+      "nonuniform_scale": false,
+      "sha256": "e06ffca1bdd5963e2932d9a070fcefaebbdd9ad4b749a0221ea5f6cd20402f0c"
+    },
+    {
+      "file": "visuals/stone_pickaxe_icon.png",
+      "source": "../../art/tools-v04/processed/tool-2.png",
+      "alpha_bbox": [
+        46,
+        53,
+        210,
+        203
+      ],
+      "padding": 8,
+      "rotation": 0,
+      "nonuniform_scale": false,
+      "sha256": "310d0ef6293efce90b16f3fd404b89afc1aae69c6627949740397537fc67f13b"
+    },
+    {
+      "file": "visuals/simple_shovel_icon.png",
+      "source": "../../art/tools-v04/processed/tool-3.png",
+      "alpha_bbox": [
+        47,
+        46,
+        210,
+        211
+      ],
+      "padding": 8,
+      "rotation": 0,
+      "nonuniform_scale": false,
+      "sha256": "ba4de880a34e5908e393b42f1fa4720b2c0991d40ea99f02f4ec28dfed8b0eef"
+    },
+    {
+      "file": "visuals/stone_axe_world.png",
+      "source": "../../art/tools-v04/processed/tool-4.png",
+      "alpha_bbox": [
+        43,
+        83,
+        214,
+        173
+      ],
+      "padding": 8,
+      "rotation": 0,
+      "nonuniform_scale": false,
+      "sha256": "ad7f93dc4508b580e99b8cd146ffcb0a40c261f2b21635b097d0f10300684988"
+    },
+    {
+      "file": "visuals/stone_pickaxe_world.png",
+      "source": "../../art/tools-v04/processed/tool-5.png",
+      "alpha_bbox": [
+        42,
+        77,
+        214,
+        178
+      ],
+      "padding": 8,
+      "rotation": 0,
+      "nonuniform_scale": false,
+      "sha256": "f3514efead26834add08131e1903eaadc0b398d00a9e0365e0f3492b236bdfed"
+    },
+    {
+      "file": "visuals/simple_shovel_world.png",
+      "source": "../../art/tools-v04/processed/tool-6.png",
+      "alpha_bbox": [
+        38,
+        77,
+        217,
+        178
+      ],
+      "padding": 8,
+      "rotation": 0,
+      "nonuniform_scale": false,
+      "sha256": "a13f3312320207a74ad7aaf280e9ed7544368e644609fbe007c419e333654d3f"
+    }
+  ],
+  "approved_on": "2026-10-17",
+  "approval": "用户在工具及持握候选展示后明确：接入游戏吧。",
+  "approval_scope": "Only these six tool PNGs and selected candidate-03 held-pose direction. Earlier incorrect held drafts not approved; full-body generated character not used as runtime art."
+}

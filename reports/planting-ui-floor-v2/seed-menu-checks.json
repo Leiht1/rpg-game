@@ -1,0 +1,82 @@
+[
+  {
+    "name": "place real legal soil",
+    "pass": true
+  },
+  {
+    "name": "E opens selector with explicit empty message",
+    "pass": true
+  },
+  {
+    "name": "opening selector blocks movement and never plants",
+    "pass": true
+  },
+  {
+    "name": "Escape closes without planting",
+    "pass": true
+  },
+  {
+    "name": "bag seeds selectable without hotbar assignment",
+    "pass": true
+  },
+  {
+    "name": "selector has stable size",
+    "pass": true
+  },
+  {
+    "name": "hotbar key is consumed while choosing, no accidental use",
+    "pass": true
+  },
+  {
+    "name": "sleep closes selector and leaves input to existing sleep controller",
+    "pass": true
+  },
+  {
+    "name": "single click plants bag seed immediately and consumes only one",
+    "pass": true
+  },
+  {
+    "name": "successful click closes without confirmation",
+    "pass": true
+  },
+  {
+    "name": "duplicate click cannot plant twice",
+    "pass": true
+  },
+  {
+    "name": "correct seed button plants potato directly",
+    "pass": true
+  },
+  {
+    "name": "correct seed button plants cabbage directly",
+    "pass": true
+  },
+  {
+    "name": "seed removed before click does not plant",
+    "pass": true
+  },
+  {
+    "name": "failed click save restores crop and bag seed",
+    "pass": true
+  },
+  {
+    "name": "changed plot invalidates selector without consumption",
+    "pass": true
+  },
+  {
+    "name": "hammer destroys growing crop plot",
+    "pass": true
+  },
+  {
+    "name": "plot and crop visual disappear together",
+    "pass": true
+  },
+  {
+    "name": "demolition grants neither harvest nor seed refund",
+    "pass": true
+  },
+  {
+    "name": "destroyed plot cannot reopen seed selector",
+    "pass": true
+  }
+]

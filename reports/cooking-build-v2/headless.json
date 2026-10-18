@@ -1,0 +1,366 @@
+[
+  {
+    "name": "item and recipe definitions valid",
+    "pass": true
+  },
+  {
+    "name": "removed pouch recipe stays absent",
+    "pass": true
+  },
+  {
+    "name": "cooked carrot improves hunger yield",
+    "pass": true
+  },
+  {
+    "name": "cooked mushroom improves hunger yield",
+    "pass": true
+  },
+  {
+    "name": "a legal real-world dry placement found near spawn",
+    "pass": true
+  },
+  {
+    "name": "campfire absent from crafting data",
+    "pass": true
+  },
+  {
+    "name": "one real building definition",
+    "pass": true
+  },
+  {
+    "name": "begin build previews without material consumption",
+    "pass": true
+  },
+  {
+    "name": "cancel clears preview and restores inputs without material consumption",
+    "pass": true
+  },
+  {
+    "name": "invalid placement preserves materials",
+    "pass": true
+  },
+  {
+    "name": "player overlap rejected",
+    "pass": true
+  },
+  {
+    "name": "map boundary rejected",
+    "pass": true
+  },
+  {
+    "name": "real lake water rejects camp placement",
+    "pass": true
+  },
+  {
+    "name": "real primary corridor rejects camp placement",
+    "pass": true
+  },
+  {
+    "name": "inventory changes invalidate pending placement",
+    "pass": true
+  },
+  {
+    "name": "disk failure rolls back building and materials",
+    "pass": true
+  },
+  {
+    "name": "left click commits legal building through UI handler",
+    "pass": true
+  },
+  {
+    "name": "building consumes exact costs with no inventory product",
+    "pass": true
+  },
+  {
+    "name": "repeated confirmation cannot create duplicate building",
+    "pass": true
+  },
+  {
+    "name": "world object uses generated art and E interaction group",
+    "pass": true
+  },
+  {
+    "name": "existing campfire overlap rejected",
+    "pass": true
+  },
+  {
+    "name": "cannot ignite without fuel",
+    "pass": true
+  },
+  {
+    "name": "fuel addition without wood rejected",
+    "pass": true
+  },
+  {
+    "name": "wood atomically exchanged for 120 fuel seconds",
+    "pass": true
+  },
+  {
+    "name": "fuel impact automatically ignites fire",
+    "pass": true
+  },
+  {
+    "name": "flame visible when burning",
+    "pass": true
+  },
+  {
+    "name": "original E execution opens camp interface",
+    "pass": true
+  },
+  {
+    "name": "cooking UI owns input",
+    "pass": true
+  },
+  {
+    "name": "campfire directly advertises cooking",
+    "pass": true
+  },
+  {
+    "name": "every real recipe present",
+    "pass": true
+  },
+  {
+    "name": "four disabled mystery UI placeholders",
+    "pass": true
+  },
+  {
+    "name": "missing ingredient cannot start cooking",
+    "pass": true
+  },
+  {
+    "name": "start carrot cooking",
+    "pass": true
+  },
+  {
+    "name": "deduction and job coexist in same snapshot",
+    "pass": true
+  },
+  {
+    "name": "duplicate start cannot deduct ingredient twice",
+    "pass": true
+  },
+  {
+    "name": "fuel and progress share normal simulation seconds",
+    "pass": true
+  },
+  {
+    "name": "closing panel does not cancel cooking",
+    "pass": true
+  },
+  {
+    "name": "fuel expiry pauses cooking fuel and flame",
+    "pass": true
+  },
+  {
+    "name": "mid-cooking progress persisted with deducted ingredient",
+    "pass": true
+  },
+  {
+    "name": "real chunk unload releases world visual and flame nodes",
+    "pass": true
+  },
+  {
+    "name": "unload retains cooking state",
+    "pass": true
+  },
+  {
+    "name": "real chunk reload creates one visual only",
+    "pass": true
+  },
+  {
+    "name": "repeated chunk install remains idempotent",
+    "pass": true
+  },
+  {
+    "name": "cooking reaches exactly one ready product",
+    "pass": true
+  },
+  {
+    "name": "ready product survives continued fire",
+    "pass": true
+  },
+  {
+    "name": "ready output uses actual product icon and claim state",
+    "pass": true
+  },
+  {
+    "name": "full bag leaves product in campfire",
+    "pass": true
+  },
+  {
+    "name": "full bag emits no successful acquisition",
+    "pass": true
+  },
+  {
+    "name": "claim uses original inventory insertion",
+    "pass": true
+  },
+  {
+    "name": "repeat claim cannot duplicate product",
+    "pass": true
+  },
+  {
+    "name": "claim emits exactly one actual acquisition",
+    "pass": true
+  },
+  {
+    "name": "actual right-click use feeds through original BodyState",
+    "pass": true
+  },
+  {
+    "name": "fully healthy and full hunger does not consume cooked food",
+    "pass": true
+  },
+  {
+    "name": "second existing ingredient starts mushroom recipe",
+    "pass": true
+  },
+  {
+    "name": "fuel exhaustion advances only actual burn time then pauses and hides flame",
+    "pass": true
+  },
+  {
+    "name": "paused job keeps ingredient and progress",
+    "pass": true
+  },
+  {
+    "name": "new fuel automatically reignites exhausted camp",
+    "pass": true
+  },
+  {
+    "name": "resume produces and claims mushroom once",
+    "pass": true
+  },
+  {
+    "name": "cooked mushroom hotbar use follows existing food path",
+    "pass": true
+  },
+  {
+    "name": "environment pause prevents fuel advancement",
+    "pass": true
+  },
+  {
+    "name": "debug day preview prevents fuel advancement",
+    "pass": true
+  },
+  {
+    "name": "setting world hour does not catch up fuel",
+    "pass": true
+  },
+  {
+    "name": "environment shader receives burning camp light",
+    "pass": true
+  },
+  {
+    "name": "extinguish removes warm illumination",
+    "pass": true
+  },
+  {
+    "name": "same-process restart restores mid-cooking fuel progress and ignition",
+    "pass": true
+  },
+  {
+    "name": "equipped hotbar references preserved",
+    "pass": true
+  },
+  {
+    "name": "harvest and consumed history preserved",
+    "pass": true
+  },
+  {
+    "name": "previously claimed product is not regenerated on restore",
+    "pass": true
+  },
+  {
+    "name": "illegal or unknown camp data rejected: 999",
+    "pass": true
+  },
+  {
+    "name": "illegal or unknown camp data rejected: -1",
+    "pass": true
+  },
+  {
+    "name": "illegal or unknown camp data rejected: inf",
+    "pass": true
+  },
+  {
+    "name": "unknown camp version protects original source file",
+    "pass": true
+  },
+  {
+    "name": "old save initializes empty camps and retains equipped inventory",
+    "pass": true
+  },
+  {
+    "name": "fixed camp panel fits viewport (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "recipe changes keep panel dimensions (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "fixed camp panel fits viewport (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "recipe changes keep panel dimensions (1280, 720)",
+    "pass": true
+  },
+  {
+    "name": "fixed camp panel fits viewport (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "recipe changes keep panel dimensions (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "existing periodic save persists camp progress",
+    "pass": true
+  },
+  {
+    "name": "normal window close notification saves current original snapshot and camp state",
+    "pass": true
+  },
+  {
+    "name": "batch craft starts through original service",
+    "pass": true
+  },
+  {
+    "name": "batch acquisition reports actual total nine",
+    "pass": true
+  },
+  {
+    "name": "unified toast displays real icon name and batch quantity",
+    "pass": false
+  },
+  {
+    "name": "rapid acquisitions queue without overwriting active quantity",
+    "pass": true
+  },
+  {
+    "name": "queued second item shown after first",
+    "pass": true
+  },
+  {
+    "name": "toast disappears after duration",
+    "pass": true
+  },
+  {
+    "name": "cancelled craft emits no acquisition",
+    "pass": true
+  },
+  {
+    "name": "locked defined recipe cannot start through UI or service",
+    "pass": true
+  },
+  {
+    "name": "building mode only shows actual facility",
+    "pass": true
+  },
+  {
+    "name": "crafting mode only shows five inventory products",
+    "pass": true
+  }
+]

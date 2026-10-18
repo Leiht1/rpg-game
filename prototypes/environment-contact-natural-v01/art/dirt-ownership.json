@@ -1,0 +1,177 @@
+{
+  "source": "art\\dirt-02\\generated.png",
+  "sha256": "3933bfc68ba3c62e8a74156f73914f1355de21af141ac36125751f81d1b726c5",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "cell_size": 560,
+  "cuts_x": [
+    0,
+    416,
+    850,
+    1254
+  ],
+  "cuts_y": [
+    0,
+    494,
+    841,
+    1254
+  ],
+  "cells": [
+    {
+      "cell": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        416,
+        494
+      ],
+      "paste": [
+        72,
+        33
+      ],
+      "source_art_pixels_unchanged": true
+    },
+    {
+      "cell": [
+        0,
+        1
+      ],
+      "source_box": [
+        416,
+        0,
+        850,
+        494
+      ],
+      "paste": [
+        623,
+        33
+      ],
+      "source_art_pixels_unchanged": true
+    },
+    {
+      "cell": [
+        0,
+        2
+      ],
+      "source_box": [
+        850,
+        0,
+        1254,
+        494
+      ],
+      "paste": [
+        1198,
+        33
+      ],
+      "source_art_pixels_unchanged": true
+    },
+    {
+      "cell": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        494,
+        416,
+        841
+      ],
+      "paste": [
+        72,
+        666
+      ],
+      "source_art_pixels_unchanged": true
+    },
+    {
+      "cell": [
+        1,
+        1
+      ],
+      "source_box": [
+        416,
+        494,
+        850,
+        841
+      ],
+      "paste": [
+        623,
+        666
+      ],
+      "source_art_pixels_unchanged": true
+    },
+    {
+      "cell": [
+        1,
+        2
+      ],
+      "source_box": [
+        850,
+        494,
+        1254,
+        841
+      ],
+      "paste": [
+        1198,
+        666
+      ],
+      "source_art_pixels_unchanged": true
+    },
+    {
+      "cell": [
+        2,
+        0
+      ],
+      "source_box": [
+        0,
+        841,
+        416,
+        1254
+      ],
+      "paste": [
+        72,
+        1193
+      ],
+      "source_art_pixels_unchanged": true
+    },
+    {
+      "cell": [
+        2,
+        1
+      ],
+      "source_box": [
+        416,
+        841,
+        850,
+        1254
+      ],
+      "paste": [
+        623,
+        1193
+      ],
+      "source_art_pixels_unchanged": true
+    },
+    {
+      "cell": [
+        2,
+        2
+      ],
+      "source_box": [
+        850,
+        841,
+        1254,
+        1254
+      ],
+      "paste": [
+        1198,
+        1193
+      ],
+      "source_art_pixels_unchanged": true
+    }
+  ],
+  "method": "copy complete rectangles at empty painted-art gutters, no rescale or art redraw"
+}
