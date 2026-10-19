@@ -11,6 +11,7 @@ var paper := PanelContainer.new()
 var details := Label.new()
 var lamp := PanelContainer.new()
 var fuel := ProgressBar.new()
+var lamp_icon := TextureRect.new()
 var refresh_clock := 0.0
 
 func configure(owner_ui: Control) -> void:
@@ -61,12 +62,11 @@ func configure(owner_ui: Control) -> void:
 	lamp.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	var lamp_row := HBoxContainer.new()
 	lamp.add_child(lamp_row)
-	var lamp_icon := TextureRect.new()
 	lamp_icon.texture=items.service.texture("field_lantern","icon")
 	lamp_icon.custom_minimum_size=Vector2(30,30);lamp_icon.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;lamp_icon.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	lamp_row.add_child(lamp_icon)
 	fuel.custom_minimum_size=Vector2(130,12);fuel.size_flags_vertical=Control.SIZE_SHRINK_CENTER;fuel.show_percentage=false
-	style_bar(fuel,Color("cfaa61"));lamp_row.add_child(fuel)
+	preload("res://scripts/item_ui_style.gd").progress_style(fuel,true,false);lamp_row.add_child(fuel)
 	items.ignore_card_mouse(lamp)
 	add_child(overlay)
 	overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -113,8 +113,12 @@ func _process(delta: float) -> void:
 	hud.position=Vector2(16,items.dock.get_global_rect().end.y-hud.size.y)
 	hud.visible=not overlay.visible and not items.world.map_view.visible and not items.craft_panel.visible
 	lamp.visible=hud.visible and items.dock.visible and is_instance_valid(items.service.lantern) and items.service.lantern.visible
+	preload("res://scripts/item_ui_style.gd").progress_style(fuel,true,is_instance_valid(items.service.lantern) and items.service.lantern.visible)
 	lamp.position=Vector2(items.dock.position.x+items.dock.size.x*.5-94,items.dock.position.y-54)
-	fuel.value=items.service.lantern_remaining/float(state.rules.lantern_seconds)*100.0
+	var active: Dictionary=items.service.lamp_slot()
+	var lifetime := float(items.service.database.item(str(active.get("item_id",""))).get("lamp_lifetime",state.rules.lantern_seconds))
+	fuel.value=items.service.lantern_remaining/lifetime*100.0
+	if not active.is_empty(): lamp_icon.texture=items.service.texture(str(active.item_id),"icon")
 	var factor := minf(1.0,minf((area.x-24)/paper.size.x,(area.y-24)/paper.size.y))
 	paper.scale=Vector2.ONE*factor;paper.position=(area-paper.size*factor)*.5
 	refresh_clock+=delta

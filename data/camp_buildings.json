@@ -152,8 +152,8 @@
     },
     "hits": 3,
     "frame": 0,
-    "industry_candidate": true,
-    "art": "res://prototypes/industry-v1/final/stone_furnace.png"
+    "industry": true,
+    "art": "res://assets/industry/v1/stone_furnace.png"
   },
   "metal_workbench": {
     "name": "金属加工台",
@@ -165,8 +165,8 @@
     },
     "hits": 3,
     "frame": 0,
-    "industry_candidate": true,
-    "art": "res://prototypes/industry-v1/final/metal_workbench.png"
+    "industry": true,
+    "art": "res://assets/industry/v1/metal_workbench.png"
   },
   "copper_oven": {
     "name": "铜制烤箱",
@@ -179,8 +179,8 @@
     },
     "hits": 3,
     "frame": 0,
-    "industry_candidate": true,
-    "art": "res://prototypes/industry-v1/final/copper_oven.png"
+    "industry": true,
+    "art": "res://assets/industry/v1/copper_oven.png"
   },
   "copper_lamp": {
     "name": "铜制立灯",
@@ -192,8 +192,8 @@
     },
     "hits": 3,
     "frame": 0,
-    "industry_candidate": true,
-    "art": "res://prototypes/industry-v1/final/copper_lamp.png"
+    "industry": true,
+    "art": "res://assets/industry/v1/copper_lamp.png"
   },
   "reinforced_cabinet": {
     "name": "加固储物柜",
@@ -205,8 +205,8 @@
     },
     "hits": 3,
     "frame": 0,
-    "industry_candidate": true,
-    "art": "res://prototypes/industry-v1/final/reinforced_cabinet.png",
+    "industry": true,
+    "art": "res://assets/industry/v1/reinforced_cabinet.png",
     "storage_slots": 24
   },
   "feed_trough": {
@@ -218,8 +218,8 @@
     },
     "hits": 3,
     "frame": 0,
-    "industry_candidate": true,
-    "art": "res://prototypes/industry-v1/final/feed_trough.png"
+    "industry": true,
+    "art": "res://assets/industry/v1/feed_trough.png"
   },
   "refrigerator": {
     "name": "冰箱",
@@ -231,8 +231,8 @@
     },
     "hits": 3,
     "frame": 0,
-    "industry_candidate": true,
-    "art": "res://prototypes/industry-v1/final/refrigerator.png",
+    "industry": true,
+    "art": "res://assets/industry/v1/refrigerator.png",
     "storage_slots": 12
   },
   "wool_carpet": {
@@ -244,7 +244,7 @@
     },
     "hits": 3,
     "frame": 0,
-    "industry_candidate": true,
-    "art": "res://prototypes/industry-v1/final/wool_carpet.png"
+    "industry": true,
+    "art": "res://assets/industry/v1/wool_carpet.png"
   }
 }

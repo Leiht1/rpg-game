@@ -22,6 +22,8 @@ var front_free_hand: Sprite2D
 
 func release_pose() -> void:
 	if is_instance_valid(front_arm):
+		var held := front_arm.get_node_or_null("HeldTool")
+		if held != null: front_arm.move_child(held,0)
 		front_arm.show_behind_parent=front_arm_was_behind
 		front_arm.position=front_arm_position
 	if is_instance_valid(front_free_arm):
@@ -48,7 +50,7 @@ func apply(character: Node2D, inventory: ItemInventory, facing: String, action: 
 		tool.centered=false
 		tool.texture_filter=CanvasItem.TEXTURE_FILTER_LINEAR
 		arm.add_child(tool)
-		# Shaft is behind the original mitten; no global Z override or pasted hand.
+		# Default side/back order; the front view moves the tool above the hand below.
 		arm.move_child(tool,0)
 	tool.hide()
 	tool.set_meta("item_id","")
@@ -60,7 +62,7 @@ func apply(character: Node2D, inventory: ItemInventory, facing: String, action: 
 	var row: Dictionary=definitions.get(definition.get("visual_id",""),{})
 	if row.is_empty(): return
 	var path := str(row.texture)
-	if not textures.has(path): textures[path]=preload("res://scripts/candidate_art.gd").texture(path) if path.begins_with("res://prototypes/industry-v1/") else load(path)
+	if not textures.has(path): textures[path]=load(path)
 	tool.texture=textures[path]
 	var pin: Array=row.grip_px
 	tool.offset=-Vector2(pin[0],pin[1])
@@ -77,12 +79,14 @@ func apply(character: Node2D, inventory: ItemInventory, facing: String, action: 
 		arm.rotation+=stance_offset
 		# Keep the head pointing out from the face while the shoulder lifts the hand.
 		tool.rotation-=stance_offset
+		tool.rotation+=deg_to_rad(float(row.get("idle_rotation_degrees",0)))
 	# All registered main-hand tools share this policy, regardless of ID or action.
 	# Animation sampling may put ArmR behind Pelvis; front-facing holding must override it.
 	if facing=="front":
 		if front_arm!=arm:
 			front_arm=arm;front_arm_was_behind=arm.show_behind_parent;front_arm_position=arm.position
 		arm.show_behind_parent=false
+		arm.move_child(tool,arm.get_child_count()-1)
 		if not action.is_empty(): align_front_shoulders(character,arm)
 	if action in row.get("aim_forward_actions",[]):
 		# Aim in rig space so mirroring and the sampled arm rotation preserve the blade direction.

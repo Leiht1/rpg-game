@@ -32,7 +32,7 @@ func validate(row: Variant) -> String:
 		if database.item(str(id)).get("equippable",false): return "不支持消耗装备实例"
 	if not row.category is String or row.category.is_empty() or not row.description is String: return "配方分类或描述无效"
 	if not row.conditions is Array or not row.default_unlocked is bool: return "制作条件无效"
-	if row.conditions.any(func(c):return c!="workbench"): return "未知制作设施条件"
+	if row.conditions.any(func(c):return c not in ["workbench","metal_workbench"]): return "未知制作设施条件"
 	var duration = row.get("craft_time",1.5)
 	if not (duration is int or duration is float) or not is_finite(float(duration)) or duration<.1 or duration>30: return "制作时间须为0.1–30秒"
 	return ""
@@ -43,13 +43,15 @@ static func positive_integer(value: Variant) -> bool:
 func recipe(id: String) -> Dictionary:
 	return recipes.get(id,{}).duplicate(true)
 
-func available(category: String = "全部", station: bool=false) -> Array[Dictionary]:
+func available(category: String = "全部", station: Variant=false) -> Array[Dictionary]:
 	var result: Array[Dictionary]=[]
+	var kind: String=str(station) if station is String else "workbench" if station is bool and station else ""
 	for row in recipes.values():
-		if row.default_unlocked and (station or row.conditions.is_empty()) and (category=="全部" or row.category==category): result.append(row.duplicate(true))
+		var matches: bool=row.conditions==[kind] if kind=="metal_workbench" else row.conditions.is_empty() or row.conditions==[kind]
+		if row.default_unlocked and matches and (category=="全部" or row.category==category): result.append(row.duplicate(true))
 	return result
 
-func categories(station: bool=false) -> Array[String]:
+func categories(station: Variant=false) -> Array[String]:
 	var result: Array[String]=["全部"]
 	for row in available("全部",station):
 		if not result.has(row.category): result.append(row.category)

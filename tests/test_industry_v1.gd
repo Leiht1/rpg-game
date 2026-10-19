@@ -1,6 +1,6 @@
 extends SceneTree
-const OUT="res://reports/industry-v1/"
-const SAVE=OUT+"isolated-save.json"
+var OUT="res://reports/industry-formal-v1/" if "formal" in OS.get_cmdline_user_args() else "res://reports/industry-v1/"
+var SAVE=OUT+"isolated-save.json"
 const Fresh=preload("res://scripts/food_freshness.gd")
 var w: Node
 var s: Node
@@ -31,7 +31,7 @@ func finish() -> void:
 	w.persistent_world=false;w.free();await process_frame;quit(0 if failed.is_empty() else 1)
 func run() -> void:
 	DirAccess.make_dir_recursive_absolute(OUT)
-	Engine.set_meta("industry_preview",true);Engine.set_meta("integration_seed",271828)
+	Engine.set_meta("industry_preview",not "formal" in OS.get_cmdline_user_args());Engine.set_meta("integration_seed",271828)
 	w=load("res://tests/world_v06_formal_fixture.gd").new();root.add_child(w)
 	while not w.started:await process_frame
 	w.environment_view.set_process(false);w.player.set_physics_process(false);w.set_process(false)
@@ -51,6 +51,23 @@ func run() -> void:
 	check(s.database.errors.is_empty(),"item definitions valid")
 	check(s.camps.build_book.errors.is_empty(),"building recipe definitions valid")
 	check(s.craft_book.errors.is_empty(),"original crafting definitions valid")
+	if "formal" in OS.get_cmdline_user_args():
+		check(not Engine.get_meta("industry_preview") and not s.preview,"formal mode without preview switches")
+		var pro: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://assets/industry/v1/provenance.json"))
+		check(pro.approval=="approved_by_user" and pro.files.size()==35,"explicit approval covers exactly current 35 files")
+		for filename in pro.files:
+			var path: String="res://assets/industry/v1/"+filename
+			check(FileAccess.get_sha256(path)==pro.files[filename],"approved PNG hash "+filename)
+			check(ResourceLoader.exists(path) and load(path) is Texture2D,"formal imported texture "+filename)
+		for row in s.camps.build_book.recipes.values():
+			if row.get("industry",false): check(row.default_unlocked,"formal construction recipe open "+row.recipe_id)
+		for kind in s.builds.definitions:
+			var d: Dictionary=s.builds.definitions[kind]
+			if d.get("industry",false):check(d.art.begins_with("res://assets/industry/v1/"),"formal building art "+kind)
+		for id in s.database.ids():
+			var d: Dictionary=s.database.item(id)
+			if d.get("industry",false):check(d.icon.begins_with("res://assets/industry/v1/") and s.texture(id,"icon")!=null,"formal inventory art "+id)
+		check(s.stack_texture({"item_id":"roasted_carrot","count":1,"spoilage":1.0},"icon")==load("res://assets/industry/v1/rotten_roasted_carrot.png"),"rotten food uses formal art")
 	stock()
 	make_build("furnace","stone_furnace");make_build("metal","metal_workbench");make_build("oven","copper_oven");make_build("lamp","copper_lamp");make_build("trough","feed_trough");make_build("fridge","refrigerator");make_build("cabinet","reinforced_cabinet")
 	await frames()
@@ -192,11 +209,30 @@ func run() -> void:
 	check(s.builds.occupant(carpet).is_empty(),"carpet overlay never conflicts with base floor")
 	s.builds.states["carpet"]=carpet
 	check(s.builds.protected_reason("floor")=="请先拆除地毯","base floor protected against floating carpet")
-	var lamp: Dictionary=s.inventory.instance("silver_lantern");lamp.fuel=.1;s.inventory.equipment.main_hand=lamp;s.inventory.hotbar_equipment["0"]=lamp.instance_id;s.inventory.slots[0]={}
-	s.toggle_lantern(40);check(s.lantern.visible and s.lamp_slot().fuel==.1,"equipped silver lantern uses existing light service")
+	s.inventory.equipment.main_hand=s.inventory.instance("copper_axe")
+	var held_before: Dictionary=s.inventory.equipment.main_hand.duplicate(true)
+	s.inventory.slots[0]={"item_id":"silver_lantern","count":1}
+	check(not s.inventory.equip(0),"silver lantern does not equip")
+	check(s.inventory.use_slot(0),"silver lantern uses original inventory light action")
+	check(s.lantern.visible and s.lamp_slot().fuel==3600 and s.inventory.equipment.main_hand==held_before,"silver light starts full without replacing held tool")
+	s.burn_lantern(1800)
+	w.item_ui.body_ui._process(0)
+	check(is_equal_approx(w.item_ui.body_ui.fuel.value,50),"silver fuel HUD uses its own lifetime")
+	check(w.item_ui.body_ui.lamp_icon.texture==s.texture("silver_lantern","icon"),"fuel HUD shows active silver icon")
+	s.inventory.use_slot(0);check(not s.lantern.visible,"second use switches silver light off")
+	s.inventory.use_slot(0);check(s.lantern.visible and s.lamp_slot().fuel==1800,"using again preserves fuel")
+	s.lamp_slot().fuel=.1
 	s.burn_lantern(.2)
-	check(not s.inventory.equipment.has("main_hand") and s.inventory.hotbar_equipment.is_empty() and not s.lantern.visible,"expired lantern removes equipment and aliases")
+	check(s.inventory.slots[0].is_empty() and s.inventory.equipment.main_hand==held_before and not s.lantern.visible,"expired silver light removes only its inventory item")
 	check(cmd("oven","start",3,"",1,{"wild_carrot":3}).is_empty(),"fallback job stored for separate process restore")
+	if "formal" in OS.get_cmdline_user_args():
+		w.environment_view.preview=false;w.environment_view.simulation.paused=false
+		var elapsed: float=s.builds.states.oven.machine.jobs[3].elapsed
+		w.environment_view.advance_gameplay(.1)
+		check(s.builds.states.oven.machine.jobs[3].elapsed>elapsed,"ordinary world clock advances industrial jobs without preview flag")
+		elapsed=s.builds.states.oven.machine.jobs[3].elapsed
+		w.environment_view.simulation.paused=true;w.environment_view.advance_gameplay(.1)
+		check(s.builds.states.oven.machine.jobs[3].elapsed==elapsed,"paused world does not advance industrial jobs")
 	# Save known state for a separate-process restore, without touching player saves.
 	s.builds.states.fridge.contents[0].spoilage=.5;s.inventory.slots[39]={"item_id":"roasted_carrot","count":2,"spoilage":1.0}
 	check(s.save_state(),"atomic fixture snapshot saves")
@@ -221,13 +257,13 @@ func run() -> void:
 		s.storage_ui.close_panel();w.item_ui.toggle_craft();await frames(8);root.get_texture().get_image().save_png(OUT+"craft-window.png")
 		w.item_ui.close_panels();w.player.set_process(false)
 		var contact := Image.create(1440,800,false,Image.FORMAT_RGBA8)
-		var tool_ids := ["copper_axe","copper_pickaxe","copper_shovel","copper_hammer","silver_lantern","fishing_rod"]
+		var tool_ids := ["copper_axe","copper_pickaxe","copper_shovel","copper_hammer","fishing_rod"]
 		for column in tool_ids.size():
 			s.inventory.equipment.main_hand=s.inventory.instance(tool_ids[column])
 			for direction in 4:
 				w.player.facing=["front","back","left","right"][direction];w.player.action="";w.player.update_animation();await frames(3)
 				var config: Dictionary=w.player.held_tool.definitions["tool:"+tool_ids[column]]
-				var tex: Texture2D=preload("res://scripts/candidate_art.gd").texture(config.texture)
+				var tex: Texture2D=load(config.texture)
 				check(tex.get_image().get_pixel(int(config.grip_px[0]),int(config.grip_px[1])).a>.9,"hand anchor touches tool "+tool_ids[column]+str(direction))
 				contact.blit_rect(root.get_texture().get_image(),Rect2i(520,220,240,200),Vector2i(column*240,direction*200))
 		contact.save_png(OUT+"tools-contact.png")

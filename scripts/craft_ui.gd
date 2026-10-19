@@ -24,6 +24,7 @@ var amount_row: HBoxContainer
 var building := false
 var book: RefCounted
 var progress := ProgressBar.new()
+var legacy_jobs: Button
 
 func configure(owner_screen: Control) -> void:
 	screen=owner_screen
@@ -48,6 +49,7 @@ func configure(owner_screen: Control) -> void:
 	header.add_child(title)
 	header.add_child(button("制作",set_mode.bind(false)))
 	header.add_child(button("建造",set_mode.bind(true)))
+	legacy_jobs=button("旧加工任务",open_legacy_jobs);legacy_jobs.hide();header.add_child(legacy_jobs)
 	header.add_theme_constant_override("separation",10)
 	mode_hint=label("",13)
 	mode_hint.hide();header.add_child(mode_hint)
@@ -116,12 +118,7 @@ func configure(owner_screen: Control) -> void:
 	progress.max_value=1.0
 	progress.show_percentage=false
 	progress.mouse_filter=Control.MOUSE_FILTER_IGNORE
-	var track := StyleBoxFlat.new()
-	track.bg_color=Color("e5dcc6");track.set_corner_radius_all(4)
-	var fill := StyleBoxFlat.new()
-	fill.bg_color=Color("b6bd87");fill.set_corner_radius_all(4)
-	progress.add_theme_stylebox_override("background",track)
-	progress.add_theme_stylebox_override("fill",fill)
+	ItemSkin.progress_style(progress)
 	right.add_child(progress)
 	var actions := HBoxContainer.new()
 	actions.add_theme_constant_override("separation",10)
@@ -190,7 +187,7 @@ func choose_category(category: String) -> void:
 	clear(rows)
 	recipe_buttons.clear()
 	for key in category_buttons: category_buttons[key].set_pressed_no_signal(key==category)
-	var available: Array=book.available(category,not service.craft_station_id.is_empty() and not building)
+	var available: Array=book.available(category,service.crafting_station_kind() if not building else "")
 	if available.is_empty(): selected=""
 	elif not available.any(func(row): return row.recipe_id==selected): selected=available[0].recipe_id
 	for row in available:
@@ -344,13 +341,21 @@ func set_mode(value: bool) -> void:
 
 func rebuild_context() -> void:
 	if building: return
-	mode_title.text="工具台制作" if not service.craft_station_id.is_empty() else "徒手制作"
-	mode_hint.text="工具台 · 含徒手配方" if not service.craft_station_id.is_empty() else "徒手制作 · 进度满后完成"
+	mode_title.text="金属加工台制作" if service.crafting_station_kind()=="metal_workbench" else "工具台制作" if not service.craft_station_id.is_empty() else "徒手制作"
+	mode_hint.text="进度满后完成制作" if not service.craft_station_id.is_empty() else "徒手制作 · 进度满后完成"
+	legacy_jobs.visible=false
+	if service.crafting_station_kind()=="metal_workbench":
+		var m: Dictionary=service.builds.states[service.craft_station_id].machine
+		legacy_jobs.visible=not m.completed.is_empty() or not m.queue.is_empty() or not m.legacy_queue.is_empty() or m.jobs.any(func(j):return not j.is_empty())
 	clear(categories);category_buttons.clear()
-	for category in book.categories(not service.craft_station_id.is_empty()):
+	for category in book.categories(service.crafting_station_kind()):
 		var tab := button(category,choose_category.bind(category));tab.toggle_mode=true
 		category_buttons[category]=tab;categories.add_child(tab)
 	choose_category("全部")
+
+func open_legacy_jobs() -> void:
+	var id: String=service.craft_station_id
+	screen.close_panels();service.industry_ui.open(id)
 
 func _process(_delta: float) -> void:
 	if visible and not service.craft_station_id.is_empty() and not service.workbench_valid(service.craft_station_id):

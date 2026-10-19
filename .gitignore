@@ -49,3 +49,12 @@ dist/
 # Isolated industry test snapshot.
 /reports/industry-v1/isolated-save.json
 /reports/animals-v1/isolated-save.json
+
+# Isolated formal industry validation snapshot.
+/reports/industry-formal-v1/isolated-save.json
+
+# Isolated floor-under-existing-buildings validation.
+/reports/floor-under-buildings-v1/isolated-save.json
+
+# Isolated industry interaction V2 snapshots.
+/reports/industry-refine-v2/isolated-save.json

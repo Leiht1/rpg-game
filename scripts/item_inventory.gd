@@ -1,5 +1,6 @@
 class_name ItemInventory
 extends RefCounted
+signal sound_requested(key: String)
 signal changed
 signal used(item_id: String, effect: Dictionary)
 const Fresh=preload("res://scripts/food_freshness.gd")
@@ -224,7 +225,7 @@ func equip_hotbar(from: int, to: int) -> bool:
 		if hotbar_equipment[key]==previous.get("instance_id","") or int(key)==from: hotbar_equipment.erase(key)
 	equipment[slot_key(to)]=source
 	if from<8: hotbar_equipment[str(from)]=str(source.instance_id)
-	changed.emit();return true
+	changed.emit();sound_requested.emit("sfx_equip" if from>=40 or to>=40 else "sfx_item_move");return true
 
 func move_slot(from: int, to: int) -> bool:
 	if from==to or not accepts(from,{}) or not accepts(to,{}): return false
@@ -233,7 +234,7 @@ func move_slot(from: int, to: int) -> bool:
 	if from<40 and not slots[from].is_empty() and to>=40 and database.item(str(source.get("item_id",""))).get("equippable",false): return equip_hotbar(from,to)
 	if from<8 and slots[from].is_empty() and not source.is_empty():
 		if to<8 and target.is_empty():
-			hotbar_equipment.erase(str(from));hotbar_equipment[str(to)]=str(source.instance_id);changed.emit();return true
+			hotbar_equipment.erase(str(from));hotbar_equipment[str(to)]=str(source.instance_id);changed.emit();sound_requested.emit("sfx_equip" if from>=40 or to>=40 else "sfx_item_move");return true
 		for i in equipment_slots.size():
 			if equipment.get(equipment_slots[i].id,{}).get("instance_id","")==source.get("instance_id"):
 				var moved := move_slot(40+i,to)
@@ -242,7 +243,7 @@ func move_slot(from: int, to: int) -> bool:
 		return false
 	if to<8 and slots[to].is_empty() and not target.is_empty():
 		if from>=40 and source.get("instance_id","")==target.get("instance_id",""):
-			hotbar_equipment.erase(str(to));slots[to]=source;equipment[slot_key(from)]={};changed.emit();return true
+			hotbar_equipment.erase(str(to));slots[to]=source;equipment[slot_key(from)]={};changed.emit();sound_requested.emit("sfx_equip" if from>=40 or to>=40 else "sfx_item_move");return true
 		return false
 	if source.is_empty() or not accepts(to,source) or not accepts(from,target): return false
 	if not target.is_empty() and source.item_id==target.item_id and Fresh.same(source,target):
@@ -255,6 +256,7 @@ func move_slot(from: int, to: int) -> bool:
 		set_slot(to,source)
 		set_slot(from,target)
 	changed.emit()
+	sound_requested.emit("sfx_equip" if from>=40 or to>=40 else "sfx_item_move")
 	return true
 
 func use_slot(index: int) -> bool:
@@ -299,6 +301,7 @@ func split_slot(index: int, count: int) -> int:
 		slots[target]=slots[index].duplicate(true);slots[target].count=count
 		slots[index].count-=count
 		changed.emit()
+		sound_requested.emit("sfx_item_move")
 		return target
 	return -1
 

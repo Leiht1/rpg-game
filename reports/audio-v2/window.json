@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "name": "original bytes preserved: sfx_ui_click",
+      "pass": true
+    },
+    {
+      "name": "only supplied single original configured: sfx_ui_click",
+      "pass": true
+    },
+    {
+      "name": "replacement decodes: sfx_ui_click",
+      "pass": true
+    },
+    {
+      "name": "original bytes preserved: sfx_ui_close",
+      "pass": true
+    },
+    {
+      "name": "only supplied single original configured: sfx_ui_close",
+      "pass": true
+    },
+    {
+      "name": "replacement decodes: sfx_ui_close",
+      "pass": true
+    },
+    {
+      "name": "original bytes preserved: sfx_step_dirt",
+      "pass": true
+    },
+    {
+      "name": "only supplied single original configured: sfx_step_dirt",
+      "pass": true
+    },
+    {
+      "name": "replacement decodes: sfx_step_dirt",
+      "pass": true
+    },
+    {
+      "name": "original bytes preserved: sfx_step_grass",
+      "pass": true
+    },
+    {
+      "name": "only supplied single original configured: sfx_step_grass",
+      "pass": true
+    },
+    {
+      "name": "replacement decodes: sfx_step_grass",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass starts",
+      "pass": true
+    },
+    {
+      "name": "grass uses original pitch",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass starts",
+      "pass": true
+    },
+    {
+      "name": "rapid grass steps never overlap",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt starts",
+      "pass": true
+    },
+    {
+      "name": "grass to dirt never overlaps",
+      "pass": true
+    },
+    {
+      "name": "dirt uses original pitch",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone starts",
+      "pass": true
+    },
+    {
+      "name": "single channel across sfx_step_stone",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood starts",
+      "pass": true
+    },
+    {
+      "name": "single channel across sfx_step_wood",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass starts",
+      "pass": true
+    },
+    {
+      "name": "single channel across sfx_step_grass",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt starts",
+      "pass": true
+    },
+    {
+      "name": "single channel across sfx_step_dirt",
+      "pass": true
+    },
+    {
+      "name": "new click sample triggered by real button",
+      "pass": true
+    },
+    {
+      "name": "new close sample triggered by bag closure",
+      "pass": true
+    },
+    {
+      "name": "world exit clears footstep channel",
+      "pass": true
+    }
+  ],
+  "count": 30,
+  "failed": 0
+}

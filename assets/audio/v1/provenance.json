@@ -1,0 +1,396 @@
+{
+  "date": "2026-10-19",
+  "authorization": "用户提供 D:\\windrest_audio 并要求配入游戏，新增 sfx_ui_error_01.wav 一起接入",
+  "license": "用户提供；未附外部网址或许可证，来源信息待补录，不推断授权类型",
+  "files": [
+    {
+      "source": "D:\\windrest_audio\\amb_rain_storm_loop.mp3",
+      "file": "amb_rain_storm_loop.mp3",
+      "sha256": "9db0db3a415ed55546c02210749ebf14b035bde16e138675f725699b5dc5f659"
+    },
+    {
+      "source": "D:\\windrest_audio\\fx_step_grass_01.ogg",
+      "file": "sfx_step_grass_02.ogg",
+      "sha256": "354682c2cb340cd787d892d31beb87c45dda94ca6e8363b16828ab2f1d129b82"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_bag_organize_01.wav",
+      "file": "sfx_bag_organize_01.wav",
+      "sha256": "44d4d6b0cda8138c9d5545ba4f434f53b7817ba32d98ddfdf5bff6ae7acdefdf"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_build_stone_01.ogg",
+      "file": "sfx_build_stone_01.ogg",
+      "sha256": "097e1d3b74949b0145fda0519d40b7e0773ab82ec4858727f95be830927e1a45"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_build_wood_01.ogg",
+      "file": "sfx_build_wood_01.ogg",
+      "sha256": "a11ae62fb1a628425769d11a9de394980ad8909c31f4c9a4316f226963e21caf"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_chest_close_01.ogg",
+      "file": "sfx_chest_close_01.ogg",
+      "sha256": "4aa4fe79836c53cd6d0cb0b22ddc33b9901429463ae1bb75131f072683f63f21"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_chest_open_01.ogg",
+      "file": "sfx_chest_open_01.ogg",
+      "sha256": "4ab93bab96522d8eb109ff96dc57cb6765deb02448fe14c10472084be5bb2a0b"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_dig_soil_01.wav",
+      "file": "sfx_dig_soil_01.wav",
+      "sha256": "d829b5ed7a47086771c639495713498e44ce28814f4ea6ddf30cb1f18c085c3f"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_door_close_01.ogg",
+      "file": "sfx_door_close_01.ogg",
+      "sha256": "fd21c0e7a9d0317375d2561590f0770dd3380ee35507d064862cb44d6f71595b"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_door_open_01.ogg",
+      "file": "sfx_door_open_01.ogg",
+      "sha256": "fd21c0e7a9d0317375d2561590f0770dd3380ee35507d064862cb44d6f71595b"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_drop_land_01.wav",
+      "file": "sfx_drop_land_01.wav",
+      "sha256": "b900ac84cd3d7fa6e07f8accd68fd96c2b9493ea5dea7b6d29fa6ec676f0cb3a"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_eat_01.wav",
+      "file": "sfx_eat_01.wav",
+      "sha256": "6451f3d697ba8e741e1d4bc032d771a5bd3ee33c3c01e81417c60947d3d1b25d"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_equip_01.ogg",
+      "file": "sfx_equip_01.ogg",
+      "sha256": "a48632d17a4f1416541d261a32a31612e01267144c407fa3ecab3ff410f0085b"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_fridge_close_01.ogg",
+      "file": "sfx_fridge_close_01.ogg",
+      "sha256": "ae3cbf695aa0a8b98b5a80a835be5a3ccbd5446a24db2235cd4c3cd6fc92ed96"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_fridge_open_01.ogg",
+      "file": "sfx_fridge_open_01.ogg",
+      "sha256": "ae3cbf695aa0a8b98b5a80a835be5a3ccbd5446a24db2235cd4c3cd6fc92ed96"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_item_move_01.ogg",
+      "file": "sfx_item_move_01.ogg",
+      "sha256": "e7ab9a6c4466dea874196c61f59bf1da05cfe58748f42fadd695d441a154a99b"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_lantern_off_01.ogg",
+      "file": "sfx_lantern_off_01.ogg",
+      "sha256": "ba9ba60b172b3ebc131a940f25793cd2e207aca7af73dc80d637277f060f1708"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_lantern_on_01.ogg",
+      "file": "sfx_lantern_on_01.ogg",
+      "sha256": "9851a69d0c613e13bceef08060ecc4148f098ef487927cbebe270d642398a3b3"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_map_mark_01.ogg",
+      "file": "sfx_map_mark_01.ogg",
+      "sha256": "a66f6db5918ad016c28a9f2768f127a7f39b5fa04481e5a3b4e78ebe2a1c282d"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_mine_hit_01.wav",
+      "file": "sfx_mine_hit_01.wav",
+      "sha256": "19c13a87e0f241cf05417506760d32eb1e2a61dc77c7798ea86b22fa9260f596"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_step_dirt_01.ogg",
+      "file": "sfx_step_dirt_01.ogg",
+      "sha256": "93b3bbcd06380eec54335d1869924db6ff2cc6c1cb103502133d78484c5ca836"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_step_dirt_02.ogg",
+      "file": "sfx_step_dirt_02.ogg",
+      "sha256": "477c35bfd3f740915b24f93cb66364523217692d2749057f9b8be162eb8209f4"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_step_grass_01.mp3",
+      "file": "sfx_step_grass_01.mp3",
+      "sha256": "1317df4795d78165949d2c4a6920f5e0653042dd4444731e72d6d81f8547d99c"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_step_stone_01.ogg",
+      "file": "sfx_step_stone_01.ogg",
+      "sha256": "482d97c5e1e6eb7b239be46f25d093ebebb94cefb56eedb04807b6a5dc68e972"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_step_wood_01.ogg",
+      "file": "sfx_step_wood_01.ogg",
+      "sha256": "817957e1f95d97fd36870064c41673895575cde17bccb245f50364c86ed10198"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_tool_swing_01.wav",
+      "file": "sfx_tool_swing_01.wav",
+      "sha256": "c7d50b9cb20ccda5aee6c023f4450915594061e36f3f9e78af241ca9fde0f817"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_tool_swing_02.wav",
+      "file": "sfx_tool_swing_02.wav",
+      "sha256": "2e4064e294d136e06c40cc562df969493907e6873f39895ca86b4a6b2e034c6e"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_tool_swing_03.wav",
+      "file": "sfx_tool_swing_03.wav",
+      "sha256": "d725421956c9958de6d7a17c4fca299abe583a1800c59eaec358ec2e82d79bae"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_ui_click_01.wav",
+      "file": "sfx_ui_click_01.wav",
+      "sha256": "c2da7de1e7cfb6c5c952954e5e0e720697057b78d723328cfd2b2dbcca8dc605"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_ui_close_01.wav",
+      "file": "sfx_ui_close_01.wav",
+      "sha256": "cb04bc963e1073aed9c4c3c9f6bbc6fb966e1059fefa1bf1304d7485e4e2a987"
+    },
+    {
+      "source": "D:\\windrest_audio\\sfx_ui_error_01.wav",
+      "file": "sfx_ui_error_01.wav",
+      "sha256": "c9ea598461bd790e1049974a39a9f5cc9dd4a84887549c3c5c256d2abbd4d1a5"
+    }
+  ],
+  "processing": "原文件逐字节保留；运行副本去前后静音、统一响度并限制峰值、短首尾淡化；草地MP3三次落脚拆为单步；雨声180ms跨接循环，无合成声音。",
+  "derived": [
+    {
+      "file": "runtime/amb_rain_storm_loop.ogg",
+      "source": "amb_rain_storm_loop.mp3",
+      "seconds": 2.82,
+      "gain_db": -1.82,
+      "sha256": "4aa58475829cff1d1d45d9ceb20b172bd1abed4553fb1de31b9a2fbafb38ead0"
+    },
+    {
+      "file": "runtime/sfx_step_grass_02.wav",
+      "source": "sfx_step_grass_02.ogg",
+      "seconds": 0.2599,
+      "gain_db": 21.69,
+      "sha256": "89e383b3093f2e77d753597375ad655febed32db3397d4164f28bbdcf384df6a"
+    },
+    {
+      "file": "runtime/sfx_step_grass_01.wav",
+      "source": "sfx_step_grass_01.mp3",
+      "seconds": 0.5,
+      "gain_db": 19.61,
+      "sha256": "96e9c4e140ad7fe0433eb9978978a033afaa31f54e010abc0bed7b8096d402d5"
+    },
+    {
+      "file": "runtime/sfx_step_grass_03.wav",
+      "source": "sfx_step_grass_01.mp3",
+      "seconds": 0.71,
+      "gain_db": 19.67,
+      "sha256": "3005dd56f2b5c331b2f19df0519b0f18dd4ed8797d8fcd85a3a8bb579412251d"
+    },
+    {
+      "file": "runtime/sfx_step_grass_04.wav",
+      "source": "sfx_step_grass_01.mp3",
+      "seconds": 0.7,
+      "gain_db": 20.35,
+      "sha256": "10c0fdbbc52939e32e7207f4b48e2e4312f98bb446d15e258d3cd6adc0f255c7"
+    },
+    {
+      "file": "runtime/sfx_bag_organize_01.wav",
+      "source": "sfx_bag_organize_01.wav",
+      "seconds": 0.4753,
+      "gain_db": -2.4,
+      "sha256": "a45b9bcd26e29c837e7f6a9fd12dcfb880cf3a5719ca7aa68ec4d59c161e9458"
+    },
+    {
+      "file": "runtime/sfx_build_stone_01.wav",
+      "source": "sfx_build_stone_01.ogg",
+      "seconds": 0.3525,
+      "gain_db": -5.74,
+      "sha256": "9ce93f11a064d71733bc6679f8e663b094fcfb6d1d6e5483355a5e9b066216d4"
+    },
+    {
+      "file": "runtime/sfx_build_wood_01.wav",
+      "source": "sfx_build_wood_01.ogg",
+      "seconds": 0.3505,
+      "gain_db": 8.87,
+      "sha256": "cb686d7099486528a525a3d9b6b8748adec7775b1df3297bc01ab66ff301629c"
+    },
+    {
+      "file": "runtime/sfx_chest_close_01.wav",
+      "source": "sfx_chest_close_01.ogg",
+      "seconds": 0.6125,
+      "gain_db": -4.9,
+      "sha256": "b8f80f84d0e03c5fe56ac4b9cbff61a8e3e34489f7427c17c38115568e90ec87"
+    },
+    {
+      "file": "runtime/sfx_chest_open_01.wav",
+      "source": "sfx_chest_open_01.ogg",
+      "seconds": 0.919,
+      "gain_db": -3.53,
+      "sha256": "50ca4dd65488b9a5b08d59ee659253d02989d59c855c6d2510fc84f467272bf0"
+    },
+    {
+      "file": "runtime/sfx_dig_soil_01.wav",
+      "source": "sfx_dig_soil_01.wav",
+      "seconds": 0.3608,
+      "gain_db": -4.29,
+      "sha256": "f8920e72dc476e2004ad4265396e74df7e840305738a657e23384dad3bfa765b"
+    },
+    {
+      "file": "runtime/sfx_door_close_01.wav",
+      "source": "sfx_door_close_01.ogg",
+      "seconds": 0.6032,
+      "gain_db": -5.59,
+      "sha256": "5c3a3296b16d7f81d1c7b600e7fd46e45039388cfab4e0bb5b30f8216e2f047f"
+    },
+    {
+      "file": "runtime/sfx_door_open_01.wav",
+      "source": "sfx_door_open_01.ogg",
+      "seconds": 0.6032,
+      "gain_db": -5.59,
+      "sha256": "5c3a3296b16d7f81d1c7b600e7fd46e45039388cfab4e0bb5b30f8216e2f047f"
+    },
+    {
+      "file": "runtime/sfx_drop_land_01.wav",
+      "source": "sfx_drop_land_01.wav",
+      "seconds": 0.3276,
+      "gain_db": -2.67,
+      "sha256": "6cdc1fe61daacd6aa347692b2b3cb7361f9cfaa1aab01e358745717cfa12e267"
+    },
+    {
+      "file": "runtime/sfx_eat_01.wav",
+      "source": "sfx_eat_01.wav",
+      "seconds": 0.4722,
+      "gain_db": -2.4,
+      "sha256": "83b157a82dd1706b67882b5404c57db770e802b1af7113e89983ea0ece02e9b0"
+    },
+    {
+      "file": "runtime/sfx_equip_01.wav",
+      "source": "sfx_equip_01.ogg",
+      "seconds": 0.4766,
+      "gain_db": 5.53,
+      "sha256": "fea8cc56c094befc9c94ba809e9dcde1117d7017786c43e4e662c29459807efc"
+    },
+    {
+      "file": "runtime/sfx_fridge_close_01.wav",
+      "source": "sfx_fridge_close_01.ogg",
+      "seconds": 0.2665,
+      "gain_db": 9.12,
+      "sha256": "ceff166c8c1f0ded14f1cec7fbcf152512380a2f063ccd694fc93d66892a498e"
+    },
+    {
+      "file": "runtime/sfx_fridge_open_01.wav",
+      "source": "sfx_fridge_open_01.ogg",
+      "seconds": 0.2665,
+      "gain_db": 9.12,
+      "sha256": "ceff166c8c1f0ded14f1cec7fbcf152512380a2f063ccd694fc93d66892a498e"
+    },
+    {
+      "file": "runtime/sfx_item_move_01.wav",
+      "source": "sfx_item_move_01.ogg",
+      "seconds": 0.3843,
+      "gain_db": 10.86,
+      "sha256": "ba966756814c9efff414baf9812142ef8f076243da5b7d1a037412792ed463f8"
+    },
+    {
+      "file": "runtime/sfx_lantern_off_01.wav",
+      "source": "sfx_lantern_off_01.ogg",
+      "seconds": 0.2498,
+      "gain_db": -4.11,
+      "sha256": "c88c71340602d12327df338d937d76b161802e0ff6b6887a02aae9721aa6fcad"
+    },
+    {
+      "file": "runtime/sfx_lantern_on_01.wav",
+      "source": "sfx_lantern_on_01.ogg",
+      "seconds": 0.4194,
+      "gain_db": 4.43,
+      "sha256": "da4dd1b77501cc96ece8548efe643b6cf508370e076433e26cb79e72c441933e"
+    },
+    {
+      "file": "runtime/sfx_map_mark_01.wav",
+      "source": "sfx_map_mark_01.ogg",
+      "seconds": 0.2968,
+      "gain_db": 13.97,
+      "sha256": "38e513c2e3aed0e10d3c228254d1f7868f6d1b989e5883d7598bf43c36917eee"
+    },
+    {
+      "file": "runtime/sfx_mine_hit_01.wav",
+      "source": "sfx_mine_hit_01.wav",
+      "seconds": 0.2234,
+      "gain_db": -2.4,
+      "sha256": "e378d88018142fa6d7694a58db161576ba6530608001975757d86dfbc80dabd3"
+    },
+    {
+      "file": "runtime/sfx_step_dirt_01.wav",
+      "source": "sfx_step_dirt_01.ogg",
+      "seconds": 0.3913,
+      "gain_db": 20.11,
+      "sha256": "1934bd4fa6b0594518a0457efa3a77f25f6708570bd9e3ee878a1123f4b59752"
+    },
+    {
+      "file": "runtime/sfx_step_dirt_02.wav",
+      "source": "sfx_step_dirt_02.ogg",
+      "seconds": 0.4743,
+      "gain_db": 26.7,
+      "sha256": "f996bcd85d6beb7206aa8d8edaa9263ac61228d5b57ef5bfb517c480d6c5874f"
+    },
+    {
+      "file": "runtime/sfx_step_stone_01.wav",
+      "source": "sfx_step_stone_01.ogg",
+      "seconds": 0.2446,
+      "gain_db": 12.83,
+      "sha256": "5f0e0e2b7481fc285551b495c709552b46019ebf8d1e6e95a3b15c2e2e1e1c58"
+    },
+    {
+      "file": "runtime/sfx_step_wood_01.wav",
+      "source": "sfx_step_wood_01.ogg",
+      "seconds": 0.2758,
+      "gain_db": 0.49,
+      "sha256": "3064b4078f92bcead374bd904d83d8ef2653c34e85cf4c37f3f09894fd85a403"
+    },
+    {
+      "file": "runtime/sfx_tool_swing_01.wav",
+      "source": "sfx_tool_swing_01.wav",
+      "seconds": 0.1736,
+      "gain_db": -9.24,
+      "sha256": "bff5b4a31e95ec7ce83b361809a6d6e180dde613367a490911a8353878b8d37c"
+    },
+    {
+      "file": "runtime/sfx_tool_swing_02.wav",
+      "source": "sfx_tool_swing_02.wav",
+      "seconds": 0.1362,
+      "gain_db": -10.51,
+      "sha256": "aca49541dc135688a8177e33f4fab4eb0830c84c3d53d5969aafe4583a8904f4"
+    },
+    {
+      "file": "runtime/sfx_tool_swing_03.wav",
+      "source": "sfx_tool_swing_03.wav",
+      "seconds": 0.1227,
+      "gain_db": -11.88,
+      "sha256": "0745abc33fcd55c4a86dbfd59beaa416fe25f13d35d6672a753904893a1f0f4f"
+    },
+    {
+      "file": "runtime/sfx_ui_click_01.wav",
+      "source": "sfx_ui_click_01.wav",
+      "seconds": 0.1272,
+      "gain_db": 19.21,
+      "sha256": "220498a505560a93a1890a51c56e3286c0307ca819f1077a391c0fc547b1e9af"
+    },
+    {
+      "file": "runtime/sfx_ui_close_01.wav",
+      "source": "sfx_ui_close_01.wav",
+      "seconds": 0.0908,
+      "gain_db": 24.79,
+      "sha256": "f86c6a69cd16766923ca4862c07e695e33f29e5de71e5cac26c9f2163b2ef756"
+    },
+    {
+      "file": "runtime/sfx_ui_error_01.wav",
+      "source": "sfx_ui_error_01.wav",
+      "seconds": 0.2901,
+      "gain_db": -8.4,
+      "sha256": "bb2a5d3ad1117192c8d666af36f344c01a0ffe7739fe0e9299540ce850c2f81b"
+    }
+  ]
+}

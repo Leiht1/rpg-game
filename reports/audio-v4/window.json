@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "name": "sfx_step_grass reduced 4dB",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt reduced 4dB",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone reduced 4dB",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood reduced 4dB",
+      "pass": true
+    },
+    {
+      "name": "grass keeps requested swapped original",
+      "pass": true
+    },
+    {
+      "name": "dirt keeps requested swapped original",
+      "pass": true
+    },
+    {
+      "name": "first long step starts",
+      "pass": true
+    },
+    {
+      "name": "original pitch retained",
+      "pass": true
+    },
+    {
+      "name": "running footfall preserves active voice: sfx_step_grass",
+      "pass": true
+    },
+    {
+      "name": "running footfall preserves active voice: sfx_step_dirt",
+      "pass": true
+    },
+    {
+      "name": "running footfall preserves active voice: sfx_step_stone",
+      "pass": true
+    },
+    {
+      "name": "sample progresses through tail without restarting",
+      "pass": true
+    },
+    {
+      "name": "no overlapping or queued footsteps",
+      "pass": true
+    },
+    {
+      "name": "first sample finishes naturally",
+      "pass": true
+    },
+    {
+      "name": "stopping movement does not replay skipped footfalls",
+      "pass": true
+    },
+    {
+      "name": "new real footfall starts after old sample finishes",
+      "pass": true
+    },
+    {
+      "name": "short sample also finishes naturally",
+      "pass": true
+    },
+    {
+      "name": "wood footfall still plays",
+      "pass": true
+    },
+    {
+      "name": "stone footfall still plays",
+      "pass": true
+    },
+    {
+      "name": "world exit cleans up",
+      "pass": true
+    }
+  ],
+  "count": 20,
+  "failed": 0
+}

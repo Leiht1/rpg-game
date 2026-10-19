@@ -21,9 +21,11 @@ var craft_busy := false
 var craft_station_id := ""
 
 func workbench_valid(id: String) -> bool:
-	if not builds.states.has(id) or builds.states[id].kind!="workbench": return false
+	if not builds.states.has(id) or builds.states[id].kind not in ["workbench","metal_workbench"]: return false
 	if not builds.visuals.has(id) or not is_instance_valid(builds.visuals[id]): return false
 	return preload("res://scripts/world_interaction.gd").in_reach(world.stream,world.player.position,builds.visuals[id])
+func crafting_station_kind() -> String:
+	return str(builds.states[craft_station_id].kind) if workbench_valid(craft_station_id) else ""
 var craft_sequence := 0
 var craft_last_request := 0
 var craft_job: Dictionary = {}
@@ -59,15 +61,17 @@ var navigation_ms := 0.0
 var discard_serial := 0
 var texture_cache: Dictionary = {}
 signal notice(message: String)
+func notify_build_cost(materials: Dictionary) -> void:
+	var entries: Array[String]=[]
+	for id in materials:
+		if int(materials[id])>0:entries.append(str(database.item(id).name)+" ×%d"%int(materials[id]))
+	if not entries.is_empty():notice.emit("消耗："+"、".join(entries))
 
 func configure(owner_world: Node, art_preview: bool) -> void:
 	world = owner_world
 	camps.service=self
 	builds.service=self
 	industry.service=self
-	if industry.enabled():
-		for row in camps.build_book.recipes.values():
-			if row.get("industry_candidate",false):row.default_unlocked=true
 	planting.service=self
 	animals=preload("res://scripts/animals.gd").new()
 	animals.service=self
@@ -121,7 +125,8 @@ func craft_check(recipe_id: String, batches: int) -> String:
 	var reason: String=craft_book.validate(row)
 	if not reason.is_empty(): return reason
 	if not row.default_unlocked: return "配方尚未解锁"
-	if "workbench" in row.conditions and (craft_station_id.is_empty() or not workbench_valid(craft_station_id)): return "需要靠近并使用工具台制作"
+	if crafting_station_kind()=="metal_workbench" and row.conditions!=["metal_workbench"]:return "金属加工台不能制作此物品"
+	if not row.conditions.is_empty() and row.conditions!=[crafting_station_kind()]: return "需要靠近并使用对应加工台制作"
 	if batches<1 or batches>craft_book.MAX_BATCH: return "制作次数须为1–99"
 	var materials := {}
 	for id in row.materials: materials[id]=int(row.materials[id])*batches
@@ -197,6 +202,7 @@ func burn_lantern(dt: float) -> void:
 	slot.fuel=lantern_remaining
 	dirty=true
 	if lantern_remaining<=0:
+		if lantern.visible:AudioFX.play_sfx("sfx_lantern_off",world.player.position)
 		lantern.hide()
 		if database.item(slot.item_id).get("expire_remove",false):
 			for i in inventory.slots.size():
@@ -216,7 +222,9 @@ func toggle_lantern(index: int = -1) -> void:
 	if index<0: return
 	var slot: Dictionary=inventory.get_slot(index)
 	if slot.is_empty() or database.item(slot.item_id).get("use_action","")!="light":return
-	if not slot.has("lamp_id"): slot.lamp_id=str(ResourceUID.create_id());slot.fuel=1800.0
+	if not slot.has("lamp_id"):
+		slot.lamp_id=str(ResourceUID.create_id())
+		slot.fuel=float(database.item(slot.item_id).get("lamp_lifetime",1800.0))
 	var same := active_lamp==str(slot.lamp_id)
 	active_lamp=str(slot.lamp_id)
 	lantern_remaining=float(slot.get("fuel",1800.0))
@@ -228,12 +236,15 @@ func toggle_lantern(index: int = -1) -> void:
 		world.player.add_child(lantern)
 		lantern.service=self
 	lantern.visible=not lantern.visible if same else true
+	AudioFX.play_sfx("sfx_lantern_on" if lantern.visible else "sfx_lantern_off",world.player.position)
 	dirty=true
 
 func stack_texture(value: Dictionary, kind: String) -> Texture2D:
 	if preload("res://scripts/food_freshness.gd").rotten(value):
-		var path := "res://prototypes/industry-v1/final/rotten_"+str(value.item_id)+".png"
-		if FileAccess.file_exists(path):return preload("res://scripts/candidate_art.gd").texture(path)
+		var path := "res://assets/industry/v1/rotten_"+str(value.item_id)+".png"
+		if ResourceLoader.exists(path):
+			if not texture_cache.has(path): texture_cache[path]=load(path)
+			return texture_cache[path]
 	return texture(str(value.get("item_id","")),kind)
 
 func texture(id: String, kind: String) -> Texture2D:
@@ -241,7 +252,9 @@ func texture(id: String, kind: String) -> Texture2D:
 	if definition.is_empty(): return null
 	var path := str(definition.icon if kind in ["icon","loose"] else definition.world_visual)
 	if id in ["sleeping_bag","straw_mat","wood_bed"]: path=preload("res://scripts/sleep_controller.gd").art_path(id)
-	if path.begins_with("res://prototypes/industry-v1/"):return preload("res://scripts/candidate_art.gd").texture(path)
+	if path.begins_with("res://assets/industry/v1/"):
+		if not texture_cache.has(path): texture_cache[path]=load(path)
+		return texture_cache[path]
 	if ResourceLoader.exists(path):
 		if not texture_cache.has(path):
 			var source: Texture2D = load(path)
@@ -279,6 +292,7 @@ func organize_bag() -> String:
 		inventory.slots=before;dirty=previous_dirty
 		return "保存失败，整理已回滚"
 	inventory.changed.emit()
+	AudioFX.play_sfx("sfx_bag_organize")
 	return ""
 
 func save_state() -> bool:

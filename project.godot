@@ -15,6 +15,12 @@ config/description="卡通草地与景物融合 · Seed地图 · 连续挥砍与
 run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
+[autoload]
+
+AudioFX="*res://scripts/audio_fx.gd"
+
+UIFade="*res://scripts/ui_fade.gd"
+
 [display]
 
 window/size/viewport_width=1280

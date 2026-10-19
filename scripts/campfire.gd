@@ -25,15 +25,15 @@ func _ready() -> void:
 	fuel_bar.scale=Vector2(1.0,1.0/6.0)
 	fuel_bar.max_value=float(manager.rules.max_fuel);fuel_bar.show_percentage=false
 	fuel_bar.mouse_filter=Control.MOUSE_FILTER_IGNORE
-	var track := StyleBoxFlat.new();track.bg_color=Color("625840");track.set_corner_radius_all(3)
-	var fill := StyleBoxFlat.new();fill.bg_color=Color("e7ac55");fill.set_corner_radius_all(3)
-	fuel_bar.add_theme_stylebox_override("background",track);fuel_bar.add_theme_stylebox_override("fill",fill);add_child(fuel_bar)
+	add_child(fuel_bar)
+	preload("res://scripts/item_ui_style.gd").progress_style(fuel_bar,true,false)
 
 func _process(delta: float) -> void:
 	if damage_seconds>0:
 		damage_seconds=maxf(0,damage_seconds-delta)
 		if damage_seconds==0: damage.hide()
 	flame.visible=manager.states.has(camp_id) and manager.states[camp_id].lit
+	preload("res://scripts/item_ui_style.gd").progress_style(fuel_bar,true,flame.visible)
 	fuel_bar.value=float(manager.states[camp_id].fuel) if manager.states.has(camp_id) else 0.0
 	if not flame.visible: return
 	age+=delta

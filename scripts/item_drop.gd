@@ -13,6 +13,7 @@ func animate_drop() -> void:
 	var flight := create_tween()
 	flight.tween_property(visual,"position",Vector2(-5,-40),.10).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	flight.tween_property(visual,"position",Vector2.ZERO,.18).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	flight.tween_callback(func():AudioFX.play_sfx("sfx_drop_land",global_position))
 	flight.tween_property(visual,"position",Vector2(0,-6),.07).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	flight.tween_property(visual,"position",Vector2.ZERO,.08).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	flight.parallel().tween_property(visual,"rotation",0.0,.08)

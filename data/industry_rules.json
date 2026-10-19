@@ -1,7 +1,10 @@
 {
   "version": 1,
-  "max_fuel": 2400.0,
-  "queue_limit": 12,
+  "max_fuel": 2000.0,
+  "queue_limit": 5,
+  "completed_limit": 6,
+  "copper_lamp_radius": 300.0,
+  "copper_lamp_strength": 1.35,
   "trough_range": 180.0,
   "trough_capacity": 99,
   "rotten_hunger_ratio": 0.25,

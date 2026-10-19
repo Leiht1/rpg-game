@@ -121,5 +121,151 @@
     "default_unlocked": true,
     "description": "在工具台将铜银矿材加工成轻便剪刀。",
     "craft_time": 1.5
-  }
+  },
+{
+  "recipe_id": "metal_copper_plate",
+  "output_id": "copper_plate",
+  "output_count": 1,
+  "materials": {
+    "copper_ingot": 1
+  },
+  "category": "材料加工",
+  "conditions": [
+    "metal_workbench"
+  ],
+  "default_unlocked": true,
+  "description": "在金属加工台制作。",
+  "craft_time": 1.5
+},
+{
+  "recipe_id": "metal_copper_parts",
+  "output_id": "copper_parts",
+  "output_count": 2,
+  "materials": {
+    "copper_ingot": 1
+  },
+  "category": "材料加工",
+  "conditions": [
+    "metal_workbench"
+  ],
+  "default_unlocked": true,
+  "description": "在金属加工台制作。",
+  "craft_time": 1.5
+},
+{
+  "recipe_id": "metal_metal_connector",
+  "output_id": "metal_connector",
+  "output_count": 2,
+  "materials": {
+    "copper_ingot": 1
+  },
+  "category": "材料加工",
+  "conditions": [
+    "metal_workbench"
+  ],
+  "default_unlocked": true,
+  "description": "在金属加工台制作。",
+  "craft_time": 1.5
+},
+{
+  "recipe_id": "metal_copper_axe",
+  "output_id": "copper_axe",
+  "output_count": 1,
+  "materials": {
+    "copper_ingot": 2,
+    "wood": 2,
+    "plant_fiber": 2
+  },
+  "category": "工具",
+  "conditions": [
+    "metal_workbench"
+  ],
+  "default_unlocked": true,
+  "description": "在金属加工台制作。",
+  "craft_time": 1.5
+},
+{
+  "recipe_id": "metal_copper_pickaxe",
+  "output_id": "copper_pickaxe",
+  "output_count": 1,
+  "materials": {
+    "copper_ingot": 3,
+    "wood": 2,
+    "plant_fiber": 2
+  },
+  "category": "工具",
+  "conditions": [
+    "metal_workbench"
+  ],
+  "default_unlocked": true,
+  "description": "在金属加工台制作。",
+  "craft_time": 1.5
+},
+{
+  "recipe_id": "metal_copper_shovel",
+  "output_id": "copper_shovel",
+  "output_count": 1,
+  "materials": {
+    "copper_plate": 2,
+    "wood": 2
+  },
+  "category": "工具",
+  "conditions": [
+    "metal_workbench"
+  ],
+  "default_unlocked": true,
+  "description": "在金属加工台制作。",
+  "craft_time": 1.5
+},
+{
+  "recipe_id": "metal_copper_hammer",
+  "output_id": "copper_hammer",
+  "output_count": 1,
+  "materials": {
+    "copper_ingot": 3,
+    "wood": 2
+  },
+  "category": "工具",
+  "conditions": [
+    "metal_workbench"
+  ],
+  "default_unlocked": true,
+  "description": "在金属加工台制作。",
+  "craft_time": 1.5
+},
+{
+  "recipe_id": "metal_silver_lantern",
+  "output_id": "silver_lantern",
+  "output_count": 1,
+  "materials": {
+    "silver_ingot": 2,
+    "copper_parts": 2,
+    "plant_fiber": 2
+  },
+  "category": "野外用品",
+  "conditions": [
+    "metal_workbench"
+  ],
+  "default_unlocked": true,
+  "description": "在金属加工台制作。",
+  "craft_time": 1.5
+},
+{
+  "recipe_id": "metal_fishing_rod",
+  "output_id": "fishing_rod",
+  "output_count": 1,
+  "materials": {
+    "wood": 2,
+    "plant_fiber": 2,
+    "wool": 1,
+    "copper_parts": 1
+  },
+  "category": "工具",
+  "conditions": [
+    "metal_workbench"
+  ],
+  "default_unlocked": true,
+  "description": "在金属加工台制作。",
+  "craft_time": 1.5
+}
 ]

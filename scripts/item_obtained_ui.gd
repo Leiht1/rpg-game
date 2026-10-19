@@ -27,6 +27,5 @@ func _process(delta: float) -> void:
 		var area := get_viewport().get_visible_rect().size
 		var dock: Control=service.world.item_ui.dock
 		card.position=Vector2((area.x-card.size.x)*.5,dock.position.y-card.size.y-12)
-		card.modulate.a=minf(1,remaining/.3)
 	# Keep existing short notices readable when a reward and a failure arrive together.
 	service.world.item_ui.message.position.y=minf(558,card.position.y-service.world.item_ui.message.size.y-8) if card.visible else 558

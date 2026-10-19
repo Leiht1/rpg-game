@@ -118,6 +118,7 @@ func _ready() -> void:
 		resource_debug.name="ResourceDebug"
 		add_child(resource_debug)
 		resource_debug.configure(self)
+	AudioFX.bind_world(self)
 	if benchmark:
 		player.automated=true
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)

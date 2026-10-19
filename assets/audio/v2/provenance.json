@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-19",
+  "authorization": "替换修改后的click、close、dirt01；草地只用用户给的单个声音，不叠加，不使用之前拆分/加工版本。",
+  "files": [
+    {
+      "key": "sfx_ui_click",
+      "source": "D:\\windrest_audio\\sfx_ui_click_01.wav",
+      "file": "sfx_ui_click_01.wav",
+      "sha256": "d39753b3c99cb78a97911f85c6baa33aaf15058684f51fa4c903202a43dd6cad",
+      "processing": "none; byte-for-byte original"
+    },
+    {
+      "key": "sfx_ui_close",
+      "source": "D:\\windrest_audio\\sfx_ui_close_01.wav",
+      "file": "sfx_ui_close_01.wav",
+      "sha256": "74c9b5bb74f28046ce9f215a6bd8579cd7e832320c40cc12ad49d34c917fe90c",
+      "processing": "none; byte-for-byte original"
+    },
+    {
+      "key": "sfx_step_dirt",
+      "source": "D:\\windrest_audio\\sfx_step_dirt_01.mp3",
+      "file": "sfx_step_dirt_01.mp3",
+      "sha256": "87e34f985892ca5cabee0cc3dcc5b4162c20f8af161750b7997c0b9e2626fb46",
+      "processing": "none; byte-for-byte original"
+    },
+    {
+      "key": "sfx_step_grass",
+      "source": "D:\\windrest_audio\\fx_step_grass_01.ogg",
+      "file": "sfx_step_grass_01.ogg",
+      "sha256": "354682c2cb340cd787d892d31beb87c45dda94ca6e8363b16828ab2f1d129b82",
+      "processing": "none; byte-for-byte original"
+    }
+  ]
+}

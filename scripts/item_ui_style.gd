@@ -2,6 +2,16 @@ extends RefCounted
 ## Lightweight field notebook: paper, linen inserts and cloth tabs, distinct visual weights.
 static var cache: Dictionary = {}
 
+static func progress_style(bar: ProgressBar, fuel: bool=false, burning: bool=false) -> void:
+	var key := "fuel_on" if fuel and burning else "fuel_off" if fuel else "production"
+	if bar.get_meta("progress_style","")==key:return
+	bar.set_meta("progress_style",key)
+	var track := StyleBoxFlat.new();track.set_corner_radius_all(4)
+	track.bg_color=Color("d7d8d7") if fuel else Color("d9e8ca")
+	var fill := StyleBoxFlat.new();fill.set_corner_radius_all(4)
+	fill.bg_color=Color("f49a38") if fuel and burning else Color("8e9397") if fuel else Color("70b34c")
+	bar.add_theme_stylebox_override("background",track);bar.add_theme_stylebox_override("fill",fill)
+
 static func art(name_value: String) -> Texture2D:
 	if not cache.has(name_value):
 		var path := "res://assets/ui/rework_v1/"+name_value+".png"

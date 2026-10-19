@@ -124,6 +124,7 @@ func _physics_process(delta: float) -> void:
 		cancel_action()
 	if not action.is_empty():
 		direction=Vector2.ZERO
+		if action_clock==0.0 and action in ["chop","mine","dig","demolish"]:AudioFX.play_sfx("sfx_tool_swing",position)
 		action_clock+=delta*(equipment_inventory.labor_speed() if equipment_inventory!=null and action in ["chop","mine","dig","demolish"] else 1.0)*(body.efficiency() if body!=null and action in ["chop","mine","dig","demolish"] else 1.0)
 		if action=="dig" and not action_contact and action_clock>=.43:
 			action_contact=true
@@ -132,6 +133,8 @@ func _physics_process(delta: float) -> void:
 		if not action_committed and action_clock>=(.55 if action in ["mine","demolish"] else .68 if action=="dig" else .48 if harvesting else .36):
 			action_committed=true
 			action_succeeded=Interaction.execute(stream,self,action_target)
+			if action_succeeded and action in ["mine","dig"]:
+				AudioFX.play_sfx("sfx_mine_hit" if action=="mine" else "sfx_dig_soil",position)
 		var view := "side" if facing in ["left","right"] else facing
 		var clip_name := ("harvest/" if action in ["mine","dig","demolish"] else "")+view+"_"+("mine" if action=="demolish" else action)
 		if action=="shear":clip_name="camp/"+view+"_throw_right"

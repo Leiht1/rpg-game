@@ -93,7 +93,8 @@
     }
   },
   "tool:copper_axe": {
-    "texture": "res://prototypes/industry-v1/final/copper_axe.png",
+    "idle_rotation_degrees": 35,
+    "texture": "res://assets/industry/v1/copper_axe.png",
     "grip_px": [
       83,
       190
@@ -111,7 +112,8 @@
     }
   },
   "tool:copper_pickaxe": {
-    "texture": "res://prototypes/industry-v1/final/copper_pickaxe.png",
+    "idle_rotation_degrees": 65,
+    "texture": "res://assets/industry/v1/copper_pickaxe.png",
     "grip_px": [
       128,
       190
@@ -129,7 +131,8 @@
     }
   },
   "tool:copper_shovel": {
-    "texture": "res://prototypes/industry-v1/final/copper_shovel.png",
+    "idle_rotation_degrees": 35,
+    "texture": "res://assets/industry/v1/copper_shovel.png",
     "grip_px": [
       128,
       190
@@ -147,7 +150,8 @@
     }
   },
   "tool:copper_hammer": {
-    "texture": "res://prototypes/industry-v1/final/copper_hammer.png",
+    "idle_rotation_degrees": 35,
+    "texture": "res://assets/industry/v1/copper_hammer.png",
     "grip_px": [
       128,
       190
@@ -165,7 +169,7 @@
     }
   },
   "tool:fishing_rod": {
-    "texture": "res://prototypes/industry-v1/final/fishing_rod.png",
+    "texture": "res://assets/industry/v1/fishing_rod.png",
     "grip_px": [
       70,
       192
@@ -180,24 +184,6 @@
       "front": -20,
       "back": -20,
       "side": -30
-    }
-  },
-  "tool:silver_lantern": {
-    "texture": "res://prototypes/industry-v1/final/silver_lantern.png",
-    "grip_px": [
-      128,
-      24
-    ],
-    "scale": 0.18,
-    "rotation_degrees": 0,
-    "hand_offset": [
-      0,
-      -2.75
-    ],
-    "stance_degrees": {
-      "front": 0,
-      "back": 0,
-      "side": 0
     }
   }
 }

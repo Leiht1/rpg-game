@@ -1,0 +1,226 @@
+{
+  "checks": [
+    {
+      "name": "recipe definitions valid",
+      "pass": true
+    },
+    {
+      "name": "metal building exposes only its own nine products",
+      "pass": true
+    },
+    {
+      "name": "ordinary workbench keeps its original hand and bench recipes",
+      "pass": true
+    },
+    {
+      "name": "ordinary building has no metal-exclusive products",
+      "pass": true
+    },
+    {
+      "name": "metal UI all category contains no ordinary recipes",
+      "pass": true
+    },
+    {
+      "name": "service also rejects hand recipes at metal station",
+      "pass": true
+    },
+    {
+      "name": "service rejects ordinary bench recipes at metal station",
+      "pass": true
+    },
+    {
+      "name": "metal recipe remains craftable at its own station",
+      "pass": true
+    },
+    {
+      "name": "metal product type metal_copper_plate",
+      "pass": true
+    },
+    {
+      "name": "metal product type metal_copper_parts",
+      "pass": true
+    },
+    {
+      "name": "metal product type metal_metal_connector",
+      "pass": true
+    },
+    {
+      "name": "metal product type metal_copper_axe",
+      "pass": true
+    },
+    {
+      "name": "metal product type metal_copper_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "metal product type metal_copper_shovel",
+      "pass": true
+    },
+    {
+      "name": "metal product type metal_copper_hammer",
+      "pass": true
+    },
+    {
+      "name": "metal product type metal_fishing_rod",
+      "pass": true
+    },
+    {
+      "name": "metal product type metal_silver_lantern",
+      "pass": true
+    },
+    {
+      "name": "metal categories follow product types",
+      "pass": true
+    },
+    {
+      "name": "crafting and campfire production bars are green",
+      "pass": true
+    },
+    {
+      "name": "construction type wood_chest",
+      "pass": true
+    },
+    {
+      "name": "construction type workbench",
+      "pass": true
+    },
+    {
+      "name": "construction type camp_torch",
+      "pass": true
+    },
+    {
+      "name": "construction type stone_furnace",
+      "pass": true
+    },
+    {
+      "name": "construction type metal_workbench",
+      "pass": true
+    },
+    {
+      "name": "construction type copper_oven",
+      "pass": true
+    },
+    {
+      "name": "construction type reinforced_cabinet",
+      "pass": true
+    },
+    {
+      "name": "obsolete construction categories removed",
+      "pass": true
+    },
+    {
+      "name": "green process progress furnace",
+      "pass": true
+    },
+    {
+      "name": "green process progress furnace",
+      "pass": true
+    },
+    {
+      "name": "green process progress furnace",
+      "pass": true
+    },
+    {
+      "name": "green process progress furnace",
+      "pass": true
+    },
+    {
+      "name": "unlit fuel bar gray furnace",
+      "pass": true
+    },
+    {
+      "name": "ignite furnace",
+      "pass": true
+    },
+    {
+      "name": "lit fuel bar flame orange furnace",
+      "pass": true
+    },
+    {
+      "name": "extinguished fuel returns gray furnace",
+      "pass": true
+    },
+    {
+      "name": "green process progress oven",
+      "pass": true
+    },
+    {
+      "name": "green process progress oven",
+      "pass": true
+    },
+    {
+      "name": "green process progress oven",
+      "pass": true
+    },
+    {
+      "name": "green process progress oven",
+      "pass": true
+    },
+    {
+      "name": "unlit fuel bar gray oven",
+      "pass": true
+    },
+    {
+      "name": "ignite oven",
+      "pass": true
+    },
+    {
+      "name": "lit fuel bar flame orange oven",
+      "pass": true
+    },
+    {
+      "name": "extinguished fuel returns gray oven",
+      "pass": true
+    },
+    {
+      "name": "world campfire unlit fuel gray",
+      "pass": true
+    },
+    {
+      "name": "world campfire burning fuel orange",
+      "pass": true
+    },
+    {
+      "name": "lantern fuel uses active flame color",
+      "pass": true
+    },
+    {
+      "name": "switched-off lantern fuel style returns gray",
+      "pass": true
+    },
+    {
+      "name": "actual shader receives brighter copper intensity while other lights retain 1",
+      "pass": true
+    },
+    {
+      "name": "GPU night-time center actually brighter",
+      "pass": true
+    },
+    {
+      "name": "GPU outside lamp radius unchanged",
+      "pass": true
+    },
+    {
+      "name": "resume furnace for actual completion",
+      "pass": true
+    },
+    {
+      "name": "actual completed ingot emits chimney burst once",
+      "pass": true
+    },
+    {
+      "name": "real default-window chimney smoke visibly changes native pixels",
+      "pass": true
+    },
+    {
+      "name": "smoke lasts beyond former 1.5 seconds",
+      "pass": true
+    },
+    {
+      "name": "completion smoke finishes without permanent smoke",
+      "pass": true
+    }
+  ],
+  "count": 55,
+  "failed": 0
+}

@@ -70,7 +70,7 @@ func validate(data: Variant, seen: Dictionary) -> bool:
 		if row.kind!="wood_chest" and not d.has("storage_slots") and row.contents.any(func(v): return not v is Dictionary or not v.is_empty()): return false
 		if not service.industry.valid(row):return false
 		if row.has("machine"):
-			for job in row.machine.jobs+row.machine.queue:
+			for job in row.machine.jobs+row.machine.queue+row.machine.completed+row.machine.legacy_queue:
 				if job.is_empty() or not job.output.has("instance_id"):continue
 				var instance_id: String=str(job.output.instance_id)
 				if seen.has(instance_id):return false
@@ -120,10 +120,17 @@ func cost(row: Dictionary) -> Dictionary:
 			if result[key]==0: result.erase(key)
 	return result
 
+func paving_can_cover(node: Node) -> bool:
+	# Only registered facilities are exempt; resources and unrelated colliders stay protected.
+	var id := str(node.get_meta("building_id",""))
+	if states.has(id):
+		var existing: Dictionary=states[id]
+		return existing.layer not in ["ground","edge"] or definitions[existing.kind].get("door",false)
+	return service.camps.visuals.get(str(node.get_meta("prop_id","")))==node
+
 func reason(row: Dictionary) -> String:
 	if not definitions.has(row.get("kind","")) or not row.has_all(["x","y","layer","vertical"]): return "无效建造位置"
 	if not service.writable: return "存档受保护，不能建造"
-	if definitions[row.kind].get("industry_candidate",false) and not service.industry.enabled():return "候选设施尚未开放"
 	if row.kind=="wool_carpet":
 		var floor_found := false
 		for base in states.values():
@@ -141,6 +148,7 @@ func reason(row: Dictionary) -> String:
 	var occupied := occupant(row)
 	var replace_id := replacement(row)
 	if not occupied.is_empty() and replace_id.is_empty(): return "此位置已有建筑"
+	var paving: bool=row.kind in ["wood_floor","stone_path"]
 	var offsets: Array=[Vector2.ZERO]
 	if definitions[row.kind].get("sleep",false):
 		var bounds := footprint_rect(row)
@@ -154,6 +162,7 @@ func reason(row: Dictionary) -> String:
 		if not world.generator.can_walk(p,10) or world.generator.sample(p).z>.03: return "需要干燥陆地"
 		if row.layer not in ["ground","overlay"] and world.player.position.distance_to(p)<22: return "请避开角色"
 		for node in world.get_tree().get_nodes_in_group("world_interactables")+world.get_tree().get_nodes_in_group("trees"):
+			if paving and paving_can_cover(node): continue
 			if node.get_meta("building_id","")==replace_id and not replace_id.is_empty(): continue
 			if node.get_meta("camp_layer","")=="ground": continue
 			if definitions[row.kind].get("sleep",false):
@@ -168,6 +177,7 @@ func reason(row: Dictionary) -> String:
 		var query := PhysicsPointQueryParameters2D.new();query.position=p;query.collision_mask=1
 		for hit in world.get_world_2d().direct_space_state.intersect_point(query):
 			var parent: Node=hit.collider.get_parent()
+			if paving and paving_can_cover(parent): continue
 			if parent.get_meta("camp_layer","")=="edge" and row.layer=="edge": continue
 			if parent.get_meta("building_id","")==replace_id and not replace_id.is_empty(): continue
 			return "附近有障碍"
@@ -177,8 +187,9 @@ func reason(row: Dictionary) -> String:
 	if definitions[row.kind].get("sleep",false): area.transform.origin+=footprint_rect(row).get_center()
 	for hit in world.get_world_2d().direct_space_state.intersect_shape(area,32):
 		var parent: Node=hit.collider.get_parent()
+		if paving and paving_can_cover(parent): continue
 		if row.layer in ["ground","overlay"] and hit.collider is CharacterBody2D: continue
-		if parent.get_meta("camp_layer","")=="edge" and row.layer in ["edge","ground","overlay"]: continue
+		if parent.get_meta("camp_layer","")=="edge" and row.layer in ["edge","ground","overlay"] and not paving: continue
 		if not replace_id.is_empty() and parent.get_meta("building_id","")==replace_id: continue
 		return "建筑占地与障碍重叠"
 	for key in cost(row):
@@ -194,7 +205,8 @@ func place(row: Dictionary, expected: Array) -> String:
 	busy=true
 	var before := states.duplicate(true)
 	var slots: Array=service.inventory.slots.duplicate(true)
-	var staged: ItemInventory=service.camps.consume(cost(row))
+	var paid: Dictionary=cost(row)
+	var staged: ItemInventory=service.camps.consume(paid)
 	if staged==null: busy=false;return "材料不足"
 	var equip_before: Dictionary= service.inventory.equipment.duplicate(true)
 	var links_before: Dictionary= service.inventory.hotbar_equipment.duplicate(true)
@@ -209,6 +221,8 @@ func place(row: Dictionary, expected: Array) -> String:
 	if not service.save_state():
 		states=before;service.inventory.slots=slots;service.inventory.equipment=equip_before;service.inventory.hotbar_equipment=links_before;service.body.restore(body_before);busy=false;return "保存失败，建造已回滚"
 	refresh_around(row);service.inventory.changed.emit();busy=false
+	AudioFX.build_placed(str(row.kind),Vector2(row.x,row.y))
+	service.notify_build_cost(paid)
 	return ""
 
 func place_bag(row: Dictionary, index: int, expected: Dictionary) -> String:
@@ -226,6 +240,7 @@ func place_bag(row: Dictionary, index: int, expected: Dictionary) -> String:
 	if not service.save_state():
 		states.erase(id);service.inventory.slots=slots;busy=false;return "保存失败，放置已回滚"
 	refresh_around(row);service.inventory.changed.emit();busy=false
+	service.notify_build_cost({"sleeping_bag":1})
 	return ""
 
 func install(coord: Vector2i) -> void:
@@ -289,6 +304,7 @@ func toggle(id: String) -> String:
 		if had_hinge: row.hinge_end=old_hinge
 		else: row.erase("hinge_end")
 		return "保存失败，门状态已回滚"
+	AudioFX.play_sfx("sfx_door_open" if row.open else "sfx_door_close",at)
 	if visuals.has(id): visuals[id].update_gate()
 	return ""
 
@@ -300,7 +316,7 @@ func protected_reason(id: String) -> String:
 				if over.kind=="wool_carpet" and Grid.key(over,false)==Grid.key(states[id],false):return "请先拆除地毯"
 		if states[id].has("machine"):
 			var m: Dictionary=states[id].machine
-			if not m.feed.is_empty() or not m.queue.is_empty() or m.jobs.any(func(j):return not j.is_empty()):return "设施内还有物品"
+			if not m.feed.is_empty() or not m.queue.is_empty() or not m.completed.is_empty() or not m.legacy_queue.is_empty() or m.jobs.any(func(j):return not j.is_empty()):return "设施内还有物品"
 		if states[id].contents.any(func(v): return not v.is_empty()): return "请先清空木箱"
 		return ""
 	if service.camps.states.has(id):
@@ -379,6 +395,9 @@ func set_chest_open(id: String, opened: bool) -> String:
 		for key in before: states[key].open=before[key]
 		busy=false;return "保存失败，木箱状态已回滚"
 	for key in before:
+		if before[key]!=states[key].open:
+			var prefix := "sfx_fridge_" if states[key].kind=="refrigerator" else "sfx_chest_"
+			AudioFX.play_sfx(prefix+("open" if states[key].open else "close"),Vector2(states[key].x,states[key].y))
 		if is_instance_valid(visuals.get(key)): visuals[key].queue_redraw()
 	busy=false;return ""
 
@@ -414,6 +433,7 @@ func transfer(id: String, chest_index: int, player_index: int, expected_chest: D
 	if not service.save_state():
 		contents[chest_index]=a;inv.set_slot(player_index,b);inv.equipment=old_equipment;inv.hotbar_equipment=old_links
 		busy=false;return "保存失败，转移已回滚"
+	AudioFX.play_sfx("sfx_equip" if player_index>=40 else "sfx_item_move")
 	inv.changed.emit();busy=false;return ""
 
 func chest_edit(id: String, source: int, expected: Dictionary, action: String, target: int = -1, quantity: int = 0) -> String:
@@ -467,6 +487,8 @@ func chest_edit(id: String, source: int, expected: Dictionary, action: String, t
 	busy=true;service.dirty=true
 	if not service.save_state():
 		states[id].contents=before;service.body.restore(body);service.inventory.slots=old_slots;busy=false;return "保存失败，操作已回滚"
+	if action=="use" and definition.get("use_action","")=="eat":AudioFX.play_sfx("sfx_eat")
+	elif action in ["move","split"]:AudioFX.play_sfx("sfx_item_move")
 	service.inventory.changed.emit();busy=false;return ""
 
 # Sample the projected leaf swept polygon, separately from the 100-unit interaction reach.

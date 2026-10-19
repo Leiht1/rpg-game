@@ -1,0 +1,142 @@
+{
+  "checks": [
+    {
+      "name": "default project window",
+      "pass": true
+    },
+    {
+      "name": "opening enables real UI immediately",
+      "pass": true
+    },
+    {
+      "name": "GPU short fade in reaches original color",
+      "pass": true
+    },
+    {
+      "name": "closing hides logical control immediately",
+      "pass": true
+    },
+    {
+      "name": "GPU hidden control fades out then disappears",
+      "pass": true
+    },
+    {
+      "name": "rapid open close open cancels old tween",
+      "pass": true
+    },
+    {
+      "name": "bag registered",
+      "pass": true
+    },
+    {
+      "name": "bag close remains logically immediate",
+      "pass": true
+    },
+    {
+      "name": "equipment registered",
+      "pass": true
+    },
+    {
+      "name": "equipment close remains logically immediate",
+      "pass": true
+    },
+    {
+      "name": "catalog/build registered",
+      "pass": true
+    },
+    {
+      "name": "catalog/build close remains logically immediate",
+      "pass": true
+    },
+    {
+      "name": "item actions registered",
+      "pass": true
+    },
+    {
+      "name": "item actions close remains logically immediate",
+      "pass": true
+    },
+    {
+      "name": "quantity registered",
+      "pass": true
+    },
+    {
+      "name": "quantity close remains logically immediate",
+      "pass": true
+    },
+    {
+      "name": "target hint registered",
+      "pass": true
+    },
+    {
+      "name": "target hint close remains logically immediate",
+      "pass": true
+    },
+    {
+      "name": "craft registered",
+      "pass": true
+    },
+    {
+      "name": "craft close remains logically immediate",
+      "pass": true
+    },
+    {
+      "name": "cooking registered",
+      "pass": true
+    },
+    {
+      "name": "cooking close remains logically immediate",
+      "pass": true
+    },
+    {
+      "name": "industry registered",
+      "pass": true
+    },
+    {
+      "name": "industry close remains logically immediate",
+      "pass": true
+    },
+    {
+      "name": "map/body/reward root registered",
+      "pass": true
+    },
+    {
+      "name": "map/body/reward root registered",
+      "pass": true
+    },
+    {
+      "name": "map/body/reward root registered",
+      "pass": true
+    },
+    {
+      "name": "reparented panel registers once",
+      "pass": true
+    },
+    {
+      "name": "free during exit safely cancels tween",
+      "pass": true
+    },
+    {
+      "name": "secondary popup fades in",
+      "pass": true
+    },
+    {
+      "name": "transparent popup border remains transparent",
+      "pass": true
+    },
+    {
+      "name": "closing secondary popup rejects input",
+      "pass": true
+    },
+    {
+      "name": "secondary popup closes and resets opacity",
+      "pass": true
+    },
+    {
+      "name": "popup rapid reopen cancels pending hide",
+      "pass": true
+    }
+  ],
+  "count": 34,
+  "failed": 0
+}

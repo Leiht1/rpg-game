@@ -1,0 +1,414 @@
+{
+  "checks": [
+    {
+      "name": "res://assets/audio/v1/runtime/amb_rain_storm_loop.ogg decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_step_grass_02.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_step_grass_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_step_grass_03.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_step_grass_04.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_bag_organize_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_build_stone_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_build_wood_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_chest_close_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_chest_open_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_dig_soil_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_door_close_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_door_open_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_drop_land_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_eat_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_equip_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_fridge_close_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_fridge_open_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_item_move_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_lantern_off_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_lantern_on_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_map_mark_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_mine_hit_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_step_dirt_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_step_dirt_02.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_step_stone_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_step_wood_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_tool_swing_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_tool_swing_02.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_tool_swing_03.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_ui_click_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_ui_close_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "res://assets/audio/v1/runtime/sfx_ui_error_01.wav decodes",
+      "pass": true
+    },
+    {
+      "name": "normal world binds audio service",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_bag_organize starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_build_stone starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_build_wood starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_chest_close starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_chest_open starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_dig_soil starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_door_close starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_door_open starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_drop_land starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_eat starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_equip starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_fridge_close starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_fridge_open starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_item_move starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_lantern_off starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_lantern_on starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_map_mark starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_mine_hit starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_tool_swing starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_click starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_close starts playback",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_error starts playback",
+      "pass": true
+    },
+    {
+      "name": "missing sounds stay silent",
+      "pass": true
+    },
+    {
+      "name": "simultaneous drops coalesce",
+      "pass": true
+    },
+    {
+      "name": "distant sound is culled",
+      "pass": true
+    },
+    {
+      "name": "actual button press cue",
+      "pass": true
+    },
+    {
+      "name": "keyboard bag closure sounds once",
+      "pass": true
+    },
+    {
+      "name": "failure cue excludes success notices",
+      "pass": true
+    },
+    {
+      "name": "inventory transfer succeeds",
+      "pass": true
+    },
+    {
+      "name": "successful inventory move sounds",
+      "pass": true
+    },
+    {
+      "name": "no-op inventory move silent",
+      "pass": true
+    },
+    {
+      "name": "tool equips",
+      "pass": true
+    },
+    {
+      "name": "equipment cue on success",
+      "pass": true
+    },
+    {
+      "name": "food consumption sounds",
+      "pass": true
+    },
+    {
+      "name": "portable lantern on/off sounds",
+      "pass": true
+    },
+    {
+      "name": "wood_chest opens/closes",
+      "pass": true
+    },
+    {
+      "name": "wood_chest sound transitions",
+      "pass": true
+    },
+    {
+      "name": "already closed storage stays silent",
+      "pass": true
+    },
+    {
+      "name": "storage failure rolls back",
+      "pass": true
+    },
+    {
+      "name": "storage rollback excludes open sound",
+      "pass": true
+    },
+    {
+      "name": "refrigerator opens/closes",
+      "pass": true
+    },
+    {
+      "name": "refrigerator sound transitions",
+      "pass": true
+    },
+    {
+      "name": "already closed storage stays silent",
+      "pass": true
+    },
+    {
+      "name": "storage failure rolls back",
+      "pass": true
+    },
+    {
+      "name": "storage rollback excludes open sound",
+      "pass": true
+    },
+    {
+      "name": "copper lamp toggle succeeds",
+      "pass": true
+    },
+    {
+      "name": "copper lamp on cue",
+      "pass": true
+    },
+    {
+      "name": "copper lamp off cue",
+      "pass": true
+    },
+    {
+      "name": "legal build site located",
+      "pass": true
+    },
+    {
+      "name": "actual paving placement succeeds",
+      "pass": true
+    },
+    {
+      "name": "successful build cue",
+      "pass": true
+    },
+    {
+      "name": "invalid build does not emit success cue",
+      "pass": true
+    },
+    {
+      "name": "actual gate opening cue",
+      "pass": true
+    },
+    {
+      "name": "actual gate closing cue",
+      "pass": true
+    },
+    {
+      "name": "drop sounds on first ground contact",
+      "pass": true
+    },
+    {
+      "name": "floor override uses world coordinates",
+      "pass": true
+    },
+    {
+      "name": "stone paving override",
+      "pass": true
+    },
+    {
+      "name": "actual half-stride movement sounds",
+      "pass": true
+    },
+    {
+      "name": "stationary player has no footsteps",
+      "pass": true
+    },
+    {
+      "name": "blocked controls suppress footsteps",
+      "pass": true
+    },
+    {
+      "name": "storm rain loops",
+      "pass": true
+    },
+    {
+      "name": "weather pause silences loop",
+      "pass": true
+    },
+    {
+      "name": "dry weather stops rain",
+      "pass": true
+    },
+    {
+      "name": "world exit stops session audio",
+      "pass": true
+    }
+  ],
+  "count": 102,
+  "failed": 0
+}

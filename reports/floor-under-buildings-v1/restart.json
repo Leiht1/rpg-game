@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "name": "restart accepts floor under existing chest",
+      "pass": true
+    },
+    {
+      "name": "restart retains chest",
+      "pass": true
+    },
+    {
+      "name": "restart retains chest contents",
+      "pass": true
+    },
+    {
+      "name": "restart retains floor",
+      "pass": true
+    },
+    {
+      "name": "restart retains exact one floor cost",
+      "pass": true
+    }
+  ],
+  "count": 5,
+  "failed": 0
+}

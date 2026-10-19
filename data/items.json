@@ -1728,8 +1728,8 @@
     "name": "石制熔炉",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/stone_furnace.png",
-    "world_visual": "res://prototypes/industry-v1/final/stone_furnace.png",
+    "icon": "res://assets/industry/v1/stone_furnace.png",
+    "world_visual": "res://assets/industry/v1/stone_furnace.png",
     "max_stack": 1,
     "usable": false,
     "use_action": "",
@@ -1753,15 +1753,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "metal_workbench",
     "name": "金属加工台",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/metal_workbench.png",
-    "world_visual": "res://prototypes/industry-v1/final/metal_workbench.png",
+    "icon": "res://assets/industry/v1/metal_workbench.png",
+    "world_visual": "res://assets/industry/v1/metal_workbench.png",
     "max_stack": 1,
     "usable": false,
     "use_action": "",
@@ -1785,15 +1785,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "copper_oven",
     "name": "铜制烤箱",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/copper_oven.png",
-    "world_visual": "res://prototypes/industry-v1/final/copper_oven.png",
+    "icon": "res://assets/industry/v1/copper_oven.png",
+    "world_visual": "res://assets/industry/v1/copper_oven.png",
     "max_stack": 1,
     "usable": false,
     "use_action": "",
@@ -1817,15 +1817,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "copper_lamp",
     "name": "铜制立灯",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/copper_lamp.png",
-    "world_visual": "res://prototypes/industry-v1/final/copper_lamp.png",
+    "icon": "res://assets/industry/v1/copper_lamp.png",
+    "world_visual": "res://assets/industry/v1/copper_lamp.png",
     "max_stack": 1,
     "usable": false,
     "use_action": "",
@@ -1849,15 +1849,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "reinforced_cabinet",
     "name": "加固储物柜",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/reinforced_cabinet.png",
-    "world_visual": "res://prototypes/industry-v1/final/reinforced_cabinet.png",
+    "icon": "res://assets/industry/v1/reinforced_cabinet.png",
+    "world_visual": "res://assets/industry/v1/reinforced_cabinet.png",
     "max_stack": 1,
     "usable": false,
     "use_action": "",
@@ -1881,15 +1881,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "feed_trough",
     "name": "动物饲料槽",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/feed_trough.png",
-    "world_visual": "res://prototypes/industry-v1/final/feed_trough.png",
+    "icon": "res://assets/industry/v1/feed_trough.png",
+    "world_visual": "res://assets/industry/v1/feed_trough.png",
     "max_stack": 1,
     "usable": false,
     "use_action": "",
@@ -1913,15 +1913,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "refrigerator",
     "name": "冰箱",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/refrigerator.png",
-    "world_visual": "res://prototypes/industry-v1/final/refrigerator.png",
+    "icon": "res://assets/industry/v1/refrigerator.png",
+    "world_visual": "res://assets/industry/v1/refrigerator.png",
     "max_stack": 1,
     "usable": false,
     "use_action": "",
@@ -1945,15 +1945,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "wool_carpet",
     "name": "羊毛地毯",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/wool_carpet.png",
-    "world_visual": "res://prototypes/industry-v1/final/wool_carpet.png",
+    "icon": "res://assets/industry/v1/wool_carpet.png",
+    "world_visual": "res://assets/industry/v1/wool_carpet.png",
     "max_stack": 1,
     "usable": false,
     "use_action": "",
@@ -1977,15 +1977,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "copper_ingot",
     "name": "铜锭",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/copper_ingot.png",
-    "world_visual": "res://prototypes/industry-v1/final/copper_ingot.png",
+    "icon": "res://assets/industry/v1/copper_ingot.png",
+    "world_visual": "res://assets/industry/v1/copper_ingot.png",
     "max_stack": 99,
     "usable": false,
     "use_action": "",
@@ -2007,15 +2007,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "silver_ingot",
     "name": "银锭",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/silver_ingot.png",
-    "world_visual": "res://prototypes/industry-v1/final/silver_ingot.png",
+    "icon": "res://assets/industry/v1/silver_ingot.png",
+    "world_visual": "res://assets/industry/v1/silver_ingot.png",
     "max_stack": 99,
     "usable": false,
     "use_action": "",
@@ -2037,15 +2037,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "gold_ingot",
     "name": "金锭",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/gold_ingot.png",
-    "world_visual": "res://prototypes/industry-v1/final/gold_ingot.png",
+    "icon": "res://assets/industry/v1/gold_ingot.png",
+    "world_visual": "res://assets/industry/v1/gold_ingot.png",
     "max_stack": 99,
     "usable": false,
     "use_action": "",
@@ -2067,15 +2067,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "copper_plate",
     "name": "铜板",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/copper_plate.png",
-    "world_visual": "res://prototypes/industry-v1/final/copper_plate.png",
+    "icon": "res://assets/industry/v1/copper_plate.png",
+    "world_visual": "res://assets/industry/v1/copper_plate.png",
     "max_stack": 99,
     "usable": false,
     "use_action": "",
@@ -2097,15 +2097,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "copper_parts",
     "name": "铜制零件",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/copper_parts.png",
-    "world_visual": "res://prototypes/industry-v1/final/copper_parts.png",
+    "icon": "res://assets/industry/v1/copper_parts.png",
+    "world_visual": "res://assets/industry/v1/copper_parts.png",
     "max_stack": 99,
     "usable": false,
     "use_action": "",
@@ -2127,15 +2127,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "metal_connector",
     "name": "金属连接件",
     "category": "material",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/metal_connector.png",
-    "world_visual": "res://prototypes/industry-v1/final/metal_connector.png",
+    "icon": "res://assets/industry/v1/metal_connector.png",
+    "world_visual": "res://assets/industry/v1/metal_connector.png",
     "max_stack": 99,
     "usable": false,
     "use_action": "",
@@ -2157,15 +2157,15 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "copper_axe",
     "name": "铜斧",
     "category": "tool",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/copper_axe.png",
-    "world_visual": "res://prototypes/industry-v1/final/copper_axe.png",
+    "icon": "res://assets/industry/v1/copper_axe.png",
+    "world_visual": "res://assets/industry/v1/copper_axe.png",
     "world_size": 24,
     "max_stack": 1,
     "usable": false,
@@ -2191,15 +2191,15 @@
       "labor_speed": 1.35
     },
     "durability": 250,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "copper_pickaxe",
     "name": "铜镐",
     "category": "tool",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/copper_pickaxe.png",
-    "world_visual": "res://prototypes/industry-v1/final/copper_pickaxe.png",
+    "icon": "res://assets/industry/v1/copper_pickaxe.png",
+    "world_visual": "res://assets/industry/v1/copper_pickaxe.png",
     "world_size": 24,
     "max_stack": 1,
     "usable": false,
@@ -2225,15 +2225,15 @@
       "labor_speed": 1.35
     },
     "durability": 250,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "copper_shovel",
     "name": "铜铲",
     "category": "tool",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/copper_shovel.png",
-    "world_visual": "res://prototypes/industry-v1/final/copper_shovel.png",
+    "icon": "res://assets/industry/v1/copper_shovel.png",
+    "world_visual": "res://assets/industry/v1/copper_shovel.png",
     "world_size": 24,
     "max_stack": 1,
     "usable": false,
@@ -2259,15 +2259,15 @@
       "labor_speed": 1.35
     },
     "durability": 250,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "copper_hammer",
     "name": "铜锤",
     "category": "tool",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/copper_hammer.png",
-    "world_visual": "res://prototypes/industry-v1/final/copper_hammer.png",
+    "icon": "res://assets/industry/v1/copper_hammer.png",
+    "world_visual": "res://assets/industry/v1/copper_hammer.png",
     "world_size": 24,
     "max_stack": 1,
     "usable": false,
@@ -2293,15 +2293,15 @@
       "labor_speed": 1.35
     },
     "durability": 250,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "silver_lantern",
     "name": "银质反光提灯",
     "category": "utility",
-    "description": "",
-    "icon": "res://prototypes/industry-v1/final/silver_lantern.png",
-    "world_visual": "res://prototypes/industry-v1/final/silver_lantern.png",
+    "description": "使用后提供暖光，无需装备或手持；关闭后停止消耗，剩余燃料随物品保存。",
+    "icon": "res://assets/industry/v1/silver_lantern.png",
+    "world_visual": "res://assets/industry/v1/silver_lantern.png",
     "world_size": 24,
     "max_stack": 1,
     "usable": true,
@@ -2316,15 +2316,15 @@
       "source": "徒手制作"
     },
     "effects": {},
-    "equippable": true,
-    "equip_slot": "main_hand",
-    "equipment_type": "tool",
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
     "capabilities": [],
     "action_id": "",
-    "visual_id": "tool:silver_lantern",
+    "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true,
+    "industry": true,
     "lamp_lifetime": 3600.0,
     "light_radius": 390.0,
     "expire_remove": true
@@ -2334,8 +2334,8 @@
     "name": "钓鱼竿",
     "category": "tool",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/fishing_rod.png",
-    "world_visual": "res://prototypes/industry-v1/final/fishing_rod.png",
+    "icon": "res://assets/industry/v1/fishing_rod.png",
+    "world_visual": "res://assets/industry/v1/fishing_rod.png",
     "world_size": 24,
     "max_stack": 1,
     "usable": false,
@@ -2359,15 +2359,15 @@
     "visual_id": "tool:fishing_rod",
     "stats": {},
     "durability": 150,
-    "industry_candidate": true
+    "industry": true
   },
   {
     "item_id": "egg_vegetable_bake",
     "name": "蛋蔬焗盘",
     "category": "food",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/egg_vegetable_bake.png",
-    "world_visual": "res://prototypes/industry-v1/final/egg_vegetable_bake.png",
+    "icon": "res://assets/industry/v1/egg_vegetable_bake.png",
+    "world_visual": "res://assets/industry/v1/egg_vegetable_bake.png",
     "max_stack": 30,
     "usable": true,
     "use_action": "eat",
@@ -2392,7 +2392,7 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true,
+    "industry": true,
     "food_kind": "cooked",
     "shelf_days": 2.5
   },
@@ -2401,8 +2401,8 @@
     "name": "小杂烩",
     "category": "food",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/small_hodgepodge.png",
-    "world_visual": "res://prototypes/industry-v1/final/small_hodgepodge.png",
+    "icon": "res://assets/industry/v1/small_hodgepodge.png",
+    "world_visual": "res://assets/industry/v1/small_hodgepodge.png",
     "max_stack": 30,
     "usable": true,
     "use_action": "eat",
@@ -2427,7 +2427,7 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true,
+    "industry": true,
     "food_kind": "cooked",
     "shelf_days": 2.5
   },
@@ -2436,8 +2436,8 @@
     "name": "大杂烩",
     "category": "food",
     "description": "",
-    "icon": "res://prototypes/industry-v1/final/large_hodgepodge.png",
-    "world_visual": "res://prototypes/industry-v1/final/large_hodgepodge.png",
+    "icon": "res://assets/industry/v1/large_hodgepodge.png",
+    "world_visual": "res://assets/industry/v1/large_hodgepodge.png",
     "max_stack": 30,
     "usable": true,
     "use_action": "eat",
@@ -2462,7 +2462,7 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry_candidate": true,
+    "industry": true,
     "food_kind": "cooked",
     "shelf_days": 2.5
   }

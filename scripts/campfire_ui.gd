@@ -71,7 +71,6 @@ func configure(owner_world: Node) -> void:
 	for id in manager.rules.recipes:
 		var recipe: Dictionary=manager.rules.recipes[id]
 		if recipe.get("legacy_only",false): continue
-		if recipe.get("industry_candidate",false) and not Engine.get_meta("industry_preview",false):continue
 		recipe_keys.append(id)
 		var button := Button.new();button.text=recipe.name+(" · 尚未解锁" if not recipe.get("default_unlocked",true) else "")
 		button.icon=world.item_service.texture(recipe.output,"icon");button.expand_icon=true;button.add_theme_constant_override("icon_max_width",40)
@@ -85,9 +84,7 @@ func configure(owner_world: Node) -> void:
 	details_box.size_flags_horizontal=Control.SIZE_EXPAND_FILL;details_box.add_theme_constant_override("separation",7);detail_scroll.add_child(details_box)
 	status.position=Vector2(370,327);status.size=Vector2(610,44);panel.add_child(status)
 	progress.position=Vector2(370,375);progress.size=Vector2(610,14);progress.show_percentage=false;panel.add_child(progress)
-	var track := StyleBoxFlat.new();track.bg_color=Color("e5dcc6");track.set_corner_radius_all(4)
-	var fill := StyleBoxFlat.new();fill.bg_color=Color("b6bd87");fill.set_corner_radius_all(4)
-	progress.add_theme_stylebox_override("background",track);progress.add_theme_stylebox_override("fill",fill)
+	preload("res://scripts/item_ui_style.gd").progress_style(progress)
 	var output := HBoxContainer.new();output.position=Vector2(370,402);output.size=Vector2(610,54);panel.add_child(output)
 	output_icon.custom_minimum_size=Vector2(48,48);output_icon.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;output_icon.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	output.add_child(output_icon);output.add_child(output_text)

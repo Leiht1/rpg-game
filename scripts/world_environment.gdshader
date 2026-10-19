@@ -12,6 +12,7 @@ uniform float lantern_strength = 0.0;
 uniform int camp_count = 0;
 uniform vec2 camp_centers[32];
 uniform float camp_radii[32];
+uniform float camp_strengths[32];
 uniform float hallucination = 0.0;
 void fragment() {
  vec2 drift = vec2(sin(SCREEN_UV.y*15.0+TIME*.65),cos(SCREEN_UV.x*12.0+TIME*.48))*.007*hallucination;
@@ -29,9 +30,9 @@ void fragment() {
  for (int i=0;i<32;i++) {
   if (i>=camp_count) { break; }
   float d = length((SCREEN_UV-camp_centers[i])/SCREEN_PIXEL_SIZE);
-  fire_glow = max(fire_glow,1.0-smoothstep(12.0,max(13.0,camp_radii[i]),d));
+  fire_glow = max(fire_glow,(1.0-smoothstep(12.0,max(13.0,camp_radii[i]),d))*camp_strengths[i]);
  }
- color = mix(color,original*vec3(1.06,.99,.86),fire_glow*.78);
+ color = mix(color,original*vec3(1.06,.99,.86),clamp(fire_glow*.78,0.0,1.0));
  // Slow hue drift around the neutral axis keeps gray neutral and avoids flashing.
  float hue_angle = (.45+.9*sin(TIME*.27+SCREEN_UV.y*1.4))*hallucination;
  vec3 neutral_axis = vec3(.577350269);

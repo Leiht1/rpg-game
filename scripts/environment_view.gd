@@ -138,22 +138,27 @@ func _process(delta: float) -> void:
 		material_effect.set_shader_parameter("lantern_radius",float(world.item_service.database.item(str(world.item_service.lamp_slot().get("item_id",""))).get("light_radius",260.0))*viewport.get_canvas_transform().get_scale().x)
 	var centers := PackedVector2Array()
 	var radii := PackedFloat32Array()
+	var strengths := PackedFloat32Array()
 	for node in world.item_service.camps.visuals.values():
 		if is_instance_valid(node) and world.item_service.camps.states[node.camp_id].lit:
 			var screen: Vector2=get_viewport().get_canvas_transform()*node.position
 			if get_viewport().get_visible_rect().grow(maxf(240.0,float(world.item_service.camps.rules.light_radius)*get_viewport().get_canvas_transform().get_scale().x)).has_point(screen):
 				centers.append(screen/get_viewport().get_visible_rect().size)
 				radii.append(float(world.item_service.camps.rules.light_radius)*get_viewport().get_canvas_transform().get_scale().x)
+				strengths.append(1.0)
 	for id in world.item_service.builds.visuals:
 		if world.item_service.builds.states[id].kind!="camp_torch" and not (world.item_service.builds.states[id].kind=="copper_lamp" and world.item_service.builds.states[id].machine.enabled): continue
 		var node: Node2D=world.item_service.builds.visuals[id]
 		var screen: Vector2=get_viewport().get_canvas_transform()*node.position
-		if get_viewport().get_visible_rect().grow(maxf(240.0,float(world.item_service.camps.rules.light_radius)*get_viewport().get_canvas_transform().get_scale().x)).has_point(screen):
-			centers.append(screen/get_viewport().get_visible_rect().size);radii.append(210.0*get_viewport().get_canvas_transform().get_scale().x)
+		var radius: float=float(world.item_service.industry.rules.copper_lamp_radius) if world.item_service.builds.states[id].kind=="copper_lamp" else 210.0
+		if get_viewport().get_visible_rect().grow(maxf(240.0,radius*get_viewport().get_canvas_transform().get_scale().x)).has_point(screen):
+			centers.append(screen/get_viewport().get_visible_rect().size);radii.append(radius*get_viewport().get_canvas_transform().get_scale().x)
+			strengths.append(float(world.item_service.industry.rules.copper_lamp_strength) if world.item_service.builds.states[id].kind=="copper_lamp" else 1.0)
 	material_effect.set_shader_parameter("camp_count",mini(32,centers.size()))
-	centers.resize(32);radii.resize(32)
+	centers.resize(32);radii.resize(32);strengths.resize(32)
 	material_effect.set_shader_parameter("camp_centers",centers)
 	material_effect.set_shader_parameter("camp_radii",radii)
+	material_effect.set_shader_parameter("camp_strengths",strengths)
 	rain_visual.intensity=light.rain
 	rain_visual.storm=light.storm
 	update_lightning(delta,light.storm)
@@ -230,7 +235,7 @@ func advance_gameplay(seconds: float) -> void:
 		simulation.time_scale=1.0;simulation.advance(step);simulation.time_scale=original_scale
 		body.busy=player.input_blocked and not body.sleeping
 		body.advance(step,step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0),player.running and player.moving and not player.input_blocked,player.action in ["chop","mine","dig"] and not player.input_blocked)
-		if service.industry.enabled():service.industry.advance(step,step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
+		service.industry.advance(step,step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
 		service.planting.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
 		service.animals.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
 		service.camps.advance(step,simulation.blend.z+simulation.blend.y,simulation.blend.y)

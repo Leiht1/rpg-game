@@ -121,7 +121,6 @@ func match_materials(materials: Dictionary) -> String:
 		var count = materials[key]
 		if not count is int or count<1: return ""
 	for key in rules.recipes:
-		if rules.recipes[key].get("industry_candidate",false) and not Engine.get_meta("industry_preview",false):continue
 		if rules.recipes[key].get("legacy_only",false): continue
 		var expected: Dictionary=rules.recipes[key].materials
 		if expected.size()!=materials.size(): continue
@@ -287,4 +286,6 @@ func build(at: Vector2, recipe_id: String, expected_slots: Array) -> String:
 		busy=false;return "保存失败，建造已回滚，材料未消耗"
 	service.inventory.changed.emit()
 	busy=false
+	AudioFX.build_placed("simple_campfire",at)
+	service.notify_build_cost(build_book.recipe(recipe_id).materials)
 	return ""

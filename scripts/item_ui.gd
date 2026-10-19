@@ -54,6 +54,7 @@ var body_ui: Control
 var drag_pointer := Vector2.ZERO
 
 func configure(owner_world: Node, items: Node) -> void:
+	add_to_group("ui_fade_input_owner")
 	world = owner_world
 	name="ItemUI"
 	service = items
@@ -360,10 +361,15 @@ func show_item_hover(index: int, anchor: Control = null) -> void:
 func hide_item_hover(index: int = -1) -> void:
 	if index>=0 and hover_index!=index: return
 	hover_index=-1
-	if is_instance_valid(hover_card): hover_card.queue_free()
+	if is_instance_valid(hover_card):
+		hover_card.hide()
+		var retiring: Control=hover_card
+		get_tree().create_timer(0.10).timeout.connect(func():
+			if is_instance_valid(retiring):retiring.queue_free())
 	hover_card=null
 
 func show_notice(text: String) -> void:
+	AudioFX.notice_sound(text)
 	message.text = text
 	message_time = 3.0
 

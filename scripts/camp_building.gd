@@ -27,10 +27,10 @@ func _ready() -> void:
 	var row: Dictionary=manager.states[building_id]
 	var d: Dictionary=manager.definitions[row.kind]
 	set_meta("planting_soil",row.kind=="tilled_soil");set_meta("building_id",building_id);set_meta("prop_id",building_id);set_meta("camp_layer",row.layer)
-	set_meta("display_name",str(row.text) if row.kind=="signpost" else d.name);set_meta("interaction_action","open" if d.get("door",false) or row.kind in ["wood_chest","workbench"] or d.get("industry_candidate",false) else "sleep" if d.get("sleep",false) else "inspect")
+	set_meta("display_name",str(row.text) if row.kind=="signpost" else d.name);set_meta("interaction_action","open" if d.get("door",false) or row.kind in ["wood_chest","workbench"] or d.get("industry",false) else "sleep" if d.get("sleep",false) else "inspect")
 	set_meta("interaction_range",100.0);add_to_group("world_interactables")
-	if row.layer=="ground": z_index=-1
-	if row.layer=="overlay":z_index=0
+	if row.layer=="ground": z_index=-2
+	if row.layer=="overlay":z_index=-1
 	if row.layer=="edge":
 		y_sort_enabled=true
 		for endpoint in preload("res://scripts/camp_grid.gd").ends(row):
@@ -56,6 +56,8 @@ func _ready() -> void:
 			part.draw.connect(draw_leaf_strip.bind(part,i))
 		update_leaf_parts()
 	update_damage(false)
+	if row.kind in ["stone_furnace","copper_oven"]:
+		var effects := preload("res://scripts/industry_effects.gd").new();effects.name="IndustryEffects";effects.building=self;add_child(effects)
 	queue_redraw()
 
 func contact_feedback(_at: Vector2) -> void:
@@ -97,18 +99,25 @@ func planting_texture(asset: String) -> Texture2D:
 		else: manager.textures[path]=source
 	return manager.textures[path]
 
+func industry_rect(image: Texture2D) -> Rect2:
+	var extent: Vector2=image.get_size()*minf(88.0/image.get_width(),96.0/image.get_height())
+	if manager.states[building_id].kind=="metal_workbench":
+		var painted: Rect2i=image.get_image().get_used_rect()
+		extent=Vector2(80,80.0*painted.size.y/painted.size.x)
+	return Rect2(Vector2(-extent.x*.5,8-extent.y),extent)
+
 func _draw() -> void:
 	if not manager.states.has(building_id): return
 	var r: Dictionary=manager.states[building_id];var d: Dictionary=manager.definitions[r.kind]
-	if d.get("industry_candidate",false):
+	if d.get("industry",false):
 		var path: String=d.art
-		if FileAccess.file_exists(path):
-			var image: Texture2D=preload("res://scripts/candidate_art.gd").texture(path)
+		if ResourceLoader.exists(path):
+			var image: Texture2D=load(path)
 			if r.kind=="wool_carpet":
 				draw_texture_rect(image,Rect2(Vector2(-48,-32),Vector2(96,64)),false)
 				return
-			var extent: Vector2=image.get_size()*minf(88.0/image.get_width(),96.0/image.get_height())
-			draw_texture_rect(image,Rect2(Vector2(-extent.x*.5,8-extent.y),extent),false)
+			if r.kind=="metal_workbench":draw_texture_rect_region(image,industry_rect(image),Rect2(image.get_image().get_used_rect()))
+			else:draw_texture_rect(image,industry_rect(image),false)
 		return
 	if r.kind=="signpost":
 		var path := "res://assets/buildings/signpost_v1/signpost.png"
@@ -219,8 +228,8 @@ func perform_interaction(_action: String, _player: Node2D) -> bool:
 		var reason: String=manager.service.industry.act(building_id,"toggle")
 		if not reason.is_empty():manager.service.notice.emit(reason)
 		return reason.is_empty()
+	if r.kind in ["workbench","metal_workbench"]: manager.service.world.item_ui.toggle_craft(building_id);return true
 	if manager.service.industry.machine(r.kind):manager.service.industry_ui.open(building_id);return true
-	if r.kind=="workbench": manager.service.world.item_ui.toggle_craft(building_id);return true
 	if r.kind=="wood_chest": manager.service.storage_ui.open(building_id);return true
 	manager.service.notice.emit("装备石锤后按E拆除" if r.kind!="camp_torch" else "营地火把在夜晚提供照明；装备石锤可拆除")
 	return true

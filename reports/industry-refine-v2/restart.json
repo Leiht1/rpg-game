@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "name": "new process snapshot accepted",
+      "pass": true
+    },
+    {
+      "name": "new process retains manual off state",
+      "pass": true
+    },
+    {
+      "name": "new process retains independent output and queue",
+      "pass": true
+    },
+    {
+      "name": "new process retains per-facility fuel",
+      "pass": true
+    },
+    {
+      "name": "new process retains oven switch and products",
+      "pass": true
+    },
+    {
+      "name": "new process retains old paid overflow",
+      "pass": true
+    },
+    {
+      "name": "new process retains unique legacy crafted tool",
+      "pass": true
+    },
+    {
+      "name": "restart does not replay completion smoke",
+      "pass": true
+    }
+  ],
+  "count": 8,
+  "failed": 0
+}

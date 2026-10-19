@@ -1,0 +1,670 @@
+{
+  "checks": [
+    {
+      "name": "find valid loaded dry site",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under wood_chestfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under wood_chestfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under wood_chestfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under wood_chestfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under camp_torchfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under camp_torchfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under camp_torchfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under camp_torchfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under sleeping_bagfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under sleeping_bagfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under sleeping_bagfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under sleeping_bagfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under straw_matfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under straw_matfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under straw_matfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under straw_matfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under straw_mattrue",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under straw_mattrue",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under straw_mattrue",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under straw_mattrue",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under wood_bedfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under wood_bedfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under wood_bedfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under wood_bedfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under wood_bedtrue",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under wood_bedtrue",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under wood_bedtrue",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under wood_bedtrue",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under signpostfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under signpostfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under signpostfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under signpostfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under stone_furnacefalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under stone_furnacefalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under stone_furnacefalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under stone_furnacefalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under metal_workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under metal_workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under metal_workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under metal_workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under copper_ovenfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under copper_ovenfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under copper_ovenfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under copper_ovenfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under copper_lampfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under copper_lampfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under copper_lampfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under copper_lampfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under reinforced_cabinetfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under reinforced_cabinetfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under reinforced_cabinetfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under reinforced_cabinetfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under feed_troughfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under feed_troughfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under feed_troughfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under feed_troughfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under refrigeratorfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under refrigeratorfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under refrigeratorfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under refrigeratorfalse",
+      "pass": true
+    },
+    {
+      "name": "off-center collider permits wood_floor",
+      "pass": true
+    },
+    {
+      "name": "campfire permits wood_floor",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits wood_floorstone_wallfalse",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits wood_floorstone_walltrue",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits wood_floorwood_fencefalse",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits wood_floorwood_fencetrue",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits wood_floorstone_gatefalse",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits wood_floorstone_gatetrue",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits wood_floorfence_gatefalse",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits wood_floorfence_gatetrue",
+      "pass": true
+    },
+    {
+      "name": "existing ground occupancy rejects wood_floorwood_floor",
+      "pass": true
+    },
+    {
+      "name": "existing ground occupancy rejects wood_floorstone_path",
+      "pass": true
+    },
+    {
+      "name": "existing ground occupancy rejects wood_floortilled_soil",
+      "pass": true
+    },
+    {
+      "name": "unregistered obstacle still rejects wood_floor",
+      "pass": true
+    },
+    {
+      "name": "natural tree still rejects wood_floor",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under wood_chestfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under wood_chestfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under wood_chestfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under wood_chestfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under camp_torchfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under camp_torchfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under camp_torchfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under camp_torchfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under sleeping_bagfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under sleeping_bagfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under sleeping_bagfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under sleeping_bagfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under straw_matfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under straw_matfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under straw_matfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under straw_matfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under straw_mattrue",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under straw_mattrue",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under straw_mattrue",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under straw_mattrue",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under wood_bedfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under wood_bedfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under wood_bedfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under wood_bedfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under wood_bedtrue",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under wood_bedtrue",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under wood_bedtrue",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under wood_bedtrue",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under signpostfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under signpostfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under signpostfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under signpostfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under stone_furnacefalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under stone_furnacefalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under stone_furnacefalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under stone_furnacefalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under metal_workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under metal_workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under metal_workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under metal_workbenchfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under copper_ovenfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under copper_ovenfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under copper_ovenfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under copper_ovenfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under copper_lampfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under copper_lampfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under copper_lampfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under copper_lampfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under reinforced_cabinetfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under reinforced_cabinetfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under reinforced_cabinetfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under reinforced_cabinetfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under feed_troughfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under feed_troughfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under feed_troughfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under feed_troughfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under refrigeratorfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under refrigeratorfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under refrigeratorfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under refrigeratorfalse",
+      "pass": true
+    },
+    {
+      "name": "off-center collider permits stone_path",
+      "pass": true
+    },
+    {
+      "name": "campfire permits stone_path",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits stone_pathstone_wallfalse",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits stone_pathstone_walltrue",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits stone_pathwood_fencefalse",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits stone_pathwood_fencetrue",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits stone_pathstone_gatefalse",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits stone_pathstone_gatetrue",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits stone_pathfence_gatefalse",
+      "pass": true
+    },
+    {
+      "name": "wall blocks and doorway permits stone_pathfence_gatetrue",
+      "pass": true
+    },
+    {
+      "name": "existing ground occupancy rejects stone_pathwood_floor",
+      "pass": true
+    },
+    {
+      "name": "existing ground occupancy rejects stone_pathstone_path",
+      "pass": true
+    },
+    {
+      "name": "existing ground occupancy rejects stone_pathtilled_soil",
+      "pass": true
+    },
+    {
+      "name": "unregistered obstacle still rejects stone_path",
+      "pass": true
+    },
+    {
+      "name": "natural tree still rejects stone_path",
+      "pass": true
+    },
+    {
+      "name": "save failure rolls back floor",
+      "pass": true
+    },
+    {
+      "name": "failed floor preserves facility and materials",
+      "pass": true
+    },
+    {
+      "name": "floor under chest commits atomically",
+      "pass": true
+    },
+    {
+      "name": "successful floor consumes exact original cost once",
+      "pass": true
+    },
+    {
+      "name": "duplicate floor consumes nothing",
+      "pass": true
+    },
+    {
+      "name": "floor and chest persisted snapshot validates",
+      "pass": true
+    },
+    {
+      "name": "new furniture still cannot overlap existing furniture",
+      "pass": true
+    }
+  ],
+  "count": 166,
+  "failed": 0
+}

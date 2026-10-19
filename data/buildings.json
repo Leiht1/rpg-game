@@ -104,7 +104,7 @@
       "wood": 10,
       "plant_fiber": 4
     },
-    "category": "设施",
+    "category": "生活",
     "conditions": [],
     "default_unlocked": true,
     "description": "独立12格储物，支持拖拽、堆叠与工具耐久保存；清空后才能拆除。",
@@ -119,7 +119,7 @@
       "stone": 8,
       "plant_fiber": 4
     },
-    "category": "设施",
+    "category": "科技",
     "conditions": [],
     "default_unlocked": true,
     "description": "靠近按E打开原制作面板；徒手制作仍可随时使用。",
@@ -133,7 +133,7 @@
       "wood": 4,
       "plant_fiber": 3
     },
-    "category": "照明",
+    "category": "生活",
     "conditions": [],
     "default_unlocked": true,
     "description": "固定的营地照明，夜间提供暖光；本版无需添加燃料。",
@@ -202,11 +202,11 @@
       "wood": 6,
       "flint": 3
     },
-    "category": "加工",
+    "category": "科技",
     "conditions": [],
-    "default_unlocked": false,
+    "default_unlocked": true,
     "description": "",
-    "industry_candidate": true
+    "industry": true
   },
   {
     "recipe_id": "build_metal_workbench",
@@ -217,11 +217,11 @@
       "wood": 12,
       "stone": 6
     },
-    "category": "加工",
+    "category": "科技",
     "conditions": [],
-    "default_unlocked": false,
+    "default_unlocked": true,
     "description": "",
-    "industry_candidate": true
+    "industry": true
   },
   {
     "recipe_id": "build_copper_oven",
@@ -233,11 +233,11 @@
       "stone": 8,
       "wood": 4
     },
-    "category": "加工",
+    "category": "生活",
     "conditions": [],
-    "default_unlocked": false,
+    "default_unlocked": true,
     "description": "",
-    "industry_candidate": true
+    "industry": true
   },
   {
     "recipe_id": "build_copper_lamp",
@@ -250,9 +250,9 @@
     },
     "category": "生活",
     "conditions": [],
-    "default_unlocked": false,
+    "default_unlocked": true,
     "description": "",
-    "industry_candidate": true
+    "industry": true
   },
   {
     "recipe_id": "build_reinforced_cabinet",
@@ -265,9 +265,9 @@
     },
     "category": "生活",
     "conditions": [],
-    "default_unlocked": false,
+    "default_unlocked": true,
     "description": "",
-    "industry_candidate": true
+    "industry": true
   },
   {
     "recipe_id": "build_feed_trough",
@@ -279,9 +279,9 @@
     },
     "category": "生活",
     "conditions": [],
-    "default_unlocked": false,
+    "default_unlocked": true,
     "description": "",
-    "industry_candidate": true
+    "industry": true
   },
   {
     "recipe_id": "build_refrigerator",
@@ -294,9 +294,9 @@
     },
     "category": "生活",
     "conditions": [],
-    "default_unlocked": false,
+    "default_unlocked": true,
     "description": "",
-    "industry_candidate": true
+    "industry": true
   },
   {
     "recipe_id": "build_wool_carpet",
@@ -308,8 +308,8 @@
     },
     "category": "生活",
     "conditions": [],
-    "default_unlocked": false,
+    "default_unlocked": true,
     "description": "",
-    "industry_candidate": true
+    "industry": true
   }
 ]

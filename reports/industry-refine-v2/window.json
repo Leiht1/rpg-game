@@ -1,0 +1,466 @@
+{
+  "checks": [
+    {
+      "name": "updated definitions valid",
+      "pass": true
+    },
+    {
+      "name": "requested capacities configured",
+      "pass": true
+    },
+    {
+      "name": "new burners start off",
+      "pass": true
+    },
+    {
+      "name": "empty burner cannot ignite",
+      "pass": true
+    },
+    {
+      "name": "ore paid once into active slot",
+      "pass": true
+    },
+    {
+      "name": "fuel added",
+      "pass": true
+    },
+    {
+      "name": "off preserves fuel and work",
+      "pass": true
+    },
+    {
+      "name": "manual ignition accepted",
+      "pass": true
+    },
+    {
+      "name": "completed ingot moves out and frees processing slot",
+      "pass": true
+    },
+    {
+      "name": "one actual completion emits small chimney smoke",
+      "pass": true
+    },
+    {
+      "name": "ignited empty furnace continues burning",
+      "pass": true
+    },
+    {
+      "name": "extinguish stops fuel use",
+      "pass": true
+    },
+    {
+      "name": "fuel cap rejects without consuming item",
+      "pass": true
+    },
+    {
+      "name": "one active plus five queue accepts task 0",
+      "pass": true
+    },
+    {
+      "name": "one active plus five queue accepts task 1",
+      "pass": true
+    },
+    {
+      "name": "one active plus five queue accepts task 2",
+      "pass": true
+    },
+    {
+      "name": "one active plus five queue accepts task 3",
+      "pass": true
+    },
+    {
+      "name": "one active plus five queue accepts task 4",
+      "pass": true
+    },
+    {
+      "name": "one active plus five queue accepts task 5",
+      "pass": true
+    },
+    {
+      "name": "sixth waiting task rejected without material loss",
+      "pass": true
+    },
+    {
+      "name": "queue auto-processes up to six stored products",
+      "pass": true
+    },
+    {
+      "name": "full product tray pauses new processing",
+      "pass": true
+    },
+    {
+      "name": "single action collects all six products",
+      "pass": true
+    },
+    {
+      "name": "claimed tray empty",
+      "pass": true
+    },
+    {
+      "name": "processing resumes after claiming",
+      "pass": true
+    },
+    {
+      "name": "failed bulk claim saves roll back all outputs and inventory",
+      "pass": true
+    },
+    {
+      "name": "full bag keeps unclaimed product",
+      "pass": true
+    },
+    {
+      "name": "bulk claim retries safely after space available",
+      "pass": true
+    },
+    {
+      "name": "repeated claim cannot duplicate product",
+      "pass": true
+    },
+    {
+      "name": "partial-capacity bulk claim keeps every unclaimed output",
+      "pass": true
+    },
+    {
+      "name": "oven slot starts 0",
+      "pass": true
+    },
+    {
+      "name": "oven slot starts 1",
+      "pass": true
+    },
+    {
+      "name": "oven slot starts 2",
+      "pass": true
+    },
+    {
+      "name": "oven slot starts 3",
+      "pass": true
+    },
+    {
+      "name": "four oven slots burn one shared fuel supply",
+      "pass": true
+    },
+    {
+      "name": "simultaneous oven completion respects six product cap",
+      "pass": true
+    },
+    {
+      "name": "oven blocked completions remain valid persisted state",
+      "pass": true
+    },
+    {
+      "name": "blocked oven products finish only after tray freed",
+      "pass": true
+    },
+    {
+      "name": "oven off stops fuel consumption",
+      "pass": true
+    },
+    {
+      "name": "oven off glass dark",
+      "pass": true
+    },
+    {
+      "name": "oven ignited glass lit",
+      "pass": true
+    },
+    {
+      "name": "glass glow phase animates",
+      "pass": true
+    },
+    {
+      "name": "first visible frame and settled furnace panel have identical bounds",
+      "pass": true
+    },
+    {
+      "name": "fuel uses unlabeled bar with separator",
+      "pass": true
+    },
+    {
+      "name": "ore and fuel cards replace dropdowns",
+      "pass": true
+    },
+    {
+      "name": "fuel materials and quantity are absent from main screen",
+      "pass": true
+    },
+    {
+      "name": "ignite and extinguish directly below fuel progress",
+      "pass": true
+    },
+    {
+      "name": "ore materials have integer quantities",
+      "pass": true
+    },
+    {
+      "name": "ore materials have integer quantities",
+      "pass": true
+    },
+    {
+      "name": "ore materials have integer quantities",
+      "pass": true
+    },
+    {
+      "name": "ore click selects",
+      "pass": true
+    },
+    {
+      "name": "second ore click deselects",
+      "pass": true
+    },
+    {
+      "name": "add fuel opens second level popup",
+      "pass": true
+    },
+    {
+      "name": "fuel popup uses paper cards with no native black dropdown",
+      "pass": true
+    },
+    {
+      "name": "cancel fuel popup consumes nothing",
+      "pass": true
+    },
+    {
+      "name": "secondary fuel window has no opaque black background",
+      "pass": true
+    },
+    {
+      "name": "fuel confirmation closes secondary popup",
+      "pass": true
+    },
+    {
+      "name": "native UI fuel and ignition callbacks work",
+      "pass": true
+    },
+    {
+      "name": "ingot progress icon enlarged",
+      "pass": true
+    },
+    {
+      "name": "selection enqueue and fuel do not move furnace panel",
+      "pass": true
+    },
+    {
+      "name": "furnace contents fit fixed panel",
+      "pass": true
+    },
+    {
+      "name": "queue button opens separate view",
+      "pass": true
+    },
+    {
+      "name": "completed button shows actual output",
+      "pass": true
+    },
+    {
+      "name": "UI one-click claim works",
+      "pass": true
+    },
+    {
+      "name": "furnace flame extinguishes",
+      "pass": true
+    },
+    {
+      "name": "oven opens without layout jump",
+      "pass": true
+    },
+    {
+      "name": "oven controls fit fixed panel",
+      "pass": true
+    },
+    {
+      "name": "oven ingredient popup remains independent",
+      "pass": true
+    },
+    {
+      "name": "all nine metal outputs registered as craft recipes",
+      "pass": true
+    },
+    {
+      "name": "hand recipes cannot expose metal processing",
+      "pass": true
+    },
+    {
+      "name": "ordinary workbench cannot expose metal processing",
+      "pass": true
+    },
+    {
+      "name": "metal interaction uses original craft UI",
+      "pass": true
+    },
+    {
+      "name": "start real metal crafting metal_copper_plate",
+      "pass": true
+    },
+    {
+      "name": "craft output enters original inventory metal_copper_plate",
+      "pass": true
+    },
+    {
+      "name": "start real metal crafting metal_copper_parts",
+      "pass": true
+    },
+    {
+      "name": "craft output enters original inventory metal_copper_parts",
+      "pass": true
+    },
+    {
+      "name": "start real metal crafting metal_metal_connector",
+      "pass": true
+    },
+    {
+      "name": "craft output enters original inventory metal_metal_connector",
+      "pass": true
+    },
+    {
+      "name": "start real metal crafting metal_copper_axe",
+      "pass": true
+    },
+    {
+      "name": "craft output enters original inventory metal_copper_axe",
+      "pass": true
+    },
+    {
+      "name": "start real metal crafting metal_copper_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "craft output enters original inventory metal_copper_pickaxe",
+      "pass": true
+    },
+    {
+      "name": "start real metal crafting metal_copper_shovel",
+      "pass": true
+    },
+    {
+      "name": "craft output enters original inventory metal_copper_shovel",
+      "pass": true
+    },
+    {
+      "name": "start real metal crafting metal_copper_hammer",
+      "pass": true
+    },
+    {
+      "name": "craft output enters original inventory metal_copper_hammer",
+      "pass": true
+    },
+    {
+      "name": "start real metal crafting metal_silver_lantern",
+      "pass": true
+    },
+    {
+      "name": "craft output enters original inventory metal_silver_lantern",
+      "pass": true
+    },
+    {
+      "name": "start real metal crafting metal_fishing_rod",
+      "pass": true
+    },
+    {
+      "name": "craft output enters original inventory metal_fishing_rod",
+      "pass": true
+    },
+    {
+      "name": "cancelled metal craft consumes nothing",
+      "pass": true
+    },
+    {
+      "name": "failed metal craft save rolls back inputs output and obtained event",
+      "pass": true
+    },
+    {
+      "name": "metal crafting rechecks real station",
+      "pass": true
+    },
+    {
+      "name": "metal painted width equals ordinary workbench 80 units",
+      "pass": true
+    },
+    {
+      "name": "copper standing lamp radius increased from 210 to 300",
+      "pass": true
+    },
+    {
+      "name": "actual lighting shader receives enlarged copper lamp radius",
+      "pass": true
+    },
+    {
+      "name": "floor below carpet below every actor",
+      "pass": true
+    },
+    {
+      "name": "GPU actor feet remain visible on upper carpet; old overlap reproduced",
+      "pass": true
+    },
+    {
+      "name": "GPU actual ignition and motion furnace",
+      "pass": true
+    },
+    {
+      "name": "GPU small smoke appears at chimney",
+      "pass": true
+    },
+    {
+      "name": "GPU actual ignition and motion oven",
+      "pass": true
+    },
+    {
+      "name": "GPU glass emits bright fluorescent yellow, not brown tint",
+      "pass": true
+    },
+    {
+      "name": "old machine v1 is accepted",
+      "pass": true
+    },
+    {
+      "name": "old paid tasks migrate without loss",
+      "pass": true
+    },
+    {
+      "name": "old excess fuel retained and burner safely off",
+      "pass": true
+    },
+    {
+      "name": "new over-cap fuel rejected",
+      "pass": true
+    },
+    {
+      "name": "unfinished outputs cannot enter completed tray",
+      "pass": true
+    },
+    {
+      "name": "completed product prevents demolition",
+      "pass": true
+    },
+    {
+      "name": "old paid metal outputs remain reachable from craft screen",
+      "pass": true
+    },
+    {
+      "name": "legacy queue button opens original paid-task collection",
+      "pass": true
+    },
+    {
+      "name": "new machine state saves atomically",
+      "pass": true
+    },
+    {
+      "name": "construction test finds valid site",
+      "pass": true
+    },
+    {
+      "name": "real build succeeds",
+      "pass": true
+    },
+    {
+      "name": "successful construction announces exact integer materials",
+      "pass": true
+    },
+    {
+      "name": "rejected construction emits no consumption notice",
+      "pass": true
+    }
+  ],
+  "count": 115,
+  "failed": 0
+}
