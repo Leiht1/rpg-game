@@ -76,7 +76,7 @@ func refresh() -> void:
 	tooltip_text = ""
 	durability_bar.hide()
 	if not slot.is_empty():
-		icon.texture = screen.service.texture(slot.item_id,"icon")
+		icon.texture = screen.service.stack_texture(slot,"icon")
 		dev_symbol.visible=icon.texture==null
 		dev_symbol.symbol=screen.service.database.ids().find(slot.item_id)
 		dev_symbol.queue_redraw()

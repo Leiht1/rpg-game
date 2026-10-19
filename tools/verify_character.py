@@ -22,9 +22,10 @@ def check(condition,message):
 
 check(runtime['canvas']==[128,128] and runtime['anchor']==[64,112],'Runtime canvas/root mismatch')
 check(template['version']==runtime['template_version']==registration['template_version']=='windrest-character-template-5','Template version mismatch')
-check(runtime['movement_speed']==template['timing']['movement_speed']==115,'Movement speed metadata mismatch')
+check(runtime['movement_speed']==template['timing']['movement_speed']==200,'Movement speed metadata mismatch')
 check(len(manifest['clips'])==6 and len(manifest['frames'])==36,'Expected six clips / 36 frames')
-check(abs(runtime['stride_world_units']-200/3)<1e-8,'Wrong distance per walk cycle')
+check(abs(runtime['stride_world_units']-8000/69)<1e-8,'Wrong runtime distance per walk cycle')
+check(abs(runtime['movement_speed']/runtime['stride_world_units']*8-template['timing']['walk_fps_at_movement_speed'])<1e-8,'Runtime walk cadence metadata mismatch')
 walk_records=[f for d in registration['directions'].values() for f in d['frames'] if '_walk_' in f['name']]
 check(len(walk_records)==24,'Missing walk registration')
 check({f['source_to_output_scale'] for f in walk_records}=={1.0},'Approved walk scale changed')
@@ -67,7 +68,9 @@ for folder,name in [('clips','animation-clips.json'),('engine','engine-export.js
     for c in qa.get('checks',[]):
         check(str(c['status']).lower() not in ['warn','fail'],folder+': '+json.dumps(c,ensure_ascii=False))
 baseline=read(WORK/'unchanged_game_baseline.json')
-for path,digest in baseline.items(): check(sha(ROOT/path)==digest,path+': unrelated game file changed')
+for path,digest in baseline.items():
+    if path=='scripts/player.gd': continue  # Movement speed changed from 115 to 200 px/s.
+    check(sha(ROOT/path)==digest,path+': unrelated game file changed')
 preserved=read(WORK/'unchanged_frames.json')
 check(len(preserved)==28,'Expected 28 preserved non-side-walk frames')
 for name,digest in preserved.items(): check(sha(HERO/'final_sprite'/name)==digest,name+': previous accepted frame changed')
@@ -77,7 +80,7 @@ for i in range(8):
 check(sha(HERO/'modular_plan/CHARACTER_MODULAR_RULES.md')==sha(ROOT/'CHARACTER_MODULAR_RULES.md'),'Character rules copy out of sync')
 report={'status':'pass' if not failures else 'fail','failures':failures,'rows':rows,
     'runtime_layers':1,'template_version':template['version'],'whole_frames':36,
-    'common_walk_scale':1.0,'common_walk_offset':[0,0],'movement_speed':115,'idle_cycle_ms':1800,'skill_qa':qa_status,
+    'common_walk_scale':1.0,'common_walk_offset':[0,0],'movement_speed':runtime['movement_speed'],'idle_cycle_ms':1800,'skill_qa':qa_status,
     'approved_v11_frames':8,'preserved_previous_frames':len(preserved),
     'not_proven':['Numeric geometry does not certify anatomy, facing, identity or perfectly planted feet.',
         'The v11 side walk is user accepted; v04 front/back walk and v05 idle remain unchanged. Small redraw contour/projection differences remain.',

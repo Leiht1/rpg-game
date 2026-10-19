@@ -1,0 +1,448 @@
+{
+  "checks": [
+    {
+      "details": [
+        {
+          "area": 885194752.0,
+          "cells": 13507,
+          "kind": 2
+        },
+        {
+          "area": 760348672.0,
+          "cells": 11602,
+          "kind": 0
+        },
+        {
+          "area": 770375680.0,
+          "cells": 11755,
+          "kind": 1
+        }
+      ],
+      "name": "three continuous macro regions 271828",
+      "pass": true
+    },
+    {
+      "details": [
+        11602,
+        11755,
+        13507
+      ],
+      "name": "all macro regions have large area 271828",
+      "pass": true
+    },
+    {
+      "details": 1.0,
+      "name": "coarse land connectivity 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "all protected region passages dry 271828",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "kind": 0,
+          "length": 38399.921875,
+          "points": "[(14499.72, 699.7336), (43915.75, 25382.75)]",
+          "screen_widths": 29.9999389648438
+        },
+        {
+          "kind": 1,
+          "length": 41472.078125,
+          "points": "[(48317.54, 27721.27), (12401.64, 48457.27)]",
+          "screen_widths": 32.4000610351562
+        },
+        {
+          "kind": 2,
+          "length": 44544.0,
+          "points": "[(11429.81, 821.6055), (11429.81, 45365.61)]",
+          "screen_widths": 34.8
+        }
+      ],
+      "name": "8 screen minimum routes stay in own biome 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "shared world coordinates have exact weight bytes 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "seed reproduces chunk and props 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "worker plan snapshot matches main 271828",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "natural safe spawn without ground override 271828",
+      "pass": true
+    },
+    {
+      "details": [
+        0.0,
+        1.0
+      ],
+      "name": "forest internal density variation 271828",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "area": 861274112.0,
+          "cells": 13142,
+          "kind": 0
+        },
+        {
+          "area": 835321856.0,
+          "cells": 12746,
+          "kind": 2
+        },
+        {
+          "area": 719323136.0,
+          "cells": 10976,
+          "kind": 1
+        }
+      ],
+      "name": "three continuous macro regions 81273",
+      "pass": true
+    },
+    {
+      "details": [
+        13142,
+        10976,
+        12746
+      ],
+      "name": "all macro regions have large area 81273",
+      "pass": true
+    },
+    {
+      "details": 1.0,
+      "name": "coarse land connectivity 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "all protected region passages dry 81273",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "kind": 0,
+          "length": 48384.0546875,
+          "points": "[(814.3674, 4570.117), (48463.37, 12971.88)]",
+          "screen_widths": 37.8000427246094
+        },
+        {
+          "kind": 1,
+          "length": 37247.98828125,
+          "points": "[(48541.88, 19915.42), (24599.23, 48448.96)]",
+          "screen_widths": 29.0999908447266
+        },
+        {
+          "kind": 2,
+          "length": 39168.06640625,
+          "points": "[(2400.354, 10346.04), (21984.35, 44266.6)]",
+          "screen_widths": 30.6000518798828
+        }
+      ],
+      "name": "8 screen minimum routes stay in own biome 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "shared world coordinates have exact weight bytes 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "seed reproduces chunk and props 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "worker plan snapshot matches main 81273",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "natural safe spawn without ground override 81273",
+      "pass": true
+    },
+    {
+      "details": [
+        0.000213242150493898,
+        0.880630910396576
+      ],
+      "name": "forest internal density variation 81273",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "area": 743112704.0,
+          "cells": 11339,
+          "kind": 2
+        },
+        {
+          "area": 792592384.0,
+          "cells": 12094,
+          "kind": 0
+        },
+        {
+          "area": 880214016.0,
+          "cells": 13431,
+          "kind": 1
+        }
+      ],
+      "name": "three continuous macro regions 902106",
+      "pass": true
+    },
+    {
+      "details": [
+        12094,
+        13431,
+        11339
+      ],
+      "name": "all macro regions have large area 902106",
+      "pass": true
+    },
+    {
+      "details": 1.0,
+      "name": "coarse land connectivity 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "all protected region passages dry 902106",
+      "pass": true
+    },
+    {
+      "details": [
+        {
+          "kind": 0,
+          "length": 44160.0390625,
+          "points": "[(33384.61, 620.1481), (48488.24, 42117.01)]",
+          "screen_widths": 34.5000305175781
+        },
+        {
+          "kind": 1,
+          "length": 42624.0703125,
+          "points": "[(7791.533, 31899.71), (47845.05, 46478.0)]",
+          "screen_widths": 33.3000549316406
+        },
+        {
+          "kind": 2,
+          "length": 36863.95703125,
+          "points": "[(24434.87, 747.1046), (739.1624, 28986.53)]",
+          "screen_widths": 28.7999664306641
+        }
+      ],
+      "name": "8 screen minimum routes stay in own biome 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "shared world coordinates have exact weight bytes 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "seed reproduces chunk and props 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "worker plan snapshot matches main 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "natural safe spawn without ground override 902106",
+      "pass": true
+    },
+    {
+      "details": [
+        0.0,
+        1.0
+      ],
+      "name": "forest internal density variation 902106",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "different seeds produce different world layouts",
+      "pass": true
+    },
+    {
+      "details": "",
+      "name": "small supported world uses same layered pipeline",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "note": "256-unit land floodfill is sampled evidence, not subpixel reachability proof. No character interaction regression.",
+  "seeds": [
+    {
+      "components": [
+        {
+          "area": 885194752.0,
+          "cells": 13507,
+          "kind": 2
+        },
+        {
+          "area": 760348672.0,
+          "cells": 11602,
+          "kind": 0
+        },
+        {
+          "area": 770375680.0,
+          "cells": 11755,
+          "kind": 1
+        }
+      ],
+      "counts": [
+        11602,
+        11755,
+        13507
+      ],
+      "generator": "windrest-biome-0.4.0",
+      "lakes": 78,
+      "land_reachable_fraction_256_grid": 1.0,
+      "macro_hash": "1945249953",
+      "plan_build_ms": 10.722,
+      "routes": [
+        {
+          "kind": 0,
+          "length": 38399.921875,
+          "points": "[(14499.72, 699.7336), (43915.75, 25382.75)]",
+          "screen_widths": 29.9999389648438
+        },
+        {
+          "kind": 1,
+          "length": 41472.078125,
+          "points": "[(48317.54, 27721.27), (12401.64, 48457.27)]",
+          "screen_widths": 32.4000610351562
+        },
+        {
+          "kind": 2,
+          "length": 44544.0,
+          "points": "[(11429.81, 821.6055), (11429.81, 45365.61)]",
+          "screen_widths": 34.8
+        }
+      ],
+      "seed": 271828,
+      "spawn": "(24576.0, 24576.0)"
+    },
+    {
+      "components": [
+        {
+          "area": 861274112.0,
+          "cells": 13142,
+          "kind": 0
+        },
+        {
+          "area": 835321856.0,
+          "cells": 12746,
+          "kind": 2
+        },
+        {
+          "area": 719323136.0,
+          "cells": 10976,
+          "kind": 1
+        }
+      ],
+      "counts": [
+        13142,
+        10976,
+        12746
+      ],
+      "generator": "windrest-biome-0.4.0",
+      "lakes": 66,
+      "land_reachable_fraction_256_grid": 1.0,
+      "macro_hash": "3406758152",
+      "plan_build_ms": 17.635,
+      "routes": [
+        {
+          "kind": 0,
+          "length": 48384.0546875,
+          "points": "[(814.3674, 4570.117), (48463.37, 12971.88)]",
+          "screen_widths": 37.8000427246094
+        },
+        {
+          "kind": 1,
+          "length": 37247.98828125,
+          "points": "[(48541.88, 19915.42), (24599.23, 48448.96)]",
+          "screen_widths": 29.0999908447266
+        },
+        {
+          "kind": 2,
+          "length": 39168.06640625,
+          "points": "[(2400.354, 10346.04), (21984.35, 44266.6)]",
+          "screen_widths": 30.6000518798828
+        }
+      ],
+      "seed": 81273,
+      "spawn": "(24576.0, 24576.0)"
+    },
+    {
+      "components": [
+        {
+          "area": 743112704.0,
+          "cells": 11339,
+          "kind": 2
+        },
+        {
+          "area": 792592384.0,
+          "cells": 12094,
+          "kind": 0
+        },
+        {
+          "area": 880214016.0,
+          "cells": 13431,
+          "kind": 1
+        }
+      ],
+      "counts": [
+        12094,
+        13431,
+        11339
+      ],
+      "generator": "windrest-biome-0.4.0",
+      "lakes": 61,
+      "land_reachable_fraction_256_grid": 1.0,
+      "macro_hash": "3834392733",
+      "plan_build_ms": 22.847,
+      "routes": [
+        {
+          "kind": 0,
+          "length": 44160.0390625,
+          "points": "[(33384.61, 620.1481), (48488.24, 42117.01)]",
+          "screen_widths": 34.5000305175781
+        },
+        {
+          "kind": 1,
+          "length": 42624.0703125,
+          "points": "[(7791.533, 31899.71), (47845.05, 46478.0)]",
+          "screen_widths": 33.3000549316406
+        },
+        {
+          "kind": 2,
+          "length": 36863.95703125,
+          "points": "[(24434.87, 747.1046), (739.1624, 28986.53)]",
+          "screen_widths": 28.7999664306641
+        }
+      ],
+      "seed": 902106,
+      "spawn": "(24576.0, 19660.8)"
+    }
+  ]
+}

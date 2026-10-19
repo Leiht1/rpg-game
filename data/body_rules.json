@@ -55,5 +55,9 @@
   "hunger_warning": 35.0,
   "hunger_obvious": 20.0,
   "sleep_night_minute": 1200.0,
-  "sleep_need_energy": 99.0
+  "sleep_need_energy": 99.0,
+  "hallucination_minutes": 60.0,
+  "hallucination_damage": 20.0,
+  "hallucination_strength": 0.65,
+  "hallucination_fade_seconds": 2.0
 }

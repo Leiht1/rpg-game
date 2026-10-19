@@ -1,0 +1,29 @@
+{
+	"checks": [
+		{
+			"name": "fresh process save remains writable",
+			"pass": true
+		},
+		{
+			"name": "fresh process name and position restored",
+			"pass": true
+		},
+		{
+			"name": "fresh process consumed identities retained",
+			"pass": true
+		},
+		{
+			"name": "fresh process inventory retained",
+			"pass": true
+		},
+		{
+			"name": "fresh process old worked mineral retained",
+			"pass": true
+		}
+	],
+	"count": 5,
+	"engine": "4.7.2-stable (official)",
+	"failed": 0,
+	"statistics": {},
+	"viewport": "(64, 64)"
+}

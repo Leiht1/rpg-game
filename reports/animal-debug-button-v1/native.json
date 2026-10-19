@@ -1,0 +1,66 @@
+{
+	"checks": [
+		{
+			"name": "F6 exposes nearby animal +1 button",
+			"pass": true
+		},
+		{
+			"name": "existing debug panel fits default window",
+			"pass": true
+		},
+		{
+			"name": "real GUI click adds exactly one animal",
+			"pass": true
+		},
+		{
+			"name": "first debug animal is wild chicken",
+			"pass": true
+		},
+		{
+			"name": "spawned animal visible near player",
+			"pass": true
+		},
+		{
+			"name": "second click adds one sheep",
+			"pass": true
+		},
+		{
+			"name": "debug clicks preserve initial quota natural sequence and seven-day deadline",
+			"pass": true
+		},
+		{
+			"name": "safe reachable ground debug:animal:1",
+			"pass": true
+		},
+		{
+			"name": "safe reachable ground debug:animal:2",
+			"pass": true
+		},
+		{
+			"name": "closing debug panel restores input",
+			"pass": true
+		},
+		{
+			"name": "protected save refuses debug spawning",
+			"pass": true
+		},
+		{
+			"name": "unsafe unloaded ground refuses without additions",
+			"pass": true
+		},
+		{
+			"name": "failed atomic save removes tentative animal",
+			"pass": true
+		},
+		{
+			"name": "successful debug spawn saves one animal",
+			"pass": true
+		},
+		{
+			"name": "reload preserves debug animal and natural scheduler",
+			"pass": true
+		}
+	],
+	"count": 15,
+	"failed": 0
+}

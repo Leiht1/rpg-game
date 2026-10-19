@@ -1,0 +1,410 @@
+{
+	"biomes": {
+		"岩石区": 2,
+		"森林": 4,
+		"泥地": 3,
+		"草原": 3
+	},
+	"checks": [
+		{
+			"name": "safe inland dry start 271828",
+			"pass": true
+		},
+		{
+			"name": "tree footprint/root clearance 271828",
+			"pass": true
+		},
+		{
+			"name": "same Seed stable entry 271828",
+			"pass": true
+		},
+		{
+			"name": "historical terrain anchor/lakes/rooms unchanged 271828",
+			"pass": true
+		},
+		{
+			"name": "worker snapshot terrain unchanged 271828",
+			"pass": true
+		},
+		{
+			"name": "saved furniture blocks entry 271828",
+			"pass": true
+		},
+		{
+			"name": "safe inland dry start 314159",
+			"pass": true
+		},
+		{
+			"name": "tree footprint/root clearance 314159",
+			"pass": true
+		},
+		{
+			"name": "same Seed stable entry 314159",
+			"pass": true
+		},
+		{
+			"name": "historical terrain anchor/lakes/rooms unchanged 314159",
+			"pass": true
+		},
+		{
+			"name": "worker snapshot terrain unchanged 314159",
+			"pass": true
+		},
+		{
+			"name": "saved furniture blocks entry 314159",
+			"pass": true
+		},
+		{
+			"name": "safe inland dry start 447349832",
+			"pass": true
+		},
+		{
+			"name": "tree footprint/root clearance 447349832",
+			"pass": true
+		},
+		{
+			"name": "same Seed stable entry 447349832",
+			"pass": true
+		},
+		{
+			"name": "historical terrain anchor/lakes/rooms unchanged 447349832",
+			"pass": true
+		},
+		{
+			"name": "worker snapshot terrain unchanged 447349832",
+			"pass": true
+		},
+		{
+			"name": "saved furniture blocks entry 447349832",
+			"pass": true
+		},
+		{
+			"name": "safe inland dry start 12345",
+			"pass": true
+		},
+		{
+			"name": "tree footprint/root clearance 12345",
+			"pass": true
+		},
+		{
+			"name": "same Seed stable entry 12345",
+			"pass": true
+		},
+		{
+			"name": "historical terrain anchor/lakes/rooms unchanged 12345",
+			"pass": true
+		},
+		{
+			"name": "worker snapshot terrain unchanged 12345",
+			"pass": true
+		},
+		{
+			"name": "saved furniture blocks entry 12345",
+			"pass": true
+		},
+		{
+			"name": "safe inland dry start 1001",
+			"pass": true
+		},
+		{
+			"name": "tree footprint/root clearance 1001",
+			"pass": true
+		},
+		{
+			"name": "same Seed stable entry 1001",
+			"pass": true
+		},
+		{
+			"name": "historical terrain anchor/lakes/rooms unchanged 1001",
+			"pass": true
+		},
+		{
+			"name": "worker snapshot terrain unchanged 1001",
+			"pass": true
+		},
+		{
+			"name": "saved furniture blocks entry 1001",
+			"pass": true
+		},
+		{
+			"name": "safe inland dry start 1002",
+			"pass": true
+		},
+		{
+			"name": "tree footprint/root clearance 1002",
+			"pass": true
+		},
+		{
+			"name": "same Seed stable entry 1002",
+			"pass": true
+		},
+		{
+			"name": "historical terrain anchor/lakes/rooms unchanged 1002",
+			"pass": true
+		},
+		{
+			"name": "worker snapshot terrain unchanged 1002",
+			"pass": true
+		},
+		{
+			"name": "saved furniture blocks entry 1002",
+			"pass": true
+		},
+		{
+			"name": "safe inland dry start 1003",
+			"pass": true
+		},
+		{
+			"name": "tree footprint/root clearance 1003",
+			"pass": true
+		},
+		{
+			"name": "same Seed stable entry 1003",
+			"pass": true
+		},
+		{
+			"name": "historical terrain anchor/lakes/rooms unchanged 1003",
+			"pass": true
+		},
+		{
+			"name": "worker snapshot terrain unchanged 1003",
+			"pass": true
+		},
+		{
+			"name": "saved furniture blocks entry 1003",
+			"pass": true
+		},
+		{
+			"name": "safe inland dry start 1004",
+			"pass": true
+		},
+		{
+			"name": "tree footprint/root clearance 1004",
+			"pass": true
+		},
+		{
+			"name": "same Seed stable entry 1004",
+			"pass": true
+		},
+		{
+			"name": "historical terrain anchor/lakes/rooms unchanged 1004",
+			"pass": true
+		},
+		{
+			"name": "worker snapshot terrain unchanged 1004",
+			"pass": true
+		},
+		{
+			"name": "saved furniture blocks entry 1004",
+			"pass": true
+		},
+		{
+			"name": "safe inland dry start 1005",
+			"pass": true
+		},
+		{
+			"name": "tree footprint/root clearance 1005",
+			"pass": true
+		},
+		{
+			"name": "same Seed stable entry 1005",
+			"pass": true
+		},
+		{
+			"name": "historical terrain anchor/lakes/rooms unchanged 1005",
+			"pass": true
+		},
+		{
+			"name": "worker snapshot terrain unchanged 1005",
+			"pass": true
+		},
+		{
+			"name": "saved furniture blocks entry 1005",
+			"pass": true
+		},
+		{
+			"name": "safe inland dry start 1006",
+			"pass": true
+		},
+		{
+			"name": "tree footprint/root clearance 1006",
+			"pass": true
+		},
+		{
+			"name": "same Seed stable entry 1006",
+			"pass": true
+		},
+		{
+			"name": "historical terrain anchor/lakes/rooms unchanged 1006",
+			"pass": true
+		},
+		{
+			"name": "worker snapshot terrain unchanged 1006",
+			"pass": true
+		},
+		{
+			"name": "saved furniture blocks entry 1006",
+			"pass": true
+		},
+		{
+			"name": "safe inland dry start 1007",
+			"pass": true
+		},
+		{
+			"name": "tree footprint/root clearance 1007",
+			"pass": true
+		},
+		{
+			"name": "same Seed stable entry 1007",
+			"pass": true
+		},
+		{
+			"name": "historical terrain anchor/lakes/rooms unchanged 1007",
+			"pass": true
+		},
+		{
+			"name": "worker snapshot terrain unchanged 1007",
+			"pass": true
+		},
+		{
+			"name": "saved furniture blocks entry 1007",
+			"pass": true
+		},
+		{
+			"name": "safe inland dry start 1008",
+			"pass": true
+		},
+		{
+			"name": "tree footprint/root clearance 1008",
+			"pass": true
+		},
+		{
+			"name": "same Seed stable entry 1008",
+			"pass": true
+		},
+		{
+			"name": "historical terrain anchor/lakes/rooms unchanged 1008",
+			"pass": true
+		},
+		{
+			"name": "worker snapshot terrain unchanged 1008",
+			"pass": true
+		},
+		{
+			"name": "saved furniture blocks entry 1008",
+			"pass": true
+		},
+		{
+			"name": "multiple Seeds yield varied actual biomes",
+			"pass": true
+		},
+		{
+			"name": "different Seeds have different entry positions",
+			"pass": true
+		},
+		{
+			"name": "real world startup uses new entry selector",
+			"pass": true
+		},
+		{
+			"name": "native test is isolated from player saves",
+			"pass": true
+		},
+		{
+			"name": "project default native window",
+			"pass": true
+		},
+		{
+			"name": "actual entry terrain installed",
+			"pass": true
+		}
+	],
+	"count": 78,
+	"failed": 0,
+	"seeds": [
+		{
+			"entry": "(38950.29, 25772.89)",
+			"entry_biome": "泥地",
+			"old_anchor": "(20152.32, 14254.08)",
+			"old_biome": "草原",
+			"seed": 271828
+		},
+		{
+			"entry": "(21067.0, 16114.81)",
+			"entry_biome": "森林",
+			"old_anchor": "(31457.28, 32440.32)",
+			"old_biome": "草原",
+			"seed": 314159
+		},
+		{
+			"entry": "(24516.29, 35516.24)",
+			"entry_biome": "岩石区",
+			"old_anchor": "(29491.2, 31948.8)",
+			"old_biome": "岩石区",
+			"seed": 447349832
+		},
+		{
+			"entry": "(41196.49, 13520.51)",
+			"entry_biome": "森林",
+			"old_anchor": "(33423.36, 17694.72)",
+			"old_biome": "草原",
+			"seed": 12345
+		},
+		{
+			"entry": "(13948.67, 11731.96)",
+			"entry_biome": "草原",
+			"old_anchor": "(36864.0, 28016.64)",
+			"old_biome": "草原",
+			"seed": 1001
+		},
+		{
+			"entry": "(27800.45, 17504.3)",
+			"entry_biome": "泥地",
+			"old_anchor": "(34897.92, 19169.28)",
+			"old_biome": "草原",
+			"seed": 1002
+		},
+		{
+			"entry": "(26138.82, 10876.46)",
+			"entry_biome": "草原",
+			"old_anchor": "(16711.68, 29491.2)",
+			"old_biome": "草原",
+			"seed": 1003
+		},
+		{
+			"entry": "(24765.16, 22548.44)",
+			"entry_biome": "森林",
+			"old_anchor": "(26050.56, 16220.16)",
+			"old_biome": "岩石区",
+			"seed": 1004
+		},
+		{
+			"entry": "(14832.54, 32724.3)",
+			"entry_biome": "泥地",
+			"old_anchor": "(20643.84, 35389.44)",
+			"old_biome": "草原",
+			"seed": 1005
+		},
+		{
+			"entry": "(16371.26, 26357.64)",
+			"entry_biome": "草原",
+			"old_anchor": "(25067.52, 18186.24)",
+			"old_biome": "草原",
+			"seed": 1006
+		},
+		{
+			"entry": "(35581.7, 33365.66)",
+			"entry_biome": "森林",
+			"old_anchor": "(24084.48, 18677.76)",
+			"old_biome": "草原",
+			"seed": 1007
+		},
+		{
+			"entry": "(8746.318, 18405.65)",
+			"entry_biome": "岩石区",
+			"old_anchor": "(11304.96, 20152.32)",
+			"old_biome": "草原",
+			"seed": 1008
+		}
+	]
+}

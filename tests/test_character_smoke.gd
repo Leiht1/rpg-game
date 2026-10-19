@@ -1,6 +1,6 @@
 extends SceneTree
 
-# Short integration check for the accepted v11 side walk at the existing 115 px/s.
+# Short integration check for the accepted v11 side walk at 200 px/s.
 var failures: Array[String]=[]
 var world: Node2D
 
@@ -25,7 +25,8 @@ func run() -> void:
 	if not world.started: quit(1); return
 	var player: WildPlayer=world.player
 	player.set_physics_process(false)
-	check(WildPlayer.WALK_SPEED==115.0,"Movement speed is not 115 px/s")
+	check(WildPlayer.WALK_SPEED==200.0,"Movement speed is not 200 px/s")
+	check(is_equal_approx(WildPlayer.WALK_SPEED/float(player.actor.stride_world_units)*8,13.8),"Walk cadence must remain 13.8 frames/s")
 	check(player.actor.template_version=="windrest-character-template-5","Wrong runtime template")
 	check(player.actor.idle_cycle_ms==1800,"Wrong breathing cycle")
 	for view in ["front","back","side"]:
@@ -70,7 +71,7 @@ func run() -> void:
 		await ticks(12)
 		var distance := player.position.distance_to(start)
 		distances.append(distance)
-		check(absf(distance-23.0)<.2,"115 px/s or diagonal normalization mismatch: %.4f"%distance)
+		check(absf(distance-40.0)<.2,"200 px/s or diagonal normalization mismatch: %.4f"%distance)
 		check(player.moving and str(player.sprite.animation).ends_with("_walk"),"Movement did not enter walk")
 		var expected_frame := int(player.gait_distance/float(player.actor.stride_world_units)*8)%8
 		check(player.sprite.frame==expected_frame,"Walk phase differs from actual travel")

@@ -9,6 +9,7 @@ var panel := PanelContainer.new()
 var detail := Label.new()
 var rain_visual := preload("res://scripts/weather_rain.gd").new()
 var save_clock := 0.0
+var hallucination_visual := 0.0
 var preview := false
 var previous_scale := 1.0
 var previous_pause := false
@@ -121,6 +122,10 @@ func _process(delta: float) -> void:
 		advance_gameplay(delta*maxf(0.0,simulation.time_scale))
 	else:
 		simulation.advance(delta)
+	var state = world.item_service.body
+	var target := float(state.rules.hallucination_strength) if state.hallucination_remaining>0.0 else 0.0
+	hallucination_visual=move_toward(hallucination_visual,target,delta/maxf(.01,float(state.rules.hallucination_fade_seconds)))
+	material_effect.set_shader_parameter("hallucination",hallucination_visual)
 	var light: Dictionary = simulation.light_parameters()
 	for key in ["brightness","saturation","contrast"]: material_effect.set_shader_parameter(key,light[key])
 	material_effect.set_shader_parameter("light_tint",light.tint)
@@ -130,7 +135,7 @@ func _process(delta: float) -> void:
 		var viewport := get_viewport()
 		var center: Vector2=viewport.get_canvas_transform()*(world.player.position+Vector2(0,-20))
 		material_effect.set_shader_parameter("lantern_center",center/viewport.get_visible_rect().size)
-		material_effect.set_shader_parameter("lantern_radius",260.0*viewport.get_canvas_transform().get_scale().x)
+		material_effect.set_shader_parameter("lantern_radius",float(world.item_service.database.item(str(world.item_service.lamp_slot().get("item_id",""))).get("light_radius",260.0))*viewport.get_canvas_transform().get_scale().x)
 	var centers := PackedVector2Array()
 	var radii := PackedFloat32Array()
 	for node in world.item_service.camps.visuals.values():
@@ -140,7 +145,7 @@ func _process(delta: float) -> void:
 				centers.append(screen/get_viewport().get_visible_rect().size)
 				radii.append(float(world.item_service.camps.rules.light_radius)*get_viewport().get_canvas_transform().get_scale().x)
 	for id in world.item_service.builds.visuals:
-		if world.item_service.builds.states[id].kind!="camp_torch": continue
+		if world.item_service.builds.states[id].kind!="camp_torch" and not (world.item_service.builds.states[id].kind=="copper_lamp" and world.item_service.builds.states[id].machine.enabled): continue
 		var node: Node2D=world.item_service.builds.visuals[id]
 		var screen: Vector2=get_viewport().get_canvas_transform()*node.position
 		if get_viewport().get_visible_rect().grow(maxf(240.0,float(world.item_service.camps.rules.light_radius)*get_viewport().get_canvas_transform().get_scale().x)).has_point(screen):
@@ -225,7 +230,9 @@ func advance_gameplay(seconds: float) -> void:
 		simulation.time_scale=1.0;simulation.advance(step);simulation.time_scale=original_scale
 		body.busy=player.input_blocked and not body.sleeping
 		body.advance(step,step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0),player.running and player.moving and not player.input_blocked,player.action in ["chop","mine","dig"] and not player.input_blocked)
+		if service.industry.enabled():service.industry.advance(step,step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
 		service.planting.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
+		service.animals.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
 		service.camps.advance(step,simulation.blend.z+simulation.blend.y,simulation.blend.y)
 		if is_instance_valid(service.lantern) and service.lantern.visible: service.burn_lantern(step)
 		service.sleep.after_body()

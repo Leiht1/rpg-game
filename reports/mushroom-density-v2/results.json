@@ -1,0 +1,139 @@
+{
+	"checks": [
+		{
+			"name": "modest mushroom increase 271828",
+			"pass": true
+		},
+		{
+			"name": "meadow unchanged",
+			"pass": true
+		},
+		{
+			"name": "consumed retained natural-resources-0.3.1",
+			"pass": true
+		},
+		{
+			"name": "hallucination retained natural-resources-0.3.1",
+			"pass": true
+		},
+		{
+			"name": "atomic migrated bag natural-resources-0.3.1",
+			"pass": true
+		},
+		{
+			"name": "source preserved natural-resources-0.3.1",
+			"pass": true
+		},
+		{
+			"name": "consumed retained natural-resources-0.3.0",
+			"pass": true
+		},
+		{
+			"name": "hallucination retained natural-resources-0.3.0",
+			"pass": true
+		},
+		{
+			"name": "atomic migrated bag natural-resources-0.3.0",
+			"pass": true
+		},
+		{
+			"name": "source preserved natural-resources-0.3.0",
+			"pass": true
+		},
+		{
+			"name": "modest mushroom increase 447349832",
+			"pass": true
+		},
+		{
+			"name": "meadow unchanged",
+			"pass": true
+		},
+		{
+			"name": "modest mushroom increase 1671081329",
+			"pass": true
+		},
+		{
+			"name": "meadow unchanged",
+			"pass": true
+		}
+	],
+	"failed": 0,
+	"samples": [
+		{
+			"after": {
+				"branch": 367,
+				"broad_leaf": 141,
+				"brown_mushroom": 89,
+				"flint": 35,
+				"plant_fiber": 254,
+				"wild_berry": 59,
+				"wild_carrot": 221,
+				"wildflower": 290
+			},
+			"before": {
+				"branch": 375,
+				"broad_leaf": 153,
+				"brown_mushroom": 64,
+				"flint": 35,
+				"plant_fiber": 255,
+				"wild_berry": 61,
+				"wild_carrot": 222,
+				"wildflower": 288
+			},
+			"chunks": 386,
+			"seed": 271828
+		},
+		{
+			"after": {
+				"branch": 364,
+				"broad_leaf": 193,
+				"brown_mushroom": 156,
+				"flint": 19,
+				"plant_fiber": 206,
+				"wild_apple": 2,
+				"wild_berry": 58,
+				"wild_carrot": 187,
+				"wildflower": 223
+			},
+			"before": {
+				"branch": 379,
+				"broad_leaf": 203,
+				"brown_mushroom": 122,
+				"flint": 19,
+				"plant_fiber": 206,
+				"wild_apple": 2,
+				"wild_berry": 63,
+				"wild_carrot": 187,
+				"wildflower": 224
+			},
+			"chunks": 314,
+			"seed": 447349832
+		},
+		{
+			"after": {
+				"branch": 265,
+				"broad_leaf": 147,
+				"brown_mushroom": 109,
+				"flint": 15,
+				"plant_fiber": 116,
+				"wild_apple": 2,
+				"wild_berry": 49,
+				"wild_carrot": 57,
+				"wildflower": 96
+			},
+			"before": {
+				"branch": 272,
+				"broad_leaf": 155,
+				"brown_mushroom": 85,
+				"flint": 15,
+				"plant_fiber": 116,
+				"wild_apple": 2,
+				"wild_berry": 50,
+				"wild_carrot": 57,
+				"wildflower": 98
+			},
+			"chunks": 283,
+			"seed": 1671081329
+		}
+	]
+}

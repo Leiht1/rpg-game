@@ -1,0 +1,33 @@
+{
+	"checks": [
+		{
+			"name": "legacy fixture actually resolves to old buried kind",
+			"pass": true
+		},
+		{
+			"name": "legacy partially dug identity reconstructed during migration",
+			"pass": true
+		},
+		{
+			"name": "legacy buried kind/position/progress exact",
+			"pass": true
+		},
+		{
+			"name": "legacy consumed and inventory unchanged",
+			"pass": true
+		},
+		{
+			"name": "migration atomic snapshot writes",
+			"pass": true
+		},
+		{
+			"name": "corrected old buried fixture survives reload",
+			"pass": true
+		}
+	],
+	"count": 6,
+	"engine": "4.7.2-stable (official)",
+	"failed": 0,
+	"statistics": {},
+	"viewport": "(64, 64)"
+}

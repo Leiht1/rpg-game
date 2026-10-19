@@ -20,7 +20,7 @@ func refresh() -> void:
 	var v: Dictionary=owner_ui.contents(index)
 	image.texture=null;amount.text="";tooltip_text="空木箱格";bar.hide()
 	if v.is_empty(): return
-	image.texture=owner_ui.service.texture(v.item_id,"icon");amount.text=str(v.count)
+	image.texture=owner_ui.service.stack_texture(v,"icon");amount.text=str(v.count)
 	var d: Dictionary=owner_ui.service.database.item(v.item_id);tooltip_text=d.name+"\n"+d.description
 	if d.get("durability")!=null:
 		bar.show();bar.max_value=d.durability;bar.value=v.durability

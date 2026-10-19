@@ -1,0 +1,59 @@
+{
+	"accelerated_distance_px": 8401.594653368,
+	"adapter": "NVIDIA GeForce RTX 3060",
+	"average_fps": 1274.14768288491,
+	"captures_during_run": false,
+	"engine": "4.7.2-stable (official)",
+	"generator": "windrest-biome-0.2.0",
+	"loaded_chunks": 30,
+	"map_cells": 1024,
+	"max_chunk_install_ms": 1.126,
+	"max_frame_ms": 5.501,
+	"mean_frame_ms": 0.784838377397363,
+	"memory_samples": [
+		{
+			"loaded": 8,
+			"objects": 96,
+			"static_memory_mib": 54.0080060958862,
+			"time": 0.00349014814814813
+		},
+		{
+			"loaded": 25,
+			"objects": 323,
+			"static_memory_mib": 57.9256277084351,
+			"time": 5.00369414814817
+		},
+		{
+			"loaded": 25,
+			"objects": 323,
+			"static_memory_mib": 58.083872795105,
+			"time": 10.0043121481481
+		},
+		{
+			"loaded": 30,
+			"objects": 400,
+			"static_memory_mib": 59.5464468002319,
+			"time": 15.0048411481478
+		}
+	],
+	"method": "Rendered window; wall-clock frame intervals. 8-way input + rapid switching + 8x accelerated streaming stress (harness skips prop collisions); excludes startup and first 2s. Physics collisions tested separately.",
+	"missing_player_ground_frames": 0,
+	"nodes": 1202,
+	"objects": 403,
+	"p95_frame_ms": 1.38,
+	"p99_frame_ms": 1.844,
+	"peak_static_memory_mib": 59.7894582748413,
+	"position": "(24595.85, 34240.96)",
+	"renderer": "gl_compatibility",
+	"samples": 20387,
+	"seconds": 18.000380148148,
+	"seed": 271828,
+	"spawn": "(24576.0, 24576.0)",
+	"static_memory_mib": 59.789870262146,
+	"total_chunks_loaded": 65,
+	"total_chunks_unloaded": 35,
+	"video_memory_mib": 46.172287940979,
+	"viewport": "(1280.0, 720.0)",
+	"viewport_not_ready_frames": 0,
+	"vsync": false
+}

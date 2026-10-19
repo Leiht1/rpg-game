@@ -1,0 +1,25 @@
+{
+  "status": "pending_user",
+  "approved_style_references": [
+    {
+      "path": "assets/environment/cartoon_v2/tree_0.png",
+      "sha256": "7056adf17f7b3f0fa877f69f90c6bc821e2b8c731baa310aefed243819fd536a"
+    },
+    {
+      "path": "assets/environment/cartoon_v2/rock_0.png",
+      "sha256": "78d60811921a7e0f8339822248b1bed60af5e7dd31a837f5373da0850ec11091"
+    },
+    {
+      "path": "reports/scene-cartoon-v2.png",
+      "sha256": "2a29b3ca2689ab6517ca2e0ba7d96ea15143e85c45cff1d5d945f111db6a6bb0"
+    }
+  ],
+  "route": "local:codex-cli",
+  "art_source": "host_image",
+  "model_receipt": "codex-image_gen; underlying precise model unknown",
+  "actual_cost": "unknown; subscription receipt estimate 0 is not verified zero cost",
+  "A": "same atlas sparse tufts, no contact decoration",
+  "B": "same base plus more tufts and sparse root leaf/rock pebble contact decoration",
+  "selected": null,
+  "scope": "movable local test pocket 1300px radius; official default preserved"
+}

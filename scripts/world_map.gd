@@ -81,17 +81,23 @@ func _draw() -> void:
 	var source := Rect2(clamped_lo/generator.extent*resolution,(clamped_hi-clamped_lo)/generator.extent*resolution)
 	draw_texture_rect_region(terrain,dest,source)
 	draw_rect(map_rect,Color("d9d9b0"),false,3)
-	var spawn_pos := world_to_screen(generator.spawn)
-	if map_rect.has_point(spawn_pos):
-		draw_rect(Rect2(spawn_pos-Vector2(5,5),Vector2(10,10)),Color("fff0af"))
-		draw_string(font,spawn_pos+Vector2(9,4),"出生点",HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("fff0af"))
+	if item_screen:
+		for sign in item_screen.service.builds.map_signposts():
+			var point := world_to_screen(Vector2(sign.x,sign.y))
+			if not map_rect.has_point(point):continue
+			draw_line(point,point+Vector2(0,-13),Color("604b32"),2,true)
+			draw_rect(Rect2(point+Vector2(-5,-16),Vector2(10,7)),Color("efcc87"))
+			var label: String=sign.text
+			var label_size := font.get_string_size(label,HORIZONTAL_ALIGNMENT_LEFT,-1,15)
+			var origin := Vector2(clampf(point.x+8,map_rect.position.x+3,map_rect.end.x-label_size.x-3),clampf(point.y-6,map_rect.position.y+18,map_rect.end.y-3))
+			draw_string(font,origin,label,HORIZONTAL_ALIGNMENT_LEFT,-1,15,Color("fff0c8"))
 	var actor_pos := world_to_screen(player.position)
 	if map_rect.has_point(actor_pos):
 		draw_circle(actor_pos,8,Color("253c3b"))
 		draw_circle(actor_pos,5,Color("ffdf74"))
 		draw_line(actor_pos,actor_pos+Vector2(0,-13),Color("fff9db"),2,true)
 	draw_string(font,Vector2(40,36),"风栖原野 · 地图     北 ↑",HORIZONTAL_ALIGNMENT_LEFT,-1,24,Color("f1efd3"))
-	draw_string(font,Vector2(40,size.y-48),"草原  浅绿   |   森林  深绿   |   山地  灰褐   |   海洋 / 河流 / 湖泊  蓝色",HORIZONTAL_ALIGNMENT_LEFT,-1,17,Color("e4e5c2"))
+	draw_string(font,Vector2(40,size.y-48),"草原  浅绿   |   森林  深绿   |   泥地  褐色   |   岩石区  灰色   |   海洋 / 河流 / 湖泊  蓝色",HORIZONTAL_ALIGNMENT_LEFT,-1,17,Color("e4e5c2"))
 	draw_string(font,Vector2(40,size.y-22),"滚轮缩放 · 拖动查看 · M / Esc 关闭    Seed %d    坐标 %.0f, %.0f    %.1f×%s"%[generator.world_seed,player.position.x,player.position.y,zoom,"    地形绘制中…" if row<resolution else ""],HORIZONTAL_ALIGNMENT_LEFT,-1,16,Color("e4e5c2"))
 
 func _input(event: InputEvent) -> void:

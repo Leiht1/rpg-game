@@ -1,0 +1,37 @@
+{
+  "status": "approved_and_integrated",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "source": "art/food-v2/generated/generated.png",
+  "prompt": "art/food-v2/prompt.txt",
+  "runtime": "assets/cooking/v2; original approved candidate bytes",
+  "files": {
+    "roasted_potato.png": "6247129e0084a19e94dcfd8f4c7b9df26a6900c5d49890dc6a06f2a0463d943c",
+    "roasted_cabbage.png": "031a3a33e44c0ffdecc450159f3fce3fa58c413636b6868280846bfd49dfd51a",
+    "vegetable_soup.png": "e312220d507defa86aef764bb0579ce05bd975609661f6f5c8e14ef3a2bfc86a",
+    "stewed_vegetables.png": "caa5c62578e4f096c19f993adc79f15af5fc88293547b0f5300be9067cc930d7"
+  },
+  "warnings": [
+    {
+      "id": "boundary_band",
+      "value": 118,
+      "threshold": 0,
+      "file": "art/food-v2/spill/sheet-qc.json"
+    },
+    {
+      "id": "safe_frame",
+      "value": 4,
+      "threshold": 0,
+      "file": "art/food-v2/spill/sheet-qc.json"
+    }
+  ],
+  "processor_qa": "pass; full cell ownership, no cross-cell components or source-edge contact",
+  "approval": {
+    "date": "2026-10-19",
+    "quote": "还不错，接入游戏吧",
+    "scope": "仅本批烤土豆、烤卷心菜、蔬菜汤、炖杂蔬四张图标；不批准未来素材"
+  },
+  "candidate": "prototypes/food-v2/final",
+  "reference_preview": "prototypes/food-v2/preview.png"
+}

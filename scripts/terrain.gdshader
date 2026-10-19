@@ -4,6 +4,7 @@ uniform sampler2D grounding_mask:filter_linear,repeat_disable;
 uniform vec2 chunk_origin=vec2(0.);
 uniform vec2 ground_origin=vec2(0.);
 uniform sampler2D forest_tex:filter_linear,repeat_enable;
+uniform sampler2D rocky_tex:filter_linear,repeat_enable;
 uniform sampler2D rock_tex:filter_linear,repeat_enable;
 uniform sampler2D meadow_tex:filter_linear,repeat_enable;
 uniform sampler2D shore_tex:filter_linear,repeat_enable;
@@ -36,11 +37,14 @@ void fragment(){
  vec3 base=(forest*w.r+rock*w.g+grass*w.b)/max(.001,w.r+w.g+w.b);
 
  // Smooth world-space subenvironment field, shared with tree/rock placement.
- vec2 env=texture(environment_tex,((p-chunk_origin)/48.+vec2(1.5))/26.).rg;
+ vec3 environment=texture(environment_tex,((p-chunk_origin)/48.+vec2(1.5))/26.).rgb;
+ vec2 env=environment.rg;
+ float rocky=environment.b;
+ base=base*(1.-rocky)+sample_ground(rocky_tex,p)*rocky;
  float clearing=1.-smoothstep(.24,.58,env.x);
  float exposed=smoothstep(.58,.88,env.y)*clearing;
- base=mix(base,grass,w.r*clearing*.19);
- base=mix(base,shore,(w.b*.18+w.g*.12)*exposed);
+ base=mix(base,grass,w.r*clearing*.19*(1.-rocky));
+ base=mix(base,shore,(w.b*.18+w.g*.12)*exposed*(1.-rocky));
  base*=1.+(.5-env.x)*.075;
 
  float quiet=texture(grounding_mask,UV).r;
@@ -48,7 +52,7 @@ void fragment(){
   vec3 calm=(sample_ground(meadow_tex,p+vec2(18.,0.))+sample_ground(meadow_tex,p-vec2(18.,0.))+sample_ground(meadow_tex,p+vec2(0.,18.))+sample_ground(meadow_tex,p-vec2(0.,18.)))*w.b;
   calm+=(sample_ground(forest_tex,p+vec2(18.,0.))+sample_ground(forest_tex,p-vec2(18.,0.))+sample_ground(forest_tex,p+vec2(0.,18.))+sample_ground(forest_tex,p-vec2(0.,18.)))*w.r;
   calm+=(sample_ground(rock_tex,p+vec2(18.,0.))+sample_ground(rock_tex,p-vec2(18.,0.))+sample_ground(rock_tex,p+vec2(0.,18.))+sample_ground(rock_tex,p-vec2(0.,18.)))*w.g;
-  base=mix(base,calm/(4.*max(.001,w.r+w.g+w.b)),quiet*.42*(1.-smoothstep(.05,.3,w.a)));
+  base=mix(base,mix(calm/(4.*max(.001,w.r+w.g+w.b)),sample_ground(rocky_tex,p),rocky),quiet*.42*(1.-smoothstep(.05,.3,w.a)));
  }
 
  // A horizontal water plane bounded by the new world-space natural contour.

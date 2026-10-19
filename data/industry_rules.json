@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "max_fuel": 2400.0,
+  "queue_limit": 12,
+  "trough_range": 180.0,
+  "trough_capacity": 99,
+  "rotten_hunger_ratio": 0.25,
+  "rotten_damage": 5.0,
+  "discomfort_seconds": 3.0,
+  "fuel_items": {
+    "wood": 120.0,
+    "branch": 30.0,
+    "plant_fiber": 15.0,
+    "pine_cone": 45.0
+  },
+  "recipes": {
+    "smelt_copper": {
+      "station": "stone_furnace",
+      "materials": {
+        "copper_ore": 2
+      },
+      "output": "copper_ingot",
+      "count": 1,
+      "seconds": 24
+    },
+    "smelt_silver": {
+      "station": "stone_furnace",
+      "materials": {
+        "silver_ore": 2
+      },
+      "output": "silver_ingot",
+      "count": 1,
+      "seconds": 32
+    },
+    "smelt_gold": {
+      "station": "stone_furnace",
+      "materials": {
+        "gold_ore": 2
+      },
+      "output": "gold_ingot",
+      "count": 1,
+      "seconds": 40
+    },
+    "metal_copper_plate": {
+      "station": "metal_workbench",
+      "materials": {
+        "copper_ingot": 1
+      },
+      "output": "copper_plate",
+      "count": 1,
+      "seconds": 8
+    },
+    "metal_copper_parts": {
+      "station": "metal_workbench",
+      "materials": {
+        "copper_ingot": 1
+      },
+      "output": "copper_parts",
+      "count": 2,
+      "seconds": 8
+    },
+    "metal_metal_connector": {
+      "station": "metal_workbench",
+      "materials": {
+        "copper_ingot": 1
+      },
+      "output": "metal_connector",
+      "count": 2,
+      "seconds": 8
+    },
+    "metal_copper_axe": {
+      "station": "metal_workbench",
+      "materials": {
+        "copper_ingot": 2,
+        "wood": 2,
+        "plant_fiber": 2
+      },
+      "output": "copper_axe",
+      "count": 1,
+      "seconds": 15
+    },
+    "metal_copper_pickaxe": {
+      "station": "metal_workbench",
+      "materials": {
+        "copper_ingot": 3,
+        "wood": 2,
+        "plant_fiber": 2
+      },
+      "output": "copper_pickaxe",
+      "count": 1,
+      "seconds": 15
+    },
+    "metal_copper_shovel": {
+      "station": "metal_workbench",
+      "materials": {
+        "copper_plate": 2,
+        "wood": 2
+      },
+      "output": "copper_shovel",
+      "count": 1,
+      "seconds": 15
+    },
+    "metal_copper_hammer": {
+      "station": "metal_workbench",
+      "materials": {
+        "copper_ingot": 3,
+        "wood": 2
+      },
+      "output": "copper_hammer",
+      "count": 1,
+      "seconds": 15
+    },
+    "metal_silver_lantern": {
+      "station": "metal_workbench",
+      "materials": {
+        "silver_ingot": 2,
+        "copper_parts": 2,
+        "plant_fiber": 2
+      },
+      "output": "silver_lantern",
+      "count": 1,
+      "seconds": 15
+    },
+    "metal_fishing_rod": {
+      "station": "metal_workbench",
+      "materials": {
+        "wood": 2,
+        "plant_fiber": 2,
+        "wool": 1,
+        "copper_parts": 1
+      },
+      "output": "fishing_rod",
+      "count": 1,
+      "seconds": 15
+    }
+  },
+  "fallback_recipes": {
+    "oven_small_hodgepodge": {
+      "station": "copper_oven",
+      "materials": {},
+      "output": "small_hodgepodge",
+      "count": 1,
+      "seconds": 12
+    },
+    "oven_large_hodgepodge": {
+      "station": "copper_oven",
+      "materials": {},
+      "output": "large_hodgepodge",
+      "count": 1,
+      "seconds": 18
+    }
+  }
+}

@@ -36,9 +36,9 @@ func configure(owner_screen: Control) -> void:
 	z_index=10
 	add_child(panel)
 	panel.add_theme_stylebox_override("panel",ItemSkin.frame(22))
-	panel.custom_minimum_size=Vector2(1030,600)
+	panel.custom_minimum_size=Vector2(980,540)
 	var body := VBoxContainer.new()
-	body.add_theme_constant_override("separation",14)
+	body.add_theme_constant_override("separation",8)
 	panel.add_child(body)
 	var header := HBoxContainer.new()
 	body.add_child(header)
@@ -48,9 +48,9 @@ func configure(owner_screen: Control) -> void:
 	header.add_child(title)
 	header.add_child(button("制作",set_mode.bind(false)))
 	header.add_child(button("建造",set_mode.bind(true)))
-	header.add_theme_constant_override("separation",20)
-	mode_hint=label("徒手制作 · 进度满后完成",13)
-	header.add_child(mode_hint)
+	header.add_theme_constant_override("separation",10)
+	mode_hint=label("",13)
+	mode_hint.hide();header.add_child(mode_hint)
 	var close := button("C / Esc  关闭",screen.close_panels)
 	close_button=close
 	header.add_child(close)
@@ -60,7 +60,7 @@ func configure(owner_screen: Control) -> void:
 	body.add_child(HSeparator.new())
 	var columns := HBoxContainer.new()
 	columns.size_flags_vertical=Control.SIZE_EXPAND_FILL
-	columns.add_theme_constant_override("separation",18)
+	columns.add_theme_constant_override("separation",12)
 	body.add_child(columns)
 	categories.custom_minimum_size.x=124
 	categories.add_theme_constant_override("separation",10)
@@ -135,7 +135,7 @@ func configure(owner_screen: Control) -> void:
 	footer_safe.add_theme_constant_override("margin_left",40)
 	body.add_child(footer_safe)
 	mode_footer=label("材料统计包含背包与快捷栏；成品优先补已有堆叠，再放入背包。",12)
-	footer_safe.add_child(mode_footer)
+	footer_safe.add_child(mode_footer);footer_safe.hide()
 	service.inventory.changed.connect(inventory_changed)
 	service.craft_progress.connect(update_progress)
 	service.craft_finished.connect(finish_craft)
@@ -150,7 +150,7 @@ func configure(owner_screen: Control) -> void:
 
 func fit_panel() -> void:
 	# Only viewport changes call this. Clicks and recipe contents keep this geometry.
-	panel.size=Vector2(1030,600)
+	panel.size=Vector2(980,540)
 	var factor := minf(1.0,minf((size.x-32)/panel.size.x,(size.y-40)/panel.size.y))
 	panel.scale=Vector2.ONE*maxf(.35,factor)
 	panel.position=(size-panel.size*panel.scale)*.5

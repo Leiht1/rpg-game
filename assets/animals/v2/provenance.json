@@ -1,0 +1,24 @@
+{
+  "status": "approved",
+  "approval": "可以了接入游戏吧",
+  "approval_date": "2026-10-19",
+  "scope": "current nine candidate cutouts, no-neck enlarged sheep head, slender legs, right-shifted chicken feet and selective white fur material; no future art approval",
+  "source": "art/animals-style-v2/provenance.json",
+  "head_source": "art/animals-head-v3/provenance.json",
+  "approved_review": "art/animals-style-v2/approved-white-review.png",
+  "files": {
+    "chicken_body.png": "4a3123005ffb699340eacff5c24adaa730bbfe04e7cc1add056d472f26983cea",
+    "chicken_head.png": "68acbedbf0de49737b42aa1a19e3cc3d02549a81dba89850974ce8a219630388",
+    "chicken_head_closed.png": "bfb62bfbd41e825693c526b25a080b1b6ab048a5673b31213410718b069cd51c",
+    "chicken_leg.png": "24ea93500ab38f0f29ad7ccf7680573723a079f26ca72e1d97922291e5612a24",
+    "chicken_wing.png": "54c6b6cc1986dd9a377c743e46912cad78583c7a1043cf2dc4b0691c469b687d",
+    "sheep_bare.png": "854a16604754c5650481ff746239b98f0f207dda4c68449ff83ffbe344c168c6",
+    "sheep_head.png": "14dc241ae8baf2f76dbe8f8150305f1b88c63f7e357eb22abba72f8f0dad7465",
+    "sheep_leg.png": "62a652cb74a54a85ae498b80984791e725601d0df14d4d0c6b13f1323bccea9f",
+    "sheep_wool.png": "3f2648c6ccf1740848991ee4c6dfef36890729ee230a13d8d90bf798969fa095",
+    "white_fur.gdshader": "d6e589239d7ff7d0e696cb7c4d689cc071e2e30a06e30f391b459f52b1cecfb0"
+  },
+  "approved_review_sha256": "2dad7f2ca0e1ec443295169cc52b6823e5c5851fde7b00cf5e82daffca6eb7bf",
+  "adapter_source": "art/animals-style-v2/approved-adapter.gd.txt",
+  "import": "lossless, process/fix_alpha_border=false to retain approved edge sampling"
+}

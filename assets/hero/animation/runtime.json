@@ -8,7 +8,7 @@
     64,
     112
   ],
-  "stride_world_units": 66.66666666666667,
+  "stride_world_units": 115.94202898550725,
   "template_version": "windrest-character-template-5",
   "direction_map": {
     "down": "front",
@@ -22,5 +22,5 @@
   "idle_action": "idle_breathe",
   "idle_cycle_ms": 1800,
   "walk_reference_speed": 100,
-  "movement_speed": 115
+  "movement_speed": 200
 }

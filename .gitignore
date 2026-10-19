@@ -4,3 +4,48 @@
 art/.staging*/
 __pycache__/
 dist/
+
+# Temporary test captures and recordings; keep reports, metrics and test sources.
+/reports/**/*.png
+/reports/**/*.jpg
+/reports/**/*.jpeg
+/reports/**/*.gif
+/reports/**/*.webp
+/reports/**/*.wav
+/reports/**/*.mp4
+/reports/**/*.webm
+/reports/**/*.log
+/reports/**/*.invalid
+/reports/.tmp/
+
+# Retained approval / art reference evidence used by provenance records.
+!/reports/broadleaf-v1/grass-contact.png
+!/reports/planting-v1/crop-art-review.png
+!/reports/camp-refine-v5/camp-candidate-day.png
+!/reports/ground-v05-after.png
+!/reports/camp-build-fix-v1/candidate-comparison.png
+
+# Redundant development archives; keep extracted sources and art provenance.
+/prototypes/**/*.zip
+/art/**/*.zip
+
+# Isolated food V2 test snapshots; retain metrics and written reports.
+/reports/food-v2/isolated-save.json
+/reports/food-v2/edge-save.json
+
+# Ecology/signpost tests use isolated snapshots, never player saves.
+/reports/ecology-signpost-v1/*isolated*.json
+/reports/ecology-signpost-v1/legacy*input.json
+
+# Isolated ore contact/density test snapshot.
+/reports/ore-ground-density-v1/isolated.json
+
+# Isolated global animal spawn scheduler test snapshot.
+/reports/animal-global-spawn-v1/isolated.json
+/reports/animal-global-spawn-v1/reload-diff.json
+
+/reports/animal-debug-button-v1/isolated.json
+
+# Isolated industry test snapshot.
+/reports/industry-v1/isolated-save.json
+/reports/animals-v1/isolated-save.json

@@ -3,6 +3,7 @@ extends RefCounted
 signal changed
 const RULES = preload("res://scripts/body_rules.gd")
 var rules: Dictionary = RULES.load_rules()
+var discomfort := 0.0
 var health := 100.0
 var hunger := 100.0
 var stamina := 100.0
@@ -25,6 +26,7 @@ var rescue_clock := 0.0
 var exhausted := false
 var down := false
 var busy := false
+var hallucination_remaining := 0.0
 
 func can_labor(action: String, finishing: bool=false) -> bool:
 	return not sleep_active() and (energy>0 or finishing) and not down and not exhausted and stamina >= float(rules.labor_cost.get(action,0.0))
@@ -46,6 +48,9 @@ func advance(seconds: float, minutes: float, sprinting: bool, working: bool) -> 
 	changed.emit()
 
 func _tick(seconds: float, minutes: float, sprinting: bool, working: bool) -> void:
+	var affected := minf(minutes,hallucination_remaining)
+	hallucination_remaining=maxf(0.0,hallucination_remaining-affected)
+	health=maxf(0.0,health-affected*float(rules.hallucination_damage)/float(rules.hallucination_minutes))
 	var days := minutes/1440.0
 	var active := not sleeping and (sprinting or working)
 	hunger=maxf(0.0,hunger-days*float(rules.hunger_per_day)*(float(rules.hunger_activity_multiplier) if active else 1.0))
@@ -92,7 +97,7 @@ func _tick(seconds: float, minutes: float, sprinting: bool, working: bool) -> vo
 		if rest_clock>=float(rules.recovery_delay_seconds):
 			stamina=minf(100.0,stamina+seconds*float(rules.recovery_per_second)*recovery_factor())
 		if exhausted and stamina>=float(rules.resume_stamina): exhausted=false
-		if hunger>=float(rules.hunger_recovery) and not busy: health=minf(100.0,health+minutes/float(rules.health_recovery_game_minutes))
+		if hunger>=float(rules.hunger_recovery) and not busy and affected<=0.0: health=minf(100.0,health+minutes/float(rules.health_recovery_game_minutes))
 	# Energy reserve integrates diet and activity over days, then body follows slowly.
 	var reserve_input := (hunger-float(rules.reserve_balance_hunger))/(100.0-float(rules.reserve_balance_hunger))-(float(rules.reserve_activity_cost) if sprinting or working else 0.0)
 	reserve=clampf(reserve+(reserve_input-reserve)*days/float(rules.reserve_response_days),-1.0,1.0)
@@ -105,6 +110,9 @@ func can_eat(effect: Dictionary) -> bool:
 	return (hunger<100.0 and float(effect.get("hunger",0))>0) or (health<100.0 and float(effect.get("health",0))>0) or (illness>0 and float(effect.get("treatment",0))>0)
 
 func eat(effect: Dictionary) -> void:
+	discomfort=maxf(discomfort,float(effect.get("discomfort",0)))
+	# Refresh one timer, never stack the damage rate.
+	if effect.get("hallucination",false): hallucination_remaining=float(rules.hallucination_minutes)
 	hunger=clampf(hunger+float(effect.get("hunger",0)),0,100)
 	health=clampf(health+float(effect.get("health",0)),0,100)
 	illness=maxf(0.0,illness-float(effect.get("treatment",0)))
@@ -114,6 +122,7 @@ func eat(effect: Dictionary) -> void:
 func status() -> String:
 	if sleeping: return "强制睡眠" if sleep_forced else "睡眠中"
 	if down: return "严重虚弱 · 正在休养"
+	if hallucination_remaining>0.0: return "致幻中"
 	if illness>=float(rules.illness_threshold): return "生病中" if hunger<float(rules.hunger_recovery) else "生病中 · 正在恢复"
 	if illness>0: return "身体不适" if hunger<float(rules.hunger_recovery) else "身体不适 · 正在改善"
 	if deprivation>=.25: return "营养不足"
@@ -125,6 +134,7 @@ func status() -> String:
 	return "健康"
 
 func advice() -> String:
+	if hallucination_remaining>0.0: return "生蘑菇致幻期间生命逐渐下降；熟食安全，但不会解除已经发生的致幻。"
 	if sleeping: return "正在睡眠，时间与营地燃料会同步推进。"
 	if energy<float(rules.energy_drowsy): return "需要睡眠补充精力；进食和站立休息无法替代睡眠。"
 	if down: return "安心休养，稍后会逐渐恢复行动。物品与装备都在。"
@@ -139,7 +149,7 @@ func body_description() -> String:
 	return shape+" · "+trend
 
 func serialize() -> Dictionary:
-	return {"version":2,"sleep_session":sleep_session.duplicate(true),"energy":energy,"sleeping":sleeping,"sleep_forced":sleep_forced,"sleep_elapsed":sleep_elapsed,"sleep_duration":sleep_duration,"health":health,"hunger":hunger,"stamina":stamina,"deprivation":deprivation,"illness":illness,"reserve":reserve,"build":build,"damage_clock":damage_clock,"rest_clock":rest_clock,"rescue_clock":rescue_clock,"exhausted":exhausted,"down":down}
+	return {"hallucination_remaining":hallucination_remaining,"version":2,"sleep_session":sleep_session.duplicate(true),"energy":energy,"sleeping":sleeping,"sleep_forced":sleep_forced,"sleep_elapsed":sleep_elapsed,"sleep_duration":sleep_duration,"health":health,"hunger":hunger,"stamina":stamina,"deprivation":deprivation,"illness":illness,"reserve":reserve,"build":build,"damage_clock":damage_clock,"rest_clock":rest_clock,"rescue_clock":rescue_clock,"exhausted":exhausted,"down":down}
 
 func restore(value: Variant) -> bool:
 	if not value is Dictionary: return false
@@ -148,6 +158,8 @@ func restore(value: Variant) -> bool:
 	var version := int(raw_version)
 	if version not in [1,2]: return false
 	if not preload("res://scripts/sleep_controller.gd").valid_session(value.get("sleep_session",{}),value): return false
+	var raw_hallucination = value.get("hallucination_remaining",0.0)
+	if not (raw_hallucination is int or raw_hallucination is float) or not is_finite(float(raw_hallucination)) or raw_hallucination<0 or raw_hallucination>float(rules.hallucination_minutes): return false
 	var ranges := {"health":[0,100],"hunger":[0,100],"stamina":[0,100],"deprivation":[0,4],"illness":[0,3],"reserve":[-1,1],"build":[-1,1],"damage_clock":[0,rules.disease_damage_interval_minutes],"rest_clock":[0,1000000],"rescue_clock":[0,1000000]}
 	if version==2:
 		ranges.merge({"energy":[0,100],"sleep_elapsed":[0,1440],"sleep_duration":[0,float(rules.sleep_max_minutes)]})
@@ -161,6 +173,7 @@ func restore(value: Variant) -> bool:
 	for key in ["down","exhausted"]:
 		if not value.get(key) is bool: return false
 	for key in ranges: set(key,float(value[key]))
+	hallucination_remaining=float(raw_hallucination)
 	energy=float(value.get("energy",100.0))
 	sleeping=bool(value.get("sleeping",false));sleep_forced=bool(value.get("sleep_forced",false))
 	sleep_elapsed=float(value.get("sleep_elapsed",0));sleep_duration=float(value.get("sleep_duration",0))

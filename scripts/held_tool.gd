@@ -60,7 +60,7 @@ func apply(character: Node2D, inventory: ItemInventory, facing: String, action: 
 	var row: Dictionary=definitions.get(definition.get("visual_id",""),{})
 	if row.is_empty(): return
 	var path := str(row.texture)
-	if not textures.has(path): textures[path]=load(path)
+	if not textures.has(path): textures[path]=preload("res://scripts/candidate_art.gd").texture(path) if path.begins_with("res://prototypes/industry-v1/") else load(path)
 	tool.texture=textures[path]
 	var pin: Array=row.grip_px
 	tool.offset=-Vector2(pin[0],pin[1])
@@ -84,6 +84,12 @@ func apply(character: Node2D, inventory: ItemInventory, facing: String, action: 
 			front_arm=arm;front_arm_was_behind=arm.show_behind_parent;front_arm_position=arm.position
 		arm.show_behind_parent=false
 		if not action.is_empty(): align_front_shoulders(character,arm)
+	if action in row.get("aim_forward_actions",[]):
+		# Aim in rig space so mirroring and the sampled arm rotation preserve the blade direction.
+		var visual: Node2D=character.get_node("Visual")
+		var forward := Vector2.DOWN if facing=="front" else Vector2.UP if facing=="back" else Vector2.RIGHT
+		var local_forward := arm.to_local(visual.to_global(forward))-arm.to_local(visual.global_position)
+		tool.rotation=local_forward.angle()+PI*.5
 	if facing=="back": show_behind_legs(character,tool)
 
 func show_behind_legs(character: Node2D, source: Sprite2D) -> void:

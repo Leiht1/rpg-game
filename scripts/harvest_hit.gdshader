@@ -6,6 +6,7 @@ uniform vec2 impact_uv=vec2(0.5,0.55);
 uniform float strength=0.0;
 uniform float damage_amount=0.0;
 uniform bool buried=false;
+uniform bool mineral_contact=false;
 uniform bool crack_overlay=false;
 uniform float exposure=0.0;
 float lum(vec3 c){return dot(c,vec3(.2126,.7152,.0722));}
@@ -28,6 +29,11 @@ void fragment(){
  float edge=1.-smoothstep(.14,.28,abs(UV.x-.5));
  float low= smoothstep(.76,.94,UV.y);
  float lip=earth*low*(1.-edge*.45);
+ if(mineral_contact){
+   // Restrict adaptation to the warm painted soil rim; never recolor ore veins.
+   float warm_soil=smoothstep(.008,.055,original.r-original.g)*smoothstep(.025,.09,original.r-original.b);
+   lip=warm_soil*smoothstep(.86,.94,UV.y);
+ }
  // Solid silhouette occlusion. No translucent green veil over the collectible.
  if(buried){
    float progress=clamp((exposure-.35)/.65,0.,1.);

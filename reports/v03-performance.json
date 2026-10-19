@@ -1,0 +1,17 @@
+{
+  "adapter": "NVIDIA GeForce RTX 3060",
+  "distance_from_start": 659.53125,
+  "engine": "4.7.2-stable (official)",
+  "loaded_chunks": 30,
+  "map_max_slice_ms": 3.844,
+  "map_total_build_ms": 832.513,
+  "max_chunk_install_ms": 1.729,
+  "max_frame_ms": 35.865,
+  "mean_frame_ms": 16.6665204855842,
+  "memory_mib": 67.2977027893066,
+  "nodes": 2140,
+  "p95_frame_ms": 17.264,
+  "samples": 659,
+  "scope": "normal walk then Shift-speed run near clearing, ground material and map cache budget; no accelerated stress or full regression",
+  "seconds": 12
+}

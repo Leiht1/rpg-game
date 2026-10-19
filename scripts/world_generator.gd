@@ -5,16 +5,17 @@ const PROP_VERSION := "windrest-props-0.7.1"
 var rooms:Array[Dictionary]=[]
 var links:Array[Dictionary]=[]
 var field:Image
+var ecology_field:Image
 const GRID:=385
 
 func _init(seed_value:int=271828,size_cells:int=1024,plan:Dictionary={}) -> void:
 	if not plan.is_empty():
-		rooms.assign(plan.rooms);links.assign(plan.links);field=plan.field
+		rooms.assign(plan.rooms);links.assign(plan.links);field=plan.field;ecology_field=plan.get("ecology_field",null)
 	super(seed_value,size_cells,plan)
 
 func plan_snapshot()->Dictionary:
 	var plan:=super.plan_snapshot()
-	plan.merge({"rooms":rooms,"links":links,"field":field,"version":VERSION})
+	plan.merge({"rooms":rooms,"links":links,"field":field,"ecology_field":ecology_field,"version":VERSION})
 	return plan
 
 func _build_structure()->void:
@@ -77,11 +78,13 @@ func _build_structure()->void:
 	for i in count:region_sites[Vector2i(i,0)]=Vector3(region_cores[i].x,region_cores[i].y,region_kinds[i])
 	for edge in links:region_neighbors.append(Vector2i(edge.a,edge.b))
 	field=Image.create(GRID,GRID,false,Image.FORMAT_RGBAF)
+	ecology_field=Image.create(GRID,GRID,false,Image.FORMAT_RGBAF)
 	for y in GRID:
 		for x in GRID:
 			var p:=Vector2(x,y)*extent/(GRID-1.)
 			var q:=p+Vector2(region_warp.get_noise_2dv(p),region_warp.get_noise_2d(p.y+extent,p.x))*extent*.026
 			var land:=-INF;var distances:=Vector3(INF,INF,INF)
+			var ecology_distances:=Vector4(INF,INF,INF,INF)
 			for i in count:
 				var room:=rooms[i]
 				var rel:Vector2=(q-room.p).rotated(-room.angle)/room.r
@@ -90,6 +93,9 @@ func _build_structure()->void:
 				var d:float=(rel.length()-rim)*minf(room.r.x,room.r.y)
 				land=maxf(land,-d)
 				distances[region_kinds[i]]=minf(distances[region_kinds[i]],d)
+				# Whole room territories share the same four-way regional competition.
+				var ecology_kind:int=3 if i>=6 and i%4==world_seed%4 else region_kinds[i]
+				ecology_distances[ecology_kind]=minf(ecology_distances[ecology_kind],d)
 			for edge in links:
 				var a:=region_cores[edge.a];var b:=region_cores[edge.b]
 				var distance:=p.distance_to(Geometry2D.get_closest_point_to_segment(p,a,b))
@@ -103,6 +109,11 @@ func _build_structure()->void:
 			for k in 3:weights[k]=1.-smoothstep(0.,width,distances[k]-nearest)
 			weights/=weights.x+weights.y+weights.z
 			field.set_pixel(x,y,Color(weights.x,weights.y,weights.z,land))
+			var ecology_nearest:float=minf(minf(ecology_distances.x,ecology_distances.y),minf(ecology_distances.z,ecology_distances.w))
+			var ecology_weights:=Vector4.ZERO
+			for k in 4:ecology_weights[k]=1.-smoothstep(0.,width,ecology_distances[k]-ecology_nearest)
+			ecology_weights/=ecology_weights.x+ecology_weights.y+ecology_weights.z+ecology_weights.w
+			ecology_field.set_pixel(x,y,Color(ecology_weights.x,ecology_weights.y,ecology_weights.z,ecology_weights.w))
 
 func _field(p:Vector2)->Color:
 	var uv:=(p/extent*(GRID-1)).clamp(Vector2.ZERO,Vector2.ONE*(GRID-1.001))
@@ -159,13 +170,36 @@ func _build_lakes()->void:
 				var a:Vector2=points[j-1];var b:Vector2=points[j]
 				_index_water(river_bins,{"a":a,"b":b,"width":width},a.min(b)-Vector2.ONE*(width+350),a.max(b)+Vector2.ONE*(width+350))
 			break
+func ecology_weights(p:Vector2)->Color:
+	if ecology_field==null:return Color(macro_weights(p).x,macro_weights(p).y,macro_weights(p).z,0.)
+	var uv:=(p/extent*(GRID-1)).clamp(Vector2.ZERO,Vector2.ONE*(GRID-1.001))
+	var x:=floori(uv.x);var y:=floori(uv.y)
+	return ecology_field.get_pixel(x,y).lerp(ecology_field.get_pixel(x+1,y),uv.x-x).lerp(ecology_field.get_pixel(x,y+1).lerp(ecology_field.get_pixel(x+1,y+1),uv.x-x),uv.y-y)
+
 func sample(p:Vector2,_spawn_clearance:bool=true)->Vector4:
 	var value:=super.sample(p,false)
 	value.z=maxf(value.z,1.-smoothstep(-48.,64.,coast_distance(p)))
+	var ecology:=ecology_weights(p)
+	value.x=ecology.r;value.y=ecology.g;value.w=ecology.b
 	return value
+
+func rocky_weight(p: Vector2) -> float:
+	return ecology_weights(p).a
+
+func overview_color(p: Vector2) -> Color:
+	var v:=sample(p)
+	if v.z>.35:return Color("70afb9")
+	var weights:=ecology_weights(p)
+	return Color("6d9c68")*weights.r+Color("aaa58c")*weights.g+Color("adc979")*weights.b+Color("929ca6")*weights.a
+
 func biome(p:Vector2)->String:
 	if coast_distance(p)<0.:return "海洋"
-	return super.biome(p)
+	var v:=sample(p)
+	if v.z>.56:return "湖泊"
+	if v.z>.12:return "水岸"
+	if rocky_weight(p)>=maxf(v.x,maxf(v.y,v.w)):return "岩石区"
+	var name := super.biome(p)
+	return "泥地" if name=="山地" else name
 
 
 

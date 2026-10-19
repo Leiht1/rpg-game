@@ -1,18 +1,19 @@
 extends RefCounted
 ## One contract for selection, hints and execution. Names never grant abilities.
-const BASIC := ["sow","cook","pickup","open","talk","inspect","sleep"]
+const BASIC := ["animal","sow","cook","pickup","open","talk","inspect","sleep"]
 const VERBS := {"sow":"播种","sleep":"睡觉","cook":"烹饪","pickup":"拾取","open":"打开","talk":"交谈","inspect":"查看","chop":"砍伐","mine":"开采","dig":"挖掘"}
 const NEEDS := {"chop":"斧头","mine":"镐子","dig":"铲子"}
 
 static func action_for(target: Node2D) -> String:
 	if not is_instance_valid(target): return ""
+	if target.has_meta("animal_id"): return target.manager.action(target.animal_id)
 	if target.get_meta("building_id","")!="" or target.get("camp_id")!=null:
 		var manager: RefCounted=target.manager
 		if manager.service.inventory.has_capability("demolish"): return "demolish"
 		if target.get_meta("building_id","")!="":
 			var row: Dictionary=manager.states.get(target.building_id,{})
 			if row.get("kind","")=="tilled_soil": return manager.service.planting.action(target.building_id)
-			if not row.is_empty() and (row.layer=="ground" or row.kind in ["stone_wall","wood_fence","camp_torch"]): return ""
+			if not row.is_empty() and (row.layer in ["ground","overlay"] or row.kind in ["stone_wall","wood_fence","camp_torch"]): return ""
 	if target.is_in_group("drops"): return "pickup"
 	if target.is_in_group("trees"): return "chop"
 	return str(target.get_meta("interaction_action","inspect"))
@@ -67,6 +68,7 @@ static func target(stream: Node, at: Vector2, facing: String, pointer: Vector2) 
 	return best
 
 static func caption(target: Node2D, inventory: ItemInventory) -> String:
+	if target.has_meta("animal_id"):return target.manager.caption(target.animal_id)
 	var action := action_for(target)
 	if action.is_empty(): return ""
 	if not allowed(inventory,action): return "需要"+str(NEEDS.get(action,action))
@@ -76,6 +78,7 @@ static func caption(target: Node2D, inventory: ItemInventory) -> String:
 	if action=="open" and target.get_meta("building_id","")!="":
 		var row: Dictionary=target.manager.states.get(target.building_id,{})
 		if row.is_empty(): return ""
+		if row.kind=="copper_lamp":return "E 关闭" if row.machine.enabled else "E 开启"
 		if row.kind=="workbench": return "E 制作"
 		if row.kind=="wood_chest": return "E "+("关闭木箱" if row.open else "打开木箱")
 		if target.manager.definitions[row.kind].get("door",false): return "E "+("关门" if row.open else "开门")

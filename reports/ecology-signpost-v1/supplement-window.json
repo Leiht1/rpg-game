@@ -1,0 +1,111 @@
+{
+	"checks": [
+		{
+			"name": "native name entry receives all gameplay shortcut letters",
+			"pass": true
+		},
+		{
+			"name": "native dialog guards world reset/map/gameplay",
+			"pass": true
+		},
+		{
+			"name": "native Escape cancels without commit",
+			"pass": true
+		},
+		{
+			"name": "dialog confirmation button commits named sign",
+			"pass": true
+		},
+		{
+			"name": "map wheel uses original zoom path",
+			"pass": true
+		},
+		{
+			"name": "map drag retains correct building-backed name",
+			"pass": true
+		},
+		{
+			"name": "actual filtered minerals mainly rocky, not mud",
+			"pass": true
+		},
+		{
+			"name": "actual filtered generation includes all five mineral kinds",
+			"pass": true
+		},
+		{
+			"name": "mud-oriented buried resources still generate",
+			"pass": true
+		},
+		{
+			"name": "actual buried resource original dig hits and depletion",
+			"pass": true
+		},
+		{
+			"name": "buried reward uses existing loose path",
+			"pass": true
+		},
+		{
+			"name": "buried depletion survives atomic reload",
+			"pass": true
+		},
+		{
+			"name": "actual natural plant pickup and consumed identity",
+			"pass": true
+		},
+		{
+			"name": "picked natural ID remains filtered after regeneration",
+			"pass": true
+		},
+		{
+			"name": "old partially dug identity is pinned without resetting progress",
+			"pass": false
+		}
+	],
+	"count": 15,
+	"engine": "4.7.2-stable (official)",
+	"failed": 1,
+	"statistics": {
+		"chunks": 25,
+		"kinds": {
+			"copper_outcrop": 3,
+			"flint_outcrop": 7,
+			"gold_outcrop": 1,
+			"silver_outcrop": 2,
+			"stone_outcrop": 20
+		},
+		"mud": 1,
+		"natural_biomes": {
+			"岩石区": {
+				"branch": 1,
+				"flint": 6,
+				"plant_fiber": 1
+			},
+			"森林": {
+				"branch": 11,
+				"broad_leaf": 2,
+				"brown_mushroom": 5,
+				"plant_fiber": 2,
+				"wild_berry": 1
+			},
+			"泥地": {
+				"branch": 3,
+				"broad_leaf": 1,
+				"flint": 1,
+				"plant_fiber": 4,
+				"wild_carrot": 7
+			},
+			"草原": {
+				"branch": 3,
+				"broad_leaf": 4,
+				"flint": 1,
+				"plant_fiber": 7,
+				"wild_berry": 3,
+				"wild_carrot": 8,
+				"wildflower": 13
+			}
+		},
+		"other": 7,
+		"rocky": 26
+	},
+	"viewport": "(1280, 720)"
+}

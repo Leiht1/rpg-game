@@ -1,0 +1,8 @@
+{
+  "checks": 28,
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "run_speed": 310,
+  "scope": "approved art references and canvas sizes, empty legacy stamps, quiet center, trunk/crown/rock collisions, chop/drop/pickup, deterministic clearing; no unrelated regression or performance benchmark",
+  "walk_speed": 200
+}

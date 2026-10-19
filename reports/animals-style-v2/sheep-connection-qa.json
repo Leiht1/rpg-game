@@ -1,0 +1,129 @@
+{
+  "method": "actual runtime exported joint/offset/texture size; alpha >160; 6 samples/world unit; overlap of torso and each joint across full inherited motion envelope",
+  "count": 10,
+  "pose_samples": 170,
+  "failed": 0,
+  "checks": [
+    {
+      "body": "sheep_bare.png",
+      "part": "Head",
+      "sampled_angles": 17,
+      "angle_range": [
+        -0.12,
+        0.67
+      ],
+      "min_overlap_world_squared": 88.97222222222223,
+      "threshold": 0.5,
+      "pass": true
+    },
+    {
+      "body": "sheep_bare.png",
+      "part": "Leg0",
+      "sampled_angles": 17,
+      "angle_range": [
+        -0.38,
+        0.38
+      ],
+      "min_overlap_world_squared": 34.666666666666664,
+      "threshold": 0.5,
+      "pass": true
+    },
+    {
+      "body": "sheep_bare.png",
+      "part": "Leg1",
+      "sampled_angles": 17,
+      "angle_range": [
+        -0.38,
+        0.38
+      ],
+      "min_overlap_world_squared": 32.52777777777778,
+      "threshold": 0.5,
+      "pass": true
+    },
+    {
+      "body": "sheep_bare.png",
+      "part": "Leg2",
+      "sampled_angles": 17,
+      "angle_range": [
+        -0.38,
+        0.38
+      ],
+      "min_overlap_world_squared": 41.05555555555556,
+      "threshold": 0.5,
+      "pass": true
+    },
+    {
+      "body": "sheep_bare.png",
+      "part": "Leg3",
+      "sampled_angles": 17,
+      "angle_range": [
+        -0.38,
+        0.38
+      ],
+      "min_overlap_world_squared": 50.111111111111114,
+      "threshold": 0.5,
+      "pass": true
+    },
+    {
+      "body": "sheep_wool.png",
+      "part": "Head",
+      "sampled_angles": 17,
+      "angle_range": [
+        -0.12,
+        0.67
+      ],
+      "min_overlap_world_squared": 173.41666666666666,
+      "threshold": 0.5,
+      "pass": true
+    },
+    {
+      "body": "sheep_wool.png",
+      "part": "Leg0",
+      "sampled_angles": 17,
+      "angle_range": [
+        -0.38,
+        0.38
+      ],
+      "min_overlap_world_squared": 73.0,
+      "threshold": 0.5,
+      "pass": true
+    },
+    {
+      "body": "sheep_wool.png",
+      "part": "Leg1",
+      "sampled_angles": 17,
+      "angle_range": [
+        -0.38,
+        0.38
+      ],
+      "min_overlap_world_squared": 69.5,
+      "threshold": 0.5,
+      "pass": true
+    },
+    {
+      "body": "sheep_wool.png",
+      "part": "Leg2",
+      "sampled_angles": 17,
+      "angle_range": [
+        -0.38,
+        0.38
+      ],
+      "min_overlap_world_squared": 78.44444444444444,
+      "threshold": 0.5,
+      "pass": true
+    },
+    {
+      "body": "sheep_wool.png",
+      "part": "Leg3",
+      "sampled_angles": 17,
+      "angle_range": [
+        -0.38,
+        0.38
+      ],
+      "min_overlap_world_squared": 86.94444444444444,
+      "threshold": 0.5,
+      "pass": true
+    }
+  ],
+  "limits": "Measures overlap, not aesthetic approval; mirror and uniform juvenile scaling preserve topology."
+}

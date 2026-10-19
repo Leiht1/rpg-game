@@ -1,0 +1,58 @@
+{
+  "checks": [
+    {
+      "name": "viewport ready",
+      "pass": true
+    },
+    {
+      "name": "V0.4 layout and reduced lakes retained",
+      "pass": true
+    },
+    {
+      "name": "approved art version",
+      "pass": true
+    },
+    {
+      "name": "formal prop reference 0",
+      "pass": true
+    },
+    {
+      "name": "formal prop reference 1",
+      "pass": true
+    },
+    {
+      "name": "formal prop reference 2",
+      "pass": true
+    },
+    {
+      "name": "formal prop reference 3",
+      "pass": true
+    },
+    {
+      "name": "formal lake shader",
+      "pass": true
+    },
+    {
+      "name": "natural spawn actual movement and terrain collision",
+      "pass": true
+    },
+    {
+      "name": "viewport ready",
+      "pass": true
+    },
+    {
+      "name": "viewport ready",
+      "pass": true
+    },
+    {
+      "name": "viewport ready",
+      "pass": true
+    },
+    {
+      "name": "complete irregular lake live capture",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": 0
+}

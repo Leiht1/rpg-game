@@ -5,6 +5,7 @@ const Interaction = preload("res://scripts/world_interaction.gd")
 var appearance := preload("res://scripts/equipment_appearance.gd").new()
 var equipment_inventory: ItemInventory
 var held_tool := preload("res://scripts/held_tool.gd").new()
+var animal_feed := preload("res://scripts/animal_feed.gd").new()
 var camp_throw := preload("res://scripts/campfire_throw.gd").new()
 
 const WALK_SPEED := 200.0
@@ -85,11 +86,16 @@ func selected_target() -> Node2D:
 	return stream.interaction_target(position,facing,get_global_mouse_position())
 
 func _draw() -> void:
+	draw_discomfort()
 	if body!=null and body.sleep_active(): return
 	draw_set_transform(Vector2(0,-2),0,Vector2(1,.35))
 	draw_circle(Vector2.ZERO,16,Color(.17,.23,.16,.19))
 
 func _physics_process(delta: float) -> void:
+	if action=="feed":
+		velocity=Vector2.ZERO;last_displacement=Vector2.ZERO
+		animal_feed.advance(delta);update_animation()
+		return
 	if action=="throw":
 		velocity=Vector2.ZERO;last_displacement=Vector2.ZERO
 		camp_throw.advance(delta);update_animation()
@@ -118,7 +124,7 @@ func _physics_process(delta: float) -> void:
 		cancel_action()
 	if not action.is_empty():
 		direction=Vector2.ZERO
-		action_clock+=delta*(body.efficiency() if body!=null and action in ["chop","mine","dig","demolish"] else 1.0)
+		action_clock+=delta*(equipment_inventory.labor_speed() if equipment_inventory!=null and action in ["chop","mine","dig","demolish"] else 1.0)*(body.efficiency() if body!=null and action in ["chop","mine","dig","demolish"] else 1.0)
 		if action=="dig" and not action_contact and action_clock>=.43:
 			action_contact=true
 			if Interaction.in_reach(stream,position,action_target) and Interaction.allowed(equipment_inventory,"dig"):
@@ -128,6 +134,7 @@ func _physics_process(delta: float) -> void:
 			action_succeeded=Interaction.execute(stream,self,action_target)
 		var view := "side" if facing in ["left","right"] else facing
 		var clip_name := ("harvest/" if action in ["mine","dig","demolish"] else "")+view+"_"+("mine" if action=="demolish" else action)
+		if action=="shear":clip_name="camp/"+view+"_throw_right"
 		if action_clock>=animation_player.get_animation(clip_name).length:
 			if action in ["chop","mine","dig","demolish"] and action_succeeded and hold_chop and Input.is_action_pressed("interact") and is_instance_valid(action_target) and Interaction.in_reach(stream,position,action_target) and Interaction.allowed(equipment_inventory,action) and (body==null or body.can_labor(action)):
 				action_clock=0.0
@@ -164,6 +171,9 @@ func _physics_process(delta: float) -> void:
 	stream.update_target(position)
 
 func update_animation() -> void:
+	if body!=null:
+		body.discomfort=maxf(0,body.discomfort-get_physics_process_delta_time())
+		queue_redraw()
 	if actor.is_empty() or animation_player==null: return
 	held_tool.release_pose()
 	if body!=null and not body.sleep_session.is_empty():
@@ -181,6 +191,8 @@ func update_animation() -> void:
 	var view := "side" if facing in ["left","right"] else facing
 	var animation := StringName(("harvest/" if action in ["mine","dig","demolish"] else "")+"%s_%s"%[view,"mine" if next_action=="demolish" else next_action]+("_link" if action=="chop" and chained_chop else ""))
 	if view=="back" and action in ["chop","mine","dig","demolish"]: animation=&"harvest/back_mine"
+	if action=="shear": animation=StringName("camp/%s_throw_right"%view)
+	if action=="feed": animation=StringName("camp/%s_throw_%s"%[view,animal_feed.hand])
 	if action=="throw": animation=StringName("camp/%s_throw_%s"%[view,camp_throw.hand])
 	var clip := animation_player.get_animation(animation)
 	var stride := float(actor.stride_world_units)
@@ -194,7 +206,7 @@ func update_animation() -> void:
 	if animation_player.current_animation!=animation: animation_player.play(animation)
 	animation_player.seek(clock,true)
 	appearance.apply(character,equipment_inventory,facing)
-	held_tool.apply(character,equipment_inventory,facing,"" if action=="throw" else action)
+	held_tool.apply(character,equipment_inventory,facing,"" if action in ["throw","feed"] else action)
 	if body!=null: preload("res://scripts/body_shape.gd").apply(character,body.build)
 	carried_wood.visible=action=="pickup" and action_succeeded and not harvesting and carried_wood.texture!=null and action_clock<.63
 	carried_wood.modulate.a=clampf((.69-action_clock)/.10,0,1)
@@ -208,13 +220,16 @@ func update_animation() -> void:
 	if action in ["mine","dig","demolish"] and facing in ["left","right"] and is_instance_valid(action_target):
 		held_tool.show_strike_in_front(character,get_parent(),action_target)
 	if action=="throw": camp_throw.render()
+	if action=="feed": animal_feed.render()
 
 
 func _exit_tree() -> void:
+	animal_feed.cancel()
 	camp_throw.cancel()
 	held_tool.clear_strike_layer()
 
 func cancel_action() -> void:
+	animal_feed.cancel()
 	camp_throw.cancel()
 	held_tool.release_pose()
 	action=""
@@ -242,7 +257,7 @@ func try_interact() -> void:
 	if not Interaction.allowed(equipment_inventory,requested):
 		if stream.items: stream.items.notice.emit(Interaction.caption(target,equipment_inventory))
 		return
-	if requested in ["sow","cook","open","talk","inspect","sleep"]:
+	if requested in ["animal","sow","cook","open","talk","inspect","sleep"]:
 		Interaction.execute(stream,self,target)
 		return
 	var offset := target.position-position
@@ -282,3 +297,10 @@ func zoom_from_wheel(event: InputEvent) -> bool:
 			camera.zoom=Vector2.ONE*clampf(camera.zoom.x*factor,.65,1.65)
 			return true
 	return false
+
+func draw_discomfort() -> void:
+	if body==null or body.discomfort<=0 or not action.is_empty() or body.sleep_active():return
+	# Small sweat marks use no pose or input overrides.
+	var offset := Vector2(12,-88)
+	draw_circle(offset+Vector2(0,sin(body.discomfort*6)*2),2.0,Color(.4,.72,.9,.9))
+	draw_circle(offset+Vector2(5,-5),1.3,Color(.4,.72,.9,.8))

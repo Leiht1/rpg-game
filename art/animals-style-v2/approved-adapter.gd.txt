@@ -1,0 +1,50 @@
+extends "res://scripts/animal_actor.gd"
+## Candidate-only visual adapter. Formal actor, husbandry and save code stay unchanged.
+const ART="res://prototypes/animals-style-v2/parts/"
+static var textures={}
+var part_sizes={}
+static func fur_material(asset:String)->ShaderMaterial:
+ if asset not in ["chicken_body","chicken_head","chicken_head_closed","chicken_wing","sheep_wool","sheep_head","sheep_leg"]:return null
+ var m=ShaderMaterial.new();m.shader=load("res://prototypes/animals-style-v2/white_fur.gdshader")
+ m.set_shader_parameter("all_pale",asset in ["chicken_body","chicken_wing","sheep_wool","sheep_leg"])
+ return m
+static func texture(asset:String)->Texture2D:
+ if not textures.has(asset):
+  var t=ImageTexture.create_from_image(Image.load_from_file(ART+asset+".png"));t.set_meta("source",ART+asset+".png");textures[asset]=t
+ return textures[asset]
+func part(label:String,asset:String,at:Vector2,size:Vector2,pivot:Vector2=Vector2(.5,.5))->Bone2D:
+ var chicken=row().species=="chicken"
+ # Register joints against the smaller shorn torso, never the outer wool edge.
+ if label=="Head" and not chicken:at=Vector2(14,-35);size=Vector2(38,35)
+ if label.begins_with("Leg"):
+  var n=int(label.trim_prefix("Leg"))
+  if chicken:at.x=-1+n*10;size=Vector2(9,15)
+  else:
+   # Upper leg is buried in the bare torso; length preserves the ground line.
+   at=Vector2(-12+(n%2)*24+(-2 if n>=2 else 0),-22+(-2 if n>=2 else 0));size=Vector2(13,25)
+ var b=super.part(label,asset,at,size,pivot)
+ var s:Sprite2D=b.get_child(0);s.texture=texture(asset);s.material=fur_material(asset)
+ # Bodies share a registered canvas; other parts retain their generated aspect ratio.
+ var natural=s.texture.get_size()
+ var fit=minf(size.x/natural.x,size.y/natural.y)
+ var final_size=natural*fit
+ if label=="Body":final_size=size
+ # Narrow only the sheep leg width; retain leg length and grounded soles.
+ if not chicken and label.begins_with("Leg"):final_size.x*=.64
+ s.scale=final_size/natural;s.position=-final_size*pivot
+ part_sizes[label]=final_size
+ return b
+func refresh()->void:
+ var r=row();last_stage=manager.stage(r)
+ var k=[.48,.72,1.0][last_stage];feet.radius=(9 if r.species=="chicken" else 13)*k
+ rig.scale=Vector2(k if rig.scale.x>=0 else -k,k)
+ if r.species=="sheep":
+  var tex=texture("sheep_wool" if r.wool else "sheep_bare")
+  if body_sprite.texture!=tex:body_sprite.material=fur_material("sheep_wool") if r.wool else null
+  if body_sprite.texture!=tex:body_sprite.texture=tex;body_sprite.scale=Vector2(69,43)/tex.get_size()
+ queue_redraw()
+func _draw()->void:
+ # Same small, soft contact ellipse as WildPlayer; never baked into source PNGs.
+ var k=[.48,.72,1.0][maxi(0,last_stage)]
+ draw_set_transform(Vector2(0,-2),0,Vector2(1,.35)*k)
+ draw_circle(Vector2.ZERO,13 if row().species=="sheep" else 9,Color(.17,.23,.16,.19))

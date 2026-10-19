@@ -104,5 +104,22 @@
     "default_unlocked": true,
     "description": "一次性应急睡眠，最多3游戏小时，醒来后消失。",
     "craft_time": 1.5
+  },
+  {
+    "recipe_id": "workbench_shears",
+    "output_id": "shears",
+    "output_count": 1,
+    "materials": {
+      "copper_ore": 3,
+      "silver_ore": 1,
+      "wood": 2
+    },
+    "category": "工具",
+    "conditions": [
+      "workbench"
+    ],
+    "default_unlocked": true,
+    "description": "在工具台将铜银矿材加工成轻便剪刀。",
+    "craft_time": 1.5
   }
 ]

@@ -5,8 +5,8 @@
       "name": "胡萝卜",
       "seed": "carrot_seed",
       "produce": "wild_carrot",
-      "minutes": 360,
-      "stage_minutes": 120.0,
+      "minutes": 2880,
+      "stage_minutes": 960,
       "yield_count": 4,
       "seed_count": 2
     },
@@ -14,8 +14,8 @@
       "name": "土豆",
       "seed": "potato_seed",
       "produce": "potato",
-      "minutes": 480,
-      "stage_minutes": 160.0,
+      "minutes": 5760,
+      "stage_minutes": 1920,
       "yield_count": 5,
       "seed_count": 2
     },
@@ -23,8 +23,8 @@
       "name": "卷心菜",
       "seed": "cabbage_seed",
       "produce": "cabbage",
-      "minutes": 600,
-      "stage_minutes": 200.0,
+      "minutes": 8640,
+      "stage_minutes": 2880,
       "yield_count": 4,
       "seed_count": 2
     }

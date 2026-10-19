@@ -1,0 +1,40 @@
+{
+  "biome_frames": {
+    "草原": 960
+  },
+  "distance": 3200.625,
+  "engine": "4.7.2-stable (official)",
+  "generator": "windrest-biome-0.3.0",
+  "last_build_ms": 77.002,
+  "loaded": 75,
+  "max_install_ms": 1.751,
+  "missing_viewport_frames": 0,
+  "normal_walk_seconds": 16,
+  "note": "Normal WALK_SPEED=200, no acceleration; physics interval includes screenshot waits; no full performance guarantee.",
+  "physics_frame_interval_median_ms": 16.66,
+  "physics_frame_interval_p95_ms": 17.102,
+  "samples": [
+    {
+      "biome": "草原",
+      "position": "(19067.71, 11356.59)",
+      "seconds": 4.0
+    },
+    {
+      "biome": "草原",
+      "position": "(19867.86, 11356.59)",
+      "seconds": 8.0
+    },
+    {
+      "biome": "草原",
+      "position": "(20668.02, 11356.59)",
+      "seconds": 12.0
+    },
+    {
+      "biome": "草原",
+      "position": "(21468.18, 11356.59)",
+      "seconds": 16.0
+    }
+  ],
+  "seed": 81273,
+  "unloaded": 63
+}

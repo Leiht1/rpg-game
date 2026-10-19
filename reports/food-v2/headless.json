@@ -1,0 +1,666 @@
+{
+	"checks": [
+		{
+			"name": "database validates",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger wildflower",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains wildflower",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only wildflower",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger wild_berry",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains wild_berry",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only wild_berry",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger wild_carrot",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains wild_carrot",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only wild_carrot",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger wild_apple",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains wild_apple",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only wild_apple",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger brown_mushroom",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains brown_mushroom",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only brown_mushroom",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger roasted_carrot",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains roasted_carrot",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only roasted_carrot",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger roasted_mushroom",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains roasted_mushroom",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only roasted_mushroom",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger herb_roasted_mushroom",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains herb_roasted_mushroom",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only herb_roasted_mushroom",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger roasted_fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains roasted_fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only roasted_fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger field_harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains field_harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only field_harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger potato",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains potato",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only potato",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger cabbage",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains cabbage",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only cabbage",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger roasted_potato",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains roasted_potato",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only roasted_potato",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger roasted_cabbage",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains roasted_cabbage",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only roasted_cabbage",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "actual inventory hunger stewed_vegetables",
+			"pass": true
+		},
+		{
+			"name": "no instant other gains stewed_vegetables",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom only stewed_vegetables",
+			"pass": true
+		},
+		{
+			"name": "raw mushroom no immediate damage",
+			"pass": true
+		},
+		{
+			"name": "uniform five health each quarter hour 0",
+			"pass": true
+		},
+		{
+			"name": "uniform five health each quarter hour 1",
+			"pass": true
+		},
+		{
+			"name": "uniform five health each quarter hour 2",
+			"pass": true
+		},
+		{
+			"name": "uniform five health each quarter hour 3",
+			"pass": true
+		},
+		{
+			"name": "ends at exactly one hour",
+			"pass": true
+		},
+		{
+			"name": "no damage after ending",
+			"pass": true
+		},
+		{
+			"name": "repeat refreshes duration without stacking rate",
+			"pass": true
+		},
+		{
+			"name": "safe cooked mushroom does not cure active effect",
+			"pass": true
+		},
+		{
+			"name": "sleep continues damage at same rate",
+			"pass": true
+		},
+		{
+			"name": "low health uses existing safe care",
+			"pass": true
+		},
+		{
+			"name": "safe care recovers without death",
+			"pass": true
+		},
+		{
+			"name": "body exact roundtrip",
+			"pass": true
+		},
+		{
+			"name": "invalid hallucination rejected atomically -1",
+			"pass": true
+		},
+		{
+			"name": "invalid hallucination rejected atomically 61",
+			"pass": true
+		},
+		{
+			"name": "invalid hallucination rejected atomically bad",
+			"pass": true
+		},
+		{
+			"name": "invalid hallucination rejected atomically inf",
+			"pass": true
+		},
+		{
+			"name": "old body defaults clear",
+			"pass": true
+		},
+		{
+			"name": "crop total carrot",
+			"pass": true
+		},
+		{
+			"name": "static stage carrot0",
+			"pass": true
+		},
+		{
+			"name": "static stage carrot1",
+			"pass": true
+		},
+		{
+			"name": "static stage carrot2",
+			"pass": true
+		},
+		{
+			"name": "crop total potato",
+			"pass": true
+		},
+		{
+			"name": "static stage potato0",
+			"pass": true
+		},
+		{
+			"name": "static stage potato1",
+			"pass": true
+		},
+		{
+			"name": "static stage potato2",
+			"pass": true
+		},
+		{
+			"name": "crop total cabbage",
+			"pass": true
+		},
+		{
+			"name": "static stage cabbage0",
+			"pass": true
+		},
+		{
+			"name": "static stage cabbage1",
+			"pass": true
+		},
+		{
+			"name": "static stage cabbage2",
+			"pass": true
+		},
+		{
+			"name": "exact material match roast_carrot",
+			"pass": true
+		},
+		{
+			"name": "extra material rejected roast_carrot",
+			"pass": true
+		},
+		{
+			"name": "start shared cooking roast_carrot",
+			"pass": true
+		},
+		{
+			"name": "repeat start rejected roast_carrot",
+			"pass": true
+		},
+		{
+			"name": "correct cooking duration roast_carrot",
+			"pass": true
+		},
+		{
+			"name": "completion discovers roast_carrot",
+			"pass": true
+		},
+		{
+			"name": "claim output roast_carrot",
+			"pass": true
+		},
+		{
+			"name": "single reward roast_carrot",
+			"pass": true
+		},
+		{
+			"name": "exact material match roast_mushroom",
+			"pass": true
+		},
+		{
+			"name": "extra material rejected roast_mushroom",
+			"pass": true
+		},
+		{
+			"name": "start shared cooking roast_mushroom",
+			"pass": true
+		},
+		{
+			"name": "repeat start rejected roast_mushroom",
+			"pass": true
+		},
+		{
+			"name": "correct cooking duration roast_mushroom",
+			"pass": true
+		},
+		{
+			"name": "completion discovers roast_mushroom",
+			"pass": true
+		},
+		{
+			"name": "claim output roast_mushroom",
+			"pass": true
+		},
+		{
+			"name": "single reward roast_mushroom",
+			"pass": true
+		},
+		{
+			"name": "exact material match herb_mushroom",
+			"pass": true
+		},
+		{
+			"name": "extra material rejected herb_mushroom",
+			"pass": true
+		},
+		{
+			"name": "start shared cooking herb_mushroom",
+			"pass": true
+		},
+		{
+			"name": "repeat start rejected herb_mushroom",
+			"pass": true
+		},
+		{
+			"name": "correct cooking duration herb_mushroom",
+			"pass": true
+		},
+		{
+			"name": "completion discovers herb_mushroom",
+			"pass": true
+		},
+		{
+			"name": "claim output herb_mushroom",
+			"pass": true
+		},
+		{
+			"name": "single reward herb_mushroom",
+			"pass": true
+		},
+		{
+			"name": "exact material match fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "extra material rejected fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "start shared cooking fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "repeat start rejected fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "correct cooking duration fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "completion discovers fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "claim output fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "single reward fruit_platter",
+			"pass": true
+		},
+		{
+			"name": "exact material match harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "extra material rejected harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "start shared cooking harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "repeat start rejected harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "correct cooking duration harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "completion discovers harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "claim output harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "single reward harvest_platter",
+			"pass": true
+		},
+		{
+			"name": "exact material match roast_potato",
+			"pass": true
+		},
+		{
+			"name": "extra material rejected roast_potato",
+			"pass": true
+		},
+		{
+			"name": "start shared cooking roast_potato",
+			"pass": true
+		},
+		{
+			"name": "repeat start rejected roast_potato",
+			"pass": true
+		},
+		{
+			"name": "correct cooking duration roast_potato",
+			"pass": true
+		},
+		{
+			"name": "completion discovers roast_potato",
+			"pass": true
+		},
+		{
+			"name": "claim output roast_potato",
+			"pass": true
+		},
+		{
+			"name": "single reward roast_potato",
+			"pass": true
+		},
+		{
+			"name": "exact material match roast_cabbage",
+			"pass": true
+		},
+		{
+			"name": "extra material rejected roast_cabbage",
+			"pass": true
+		},
+		{
+			"name": "start shared cooking roast_cabbage",
+			"pass": true
+		},
+		{
+			"name": "repeat start rejected roast_cabbage",
+			"pass": true
+		},
+		{
+			"name": "correct cooking duration roast_cabbage",
+			"pass": true
+		},
+		{
+			"name": "completion discovers roast_cabbage",
+			"pass": true
+		},
+		{
+			"name": "claim output roast_cabbage",
+			"pass": true
+		},
+		{
+			"name": "single reward roast_cabbage",
+			"pass": true
+		},
+		{
+			"name": "exact material match vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "extra material rejected vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "start shared cooking vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "repeat start rejected vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "correct cooking duration vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "completion discovers vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "claim output vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "single reward vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "exact material match stew_vegetables",
+			"pass": true
+		},
+		{
+			"name": "extra material rejected stew_vegetables",
+			"pass": true
+		},
+		{
+			"name": "start shared cooking stew_vegetables",
+			"pass": true
+		},
+		{
+			"name": "repeat start rejected stew_vegetables",
+			"pass": true
+		},
+		{
+			"name": "correct cooking duration stew_vegetables",
+			"pass": true
+		},
+		{
+			"name": "completion discovers stew_vegetables",
+			"pass": true
+		},
+		{
+			"name": "claim output stew_vegetables",
+			"pass": true
+		},
+		{
+			"name": "single reward stew_vegetables",
+			"pass": true
+		},
+		{
+			"name": "old herb input no longer starts",
+			"pass": true
+		},
+		{
+			"name": "formal broad leaf used",
+			"pass": true
+		},
+		{
+			"name": "wild distribution produces mushroom",
+			"pass": true
+		},
+		{
+			"name": "mushroom is natural loose pickup",
+			"pass": true
+		},
+		{
+			"name": "actual natural mushroom pickup enters inventory",
+			"pass": true
+		},
+		{
+			"name": "natural id consumed and persisted",
+			"pass": true
+		},
+		{
+			"name": "legacy mature crop migrates safely",
+			"pass": true
+		},
+		{
+			"name": "real gameplay clock advances hallucination uniformly",
+			"pass": true
+		},
+		{
+			"name": "atomic save for fresh process",
+			"pass": true
+		},
+		{
+			"name": "world shader below HUD/inventory",
+			"pass": true
+		},
+		{
+			"name": "visual smoothly enters",
+			"pass": true
+		},
+		{
+			"name": "all nine recipes appear in scrolling book",
+			"pass": true
+		},
+		{
+			"name": "visual fades gradually",
+			"pass": true
+		},
+		{
+			"name": "visual clears completely",
+			"pass": true
+		}
+	],
+	"count": 165,
+	"failed": 0
+}

@@ -1,27 +1,122 @@
 {
-  "version": "natural-resources-0.3.1",
+  "version": "natural-resources-0.4.0",
   "cell_size": 768,
   "anchors_per_cell": 5,
   "cluster_radius": 155,
   "noise_scale": 1450,
   "navigation_step": 192,
   "biomes": {
-    "meadow": {"density": 9.0, "weights": {"wildflower": 25, "plant_fiber": 25, "branch": 20, "wild_carrot": 20, "wild_berry": 6, "stone": 4}},
-    "forest": {"density": 13.0, "weights": {"branch": 28, "brown_mushroom": 25, "broad_leaf": 25, "wild_berry": 15, "pine_cone": 4, "wild_apple": 3}},
-    "mountain": {"density": 7.0, "weights": {"stone": 83, "flint": 5, "branch": 7, "wildflower": 5}},
-    "shore": {"density": 5.0, "weights": {"plant_fiber": 70, "wildflower": 15, "brown_mushroom": 6, "branch": 9}}
+    "meadow": {
+      "density": 9.0,
+      "weights": {
+        "wildflower": 25,
+        "plant_fiber": 21,
+        "branch": 10,
+        "wild_carrot": 20,
+        "wild_berry": 12,
+        "broad_leaf": 10,
+        "flint": 2
+      }
+    },
+    "forest": {
+      "density": 13.0,
+      "weights": {
+        "branch": 28,
+        "brown_mushroom": 35,
+        "broad_leaf": 12,
+        "wild_berry": 18,
+        "wild_apple": 7,
+        "flint": 1
+      }
+    },
+    "mountain": {
+      "density": 4.0,
+      "weights": {
+        "plant_fiber": 36,
+        "wild_carrot": 35,
+        "branch": 20,
+        "flint": 6,
+        "wildflower": 3
+      }
+    },
+    "shore": {
+      "density": 2.5,
+      "weights": {
+        "plant_fiber": 75,
+        "broad_leaf": 15,
+        "wildflower": 10
+      }
+    },
+    "rocky": {
+      "density": 2.0,
+      "weights": {
+        "flint": 85,
+        "branch": 10,
+        "plant_fiber": 5
+      }
+    }
   },
   "resources": {
-    "wild_berry": {"mode": "harvest", "spacing": 112, "ground_radius": 23, "cluster_bias": 0.35},
-    "brown_mushroom": {"mode": "harvest", "spacing": 86, "ground_radius": 15, "tree_preference": 170},
-    "wild_carrot": {"mode": "harvest", "spacing": 90, "ground_radius": 14},
-    "wild_apple": {"mode": "pickup", "spacing": 86, "ground_radius": 11, "source": "fallen_fruit", "source_distance": 145},
-    "branch": {"mode": "pickup", "spacing": 90, "ground_radius": 17},
-    "stone": {"mode": "pickup", "spacing": 86, "ground_radius": 12},
-    "plant_fiber": {"mode": "harvest", "spacing": 96, "ground_radius": 18},
-    "flint": {"mode": "pickup", "spacing": 100, "ground_radius": 10},
-    "broad_leaf": {"mode": "harvest", "spacing": 104, "ground_radius": 20},
-    "pine_cone": {"mode": "pickup", "spacing": 86, "ground_radius": 11, "source": "conifer", "source_distance": 145},
-    "wildflower": {"mode": "harvest", "spacing": 92, "ground_radius": 18}
+    "wild_berry": {
+      "mode": "harvest",
+      "spacing": 112,
+      "ground_radius": 23,
+      "cluster_bias": 0.35
+    },
+    "brown_mushroom": {
+      "mode": "pickup",
+      "spacing": 86,
+      "ground_radius": 15,
+      "tree_preference": 170
+    },
+    "wild_carrot": {
+      "mode": "harvest",
+      "spacing": 90,
+      "ground_radius": 14
+    },
+    "wild_apple": {
+      "mode": "pickup",
+      "spacing": 86,
+      "ground_radius": 11,
+      "source": "fallen_fruit",
+      "source_distance": 145
+    },
+    "branch": {
+      "mode": "pickup",
+      "spacing": 90,
+      "ground_radius": 17
+    },
+    "stone": {
+      "mode": "pickup",
+      "spacing": 86,
+      "ground_radius": 12
+    },
+    "plant_fiber": {
+      "mode": "harvest",
+      "spacing": 96,
+      "ground_radius": 18
+    },
+    "flint": {
+      "mode": "pickup",
+      "spacing": 100,
+      "ground_radius": 10
+    },
+    "broad_leaf": {
+      "mode": "harvest",
+      "spacing": 104,
+      "ground_radius": 20
+    },
+    "pine_cone": {
+      "mode": "pickup",
+      "spacing": 86,
+      "ground_radius": 11,
+      "source": "conifer",
+      "source_distance": 145
+    },
+    "wildflower": {
+      "mode": "harvest",
+      "spacing": 92,
+      "ground_radius": 18
+    }
   }
 }

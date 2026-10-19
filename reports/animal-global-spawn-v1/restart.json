@@ -1,0 +1,22 @@
+{
+	"checks": [
+		{
+			"name": "independent process loads scheduler",
+			"pass": true
+		},
+		{
+			"name": "independent process preserves seven identities",
+			"pass": true
+		},
+		{
+			"name": "reload has no offline time and keeps next deadline",
+			"pass": true
+		},
+		{
+			"name": "reload/exploration cannot restart initial six",
+			"pass": true
+		}
+	],
+	"count": 4,
+	"failed": 0
+}

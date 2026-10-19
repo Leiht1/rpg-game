@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "route": "codex-cli",
+  "requestedModel": "codex-image_gen",
+  "options": {
+    "tool": "image_gen"
+  },
+  "promptSha256": "c727df7c2ec67f192e1b84cc1e72add70503086ee86cf6c0a8ab54c29801f54a",
+  "references": [
+    {
+      "sha256": "85a6eff6c19705ce04082cebe6a43b7d6d81c0729bd20f54b55b5b8af45b8867",
+      "bytes": 517747
+    },
+    {
+      "sha256": "7056adf17f7b3f0fa877f69f90c6bc821e2b8c731baa310aefed243819fd536a",
+      "bytes": 36107
+    }
+  ],
+  "fingerprint": "54bc5b54d7134422d5473e84f7755610f1b93ada02c2cef2c0bcf3d5334e8900",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "2026-10-06",
+    "items": [],
+    "basis": "subscription quota call: no per-call USD price; counted by call caps"
+  },
+  "consent": {
+    "provider": "openai",
+    "model": "codex-image_gen",
+    "calls": 1,
+    "estimateUsd": 0.0,
+    "route": "codex-cli",
+    "quota": true,
+    "account": "the user's own Codex sign-in (ChatGPT)",
+    "note": "uses the subscription quota of that sign-in, never API credit"
+  },
+  "artSource": "host_image",
+  "execution": "execute",
+  "status": "done",
+  "receipt": {
+    "startedAt": "2026-10-16T06:13:56.676Z",
+    "submittedAt": "2026-10-16T06:13:56.725Z",
+    "completedAt": "2026-10-16T06:18:25.508Z",
+    "wallMs": 268832,
+    "providerMs": 268719,
+    "attempt": 1,
+    "purpose": "V0.3 production ground material decals: meadow forest soil puddle gravel",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "ok"
+  },
+  "ledger": {
+    "projectDir": "../../..",
+    "reservationId": "41f6507e354e4daf9e91580004bef874",
+    "status": "done"
+  },
+  "cliRun": {
+    "tool": "codex",
+    "runId": "48db0bec94bd4b008a95cba0517f60ef",
+    "cwd": "<tmp>/forge-cli-48db0bec94bd-6bd8edcb",
+    "startedAt": "2026-10-16T06:13:56.676Z",
+    "version": "0.163.0-alpha.10.2",
+    "versionText": "codex-cli 0.163.0-alpha.10.2",
+    "recipe": "codex-exec-imagegen/1",
+    "home": "CODEX_HOME",
+    "verifiedBefore": true,
+    "threadId": "01a14358-84a4-7c63-941f-27d58bed7cbb"
+  },
+  "adoption": {
+    "method": "native-run-folder",
+    "source": "CODEX_HOME/generated_images/01a14358-84a4-7c63-941f-27d58bed7cbb/exec-75c8e252-f020-4024-bfcc-11081c5c1980.png",
+    "sourceSha256": "8c4b1798f8fb3a830e790e96f02ad561d6a1db59cc0be794059068b431fc459f",
+    "sourceMtime": "2026-10-16T06:18:04Z",
+    "freshAfter": "2026-10-16T06:13:56.731Z",
+    "checks": [
+      "inside the CLI's own folder for this run",
+      "no symlink or junction",
+      "regular file of a sane size",
+      "newer than the run",
+      "magic bytes",
+      "decodes",
+      "exactly one output",
+      "exclusive copy with matching sha256"
+    ],
+    "finalAnswerNamesFile": true
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "8c4b1798f8fb3a830e790e96f02ad561d6a1db59cc0be794059068b431fc459f",
+    "bytes": 2086016,
+    "format": "PNG",
+    "size": [
+      1536,
+      1024
+    ]
+  }
+}

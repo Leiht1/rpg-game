@@ -1,0 +1,51 @@
+{
+  "task": "世界资源生态优化 V1 + 路标系统 V1",
+  "date": "2026-10-19",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen (provider exact revision unknown)",
+  "estimateUsd": 0.0,
+  "visual_status": "implemented_for_this_explicit_task_pending_user_visual_review",
+  "authorization": "用户本轮明确要求基于正式工程开发岩石区与正式路标；不记为对画稿的具体视觉批准。",
+  "references": [
+    {
+      "path": "assets/environment/biome_v02/highland.png",
+      "sha256": "347c03d180d3cece4cc2fc739d41181ea507abce4611c2a5e509b2996e0cf4fb"
+    },
+    {
+      "path": "assets/buildings/v2/workbench.png",
+      "sha256": "b45afdfd93e2f9334578be5c6d9dbfdc23d5ac1164fe67d395b2f8e4df194b65"
+    },
+    {
+      "path": "art/reference/hero.png",
+      "sha256": "b5cf99577c02c053236d86760b9654b7c3fc88210d606dbacf8a2bf6de6dcdbf"
+    },
+    {
+      "path": "assets/environment/view_v01/tree_0.png",
+      "sha256": "ecaa9cc692f4b1e23d8e8ecbf8856a199e4bdf5e6fc42019eb4883361f8282d8"
+    },
+    {
+      "path": "assets/environment/view_v01/rock_0.png",
+      "sha256": "ab4ae57cac51ff5dd1978b6f9bb2893b778cdb2a6df7541b5934d67d71a68243"
+    }
+  ],
+  "terrain": {
+    "original": "art/ecology-signpost-v1/terrain/generated.png",
+    "revision": "art/ecology-signpost-v1/terrain-flat/generated.png",
+    "prompt": "art/ecology-signpost-v1/terrain-flat-prompt.txt",
+    "runtime": "assets/environment/ecology_v1/rocky.png",
+    "sha256": "911468307956c5782441f17ecd001843e4d518c419a9b8051a34012be495e081",
+    "processing": "byte-identical final generated plate, 1254x1254; original plate retained as rejected raised-grit draft; no code-drawn art",
+    "review": "修订稿无独立凸石、立石、侧面岩头，平坦岩纹与稀疏裂隙；真实矿点叠加已窗口核对。"
+  },
+  "signpost": {
+    "source": "art/ecology-signpost-v1/sign/generated.png",
+    "prompt": "art/ecology-signpost-v1/sign-prompt.txt",
+    "processing": "generate2dsprite single, 1x1, 256 canvas, soft magenta key, despill radius 1; uniform scale only",
+    "qa": "art/ecology-signpost-v1/sign-processed/pipeline-meta.json",
+    "runtime": "assets/buildings/signpost_v1/signpost.png",
+    "sha256": "6762cc11f4393347100629d671374d1f72a1762b3e7b66061929b1fb42d02bd8",
+    "display": "uniform max 74 wide x 86 high; bottom at world y+8; existing free building collision",
+    "approval": "pending user visual review"
+  }
+}

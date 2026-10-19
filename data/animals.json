@@ -1,0 +1,36 @@
+{
+  "feed_minutes": 1440.0,
+  "feed_cooldown": 30.0,
+  "wild_leave_minutes": 360.0,
+  "pair_minutes": 180.0,
+  "breed_cooldown": 2880.0,
+  "breed_radius": 150.0,
+  "population_radius": 450.0,
+  "population_cap": 8,
+  "half_growth": 1440.0,
+  "adult_growth": 4320.0,
+  "egg_minutes": 720.0,
+  "egg_cap": 3,
+  "wool_minutes": 2880.0,
+  "chicken": {
+    "trust_feeds": 3,
+    "foods": [
+      "carrot_seed",
+      "potato_seed",
+      "cabbage_seed",
+      "wild_berry"
+    ],
+    "speed": 36.0
+  },
+  "sheep": {
+    "trust_feeds": 5,
+    "foods": [
+      "broad_leaf",
+      "wild_carrot",
+      "cabbage"
+    ],
+    "speed": 30.0
+  },
+  "initial_count": 6,
+  "spawn_interval": 10080.0
+}

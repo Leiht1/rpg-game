@@ -33,6 +33,7 @@ func _ready() -> void:
 	var buried: bool=definition.action=="dig" and not definition.get("surface_plant",false)
 	sprite.texture=textures[2] if buried else textures[0]
 	hit_material.set_shader_parameter("buried",buried)
+	hit_material.set_shader_parameter("mineral_contact",definition.action=="mine")
 	hit_material.set_shader_parameter("crack_overlay",definition.has("crack_textures"))
 	add_child(sprite)
 	if definition.get("surface_plant",false):

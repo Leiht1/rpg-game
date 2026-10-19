@@ -1,0 +1,1934 @@
+{
+	"checks": [
+		{
+			"name": "item definitions valid",
+			"pass": true
+		},
+		{
+			"name": "metal shears recipe validates",
+			"pass": true
+		},
+		{
+			"name": "moderate copper/silver/wood recipe",
+			"pass": true
+		},
+		{
+			"name": "shears require workbench",
+			"pass": true
+		},
+		{
+			"name": "stable nearby natural animals generated",
+			"pass": true
+		},
+		{
+			"name": "repeated chunk install never respawns",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:10:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:10:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:10:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:10:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:10:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:10:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:10:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:10:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:10:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:10:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:10:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:10:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:10:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:10:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:10:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:10:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:10:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:10:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:10:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:10:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:10:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:10:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:10:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:10:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:10:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:10:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:10:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:10:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:10:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:10:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:10:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:10:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:10:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:10:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:10:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:10:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:10:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:10:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:10:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:10:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:10:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:10:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:10:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:10:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:10:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:10:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:10:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:10:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:10:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:10:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:10:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:10:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:10:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:10:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:10:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:10:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:10:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:10:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:10:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:10:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:10:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:10:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:10:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:10:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:10:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:10:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:11:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:11:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:11:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:11:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:11:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:11:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:11:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:11:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:11:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:11:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:11:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:11:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:11:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:11:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:11:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:11:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:11:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:12:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:12:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:12:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:12:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:12:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:12:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:13:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:13:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:13:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:13:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:13:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:13:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:15:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:15:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:15:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:16:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:16:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:16:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:17:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:17:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:17:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:18:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:18:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:18:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:14:0",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:14:1",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:14:2",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:14:3",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:14:4",
+			"pass": true
+		},
+		{
+			"name": "spawn biome wild:19:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn dry walkable wild:19:14:5",
+			"pass": true
+		},
+		{
+			"name": "spawn avoids rock/tree geometry wild:19:14:5",
+			"pass": true
+		},
+		{
+			"name": "both species found in ecological sample",
+			"pass": true
+		},
+		{
+			"name": "safe interaction location",
+			"pass": true
+		},
+		{
+			"name": "first feed consumes one and nods",
+			"pass": true
+		},
+		{
+			"name": "partial trust and feedback",
+			"pass": true
+		},
+		{
+			"name": "immediate repeated feed refused",
+			"pass": true
+		},
+		{
+			"name": "second chicken feed after cooldown",
+			"pass": true
+		},
+		{
+			"name": "third feed tames chicken",
+			"pass": true
+		},
+		{
+			"name": "E switches follow",
+			"pass": true
+		},
+		{
+			"name": "E switches stay",
+			"pass": true
+		},
+		{
+			"name": "wild adults start adult",
+			"pass": true
+		},
+		{
+			"name": "adult healthy chicken produces egg",
+			"pass": true
+		},
+		{
+			"name": "egg uses persistent ground drop",
+			"pass": true
+		},
+		{
+			"name": "uncollected egg cap three",
+			"pass": true
+		},
+		{
+			"name": "existing pickup collects egg",
+			"pass": true
+		},
+		{
+			"name": "pickup frees cap and new identity is unique",
+			"pass": true
+		},
+		{
+			"name": "lifetime egg count validates beyond live cap",
+			"pass": true
+		},
+		{
+			"name": "unfed tame pauses production and never disappears",
+			"pass": true
+		},
+		{
+			"name": "sheep trust feed 0",
+			"pass": true
+		},
+		{
+			"name": "sheep harder to tame 0",
+			"pass": true
+		},
+		{
+			"name": "sheep trust feed 1",
+			"pass": true
+		},
+		{
+			"name": "sheep harder to tame 1",
+			"pass": true
+		},
+		{
+			"name": "sheep trust feed 2",
+			"pass": true
+		},
+		{
+			"name": "sheep harder to tame 2",
+			"pass": true
+		},
+		{
+			"name": "sheep trust feed 3",
+			"pass": true
+		},
+		{
+			"name": "sheep harder to tame 3",
+			"pass": true
+		},
+		{
+			"name": "sheep trust feed 4",
+			"pass": true
+		},
+		{
+			"name": "sheep harder to tame 4",
+			"pass": true
+		},
+		{
+			"name": "newly tamed sheep not instantly harvestable",
+			"pass": true
+		},
+		{
+			"name": "healthy mature sheep ready after two days",
+			"pass": true
+		},
+		{
+			"name": "shearing succeeds",
+			"pass": true
+		},
+		{
+			"name": "shear rewards two wool and switches shorn",
+			"pass": true
+		},
+		{
+			"name": "shearing uses original instance durability",
+			"pass": true
+		},
+		{
+			"name": "repeat shearing refused",
+			"pass": true
+		},
+		{
+			"name": "regrowth does not complete early",
+			"pass": true
+		},
+		{
+			"name": "regrows wool once at boundary",
+			"pass": true
+		},
+		{
+			"name": "unfed sheep pauses regrowth",
+			"pass": true
+		},
+		{
+			"name": "no premature birth",
+			"pass": true
+		},
+		{
+			"name": "one automatic baby per pair",
+			"pass": true
+		},
+		{
+			"name": "baby inherits ownership and small stage",
+			"pass": true
+		},
+		{
+			"name": "both parents receive cooldown",
+			"pass": true
+		},
+		{
+			"name": "young baby has no products",
+			"pass": true
+		},
+		{
+			"name": "half-grown at day one",
+			"pass": true
+		},
+		{
+			"name": "adult at day three",
+			"pass": true
+		},
+		{
+			"name": "no accumulated adult products during childhood",
+			"pass": true
+		},
+		{
+			"name": "animal schema validates full states",
+			"pass": true
+		},
+		{
+			"name": "reject nonfinite x",
+			"pass": true
+		},
+		{
+			"name": "reject nonfinite age",
+			"pass": true
+		},
+		{
+			"name": "reject nonfinite feed_at",
+			"pass": true
+		},
+		{
+			"name": "reject nonfinite cooldown",
+			"pass": true
+		},
+		{
+			"name": "unknown future version protects save",
+			"pass": true
+		},
+		{
+			"name": "full atomic animal snapshot writes isolated save",
+			"pass": true
+		},
+		{
+			"name": "atomic reload restores exact timers/positions/IDs/tombstones",
+			"pass": true
+		},
+		{
+			"name": "reload cannot duplicate eggs",
+			"pass": true
+		}
+	],
+	"count": 482,
+	"failed": 0
+}

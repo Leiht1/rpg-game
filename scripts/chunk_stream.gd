@@ -60,6 +60,7 @@ func configure(gen: WildGenerator, sort_root: Node2D) -> void:
 			var key:String=id+"_"+surface
 			scenery_textures[key]=load("res://assets/environment/contact_v01/"+key+".png")
 	shared_material.shader=TERRAIN_SHADER
+	shared_material.set_shader_parameter("rocky_tex",load("res://assets/environment/ecology_v1/rocky.png"))
 	shared_material.set_shader_parameter("spawn_tex",load("res://assets/environment/stylized_v3/grass.png"))
 	shared_material.set_shader_parameter("ground_origin",generator.spawn)
 	for pair in [["forest_tex","forest"],["rock_tex","highland"],["meadow_tex","open_field"],["shore_tex","shore"]]:
@@ -253,7 +254,7 @@ func clear_reach(from: Vector2,to: Vector2,target: Node2D=null) -> bool:
 	# The actor itself is ignored by starting the ray outside its ten-pixel feet.
 	query.from=from+(to-from).normalized()*12
 	hit=get_world_2d().direct_space_state.intersect_ray(query)
-	return hit.is_empty() or (target!=null and hit.collider.get_parent()==target)
+	return hit.is_empty() or (target!=null and (hit.collider==target or hit.collider.get_parent()==target))
 
 func chop_tree(tree: Node2D) -> void:
 	if not is_instance_valid(tree) or not tree.is_in_group("trees"): return
@@ -307,7 +308,7 @@ func create_item_drop(entry: Dictionary) -> Node2D:
 		if is_instance_valid(existing) and existing.get_meta("drop_id","")==str(entry.id): return existing
 	var gathered: bool = items!=null and not entry.get("natural",false) and items.rules.resources.get(str(entry.item_id),{}).get("mode","")=="harvest"
 	# Gathered goods are small loose objects, not a replanted bush or whole plant.
-	var tex: Texture2D = items.texture(str(entry.item_id),"loose" if gathered else "world") if items else load("res://assets/environment/cartoon_v2/wood.png")
+	var tex: Texture2D = items.stack_texture(entry.get("instance",entry),"loose" if gathered else "world") if items else load("res://assets/environment/cartoon_v2/wood.png")
 	var drop: Node2D
 	if tex:
 		var object := preload("res://scripts/item_drop.gd").new()

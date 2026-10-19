@@ -1,0 +1,37 @@
+{
+  "checks": {
+    "center_0": true,
+    "center_1": true,
+    "center_2": true,
+    "center_3": true,
+    "center_4": true,
+    "forest_more_trees": true,
+    "mountain_more_rocks": true,
+    "no_lake_props": true,
+    "repeatable": true,
+    "seed_changes_props": true,
+    "spawn_clear": true
+  },
+  "object_counts": [
+    8,
+    74,
+    52,
+    18,
+    10
+  ],
+  "rocks": [
+    2,
+    0,
+    48,
+    14,
+    2
+  ],
+  "trees": [
+    3,
+    67,
+    4,
+    0,
+    3
+  ],
+  "version": "biome-layout-0.1.0"
+}

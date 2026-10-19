@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "fe55004dd785077beaf2e94b552cd515d4c171c08ed2e961e7e2305911887003",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-16T04:08:09.583Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-16T04:08:09.583Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "remove-static-shoulder-protrusions",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a142ce-8c0d-7dd3-aa94-a502f9863598",
+    "source": "CODEX_HOME/generated_images/01a142ce-8c0d-7dd3-aa94-a502f9863598/exec-64bf117d-8a4a-46a3-9d16-9b9012cacb87.png",
+    "sourceSha256": "1014b50687e7e84e775d88690185914692e40c7ee04c87dc07246049c7ddec40",
+    "sourceMtime": "2026-10-16T04:07:45Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "1014b50687e7e84e775d88690185914692e40c7ee04c87dc07246049c7ddec40",
+    "bytes": 711815,
+    "format": "PNG",
+    "size": [
+      1774,
+      887
+    ]
+  }
+}

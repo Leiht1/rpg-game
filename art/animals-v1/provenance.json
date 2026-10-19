@@ -1,0 +1,45 @@
+{
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "estimateUsd": 0,
+  "status": "pending_user_visual_review",
+  "authorization": "本轮实现动物生态与养殖系统 V1；正式工程功能接入授权，非具体画稿视觉批准",
+  "camera": "side only facing right; runtime mirror for left",
+  "motion": "Skeleton2D/Bone2D procedural joint animation as explicitly requested; no video frames",
+  "source": "art/animals-v1/generated/generated.png",
+  "prompt": "art/animals-v1/prompt.txt",
+  "ownership": {
+    "x": [
+      0,
+      410,
+      790,
+      1135,
+      1448
+    ],
+    "y": [
+      0,
+      350,
+      695,
+      1086
+    ]
+  },
+  "qa": "art/animals-v1/processed/pipeline-meta.json",
+  "warnings": [
+    "ownership-qc safe_frame value=1 threshold=0 cell=[0,0]; raw atlas cross_cell_components/cross_cell_visible failures corrected by ownership reframe"
+  ],
+  "files": {
+    "chicken_body.png": "25e8774236da6e703d2b613881b6a7451965ebd6b4ec768d59ddff52457a733d",
+    "chicken_egg.png": "91456a4214fbd7f207ab274f13d875b8d7efcb08488d459345da28d6909341b5",
+    "chicken_head.png": "0b3f55008e8ff0c6828b3c53429447d2259d4c3e8901bd28f544618a94fa91ff",
+    "chicken_head_closed.png": "156e5940af17ec16917bf0b94ba3ddd4f6d7ade8b92bd146ab218534c35c3102",
+    "chicken_leg.png": "a26fbda0cfe226044dcf1685f8c6531c21d60465278f81d510d3168c219de110",
+    "chicken_wing.png": "04730d21cba8decbe6ca8a3e35f8536b83e49102ade83aa475db3778b30b16bb",
+    "shears.png": "d0d5340e622850f92a2e030835978586bbe4000bfd51ad536bb940e8c6196d7e",
+    "sheep_bare.png": "ce2eb47a5ac9bf1f638c87e87f5dd9e618382f2de1ef09ca413109ea4b90ed9d",
+    "sheep_head.png": "6ae2e2e227919332bc6cf0931fe950333937a222d319a16ee83d2a657cd13d79",
+    "sheep_leg.png": "abd05cd21fc3393bca819aa312468211360bbd551f3644ba163d5090c0c82201",
+    "sheep_wool.png": "8123dd9d112b9fae1178b9b270c5dfa29b8604526d2b74c4d2a10ab0a8106020",
+    "wool.png": "3a12c727c4bf1dc8fda8510ffd3488f61ccda9815cee7b528ec9f60fb1c3e000"
+  }
+}

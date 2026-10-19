@@ -1,3 +1,17 @@
+## 2026-10-19 · 生态 V1（当前）
+
+## 2026-10-19 · 矿石接地与数量微调（当前）
+
+矿石接地与数量修订：五矿共用 harvest_hit 的 mineral_contact 分支，仅底部原画暖土圈适配当前纯地表色，矿石主体、矿脉、轮廓、PNG与裂纹不变，埋藏物保持原分支。矿物候选次数由10增至13，五矿权重、185间距、掉落、次数与ID不变；实际生成增量受净空和间距筛选约束。加载时将已有未完成矿物按原盐值/类型恢复固定至原 ore_nodes，避免新增候选的间距优先级隐藏进度目标。详见 reports/ore-ground-density-v1/REPORT.md。
+
+
+## 2026-10-19 · 试玩修订（当前）
+
+当前岩石区为独立区域，矿物判定沿同源权重。原快照新增 ecology_layout_version=2，原路径和资源ID不变；旧布局正在采集的矿物/埋藏物按对应旧规则恢复并固定在原 ore_nodes，consumed 继续保留，避免换地貌改变已有进度。
+
+
+矿区由褐色泥地迁至连续岩石区内部，使用 `HarvestDistribution.rocky_region()` 和 `data/harvest_resources.json` 的 `mineral_generation` 参数；覆盖下文历史泥地主矿区规则。五种矿物的造型、开采次数、掉落、碰撞和劳动流程保持；非岩石区只保留少量基础石/燧矿。旧采集ID不换号，已采状态与已动工矿种/位置/进度按 [生态规范](NATURAL_RESOURCE_ECOLOGY.md) 保留。报告：[生态与路标V1](reports/ecology-signpost-v1/REPORT.md)。
+
 # 矿石系统 V0.6 · 大体积矿点与金银铜
 
 ## 2026-10-17 · 恢复少量地面燧石

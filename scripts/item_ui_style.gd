@@ -22,8 +22,8 @@ static func texture_style(name_value: String, border: int, inset: int, tint: Col
 
 static func frame(inset: int = 14) -> StyleBoxTexture:
 	# Keep the complete cloth corner reinforcements inside fixed source patches.
-	var style := texture_style("panel",54,maxi(inset,24))
-	style.content_margin_bottom=maxi(inset,28)
+	var style := texture_style("panel",54,maxi(inset,16))
+	style.content_margin_bottom=maxi(inset,18)
 	return style
 
 static func section(inset: int = 14) -> StyleBoxTexture:
@@ -31,7 +31,7 @@ static func section(inset: int = 14) -> StyleBoxTexture:
 
 static func tooltip(inset: int = 22) -> StyleBoxTexture:
 	var style := texture_style("tooltip",36,maxi(18,inset))
-	style.content_margin_bottom=maxi(28,inset)
+	style.content_margin_bottom=maxi(18,inset)
 	return style
 
 static func target_hint() -> StyleBoxTexture:

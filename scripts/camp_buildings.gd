@@ -20,6 +20,19 @@ func footprint_rect(row: Dictionary) -> Rect2:
 		size_value=Vector2(extent[0],extent[1])
 	return Rect2(-size_value*.5,size_value)
 
+static func valid_sign_text(value: Variant) -> bool:
+	if not value is String or value!=value.strip_edges() or value.is_empty() or value.length()>6:return false
+	for i in value.length():
+		if value.unicode_at(i)<32 or value.unicode_at(i)==127:return false
+	return true
+
+func map_signposts() -> Array[Dictionary]:
+	var result: Array[Dictionary]=[]
+	for id in states:
+		var row: Dictionary=states[id]
+		if row.kind=="signpost":result.append(row)
+	return result
+
 func serialize() -> Dictionary:
 	return {"version":1,"grid_version":1,"objects":states.duplicate(true)}
 
@@ -30,6 +43,7 @@ func validate(data: Variant, seen: Dictionary) -> bool:
 		var row = data.objects[id]
 		if not id is String or id.is_empty() or not row is Dictionary or not definitions.has(row.get("kind","")): return false
 		var d: Dictionary=definitions[row.kind]
+		if row.kind=="signpost" and not valid_sign_text(row.get("text")):return false
 		if row.kind=="tilled_soil" and not service.planting.valid(row): return false
 		if d.get("sleep",false):
 			if row.get("sleep_state","PLACED") not in ["PLACED","RESERVED","IN_USE"] or row.get("facing",-1)!=0: return false
@@ -46,24 +60,31 @@ func validate(data: Variant, seen: Dictionary) -> bool:
 		var hinge_value = row.get("hinge_end",0)
 		if not (hinge_value is int or hinge_value is float) or not is_finite(float(hinge_value)) or float(hinge_value)<0 or float(hinge_value)>1 or float(hinge_value)!=floor(float(hinge_value)): return false
 		if row.has("hinge_end"): row.hinge_end=int(hinge_value)
-		if row.get("layer") in ["edge","ground"]:
-			var k := Grid.key(row,d.layer=="edge")
+		if row.get("layer") in ["edge","ground","overlay"]:
+			var k := str(d.layer)+":"+Grid.key(row,d.layer=="edge")
 			if occupied.has(k): return false
 			occupied[k]=true
 			var p := Grid.snap(Vector2(row.x,row.y),d.layer=="edge",row.vertical)
 			if p.gx!=row.gx or p.gy!=row.gy or not is_equal_approx(p.x,row.x) or not is_equal_approx(p.y,row.y): return false
-		if not row.get("contents") is Array or row.contents.size()!=12: return false
-		if row.kind!="wood_chest" and row.contents.any(func(v): return not v is Dictionary or not v.is_empty()): return false
-		if row.open and row.kind!="wood_chest" and not d.get("door",false): return false
+		if not row.get("contents") is Array or row.contents.size()!=int(d.get("storage_slots",12)): return false
+		if row.kind!="wood_chest" and not d.has("storage_slots") and row.contents.any(func(v): return not v is Dictionary or not v.is_empty()): return false
+		if not service.industry.valid(row):return false
+		if row.has("machine"):
+			for job in row.machine.jobs+row.machine.queue:
+				if job.is_empty() or not job.output.has("instance_id"):continue
+				var instance_id: String=str(job.output.instance_id)
+				if seen.has(instance_id):return false
+				seen[instance_id]=true
+		if row.open and row.kind!="wood_chest" and not d.has("storage_slots") and not d.get("door",false): return false
 		var inv := ItemInventory.new(service.database)
 		var slots: Array=[]
-		for i in 40: slots.append(row.contents[i] if i<12 else {})
+		for i in 40: slots.append(row.contents[i] if i<row.contents.size() else {})
 		if not inv.restore(slots): return false
 		for v in inv.slots:
 			if v.has("instance_id"):
 				if seen.has(str(v.instance_id)): return false
 				seen[str(v.instance_id)]=true
-		for i in 12: row.contents[i]=inv.slots[i]
+		for i in row.contents.size(): row.contents[i]=inv.slots[i]
 		for key in ["gx","gy","hits","facing"]: row[key]=int(row[key])
 	return true
 
@@ -74,7 +95,8 @@ func candidate(kind: String, at: Vector2, vertical: bool, inward: bool, facing: 
 	row.merge({"kind":kind,"layer":d.layer,"open":false,"inward":inward,"facing":facing,"hits":0,"contents":[]})
 	if d.get("sleep",false): row.facing=0;row.vertical=vertical if kind!="sleeping_bag" else false;row.sleep_state="PLACED"
 	if kind=="tilled_soil": row.merge({"crop":"","growth_minutes":0.0,"roots":false});row.vertical=false
-	for i in 12: row.contents.append({})
+	for i in int(d.get("storage_slots",12)): row.contents.append({})
+	if service.industry.machine(kind):row.machine=service.industry.initial(kind)
 	return row
 
 func occupant(row: Dictionary) -> String:
@@ -101,6 +123,12 @@ func cost(row: Dictionary) -> Dictionary:
 func reason(row: Dictionary) -> String:
 	if not definitions.has(row.get("kind","")) or not row.has_all(["x","y","layer","vertical"]): return "无效建造位置"
 	if not service.writable: return "存档受保护，不能建造"
+	if definitions[row.kind].get("industry_candidate",false) and not service.industry.enabled():return "候选设施尚未开放"
+	if row.kind=="wool_carpet":
+		var floor_found := false
+		for base in states.values():
+			if base.kind in ["wood_floor","stone_path"] and Grid.key(base,false)==Grid.key(row,false):floor_found=true;break
+		if not floor_found:return "需要已有地板"
 	if row.kind=="tilled_soil":
 		if not service.inventory.has_capability("mine"): return "需要装备石镐开垦"
 		if not service.body.can_labor("mine"): return "精力或体力不足，不能开垦"
@@ -119,12 +147,12 @@ func reason(row: Dictionary) -> String:
 		var half := bounds.size*.5
 		for xx in [-half.x,0,half.x]:
 			for yy in [-half.y,0,half.y]: offsets.append(bounds.get_center()+Vector2(xx,yy))
-	if row.layer=="ground": offsets=[Vector2(-42,-26),Vector2(42,-26),Vector2(-42,26),Vector2(42,26),Vector2.ZERO]
+	if row.layer in ["ground","overlay"]: offsets=[Vector2(-42,-26),Vector2(42,-26),Vector2(-42,26),Vector2(42,26),Vector2.ZERO]
 	elif row.layer=="edge": offsets=[Vector2(0,-28),Vector2(0,28),Vector2.ZERO] if row.vertical else [Vector2(-44,0),Vector2(44,0),Vector2.ZERO]
 	for offset in offsets:
 		var p: Vector2=at+offset
 		if not world.generator.can_walk(p,10) or world.generator.sample(p).z>.03: return "需要干燥陆地"
-		if row.layer!="ground" and world.player.position.distance_to(p)<22: return "请避开角色"
+		if row.layer not in ["ground","overlay"] and world.player.position.distance_to(p)<22: return "请避开角色"
 		for node in world.get_tree().get_nodes_in_group("world_interactables")+world.get_tree().get_nodes_in_group("trees"):
 			if node.get_meta("building_id","")==replace_id and not replace_id.is_empty(): continue
 			if node.get_meta("camp_layer","")=="ground": continue
@@ -144,13 +172,13 @@ func reason(row: Dictionary) -> String:
 			if parent.get_meta("building_id","")==replace_id and not replace_id.is_empty(): continue
 			return "附近有障碍"
 	var footprint := RectangleShape2D.new()
-	footprint.size=Vector2(84,52) if row.layer=="ground" else (Vector2(8,64) if row.vertical else Vector2(96,8)) if row.layer=="edge" else footprint(row)
+	footprint.size=Vector2(84,52) if row.layer in ["ground","overlay"] else (Vector2(8,64) if row.vertical else Vector2(96,8)) if row.layer=="edge" else footprint(row)
 	var area := PhysicsShapeQueryParameters2D.new();area.shape=footprint;area.transform=Transform2D(0,at)
 	if definitions[row.kind].get("sleep",false): area.transform.origin+=footprint_rect(row).get_center()
 	for hit in world.get_world_2d().direct_space_state.intersect_shape(area,32):
 		var parent: Node=hit.collider.get_parent()
-		if row.layer=="ground" and hit.collider is CharacterBody2D: continue
-		if parent.get_meta("camp_layer","")=="edge" and row.layer in ["edge","ground"]: continue
+		if row.layer in ["ground","overlay"] and hit.collider is CharacterBody2D: continue
+		if parent.get_meta("camp_layer","")=="edge" and row.layer in ["edge","ground","overlay"]: continue
 		if not replace_id.is_empty() and parent.get_meta("building_id","")==replace_id: continue
 		return "建筑占地与障碍重叠"
 	for key in cost(row):
@@ -162,6 +190,7 @@ func place(row: Dictionary, expected: Array) -> String:
 	if service.inventory.slots!=expected: return "背包已变化，请重新建造"
 	var error := reason(row)
 	if not error.is_empty(): return error
+	if row.kind=="signpost" and not valid_sign_text(row.get("text")):return "请填写1至6个字的路标文字"
 	busy=true
 	var before := states.duplicate(true)
 	var slots: Array=service.inventory.slots.duplicate(true)
@@ -266,6 +295,12 @@ func toggle(id: String) -> String:
 func protected_reason(id: String) -> String:
 	if states.has(id):
 		if states[id].get("sleep_state","PLACED")!="PLACED": return "设施正在使用"
+		if states[id].kind in ["wood_floor","stone_path"]:
+			for over in states.values():
+				if over.kind=="wool_carpet" and Grid.key(over,false)==Grid.key(states[id],false):return "请先拆除地毯"
+		if states[id].has("machine"):
+			var m: Dictionary=states[id].machine
+			if not m.feed.is_empty() or not m.queue.is_empty() or m.jobs.any(func(j):return not j.is_empty()):return "设施内还有物品"
 		if states[id].contents.any(func(v): return not v.is_empty()): return "请先清空木箱"
 		return ""
 	if service.camps.states.has(id):
@@ -331,11 +366,11 @@ func strike(id: String, target: Node2D) -> bool:
 	inv.changed.emit();busy=false;return true
 
 func set_chest_open(id: String, opened: bool) -> String:
-	if busy or not service.writable or not states.has(id) or states[id].kind!="wood_chest": return "木箱不可用"
+	if busy or not service.writable or not states.has(id) or not storage_kind(str(states[id].kind)): return "木箱不可用"
 	if opened and service.world.player.position.distance_to(Vector2(states[id].x,states[id].y))>100: return "请靠近木箱"
 	var before: Dictionary={}
 	for key in states:
-		if states[key].kind=="wood_chest":
+		if storage_kind(str(states[key].kind)):
 			before[key]=states[key].open
 			if opened: states[key].open=key==id
 	states[id].open=opened
@@ -349,21 +384,22 @@ func set_chest_open(id: String, opened: bool) -> String:
 
 func transfer(id: String, chest_index: int, player_index: int, expected_chest: Dictionary, expected_player: Dictionary) -> String:
 	if busy or not service.writable or not states.has(id): return "木箱不可用"
-	if states[id].kind!="wood_chest" or chest_index<0 or chest_index>=12 or player_index<0 or player_index>=43: return "物品格无效"
+	if not storage_kind(str(states[id].kind)) or chest_index<0 or chest_index>=states[id].contents.size() or player_index<0 or player_index>=43: return "物品格无效"
 	if service.world.player.position.distance_to(Vector2(states[id].x,states[id].y))>100: return "请靠近木箱"
 	var inv: ItemInventory=service.inventory
 	var contents: Array=states[id].contents
-	if contents[chest_index]!=expected_chest or inv.get_slot(player_index)!=expected_player: return "物品已变化，请重新拖动"
-	if chest_index>=9 and not expected_player.is_empty(): return "旧箱附加格仅供取回物品"
+	if not preload("res://scripts/food_freshness.gd").matches(contents[chest_index],expected_chest) or not preload("res://scripts/food_freshness.gd").matches(inv.get_slot(player_index),expected_player): return "物品已变化，请重新拖动"
+	if states[id].kind=="wood_chest" and chest_index>=9 and not expected_player.is_empty(): return "旧箱附加格仅供取回物品"
 	if player_index<40 and inv.hotbar_equipment.has(str(player_index)):
 		for i in range(40,43):
 			if inv.get_slot(i).get("instance_id","")==expected_player.get("instance_id",""): player_index=i;break
+	if states[id].kind=="refrigerator" and not expected_player.is_empty() and service.database.item(str(expected_player.item_id)).get("food_kind","") not in ["raw","cooked"]:return "冰箱只能存放食物"
 	if not inv.accepts(player_index,expected_chest): return "这个装备槽不能放入箱内物品"
 	busy=true
 	var a: Dictionary=contents[chest_index].duplicate(true)
 	var b: Dictionary=inv.get_slot(player_index).duplicate(true)
 	var old_equipment := inv.equipment.duplicate(true);var old_links := inv.hotbar_equipment.duplicate(true)
-	if not a.is_empty() and not b.is_empty() and a.item_id==b.item_id and not a.has("instance_id") and not a.has("lamp_id"):
+	if not a.is_empty() and not b.is_empty() and preload("res://scripts/food_freshness.gd").same(a,b):
 		var take := mini(int(b.count),int(service.database.item(a.item_id).max_stack)-int(a.count))
 		if take==0: busy=false;return "这一格已满"
 		contents[chest_index].count+=take;inv.slots[player_index].count-=take
@@ -381,10 +417,11 @@ func transfer(id: String, chest_index: int, player_index: int, expected_chest: D
 	inv.changed.emit();busy=false;return ""
 
 func chest_edit(id: String, source: int, expected: Dictionary, action: String, target: int = -1, quantity: int = 0) -> String:
-	if busy or not service.writable or not states.has(id) or states[id].kind!="wood_chest" or source<0 or source>=12: return "木箱不可用"
+	if busy or not service.writable or not states.has(id) or not storage_kind(str(states[id].kind)) or source<0 or source>=states[id].contents.size(): return "木箱不可用"
 	if service.world.player.position.distance_to(Vector2(states[id].x,states[id].y))>100: return "请靠近木箱"
 	var contents: Array=states[id].contents
-	if contents[source]!=expected or expected.is_empty(): return "原物品已变化"
+	if not preload("res://scripts/food_freshness.gd").matches(contents[source],expected) or expected.is_empty(): return "原物品已变化"
+	expected=contents[source].duplicate(true)
 	var before: Array=contents.duplicate(true)
 	var body: Dictionary=service.body.serialize()
 	var old_slots: Array=service.inventory.slots.duplicate(true)
@@ -400,15 +437,15 @@ func chest_edit(id: String, source: int, expected: Dictionary, action: String, t
 		"split":
 			if quantity<1 or quantity>=int(expected.count): return "拆分数量须小于原数量"
 			var empty := -1
-			for i in 9:
+			for i in storage_capacity(id):
 				if contents[i].is_empty(): empty=i;break
 			if empty<0: return "木箱已满，无法拆分"
-			contents[empty]={"item_id":expected.item_id,"count":quantity};contents[source].count-=quantity
+			contents[empty]=expected.duplicate(true);contents[empty].count=quantity;contents[source].count-=quantity
 		"move":
-			if target<0 or target>=9 or target==source: return ""
+			if target<0 or target>=storage_capacity(id) or target==source: return ""
 			var other: Dictionary=contents[target]
-			if source>=9 and not other.is_empty(): return "请将旧箱物品拖到空格取回"
-			if not other.is_empty() and other.item_id==expected.item_id and not expected.has("instance_id") and not expected.has("lamp_id"):
+			if source>=storage_capacity(id) and not other.is_empty(): return "请将旧箱物品拖到空格取回"
+			if not other.is_empty() and preload("res://scripts/food_freshness.gd").same(other,expected):
 				var amount := mini(int(expected.count),int(definition.max_stack)-int(other.count))
 				if amount<=0: return "物品格已满"
 				other.count+=amount;contents[source].count-=amount
@@ -421,8 +458,8 @@ func chest_edit(id: String, source: int, expected: Dictionary, action: String, t
 					if staged.add(reward,int(definition.contents[reward]))>0: return "背包空间不足，补给包保留在箱内"
 				service.inventory.slots=staged.slots
 			elif definition.get("use_action","")=="eat":
-				if not service.body.can_eat(definition.get("effects",{})): return "现在无法食用"
-				service.body.eat(definition.get("effects",{}))
+				if not service.body.can_eat(preload("res://scripts/food_freshness.gd").effects(service.database,expected)): return "现在无法食用"
+				service.body.eat(preload("res://scripts/food_freshness.gd").effects(service.database,expected))
 			else: return "请取出到背包后使用"
 			contents[source].count-=1
 			if contents[source].count==0: contents[source]={}
@@ -471,3 +508,9 @@ func gate_blocked(id: String, swing_override: int=0, hinge_override: int=-1) -> 
 			return true
 	return false
 
+
+func storage_kind(kind: String) -> bool:
+	return kind=="wood_chest" or definitions.get(kind,{}).has("storage_slots")
+
+func storage_capacity(id: String) -> int:
+	return 9 if states[id].kind=="wood_chest" else int(definitions[states[id].kind].get("storage_slots",12))

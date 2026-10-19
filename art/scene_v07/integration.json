@@ -1,0 +1,55 @@
+{
+  "status": "user_approved_integrated",
+  "art_version": "scene-stylized-3.0",
+  "map_generator_version": "windrest-0.3.0-cartoon",
+  "unchanged_files": {
+    "scripts/player.gd": true,
+    "scripts/world_generator.gd": true,
+    "scripts/world.gd": true,
+    "scenes/world.tscn": true,
+    "project.godot": true,
+    "assets/hero/cartoon/character.tscn": true
+  },
+  "assets": {
+    "grass.png": {
+      "sha256": "6e65652c3ad2533a25a261e6719e59b8beabf172803cc2e6852dda4e704ef68c",
+      "source": "approved prototypes/scene-study-v07; see art/scene_v07/processing.json and job receipts"
+    },
+    "rock_0.png": {
+      "sha256": "9c9962cc7b91710ee144d0a518851080827d714b7b9018e793e9cd2271e4260f",
+      "source": "approved prototypes/scene-study-v07; see art/scene_v07/processing.json and job receipts"
+    },
+    "rock_1.png": {
+      "sha256": "bd29f47b625aad377c4347ca150aa541071ef760e9245e937d990bdd7fd6f745",
+      "source": "approved prototypes/scene-study-v07; see art/scene_v07/processing.json and job receipts"
+    },
+    "tree_0.png": {
+      "sha256": "d64d940b506c366be95a03758971c6821862c6c9e1399a664aa186bd7a2a9c4f",
+      "source": "approved prototypes/scene-study-v07; see art/scene_v07/processing.json and job receipts"
+    },
+    "tree_1.png": {
+      "sha256": "92cd482c00c8311522b73f09ed6ce5f7c2cf002404cde5487b65ddec482c6384",
+      "source": "approved prototypes/scene-study-v07; see art/scene_v07/processing.json and job receipts"
+    },
+    "tuft_0.png": {
+      "sha256": "a87e03f965513d442050b1713a43a4c8c0363463bc76776cebca4d3a27e4a40d",
+      "source": "approved prototypes/scene-study-v07; see art/scene_v07/processing.json and job receipts"
+    },
+    "tuft_1.png": {
+      "sha256": "e49abc436f04d17ef104aec3ed2f345cd78d6ba53f2eddc0444e9e3317662fc2",
+      "source": "approved prototypes/scene-study-v07; see art/scene_v07/processing.json and job receipts"
+    },
+    "tuft_2.png": {
+      "sha256": "a87e03f965513d442050b1713a43a4c8c0363463bc76776cebca4d3a27e4a40d",
+      "source": "approved prototypes/scene-study-v07; see art/scene_v07/processing.json and job receipts"
+    }
+  },
+  "ground_sampling": "world coordinates, spawn anchored, 1280x720 triangle-wave mirror; no new image generation",
+  "decorations": "original prop coordinates; visual-only thinning with salt682 and clearing radius160; no physics/prop-generation change",
+  "checks": "reports/scene-v3-integration-tests.json",
+  "limitations": [
+    "ground mirror repetition can be recognized over long travel; not a newly authored seamless texture",
+    "original raw-sheet layout/glow warnings retained in QA.md",
+    "no performance benchmark or unrelated full regression"
+  ]
+}

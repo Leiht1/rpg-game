@@ -228,10 +228,17 @@ Ctrl+左键拆分 · B 关闭"
 	cat_title.text = "物品图鉴 / 调试管理  ·  F6 关闭" if OS.has_feature("debug") else "物品图鉴"
 	cat_layout.add_child(cat_title)
 	if OS.has_feature("debug"):
+		var debug_actions := HBoxContainer.new()
+		cat_layout.add_child(debug_actions)
 		var ore_button := Button.new()
 		ore_button.text="脚边放置测试矿点（燧石）"
 		ore_button.pressed.connect(func(): service.debug_ore())
-		cat_layout.add_child(ore_button)
+		debug_actions.add_child(ore_button)
+		var animal_button := Button.new()
+		animal_button.name="SpawnAnimal"
+		animal_button.text="附近生成动物 +1"
+		animal_button.pressed.connect(func(): service.animals.debug_spawn_near())
+		debug_actions.add_child(animal_button)
 	filter.placeholder_text = "搜索名称、ID 或分类（food / material / natural）"
 	cat_layout.add_child(filter)
 	filter.text_changed.connect(func(_text): rebuild_catalog())
@@ -323,7 +330,7 @@ func make_item_card(index: int) -> Control:
 	if definition.get("equippable",false):
 		var abilities: Array[String]=[]
 		for capability in definition.capabilities:
-			abilities.append({"chop":"砍伐","mine":"开采","dig":"挖掘","attack":"攻击"}.get(capability,"扩展能力"))
+			abilities.append({"chop":"砍伐","mine":"开采","dig":"挖掘","shear":"剪羊毛","attack":"攻击"}.get(capability,"扩展能力"))
 		action.text+="\n能力："+"、".join(abilities)
 	action.add_theme_color_override("font_color",Color("668056"))
 	column.add_child(action)
@@ -383,6 +390,7 @@ func _process(delta: float) -> void:
 func update_target_tip(target: Node2D, delta: float) -> void:
 	if service.body.sleep_active(): target_tip.hide();return
 	var current_id := target.get_instance_id() if is_instance_valid(target) else 0
+	if current_id!=0 and target.has_meta("animal_id") and target.manager.caption(target.animal_id).is_empty(): current_id=0
 	if current_id != target_tip_id:
 		target_tip_id = current_id
 		target_tip_time = TARGET_TIP_SECONDS if current_id != 0 else 0.0
@@ -566,9 +574,10 @@ func setup_item_actions() -> void:
 	split_panel.hide()
 
 func item_modal_open() -> bool:
-	return service.body.sleep_active() or (is_instance_valid(modal) and modal.visible)
+	return service.body.sleep_active() or (is_instance_valid(world.camp_ui) and world.camp_ui.sign_dialog.visible) or (is_instance_valid(modal) and modal.visible)
 
 func update_input_block() -> void:
+	if is_instance_valid(service.industry_ui) and service.industry_ui.visible:world.player.input_blocked=true;return
 	if is_instance_valid(service.planting_ui) and service.planting_ui.visible:
 		world.player.input_blocked=true;return
 	world.player.input_blocked=service.body.sleep_active() or (is_instance_valid(world.camp_ui) and world.camp_ui.panel.visible) or (is_instance_valid(body_ui) and body_ui.overlay.visible) or craft_panel.visible or catalog.visible or world.map_view.visible or item_modal_open() or get_viewport().gui_is_dragging() or get_viewport().gui_get_focus_owner() is LineEdit
@@ -593,7 +602,7 @@ func choose_stack(index: int) -> bool:
 	return true
 
 func stack_unchanged() -> bool:
-	return modal_index>=0 and service.inventory.get_slot(modal_index)==modal_stack
+	return modal_index>=0 and preload("res://scripts/food_freshness.gd").matches(service.inventory.get_slot(modal_index),modal_stack)
 
 func open_item_menu(index: int, at: Vector2) -> void:
 	if not choose_stack(index): return
@@ -602,7 +611,7 @@ func open_item_menu(index: int, at: Vector2) -> void:
 	equip_button.visible=index>=40 or bool(service.database.item(modal_stack.item_id).get("equippable",false))
 	equip_button.set_meta("equipment_index",equipped_action_index(index))
 	equip_button.text="卸下" if equipped_action_index(index)>=40 else "装备"
-	use_button.text=("关闭" if is_instance_valid(service.lantern) and service.lantern.visible and modal_stack.get("lamp_id","")==service.active_lamp else "打开") if modal_stack.item_id=="field_lantern" else "使用"
+	use_button.text=("关闭" if is_instance_valid(service.lantern) and service.lantern.visible and modal_stack.get("lamp_id","")==service.active_lamp else "打开") if service.database.item(modal_stack.item_id).get("use_action","")=="light" else "使用"
 	use_button.visible=index<40
 	destroy_button.visible=index<40 and not (index<8 and service.inventory.slots[index].is_empty())
 	use_button.disabled=not service.database.item(modal_stack.item_id).usable
@@ -692,7 +701,7 @@ func valid_drag(data: Variant) -> bool:
 	var index := int(data.slot)
 	if index<0 or index>=cells.size() or service.inventory.get_slot(index).is_empty(): return false
 	var slot: Dictionary=service.inventory.get_slot(index)
-	return data.get("item_id",slot.item_id)==slot.item_id and int(data.get("count",slot.count))==int(slot.count) and data.get("snapshot",slot)==slot
+	return data.get("item_id",slot.item_id)==slot.item_id and int(data.get("count",slot.count))==int(slot.count) and preload("res://scripts/food_freshness.gd").matches(data.get("snapshot",slot),slot)
 
 func inventory_contains(at: Vector2) -> bool:
 	return bag.visible and (bag.get_global_rect().has_point(at) or equipment_panel.get_global_rect().has_point(at))
@@ -702,6 +711,7 @@ func can_drop_on_ground(at: Vector2, data: Variant) -> bool:
 	if inventory_contains(at) or service.storage_ui.contains_pointer(at): return false
 	if dock.get_global_rect().has_point(at): return false
 	var position_world: Vector2=get_viewport().get_canvas_transform().affine_inverse()*at
+	if not service.animals.target_at(position_world).is_empty():return true
 	var camp_id: String=service.camps.target_at(position_world)
 	# A camp hit always belongs to fuel handling, including rejected items; never discard it as a ground drop.
 	if not camp_id.is_empty(): return true
@@ -712,6 +722,11 @@ func drop_on_ground(data: Variant, at: Vector2 = Vector2.INF) -> void:
 	if at!=Vector2.INF and (inventory_contains(at) or service.storage_ui.contains_pointer(at)): return
 	if at!=Vector2.INF and valid_drag(data):
 		var position_world: Vector2=get_viewport().get_canvas_transform().affine_inverse()*at
+		var animal_id: String=service.animals.target_at(position_world)
+		if not animal_id.is_empty():
+			var reason: String=world.player.animal_feed.start(world.player,animal_id,int(data.slot),data.snapshot)
+			if not reason.is_empty():show_notice(reason)
+			return
 		var camp_id: String=service.camps.target_at(position_world)
 		if not camp_id.is_empty():
 			var rejected: String=service.camps.feed_check(camp_id,int(data.slot),data.snapshot)
@@ -737,6 +752,7 @@ func _notification(what: int) -> void:
 		call_deferred("update_input_block")
 
 func _input(event: InputEvent) -> void:
+	if is_instance_valid(service.industry_ui) and service.industry_ui.visible:return
 	if is_instance_valid(service.planting_ui) and service.planting_ui.handle_input(event):
 		get_viewport().set_input_as_handled();return
 	if is_instance_valid(service.sleep_ui) and service.sleep_ui.handle_input(event):
@@ -748,6 +764,9 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		return
 	if event is InputEventMouseMotion or event is InputEventMouseButton: drag_pointer=event.position
+	if is_instance_valid(world.camp_ui) and world.camp_ui.sign_dialog.visible:
+		if event is InputEventKey and event.pressed and event.physical_keycode==KEY_ESCAPE:world.camp_ui.cancel_sign();get_viewport().set_input_as_handled()
+		return
 	if is_instance_valid(world.camp_ui) and world.camp_ui.handle_input(event):
 		get_viewport().set_input_as_handled()
 		return

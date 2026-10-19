@@ -1,0 +1,30 @@
+{
+	"checks": [
+		{
+			"name": "smooth visual onset",
+			"pass": true
+		},
+		{
+			"name": "GPU book labels and panel pixel identical",
+			"pass": true
+		},
+		{
+			"name": "GPU world distortion visible",
+			"pass": true
+		},
+		{
+			"name": "smooth visual exit",
+			"pass": true
+		},
+		{
+			"name": "effect clears",
+			"pass": true
+		},
+		{
+			"name": "world effect below all inventory HUD layers",
+			"pass": true
+		}
+	],
+	"count": 6,
+	"failed": 0
+}

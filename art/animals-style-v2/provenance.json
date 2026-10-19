@@ -1,0 +1,102 @@
+{
+  "status": "approved",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "precise_model_revision": "not disclosed",
+  "estimateUsd": 0.0,
+  "actual_cash_receipt": "none; local subscription quota",
+  "raw": "art/animals-style-v2/generated/generated.png",
+  "raw_sha256": "444cc385af22ee414fc4a18c6124735d6431cf7dc81627fdfa3c07c9147eefb3",
+  "prompt": "art/animals-style-v2/prompt.txt",
+  "job": "art/animals-style-v2/generated/job.json",
+  "references": {
+    "art/animals-style-v2/hero-reference.png": "44db6e47c8ef5ed49263af0cc29cdb5f8115ee92c80524d0766bfc0fe93fb66a",
+    "art/animals-style-v2/scene-reference.png": "8c4708b7e0577d35da5d592e2ed5f33d850c139d46d626a0085d61d34716b15a"
+  },
+  "reference_roles": [
+    "current formal hero rendered from character.tscn",
+    "actual scene context only; old animals explicitly excluded as style references"
+  ],
+  "ownership": "equal 3x3 cells, source 1254x1254; no crossing components",
+  "processing": "soft magenta key, despill 1; full alpha bbox; no largest-component filtering; body uniform resize into registered transparent canvases",
+  "transforms": {
+    "chicken_body": {
+      "source_size": [
+        435,
+        336
+      ],
+      "uniform_scale": 0.9226190476190477,
+      "registered_canvas": [
+        420,
+        310
+      ],
+      "offset": [
+        9,
+        0
+      ],
+      "size": [
+        401,
+        310
+      ]
+    },
+    "sheep_wool": {
+      "source_size": [
+        435,
+        343
+      ],
+      "uniform_scale": 1.2536443148688046,
+      "registered_canvas": [
+        690,
+        430
+      ],
+      "offset": [
+        72,
+        0
+      ],
+      "size": [
+        545,
+        430
+      ]
+    },
+    "sheep_bare": {
+      "source_size": [
+        435,
+        302
+      ],
+      "uniform_scale": 1.0264900662251655,
+      "registered_canvas": [
+        690,
+        430
+      ],
+      "offset": [
+        121,
+        60
+      ],
+      "size": [
+        447,
+        310
+      ]
+    }
+  },
+  "qa": [
+    "art/animals-style-v2/raw-qc/sheet-qc.json",
+    "art/animals-style-v2/processed/pipeline-meta.json"
+  ],
+  "formal_assets_replaced": false,
+  "animation": "current Skeleton2D/Bone2D actor inherited; candidate-only pivots/textures/contact shadow",
+  "files": {
+    "chicken_body.png": "4a3123005ffb699340eacff5c24adaa730bbfe04e7cc1add056d472f26983cea",
+    "chicken_head.png": "68acbedbf0de49737b42aa1a19e3cc3d02549a81dba89850974ce8a219630388",
+    "chicken_head_closed.png": "bfb62bfbd41e825693c526b25a080b1b6ab048a5673b31213410718b069cd51c",
+    "chicken_leg.png": "24ea93500ab38f0f29ad7ccf7680573723a079f26ca72e1d97922291e5612a24",
+    "chicken_wing.png": "54c6b6cc1986dd9a377c743e46912cad78583c7a1043cf2dc4b0691c469b687d",
+    "sheep_bare.png": "854a16604754c5650481ff746239b98f0f207dda4c68449ff83ffbe344c168c6",
+    "sheep_head.png": "14dc241ae8baf2f76dbe8f8150305f1b88c63f7e357eb22abba72f8f0dad7465",
+    "sheep_leg.png": "62a652cb74a54a85ae498b80984791e725601d0df14d4d0c6b13f1323bccea9f",
+    "sheep_wool.png": "3f2648c6ccf1740848991ee4c6dfef36890729ee230a13d8d90bf798969fa095"
+  },
+  "head_revision": "art/animals-head-v3/provenance.json",
+  "approval": "可以了接入游戏吧",
+  "formal_promotion": "assets/animals/v2/provenance.json"
+}

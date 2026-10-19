@@ -25,7 +25,8 @@ func run() -> void:
 		attempts+=1
 	check(world.started,"Initial visible chunks never became ready")
 	var player: WildPlayer=world.player
-	check(is_equal_approx(WildPlayer.WALK_SPEED,115.0),"Normal movement speed must be 115 px/s")
+	check(is_equal_approx(WildPlayer.WALK_SPEED,200.0),"Normal movement speed must be 200 px/s")
+	check(is_equal_approx(WildPlayer.WALK_SPEED/float(player.actor.stride_world_units)*8,13.8),"Walk cadence must remain 13.8 frames/s")
 	check(player.actor.template_version=="windrest-character-template-5","Wrong character template version")
 	for view in ["front","back","side"]:
 		check(player.sprite.sprite_frames.get_frame_count(view+"_walk")==8,"Walk must contain eight poses")
@@ -64,7 +65,7 @@ func run() -> void:
 		release_all()
 		var distance := player.position.distance_to(start)
 		distances.append(distance)
-		check(absf(distance-57.5)<2.0,"Wrong movement speed for %s: %.3f"%[str(group),distance])
+		check(absf(distance-100.0)<2.0,"Wrong movement speed for %s: %.3f"%[str(group),distance])
 		check(player.moving,"Walk did not activate")
 		check(player.animation_frame>=0 and player.animation_frame<player.sprite.sprite_frames.get_frame_count(player.sprite.animation),"Invalid walk frame")
 		var direction: Vector2=Vector2.ZERO
@@ -192,6 +193,7 @@ func run() -> void:
 		"idle_frames_per_direction":4,"idle_cycle_ms":1800,"breathing_pose_ticks_by_direction":breathing_cycles,
 		"idle_boundary_samples":44,"breathing_physics_body_stationary":true,
 		"stride_world_units":player.actor.stride_world_units,
+		"walk_frames_per_second_at_normal_speed":WildPlayer.WALK_SPEED/float(player.actor.stride_world_units)*8,
 		"rapid_switch_and_stop_cycles":180,"complete_character_sprites":1,"collision_center_distance":collisions,
 		"physical_WASD":true,"camera_zoom_range":[.65,1.65],"failures":failures})
 	FileAccess.open("res://reports/player-tests.json",FileAccess.WRITE).store_string(JSON.stringify(results,"\t"))

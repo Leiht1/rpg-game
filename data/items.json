@@ -21,7 +21,7 @@
       "source": "浆果灌木"
     },
     "effects": {
-      "hunger": 8
+      "hunger": 2
     },
     "world_size": 42,
     "equippable": false,
@@ -31,13 +31,14 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "food_kind": "raw"
   },
   {
     "item_id": "brown_mushroom",
-    "name": "棕蘑菇",
+    "name": "野生蘑菇",
     "category": "food",
-    "description": "林下落叶间长出的棕色食用蘑菇。",
+    "description": "林下散落的野生蘑菇。生吃恢复少量饥饿，但会致幻一游戏小时并逐渐损失生命；烹熟后食用安全。",
     "icon": "res://assets/items/v03/brown_mushroom_icon.png",
     "world_visual": "res://assets/items/v03/brown_mushroom_world.png",
     "max_stack": 30,
@@ -55,7 +56,8 @@
       "source": "林下菌簇"
     },
     "effects": {
-      "hunger": 8
+      "hunger": 2,
+      "hallucination": true
     },
     "world_size": 27,
     "equippable": false,
@@ -65,7 +67,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "food_kind": "raw"
   },
   {
     "item_id": "wild_carrot",
@@ -89,7 +92,7 @@
       "source": "胡萝卜植株"
     },
     "effects": {
-      "hunger": 14
+      "hunger": 2
     },
     "world_size": 30,
     "equippable": false,
@@ -99,7 +102,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "food_kind": "raw"
   },
   {
     "item_id": "wild_apple",
@@ -123,7 +127,7 @@
       "source": "固定来源树附近的地面落果"
     },
     "effects": {
-      "hunger": 12
+      "hunger": 3
     },
     "world_size": 20,
     "equippable": false,
@@ -133,7 +137,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "food_kind": "raw"
   },
   {
     "item_id": "wood",
@@ -387,7 +392,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "food_kind": "raw"
   },
   {
     "item_id": "stone_axe",
@@ -740,7 +746,7 @@
       "source": "篝火烹饪"
     },
     "effects": {
-      "hunger": 26
+      "hunger": 6
     },
     "world_size": 28,
     "equippable": false,
@@ -750,7 +756,9 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
   },
   {
     "item_id": "roasted_mushroom",
@@ -772,7 +780,7 @@
       "source": "篝火烹饪"
     },
     "effects": {
-      "hunger": 22
+      "hunger": 7
     },
     "world_size": 28,
     "equippable": false,
@@ -782,13 +790,15 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
   },
   {
     "item_id": "herb_roasted_mushroom",
-    "name": "香草烤蘑菇",
+    "name": "香草蘑菇",
     "category": "food",
-    "description": "野花作为可食用草本搭配烤制的野外料理。",
+    "description": "宽叶与野生蘑菇烹成的安全熟食。",
     "icon": "res://assets/cooking/v1/herb_roasted_mushroom.png",
     "world_visual": "res://assets/cooking/v1/herb_roasted_mushroom.png",
     "max_stack": 30,
@@ -804,7 +814,7 @@
       "source": "篝火烹饪"
     },
     "effects": {
-      "hunger": 30
+      "hunger": 10
     },
     "world_size": 28,
     "equippable": false,
@@ -814,7 +824,9 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
   },
   {
     "item_id": "roasted_fruit_platter",
@@ -846,7 +858,9 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
   },
   {
     "item_id": "field_harvest_platter",
@@ -878,7 +892,9 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
   },
   {
     "item_id": "stone_wall",
@@ -1405,7 +1421,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "food_kind": "raw"
   },
   {
     "item_id": "cabbage",
@@ -1436,7 +1453,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "food_kind": "raw"
   },
   {
     "item_id": "tilled_soil",
@@ -1466,5 +1484,986 @@
     "visual_id": "",
     "stats": {},
     "durability": null
+  },
+  {
+    "item_id": "roasted_potato",
+    "name": "烤土豆",
+    "category": "food",
+    "description": "烤土豆，温热可口的蔬菜料理。",
+    "icon": "res://assets/cooking/v2/roasted_potato.png",
+    "world_visual": "res://assets/cooking/v2/roasted_potato.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 12
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
+  },
+  {
+    "item_id": "roasted_cabbage",
+    "name": "烤卷心菜",
+    "category": "food",
+    "description": "烤卷心菜，温热可口的蔬菜料理。",
+    "icon": "res://assets/cooking/v2/roasted_cabbage.png",
+    "world_visual": "res://assets/cooking/v2/roasted_cabbage.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 16
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
+  },
+  {
+    "item_id": "vegetable_soup",
+    "name": "蔬菜汤",
+    "category": "food",
+    "description": "蔬菜汤，温热可口的蔬菜料理。",
+    "icon": "res://assets/cooking/v2/vegetable_soup.png",
+    "world_visual": "res://assets/cooking/v2/vegetable_soup.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 24
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
+  },
+  {
+    "item_id": "stewed_vegetables",
+    "name": "炖杂蔬",
+    "category": "food",
+    "description": "炖杂蔬，温热可口的蔬菜料理。",
+    "icon": "res://assets/cooking/v2/stewed_vegetables.png",
+    "world_visual": "res://assets/cooking/v2/stewed_vegetables.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 36
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
+  },
+  {
+    "item_id": "signpost",
+    "name": "路标",
+    "category": "material",
+    "description": "最多6字的固定路标；在地图上显示位置和名称。",
+    "icon": "res://assets/buildings/signpost_v1/signpost.png",
+    "world_visual": "res://assets/buildings/signpost_v1/signpost.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "chicken_egg",
+    "name": "鸡蛋",
+    "category": "material",
+    "description": "良好状态成年鸡产下的鸡蛋。",
+    "icon": "res://assets/animals/v1/chicken_egg.png",
+    "world_visual": "res://assets/animals/v1/chicken_egg.png",
+    "world_size": 18,
+    "max_stack": 30,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "animal_product"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "动物养殖"
+    }
+  },
+  {
+    "item_id": "wool",
+    "name": "羊毛",
+    "category": "material",
+    "description": "用剪刀从成年羊身上取得的羊毛。",
+    "icon": "res://assets/animals/v1/wool.png",
+    "world_visual": "res://assets/animals/v1/wool.png",
+    "world_size": 24,
+    "max_stack": 30,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "animal_product"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "动物养殖"
+    }
+  },
+  {
+    "item_id": "shears",
+    "name": "剪刀",
+    "category": "tool",
+    "description": "铜银矿材打造的剪刀。",
+    "icon": "res://assets/animals/v1/shears.png",
+    "world_visual": "res://assets/animals/v1/shears.png",
+    "world_size": 24,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "equipment",
+      "tool"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "工具台制作"
+    },
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "tool",
+    "capabilities": [
+      "shear"
+    ],
+    "action_id": "shear",
+    "visual_id": "tool:shears",
+    "stats": {},
+    "durability": 100
+  },
+  {
+    "item_id": "stone_furnace",
+    "name": "石制熔炉",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/stone_furnace.png",
+    "world_visual": "res://prototypes/industry-v1/final/stone_furnace.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "metal_workbench",
+    "name": "金属加工台",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/metal_workbench.png",
+    "world_visual": "res://prototypes/industry-v1/final/metal_workbench.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "copper_oven",
+    "name": "铜制烤箱",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/copper_oven.png",
+    "world_visual": "res://prototypes/industry-v1/final/copper_oven.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "copper_lamp",
+    "name": "铜制立灯",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/copper_lamp.png",
+    "world_visual": "res://prototypes/industry-v1/final/copper_lamp.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "reinforced_cabinet",
+    "name": "加固储物柜",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/reinforced_cabinet.png",
+    "world_visual": "res://prototypes/industry-v1/final/reinforced_cabinet.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "feed_trough",
+    "name": "动物饲料槽",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/feed_trough.png",
+    "world_visual": "res://prototypes/industry-v1/final/feed_trough.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "refrigerator",
+    "name": "冰箱",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/refrigerator.png",
+    "world_visual": "res://prototypes/industry-v1/final/refrigerator.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "wool_carpet",
+    "name": "羊毛地毯",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/wool_carpet.png",
+    "world_visual": "res://prototypes/industry-v1/final/wool_carpet.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "copper_ingot",
+    "name": "铜锭",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/copper_ingot.png",
+    "world_visual": "res://prototypes/industry-v1/final/copper_ingot.png",
+    "max_stack": 99,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "metal"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {},
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "silver_ingot",
+    "name": "银锭",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/silver_ingot.png",
+    "world_visual": "res://prototypes/industry-v1/final/silver_ingot.png",
+    "max_stack": 99,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "metal"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {},
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "gold_ingot",
+    "name": "金锭",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/gold_ingot.png",
+    "world_visual": "res://prototypes/industry-v1/final/gold_ingot.png",
+    "max_stack": 99,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "metal"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {},
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "copper_plate",
+    "name": "铜板",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/copper_plate.png",
+    "world_visual": "res://prototypes/industry-v1/final/copper_plate.png",
+    "max_stack": 99,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "metal"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {},
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "copper_parts",
+    "name": "铜制零件",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/copper_parts.png",
+    "world_visual": "res://prototypes/industry-v1/final/copper_parts.png",
+    "max_stack": 99,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "metal"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {},
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "metal_connector",
+    "name": "金属连接件",
+    "category": "material",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/metal_connector.png",
+    "world_visual": "res://prototypes/industry-v1/final/metal_connector.png",
+    "max_stack": 99,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "metal"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {},
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "copper_axe",
+    "name": "铜斧",
+    "category": "tool",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/copper_axe.png",
+    "world_visual": "res://prototypes/industry-v1/final/copper_axe.png",
+    "world_size": 24,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "equipment",
+      "tool"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作 / F6 调试物品库"
+    },
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "tool",
+    "capabilities": [
+      "chop"
+    ],
+    "action_id": "chop",
+    "visual_id": "tool:copper_axe",
+    "stats": {
+      "labor_speed": 1.35
+    },
+    "durability": 250,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "copper_pickaxe",
+    "name": "铜镐",
+    "category": "tool",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/copper_pickaxe.png",
+    "world_visual": "res://prototypes/industry-v1/final/copper_pickaxe.png",
+    "world_size": 24,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "equipment",
+      "tool"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作 / F6 调试物品库"
+    },
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "tool",
+    "capabilities": [
+      "mine"
+    ],
+    "action_id": "mine",
+    "visual_id": "tool:copper_pickaxe",
+    "stats": {
+      "labor_speed": 1.35
+    },
+    "durability": 250,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "copper_shovel",
+    "name": "铜铲",
+    "category": "tool",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/copper_shovel.png",
+    "world_visual": "res://prototypes/industry-v1/final/copper_shovel.png",
+    "world_size": 24,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "equipment",
+      "tool"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作 / F6 调试物品库"
+    },
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "tool",
+    "capabilities": [
+      "dig"
+    ],
+    "action_id": "dig",
+    "visual_id": "tool:copper_shovel",
+    "stats": {
+      "labor_speed": 1.35
+    },
+    "durability": 250,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "copper_hammer",
+    "name": "铜锤",
+    "category": "tool",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/copper_hammer.png",
+    "world_visual": "res://prototypes/industry-v1/final/copper_hammer.png",
+    "world_size": 24,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "equipment",
+      "tool"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作 / F6 调试物品库"
+    },
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "tool",
+    "capabilities": [
+      "demolish"
+    ],
+    "action_id": "demolish",
+    "visual_id": "tool:copper_hammer",
+    "stats": {
+      "labor_speed": 1.35
+    },
+    "durability": 250,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "silver_lantern",
+    "name": "银质反光提灯",
+    "category": "utility",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/silver_lantern.png",
+    "world_visual": "res://prototypes/industry-v1/final/silver_lantern.png",
+    "world_size": 24,
+    "max_stack": 1,
+    "usable": true,
+    "use_action": "light",
+    "consumable": false,
+    "tags": [
+      "exploration",
+      "lighting"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作"
+    },
+    "effects": {},
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "tool",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "tool:silver_lantern",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true,
+    "lamp_lifetime": 3600.0,
+    "light_radius": 390.0,
+    "expire_remove": true
+  },
+  {
+    "item_id": "fishing_rod",
+    "name": "钓鱼竿",
+    "category": "tool",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/fishing_rod.png",
+    "world_visual": "res://prototypes/industry-v1/final/fishing_rod.png",
+    "world_size": 24,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "equipment",
+      "tool"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作 / F6 调试物品库"
+    },
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "tool",
+    "capabilities": [
+      "fishing_ready"
+    ],
+    "action_id": "",
+    "visual_id": "tool:fishing_rod",
+    "stats": {},
+    "durability": 150,
+    "industry_candidate": true
+  },
+  {
+    "item_id": "egg_vegetable_bake",
+    "name": "蛋蔬焗盘",
+    "category": "food",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/egg_vegetable_bake.png",
+    "world_visual": "res://prototypes/industry-v1/final/egg_vegetable_bake.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 40
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
+  },
+  {
+    "item_id": "small_hodgepodge",
+    "name": "小杂烩",
+    "category": "food",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/small_hodgepodge.png",
+    "world_visual": "res://prototypes/industry-v1/final/small_hodgepodge.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 6
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
+  },
+  {
+    "item_id": "large_hodgepodge",
+    "name": "大杂烩",
+    "category": "food",
+    "description": "",
+    "icon": "res://prototypes/industry-v1/final/large_hodgepodge.png",
+    "world_visual": "res://prototypes/industry-v1/final/large_hodgepodge.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 12
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry_candidate": true,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
   }
 ]

@@ -1,0 +1,386 @@
+extends Node
+## All timers, spawn tombstones and births share ItemService's atomic snapshot.
+const Actor=preload("res://scripts/animal_actor.gd")
+var service: Node
+var rules: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/animals.json"))
+var states: Dictionary={}
+var generated: Dictionary={}
+var visuals: Dictionary={}
+var serial := 0
+var clock := 0.0
+var sync_clock := 0.0
+var busy := false
+var spawning := {"initialized":false,"sequence":0,"next_at":0.0}
+
+func serialize() -> Dictionary:
+ return {"version":1,"clock":clock,"serial":serial,"generated":generated.duplicate(),"objects":states.duplicate(true),"spawning":spawning.duplicate()}
+
+func valid(data: Variant) -> bool:
+ if not data is Dictionary or data.get("version")!=1 or not data.get("objects") is Dictionary or not data.get("generated") is Dictionary: return false
+ if data.has("spawning"):
+  var sp=data.spawning
+  if not sp is Dictionary or not sp.get("initialized") is bool:return false
+  if not number(sp.get("sequence")) or sp.sequence<0 or sp.sequence!=floor(sp.sequence):return false
+  if not number(sp.get("next_at")) or sp.next_at<0:return false
+ for key in ["clock","serial"]:
+  if not number(data.get(key)) or data[key]<0: return false
+ if data.serial!=floor(data.serial): return false
+ for key in data.generated:
+  if not key is String or data.generated[key]!=true: return false
+ for id in data.objects:
+  var r=data.objects[id]
+  if not (id is String or id is StringName) or id.is_empty() or not r is Dictionary or r.get("species") not in ["chicken","sheep"]: return false
+  if r.get("mode") not in ["stay","follow"] or not r.get("partner") is String: return false
+  if id.begins_with("born:") and (not id.trim_prefix("born:").is_valid_int() or int(id.trim_prefix("born:"))>data.serial):return false
+  for key in ["tamed","wool","departed"]:
+   if not r.get(key) is bool: return false
+  for key in ["x","y","home_x","home_y","trust","age","fed_until","feed_at","product","cooldown","pair","wild_age","escape_angle","births","eggs"]:
+   if not number(r.get(key)): return false
+  for key in ["trust","age","product","cooldown","pair","wild_age","births","eggs"]:
+   if r[key]<0: return false
+  if not number(r.get("move_minutes",0)) or r.get("move_minutes",0)<0 or r.get("move_minutes",0)>10:return false
+  if r.trust!=floor(r.trust) or r.trust>rules[r.species].trust_feeds or r.eggs!=floor(r.eggs) or r.births!=floor(r.births): return false
+  if r.tamed!=(r.trust>=rules[r.species].trust_feeds) or r.tamed and r.departed: return false
+  if r.species=="chicken" and (r.product>rules.egg_minutes or r.wool) or r.species=="sheep" and (r.product>rules.wool_minutes or r.eggs!=0): return false
+ return true
+
+func number(v: Variant) -> bool:
+ return (v is int or v is float) and is_finite(float(v))
+
+func restore(data: Dictionary) -> void:
+ for v in visuals.values(): v.queue_free()
+ visuals.clear();states=data.objects.duplicate(true);generated=data.generated.duplicate();clock=float(data.clock);serial=int(data.serial)
+ if data.has("spawning"):spawning=data.spawning.duplicate()
+ else:
+  var legacy=not generated.is_empty() or not states.is_empty()
+  spawning={"initialized":legacy,"sequence":0,"next_at":clock+float(rules.spawn_interval)}
+  # Only surplus untamed natural animals are removed; player-owned animals remain.
+  var wild:Array[String]=[]
+  for id in states:
+   if str(id).begins_with("wild:") and not states[id].tamed and not states[id].departed:wild.append(str(id))
+  wild.sort()
+  for i in range(int(rules.initial_count),wild.size()):states.erase(wild[i])
+  service.dirty=true
+
+func make_row(species: String, at: Vector2, tame: bool=false, baby: bool=false) -> Dictionary:
+ return {"species":species,"x":at.x,"y":at.y,"home_x":at.x,"home_y":at.y,"tamed":tame,"trust":int(rules[species].trust_feeds) if tame else 0,"mode":"stay","fed_until":clock+float(rules.feed_minutes) if tame else 0.0,"feed_at":-100000.0,"age":0.0 if baby else float(rules.adult_growth),"product":0.0,"eggs":0,"wool":species=="sheep" and not baby,"cooldown":0.0,"pair":0.0,"partner":"","births":0,"wild_age":0.0,"move_minutes":0.0,"escape_angle":fposmod(at.x*.117+at.y*.031,TAU),"departed":false}
+
+func stage(r: Dictionary) -> int:
+ return 2 if r.age>=rules.adult_growth else 1 if r.age>=rules.half_growth else 0
+
+func good(r: Dictionary) -> bool:
+ return r.tamed and r.fed_until>clock
+
+func point(r: Dictionary) -> Vector2: return Vector2(r.x,r.y)
+
+func clear_at(at: Vector2, radius: float=12.0, except: RID=RID()) -> bool:
+ if not service.ground_clear(at,radius,service.nearby_props(at),false): return false
+ if service.world.generator.sample(at).z>.08: return false
+ # Unloaded buildings still prevent births and initial spawn inside furniture.
+ for b in service.builds.states.values():
+  if b.layer in ["ground","overlay"]: continue
+  var poly=barrier_polygon(b)
+  if Geometry2D.is_point_in_polygon(at,poly):return false
+  for i in poly.size():
+   if at.distance_to(Geometry2D.get_closest_point_to_segment(at,poly[i],poly[(i+1)%poly.size()]))<radius:return false
+ if not service.world.stream.loaded.has(service.world.stream.chunk_at(at)): return true
+ var shape=CircleShape2D.new();shape.radius=radius
+ var q=PhysicsShapeQueryParameters2D.new();q.shape=shape;q.transform=Transform2D(0,at);q.collision_mask=1
+ if except.is_valid():q.exclude=[except]
+ return service.world.get_world_2d().direct_space_state.intersect_shape(q,1).is_empty()
+
+func seed_chunk(_coord: Vector2i) -> void:
+ # Kept as the streaming entry point; chunks never own a spawn allowance.
+ ensure_population()
+
+func ensure_population() -> void:
+ if spawning.initialized or not service.writable:return
+ spawning.initialized=true
+ for i in int(rules.initial_count):spawn_one()
+ spawning.next_at=clock+float(rules.spawn_interval)
+ service.dirty=true
+
+func spawn_one() -> bool:
+ var gen=service.world.generator
+ spawning.sequence=int(spawning.sequence)+1
+ var seq:int=spawning.sequence
+ var species="chicken" if seq%2==1 else "sheep"
+ var id="wild:global:%d"%seq
+ while states.has(id):
+  seq+=1;spawning.sequence=seq;id="wild:global:%d"%seq
+ for attempt in 2048:
+  var at=Vector2(gen.random_at(seq,attempt,9700),gen.random_at(seq,attempt,9701))*gen.extent
+  var bio:String=gen.biome(at)
+  if species=="sheep" and bio!="草原":continue
+  if species=="chicken" and bio!="草原" and not (bio=="森林" and gen.sample(at).x<.68):continue
+  if gen.rocky_weight(at)>.25:continue
+  var occupied=false
+  for r in states.values():
+   if not r.departed and point(r).distance_to(at)<80:occupied=true;break
+  if occupied or not clear_at(at):continue
+  var row=make_row(species,at);row.escape_angle=gen.random_at(seq,attempt,9800)*TAU
+  states[id]=row
+  return true
+ return false
+
+func debug_spawn_near() -> bool:
+ if not OS.has_feature("debug") or not service.writable or busy:return false
+ var player_at:Vector2=service.world.player.position
+ var seq=1
+ while states.has("debug:animal:%d"%seq):seq+=1
+ var id="debug:animal:%d"%seq
+ var species="chicken" if seq%2==1 else "sheep"
+ for n in 32:
+  var at=player_at+Vector2.from_angle(n*TAU/32)*float(56+(n%4)*24)
+  if not service.world.stream.has_ground(at) or not clear_at(at,14) or not nearby_path(player_at,at):continue
+  var occupied=false
+  for r in states.values():
+   if not r.departed and point(r).distance_to(at)<32:occupied=true;break
+  if occupied:continue
+  states[id]=make_row(species,at)
+  if not service.save_state():
+   states.erase(id);service.notice.emit("动物生成未保存，请重试")
+   return false
+  service.dirty=true;sync_visuals()
+  service.notice.emit("附近生成："+("鸡" if species=="chicken" else "羊")+" ×1（调试）")
+  return true
+ service.notice.emit("附近没有可生成动物的安全空地")
+ return false
+
+func _physics_process(delta: float) -> void:
+ if service==null or not service.world.started or not service.writable:return
+ sync_clock+=delta
+ if sync_clock<.5:return
+ sync_clock=0.0
+ ensure_population()
+ sync_visuals()
+
+func sync_visuals() -> void:
+ var p: Vector2=service.world.player.position
+ for id in visuals.keys():
+  if not states.has(id) or states[id].departed or point(states[id]).distance_to(p)>1500 or not service.world.stream.loaded.has(service.world.stream.chunk_at(point(states[id]))):
+   visuals[id].queue_free();visuals.erase(id)
+ for id in states:
+  var r: Dictionary=states[id]
+  if r.departed or visuals.has(id) or point(r).distance_to(p)>1350 or not service.world.stream.loaded.has(service.world.stream.chunk_at(point(r))):continue
+  var a=Actor.new();a.manager=self;a.animal_id=id;a.position=point(r);visuals[id]=a;service.world.object_root.add_child(a)
+
+func advance(minutes: float) -> void:
+ if minutes<=0 or not service.writable:return
+ # Bounded simulation steps also cover sleep/large test steps without skipping feed expiry.
+ var remaining=minutes
+ while remaining>0:
+  var step=minf(remaining,10.0);tick(step);remaining-=step
+ service.dirty=true
+
+func tick(minutes: float) -> void:
+ var old_clock=clock;clock+=minutes
+ for id in states.keys():
+  var r: Dictionary=states[id]
+  if r.departed:continue
+  var old_stage=stage(r);r.age=minf(float(rules.adult_growth),r.age+minutes)
+  r.cooldown=maxf(0,r.cooldown-minutes)
+  if not r.tamed or r.mode=="stay":
+   r.wild_age+=minutes
+   if r.wild_age>=rules.wild_leave_minutes and not visuals.has(id):
+    r.move_minutes=float(r.get("move_minutes",0))+minutes
+    if r.move_minutes>=10:
+     migrate_remote(r,r.move_minutes)
+     r.move_minutes=0.0
+  else:r.wild_age=0.0
+  if stage(r)!=2 or old_stage!=2:continue
+  var healthy=minf(minutes,maxf(0,r.fed_until-old_clock)) if r.tamed else 0.0
+  if healthy<=0:continue
+  if r.species=="chicken":
+   r.product=minf(float(rules.egg_minutes),r.product+healthy)
+   if r.product>=rules.egg_minutes and egg_count(id)<rules.egg_cap:
+    var at=find_near(point(r),18,55)
+    if at!=Vector2.INF:
+     r.eggs+=1;r.product=0.0
+     var egg_id="animal:%s:egg:%d"%[id,int(r.eggs)]
+     # Counter is monotonic; live cap is counted from loose, not lifetime count.
+     while service.consumed.has(egg_id) or service.loose.has(egg_id):
+      r.eggs+=1;egg_id="animal:%s:egg:%d"%[id,int(r.eggs)]
+     service.loose[egg_id]={"id":egg_id,"item_id":"chicken_egg","count":1,"x":at.x,"y":at.y,"origin":"animal:"+id,"mode":"pickup"}
+     if service.world.stream.loaded.has(service.world.stream.chunk_at(at)):service.world.stream.create_item_drop(service.loose[egg_id])
+  else:
+   r.product=minf(float(rules.wool_minutes),r.product+healthy)
+   if r.product>=rules.wool_minutes:r.wool=true
+ breed(minutes)
+ if spawning.initialized and clock>=float(spawning.next_at):
+  spawn_one()
+  # Each due interval admits at most one, even if no safe location exists.
+  spawning.next_at+=float(rules.spawn_interval)
+
+func migrate_remote(r: Dictionary, minutes: float) -> void:
+ if r.tamed and point(r).distance_to(Vector2(r.home_x,r.home_y))>620:return
+ # Low-frequency bounded sweeps retain the same tree/building/gate barriers offscreen.
+ var distance=float(rules[r.species].speed)*1.35*minutes*service.world.environment_view.simulation.day_length_minutes*60.0/1440.0
+ while distance>0 and not r.departed:
+  var step=minf(12.0,distance)
+  var at=point(r);var next=at+Vector2.from_angle(r.escape_angle)*step
+  if clear_at(next,12) and nearby_path(at,next):
+   r.x=next.x;r.y=next.y
+   if not r.tamed and next.distance_to(Vector2(r.home_x,r.home_y))>620:r.departed=true
+  else:
+   r.escape_angle=fposmod(r.escape_angle+.9,TAU)
+  distance-=step
+  if r.tamed and point(r).distance_to(Vector2(r.home_x,r.home_y))>620:break
+
+func egg_count(id: String) -> int:
+ var count=0
+ for row in service.loose.values():
+  if row.get("origin","")=="animal:"+id:count+=int(row.count)
+ return count
+
+func find_near(at: Vector2, low: float, high: float) -> Vector2:
+ for n in 16:
+  var p=at+Vector2.from_angle(n*TAU/16)*lerpf(low,high,float(n%4)/3)
+  if clear_at(p,8) and nearby_path(at,p):return p
+ return Vector2.INF
+
+func breed(minutes: float) -> void:
+ var ids: Array[String]=[]
+ for key in states:ids.append(str(key))
+ ids.sort()
+ var paired={}
+ for id in ids:
+  var a: Dictionary=states[id]
+  if paired.has(id):continue
+  if not eligible(a):
+   a.pair=0.0
+   a.partner=""
+   continue
+  var found=false
+  for other in ids:
+   if str(other)<=str(id) or paired.has(other):continue
+   var b: Dictionary=states[other]
+   if b.species!=a.species or not eligible(b) or point(a).distance_to(point(b))>rules.breed_radius:continue
+   if not nearby_path(point(a),point(b)):continue
+   var population=0
+   for c in states.values():
+    if not c.departed and c.species==a.species and point(c).distance_to(point(a))<rules.population_radius:population+=1
+   if population>=rules.population_cap:continue
+   paired[id]=true;paired[other]=true;found=true
+   if str(a.partner)!=str(other) or str(b.partner)!=str(id):
+    a.pair=0.0
+    b.pair=0.0
+   a.partner=str(other);b.partner=str(id)
+   a.pair+=minutes;b.pair=a.pair
+   if a.pair>=rules.pair_minutes:
+    var at=find_near((point(a)+point(b))*.5,22,65)
+    if at!=Vector2.INF and nearby_path(point(a),at):
+     serial+=1;var baby_id="born:%d"%serial
+     states[baby_id]=make_row(a.species,at,true,true)
+     a.births+=1;b.births+=1;a.pair=0.0;b.pair=0.0
+     a.cooldown=rules.breed_cooldown;b.cooldown=rules.breed_cooldown
+   break
+  if not found:
+   a.pair=0.0
+   a.partner=""
+
+func barrier_polygon(b: Dictionary) -> PackedVector2Array:
+ var p=Vector2(b.x,b.y)
+ if service.builds.definitions[b.kind].get("door",false):
+  var grid=preload("res://scripts/camp_grid.gd")
+  var hinge=grid.gate_hinge(b)
+  var angle=grid.gate_base(b)+(PI*.5*int(b.get("swing",1 if b.inward else -1)) if b.open else 0.0)
+  var tip=hinge+Vector2(cos(angle)*96,sin(angle)*64)
+  var normal=(tip-hinge).normalized().orthogonal()*4
+  return PackedVector2Array([p+hinge-normal,p+tip-normal,p+tip+normal,p+hinge+normal])
+ var rect=Rect2(-Vector2(8,64)*.5,Vector2(8,64)) if b.layer=="edge" and b.vertical else Rect2(-Vector2(96,8)*.5,Vector2(96,8)) if b.layer=="edge" else service.builds.footprint_rect(b)
+ return PackedVector2Array([p+rect.position,p+Vector2(rect.end.x,rect.position.y),p+rect.end,p+Vector2(rect.position.x,rect.end.y)])
+
+func nearby_path(a: Vector2, b: Vector2) -> bool:
+ # Same persisted geometry as real gates, including their current swing; works unloaded.
+ for obstacle in service.builds.states.values():
+  if obstacle.layer in ["ground","overlay"]:continue
+  var poly=barrier_polygon(obstacle)
+  if Geometry2D.is_point_in_polygon(a,poly) or Geometry2D.is_point_in_polygon(b,poly):return false
+  for n in poly.size():
+   if Geometry2D.segment_intersects_segment(a,b,poly[n],poly[(n+1)%poly.size()])!=null:return false
+ for i in range(1,6):
+  var at=a.lerp(b,i/6.0)
+  if not service.ground_clear(at,8,service.nearby_props(at),false):return false
+ return true
+
+func eligible(r: Dictionary) -> bool:
+ return not r.departed and good(r) and stage(r)==2 and r.cooldown<=0
+
+func action(id: String) -> String:
+ if not states.has(id):return ""
+ var r: Dictionary=states[id]
+ if r.species=="sheep" and service.inventory.has_capability("shear"):return "shear"
+ return "animal"
+
+func caption(id: String) -> String:
+ if not states.has(id):return ""
+ return "E 剪毛" if action(id)=="shear" else ""
+
+func interact(id: String, target: Node2D) -> bool:
+ if busy or not service.writable or service.body.sleep_active() or service.body.down or not states.has(id):return false
+ if not preload("res://scripts/world_interaction.gd").in_reach(service.world.stream,service.world.player.position,target):return false
+ var r: Dictionary=states[id];var before=r.duplicate(true)
+ var inv: ItemInventory=service.inventory
+ var slots=inv.slots.duplicate(true);var equip=inv.equipment.duplicate(true);var links=inv.hotbar_equipment.duplicate(true)
+ var reward=false;var message=""
+ if action(id)=="shear":
+  if not r.tamed or stage(r)!=2 or not r.wool or not good(r) or r.product<rules.wool_minutes:
+   service.notice.emit("现在还不能剪毛");return false
+  if not service.body.can_labor("shear"):return false
+  var staged=ItemInventory.new(service.database);staged.slots=slots.duplicate(true)
+  if staged.add("wool",2)>0:service.notice.emit("背包空间不足");return false
+  inv.slots=staged.slots
+  if not inv.wear_held(str(inv.equipment.get("main_hand",{}).get("instance_id","")),"shear"):inv.slots=slots;return false
+  r.wool=false;r.product=0.0;reward=true;message="获得羊毛 ×2"
+ elif r.tamed:
+  r.mode="stay" if r.mode=="follow" else "follow";r.wild_age=0.0;r.home_x=r.x;r.home_y=r.y
+  message="留在这里" if r.mode=="stay" else "跟随你"
+ else:return false
+ busy=true;service.dirty=true
+ if not service.save_state():
+  states[id]=before;inv.slots=slots;inv.equipment=equip;inv.hotbar_equipment=links;busy=false
+  service.notice.emit("保存失败，养殖操作已回滚");return false
+ busy=false;inv.changed.emit();target.feedback=1.0
+ service.notice.emit(message)
+ if reward:service.item_obtained.emit("wool",2)
+ return true
+
+func target_at(at: Vector2) -> String:
+ var chosen="";var best_y=-INF
+ for id in visuals:
+  var actor=visuals[id]
+  if not is_instance_valid(actor) or not actor.visible or not states.has(id) or states[id].departed:continue
+  for bone in actor.bones.values():
+   var sprite:Sprite2D=bone.get_child(0)
+   if sprite.get_rect().has_point(sprite.to_local(at)) and (actor.position.y>best_y or actor.position.y==best_y and str(id)<chosen):
+    chosen=str(id);best_y=actor.position.y
+ return chosen
+
+func feed_check(id: String, slot: int, expected: Dictionary) -> String:
+ if busy:return "正在处理"
+ if not service.writable:return "存档受保护，不能投喂"
+ if service.body.sleep_active() or service.body.down:return "现在无法投喂"
+ if not states.has(id) or not visuals.has(id) or not is_instance_valid(visuals[id]) or states[id].departed:return "动物已经离开"
+ if slot<0 or slot>=40 or expected.is_empty() or service.inventory.slots[slot]!=expected:return "物品已变化，请重新拖动"
+ var r:Dictionary=states[id]
+ if expected.get("item_id","") not in rules[r.species].foods:return ("羊" if r.species=="sheep" else "鸡")+"不喜欢你的食物"
+ if not preload("res://scripts/world_interaction.gd").in_reach(service.world.stream,service.world.player.position,visuals[id]):return "请靠近动物，并确认中间没有遮挡"
+ if clock-r.feed_at+0.000001<rules.feed_cooldown:return "它刚吃过，过一会儿再喂"
+ return ""
+
+func feed(id: String, slot: int, expected: Dictionary) -> String:
+ var reason=feed_check(id,slot,expected)
+ if not reason.is_empty():return reason
+ var r:Dictionary=states[id];var before=r.duplicate(true);var slots=service.inventory.slots.duplicate(true);var was_dirty=service.dirty
+ service.inventory.slots[slot].count-=1
+ if service.inventory.slots[slot].count==0:service.inventory.slots[slot]={}
+ r.feed_at=clock;r.wild_age=0.0;r.move_minutes=0.0;r.home_x=r.x;r.home_y=r.y;r.fed_until=clock+float(rules.feed_minutes)
+ r.trust=mini(int(rules[r.species].trust_feeds),int(r.trust)+1);r.tamed=r.trust>=rules[r.species].trust_feeds
+ busy=true;service.dirty=true
+ if not service.save_state():
+  states[id]=before;service.inventory.slots=slots;service.dirty=was_dirty;busy=false
+  return "保存失败，投喂已回滚"
+ busy=false;service.inventory.changed.emit();visuals[id].feedback=1.0
+ if r.tamed and not before.tamed:service.notice.emit("它信任你了")
+ return ""

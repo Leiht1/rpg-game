@@ -1,3 +1,7 @@
+## 2026-10-19 · 食物与烹饪扩展 V2（当前）
+
+生长时间按data/planting.json调整为胡萝卜2日、土豆4日、卷心菜6日，第一阶段占总时长1/3，成熟为第三静态阶段。原自然推进、留种、残根、成熟不枯萎、无离线生长保持。原items快照新增可选planting_cycle_version=2；旧档缺省1时按旧周期360/480/600分钟等比例换算一次，保留阶段、成熟与收获状态。新快照保存版本2，重载不重复换算；非整数/未知版本保护源档。路径及建筑版本不改。证据见[本轮报告](reports/food-v2/REPORT.md)。
+
 # 种植系统 V1
 
 2026-10-18。用户明确“可以 直接接入游戏吧”，本批种植 V1 已正式接入，`Start-Playtest.cmd` 默认生效，无种植预览开关。`Start-Planting-Preview.cmd` 仅保留为提供临时种子/工具、独立同 Seed 的隔离试玩，不承担功能开放。当前状态见 [PROJECT_STATUS.md](PROJECT_STATUS.md)，正式路径实测见 [报告](reports/planting-formal-v1/REPORT.md)，原开发记录见 [V1 报告](reports/planting-v1/REPORT.md)。

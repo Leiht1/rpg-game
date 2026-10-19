@@ -1,0 +1,224 @@
+{
+  "checks": [
+    {
+      "name": "stream ready seed 271828",
+      "pass": true
+    },
+    {
+      "name": "M opens live map 271828",
+      "pass": true
+    },
+    {
+      "name": "M map samples same live generator 271828",
+      "pass": true
+    },
+    {
+      "name": "M map zoom/pan clamp 271828",
+      "pass": true
+    },
+    {
+      "name": "M closes and releases movement 271828",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 271828",
+      "pass": true
+    },
+    {
+      "name": "normal walking covers eight screen widths 271828",
+      "pass": true
+    },
+    {
+      "name": "walk stays in same major ecology 271828",
+      "pass": true
+    },
+    {
+      "name": "no unloaded ground while walking 271828",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 271828",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 271828",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 271828",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 271828",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 81273",
+      "pass": true
+    },
+    {
+      "name": "M opens live map 81273",
+      "pass": true
+    },
+    {
+      "name": "M map samples same live generator 81273",
+      "pass": true
+    },
+    {
+      "name": "M map zoom/pan clamp 81273",
+      "pass": true
+    },
+    {
+      "name": "M closes and releases movement 81273",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 81273",
+      "pass": true
+    },
+    {
+      "name": "normal walking covers eight screen widths 81273",
+      "pass": true
+    },
+    {
+      "name": "walk stays in same major ecology 81273",
+      "pass": true
+    },
+    {
+      "name": "no unloaded ground while walking 81273",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 81273",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 81273",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 81273",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 81273",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 902106",
+      "pass": true
+    },
+    {
+      "name": "M opens live map 902106",
+      "pass": true
+    },
+    {
+      "name": "M map samples same live generator 902106",
+      "pass": true
+    },
+    {
+      "name": "M map zoom/pan clamp 902106",
+      "pass": true
+    },
+    {
+      "name": "M closes and releases movement 902106",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 902106",
+      "pass": true
+    },
+    {
+      "name": "normal walking covers eight screen widths 902106",
+      "pass": true
+    },
+    {
+      "name": "walk stays in same major ecology 902106",
+      "pass": true
+    },
+    {
+      "name": "no unloaded ground while walking 902106",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 902106",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 902106",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 902106",
+      "pass": true
+    },
+    {
+      "name": "stream ready seed 902106",
+      "pass": true
+    },
+    {
+      "name": "previous world identity keeps seed and size across version upgrade",
+      "pass": true
+    },
+    {
+      "name": "new generator version stored with identity",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "note": "normal WALK_SPEED 200, actual physics and collisions; no accelerated travel. Stream timing samples only, not a presentation/frame-rate guarantee.",
+  "seeds": [
+    {
+      "biome_frames": {
+        "草原": 3071
+      },
+      "last_build_ms": 78.496,
+      "max_install_ms": 1.685,
+      "missing_viewport_frames": 0,
+      "seed": 271828,
+      "sparse_dense_field": [
+        0.0,
+        1.0
+      ],
+      "walk_distance": 10235.33203125,
+      "walk_physics_frames": 3071,
+      "walk_seconds_at_60hz": 51.1833333333333,
+      "wall_seconds": 55.122
+    },
+    {
+      "biome_frames": {
+        "草原": 3072
+      },
+      "last_build_ms": 68.03,
+      "max_install_ms": 1.614,
+      "missing_viewport_frames": 0,
+      "seed": 81273,
+      "sparse_dense_field": [
+        0.0,
+        1.0
+      ],
+      "walk_distance": 10236.5458984375,
+      "walk_physics_frames": 3072,
+      "walk_seconds_at_60hz": 51.2,
+      "wall_seconds": 55.251
+    },
+    {
+      "biome_frames": {
+        "草原": 3072
+      },
+      "last_build_ms": 65.714,
+      "max_install_ms": 2.211,
+      "missing_viewport_frames": 0,
+      "seed": 902106,
+      "sparse_dense_field": [
+        0.0,
+        1.0
+      ],
+      "walk_distance": 10236.4384765625,
+      "walk_physics_frames": 3072,
+      "walk_seconds_at_60hz": 51.2,
+      "wall_seconds": 55.53
+    }
+  ]
+}

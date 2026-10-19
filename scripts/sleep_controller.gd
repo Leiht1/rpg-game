@@ -86,6 +86,7 @@ func start(id: String, option: String="maximum", forced: bool=false) -> String:
 	if not service.save_state():
 		service.body.restore(old);service.builds.states=previous;return "保存失败，未开始睡眠"
 	w.item_ui.close_panels();w.camp_ui.close_panel()
+	if is_instance_valid(service.industry_ui):service.industry_ui.close_panel()
 	if w.map_view.visible: w.map_view.close_map()
 	if is_instance_valid(service.storage_ui): service.storage_ui.close_panel()
 	p.cancel_action();p.moving=false;p.running=false;p.velocity=Vector2.ZERO

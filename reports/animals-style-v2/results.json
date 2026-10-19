@@ -1,0 +1,297 @@
+{
+	"capture_fps": 30,
+	"checks": [
+		{
+			"name": "isolated fixture never writes player save",
+			"pass": true
+		},
+		{
+			"name": "project default native window 1280x720",
+			"pass": true
+		},
+		{
+			"name": "chicken feet narrowed 18 to 10 world units",
+			"pass": true
+		},
+		{
+			"name": "chicken feet shifted right together by four",
+			"pass": true
+		},
+		{
+			"name": "sheep head enlarged within 38x35 aspect preserving fit",
+			"pass": true
+		},
+		{
+			"name": "sheep leg narrowed without shortening",
+			"pass": true
+		},
+		{
+			"name": "wool and bare sheep share head pivot",
+			"pass": true
+		},
+		{
+			"name": "identical wool/bare attachment geometry Head",
+			"pass": true
+		},
+		{
+			"name": "identical wool/bare attachment geometry Leg0",
+			"pass": true
+		},
+		{
+			"name": "identical wool/bare attachment geometry Leg1",
+			"pass": true
+		},
+		{
+			"name": "identical wool/bare attachment geometry Leg2",
+			"pass": true
+		},
+		{
+			"name": "identical wool/bare attachment geometry Leg3",
+			"pass": true
+		},
+		{
+			"name": "existing skeletal structure 0",
+			"pass": true
+		},
+		{
+			"name": "same assets growth stage 0/0",
+			"pass": true
+		},
+		{
+			"name": "same assets growth stage 0/1",
+			"pass": true
+		},
+		{
+			"name": "same assets growth stage 0/2",
+			"pass": true
+		},
+		{
+			"name": "existing skeletal structure 1",
+			"pass": true
+		},
+		{
+			"name": "same assets growth stage 1/0",
+			"pass": true
+		},
+		{
+			"name": "same assets growth stage 1/1",
+			"pass": true
+		},
+		{
+			"name": "same assets growth stage 1/2",
+			"pass": true
+		},
+		{
+			"name": "existing skeletal structure 2",
+			"pass": true
+		},
+		{
+			"name": "same assets growth stage 2/0",
+			"pass": true
+		},
+		{
+			"name": "same assets growth stage 2/1",
+			"pass": true
+		},
+		{
+			"name": "same assets growth stage 2/2",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 0/0",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 0/0",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 0/0",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 0/1",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 0/1",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 0/1",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 0/2",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 0/2",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 0/2",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 1/0",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 1/0",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 1/0",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 1/1",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 1/1",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 1/1",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 1/2",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 1/2",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 1/2",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 2/0",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 2/0",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 2/0",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 2/1",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 2/1",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 2/1",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 2/2",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 2/2",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 2/2",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 3/0",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 3/0",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 3/0",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 3/1",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 3/1",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 3/1",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 3/2",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 3/2",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 3/2",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 4/0",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 4/0",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 4/0",
+			"pass": true
+		},
+		{
+			"name": "inherited follow turns left with mirrored joints 0",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 4/1",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 4/1",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 4/1",
+			"pass": true
+		},
+		{
+			"name": "inherited follow turns left with mirrored joints 1",
+			"pass": true
+		},
+		{
+			"name": "finite inherited head / forage motion 4/2",
+			"pass": true
+		},
+		{
+			"name": "candidate texture retained through action 4/2",
+			"pass": true
+		},
+		{
+			"name": "stable body bone scale 4/2",
+			"pass": true
+		},
+		{
+			"name": "inherited follow turns left with mirrored joints 2",
+			"pass": true
+		}
+	],
+	"count": 72,
+	"failed": 0,
+	"godot": "4.7.2-stable (official)",
+	"review_start_frame": 114
+}

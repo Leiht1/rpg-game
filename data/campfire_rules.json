@@ -41,14 +41,13 @@
         "brown_mushroom": 1
       },
       "output": "roasted_mushroom",
-      "seconds": 10.0,
-      "legacy_only": true
+      "seconds": 10.0
     },
     "herb_mushroom": {
-      "name": "香草烤蘑菇",
+      "name": "香草蘑菇",
       "materials": {
-        "brown_mushroom": 2,
-        "wildflower": 1
+        "broad_leaf": 2,
+        "brown_mushroom": 1
       },
       "output": "herb_roasted_mushroom",
       "seconds": 10.0,
@@ -76,6 +75,57 @@
       "output": "field_harvest_platter",
       "seconds": 20.0,
       "default_unlocked": false
+    },
+    "roast_potato": {
+      "name": "烤土豆",
+      "materials": {
+        "potato": 1
+      },
+      "output": "roasted_potato",
+      "seconds": 12,
+      "default_unlocked": true
+    },
+    "roast_cabbage": {
+      "name": "烤卷心菜",
+      "materials": {
+        "cabbage": 1
+      },
+      "output": "roasted_cabbage",
+      "seconds": 15,
+      "default_unlocked": true
+    },
+    "vegetable_soup": {
+      "name": "蔬菜汤",
+      "materials": {
+        "wild_carrot": 1,
+        "cabbage": 1
+      },
+      "output": "vegetable_soup",
+      "seconds": 20,
+      "default_unlocked": false
+    },
+    "stew_vegetables": {
+      "name": "炖杂蔬",
+      "materials": {
+        "wild_carrot": 1,
+        "potato": 1,
+        "cabbage": 1
+      },
+      "output": "stewed_vegetables",
+      "seconds": 30,
+      "default_unlocked": false
+    },
+    "egg_vegetable_bake": {
+      "name": "蛋蔬焗盘",
+      "materials": {
+        "potato": 1,
+        "cabbage": 1,
+        "chicken_egg": 2
+      },
+      "output": "egg_vegetable_bake",
+      "seconds": 36,
+      "default_unlocked": false,
+      "industry_candidate": true
     }
   }
 }

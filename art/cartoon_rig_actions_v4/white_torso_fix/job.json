@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "7d9f90ce6e1e2927f439ffd2cc387d2e32f3168c18999f0dad7fb7a1db98b45d",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-16T05:01:49.987Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-16T05:01:49.987Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "All-white shirt trunks; remove blue waist stripe in independent preview only",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a142ce-8c0d-7dd3-aa94-a502f9863598",
+    "source": "CODEX_HOME/generated_images/01a142ce-8c0d-7dd3-aa94-a502f9863598/exec-70855fb5-c9eb-4f33-8248-6510ae38f5f5.png",
+    "sourceSha256": "a8bfb5d763e0110697bd9382b48f5e5b5b1e42a1d8dfb6a853b3075b1cd7d48c",
+    "sourceMtime": "2026-10-16T05:00:57Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "a8bfb5d763e0110697bd9382b48f5e5b5b1e42a1d8dfb6a853b3075b1cd7d48c",
+    "bytes": 655062,
+    "format": "PNG",
+    "size": [
+      1774,
+      887
+    ]
+  }
+}

@@ -356,17 +356,20 @@ func props_for_chunk(coord: Vector2i) -> Array[Dictionary]:
 			if kind>=0:result.append({"position":point,"kind":kind,"scale":.8+random_at(x,y,5)*.35,"id":"%d:%d"%[x,y]})
 	return result
 
+func rocky_weight(_p: Vector2) -> float:
+	return 0.0
+
 func build_chunk(coord: Vector2i) -> Dictionary:
 	var begin := Time.get_ticks_usec()
 	var bytes := PackedByteArray()
 	bytes.resize((TEX_RES+6)*(TEX_RES+6)*4)
-	var environment:=Image.create(26,26,false,Image.FORMAT_RG8)
+	var environment:=Image.create(26,26,false,Image.FORMAT_RGBA8)
 	var index := 0
 	var origin := Vector2(coord) * CHUNK_PX
 	for y in 26:
 		for x in 26:
 			var env:=subenvironment(origin+Vector2(x-1,y-1)*CELL)
-			environment.set_pixel(x,y,Color(env.x,env.y,0.))
+			environment.set_pixel(x,y,Color(env.x,env.y,rocky_weight(origin+Vector2(x-1,y-1)*CELL),1.))
 	for y in range(-3,TEX_RES+3):
 		for x in range(-3,TEX_RES+3):
 			var p := origin + Vector2(x,y)*TEX_STEP

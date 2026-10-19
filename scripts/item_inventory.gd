@@ -2,6 +2,7 @@ class_name ItemInventory
 extends RefCounted
 signal changed
 signal used(item_id: String, effect: Dictionary)
+const Fresh=preload("res://scripts/food_freshness.gd")
 const SLOT_COUNT := 40
 const HOTBAR_COUNT := 8
 var database: ItemDatabase
@@ -60,9 +61,15 @@ func unequip(index: int) -> bool:
 	return false
 
 func instance(id: String) -> Dictionary:
-	return {"item_id":id,"count":1,"instance_id":str(ResourceUID.create_id()),"state":{},"durability":database.item(id).get("durability")}
+	var value := {"item_id":id,"count":1,"instance_id":str(ResourceUID.create_id()),"state":{},"durability":database.item(id).get("durability")}
+	if database.item(id).get("use_action","")=="light":value.lamp_id=value.instance_id;value.fuel=float(database.item(id).get("lamp_lifetime",1800.0))
+	return value
 
 func normalize_durability(value: Dictionary) -> bool:
+	var definition := database.item(str(value.get("item_id","")))
+	if definition.get("use_action","")=="light" and definition.get("equippable",false):
+		var fuel = value.get("fuel")
+		if str(value.get("lamp_id","")).is_empty() or not (fuel is int or fuel is float) or not is_finite(float(fuel)) or fuel<0 or fuel>float(definition.get("lamp_lifetime",1800)):return false
 	var maximum = database.item(str(value.get("item_id",""))).get("durability")
 	if maximum==null: return true
 	var current = value.get("durability")
@@ -161,6 +168,10 @@ func craft_exchange(materials: Dictionary, output_id: String, output_count: int,
 
 func add(id: String, count: int) -> int:
 	if count <= 0 or database.item(id).is_empty(): return count
+	if Fresh.cooked(database,id):
+		var remainder := add_value({"item_id":id,"count":count,"spoilage":0.0})
+		if remainder!=count:changed.emit()
+		return remainder
 	var left := count
 	var definition := database.item(id)
 	var limit := int(definition.max_stack)
@@ -169,12 +180,13 @@ func add(id: String, count: int) -> int:
 		var first := HOTBAR_COUNT if empty_pass else 0
 		for i in range(first,SLOT_COUNT):
 			var slot := slots[i]
-			if (slot.is_empty() and empty_pass) or (not empty_pass and not slot.is_empty() and slot.item_id == id):
+			if (slot.is_empty() and empty_pass) or (not empty_pass and not slot.is_empty() and slot.item_id == id and not slot.has("spoilage")):
 				var amount := mini(left,limit-int(slot.get("count",0)))
 				if amount > 0:
 					if definition.get("equippable",false): slots[i]=instance(id)
-					elif id=="field_lantern": slots[i]={"item_id":id,"count":1,"lamp_id":str(ResourceUID.create_id()),"fuel":1800.0}
+					elif database.item(id).get("use_action","")=="light": slots[i]={"item_id":id,"count":1,"lamp_id":str(ResourceUID.create_id()),"fuel":float(definition.get("lamp_lifetime",1800.0))}
 					else: slots[i] = {"item_id":id,"count":int(slot.get("count",0))+amount}
+				if Fresh.cooked(database,id): slots[i].spoilage=0.0
 				left -= amount
 				if left == 0: break
 		if left == 0: break
@@ -233,7 +245,7 @@ func move_slot(from: int, to: int) -> bool:
 			hotbar_equipment.erase(str(to));slots[to]=source;equipment[slot_key(from)]={};changed.emit();return true
 		return false
 	if source.is_empty() or not accepts(to,source) or not accepts(from,target): return false
-	if not target.is_empty() and source.item_id==target.item_id and not database.item(source.item_id).get("equippable",false):
+	if not target.is_empty() and source.item_id==target.item_id and Fresh.same(source,target):
 		var amount := mini(int(source.count),int(database.item(source.item_id).max_stack)-int(target.count))
 		if amount<=0: return false
 		target.count+=amount
@@ -247,9 +259,9 @@ func move_slot(from: int, to: int) -> bool:
 
 func use_slot(index: int) -> bool:
 	if body!=null and body.sleep_active(): return false
-	if index < 0 or index >= slots.size() or get_slot(index).is_empty(): return false
+	if index < 0 or index >= SLOT_COUNT+equipment_slots.size() or get_slot(index).is_empty(): return false
 	var id := str(get_slot(index).item_id)
-	if index<8 and database.item(id).get("equippable",false): return equip(index)
+	if index<8 and database.item(id).get("equippable",false) and not slots[index].is_empty(): return equip(index)
 	var definition := database.item(id)
 	if not definition.usable: return false
 	if definition.use_action in ["light","place_campfire","place_sleeping_bag"]:
@@ -268,7 +280,7 @@ func use_slot(index: int) -> bool:
 		return true
 	if definition.use_action != "eat": return false
 	# One extensible effect contract, without hunger/health pressure.
-	var effect: Dictionary = definition.get("effects",{}).duplicate(true)
+	var effect: Dictionary = Fresh.effects(database,get_slot(index))
 	if body!=null and not body.can_eat(effect): return false
 	if body!=null: body.eat(effect)
 	if definition.consumable:
@@ -284,7 +296,7 @@ func split_slot(index: int, count: int) -> int:
 	# New stacks go to bag storage; empty hotbar slots remain player-assigned.
 	for target in range(HOTBAR_COUNT,SLOT_COUNT):
 		if not slots[target].is_empty(): continue
-		slots[target]={"item_id":slots[index].item_id,"count":count}
+		slots[target]=slots[index].duplicate(true);slots[target].count=count
 		slots[index].count-=count
 		changed.emit()
 		return target
@@ -347,11 +359,36 @@ func restore(data: Variant) -> bool:
 			if not normalize_durability(restored): return false
 			restored.count=count
 			next.append(restored)
-		elif id=="field_lantern":
+		elif definition.get("use_action","")=="light":
 			var fuel = value.get("fuel",1800.0)
-			if not (fuel is float or fuel is int) or not is_finite(float(fuel)) or float(fuel)<0 or float(fuel)>1800: return false
+			if not (fuel is float or fuel is int) or not is_finite(float(fuel)) or float(fuel)<0 or float(fuel)>float(definition.get("lamp_lifetime",1800.0)): return false
 			next.append({"item_id":id,"count":count,"lamp_id":str(value.get("lamp_id",ResourceUID.create_id())),"fuel":float(fuel)})
-		else: next.append({"item_id":id,"count":count})
+		else:
+			var restored: Dictionary=value.duplicate(true)
+			if not Fresh.normalize(database,restored): return false
+			restored.count=count;next.append(restored)
 	slots = next
 	changed.emit()
 	return true
+
+func add_value(value: Dictionary) -> int:
+	if value.is_empty():return 0
+	var incoming := value.duplicate(true)
+	if not Fresh.normalize(database,incoming):return int(incoming.count)
+	var left := int(incoming.count)
+	var limit := int(database.item(incoming.item_id).max_stack)
+	for empty_pass in [false,true]:
+		for i in range(8 if empty_pass else 0,SLOT_COUNT):
+			var target: Dictionary=slots[i]
+			if (empty_pass and target.is_empty()) or (not empty_pass and Fresh.same(target,incoming)):
+				var amount := mini(left,limit-int(target.get("count",0)))
+				if amount<=0:continue
+				if target.is_empty():slots[i]=incoming.duplicate(true);slots[i].count=amount
+				else:slots[i].count+=amount
+				left-=amount
+				if left==0:return 0
+	return left
+
+func labor_speed() -> float:
+	var held: Dictionary=equipment.get("main_hand",{})
+	return float(database.item(str(held.get("item_id",""))).get("stats",{}).get("labor_speed",1.0))

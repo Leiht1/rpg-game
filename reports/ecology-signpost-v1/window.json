@@ -1,0 +1,232 @@
+{
+	"checks": [
+		{
+			"name": "item and building recipe validation",
+			"pass": true
+		},
+		{
+			"name": "signpost official menu cost",
+			"pass": true
+		},
+		{
+			"name": "reject invalid name \"\"",
+			"pass": true
+		},
+		{
+			"name": "reject invalid name \" \"",
+			"pass": true
+		},
+		{
+			"name": "reject invalid name \"七个字路标内容\"",
+			"pass": true
+		},
+		{
+			"name": "reject invalid name \"a\\nb\"",
+			"pass": true
+		},
+		{
+			"name": "reject invalid name \"前后空格 \"",
+			"pass": true
+		},
+		{
+			"name": "accept Unicode name 铜矿",
+			"pass": true
+		},
+		{
+			"name": "accept Unicode name 北方铜矿入口",
+			"pass": true
+		},
+		{
+			"name": "accept Unicode name ABC123",
+			"pass": true
+		},
+		{
+			"name": "accept Unicode name 路😀标",
+			"pass": true
+		},
+		{
+			"name": "find real legal placement",
+			"pass": true
+		},
+		{
+			"name": "empty name cannot place or consume",
+			"pass": true
+		},
+		{
+			"name": "legal click opens naming before commit; actor blocked",
+			"pass": true
+		},
+		{
+			"name": "native input caps at six characters",
+			"pass": true
+		},
+		{
+			"name": "cancel naming has no object or material cost",
+			"pass": true
+		},
+		{
+			"name": "confirmation commits one sign and exact cost",
+			"pass": true
+		},
+		{
+			"name": "nearby hint shows saved text",
+			"pass": true
+		},
+		{
+			"name": "inspection cannot edit immutable name",
+			"pass": true
+		},
+		{
+			"name": "save rejects overlong sign name",
+			"pass": true
+		},
+		{
+			"name": "save accepts official sign state",
+			"pass": true
+		},
+		{
+			"name": "save failure rolls back name/object/materials",
+			"pass": true
+		},
+		{
+			"name": "stale inventory refused",
+			"pass": true
+		},
+		{
+			"name": "illegal placement consumes nothing",
+			"pass": true
+		},
+		{
+			"name": "unloaded chunk sign remains on map",
+			"pass": true
+		},
+		{
+			"name": "map scale retains source data 1.0",
+			"pass": true
+		},
+		{
+			"name": "map scale retains source data 4.0",
+			"pass": true
+		},
+		{
+			"name": "map scale retains source data 16.0",
+			"pass": true
+		},
+		{
+			"name": "write isolated state",
+			"pass": true
+		},
+		{
+			"name": "legacy migration retains buildings/name/inventory",
+			"pass": true
+		},
+		{
+			"name": "legacy migration retains exact depletion/progress dictionaries",
+			"pass": true
+		},
+		{
+			"name": "old partially worked mineral pinned in original ore state",
+			"pass": true
+		},
+		{
+			"name": "preserved mineral stable across reload",
+			"pass": true
+		},
+		{
+			"name": "hammer first hit accepted",
+			"pass": true
+		},
+		{
+			"name": "hammer second hit demolishes",
+			"pass": true
+		},
+		{
+			"name": "demolition removes same map source immediately",
+			"pass": true
+		},
+		{
+			"name": "demolished sign stays absent after reload",
+			"pass": true
+		},
+		{
+			"name": "rebuild after demolition",
+			"pass": true
+		},
+		{
+			"name": "continuous rocky regions seed 271828",
+			"pass": true
+		},
+		{
+			"name": "mineral candidates predominantly rocky seed 271828",
+			"pass": true
+		},
+		{
+			"name": "continuous rocky regions seed 447349832",
+			"pass": true
+		},
+		{
+			"name": "mineral candidates predominantly rocky seed 447349832",
+			"pass": true
+		},
+		{
+			"name": "continuous rocky regions seed 1671081329",
+			"pass": true
+		},
+		{
+			"name": "mineral candidates predominantly rocky seed 1671081329",
+			"pass": true
+		},
+		{
+			"name": "rare metals remain in rocky interior",
+			"pass": true
+		},
+		{
+			"name": "occasional basic minerals outside rocky areas",
+			"pass": true
+		},
+		{
+			"name": "early direct flint available outside rocky",
+			"pass": true
+		},
+		{
+			"name": "sparse wet plants along shore",
+			"pass": true
+		},
+		{
+			"name": "actual streamed rocky terrain has harvestable minerals",
+			"pass": true
+		},
+		{
+			"name": "actual rocky mine reaches original hit count and consumed state",
+			"pass": true
+		},
+		{
+			"name": "actual rocky mine uses original loose reward path",
+			"pass": true
+		},
+		{
+			"name": "consumed mineral does not respawn when chunk installs again",
+			"pass": true
+		},
+		{
+			"name": "real mineral depletion survives save reload",
+			"pass": true
+		},
+		{
+			"name": "mined loose reward still picked up through original inventory",
+			"pass": true
+		}
+	],
+	"count": 54,
+	"engine": "4.7.2-stable (official)",
+	"failed": 0,
+	"statistics": {
+		"land_cells": 20087,
+		"mud": 45,
+		"other": 320,
+		"rare_outside": 0,
+		"rocky": 3060,
+		"rocky_cells": 3589
+	},
+	"viewport": "(1280, 720)"
+}

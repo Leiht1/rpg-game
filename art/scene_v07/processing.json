@@ -1,0 +1,184 @@
+{
+  "source_size": [
+    1536,
+    1024
+  ],
+  "source_mode": "RGBA",
+  "cells": [
+    {
+      "name": "tree_0",
+      "cell": [
+        28,
+        50,
+        595,
+        685
+      ],
+      "crop": [
+        17,
+        19,
+        551,
+        615
+      ],
+      "scale": 0.3187919463087248,
+      "output_size": [
+        177,
+        190
+      ],
+      "placement": [
+        3,
+        0
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "name": "tree_1",
+      "cell": [
+        600,
+        60,
+        1025,
+        685
+      ],
+      "crop": [
+        29,
+        35,
+        409,
+        605
+      ],
+      "scale": 0.3473684210526316,
+      "output_size": [
+        177,
+        198
+      ],
+      "placement": [
+        22,
+        0
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "name": "rock_0",
+      "cell": [
+        1080,
+        375,
+        1505,
+        690
+      ],
+      "crop": [
+        18,
+        23,
+        398,
+        283
+      ],
+      "scale": 0.2026315789473684,
+      "output_size": [
+        77,
+        65
+      ],
+      "placement": [
+        0,
+        12
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "name": "rock_1",
+      "cell": [
+        165,
+        775,
+        465,
+        978
+      ],
+      "crop": [
+        16,
+        15,
+        272,
+        180
+      ],
+      "scale": 0.2109375,
+      "output_size": [
+        54,
+        48
+      ],
+      "placement": [
+        0,
+        13
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "name": "flowers",
+      "cell": [
+        695,
+        780,
+        905,
+        974
+      ],
+      "crop": [
+        18,
+        14,
+        170,
+        154
+      ],
+      "scale": 0.18571428571428572,
+      "output_size": [
+        34,
+        26
+      ],
+      "placement": [
+        3,
+        0
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    },
+    {
+      "name": "leaves",
+      "cell": [
+        1100,
+        775,
+        1420,
+        978
+      ],
+      "crop": [
+        21,
+        24,
+        290,
+        176
+      ],
+      "scale": 0.13011152416356878,
+      "output_size": [
+        35,
+        22
+      ],
+      "placement": [
+        0,
+        2
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ]
+    }
+  ],
+  "warnings": [
+    "raw_sheet: requested equal grid not respected; manual ownership rectangles required",
+    "raw_sheet: colored translucent glow; alpha<210 discarded during cleanup"
+  ],
+  "status": "pending_user",
+  "finish": "HD, original logical canvases and foot anchor retained",
+  "sha256": "8f5b76d902697a5cb0c686da085e6c831d9e8bf74c9becd475c754fa1bd1a2bb"
+}

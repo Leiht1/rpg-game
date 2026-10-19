@@ -1,0 +1,33 @@
+{
+	"checks": [
+		{
+			"name": "paper title and input do not overlap",
+			"pass": true
+		},
+		{
+			"name": "paper dialog confirmation unchanged",
+			"pass": true
+		},
+		{
+			"name": "previous ecology fixture resolves",
+			"pass": true
+		},
+		{
+			"name": "previous ecology layout migrates partial buried kind/position/hits",
+			"pass": true
+		},
+		{
+			"name": "layout migration retains inventory and consumed",
+			"pass": true
+		},
+		{
+			"name": "layout migration persists in same original snapshot",
+			"pass": true
+		}
+	],
+	"count": 6,
+	"engine": "4.7.2-stable (official)",
+	"failed": 0,
+	"statistics": {},
+	"viewport": "(1280, 720)"
+}

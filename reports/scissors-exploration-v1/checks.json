@@ -1,0 +1,142 @@
+{
+	"checks": [
+		{
+			"name": "safe nearby sheep location",
+			"pass": true
+		},
+		{
+			"name": "no animal approach hint without scissors",
+			"pass": true
+		},
+		{
+			"name": "blank animal caption creates no paper hint",
+			"pass": true
+		},
+		{
+			"name": "formal item renamed scissors",
+			"pass": true
+		},
+		{
+			"name": "inventory and crafting share tight transparent-padding crop",
+			"pass": true
+		},
+		{
+			"name": "equipped scissors expose E even while wool not ready",
+			"pass": true
+		},
+		{
+			"name": "actual approach hint appears after equipping without leaving animal",
+			"pass": true
+		},
+		{
+			"name": "unready sheep cannot award wool or wear scissors",
+			"pass": true
+		},
+		{
+			"name": "larger scissors registered at actual handle frontfalse",
+			"pass": true
+		},
+		{
+			"name": "front hand and scissors before clothing; palm grips handle false",
+			"pass": true
+		},
+		{
+			"name": "larger scissors registered at actual handle fronttrue",
+			"pass": true
+		},
+		{
+			"name": "front hand and scissors before clothing; palm grips handle true",
+			"pass": true
+		},
+		{
+			"name": "larger scissors registered at actual handle backfalse",
+			"pass": true
+		},
+		{
+			"name": "back scissors use shared layer behind legs false",
+			"pass": true
+		},
+		{
+			"name": "larger scissors registered at actual handle backtrue",
+			"pass": true
+		},
+		{
+			"name": "back scissors use shared layer behind legs true",
+			"pass": true
+		},
+		{
+			"name": "larger scissors registered at actual handle leftfalse",
+			"pass": true
+		},
+		{
+			"name": "side scissors restore native mirrored layer leftfalse",
+			"pass": true
+		},
+		{
+			"name": "larger scissors registered at actual handle lefttrue",
+			"pass": true
+		},
+		{
+			"name": "side scissors restore native mirrored layer lefttrue",
+			"pass": true
+		},
+		{
+			"name": "larger scissors registered at actual handle rightfalse",
+			"pass": true
+		},
+		{
+			"name": "side scissors restore native mirrored layer rightfalse",
+			"pass": true
+		},
+		{
+			"name": "larger scissors registered at actual handle righttrue",
+			"pass": true
+		},
+		{
+			"name": "side scissors restore native mirrored layer righttrue",
+			"pass": true
+		},
+		{
+			"name": "real reach contact shears exactly once",
+			"pass": true
+		},
+		{
+			"name": "shearing retains durability cost",
+			"pass": true
+		},
+		{
+			"name": "normal workbench lists scissors recipe",
+			"pass": true
+		},
+		{
+			"name": "actual crafting option uses enlarged shared icon and new name",
+			"pass": true
+		},
+		{
+			"name": "unequipping removes animal approach hint",
+			"pass": true
+		},
+		{
+			"name": "cooldown notice hides game minutes",
+			"pass": true
+		},
+		{
+			"name": "explicit wrong-food feedback retained",
+			"pass": true
+		},
+		{
+			"name": "ordinary world identity reused on repeated startup reads",
+			"pass": true
+		},
+		{
+			"name": "isolated atomic save stores current player position",
+			"pass": true
+		},
+		{
+			"name": "position and player state share existing atomic snapshot",
+			"pass": true
+		}
+	],
+	"count": 34,
+	"failed": 0
+}

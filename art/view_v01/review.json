@@ -1,0 +1,15 @@
+{
+  "formal_files_changed": [],
+  "same_logical_canvas": {
+    "tree_0": true,
+    "tree_1": true,
+    "rock_0": true,
+    "rock_1": true
+  },
+  "candidate_version": "windrest-view-0.2.0",
+  "formal_generator": "windrest-biome-0.3.0",
+  "source_route": "local:codex-cli",
+  "status": "pending_user",
+  "collision_note": "candidate stream inherits original install_chunk; no collision/interaction overrides",
+  "camera_note": "actual screenshots same world points and zoom; lake screenshots see lake-runtime.json; other views see runtime.json"
+}

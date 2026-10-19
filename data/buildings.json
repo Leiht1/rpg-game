@@ -178,5 +178,138 @@
     "default_unlocked": true,
     "description": "装备石镐开垦独立耕地，每块消耗 1 耐久；靠近空地按 E 选择种子，点击即种。",
     "craft_time": 1.5
+  },
+  {
+    "recipe_id": "build_signpost",
+    "output_id": "signpost",
+    "output_count": 1,
+    "materials": {
+      "wood": 3,
+      "plant_fiber": 2
+    },
+    "category": "野外用品",
+    "conditions": [],
+    "default_unlocked": true,
+    "description": "放置时填写最多6个字，确认后不能修改；石锤拆除。自动显示在地图上。",
+    "craft_time": 1.5
+  },
+  {
+    "recipe_id": "build_stone_furnace",
+    "output_id": "stone_furnace",
+    "output_count": 1,
+    "materials": {
+      "stone": 16,
+      "wood": 6,
+      "flint": 3
+    },
+    "category": "加工",
+    "conditions": [],
+    "default_unlocked": false,
+    "description": "",
+    "industry_candidate": true
+  },
+  {
+    "recipe_id": "build_metal_workbench",
+    "output_id": "metal_workbench",
+    "output_count": 1,
+    "materials": {
+      "copper_ingot": 3,
+      "wood": 12,
+      "stone": 6
+    },
+    "category": "加工",
+    "conditions": [],
+    "default_unlocked": false,
+    "description": "",
+    "industry_candidate": true
+  },
+  {
+    "recipe_id": "build_copper_oven",
+    "output_id": "copper_oven",
+    "output_count": 1,
+    "materials": {
+      "copper_plate": 4,
+      "copper_parts": 2,
+      "stone": 8,
+      "wood": 4
+    },
+    "category": "加工",
+    "conditions": [],
+    "default_unlocked": false,
+    "description": "",
+    "industry_candidate": true
+  },
+  {
+    "recipe_id": "build_copper_lamp",
+    "output_id": "copper_lamp",
+    "output_count": 1,
+    "materials": {
+      "copper_ingot": 6,
+      "copper_parts": 2,
+      "wood": 3
+    },
+    "category": "生活",
+    "conditions": [],
+    "default_unlocked": false,
+    "description": "",
+    "industry_candidate": true
+  },
+  {
+    "recipe_id": "build_reinforced_cabinet",
+    "output_id": "reinforced_cabinet",
+    "output_count": 1,
+    "materials": {
+      "wood": 18,
+      "copper_plate": 3,
+      "metal_connector": 2
+    },
+    "category": "生活",
+    "conditions": [],
+    "default_unlocked": false,
+    "description": "",
+    "industry_candidate": true
+  },
+  {
+    "recipe_id": "build_feed_trough",
+    "output_id": "feed_trough",
+    "output_count": 1,
+    "materials": {
+      "wood": 8,
+      "metal_connector": 1
+    },
+    "category": "生活",
+    "conditions": [],
+    "default_unlocked": false,
+    "description": "",
+    "industry_candidate": true
+  },
+  {
+    "recipe_id": "build_refrigerator",
+    "output_id": "refrigerator",
+    "output_count": 1,
+    "materials": {
+      "copper_plate": 5,
+      "copper_parts": 3,
+      "wood": 12
+    },
+    "category": "生活",
+    "conditions": [],
+    "default_unlocked": false,
+    "description": "",
+    "industry_candidate": true
+  },
+  {
+    "recipe_id": "build_wool_carpet",
+    "output_id": "wool_carpet",
+    "output_count": 1,
+    "materials": {
+      "wool": 3,
+      "plant_fiber": 2
+    },
+    "category": "生活",
+    "conditions": [],
+    "default_unlocked": false,
+    "description": "",
+    "industry_candidate": true
   }
 ]

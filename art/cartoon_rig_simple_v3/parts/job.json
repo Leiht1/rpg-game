@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "85b7f790ca18a776e4ad3b3f6f3b19fd9863fbfcaf6c0e4045eaaf08efb2566c",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-16T04:40:40.486Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-16T04:40:40.486Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Independent eight puppet parts drawn from simplified original design, no full-frame animation",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a142ce-8c0d-7dd3-aa94-a502f9863598",
+    "source": "CODEX_HOME/generated_images/01a142ce-8c0d-7dd3-aa94-a502f9863598/exec-e975029e-da86-4a2e-bea0-5922286ae923.png",
+    "sourceSha256": "b11f4073fd86b9250cc75154f1133b3f2c8014306750b3fa5e39689960f4e412",
+    "sourceMtime": "2026-10-16T04:39:58Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "b11f4073fd86b9250cc75154f1133b3f2c8014306750b3fa5e39689960f4e412",
+    "bytes": 1303298,
+    "format": "PNG",
+    "size": [
+      1536,
+      1024
+    ]
+  }
+}

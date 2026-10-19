@@ -88,6 +88,7 @@ func _ready() -> void:
 	item_service=preload("res://scripts/item_service.gd").new()
 	add_child(item_service)
 	item_service.configure(self,items_preview)
+	restore_player_entry()
 	if tools_preview:
 		for id in ["stone_axe","stone_pickaxe","simple_shovel"]: item_service.inventory.add(id,1)
 	if Engine.get_meta("camp_build_preview",false):
@@ -107,6 +108,8 @@ func _ready() -> void:
 	item_ui.ground_drop.reparent(ui)
 	ui.move_child(item_ui.ground_drop,item_ui.get_index())
 	ui.move_child(item_service.storage_ui,item_ui.get_index())
+	item_service.industry_ui=preload("res://scripts/industry_ui.gd").new()
+	ui.add_child(item_service.industry_ui);item_service.industry_ui.configure(item_service)
 	item_service.planting_ui=preload("res://scripts/planting_ui.gd").new()
 	ui.add_child(item_service.planting_ui);item_service.planting_ui.configure(item_service)
 	map_view.item_screen=item_ui
@@ -179,6 +182,30 @@ func setup_input() -> void:
 			var event := InputEventKey.new()
 			event.physical_keycode=key
 			InputMap.action_add_event(action,event)
+
+func restore_player_entry() -> void:
+	if not item_service.body.sleep_active() and not item_service.restored_player_position:
+		player.position=choose_entry_point()
+	player.reset_physics_interpolation()
+	player.camera.reset_smoothing()
+	stream.update_target(player.position)
+
+func choose_entry_point() -> Vector2:
+	# Keep generator.spawn as the historical terrain/lake/resource anchor.
+	# Entry placement uses the actual four-way ecology and completed water layer.
+	for attempt in 2048:
+		var p:=Vector2(generator.random_at(attempt,0,16061),generator.random_at(attempt,1,16061))*generator.extent
+		if generator.coast_distance(p)<160 or generator.sample(p).z>.03:continue
+		if not item_service.ground_clear(p,20,item_service.nearby_props(p)):continue
+		var blocked:=false
+		for row in item_service.builds.states.values():
+			if row.layer=="ground":continue
+			var bounds:Rect2=item_service.builds.footprint_rect(row)
+			bounds.position+=Vector2(row.x,row.y)
+			if row.layer=="edge":bounds=Rect2(Vector2(row.x,row.y)-Vector2(80,80),Vector2(160,160))
+			if bounds.grow(24).has_point(p):blocked=true;break
+		if not blocked:return p
+	return generator.spawn
 
 func make_label(node: Label, text_value: String, pos: Vector2, size: int) -> void:
 	node.text=text_value

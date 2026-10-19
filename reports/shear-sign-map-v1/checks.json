@@ -1,0 +1,134 @@
+{
+	"checks": [
+		{
+			"name": "blade points forward after actual arm and mirror transforms front 0.10",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms front 0.36",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms front 0.42",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms front 0.65",
+			"pass": true
+		},
+		{
+			"name": "idle angle restored front",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms back 0.10",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms back 0.36",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms back 0.42",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms back 0.65",
+			"pass": true
+		},
+		{
+			"name": "idle angle restored back",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms left 0.10",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms left 0.36",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms left 0.42",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms left 0.65",
+			"pass": true
+		},
+		{
+			"name": "idle angle restored left",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms right 0.10",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms right 0.36",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms right 0.42",
+			"pass": true
+		},
+		{
+			"name": "blade points forward after actual arm and mirror transforms right 0.65",
+			"pass": true
+		},
+		{
+			"name": "idle angle restored right",
+			"pass": true
+		},
+		{
+			"name": "pose previews do not consume durability",
+			"pass": true
+		},
+		{
+			"name": "existing pickaxe pose unchanged",
+			"pass": true
+		},
+		{
+			"name": "sign input has no normal/focus/read-only fill",
+			"pass": true
+		},
+		{
+			"name": "selected sign text has no green backing",
+			"pass": true
+		},
+		{
+			"name": "native text input replaces selection and retains validation",
+			"pass": true
+		},
+		{
+			"name": "empty name still cannot submit",
+			"pass": true
+		},
+		{
+			"name": "six-character limit unchanged",
+			"pass": true
+		},
+		{
+			"name": "cancel typing does not consume or build",
+			"pass": true
+		},
+		{
+			"name": "GPU map is identical when hidden spawn changes; no marker or label remains",
+			"pass": true
+		},
+		{
+			"name": "player-created signposts remain on map",
+			"pass": true
+		},
+		{
+			"name": "map zoom unchanged",
+			"pass": true
+		},
+		{
+			"name": "map closes normally",
+			"pass": true
+		}
+	],
+	"count": 32,
+	"failed": 0
+}

@@ -1,0 +1,18 @@
+{
+  "status": "approved",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "raw": "art/animals-head-v3/generated/generated.png",
+  "prompt": "art/animals-head-v3/prompt.txt",
+  "job": "art/animals-head-v3/generated/job.json",
+  "processing": "native RGBA alpha, crop transparent bbox only; no painted pixels",
+  "raw_sha256": "38eab42be53daf44269598a27ad52db2468c63a9b43727aec863added8cef889",
+  "candidate_sha256": "14dc241ae8baf2f76dbe8f8150305f1b88c63f7e357eb22abba72f8f0dad7465",
+  "references": {
+    "art\\animals-head-v3\\reference-old-head.png": "410e4fa92b46b13e987cc231629eac1ad8a3b056204e0fac0358cca1d4731aa1",
+    "art\\animals-head-v3\\reference-user.png": "a1b5d2abc6b0336e5f8a3d1a58c32ad3769250d6912bf598cbe9c9c0bacfed2b"
+  },
+  "formal_assets_replaced": false,
+  "approval": "可以了接入游戏吧",
+  "formal_promotion": "assets/animals/v2/provenance.json"
+}

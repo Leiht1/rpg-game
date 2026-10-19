@@ -1,0 +1,138 @@
+{
+	"checks": [
+		{
+			"name": "new process loads animal save",
+			"pass": true
+		},
+		{
+			"name": "exact single birth persists in new process",
+			"pass": true
+		},
+		{
+			"name": "growth persists without offline time",
+			"pass": true
+		},
+		{
+			"name": "uncollected eggs persist exactly once",
+			"pass": true
+		},
+		{
+			"name": "monotonic egg identity survives new process",
+			"pass": true
+		},
+		{
+			"name": "hungry shorn state persists",
+			"pass": true
+		},
+		{
+			"name": "no automatic offline advance or duplicate birth/regrowth",
+			"pass": true
+		},
+		{
+			"name": "persisted chicken chunk is actually loaded",
+			"pass": true
+		},
+		{
+			"name": "actual chunk unload releases animal visual",
+			"pass": true
+		},
+		{
+			"name": "actual chunk reinstall rebuilds same animal visual",
+			"pass": true
+		},
+		{
+			"name": "chunk roundtrip preserves IDs trust production growth and pair progress",
+			"pass": true
+		},
+		{
+			"name": "chunk roundtrip does not duplicate eggs or babies",
+			"pass": true
+		},
+		{
+			"name": "old save without animals loads with empty additive state",
+			"pass": true
+		},
+		{
+			"name": "future animal version protects source and leaves live state intact",
+			"pass": true
+		},
+		{
+			"name": "remote test is actually unloaded",
+			"pass": true
+		},
+		{
+			"name": "unloaded pair reproduces with same game-time rules",
+			"pass": true
+		},
+		{
+			"name": "unloaded chickens produce persistent ground eggs",
+			"pass": true
+		},
+		{
+			"name": "visual streaming never simulates duplicate products or births",
+			"pass": true
+		},
+		{
+			"name": "eight nearby same-species blocks reproduction",
+			"pass": true
+		},
+		{
+			"name": "first birth immediately consumes last population slot",
+			"pass": true
+		},
+		{
+			"name": "cooldown and population cap prevent extra birth",
+			"pass": true
+		},
+		{
+			"name": "cross species never breeds",
+			"pass": true
+		},
+		{
+			"name": "baby never breeds",
+			"pass": true
+		},
+		{
+			"name": "starved parent never breeds",
+			"pass": true
+		},
+		{
+			"name": "distant parents never breed",
+			"pass": true
+		},
+		{
+			"name": "sleep advances animal age at actual body game-time rate",
+			"pass": true
+		},
+		{
+			"name": "sleep adds no extra growth multiplier",
+			"pass": true
+		},
+		{
+			"name": "failed feed save rejects",
+			"pass": true
+		},
+		{
+			"name": "failed feed restores food trust and feeding timer",
+			"pass": true
+		},
+		{
+			"name": "full bag refuses sheep yield without wear/state loss",
+			"pass": true
+		},
+		{
+			"name": "unloaded unconfined wild animal migrates physically",
+			"pass": true
+		},
+		{
+			"name": "unloaded real fence ring retains migrating wild animal",
+			"pass": true
+		},
+		{
+			"name": "unfenced tame animal can drift away but never disappears",
+			"pass": true
+		}
+	],
+	"count": 33,
+	"failed": 0
+}

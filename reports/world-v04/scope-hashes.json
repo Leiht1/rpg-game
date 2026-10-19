@@ -1,0 +1,47 @@
+{
+  "scripts/world_generator.gd": {
+    "before": "5eb0d70423c26de56db80c422b2b64fdd4c7763b0799ddae12462ee4d807c67f",
+    "after": "e9d54f89ed69e5cf1949d285593c827d48ff13541788bf02122b88997d6e5975",
+    "changed": true
+  },
+  "scripts/terrain.gdshader": {
+    "before": "97f2628d93b49ba3654f07fe20043ef6604177ba0c705b6aa3263774e43e160f",
+    "after": "f6bffb94dcde14f6da0756784b310bab674a8e6502d088c6f88b58fbc548d65c",
+    "changed": true
+  },
+  "scripts/chunk_stream.gd": {
+    "before": "f13e99d78c303999b08a6f9849192096157c982c883d7a00f51a80f1a7562490",
+    "after": "d258e7861c291bfe8db8697d9e8b15e6734c0821dfedefedb9fd9f432fad75ac",
+    "changed": true
+  },
+  "scripts/world.gd": {
+    "before": "d7ac04f5024036c508daf291151b9e741c974def2ae93c0001daf2b9d7dcb40d",
+    "after": "1a19fbab2b9239eac6fed61273b478889407c822b6df68731ef3143348edb707",
+    "changed": true
+  },
+  "scripts/player.gd": {
+    "before": "7533d5f84d9b2d8d650d6d976d14edac2c677820ce852edd0a366d71f901768a",
+    "after": "7533d5f84d9b2d8d650d6d976d14edac2c677820ce852edd0a366d71f901768a",
+    "changed": false
+  },
+  "scripts/world_map.gd": {
+    "before": "b079d2a4820f7a7fbd96c337794a1bc4d7fc88bbfa8d48fce483f8faf2127405",
+    "after": "b079d2a4820f7a7fbd96c337794a1bc4d7fc88bbfa8d48fce483f8faf2127405",
+    "changed": false
+  },
+  "scripts/nature_prop.gd": {
+    "before": "875f7fa699ac83ef00a40d24a6022601de6e87e4112b30d2465385378f5d16a3",
+    "after": "875f7fa699ac83ef00a40d24a6022601de6e87e4112b30d2465385378f5d16a3",
+    "changed": false
+  },
+  "project.godot": {
+    "before": "24985de72be138b40d801776eda2cad18443cac866755356b5b7a1f82070aca0",
+    "after": "24985de72be138b40d801776eda2cad18443cac866755356b5b7a1f82070aca0",
+    "changed": false
+  },
+  "assets/hero/cartoon/character.tscn": {
+    "before": "fb0223e20d649082ebcaaf19d4a92e2c9dd918590fa01add3c84d8120ecb35f7",
+    "after": "fb0223e20d649082ebcaaf19d4a92e2c9dd918590fa01add3c84d8120ecb35f7",
+    "changed": false
+  }
+}

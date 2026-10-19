@@ -1,0 +1,138 @@
+{
+	"checks": [
+		{
+			"name": "natural dry clear pen site found",
+			"pass": true
+		},
+		{
+			"name": "chicken skeleton part structure",
+			"pass": true
+		},
+		{
+			"name": "sheep four limb skeleton",
+			"pass": true
+		},
+		{
+			"name": "baby uses same art at 48 percent size",
+			"pass": true
+		},
+		{
+			"name": "closed gate blocks remote breeding/birth path",
+			"pass": true
+		},
+		{
+			"name": "closed gate really blocks chicken movement",
+			"pass": true
+		},
+		{
+			"name": "swept body cannot tunnel through gate",
+			"pass": true
+		},
+		{
+			"name": "open gate clears passage in remote geometry",
+			"pass": true
+		},
+		{
+			"name": "open real gate allows animal out",
+			"pass": true
+		},
+		{
+			"name": "fence blocks lateral motion",
+			"pass": true
+		},
+		{
+			"name": "walking moves limbs by actual travel",
+			"pass": true
+		},
+		{
+			"name": "feed feedback stops and nods",
+			"pass": true
+		},
+		{
+			"name": "foraging lowers head",
+			"pass": true
+		},
+		{
+			"name": "follow selects goal beside player",
+			"pass": true
+		},
+		{
+			"name": "trapped wild animal not silently despawned",
+			"pass": true
+		},
+		{
+			"name": "unconfined wild migrant leaves after physical departure",
+			"pass": true
+		},
+		{
+			"name": "departed chunk not replenished",
+			"pass": true
+		},
+		{
+			"name": "normal tool bench crafts shears",
+			"pass": true
+		},
+		{
+			"name": "craft atomically spends actual metal resources",
+			"pass": true
+		},
+		{
+			"name": "crafted shears equip normally",
+			"pass": true
+		},
+		{
+			"name": "shear reuses existing reach gesture",
+			"pass": true
+		},
+		{
+			"name": "shears shown through common tool renderer",
+			"pass": true
+		},
+		{
+			"name": "native animation commits one shearing at reach",
+			"pass": true
+		},
+		{
+			"name": "shearing swaps actual body texture",
+			"pass": true
+		},
+		{
+			"name": "shear gesture view front",
+			"pass": true
+		},
+		{
+			"name": "shear gesture view back",
+			"pass": true
+		},
+		{
+			"name": "shear gesture view left",
+			"pass": true
+		},
+		{
+			"name": "shear gesture view right",
+			"pass": true
+		},
+		{
+			"name": "failed shear save rejects transaction",
+			"pass": true
+		},
+		{
+			"name": "failed save restores wool yield and exact durability",
+			"pass": true
+		},
+		{
+			"name": "paused world freezes animal movement/time",
+			"pass": true
+		},
+		{
+			"name": "animal timers use normal world game-minute conversion",
+			"pass": true
+		},
+		{
+			"name": "native window uses project default 1280x720",
+			"pass": true
+		}
+	],
+	"count": 33,
+	"failed": 0
+}

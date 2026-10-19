@@ -1,0 +1,12 @@
+{
+  "checks": 56,
+  "engine": "4.7.2-stable (official)",
+  "failures": [
+    "15 native animation clips",
+    "Normalized walk/run distance (1.0, 0.0) run=false actual=37.99609375 expected=40.0",
+    "Actual distance phase (1.0, 0.0) run=false actual=37.99609375"
+  ],
+  "run_speed": 310,
+  "scope": "native clips, shift binding, normalized walk/run, actual distance phase, trunk/crown/rock collisions, chop events, drop pickup, released trunk, border, deterministic clearing; no broad performance benchmark",
+  "walk_speed": 200
+}

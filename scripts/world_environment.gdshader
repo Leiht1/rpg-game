@@ -12,8 +12,13 @@ uniform float lantern_strength = 0.0;
 uniform int camp_count = 0;
 uniform vec2 camp_centers[32];
 uniform float camp_radii[32];
+uniform float hallucination = 0.0;
 void fragment() {
- vec3 original = texture(world_screen, SCREEN_UV).rgb;
+ vec2 drift = vec2(sin(SCREEN_UV.y*15.0+TIME*.65),cos(SCREEN_UV.x*12.0+TIME*.48))*.007*hallucination;
+ vec2 uv = clamp(SCREEN_UV+drift,vec2(0.0),vec2(1.0));
+ vec3 original = texture(world_screen, uv).rgb;
+ vec3 ghost = texture(world_screen,clamp(uv+vec2(.012*sin(TIME*.4),.004*cos(TIME*.32)),vec2(0.0),vec2(1.0))).rgb;
+ original = mix(original,ghost,.28*hallucination);
  float lum = dot(original,vec3(.2126,.7152,.0722));
  vec3 color = mix(vec3(lum),original,saturation);
  color = ((color - vec3(.45))*contrast + vec3(.45))*light_tint.rgb*brightness;
@@ -27,6 +32,14 @@ void fragment() {
   fire_glow = max(fire_glow,1.0-smoothstep(12.0,max(13.0,camp_radii[i]),d));
  }
  color = mix(color,original*vec3(1.06,.99,.86),fire_glow*.78);
+ // Slow hue drift around the neutral axis keeps gray neutral and avoids flashing.
+ float hue_angle = (.45+.9*sin(TIME*.27+SCREEN_UV.y*1.4))*hallucination;
+ vec3 neutral_axis = vec3(.577350269);
+ vec3 shifted = color*cos(hue_angle)+cross(neutral_axis,color)*sin(hue_angle)
+     +neutral_axis*dot(neutral_axis,color)*(1.0-cos(hue_angle));
+ float shifted_lum = dot(shifted,vec3(.2126,.7152,.0722));
+ shifted = mix(vec3(shifted_lum),shifted,1.0+.25*hallucination);
+ color = clamp(shifted,vec3(0.0),vec3(1.0));
  color = mix(color,vec3(.97,.98,1.0),lightning);
  COLOR = vec4(color,1.);
 }

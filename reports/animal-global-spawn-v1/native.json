@@ -1,0 +1,130 @@
+{
+	"checks": [
+		{
+			"name": "whole map starts with exactly six for fixture seed",
+			"pass": true
+		},
+		{
+			"name": "biome wild:global:1",
+			"pass": true
+		},
+		{
+			"name": "natural/building clearance wild:global:1",
+			"pass": true
+		},
+		{
+			"name": "biome wild:global:2",
+			"pass": true
+		},
+		{
+			"name": "natural/building clearance wild:global:2",
+			"pass": true
+		},
+		{
+			"name": "biome wild:global:3",
+			"pass": true
+		},
+		{
+			"name": "natural/building clearance wild:global:3",
+			"pass": true
+		},
+		{
+			"name": "biome wild:global:4",
+			"pass": true
+		},
+		{
+			"name": "natural/building clearance wild:global:4",
+			"pass": true
+		},
+		{
+			"name": "biome wild:global:5",
+			"pass": true
+		},
+		{
+			"name": "natural/building clearance wild:global:5",
+			"pass": true
+		},
+		{
+			"name": "biome wild:global:6",
+			"pass": true
+		},
+		{
+			"name": "natural/building clearance wild:global:6",
+			"pass": true
+		},
+		{
+			"name": "initial three chickens and three sheep",
+			"pass": true
+		},
+		{
+			"name": "global candidates cover separate map chunks",
+			"pass": true
+		},
+		{
+			"name": "one hundred explored chunks add zero animals",
+			"pass": true
+		},
+		{
+			"name": "same world seed produces same whole-map roster",
+			"pass": true
+		},
+		{
+			"name": "no animal before seven-day deadline",
+			"pass": true
+		},
+		{
+			"name": "exact deadline adds one only",
+			"pass": true
+		},
+		{
+			"name": "next refresh is another seven game days",
+			"pass": true
+		},
+		{
+			"name": "scheduler and roster save in original atomic snapshot",
+			"pass": true
+		},
+		{
+			"name": "same-process reload keeps scheduler and identities",
+			"pass": true
+		},
+		{
+			"name": "second interval adds exactly one without block or exploration quotas",
+			"pass": true
+		},
+		{
+			"name": "invalid deadline protects source save",
+			"pass": true
+		},
+		{
+			"name": "fractional spawn identity is rejected",
+			"pass": true
+		},
+		{
+			"name": "previous animal format remains valid",
+			"pass": true
+		},
+		{
+			"name": "legacy surplus removed while owned animals and baby preserved",
+			"pass": true
+		},
+		{
+			"name": "legacy migration starts full interval without initial refill",
+			"pass": true
+		},
+		{
+			"name": "migration is persistent and idempotent",
+			"pass": true
+		},
+		{
+			"name": "native window installs remote animal without extra spawn",
+			"pass": true
+		},
+		{
+			"name": "project default window size",
+			"pass": true
+		}
+	],
+	"count": 31,
+	"failed": 0
+}

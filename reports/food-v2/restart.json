@@ -1,0 +1,42 @@
+{
+	"checks": [
+		{
+			"name": "fresh process restores atomic save",
+			"pass": true
+		},
+		{
+			"name": "fresh process exact remaining time, no offline advance",
+			"pass": true
+		},
+		{
+			"name": "pickup remains consumed",
+			"pass": true
+		},
+		{
+			"name": "old paid herb task remains valid",
+			"pass": true
+		},
+		{
+			"name": "restored paid herb task claims",
+			"pass": true
+		},
+		{
+			"name": "restored repeated claim refused",
+			"pass": true
+		},
+		{
+			"name": "restored reward and notification once",
+			"pass": true
+		},
+		{
+			"name": "old mature crop stays mature after cycle migration",
+			"pass": true
+		},
+		{
+			"name": "cycle migration performed only once",
+			"pass": true
+		}
+	],
+	"count": 9,
+	"failed": 0
+}

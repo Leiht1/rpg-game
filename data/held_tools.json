@@ -70,5 +70,134 @@
       "back": -20,
       "side": -30
     }
+  },
+  "tool:shears": {
+    "aim_forward_actions": [
+      "shear"
+    ],
+    "texture": "res://assets/animals/v1/shears.png",
+    "grip_px": [
+      128,
+      161
+    ],
+    "scale": 0.25,
+    "rotation_degrees": 40,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": -20,
+      "back": -20,
+      "side": -30
+    }
+  },
+  "tool:copper_axe": {
+    "texture": "res://prototypes/industry-v1/final/copper_axe.png",
+    "grip_px": [
+      83,
+      190
+    ],
+    "scale": 0.24,
+    "rotation_degrees": 0,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": -20,
+      "back": -20,
+      "side": -30
+    }
+  },
+  "tool:copper_pickaxe": {
+    "texture": "res://prototypes/industry-v1/final/copper_pickaxe.png",
+    "grip_px": [
+      128,
+      190
+    ],
+    "scale": 0.24,
+    "rotation_degrees": 0,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": -20,
+      "back": -20,
+      "side": -30
+    }
+  },
+  "tool:copper_shovel": {
+    "texture": "res://prototypes/industry-v1/final/copper_shovel.png",
+    "grip_px": [
+      128,
+      190
+    ],
+    "scale": 0.24,
+    "rotation_degrees": 0,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": -20,
+      "back": -20,
+      "side": -30
+    }
+  },
+  "tool:copper_hammer": {
+    "texture": "res://prototypes/industry-v1/final/copper_hammer.png",
+    "grip_px": [
+      128,
+      190
+    ],
+    "scale": 0.24,
+    "rotation_degrees": 0,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": -20,
+      "back": -20,
+      "side": -30
+    }
+  },
+  "tool:fishing_rod": {
+    "texture": "res://prototypes/industry-v1/final/fishing_rod.png",
+    "grip_px": [
+      70,
+      192
+    ],
+    "scale": 0.24,
+    "rotation_degrees": 0,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": -20,
+      "back": -20,
+      "side": -30
+    }
+  },
+  "tool:silver_lantern": {
+    "texture": "res://prototypes/industry-v1/final/silver_lantern.png",
+    "grip_px": [
+      128,
+      24
+    ],
+    "scale": 0.18,
+    "rotation_degrees": 0,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": 0,
+      "back": 0,
+      "side": 0
+    }
   }
 }

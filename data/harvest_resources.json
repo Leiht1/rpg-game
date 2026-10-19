@@ -1,5 +1,5 @@
 {
-  "version": "harvest-resources-2.1.0",
+  "version": "harvest-resources-2.2.0",
   "cell_size": 768,
   "attempts": 4,
   "resources": {
@@ -73,9 +73,9 @@
       ],
       "range": 58,
       "weights": [
-        0.2,
-        0.03,
-        0.36
+        0.12,
+        0.65,
+        0.15
       ],
       "drops": {
         "wild_carrot": 2
@@ -98,9 +98,9 @@
       ],
       "range": 58,
       "weights": [
-        0.08,
-        0.16,
-        0.08
+        0.05,
+        0.28,
+        0.04
       ],
       "drops": {
         "bone_fragment": 2
@@ -255,19 +255,19 @@
     "buried_supply"
   ],
   "mineral_generation": {
-    "attempts": 10,
-    "density_dirt": 0.72,
-    "density_other": 0.1,
-    "dirt_weights": {
+    "attempts": 13,
+    "density_other": 0.018,
+    "other_weights": {
+      "stone_outcrop": 75,
+      "flint_outcrop": 25
+    },
+    "density_rocky": 0.9,
+    "rocky_weights": {
       "stone_outcrop": 42,
       "flint_outcrop": 30,
       "copper_outcrop": 16,
       "silver_outcrop": 8,
       "gold_outcrop": 4
-    },
-    "other_weights": {
-      "stone_outcrop": 75,
-      "flint_outcrop": 25
     }
   },
   "broadleaf_generation": {

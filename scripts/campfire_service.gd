@@ -37,6 +37,8 @@ func validate(data: Variant) -> bool:
 		if not row.get("recipe") is String or not row.get("ready") is bool: return false
 		var damage = row.get("hits",0)
 		if not (damage is int or damage is float) or damage<0 or damage>2 or damage!=floor(damage): return false
+		if row.has("output"):
+			if not row.output is Dictionary or row.output.get("item_id")!=rules.recipes.get(row.recipe,{}).get("output","") or row.output.get("count")!=1 or not preload("res://scripts/food_freshness.gd").normalize(service.database,row.output):return false
 		if row.recipe.is_empty():
 			if row.elapsed!=0 or row.ready: return false
 		else:
@@ -119,6 +121,7 @@ func match_materials(materials: Dictionary) -> String:
 		var count = materials[key]
 		if not count is int or count<1: return ""
 	for key in rules.recipes:
+		if rules.recipes[key].get("industry_candidate",false) and not Engine.get_meta("industry_preview",false):continue
 		if rules.recipes[key].get("legacy_only",false): continue
 		var expected: Dictionary=rules.recipes[key].materials
 		if expected.size()!=materials.size(): continue
@@ -150,13 +153,13 @@ func act(id: String, action: String, recipe: String = "", materials: Dictionary 
 			else:
 				staged=consume(rules.recipes[recipe].materials)
 				if staged==null: reason="食材不足"
-				else: row.recipe=recipe;row.elapsed=0.0;row.ready=false
+				else: row.erase("output");row.recipe=recipe;row.elapsed=0.0;row.ready=false
 		"claim":
 			if not row.ready: reason="暂无可领取成品"
 			else:
 				staged=ItemInventory.new(service.database);staged.slots=service.inventory.slots.duplicate(true)
-				if staged.add(str(rules.recipes[row.recipe].output),1)>0: reason="背包已满，成品保留在篝火中"
-				else: claimed=str(rules.recipes[row.recipe].output);row.recipe="";row.elapsed=0.0;row.ready=false
+				if staged.add_value(row.get("output",{"item_id":str(rules.recipes[row.recipe].output),"count":1}))>0: reason="背包已满，成品保留在篝火中"
+				else: claimed=str(rules.recipes[row.recipe].output);row.erase("output");row.recipe="";row.elapsed=0.0;row.ready=false
 		_: reason="未知操作"
 	if reason.is_empty():
 		if staged!=null: service.inventory.slots=staged.slots
@@ -225,6 +228,7 @@ func advance(dt: float, rain: float = 0.0, storm: float = 0.0) -> void:
 			row.ready=row.elapsed>=duration
 			if row.ready:
 				discovered[row.recipe]=true
+				row.output={"item_id":rules.recipes[row.recipe].output,"count":1,"spoilage":0.0}
 				completed=true
 		if row.fuel<=0: row.lit=false;burning.erase(id)
 		service.dirty=true

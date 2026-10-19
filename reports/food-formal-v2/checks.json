@@ -1,0 +1,74 @@
+{
+	"checks": [
+		{
+			"name": "formal icon and world reference roasted_potato",
+			"pass": true
+		},
+		{
+			"name": "approved hash roasted_potato",
+			"pass": true
+		},
+		{
+			"name": "inventory world and loose texture load roasted_potato",
+			"pass": true
+		},
+		{
+			"name": "formal icon and world reference roasted_cabbage",
+			"pass": true
+		},
+		{
+			"name": "approved hash roasted_cabbage",
+			"pass": true
+		},
+		{
+			"name": "inventory world and loose texture load roasted_cabbage",
+			"pass": true
+		},
+		{
+			"name": "formal icon and world reference vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "approved hash vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "inventory world and loose texture load vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "formal icon and world reference stewed_vegetables",
+			"pass": true
+		},
+		{
+			"name": "approved hash stewed_vegetables",
+			"pass": true
+		},
+		{
+			"name": "inventory world and loose texture load stewed_vegetables",
+			"pass": true
+		},
+		{
+			"name": "ordinary formal mode without art switch",
+			"pass": true
+		},
+		{
+			"name": "formal recipe card icon roast_potato",
+			"pass": true
+		},
+		{
+			"name": "formal recipe card icon roast_cabbage",
+			"pass": true
+		},
+		{
+			"name": "formal recipe card icon vegetable_soup",
+			"pass": true
+		},
+		{
+			"name": "formal recipe card icon stew_vegetables",
+			"pass": true
+		}
+	],
+	"count": 17,
+	"failed": 0
+}

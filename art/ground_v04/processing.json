@@ -1,0 +1,74 @@
+{
+  "native_alpha": true,
+  "alpha_threshold": 210,
+  "reason": "generated soft colored halo rejected; keep flat opaque cartoon shapes only",
+  "cells": [
+    {
+      "cell": 0,
+      "crop": [
+        121,
+        188,
+        404,
+        424
+      ],
+      "removed_haze_pixels": 24850,
+      "original_boundary_alpha_max": 1
+    },
+    {
+      "cell": 1,
+      "crop": [
+        84,
+        173,
+        431,
+        428
+      ],
+      "removed_haze_pixels": 22411,
+      "original_boundary_alpha_max": 1
+    },
+    {
+      "cell": 2,
+      "crop": [
+        79,
+        189,
+        436,
+        426
+      ],
+      "removed_haze_pixels": 15611,
+      "original_boundary_alpha_max": 1
+    },
+    {
+      "cell": 3,
+      "crop": [
+        100,
+        120,
+        437,
+        401
+      ],
+      "removed_haze_pixels": 9662,
+      "original_boundary_alpha_max": 1
+    },
+    {
+      "cell": 4,
+      "crop": [
+        113,
+        172,
+        417,
+        359
+      ],
+      "removed_haze_pixels": 6592,
+      "original_boundary_alpha_max": 1
+    },
+    {
+      "cell": 5,
+      "crop": [
+        46,
+        129,
+        443,
+        390
+      ],
+      "removed_haze_pixels": 6777,
+      "original_boundary_alpha_max": 1
+    }
+  ],
+  "status": "pending_user"
+}

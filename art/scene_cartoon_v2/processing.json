@@ -1,0 +1,175 @@
+{
+  "source": "generated/generated.png",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "precise_image_model": "not exposed",
+  "estimateUsd": 0,
+  "actual_cost": "subscription quota; precise cost unknown",
+  "qa": [
+    {
+      "file": "tree_0.png",
+      "ownership_crop": [
+        38,
+        127,
+        401,
+        514
+      ],
+      "alpha_bbox": [
+        8,
+        7,
+        356,
+        380
+      ],
+      "size": [
+        177,
+        190
+      ],
+      "sha256": "7056adf17f7b3f0fa877f69f90c6bc821e2b8c731baa310aefed243819fd536a"
+    },
+    {
+      "file": "tree_1.png",
+      "ownership_crop": [
+        439,
+        125,
+        789,
+        514
+      ],
+      "alpha_bbox": [
+        7,
+        7,
+        342,
+        382
+      ],
+      "size": [
+        177,
+        198
+      ],
+      "sha256": "0752a19ed495f4b2b6903a59ec996ba4e844f3e2b810ff7a1bbf54869754dfc5"
+    },
+    {
+      "file": "rock_0.png",
+      "ownership_crop": [
+        864,
+        282,
+        1123,
+        502
+      ],
+      "alpha_bbox": [
+        7,
+        7,
+        252,
+        213
+      ],
+      "size": [
+        77,
+        65
+      ],
+      "sha256": "78d60811921a7e0f8339822248b1bed60af5e7dd31a837f5373da0850ec11091"
+    },
+    {
+      "file": "rock_1.png",
+      "ownership_crop": [
+        1253,
+        325,
+        1441,
+        493
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        181,
+        161
+      ],
+      "size": [
+        54,
+        48
+      ],
+      "sha256": "3a0973d86f9e7acf0d02f4bda22f9873f853f8ca7ddcc3e6eeba96e111c044fa"
+    },
+    {
+      "file": "tuft_0.png",
+      "ownership_crop": [
+        114,
+        750,
+        328,
+        891
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        206,
+        134
+      ],
+      "size": [
+        35,
+        22
+      ],
+      "sha256": "0da94f3cb6430f37999d17236d95b1a33d2f6b0539de45529a381f0c68c07b3f"
+    },
+    {
+      "file": "tuft_1.png",
+      "ownership_crop": [
+        503,
+        731,
+        713,
+        893
+      ],
+      "alpha_bbox": [
+        7,
+        7,
+        202,
+        155
+      ],
+      "size": [
+        34,
+        26
+      ],
+      "sha256": "2580effb1fc4c4e3118dc3bc571a4dc4ba670f2e1d1032dc157b70d8545fd329"
+    },
+    {
+      "file": "wood.png",
+      "ownership_crop": [
+        881,
+        761,
+        1117,
+        906
+      ],
+      "alpha_bbox": [
+        8,
+        7,
+        229,
+        137
+      ],
+      "size": [
+        31,
+        18
+      ],
+      "sha256": "2e3a4cfb320b8f7d427900b2d0a66a8e6740c5d83210c211115dedf8c4de6551"
+    },
+    {
+      "file": "axe.png",
+      "ownership_crop": [
+        1296,
+        686,
+        1439,
+        921
+      ],
+      "alpha_bbox": [
+        7,
+        8,
+        135,
+        227
+      ],
+      "size": [
+        82,
+        140
+      ],
+      "sha256": "27c6704f1a194905e0a27dcfecd504247f82f67162ebf62f6930e9b68033b3a2"
+    }
+  ],
+  "alpha": "native RGBA, alpha<=8 cleared; premultiplied Lanczos resize",
+  "tuft_2": "mirrored tuft_0",
+  "meadow": "blurred color patch from new generated grass, low-contrast terrain shader",
+  "status": "integrated candidate awaiting user visual acceptance"
+}

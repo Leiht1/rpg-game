@@ -1,0 +1,51 @@
+{
+  "count": 11,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "chicken_body.png",
+      "pass": true
+    },
+    {
+      "name": "chicken_head.png",
+      "pass": true
+    },
+    {
+      "name": "chicken_head_closed.png",
+      "pass": true
+    },
+    {
+      "name": "chicken_leg.png",
+      "pass": true
+    },
+    {
+      "name": "chicken_wing.png",
+      "pass": true
+    },
+    {
+      "name": "sheep_bare.png",
+      "pass": true
+    },
+    {
+      "name": "sheep_head.png",
+      "pass": true
+    },
+    {
+      "name": "sheep_leg.png",
+      "pass": true
+    },
+    {
+      "name": "sheep_wool.png",
+      "pass": true
+    },
+    {
+      "name": "white_fur.gdshader",
+      "pass": true
+    },
+    {
+      "name": "approved versus formal GPU animal crop",
+      "pass": true,
+      "changed_pixels": 0
+    }
+  ]
+}

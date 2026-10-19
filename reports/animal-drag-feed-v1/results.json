@@ -1,0 +1,154 @@
+{
+	"checks": [
+		{
+			"name": "safe nearby real animal site",
+			"pass": true
+		},
+		{
+			"name": "E no longer feeds selected food",
+			"pass": true
+		},
+		{
+			"name": "feeding remains discoverable without approach tutorial",
+			"pass": true
+		},
+		{
+			"name": "drop target uses actual rendered body",
+			"pass": true
+		},
+		{
+			"name": "native drag begins from slot 0",
+			"pass": true
+		},
+		{
+			"name": "native hotbar drag starts feed reach",
+			"pass": true
+		},
+		{
+			"name": "stack feed one without quantity dialog or early debit",
+			"pass": true
+		},
+		{
+			"name": "food visible in hand during native reach",
+			"pass": true
+		},
+		{
+			"name": "contact commits exactly one food, trust and animal nod",
+			"pass": true
+		},
+		{
+			"name": "contact cannot commit twice",
+			"pass": true
+		},
+		{
+			"name": "recovery clears temporary food",
+			"pass": true
+		},
+		{
+			"name": "cooldown rejects repeat without eating",
+			"pass": true
+		},
+		{
+			"name": "native drag begins from slot 1",
+			"pass": true
+		},
+		{
+			"name": "wrong sheep food gives exact notice without discard",
+			"pass": true
+		},
+		{
+			"name": "native drag begins from slot 8",
+			"pass": true
+		},
+		{
+			"name": "native bag drag restores bag while feeding",
+			"pass": true
+		},
+		{
+			"name": "bag source feeds exactly one",
+			"pass": true
+		},
+		{
+			"name": "cancel before contact has no debit",
+			"pass": true
+		},
+		{
+			"name": "changed source snapshot refuses contact",
+			"pass": true
+		},
+		{
+			"name": "animal out of reach cancels contact",
+			"pass": true
+		},
+		{
+			"name": "failed atomic save restores food and all animal fields",
+			"pass": true
+		},
+		{
+			"name": "equipped tool leaves feeding to free left hand",
+			"pass": true
+		},
+		{
+			"name": "left hand commits normal feed",
+			"pass": true
+		},
+		{
+			"name": "five spaced drag feeds tame sheep",
+			"pass": true
+		},
+		{
+			"name": "E switches follow even with food selected, without consuming",
+			"pass": true
+		},
+		{
+			"name": "E still switches stay",
+			"pass": true
+		},
+		{
+			"name": "trust and feeding fields keep existing save schema",
+			"pass": true
+		},
+		{
+			"name": "snapshot restore retains feeding and tame progress",
+			"pass": true
+		},
+		{
+			"name": "chicken wrong food has species-specific notice",
+			"pass": true
+		},
+		{
+			"name": "chicken accepts dragged berries regardless of selected slot",
+			"pass": true
+		},
+		{
+			"name": "native directional free-hand feed pose front",
+			"pass": true
+		},
+		{
+			"name": "native directional free-hand feed pose back",
+			"pass": true
+		},
+		{
+			"name": "native directional free-hand feed pose left",
+			"pass": true
+		},
+		{
+			"name": "native directional free-hand feed pose right",
+			"pass": true
+		},
+		{
+			"name": "four directional cancelled poses do not consume",
+			"pass": true
+		},
+		{
+			"name": "feed commits to isolated atomic file",
+			"pass": true
+		},
+		{
+			"name": "disk snapshot stores food debit and trust together",
+			"pass": true
+		}
+	],
+	"count": 37,
+	"failed": 0
+}

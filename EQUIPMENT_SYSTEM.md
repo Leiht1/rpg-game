@@ -1,5 +1,13 @@
 # 装备与世界交互 V0.4
 
+## 2026-10-19 · 剪毛时刀刃朝前
+
+剪刀登记aim_forward_actions=[shear]，共用held_tool在动画取样后补偿手臂旋转，让刀刃随人物四向朝前；侧面沿原镜像，背面沿原双腿后显示副本。动作结束恢复原待机角度，不改握点、PNG、时序、耐久或剪毛结算。其他工具未登记则保持原表现。专项见[报告](reports/shear-sign-map-v1/REPORT.md)。
+
+## 2026-10-19 · 剪刀显示与持握
+
+shears正式名称改为剪刀，配方/实例ID和耐久规则不变；物品栏和制作共用收紧透明留白的原图视区。持握按data/held_tools.json加大尺寸、将握点移至手柄并外倾刀刃，避免原偏低握点与直立刀刃藏进手臂。继续共用下方正面手掌握柄/衣身前、背面双腿后、侧面镜像层级，不改held_tool.gd的共用绘制规则。专项见[报告](reports/scissors-exploration-v1/REPORT.md)。
+
 ## 2026-10-18 · 正面工具层级、双手与肩部连接（当前）
 
 所有登记到data/held_tools.json的主手工具统一调用scripts/held_tool.gd。原动画取样后，正面持握右臂在衣身前、工具在原手掌后；不使用全局正/负Z压过世界景物。正面劳动时，双肩按当前Torso内部接点定位，右臂保留原动作旋转与Grip相对握点；空闲臂只在正面劳动时以原部件显示副本置于衣身前、手持臂后，并约束为自然外垂，不交叉盖住持工具手。原ArmLBehind同时隐藏，保证只有一条可见空闲臂。
@@ -73,3 +81,7 @@ ItemService继续使用原路径和原子临时文件替换，snapshot增加equi
 工具候选3图标+3独立地面形态经generate2dsprite/route_media生成，art_source=host_image，route=local:codex-cli，底层图片模型和实际费用未知。原图及提示词在art/tools-v04，soft matte、1px despill、等比统一尺度；最终PNG仅裁去透明留白并加8源像素安全边，未裁可见像素。原图六格未满足15%留白（safe_frame WARN 6，阈值0），没有跨格或边缘裁断；整理检查不能代替画风确认。
 
 Start-Tools-Preview.cmd读取当前世界Seed但显式persistent_world=false，ItemService不导入正式背包；仅在该模式下为三工具查询候选图，临时背包初始提供三工具。原data/items.json的正式工具图路径仍空，旧24图字节保持。预览关闭后不保存试用数量/资源状态，也不创建新正式世界身份。新画稿pending_user；人物动作及手上工具图仍沿用此前获批内容。
+
+## 2026-10-19 · 羊毛剪
+
+羊毛剪注册为 main_hand / shear，沿原独立耐久实例和通用 held_tool 规则显示，四向人物复用现有伸手动作。未修改原角色 PNG 或原工具动画。养殖交互和失败回滚见 [动物规范](ANIMAL_SYSTEM.md)。

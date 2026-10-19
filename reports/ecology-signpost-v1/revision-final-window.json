@@ -1,0 +1,85 @@
+{
+	"checks": [
+		{
+			"name": "worker shares four-territory field 271828 0",
+			"pass": true
+		},
+		{
+			"name": "all four standalone land territories 271828",
+			"pass": true
+		},
+		{
+			"name": "rock interiors exclude mud/forest/grass 271828",
+			"pass": true
+		},
+		{
+			"name": "worker shares four-territory field 447349832 0",
+			"pass": true
+		},
+		{
+			"name": "all four standalone land territories 447349832",
+			"pass": true
+		},
+		{
+			"name": "rock interiors exclude mud/forest/grass 447349832",
+			"pass": true
+		},
+		{
+			"name": "worker shares four-territory field 1671081329 0",
+			"pass": true
+		},
+		{
+			"name": "all four standalone land territories 1671081329",
+			"pass": true
+		},
+		{
+			"name": "rock interiors exclude mud/forest/grass 1671081329",
+			"pass": true
+		},
+		{
+			"name": "paper title stays inside frame without native decoration",
+			"pass": true
+		},
+		{
+			"name": "naming reuses paper frame",
+			"pass": true
+		},
+		{
+			"name": "window border uses paper, no default dark shadow",
+			"pass": true
+		},
+		{
+			"name": "paper dialog cancel remains free",
+			"pass": true
+		},
+		{
+			"name": "paper dialog confirm builds",
+			"pass": true
+		},
+		{
+			"name": "natural ecology matches exclusive rock interior",
+			"pass": true
+		}
+	],
+	"count": 15,
+	"engine": "4.7.2-stable (official)",
+	"failed": 0,
+	"statistics": {
+		"1671081329": {
+			"outside_old_mud": 278,
+			"pure": 278,
+			"rock_interior_cells": 278
+		},
+		"271828": {
+			"outside_old_mud": 394,
+			"pure": 546,
+			"rock_interior_cells": 546
+		},
+		"447349832": {
+			"outside_old_mud": 528,
+			"pure": 528,
+			"rock_interior_cells": 528
+		}
+	},
+	"viewport": "(1280, 720)"
+}

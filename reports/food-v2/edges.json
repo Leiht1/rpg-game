@@ -1,0 +1,42 @@
+{
+	"checks": [
+		{
+			"name": "forced sleep uses existing body state",
+			"pass": true
+		},
+		{
+			"name": "actual sleeping gameplay advances full twenty damage",
+			"pass": true
+		},
+		{
+			"name": "hallucination end does not force wake",
+			"pass": true
+		},
+		{
+			"name": "new recipe disk failure restores materials and job",
+			"pass": true
+		},
+		{
+			"name": "new recipe can start after failed save",
+			"pass": true
+		},
+		{
+			"name": "full bag preserves new cooked output",
+			"pass": true
+		},
+		{
+			"name": "new cooked output claim after space freed",
+			"pass": true
+		},
+		{
+			"name": "mature crop does not wither after ten days",
+			"pass": true
+		},
+		{
+			"name": "fractional cycle version protects source and state",
+			"pass": true
+		}
+	],
+	"count": 9,
+	"failed": 0
+}

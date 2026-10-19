@@ -1,0 +1,76 @@
+{
+  "approval": "pending_user",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "source": "art\\industry-v1\\generated\\generated.png",
+  "source_sha256": "d81137cb8df22964bbb172f63d0ff206f40cfe6f53ac0b32aea4e9f883439894",
+  "ownership_x": [
+    0,
+    260,
+    512,
+    767,
+    1005,
+    1254
+  ],
+  "ownership_y": [
+    0,
+    272,
+    508,
+    736,
+    988,
+    1254
+  ],
+  "files": {
+    "copper_axe.png": "8099a763351a6e4b9cb1969014d05e2498e9244b32ee38c96107f5fe9d6576ee",
+    "copper_hammer.png": "72495b101bd72815d649dc64da177465dbd63d5dbc6549a08c2c704c68b13b7c",
+    "copper_ingot.png": "64e6968f069fd78d48b795e814c9d5d7a3e37796112ad07d9d82840580df7a53",
+    "copper_lamp.png": "e9c5a878597d06132cdd7f4ac2a0c8089a397ba544a74a8f7c1a478ff581d8db",
+    "copper_oven.png": "3d4c2c986aeba5330789570283b4ed73c161665956cb95ba8258f86722b9e55a",
+    "copper_parts.png": "76f8b282154c24fd592b1d4e8244368f406479e6caf95a327b229d64dee75c5c",
+    "copper_pickaxe.png": "3d591d2f08f8de033a7c226a638ac185aa303cad3c9d51eb7442c3deb2824ec3",
+    "copper_plate.png": "c2c7fd3b34d513a12b50b8eff698316a1545cc45fa7b3997856b31c69b4e7d55",
+    "copper_shovel.png": "9ad180ab65b47e9bda4a80ed22fb49d2d0fad055e6ccbcb74031f8837bf385ba",
+    "egg_vegetable_bake.png": "a0abff42fc6b75813b308e72689cfed9f30aa2c9ac3e3860a46065931503b0c2",
+    "feed_trough.png": "59648a54e5c3f824d907649ea3ec863f13f63c9786a3e86cd1f2a6a8db03fe6d",
+    "fishing_rod.png": "7023a424f37bd27a89af6942f05ddd9f8f0e92e5df8eda2f5f93a8ded34ee7fa",
+    "gold_ingot.png": "0609052264b5f7bd88f801a8c36b3e3d6d0f0826b09001111f4c073baa9175ed",
+    "large_hodgepodge.png": "e1202f8052904b361a577d98e044959d151204b057e1041d2d85c55042f746c1",
+    "metal_connector.png": "1c4bf1e1f86a2d3e112fd94dcd814be02d79e771aaf66cb46f6966f0977346bd",
+    "metal_workbench.png": "c0049ca359040c873be57ad0820b9c67d4534cd2a2c638b96c9c4c1100ecd6bd",
+    "refrigerator.png": "b1278a1b4d167ff2f6c7966e4066727b5257ec111405e97ea7081098b7ccf66e",
+    "reinforced_cabinet.png": "44b0f6b7e8788fe38d06769e5c8a41e418d390e625b09a70b52bbce34637c377",
+    "rotten_egg_vegetable_bake.png": "8f6eb4f6e1ec5b91d66193ef38203e8692f49c4973bfff105b5a5ab08eb962dd",
+    "rotten_field_harvest_platter.png": "9747812175d2cf91cf902e7e7760f93fb107e0778ab0d4b75e43be290468d960",
+    "rotten_herb_roasted_mushroom.png": "25acd7bbcab17e42a0f166e85238d6352fd440cc649ccaa4333fd637a35e6f48",
+    "rotten_large_hodgepodge.png": "81656eff8a98c1fe3ab66d50ab84ab35f321a8ef7617914b3266aba40c3d26c7",
+    "rotten_roasted_cabbage.png": "1ac6f9abad3caa7cad64cbee06b526497009dedf17bc4ed9df1e1142a7d10966",
+    "rotten_roasted_carrot.png": "51131309a99a9a69a7033c2e487451c26490af41951a3404fc81a3ee167cd191",
+    "rotten_roasted_fruit_platter.png": "2e86daf5ecf308c41cb8b9fd26fe1703179700e7df1148c7f34783243b526a95",
+    "rotten_roasted_mushroom.png": "e492cca15ce46b955f5df82b026ebb3897cf56efde0d00a028ee5c9ac259cc6b",
+    "rotten_roasted_potato.png": "03e2d8a7d646ccf9d8117a4be7a19aa978b4331b11f26b94a38b3ed2d3f25e91",
+    "rotten_small_hodgepodge.png": "45501a8b03dd5c4cb10c79b88daedf7f86b2c23df31d51b4a72d435d46f2acbf",
+    "rotten_stewed_vegetables.png": "088234fec11fa2a7778ccebbbc989c2ce44ac7f8e6dc6c9c60df573e1f25c23f",
+    "rotten_vegetable_soup.png": "25d8deb6a85e3c92327299872cb88776576c7162282b89f82e2a0fc609c3b6f6",
+    "silver_ingot.png": "1ee784d8c88adad04de7088af96ce54c97a71c1b74dfb3af254683b0f3e66978",
+    "silver_lantern.png": "4ec3e43ad0fa68e2ce226f143cb1d1b863139fcc5d39495467aaf281b283af33",
+    "small_hodgepodge.png": "cd1436db9b84f075df62f764415c44ac991fd3b5300c41673111dce573c6017b",
+    "stone_furnace.png": "bdf7c064fbaac68577a6e13deb31abcd04cbdf2276a8be19637d42fe1059d8be",
+    "wool_carpet.png": "c02a48a2a0fac64f96709440e7da259ae7bb9beb83187979f6a55a66347b597f"
+  },
+  "rotten_source": "art\\industry-v1\\rotten-generated\\generated.png",
+  "rotten_source_sha256": "2c12266b32109411a59d75ce182dc489db573bbb488490ccbb8efc97350dfe4e",
+  "hodgepodge_source": "art\\industry-v1\\hodgepodge-generated\\generated.png",
+  "hodgepodge_source_sha256": "2690f1dfe0aa0311728bfb04cc4f8dbe8556422d9f1a64bbfa2158d433ad6af3",
+  "hodgepodge_ownership": {
+    "x": [
+      0,
+      575,
+      1254
+    ],
+    "y": [
+      0,
+      627,
+      1254
+    ]
+  }
+}

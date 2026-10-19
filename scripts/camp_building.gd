@@ -27,9 +27,10 @@ func _ready() -> void:
 	var row: Dictionary=manager.states[building_id]
 	var d: Dictionary=manager.definitions[row.kind]
 	set_meta("planting_soil",row.kind=="tilled_soil");set_meta("building_id",building_id);set_meta("prop_id",building_id);set_meta("camp_layer",row.layer)
-	set_meta("display_name",d.name);set_meta("interaction_action","open" if d.get("door",false) or row.kind in ["wood_chest","workbench"] else "sleep" if d.get("sleep",false) else "inspect")
+	set_meta("display_name",str(row.text) if row.kind=="signpost" else d.name);set_meta("interaction_action","open" if d.get("door",false) or row.kind in ["wood_chest","workbench"] or d.get("industry_candidate",false) else "sleep" if d.get("sleep",false) else "inspect")
 	set_meta("interaction_range",100.0);add_to_group("world_interactables")
 	if row.layer=="ground": z_index=-1
+	if row.layer=="overlay":z_index=0
 	if row.layer=="edge":
 		y_sort_enabled=true
 		for endpoint in preload("res://scripts/camp_grid.gd").ends(row):
@@ -38,7 +39,7 @@ func _ready() -> void:
 			post.position=Vector2(endpoint)*preload("res://scripts/camp_grid.gd").STEP-position
 			add_child(post)
 			post.draw.connect(draw_joint.bind(post,preload("res://scripts/camp_grid.gd").junction(manager.states,endpoint).stone))
-	if row.layer!="ground":
+	if row.layer not in ["ground","overlay"]:
 		var rect := RectangleShape2D.new()
 		rect.size=(Vector2(8,64) if row.vertical else Vector2(96,8)) if row.layer=="edge" else manager.footprint(row)
 		shape.shape=rect
@@ -99,6 +100,23 @@ func planting_texture(asset: String) -> Texture2D:
 func _draw() -> void:
 	if not manager.states.has(building_id): return
 	var r: Dictionary=manager.states[building_id];var d: Dictionary=manager.definitions[r.kind]
+	if d.get("industry_candidate",false):
+		var path: String=d.art
+		if FileAccess.file_exists(path):
+			var image: Texture2D=preload("res://scripts/candidate_art.gd").texture(path)
+			if r.kind=="wool_carpet":
+				draw_texture_rect(image,Rect2(Vector2(-48,-32),Vector2(96,64)),false)
+				return
+			var extent: Vector2=image.get_size()*minf(88.0/image.get_width(),96.0/image.get_height())
+			draw_texture_rect(image,Rect2(Vector2(-extent.x*.5,8-extent.y),extent),false)
+		return
+	if r.kind=="signpost":
+		var path := "res://assets/buildings/signpost_v1/signpost.png"
+		if not manager.textures.has(path):manager.textures[path]=load(path)
+		var image: Texture2D=manager.textures[path]
+		var extent := Vector2(image.get_size())*minf(74.0/image.get_width(),86.0/image.get_height())
+		draw_texture_rect(image,Rect2(Vector2(-extent.x*.5,8-extent.y),extent),false)
+		return
 	if r.kind=="tilled_soil":
 		var soil := planting_texture("soil")
 		if soil: draw_texture_rect(soil,preload("res://scripts/planting.gd").soil_rect(),false)
@@ -195,6 +213,13 @@ func perform_interaction(_action: String, _player: Node2D) -> bool:
 		if not reason.is_empty(): manager.service.notice.emit(reason)
 		return reason.is_empty()
 	if d.get("sleep",false): manager.service.sleep_ui.open(building_id);return true
+	if r.kind=="signpost":manager.service.notice.emit(str(r.text));return true
+	if manager.storage_kind(r.kind):manager.service.storage_ui.open(building_id);return true
+	if r.kind=="copper_lamp":
+		var reason: String=manager.service.industry.act(building_id,"toggle")
+		if not reason.is_empty():manager.service.notice.emit(reason)
+		return reason.is_empty()
+	if manager.service.industry.machine(r.kind):manager.service.industry_ui.open(building_id);return true
 	if r.kind=="workbench": manager.service.world.item_ui.toggle_craft(building_id);return true
 	if r.kind=="wood_chest": manager.service.storage_ui.open(building_id);return true
 	manager.service.notice.emit("装备石锤后按E拆除" if r.kind!="camp_torch" else "营地火把在夜晚提供照明；装备石锤可拆除")
@@ -276,6 +301,8 @@ func position_damage() -> void:
 			top=minf(top,minf(points[0].y,points[1].y)-40)
 	elif manager.definitions[r.kind].get("sleep",false):
 		top=-56 if r.kind=="wood_bed" else -40
+	elif r.kind=="signpost":
+		top=-78.0
 	elif r.layer=="free":
 		var image := texture(int(manager.definitions[r.kind].frame))
 		top=8-image.get_height()*minf(80.0/image.get_width(),92.0/image.get_height())

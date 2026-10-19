@@ -131,5 +131,120 @@
     "cost": {},
     "hits": 1,
     "frame": 0
+  },
+  "signpost": {
+    "name": "路标",
+    "layer": "free",
+    "cost": {
+      "wood": 3,
+      "plant_fiber": 2
+    },
+    "hits": 2,
+    "frame": 0
+  },
+  "stone_furnace": {
+    "name": "石制熔炉",
+    "layer": "free",
+    "cost": {
+      "stone": 16,
+      "wood": 6,
+      "flint": 3
+    },
+    "hits": 3,
+    "frame": 0,
+    "industry_candidate": true,
+    "art": "res://prototypes/industry-v1/final/stone_furnace.png"
+  },
+  "metal_workbench": {
+    "name": "金属加工台",
+    "layer": "free",
+    "cost": {
+      "copper_ingot": 3,
+      "wood": 12,
+      "stone": 6
+    },
+    "hits": 3,
+    "frame": 0,
+    "industry_candidate": true,
+    "art": "res://prototypes/industry-v1/final/metal_workbench.png"
+  },
+  "copper_oven": {
+    "name": "铜制烤箱",
+    "layer": "free",
+    "cost": {
+      "copper_plate": 4,
+      "copper_parts": 2,
+      "stone": 8,
+      "wood": 4
+    },
+    "hits": 3,
+    "frame": 0,
+    "industry_candidate": true,
+    "art": "res://prototypes/industry-v1/final/copper_oven.png"
+  },
+  "copper_lamp": {
+    "name": "铜制立灯",
+    "layer": "free",
+    "cost": {
+      "copper_ingot": 6,
+      "copper_parts": 2,
+      "wood": 3
+    },
+    "hits": 3,
+    "frame": 0,
+    "industry_candidate": true,
+    "art": "res://prototypes/industry-v1/final/copper_lamp.png"
+  },
+  "reinforced_cabinet": {
+    "name": "加固储物柜",
+    "layer": "free",
+    "cost": {
+      "wood": 18,
+      "copper_plate": 3,
+      "metal_connector": 2
+    },
+    "hits": 3,
+    "frame": 0,
+    "industry_candidate": true,
+    "art": "res://prototypes/industry-v1/final/reinforced_cabinet.png",
+    "storage_slots": 24
+  },
+  "feed_trough": {
+    "name": "动物饲料槽",
+    "layer": "free",
+    "cost": {
+      "wood": 8,
+      "metal_connector": 1
+    },
+    "hits": 3,
+    "frame": 0,
+    "industry_candidate": true,
+    "art": "res://prototypes/industry-v1/final/feed_trough.png"
+  },
+  "refrigerator": {
+    "name": "冰箱",
+    "layer": "free",
+    "cost": {
+      "copper_plate": 5,
+      "copper_parts": 3,
+      "wood": 12
+    },
+    "hits": 3,
+    "frame": 0,
+    "industry_candidate": true,
+    "art": "res://prototypes/industry-v1/final/refrigerator.png",
+    "storage_slots": 12
+  },
+  "wool_carpet": {
+    "name": "羊毛地毯",
+    "layer": "overlay",
+    "cost": {
+      "wool": 3,
+      "plant_fiber": 2
+    },
+    "hits": 3,
+    "frame": 0,
+    "industry_candidate": true,
+    "art": "res://prototypes/industry-v1/final/wool_carpet.png"
   }
 }

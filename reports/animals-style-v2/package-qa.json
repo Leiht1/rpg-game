@@ -1,0 +1,175 @@
+{
+  "count": 42,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "candidate provenance SHA chicken_body.png",
+      "pass": true
+    },
+    {
+      "name": "visible opaque part with real alpha chicken_body.png",
+      "pass": true
+    },
+    {
+      "name": "packaged opaque magenta residue zero chicken_body.png",
+      "pass": true
+    },
+    {
+      "name": "candidate provenance SHA chicken_head.png",
+      "pass": true
+    },
+    {
+      "name": "visible opaque part with real alpha chicken_head.png",
+      "pass": true
+    },
+    {
+      "name": "packaged opaque magenta residue zero chicken_head.png",
+      "pass": true
+    },
+    {
+      "name": "candidate provenance SHA chicken_head_closed.png",
+      "pass": true
+    },
+    {
+      "name": "visible opaque part with real alpha chicken_head_closed.png",
+      "pass": true
+    },
+    {
+      "name": "packaged opaque magenta residue zero chicken_head_closed.png",
+      "pass": true
+    },
+    {
+      "name": "candidate provenance SHA chicken_leg.png",
+      "pass": true
+    },
+    {
+      "name": "visible opaque part with real alpha chicken_leg.png",
+      "pass": true
+    },
+    {
+      "name": "packaged opaque magenta residue zero chicken_leg.png",
+      "pass": true
+    },
+    {
+      "name": "candidate provenance SHA chicken_wing.png",
+      "pass": true
+    },
+    {
+      "name": "visible opaque part with real alpha chicken_wing.png",
+      "pass": true
+    },
+    {
+      "name": "packaged opaque magenta residue zero chicken_wing.png",
+      "pass": true
+    },
+    {
+      "name": "candidate provenance SHA sheep_bare.png",
+      "pass": true
+    },
+    {
+      "name": "visible opaque part with real alpha sheep_bare.png",
+      "pass": true
+    },
+    {
+      "name": "packaged opaque magenta residue zero sheep_bare.png",
+      "pass": true
+    },
+    {
+      "name": "candidate provenance SHA sheep_head.png",
+      "pass": true
+    },
+    {
+      "name": "visible opaque part with real alpha sheep_head.png",
+      "pass": true
+    },
+    {
+      "name": "packaged opaque magenta residue zero sheep_head.png",
+      "pass": true
+    },
+    {
+      "name": "candidate provenance SHA sheep_leg.png",
+      "pass": true
+    },
+    {
+      "name": "visible opaque part with real alpha sheep_leg.png",
+      "pass": true
+    },
+    {
+      "name": "packaged opaque magenta residue zero sheep_leg.png",
+      "pass": true
+    },
+    {
+      "name": "candidate provenance SHA sheep_wool.png",
+      "pass": true
+    },
+    {
+      "name": "visible opaque part with real alpha sheep_wool.png",
+      "pass": true
+    },
+    {
+      "name": "packaged opaque magenta residue zero sheep_wool.png",
+      "pass": true
+    },
+    {
+      "name": "sheep wool/bare common registered canvas",
+      "pass": true
+    },
+    {
+      "name": "formal animal art remains original chicken_body.png",
+      "pass": true
+    },
+    {
+      "name": "formal animal art remains original chicken_egg.png",
+      "pass": true
+    },
+    {
+      "name": "formal animal art remains original chicken_head.png",
+      "pass": true
+    },
+    {
+      "name": "formal animal art remains original chicken_head_closed.png",
+      "pass": true
+    },
+    {
+      "name": "formal animal art remains original chicken_leg.png",
+      "pass": true
+    },
+    {
+      "name": "formal animal art remains original chicken_wing.png",
+      "pass": true
+    },
+    {
+      "name": "formal animal art remains original shears.png",
+      "pass": true
+    },
+    {
+      "name": "formal animal art remains original sheep_bare.png",
+      "pass": true
+    },
+    {
+      "name": "formal animal art remains original sheep_head.png",
+      "pass": true
+    },
+    {
+      "name": "formal animal art remains original sheep_leg.png",
+      "pass": true
+    },
+    {
+      "name": "formal animal art remains original sheep_wool.png",
+      "pass": true
+    },
+    {
+      "name": "formal animal art remains original wool.png",
+      "pass": true
+    },
+    {
+      "name": "reference retained art/animals-style-v2/hero-reference.png",
+      "pass": true
+    },
+    {
+      "name": "reference retained art/animals-style-v2/scene-reference.png",
+      "pass": true
+    }
+  ],
+  "scope": "packaged cutouts, original formal animal SHA, retained source references; not visual approval"
+}

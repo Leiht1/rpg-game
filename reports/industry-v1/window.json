@@ -1,0 +1,626 @@
+{
+	"checks": [
+		{
+			"name": "item definitions valid",
+			"pass": true
+		},
+		{
+			"name": "building recipe definitions valid",
+			"pass": true
+		},
+		{
+			"name": "original crafting definitions valid",
+			"pass": true
+		},
+		{
+			"name": "reinforced cabinet has 24 slots",
+			"pass": true
+		},
+		{
+			"name": "refrigerator has 12 slots",
+			"pass": true
+		},
+		{
+			"name": "furnace starts with paid ore",
+			"pass": true
+		},
+		{
+			"name": "smelting consumes two ore once",
+			"pass": true
+		},
+		{
+			"name": "no fuel pauses progress",
+			"pass": true
+		},
+		{
+			"name": "unfinished output cannot be claimed",
+			"pass": true
+		},
+		{
+			"name": "invalid fuel rejected",
+			"pass": true
+		},
+		{
+			"name": "fuel added transactionally",
+			"pass": true
+		},
+		{
+			"name": "powered furnace advances",
+			"pass": true
+		},
+		{
+			"name": "second metal queues",
+			"pass": true
+		},
+		{
+			"name": "queue persisted in building",
+			"pass": true
+		},
+		{
+			"name": "copper completes",
+			"pass": true
+		},
+		{
+			"name": "claim save failure reported",
+			"pass": true
+		},
+		{
+			"name": "failed claim restores output and inventory",
+			"pass": true
+		},
+		{
+			"name": "claim successful",
+			"pass": true
+		},
+		{
+			"name": "claim uses unified obtained event",
+			"pass": true
+		},
+		{
+			"name": "duplicate claim blocked",
+			"pass": true
+		},
+		{
+			"name": "queued silver completes",
+			"pass": true
+		},
+		{
+			"name": "silver claimed",
+			"pass": true
+		},
+		{
+			"name": "start metal_copper_plate",
+			"pass": true
+		},
+		{
+			"name": "claim metal_copper_plate",
+			"pass": true
+		},
+		{
+			"name": "start metal_copper_parts",
+			"pass": true
+		},
+		{
+			"name": "claim metal_copper_parts",
+			"pass": true
+		},
+		{
+			"name": "start metal_metal_connector",
+			"pass": true
+		},
+		{
+			"name": "claim metal_metal_connector",
+			"pass": true
+		},
+		{
+			"name": "start metal_copper_axe",
+			"pass": true
+		},
+		{
+			"name": "claim metal_copper_axe",
+			"pass": true
+		},
+		{
+			"name": "start metal_copper_pickaxe",
+			"pass": true
+		},
+		{
+			"name": "claim metal_copper_pickaxe",
+			"pass": true
+		},
+		{
+			"name": "start metal_copper_shovel",
+			"pass": true
+		},
+		{
+			"name": "claim metal_copper_shovel",
+			"pass": true
+		},
+		{
+			"name": "start metal_copper_hammer",
+			"pass": true
+		},
+		{
+			"name": "claim metal_copper_hammer",
+			"pass": true
+		},
+		{
+			"name": "start metal_fishing_rod",
+			"pass": true
+		},
+		{
+			"name": "claim metal_fishing_rod",
+			"pass": true
+		},
+		{
+			"name": "start metal_silver_lantern",
+			"pass": true
+		},
+		{
+			"name": "claim metal_silver_lantern",
+			"pass": true
+		},
+		{
+			"name": "250 durability copper_axe",
+			"pass": true
+		},
+		{
+			"name": "labor speed improves copper_axe",
+			"pass": true
+		},
+		{
+			"name": "250 durability copper_pickaxe",
+			"pass": true
+		},
+		{
+			"name": "labor speed improves copper_pickaxe",
+			"pass": true
+		},
+		{
+			"name": "250 durability copper_shovel",
+			"pass": true
+		},
+		{
+			"name": "labor speed improves copper_shovel",
+			"pass": true
+		},
+		{
+			"name": "250 durability copper_hammer",
+			"pass": true
+		},
+		{
+			"name": "labor speed improves copper_hammer",
+			"pass": true
+		},
+		{
+			"name": "fishing rod equips via hotbar alias",
+			"pass": true
+		},
+		{
+			"name": "rod reserves interface without mining",
+			"pass": true
+		},
+		{
+			"name": "oven shared fuel added",
+			"pass": true
+		},
+		{
+			"name": "independent oven slot 0",
+			"pass": true
+		},
+		{
+			"name": "independent oven slot 1",
+			"pass": true
+		},
+		{
+			"name": "independent oven slot 2",
+			"pass": true
+		},
+		{
+			"name": "independent oven slot 3",
+			"pass": true
+		},
+		{
+			"name": "occupied oven slot protected",
+			"pass": true
+		},
+		{
+			"name": "bad recipe never consumes",
+			"pass": true
+		},
+		{
+			"name": "all four independent jobs advance",
+			"pass": true
+		},
+		{
+			"name": "one fuel supply burns once for four jobs",
+			"pass": true
+		},
+		{
+			"name": "oven pauses without losing progress",
+			"pass": true
+		},
+		{
+			"name": "four jobs complete independently",
+			"pass": true
+		},
+		{
+			"name": "claim oven slot 0",
+			"pass": true
+		},
+		{
+			"name": "claim oven slot 1",
+			"pass": true
+		},
+		{
+			"name": "claim oven slot 2",
+			"pass": true
+		},
+		{
+			"name": "claim oven slot 3",
+			"pass": true
+		},
+		{
+			"name": "claimed slots return empty",
+			"pass": true
+		},
+		{
+			"name": "real recipe wins over fallback",
+			"pass": true
+		},
+		{
+			"name": "two total ingredients make small hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "three quantities of one ingredient make large hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "fallback rejects empty nonfood and negative quantities",
+			"pass": true
+		},
+		{
+			"name": "start small_hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "fallback pays exact ingredient quantity small_hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "fallback output completes small_hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "full inventory preserves ready small_hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "claim small_hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "only hunger benefit small_hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "start large_hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "fallback pays exact ingredient quantity large_hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "fallback output completes large_hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "full inventory preserves ready large_hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "claim large_hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "only hunger benefit large_hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "copper lamp starts on",
+			"pass": true
+		},
+		{
+			"name": "copper lamp toggles off without removal",
+			"pass": true
+		},
+		{
+			"name": "standing lamp never accepts fuel",
+			"pass": true
+		},
+		{
+			"name": "cooked stack splits",
+			"pass": true
+		},
+		{
+			"name": "split preserves source fraction",
+			"pass": true
+		},
+		{
+			"name": "different freshness swaps without refreshing",
+			"pass": true
+		},
+		{
+			"name": "aging does not invalidate drag identity",
+			"pass": true
+		},
+		{
+			"name": "cooked food enters fridge",
+			"pass": true
+		},
+		{
+			"name": "ambient life is 2.5 days",
+			"pass": true
+		},
+		{
+			"name": "fridge preserves remaining ratio over seven days",
+			"pass": true
+		},
+		{
+			"name": "fridge rejects nonfood",
+			"pass": true
+		},
+		{
+			"name": "raw food never rots wild_berry",
+			"pass": true
+		},
+		{
+			"name": "raw food never rots brown_mushroom",
+			"pass": true
+		},
+		{
+			"name": "raw food never rots wild_carrot",
+			"pass": true
+		},
+		{
+			"name": "raw food never rots wild_apple",
+			"pass": true
+		},
+		{
+			"name": "raw food never rots wildflower",
+			"pass": true
+		},
+		{
+			"name": "raw food never rots potato",
+			"pass": true
+		},
+		{
+			"name": "raw food never rots cabbage",
+			"pass": true
+		},
+		{
+			"name": "legacy cooked food safely starts fresh",
+			"pass": true
+		},
+		{
+			"name": "invalid negative spoilage rejected",
+			"pass": true
+		},
+		{
+			"name": "out of range spoilage rejected",
+			"pass": true
+		},
+		{
+			"name": "rotten cooked food remains edible",
+			"pass": true
+		},
+		{
+			"name": "rotten meal gives quarter hunger and minus five health",
+			"pass": true
+		},
+		{
+			"name": "discomfort feedback is short and independent",
+			"pass": true
+		},
+		{
+			"name": "trough accepts preferred feed",
+			"pass": true
+		},
+		{
+			"name": "trough has no withdrawal operation",
+			"pass": true
+		},
+		{
+			"name": "trough rejects unsuitable material",
+			"pass": true
+		},
+		{
+			"name": "one feed renews tamed animal nutrition",
+			"pass": true
+		},
+		{
+			"name": "already fed animal never consumes twice",
+			"pass": true
+		},
+		{
+			"name": "failed automatic feeding rolls back food and animal",
+			"pass": true
+		},
+		{
+			"name": "partially full inventory takes available food quantity",
+			"pass": true
+		},
+		{
+			"name": "partial pickup preserves remainder quantity and freshness",
+			"pass": true
+		},
+		{
+			"name": "pickup save failure restores loose food and inventory",
+			"pass": true
+		},
+		{
+			"name": "aged dropped food returns without resetting freshness",
+			"pass": true
+		},
+		{
+			"name": "carpet rejects natural ground",
+			"pass": true
+		},
+		{
+			"name": "carpet overlay never conflicts with base floor",
+			"pass": true
+		},
+		{
+			"name": "base floor protected against floating carpet",
+			"pass": true
+		},
+		{
+			"name": "equipped silver lantern uses existing light service",
+			"pass": true
+		},
+		{
+			"name": "expired lantern removes equipment and aliases",
+			"pass": true
+		},
+		{
+			"name": "fallback job stored for separate process restore",
+			"pass": true
+		},
+		{
+			"name": "atomic fixture snapshot saves",
+			"pass": true
+		},
+		{
+			"name": "complete building snapshot validates",
+			"pass": true
+		},
+		{
+			"name": "oven opens four row UI",
+			"pass": true
+		},
+		{
+			"name": "oven rows vertically ordered 1",
+			"pass": true
+		},
+		{
+			"name": "oven rows vertically ordered 2",
+			"pass": true
+		},
+		{
+			"name": "oven rows vertically ordered 3",
+			"pass": true
+		},
+		{
+			"name": "plus opens separate ingredient window without expanding oven",
+			"pass": true
+		},
+		{
+			"name": "cancel ingredient window consumes nothing",
+			"pass": true
+		},
+		{
+			"name": "ingredient confirmation starts selected slot and closes popup",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_axe0",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_axe1",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_axe2",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_axe3",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_pickaxe0",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_pickaxe1",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_pickaxe2",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_pickaxe3",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_shovel0",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_shovel1",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_shovel2",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_shovel3",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_hammer0",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_hammer1",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_hammer2",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool copper_hammer3",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool silver_lantern0",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool silver_lantern1",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool silver_lantern2",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool silver_lantern3",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool fishing_rod0",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool fishing_rod1",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool fishing_rod2",
+			"pass": true
+		},
+		{
+			"name": "hand anchor touches tool fishing_rod3",
+			"pass": true
+		}
+	],
+	"count": 155,
+	"failed": 0
+}

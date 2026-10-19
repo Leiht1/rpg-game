@@ -1,0 +1,1133 @@
+{
+  "schema": "windrest.map-library.v1",
+  "entries": [
+    {
+      "id": "spawn_meadow__ground__base__v01",
+      "biome": "spawn_meadow",
+      "category": "ground",
+      "slot": "base",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/grass.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "spawn_meadow__ground__variation__v01",
+      "biome": "spawn_meadow",
+      "category": "ground",
+      "slot": "variation",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__ground__sparse__v01",
+      "biome": "spawn_meadow",
+      "category": "ground",
+      "slot": "sparse",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__ground__edge__v01",
+      "biome": "spawn_meadow",
+      "category": "ground",
+      "slot": "edge",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__plants__tree_large__v01",
+      "biome": "spawn_meadow",
+      "category": "plants",
+      "slot": "tree_large",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tree_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "spawn_meadow__plants__tree_small__v01",
+      "biome": "spawn_meadow",
+      "category": "plants",
+      "slot": "tree_small",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tree_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "spawn_meadow__plants__shrub__v01",
+      "biome": "spawn_meadow",
+      "category": "plants",
+      "slot": "shrub",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__plants__undergrowth__v01",
+      "biome": "spawn_meadow",
+      "category": "plants",
+      "slot": "undergrowth",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__plants__accent__v01",
+      "biome": "spawn_meadow",
+      "category": "plants",
+      "slot": "accent",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__rocks__large__v01",
+      "biome": "spawn_meadow",
+      "category": "rocks",
+      "slot": "large",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/rock_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "spawn_meadow__rocks__medium__v01",
+      "biome": "spawn_meadow",
+      "category": "rocks",
+      "slot": "medium",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/rock_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "spawn_meadow__rocks__small__v01",
+      "biome": "spawn_meadow",
+      "category": "rocks",
+      "slot": "small",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__rocks__silhouette_variant__v01",
+      "biome": "spawn_meadow",
+      "category": "rocks",
+      "slot": "silhouette_variant",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__props__branch__v01",
+      "biome": "spawn_meadow",
+      "category": "props",
+      "slot": "branch",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__props__stump__v01",
+      "biome": "spawn_meadow",
+      "category": "props",
+      "slot": "stump",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__props__log__v01",
+      "biome": "spawn_meadow",
+      "category": "props",
+      "slot": "log",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__props__pebbles__v01",
+      "biome": "spawn_meadow",
+      "category": "props",
+      "slot": "pebbles",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__props__leaf_pile__v01",
+      "biome": "spawn_meadow",
+      "category": "props",
+      "slot": "leaf_pile",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tuft_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "spawn_meadow__props__flowers__v01",
+      "biome": "spawn_meadow",
+      "category": "props",
+      "slot": "flowers",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tuft_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "spawn_meadow__transitions__meadow_forest__v01",
+      "biome": "spawn_meadow",
+      "category": "transitions",
+      "slot": "meadow_forest",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__transitions__meadow_highland__v01",
+      "biome": "spawn_meadow",
+      "category": "transitions",
+      "slot": "meadow_highland",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__transitions__meadow_shore__v01",
+      "biome": "spawn_meadow",
+      "category": "transitions",
+      "slot": "meadow_shore",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__transitions__forest_clearing__v01",
+      "biome": "spawn_meadow",
+      "category": "transitions",
+      "slot": "forest_clearing",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "spawn_meadow__transitions__scree__v01",
+      "biome": "spawn_meadow",
+      "category": "transitions",
+      "slot": "scree",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__ground__base__v01",
+      "biome": "forest",
+      "category": "ground",
+      "slot": "base",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/grass.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "forest__ground__variation__v01",
+      "biome": "forest",
+      "category": "ground",
+      "slot": "variation",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__ground__sparse__v01",
+      "biome": "forest",
+      "category": "ground",
+      "slot": "sparse",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__ground__edge__v01",
+      "biome": "forest",
+      "category": "ground",
+      "slot": "edge",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__plants__tree_large__v01",
+      "biome": "forest",
+      "category": "plants",
+      "slot": "tree_large",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tree_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "forest__plants__tree_small__v01",
+      "biome": "forest",
+      "category": "plants",
+      "slot": "tree_small",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tree_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "forest__plants__shrub__v01",
+      "biome": "forest",
+      "category": "plants",
+      "slot": "shrub",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__plants__undergrowth__v01",
+      "biome": "forest",
+      "category": "plants",
+      "slot": "undergrowth",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__plants__accent__v01",
+      "biome": "forest",
+      "category": "plants",
+      "slot": "accent",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__rocks__large__v01",
+      "biome": "forest",
+      "category": "rocks",
+      "slot": "large",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/rock_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "forest__rocks__medium__v01",
+      "biome": "forest",
+      "category": "rocks",
+      "slot": "medium",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/rock_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "forest__rocks__small__v01",
+      "biome": "forest",
+      "category": "rocks",
+      "slot": "small",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__rocks__silhouette_variant__v01",
+      "biome": "forest",
+      "category": "rocks",
+      "slot": "silhouette_variant",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__props__branch__v01",
+      "biome": "forest",
+      "category": "props",
+      "slot": "branch",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__props__stump__v01",
+      "biome": "forest",
+      "category": "props",
+      "slot": "stump",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__props__log__v01",
+      "biome": "forest",
+      "category": "props",
+      "slot": "log",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__props__pebbles__v01",
+      "biome": "forest",
+      "category": "props",
+      "slot": "pebbles",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__props__leaf_pile__v01",
+      "biome": "forest",
+      "category": "props",
+      "slot": "leaf_pile",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tuft_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "forest__props__flowers__v01",
+      "biome": "forest",
+      "category": "props",
+      "slot": "flowers",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tuft_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "forest__transitions__meadow_forest__v01",
+      "biome": "forest",
+      "category": "transitions",
+      "slot": "meadow_forest",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__transitions__meadow_highland__v01",
+      "biome": "forest",
+      "category": "transitions",
+      "slot": "meadow_highland",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__transitions__meadow_shore__v01",
+      "biome": "forest",
+      "category": "transitions",
+      "slot": "meadow_shore",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__transitions__forest_clearing__v01",
+      "biome": "forest",
+      "category": "transitions",
+      "slot": "forest_clearing",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__transitions__scree__v01",
+      "biome": "forest",
+      "category": "transitions",
+      "slot": "scree",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__ground__base__v01",
+      "biome": "highland",
+      "category": "ground",
+      "slot": "base",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/grass.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "highland__ground__variation__v01",
+      "biome": "highland",
+      "category": "ground",
+      "slot": "variation",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__ground__sparse__v01",
+      "biome": "highland",
+      "category": "ground",
+      "slot": "sparse",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__ground__edge__v01",
+      "biome": "highland",
+      "category": "ground",
+      "slot": "edge",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__plants__tree_large__v01",
+      "biome": "highland",
+      "category": "plants",
+      "slot": "tree_large",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tree_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "highland__plants__tree_small__v01",
+      "biome": "highland",
+      "category": "plants",
+      "slot": "tree_small",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tree_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "highland__plants__shrub__v01",
+      "biome": "highland",
+      "category": "plants",
+      "slot": "shrub",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__plants__undergrowth__v01",
+      "biome": "highland",
+      "category": "plants",
+      "slot": "undergrowth",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__plants__accent__v01",
+      "biome": "highland",
+      "category": "plants",
+      "slot": "accent",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__rocks__large__v01",
+      "biome": "highland",
+      "category": "rocks",
+      "slot": "large",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/rock_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "highland__rocks__medium__v01",
+      "biome": "highland",
+      "category": "rocks",
+      "slot": "medium",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/rock_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "highland__rocks__small__v01",
+      "biome": "highland",
+      "category": "rocks",
+      "slot": "small",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__rocks__silhouette_variant__v01",
+      "biome": "highland",
+      "category": "rocks",
+      "slot": "silhouette_variant",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__props__branch__v01",
+      "biome": "highland",
+      "category": "props",
+      "slot": "branch",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__props__stump__v01",
+      "biome": "highland",
+      "category": "props",
+      "slot": "stump",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__props__log__v01",
+      "biome": "highland",
+      "category": "props",
+      "slot": "log",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__props__pebbles__v01",
+      "biome": "highland",
+      "category": "props",
+      "slot": "pebbles",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__props__leaf_pile__v01",
+      "biome": "highland",
+      "category": "props",
+      "slot": "leaf_pile",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tuft_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "highland__props__flowers__v01",
+      "biome": "highland",
+      "category": "props",
+      "slot": "flowers",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tuft_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "highland__transitions__meadow_forest__v01",
+      "biome": "highland",
+      "category": "transitions",
+      "slot": "meadow_forest",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__transitions__meadow_highland__v01",
+      "biome": "highland",
+      "category": "transitions",
+      "slot": "meadow_highland",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__transitions__meadow_shore__v01",
+      "biome": "highland",
+      "category": "transitions",
+      "slot": "meadow_shore",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__transitions__forest_clearing__v01",
+      "biome": "highland",
+      "category": "transitions",
+      "slot": "forest_clearing",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "highland__transitions__scree__v01",
+      "biome": "highland",
+      "category": "transitions",
+      "slot": "scree",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__ground__base__v01",
+      "biome": "shore",
+      "category": "ground",
+      "slot": "base",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/grass.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "shore__ground__variation__v01",
+      "biome": "shore",
+      "category": "ground",
+      "slot": "variation",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__ground__sparse__v01",
+      "biome": "shore",
+      "category": "ground",
+      "slot": "sparse",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__ground__edge__v01",
+      "biome": "shore",
+      "category": "ground",
+      "slot": "edge",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__plants__tree_large__v01",
+      "biome": "shore",
+      "category": "plants",
+      "slot": "tree_large",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tree_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "shore__plants__tree_small__v01",
+      "biome": "shore",
+      "category": "plants",
+      "slot": "tree_small",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tree_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "shore__plants__shrub__v01",
+      "biome": "shore",
+      "category": "plants",
+      "slot": "shrub",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__plants__undergrowth__v01",
+      "biome": "shore",
+      "category": "plants",
+      "slot": "undergrowth",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__plants__accent__v01",
+      "biome": "shore",
+      "category": "plants",
+      "slot": "accent",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__rocks__large__v01",
+      "biome": "shore",
+      "category": "rocks",
+      "slot": "large",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/rock_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "shore__rocks__medium__v01",
+      "biome": "shore",
+      "category": "rocks",
+      "slot": "medium",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/rock_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "shore__rocks__small__v01",
+      "biome": "shore",
+      "category": "rocks",
+      "slot": "small",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__rocks__silhouette_variant__v01",
+      "biome": "shore",
+      "category": "rocks",
+      "slot": "silhouette_variant",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__props__branch__v01",
+      "biome": "shore",
+      "category": "props",
+      "slot": "branch",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__props__stump__v01",
+      "biome": "shore",
+      "category": "props",
+      "slot": "stump",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__props__log__v01",
+      "biome": "shore",
+      "category": "props",
+      "slot": "log",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__props__pebbles__v01",
+      "biome": "shore",
+      "category": "props",
+      "slot": "pebbles",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__props__leaf_pile__v01",
+      "biome": "shore",
+      "category": "props",
+      "slot": "leaf_pile",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tuft_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "shore__props__flowers__v01",
+      "biome": "shore",
+      "category": "props",
+      "slot": "flowers",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tuft_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "shore__transitions__meadow_forest__v01",
+      "biome": "shore",
+      "category": "transitions",
+      "slot": "meadow_forest",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__transitions__meadow_highland__v01",
+      "biome": "shore",
+      "category": "transitions",
+      "slot": "meadow_highland",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__transitions__meadow_shore__v01",
+      "biome": "shore",
+      "category": "transitions",
+      "slot": "meadow_shore",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__transitions__forest_clearing__v01",
+      "biome": "shore",
+      "category": "transitions",
+      "slot": "forest_clearing",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "shore__transitions__scree__v01",
+      "biome": "shore",
+      "category": "transitions",
+      "slot": "scree",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__ground__base__v01",
+      "biome": "open_field",
+      "category": "ground",
+      "slot": "base",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/grass.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "open_field__ground__variation__v01",
+      "biome": "open_field",
+      "category": "ground",
+      "slot": "variation",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__ground__sparse__v01",
+      "biome": "open_field",
+      "category": "ground",
+      "slot": "sparse",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__ground__edge__v01",
+      "biome": "open_field",
+      "category": "ground",
+      "slot": "edge",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__plants__tree_large__v01",
+      "biome": "open_field",
+      "category": "plants",
+      "slot": "tree_large",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tree_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "open_field__plants__tree_small__v01",
+      "biome": "open_field",
+      "category": "plants",
+      "slot": "tree_small",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tree_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "open_field__plants__shrub__v01",
+      "biome": "open_field",
+      "category": "plants",
+      "slot": "shrub",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__plants__undergrowth__v01",
+      "biome": "open_field",
+      "category": "plants",
+      "slot": "undergrowth",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__plants__accent__v01",
+      "biome": "open_field",
+      "category": "plants",
+      "slot": "accent",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__rocks__large__v01",
+      "biome": "open_field",
+      "category": "rocks",
+      "slot": "large",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/rock_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "open_field__rocks__medium__v01",
+      "biome": "open_field",
+      "category": "rocks",
+      "slot": "medium",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/rock_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "open_field__rocks__small__v01",
+      "biome": "open_field",
+      "category": "rocks",
+      "slot": "small",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__rocks__silhouette_variant__v01",
+      "biome": "open_field",
+      "category": "rocks",
+      "slot": "silhouette_variant",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__props__branch__v01",
+      "biome": "open_field",
+      "category": "props",
+      "slot": "branch",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__props__stump__v01",
+      "biome": "open_field",
+      "category": "props",
+      "slot": "stump",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__props__log__v01",
+      "biome": "open_field",
+      "category": "props",
+      "slot": "log",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__props__pebbles__v01",
+      "biome": "open_field",
+      "category": "props",
+      "slot": "pebbles",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__props__leaf_pile__v01",
+      "biome": "open_field",
+      "category": "props",
+      "slot": "leaf_pile",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tuft_1.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "open_field__props__flowers__v01",
+      "biome": "open_field",
+      "category": "props",
+      "slot": "flowers",
+      "status": "shared_approved",
+      "source": "res://assets/environment/stylized_v3/tuft_0.png",
+      "art_source": "existing"
+    },
+    {
+      "id": "open_field__transitions__meadow_forest__v01",
+      "biome": "open_field",
+      "category": "transitions",
+      "slot": "meadow_forest",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__transitions__meadow_highland__v01",
+      "biome": "open_field",
+      "category": "transitions",
+      "slot": "meadow_highland",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__transitions__meadow_shore__v01",
+      "biome": "open_field",
+      "category": "transitions",
+      "slot": "meadow_shore",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__transitions__forest_clearing__v01",
+      "biome": "open_field",
+      "category": "transitions",
+      "slot": "forest_clearing",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "open_field__transitions__scree__v01",
+      "biome": "open_field",
+      "category": "transitions",
+      "slot": "scree",
+      "status": "planned",
+      "source": null,
+      "art_source": null
+    },
+    {
+      "id": "forest__ground__blend_material__v02",
+      "biome": "forest",
+      "category": "ground",
+      "slot": "blend_material",
+      "status": "approved",
+      "source": "res://assets/environment/biome_v02/forest.png",
+      "art_source": "host_image",
+      "provenance": "res://prototypes/biome-v02/material-generation/job.json",
+      "transition": "world-coordinate continuous weights; forest edge / talus / sediment / shallows",
+      "approval": "2026-10-16 user: 接入游戏吧"
+    },
+    {
+      "id": "highland__ground__blend_material__v02",
+      "biome": "highland",
+      "category": "ground",
+      "slot": "blend_material",
+      "status": "approved",
+      "source": "res://assets/environment/biome_v02/highland.png",
+      "art_source": "host_image",
+      "provenance": "res://prototypes/biome-v02/material-generation/job.json",
+      "transition": "world-coordinate continuous weights; forest edge / talus / sediment / shallows",
+      "approval": "2026-10-16 user: 接入游戏吧"
+    },
+    {
+      "id": "open_field__ground__blend_material__v02",
+      "biome": "open_field",
+      "category": "ground",
+      "slot": "blend_material",
+      "status": "approved",
+      "source": "res://assets/environment/biome_v02/open_field.png",
+      "art_source": "host_image",
+      "provenance": "res://prototypes/biome-v02/material-generation/job.json",
+      "transition": "world-coordinate continuous weights; forest edge / talus / sediment / shallows",
+      "approval": "2026-10-16 user: 接入游戏吧"
+    },
+    {
+      "id": "shore__ground__blend_material__v02",
+      "biome": "shore",
+      "category": "ground",
+      "slot": "blend_material",
+      "status": "approved",
+      "source": "res://assets/environment/biome_v02/shore.png",
+      "art_source": "host_image",
+      "provenance": "res://prototypes/biome-v02/material-generation/job.json",
+      "transition": "world-coordinate continuous weights; forest edge / talus / sediment / shallows",
+      "approval": "2026-10-16 user: 接入游戏吧"
+    }
+  ]
+}
