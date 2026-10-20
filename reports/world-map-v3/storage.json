@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "name": "read fixed identity 1024",
+      "pass": true
+    },
+    {
+      "name": "atomic identity saved 1024",
+      "pass": true
+    },
+    {
+      "name": "identity roundtrip 1024",
+      "pass": true
+    },
+    {
+      "name": "read fixed identity 1536",
+      "pass": true
+    },
+    {
+      "name": "atomic identity saved 1536",
+      "pass": true
+    },
+    {
+      "name": "identity roundtrip 1536",
+      "pass": true
+    },
+    {
+      "name": "invalid identity protected 0",
+      "pass": true
+    },
+    {
+      "name": "invalid identity protected 1537",
+      "pass": true
+    },
+    {
+      "name": "invalid identity protected 1024.5",
+      "pass": true
+    },
+    {
+      "name": "invalid identity protected 1536",
+      "pass": true
+    },
+    {
+      "name": "identity failure reported to caller",
+      "pass": true
+    },
+    {
+      "name": "creation accepts saved size 1024",
+      "pass": true
+    },
+    {
+      "name": "creation accepts saved size 1536",
+      "pass": true
+    },
+    {
+      "name": "large exploration JSON restore",
+      "pass": true
+    },
+    {
+      "name": "large exploration exact bits",
+      "pass": true
+    },
+    {
+      "name": "100 union merges constant save size",
+      "pass": true
+    },
+    {
+      "name": "illegal explorer positions rejected",
+      "pass": true
+    }
+  ],
+  "failed": 0,
+  "metrics": {
+    "json_bytes": 98480,
+    "restore_ms": 29.851,
+    "reveal_2500_ms": 138.485,
+    "serialize_ms": 1.374
+  }
+}

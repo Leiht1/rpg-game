@@ -1,0 +1,846 @@
+{
+  "checks": [
+    {
+      "check": "source_gutter",
+      "cell": [
+        0,
+        0
+      ],
+      "bbox": [
+        45,
+        96,
+        327,
+        280
+      ],
+      "size": [
+        341,
+        384
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "male_natural",
+      "view": "front",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "male_natural",
+      "view": "front",
+      "median_rgb": [
+        47.0,
+        48.0,
+        47.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        0,
+        1
+      ],
+      "bbox": [
+        46,
+        95,
+        304,
+        314
+      ],
+      "size": [
+        342,
+        384
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "male_natural",
+      "view": "back",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "male_natural",
+      "view": "back",
+      "median_rgb": [
+        49.0,
+        50.0,
+        50.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        0,
+        2
+      ],
+      "bbox": [
+        27,
+        97,
+        311,
+        312
+      ],
+      "size": [
+        341,
+        384
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "male_natural",
+      "view": "side",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "male_natural",
+      "view": "side",
+      "median_rgb": [
+        48.0,
+        49.0,
+        49.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        1,
+        0
+      ],
+      "bbox": [
+        38,
+        65,
+        331,
+        266
+      ],
+      "size": [
+        341,
+        384
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "male_fluffy",
+      "view": "front",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "male_fluffy",
+      "view": "front",
+      "median_rgb": [
+        48.0,
+        49.0,
+        48.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        1,
+        1
+      ],
+      "bbox": [
+        42,
+        64,
+        303,
+        299
+      ],
+      "size": [
+        342,
+        384
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "male_fluffy",
+      "view": "back",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "male_fluffy",
+      "view": "back",
+      "median_rgb": [
+        49.0,
+        50.0,
+        50.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        1,
+        2
+      ],
+      "bbox": [
+        17,
+        60,
+        311,
+        295
+      ],
+      "size": [
+        341,
+        384
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "male_fluffy",
+      "view": "side",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "male_fluffy",
+      "view": "side",
+      "median_rgb": [
+        49.0,
+        50.0,
+        49.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        0,
+        0
+      ],
+      "bbox": [
+        76,
+        122,
+        676,
+        526
+      ],
+      "size": [
+        724,
+        724
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "male_parted",
+      "view": "front",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "male_parted",
+      "view": "front",
+      "median_rgb": [
+        48.0,
+        49.0,
+        47.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        0,
+        1
+      ],
+      "bbox": [
+        88,
+        121,
+        622,
+        584
+      ],
+      "size": [
+        724,
+        724
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "male_parted",
+      "view": "back",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "male_parted",
+      "view": "back",
+      "median_rgb": [
+        52.0,
+        52.0,
+        50.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        0,
+        2
+      ],
+      "bbox": [
+        56,
+        126,
+        659,
+        581
+      ],
+      "size": [
+        724,
+        724
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "male_parted",
+      "view": "side",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "male_parted",
+      "view": "side",
+      "median_rgb": [
+        50.0,
+        51.0,
+        49.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        3,
+        0
+      ],
+      "bbox": [
+        39,
+        16,
+        329,
+        222
+      ],
+      "size": [
+        341,
+        384
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "male_curly",
+      "view": "front",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "male_curly",
+      "view": "front",
+      "median_rgb": [
+        48.0,
+        49.0,
+        48.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        3,
+        1
+      ],
+      "bbox": [
+        35,
+        15,
+        301,
+        244
+      ],
+      "size": [
+        342,
+        384
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "male_curly",
+      "view": "back",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "male_curly",
+      "view": "back",
+      "median_rgb": [
+        49.0,
+        50.0,
+        50.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        3,
+        2
+      ],
+      "bbox": [
+        16,
+        18,
+        310,
+        247
+      ],
+      "size": [
+        341,
+        384
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "male_curly",
+      "view": "side",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "male_curly",
+      "view": "side",
+      "median_rgb": [
+        49.0,
+        50.0,
+        49.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        0,
+        0
+      ],
+      "bbox": [
+        61,
+        105,
+        315,
+        297
+      ],
+      "size": [
+        362,
+        362
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "female_bob",
+      "view": "front",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "female_bob",
+      "view": "front",
+      "median_rgb": [
+        46.0,
+        46.0,
+        45.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        0,
+        1
+      ],
+      "bbox": [
+        62,
+        102,
+        302,
+        298
+      ],
+      "size": [
+        362,
+        362
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "female_bob",
+      "view": "back",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "female_bob",
+      "view": "back",
+      "median_rgb": [
+        48.0,
+        49.0,
+        48.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        0,
+        2
+      ],
+      "bbox": [
+        56,
+        103,
+        292,
+        302
+      ],
+      "size": [
+        362,
+        362
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "female_bob",
+      "view": "side",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "female_bob",
+      "view": "side",
+      "median_rgb": [
+        47.0,
+        48.0,
+        47.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        1,
+        0
+      ],
+      "bbox": [
+        66,
+        31,
+        311,
+        318
+      ],
+      "size": [
+        362,
+        362
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "female_straight",
+      "view": "front",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "female_straight",
+      "view": "front",
+      "median_rgb": [
+        46.0,
+        46.0,
+        45.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        1,
+        1
+      ],
+      "bbox": [
+        66,
+        29,
+        295,
+        321
+      ],
+      "size": [
+        362,
+        362
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "female_straight",
+      "view": "back",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "female_straight",
+      "view": "back",
+      "median_rgb": [
+        48.0,
+        48.0,
+        48.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        1,
+        2
+      ],
+      "bbox": [
+        64,
+        32,
+        294,
+        327
+      ],
+      "size": [
+        362,
+        362
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "female_straight",
+      "view": "side",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "female_straight",
+      "view": "side",
+      "median_rgb": [
+        48.0,
+        48.0,
+        47.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        2,
+        0
+      ],
+      "bbox": [
+        57,
+        49,
+        319,
+        293
+      ],
+      "size": [
+        362,
+        362
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "female_twintail",
+      "view": "front",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "female_twintail",
+      "view": "front",
+      "median_rgb": [
+        45.0,
+        45.0,
+        44.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        2,
+        1
+      ],
+      "bbox": [
+        58,
+        48,
+        302,
+        294
+      ],
+      "size": [
+        362,
+        362
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "female_twintail",
+      "view": "back",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "female_twintail",
+      "view": "back",
+      "median_rgb": [
+        47.0,
+        48.0,
+        47.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        2,
+        2
+      ],
+      "bbox": [
+        65,
+        47,
+        293,
+        309
+      ],
+      "size": [
+        362,
+        362
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "female_twintail",
+      "view": "side",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "female_twintail",
+      "view": "side",
+      "median_rgb": [
+        47.0,
+        47.0,
+        46.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        3,
+        0
+      ],
+      "bbox": [
+        74,
+        15,
+        301,
+        300
+      ],
+      "size": [
+        362,
+        362
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "female_ponytail",
+      "view": "front",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "female_ponytail",
+      "view": "front",
+      "median_rgb": [
+        46.0,
+        46.0,
+        44.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        3,
+        1
+      ],
+      "bbox": [
+        87,
+        12,
+        276,
+        306
+      ],
+      "size": [
+        362,
+        362
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "female_ponytail",
+      "view": "back",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "female_ponytail",
+      "view": "back",
+      "median_rgb": [
+        48.0,
+        48.0,
+        47.0
+      ],
+      "pass": true
+    },
+    {
+      "check": "source_gutter",
+      "cell": [
+        3,
+        2
+      ],
+      "bbox": [
+        66,
+        15,
+        294,
+        304
+      ],
+      "size": [
+        362,
+        362
+      ],
+      "pass": true
+    },
+    {
+      "check": "complete_output",
+      "id": "female_ponytail",
+      "view": "side",
+      "pass": true
+    },
+    {
+      "check": "black_neutral",
+      "id": "female_ponytail",
+      "view": "side",
+      "median_rgb": [
+        47.0,
+        47.0,
+        46.0
+      ],
+      "pass": true
+    }
+  ],
+  "total": 72,
+  "failed": 0
+}

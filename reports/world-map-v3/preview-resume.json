@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "name": "actual preview resumes normal world time",
+      "pass": true
+    },
+    {
+      "name": "actual preview loads 1536 playable world",
+      "pass": true
+    },
+    {
+      "name": "actual preview isolated world bundle",
+      "pass": true
+    },
+    {
+      "name": "preview never writes formal environment",
+      "pass": true
+    },
+    {
+      "name": "actual preview resumes same random identity",
+      "pass": true
+    },
+    {
+      "name": "actual preview resumes saved position",
+      "pass": true
+    },
+    {
+      "name": "actual preview resumes exploration",
+      "pass": true
+    }
+  ],
+  "failed": 0
+}

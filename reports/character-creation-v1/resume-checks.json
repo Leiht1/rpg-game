@@ -1,0 +1,218 @@
+{
+	"checks": [
+		{
+			"name": "independent process directly resumes without creation UI",
+			"pass": true
+		},
+		{
+			"name": "fresh process restores recorded seed and last position",
+			"pass": true
+		},
+		{
+			"name": "fresh process restores all appearance IDs",
+			"pass": true
+		},
+		{
+			"name": "fresh process restores equipped outfit",
+			"pass": true
+		},
+		{
+			"name": "actual walking input (1.0, 0.0)",
+			"pass": true
+		},
+		{
+			"name": "actual running input (1.0, 0.0)",
+			"pass": true
+		},
+		{
+			"name": "actual walking input (-1.0, 0.0)",
+			"pass": true
+		},
+		{
+			"name": "actual running input (-1.0, 0.0)",
+			"pass": true
+		},
+		{
+			"name": "actual walking input (0.0, 1.0)",
+			"pass": true
+		},
+		{
+			"name": "actual running input (0.0, 1.0)",
+			"pass": true
+		},
+		{
+			"name": "actual walking input (0.0, -1.0)",
+			"pass": true
+		},
+		{
+			"name": "actual running input (0.0, -1.0)",
+			"pass": true
+		},
+		{
+			"name": "legacy N shortcut cannot corrupt assigned character world",
+			"pass": true
+		},
+		{
+			"name": "invalid session rejected <null>",
+			"pass": true
+		},
+		{
+			"name": "invalid session rejected {  }",
+			"pass": true
+		},
+		{
+			"name": "invalid session rejected { \"character_session\": {  } }",
+			"pass": true
+		},
+		{
+			"name": "invalid session rejected { \"character_session\": { \"active_character_id\": \"2054079049093987392\", \"characters\": { \"2054079049093987392\": { \"appearance\": { \"gender\": \"female\", \"hair_id\": \"female_twintail\", \"skin_id\": \"skin_5\" }, \"outfit_id\": \"modern_outfit\", \"test_outfit_granted\": true, \"world_id\": \"63154785527532544\" } }, \"map_cells\": 1024.0, \"seed\": 1500510928.0, \"version\": 1.0, \"world_id\": \"63154785527532544\" }, \"equipment\": [] }",
+			"pass": true
+		},
+		{
+			"name": "invalid session rejected { \"character_session\": { \"active_character_id\": \"2054079049093987392\", \"characters\": { \"2054079049093987392\": { \"appearance\": { \"gender\": \"female\", \"hair_id\": \"female_twintail\", \"skin_id\": \"skin_5\" }, \"outfit_id\": \"modern_outfit\", \"test_outfit_granted\": true, \"world_id\": \"63154785527532544\" } }, \"map_cells\": 1024.0, \"seed\": 1500510928.0, \"version\": 1.0, \"world_id\": \"63154785527532544\" }, \"equipment\": { \"outfit\": 3 } }",
+			"pass": true
+		},
+		{
+			"name": "unknown skin rejected",
+			"pass": true
+		},
+		{
+			"name": "world ownership mismatch rejected",
+			"pass": true
+		},
+		{
+			"name": "sleep skin and closed eyes skin_1true",
+			"pass": true
+		},
+		{
+			"name": "sleep skin and closed eyes skin_1false",
+			"pass": true
+		},
+		{
+			"name": "sleep skin and closed eyes skin_2true",
+			"pass": true
+		},
+		{
+			"name": "sleep skin and closed eyes skin_2false",
+			"pass": true
+		},
+		{
+			"name": "sleep skin and closed eyes skin_3true",
+			"pass": true
+		},
+		{
+			"name": "sleep skin and closed eyes skin_3false",
+			"pass": true
+		},
+		{
+			"name": "sleep skin and closed eyes skin_4true",
+			"pass": true
+		},
+		{
+			"name": "sleep skin and closed eyes skin_4false",
+			"pass": true
+		},
+		{
+			"name": "sleep skin and closed eyes skin_5true",
+			"pass": true
+		},
+		{
+			"name": "sleep skin and closed eyes skin_5false",
+			"pass": true
+		},
+		{
+			"name": "sleep skin and closed eyes skin_6true",
+			"pass": true
+		},
+		{
+			"name": "sleep skin and closed eyes skin_6false",
+			"pass": true
+		},
+		{
+			"name": "functional target exists mine(0.0, 1.0)",
+			"pass": true
+		},
+		{
+			"name": "original timed hit succeeds mine(0.0, 1.0)",
+			"pass": true
+		},
+		{
+			"name": "functional target exists mine(0.0, -1.0)",
+			"pass": true
+		},
+		{
+			"name": "original timed hit succeeds mine(0.0, -1.0)",
+			"pass": true
+		},
+		{
+			"name": "functional target exists mine(1.0, 0.0)",
+			"pass": true
+		},
+		{
+			"name": "original timed hit succeeds mine(1.0, 0.0)",
+			"pass": true
+		},
+		{
+			"name": "functional target exists mine(-1.0, 0.0)",
+			"pass": true
+		},
+		{
+			"name": "original timed hit succeeds mine(-1.0, 0.0)",
+			"pass": true
+		},
+		{
+			"name": "functional target exists dig(0.0, 1.0)",
+			"pass": true
+		},
+		{
+			"name": "original timed hit succeeds dig(0.0, 1.0)",
+			"pass": true
+		},
+		{
+			"name": "functional target exists dig(0.0, -1.0)",
+			"pass": true
+		},
+		{
+			"name": "original timed hit succeeds dig(0.0, -1.0)",
+			"pass": true
+		},
+		{
+			"name": "functional target exists dig(1.0, 0.0)",
+			"pass": true
+		},
+		{
+			"name": "original timed hit succeeds dig(1.0, 0.0)",
+			"pass": true
+		},
+		{
+			"name": "functional target exists dig(-1.0, 0.0)",
+			"pass": true
+		},
+		{
+			"name": "original timed hit succeeds dig(-1.0, 0.0)",
+			"pass": true
+		},
+		{
+			"name": "unequip in fresh process",
+			"pass": true
+		},
+		{
+			"name": "destroy clothing through original inventory",
+			"pass": true
+		},
+		{
+			"name": "consumed clothing saved with grant flag",
+			"pass": true
+		},
+		{
+			"name": "corrupt item version blocks world and protects source",
+			"pass": true
+		},
+		{
+			"name": "corrupt source not overwritten",
+			"pass": true
+		}
+	],
+	"failed": 0,
+	"total": 53
+}

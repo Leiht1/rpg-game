@@ -4,7 +4,7 @@ const Gen = preload("res://scripts/world_generator.gd")
 const Stream = preload("res://scripts/chunk_stream.gd")
 const Player = preload("res://scripts/player.gd")
 @export var world_seed: int = 271828
-@export_range(128,1024,8) var map_cells: int = 1024
+@export_range(128,1536,8) var map_cells: int = 1536
 var generator: WildGenerator
 var stream: WildStream
 var player: WildPlayer
@@ -45,16 +45,21 @@ var benchmark_north := false
 var persistent_world := true
 const WORLD_ID_PATH = "user://world-continent-v06.json"
 const LEGACY_WORLD_ID_PATH = "user://world-biome-v02.json"
+var world_id := ""
+var last_identity_saved := true
 var migration_notice := ""
 var migrated_from := ""
 
 func _ready() -> void:
 	# Static streamed scenery and idle tweens do not need physics interpolation.
 	# The player explicitly enables it for its moving body, rig and camera.
+	get_tree().auto_accept_quit=false
 	physics_interpolation_mode=Node.PHYSICS_INTERPOLATION_MODE_OFF
 	load_world_identity()
 	parse_arguments()
-	if persistent_world: save_world_identity()
+	if persistent_world:
+		save_world_identity()
+		if not last_identity_saved:persistent_world=false;migration_notice="世界身份保存失败，原文件已保留；当前为临时世界"
 	setup_input()
 	generator=Gen.new(world_seed,map_cells)
 	object_root.name="YSortedNatureAndActor"
@@ -97,6 +102,9 @@ func _ready() -> void:
 	item_ui=preload("res://scripts/item_ui.gd").new()
 	ui.add_child(item_ui)
 	item_ui.configure(self,item_service)
+	if not item_service.writable:
+		title.text+=" · 存档受保护"
+		item_ui.show_notice("世界存档无法读取，原文件已保留，当前不会保存")
 	camp_ui=preload("res://scripts/campfire_ui.gd").new()
 	ui.add_child(camp_ui)
 	camp_ui.configure(self)
@@ -133,17 +141,22 @@ func _ready() -> void:
 
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_WM_CLOSE_REQUEST and is_instance_valid(item_service):
-		item_service.save_state()
+		var saved: bool=item_service.save_state()
+		if get_tree().current_scene==self:
+			if saved or not item_service.writable or not persistent_world:get_tree().quit()
+			elif item_ui:item_ui.show_notice("保存失败，请稍后再次关闭重试")
 
 func load_world_identity(path: String = WORLD_ID_PATH) -> void:
+	world_id=str(ResourceUID.create_id())
 	world_seed=int(Time.get_unix_time_from_system()*1000)%2147483647
 	migration_notice=""
 	migrated_from=""
 	if FileAccess.file_exists(path):
 		var data=JSON.parse_string(FileAccess.get_file_as_string(path))
-		if data is Dictionary and str(data.get("generator",""))==Gen.VERSION and data.has("seed"):
+		if valid_identity(data):
 			world_seed=int(data.seed)
-			map_cells=clampi(int(data.get("map_cells",1024)),128,1024)
+			map_cells=int(data.get("map_cells",1024))
+			world_id=str(data.get("world_id","legacy:%s:%d:%d"%[Gen.VERSION,world_seed,map_cells]))
 			migrated_from=str(data.get("migrated_from",""))
 		else:
 			# Never overwrite an unknown/corrupt identity with a different algorithm.
@@ -163,7 +176,7 @@ func load_legacy_identity(path:String)->void:
 			migration_notice="已升级 V0.6 大陆，沿用旧 Seed；旧世界身份已保留"
 func save_world_identity(path: String = WORLD_ID_PATH) -> void:
 	if not persistent_world:return
-	var identity:={"seed":world_seed,"map_cells":map_cells,"generator":Gen.VERSION,"props_version":Gen.PROP_VERSION}
+	var identity:={"seed":world_seed,"map_cells":map_cells,"generator":Gen.VERSION,"props_version":Gen.PROP_VERSION,"world_id":world_id if not world_id.is_empty() else "legacy:%s:%d:%d"%[Gen.VERSION,world_seed,map_cells],"world_generation":Gen.layout_configuration(map_cells)}
 	if not migrated_from.is_empty():identity["migrated_from"]=migrated_from
 	save_json(path,identity)
 
@@ -174,7 +187,7 @@ func parse_arguments() -> void:
 		if arg=="--camp-build-preview": tools_preview=true;persistent_world=false;Engine.set_meta("camp_build_preview",true)
 		if arg.begins_with("--seed=") or arg.begins_with("--size=") or arg=="--benchmark":persistent_world=false
 		if arg.begins_with("--seed="): world_seed=int(arg.get_slice("=",1))
-		elif arg.begins_with("--size="): map_cells=clampi(int(arg.get_slice("=",1)),128,1024)
+		elif arg.begins_with("--size="): map_cells=clampi(int(arg.get_slice("=",1)),128,1536)
 		elif arg=="--benchmark": benchmark=true; debug_on=true
 		elif arg.begins_with("--seconds="): benchmark_duration=float(arg.get_slice("=",1))
 		elif arg.begins_with("--report="): run_id=arg.get_slice("=",1)
@@ -281,14 +294,27 @@ func _unhandled_input(event: InputEvent) -> void:
 		debug_label.visible=debug_on
 
 	if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode==KEY_N and persistent_world:
-		if item_service: item_service.save_state()
+		if item_service and not item_service.save_state():return
+		var previous_seed:=world_seed;var previous_cells:=map_cells;var previous_id:=world_id
+		map_cells=1536
+		world_id=str(ResourceUID.create_id())
 		world_seed=(world_seed+int(Time.get_ticks_msec())+1)%2147483647
 		save_world_identity()
+		if not last_identity_saved:
+			world_seed=previous_seed;map_cells=previous_cells;world_id=previous_id
+			if item_ui:item_ui.show_notice("世界创建失败，原世界已保留")
+			return
 		get_tree().reload_current_scene()
 
 func save_json(path: String, value: Variant) -> void:
-	var file := FileAccess.open(path,FileAccess.WRITE)
+	last_identity_saved=false
+	var file := FileAccess.open(path+".tmp",FileAccess.WRITE)
+	if file==null:push_warning("无法写入世界身份，原文件已保留");return
 	file.store_string(JSON.stringify(value,"\t"))
+	var error:=file.get_error();file.close()
+	if error!=OK:push_warning("世界身份写入失败，原文件已保留");return
+	if DirAccess.rename_absolute(ProjectSettings.globalize_path(path+".tmp"),ProjectSettings.globalize_path(path))!=OK:push_warning("世界身份替换失败，原文件已保留");return
+	last_identity_saved=true
 
 func capture(path: String) -> void:
 	await RenderingServer.frame_post_draw
@@ -352,3 +378,14 @@ func run_benchmark(delta: float) -> void:
 		if benchmark_captures: await capture("res://reports/%s-final.png"%run_id)
 		get_tree().quit()
 
+
+func valid_identity(value: Variant) -> bool:
+	if not value is Dictionary or value.get("generator")!=Gen.VERSION:return false
+	for key in ["seed","map_cells"]:
+		var number=value.get(key,1024 if key=="map_cells" else null)
+		if not (number is int or number is float) or not is_finite(float(number)) or number!=floor(number):return false
+	var cells:=int(value.get("map_cells",1024))
+	if cells<128 or cells>1536:return false
+	if value.has("world_id") and (not value.world_id is String or value.world_id.is_empty()):return false
+	if value.has("world_generation") and not Gen.valid_configuration(value.world_generation,cells):return false
+	return true

@@ -136,6 +136,7 @@ func buy(id: String) -> String:
 		service.inventory.slots=before;state.offers[id].stock=1;busy=false
 		return "保存失败，交易已回滚"
 	busy=false;service.inventory.changed.emit();service.item_obtained.emit(id,1)
+	AudioFX.play_sfx("sfx_merchant_trade",actor.position)
 	return ""
 
 func _process(_delta: float) -> void:

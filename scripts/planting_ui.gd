@@ -9,7 +9,7 @@ func configure(items: Node) -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);mouse_filter=Control.MOUSE_FILTER_STOP
 	add_child(panel);panel.size=Vector2(400,300);panel.add_theme_stylebox_override("panel",preload("res://scripts/item_ui_style.gd").frame())
 	var title := Label.new();title.text="选择种子";title.position=Vector2(28,22);title.add_theme_font_size_override("font_size",23);panel.add_child(title)
-	var button := Button.new();button.text="关闭";button.position=Vector2(308,20);button.size=Vector2(64,34);panel.add_child(button);button.pressed.connect(close_panel)
+	var button := Button.new();button.text="关闭";button.set_meta("audio_window_close",true);button.position=Vector2(308,20);button.size=Vector2(64,34);panel.add_child(button);button.pressed.connect(close_panel)
 	choices.position=Vector2(28,70);choices.size=Vector2(344,190);choices.add_theme_constant_override("separation",8);panel.add_child(choices)
 	empty.text="没有种子";empty.position=Vector2(28,112);empty.size=Vector2(344,60);empty.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;panel.add_child(empty)
 	service.inventory.changed.connect(refresh);hide()

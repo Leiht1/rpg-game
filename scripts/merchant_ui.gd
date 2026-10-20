@@ -16,7 +16,7 @@ func setup() -> void:
 	panel.add_child(content);content.add_theme_constant_override("separation",14)
 	var header := HBoxContainer.new();content.add_child(header)
 	var title := Label.new();title.text="异次元商人";title.size_flags_horizontal=SIZE_EXPAND_FILL;header.add_child(title)
-	var close := Button.new();close.text="关闭";header.add_child(close);close.pressed.connect(close_panel)
+	var close := Button.new();close.text="关闭";close.set_meta("audio_window_close",true);header.add_child(close);close.pressed.connect(close_panel)
 	dialogue.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;dialogue.custom_minimum_size=Vector2(360,0);content.add_child(dialogue)
 	trade.text="交易";content.add_child(trade);trade.pressed.connect(show_trade)
 	content.add_child(goods)

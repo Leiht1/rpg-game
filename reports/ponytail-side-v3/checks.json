@@ -1,0 +1,106 @@
+{
+	"checks": [
+		{
+			"name": "localized patch reused skin_1left",
+			"pass": true
+		},
+		{
+			"name": "original mirrored pose skin_1left",
+			"pass": true
+		},
+		{
+			"name": "localized patch reused skin_1right",
+			"pass": true
+		},
+		{
+			"name": "original mirrored pose skin_1right",
+			"pass": true
+		},
+		{
+			"name": "localized patch reused skin_2left",
+			"pass": true
+		},
+		{
+			"name": "original mirrored pose skin_2left",
+			"pass": true
+		},
+		{
+			"name": "localized patch reused skin_2right",
+			"pass": true
+		},
+		{
+			"name": "original mirrored pose skin_2right",
+			"pass": true
+		},
+		{
+			"name": "localized patch reused skin_3left",
+			"pass": true
+		},
+		{
+			"name": "original mirrored pose skin_3left",
+			"pass": true
+		},
+		{
+			"name": "localized patch reused skin_3right",
+			"pass": true
+		},
+		{
+			"name": "original mirrored pose skin_3right",
+			"pass": true
+		},
+		{
+			"name": "localized patch reused skin_4left",
+			"pass": true
+		},
+		{
+			"name": "original mirrored pose skin_4left",
+			"pass": true
+		},
+		{
+			"name": "localized patch reused skin_4right",
+			"pass": true
+		},
+		{
+			"name": "original mirrored pose skin_4right",
+			"pass": true
+		},
+		{
+			"name": "localized patch reused skin_5left",
+			"pass": true
+		},
+		{
+			"name": "original mirrored pose skin_5left",
+			"pass": true
+		},
+		{
+			"name": "localized patch reused skin_5right",
+			"pass": true
+		},
+		{
+			"name": "original mirrored pose skin_5right",
+			"pass": true
+		},
+		{
+			"name": "localized patch reused skin_6left",
+			"pass": true
+		},
+		{
+			"name": "original mirrored pose skin_6left",
+			"pass": true
+		},
+		{
+			"name": "localized patch reused skin_6right",
+			"pass": true
+		},
+		{
+			"name": "original mirrored pose skin_6right",
+			"pass": true
+		},
+		{
+			"name": "render-only check does not create world or alter save",
+			"pass": true
+		}
+	],
+	"failed": 0,
+	"total": 25
+}

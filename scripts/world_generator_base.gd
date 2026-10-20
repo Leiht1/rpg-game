@@ -34,7 +34,7 @@ var spawn := Vector2.ZERO
 
 func _init(seed_value: int = 271828, size_cells: int = 1024, plan: Dictionary = {}) -> void:
 	world_seed=seed_value
-	map_cells=clampi(size_cells,128,1024)
+	map_cells=clampi(size_cells,128,1536)
 	extent=map_cells*CELL
 	moisture.seed=world_seed^117
 	moisture.frequency=1.0/clampf(extent*.045,650.,2200.)

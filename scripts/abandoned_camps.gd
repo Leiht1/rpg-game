@@ -55,7 +55,7 @@ static func generate(service: Node) -> void:
 	rng.seed=service.world.world_seed ^ 7182351
 	var centers: Array[Vector2]=[]
 	for attempt in 2400:
-		if centers.size()>=3: break
+		if centers.size()>=(5 if service.world.map_cells>1024 else 3): break
 		var center := Vector2(rng.randf_range(600,service.world.generator.extent-600),rng.randf_range(600,service.world.generator.extent-600))
 		center=(center/Grid.STEP).floor()*Grid.STEP
 		if centers.any(func(p):return p.distance_to(center)<3500): continue

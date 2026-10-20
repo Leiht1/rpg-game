@@ -1,0 +1,254 @@
+{
+  "checks": [
+    {
+      "name": "amb_rain_storm_loop uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_bag_organize uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_dig_soil uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_door_close uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_door_open uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_drop_land uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_eat uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_equip uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_item_move uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_map_mark uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_mine_hit uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_tool_swing uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_click uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_close uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_error uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_chop_hit uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_tree_fall uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_fishing_cast uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_merchant_trade uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_ore_break uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_demolish_hit uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_chicken_idle uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_fire_ignite uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_open uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_pickup uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_gather_plant uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_fishing_bite uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "sfx_thunder uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "amb_rain_light_loop uses only current selected batch",
+      "pass": true
+    },
+    {
+      "name": "exactly 33 selected event groups active",
+      "pass": true
+    },
+    {
+      "name": "sfx_build_stone legacy playback disabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_build_wood legacy playback disabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_chest_close legacy playback disabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_chest_open legacy playback disabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_fridge_close legacy playback disabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_fridge_open legacy playback disabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_lantern_off legacy playback disabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_lantern_on legacy playback disabled",
+      "pass": true
+    },
+    {
+      "name": "ordinary button plays only selected click",
+      "pass": true
+    },
+    {
+      "name": "UI cues never allocate overlapping general voices",
+      "pass": true
+    },
+    {
+      "name": "keyboard backpack open replaces click on same channel with short sound",
+      "pass": true
+    },
+    {
+      "name": "actual backpack close button found",
+      "pass": true
+    },
+    {
+      "name": "actual close button produces close cue without button-click layer",
+      "pass": true
+    },
+    {
+      "name": "map opens with only current opening cue",
+      "pass": true
+    },
+    {
+      "name": "close wins when handler runs before generic click callback",
+      "pass": true
+    },
+    {
+      "name": "close wins when handler runs after generic click callback",
+      "pass": true
+    },
+    {
+      "name": "rapid same-input callbacks coalesce into one click and one player",
+      "pass": true
+    },
+    {
+      "name": "main error feedback wins over generic click and panel close",
+      "pass": true
+    },
+    {
+      "name": "inventory feedback replaces incidental button click",
+      "pass": true
+    },
+    {
+      "name": "subsequent action switches sole UI player without overlap",
+      "pass": true
+    },
+    {
+      "name": "both user-selected close variants retained, never layered",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass remains enabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt remains enabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone remains enabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood remains enabled",
+      "pass": true
+    },
+    {
+      "name": "footsteps retain separate natural playback channel",
+      "pass": true
+    },
+    {
+      "name": "world exit cancels deferred UI cue and stops shared player",
+      "pass": true
+    },
+    {
+      "name": "player JSON unchanged",
+      "pass": true
+    }
+  ],
+  "count": 62,
+  "failed": 0
+}

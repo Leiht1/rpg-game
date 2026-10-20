@@ -93,4 +93,12 @@ static func theme() -> Theme:
 	skin.set_color("font_uneditable_color","LineEdit",Color("786d5a"))
 	skin.set_color("font_color","LineEdit",Color("454b37"))
 	skin.set_color("font_placeholder_color","LineEdit",Color("8c866f"))
+	# OptionButton's popup is a separate Window; style it explicitly as paper too.
+	skin.set_stylebox("panel","PopupMenu",texture_style("button",12,10))
+	skin.set_stylebox("hover","PopupMenu",button_style("hover",true))
+	skin.set_stylebox("separator","PopupMenu",section(2))
+	for state in ["font_color","font_hover_color","font_accelerator_color"]:
+		skin.set_color(state,"PopupMenu",Color("4b4437"))
+	skin.set_color("font_disabled_color","PopupMenu",Color("746a5b"))
+	skin.set_constant("v_separation","PopupMenu",8)
 	return skin

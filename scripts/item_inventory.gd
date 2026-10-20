@@ -15,6 +15,7 @@ var body: RefCounted
 var equipment: Dictionary = {}
 var equipment_slots: Array = JSON.parse_string(FileAccess.get_file_as_string("res://data/equipment_slots.json"))
 var quarantined_equipment: Dictionary = {}
+var commit_equipment: Callable
 
 func slot_key(index: int) -> String:
 	var offset := index-SLOT_COUNT
@@ -230,6 +231,17 @@ func equip_hotbar(from: int, to: int) -> bool:
 	changed.emit();sound_requested.emit("sfx_equip" if from>=40 or to>=40 else "sfx_item_move");return true
 
 func move_slot(from: int, to: int) -> bool:
+	if not commit_equipment.is_valid() or (from<40 and to<40):return _move_slot(from,to)
+	var before_slots: Array[Dictionary]=slots.duplicate(true)
+	var before_equipment:=equipment.duplicate(true)
+	var before_links:=hotbar_equipment.duplicate(true)
+	if not _move_slot(from,to):return false
+	if commit_equipment.call():return true
+	slots=before_slots;equipment=before_equipment;hotbar_equipment=before_links
+	changed.emit()
+	return false
+
+func _move_slot(from: int, to: int) -> bool:
 	if from==to or not accepts(from,{}) or not accepts(to,{}): return false
 	var source := get_slot(from)
 	var target := get_slot(to)

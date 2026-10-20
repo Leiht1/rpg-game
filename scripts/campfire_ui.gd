@@ -62,7 +62,7 @@ func configure(owner_world: Node) -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(panel);panel.size=Vector2(1030,560);panel.add_theme_stylebox_override("panel",CampSkin.frame());panel.hide()
 	var title := text("野外烹饪",24);title.position=Vector2(48,24);title.size=Vector2(700,40);panel.add_child(title)
-	var close := Button.new();close.text="E / Esc 关闭";close.position=Vector2(820,24);close.size=Vector2(170,40);panel.add_child(close);close.pressed.connect(close_panel)
+	var close := Button.new();close.text="E / Esc 关闭";close.set_meta("audio_window_close",true);close.position=Vector2(820,24);close.size=Vector2(170,40);panel.add_child(close);close.pressed.connect(close_panel)
 	for entry in [["食谱册","book",28],["自由搭配","free",184]]:
 		var tab := Button.new();tab.text=entry[0];tab.position=Vector2(entry[2],78);tab.size=Vector2(148,36);panel.add_child(tab)
 		tab.pressed.connect(func(): mode=entry[1];last_detail="";refresh())

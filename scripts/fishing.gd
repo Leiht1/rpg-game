@@ -125,6 +125,8 @@ func try_start() -> bool:
 
 func transition(next: String) -> void:
 	state=next;clock=0;phase_history.append(next)
+	if next=="cast":AudioFX.play_sfx("sfx_fishing_cast",player.position)
+	if next=="bite":AudioFX.play_sfx("sfx_fishing_bite",player.position)
 	if next=="wait": splash(spots[selected].water,.75)
 	if next=="bite": splash(spots[selected].water,.45)
 	if next=="game":

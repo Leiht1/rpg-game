@@ -1,0 +1,138 @@
+{
+  "adapter": "NVIDIA GeForce RTX 5060",
+  "checks": [
+    {
+      "name": "test save valid",
+      "pass": true
+    },
+    {
+      "name": "real world expanded",
+      "pass": true
+    },
+    {
+      "name": "actual entry dry and safe",
+      "pass": true
+    },
+    {
+      "name": "single merchant exists",
+      "pass": true
+    },
+    {
+      "name": "merchant singleton in scene",
+      "pass": true
+    },
+    {
+      "name": "abandoned camps bounded",
+      "pass": true
+    },
+    {
+      "name": "spawn explored",
+      "pass": true
+    },
+    {
+      "name": "new world mostly unknown",
+      "pass": true
+    },
+    {
+      "name": "M opens local map and blocks movement",
+      "pass": true
+    },
+    {
+      "name": "local map centres real actor",
+      "pass": true
+    },
+    {
+      "name": "coordinate roundtrip",
+      "pass": true
+    },
+    {
+      "name": "scroll zoom isolated from game camera",
+      "pass": true
+    },
+    {
+      "name": "real left drag pans",
+      "pass": true
+    },
+    {
+      "name": "map interactions reveal nothing",
+      "pass": true
+    },
+    {
+      "name": "pan does not snap back",
+      "pass": true
+    },
+    {
+      "name": "return to actor button",
+      "pass": true
+    },
+    {
+      "name": "edge clamp fills map",
+      "pass": true
+    },
+    {
+      "name": "reopen recentres",
+      "pass": true
+    },
+    {
+      "name": "normal physics traversal",
+      "pass": true
+    },
+    {
+      "name": "walking reveals and retains trail",
+      "pass": true
+    },
+    {
+      "name": "atomic save success",
+      "pass": true
+    },
+    {
+      "name": "failed save keeps unsaved exploration dirty",
+      "pass": true
+    },
+    {
+      "name": "failed save preserves prior snapshot",
+      "pass": true
+    },
+    {
+      "name": "corruption protects original and exploration",
+      "pass": true
+    },
+    {
+      "name": "legacy missing exploration accepted",
+      "pass": true
+    },
+    {
+      "name": "all requested terrain review locations found",
+      "pass": true
+    },
+    {
+      "name": "GPU fog hides terrain and all decorations without leaks",
+      "pass": true
+    },
+    {
+      "name": "cache and requests remain bounded",
+      "pass": true
+    },
+    {
+      "name": "final restart snapshot saved",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failed": 0,
+  "measurements": {
+    "cache_tiles": 7,
+    "camps": 5,
+    "generated_tiles": 717,
+    "map_frame_max_ms": 17.064,
+    "map_frame_p50_ms": 16.663,
+    "map_frame_p95_ms": 16.769,
+    "max_tile_build_frame_ms": 3.398,
+    "navigation_ms": 2541.016,
+    "repeat_view_memory_delta_mib": 0.104824066162109,
+    "startup_ms": 9390.357,
+    "static_memory_mib": 120.248291015625,
+    "video_memory_mib": 114.27231502533,
+    "walk_distance": 563.196533203125
+  }
+}

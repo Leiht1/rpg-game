@@ -1,0 +1,16 @@
+{
+  "source": "res://assets/audio/v3/runtime/sfx_ui_open_01_f18580e418.wav",
+  "source_sha256": "f18580e4183f5a4360eddba9c46f63fef9db5e3de82900a520128af705bef273",
+  "runtime": "res://assets/audio/v4/sfx_ui_open_short.wav",
+  "sha256": "13d20c25cdd9b35f5eceafdc71155190ac39722563eb24b7ed3a26e9e250dcde",
+  "original_seconds": 0.966530612244898,
+  "seconds": 0.3,
+  "kept_samples": [
+    0,
+    6615
+  ],
+  "end_fade_samples": 176,
+  "end_fade_ms": 7.98185941043084,
+  "authorization": "打开背包、地图的声音，裁剪去掉尾音，只保留前面那部分",
+  "gain_unchanged": true
+}

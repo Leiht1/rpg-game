@@ -1,0 +1,245 @@
+{
+  "checks": [
+    {
+      "name": "new world starts with 12 animals",
+      "pass": true
+    },
+    {
+      "name": "six chickens and six sheep",
+      "pass": true
+    },
+    {
+      "name": "new world has 56 finite schools",
+      "pass": true
+    },
+    {
+      "name": "closed map actually preheats terrain",
+      "pass": true
+    },
+    {
+      "name": "background prefetch never reveals geography",
+      "pass": true
+    },
+    {
+      "name": "first warmed M open has no terrain loading",
+      "pass": true
+    },
+    {
+      "name": "first warmed M samples zero new terrain",
+      "pass": true
+    },
+    {
+      "name": "cached reopen without regeneration 0",
+      "pass": true
+    },
+    {
+      "name": "cached reopen without regeneration 1",
+      "pass": true
+    },
+    {
+      "name": "cached reopen without regeneration 2",
+      "pass": true
+    },
+    {
+      "name": "cached reopen without regeneration 3",
+      "pass": true
+    },
+    {
+      "name": "cached reopen without regeneration 4",
+      "pass": true
+    },
+    {
+      "name": "cached reopen without regeneration 5",
+      "pass": true
+    },
+    {
+      "name": "cached reopen without regeneration 6",
+      "pass": true
+    },
+    {
+      "name": "cached reopen without regeneration 7",
+      "pass": true
+    },
+    {
+      "name": "cached reopen without regeneration 8",
+      "pass": true
+    },
+    {
+      "name": "cached reopen without regeneration 9",
+      "pass": true
+    },
+    {
+      "name": "cached reopen without regeneration 10",
+      "pass": true
+    },
+    {
+      "name": "cached reopen without regeneration 11",
+      "pass": true
+    },
+    {
+      "name": "map input blocking retained",
+      "pass": true
+    },
+    {
+      "name": "last zoom also preheated and reused",
+      "pass": true
+    },
+    {
+      "name": "map scroll never changes world camera",
+      "pass": true
+    },
+    {
+      "name": "local default survives panning through distant views",
+      "pass": true
+    },
+    {
+      "name": "map memory remains bounded",
+      "pass": true
+    },
+    {
+      "name": "old animal baseline compiles",
+      "pass": true
+    },
+    {
+      "name": "legacy animals with tamed parent and baby accepted",
+      "pass": true
+    },
+    {
+      "name": "legacy initial batch adds exactly six once",
+      "pass": true
+    },
+    {
+      "name": "all old animal identities and full state preserved",
+      "pass": true
+    },
+    {
+      "name": "deadline preserved and migration marked",
+      "pass": true
+    },
+    {
+      "name": "repeat load and exploration never refill initial batch",
+      "pass": true
+    },
+    {
+      "name": "no periodic batch before deadline",
+      "pass": true
+    },
+    {
+      "name": "seven-day batch adds exactly two animals",
+      "pass": true
+    },
+    {
+      "name": "periodic batch has one chicken and one sheep",
+      "pass": true
+    },
+    {
+      "name": "original seven-day interval unchanged",
+      "pass": true
+    },
+    {
+      "name": "upgraded animal/fish world snapshot saves",
+      "pass": true
+    },
+    {
+      "name": "failed upgraded save protects previous snapshot",
+      "pass": true
+    },
+    {
+      "name": "same grass clip and gain on grass",
+      "pass": true
+    },
+    {
+      "name": "footstep plays on grass",
+      "pass": true
+    },
+    {
+      "name": "original grass sample and pitch grass",
+      "pass": true
+    },
+    {
+      "name": "busy voice skips cross-surface overlap grass",
+      "pass": true
+    },
+    {
+      "name": "natural end leaves no queued footsteps grass",
+      "pass": true
+    },
+    {
+      "name": "same grass clip and gain on dirt",
+      "pass": true
+    },
+    {
+      "name": "footstep plays on dirt",
+      "pass": true
+    },
+    {
+      "name": "original grass sample and pitch dirt",
+      "pass": true
+    },
+    {
+      "name": "busy voice skips cross-surface overlap dirt",
+      "pass": true
+    },
+    {
+      "name": "natural end leaves no queued footsteps dirt",
+      "pass": true
+    },
+    {
+      "name": "same grass clip and gain on stone",
+      "pass": true
+    },
+    {
+      "name": "footstep plays on stone",
+      "pass": true
+    },
+    {
+      "name": "original grass sample and pitch stone",
+      "pass": true
+    },
+    {
+      "name": "busy voice skips cross-surface overlap stone",
+      "pass": true
+    },
+    {
+      "name": "natural end leaves no queued footsteps stone",
+      "pass": true
+    },
+    {
+      "name": "same grass clip and gain on wood",
+      "pass": true
+    },
+    {
+      "name": "footstep plays on wood",
+      "pass": true
+    },
+    {
+      "name": "original grass sample and pitch wood",
+      "pass": true
+    },
+    {
+      "name": "busy voice skips cross-surface overlap wood",
+      "pass": true
+    },
+    {
+      "name": "natural end leaves no queued footsteps wood",
+      "pass": true
+    },
+    {
+      "name": "all non-footstep sounds including V9 close unchanged",
+      "pass": true
+    }
+  ],
+  "failed": 0,
+  "stats": {
+    "animals_after_periodic_batch": 15,
+    "cache_tiles": 15,
+    "fish_schools": 56,
+    "generated_tiles": 15,
+    "hidden_warm_ms": 3787.5,
+    "max_hidden_build_frame_ms": 1.187,
+    "operation_max_ms": 33.408,
+    "operation_p95_ms": 16.893,
+    "static_memory_mib": 124.417754173279,
+    "warm_first_open_ms": 30.238
+  }
+}

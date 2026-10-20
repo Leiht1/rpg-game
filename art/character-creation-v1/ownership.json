@@ -1,0 +1,497 @@
+[
+  {
+    "source": "male-generated/generated.png",
+    "box": [
+      0,
+      0,
+      351,
+      386
+    ],
+    "scale": 1,
+    "dest": [
+      80,
+      63
+    ],
+    "sheet": "male-packed.png"
+  },
+  {
+    "source": "male-generated/generated.png",
+    "box": [
+      351,
+      0,
+      669,
+      386
+    ],
+    "scale": 1,
+    "dest": [
+      609,
+      63
+    ],
+    "sheet": "male-packed.png"
+  },
+  {
+    "source": "male-generated/generated.png",
+    "box": [
+      669,
+      0,
+      1024,
+      386
+    ],
+    "scale": 1,
+    "dest": [
+      1102,
+      63
+    ],
+    "sheet": "male-packed.png"
+  },
+  {
+    "source": "male-generated/generated.png",
+    "box": [
+      0,
+      386,
+      351,
+      748
+    ],
+    "scale": 1,
+    "dest": [
+      80,
+      587
+    ],
+    "sheet": "male-packed.png"
+  },
+  {
+    "source": "male-generated/generated.png",
+    "box": [
+      351,
+      386,
+      669,
+      748
+    ],
+    "scale": 1,
+    "dest": [
+      609,
+      587
+    ],
+    "sheet": "male-packed.png"
+  },
+  {
+    "source": "male-generated/generated.png",
+    "box": [
+      669,
+      386,
+      1024,
+      748
+    ],
+    "scale": 1,
+    "dest": [
+      1102,
+      587
+    ],
+    "sheet": "male-packed.png"
+  },
+  {
+    "source": "parted-generated/generated.png",
+    "box": [
+      0,
+      0,
+      724,
+      724
+    ],
+    "scale": 0.6187845303867403,
+    "dest": [
+      32,
+      1056
+    ],
+    "sheet": "male-packed.png"
+  },
+  {
+    "source": "parted-generated/generated.png",
+    "box": [
+      724,
+      0,
+      1448,
+      724
+    ],
+    "scale": 0.6187845303867403,
+    "dest": [
+      544,
+      1056
+    ],
+    "sheet": "male-packed.png"
+  },
+  {
+    "source": "parted-generated/generated.png",
+    "box": [
+      1448,
+      0,
+      2172,
+      724
+    ],
+    "scale": 0.6187845303867403,
+    "dest": [
+      1056,
+      1056
+    ],
+    "sheet": "male-packed.png"
+  },
+  {
+    "source": "male-generated/generated.png",
+    "box": [
+      0,
+      1095,
+      351,
+      1536
+    ],
+    "scale": 1,
+    "dest": [
+      80,
+      1571
+    ],
+    "sheet": "male-packed.png"
+  },
+  {
+    "source": "male-generated/generated.png",
+    "box": [
+      351,
+      1095,
+      669,
+      1536
+    ],
+    "scale": 1,
+    "dest": [
+      609,
+      1571
+    ],
+    "sheet": "male-packed.png"
+  },
+  {
+    "source": "male-generated/generated.png",
+    "box": [
+      669,
+      1095,
+      1024,
+      1536
+    ],
+    "scale": 1,
+    "dest": [
+      1102,
+      1571
+    ],
+    "sheet": "male-packed.png"
+  },
+  {
+    "source": "female-generated/generated.png",
+    "box": [
+      0,
+      0,
+      358,
+      351
+    ],
+    "scale": 1,
+    "dest": [
+      77,
+      80
+    ],
+    "sheet": "female-packed.png"
+  },
+  {
+    "source": "female-generated/generated.png",
+    "box": [
+      358,
+      0,
+      685,
+      351
+    ],
+    "scale": 1,
+    "dest": [
+      604,
+      80
+    ],
+    "sheet": "female-packed.png"
+  },
+  {
+    "source": "female-generated/generated.png",
+    "box": [
+      685,
+      0,
+      1024,
+      351
+    ],
+    "scale": 1,
+    "dest": [
+      1110,
+      80
+    ],
+    "sheet": "female-packed.png"
+  },
+  {
+    "source": "female-generated/generated.png",
+    "box": [
+      0,
+      351,
+      358,
+      749
+    ],
+    "scale": 1,
+    "dest": [
+      77,
+      569
+    ],
+    "sheet": "female-packed.png"
+  },
+  {
+    "source": "female-generated/generated.png",
+    "box": [
+      358,
+      351,
+      685,
+      749
+    ],
+    "scale": 1,
+    "dest": [
+      604,
+      569
+    ],
+    "sheet": "female-packed.png"
+  },
+  {
+    "source": "female-generated/generated.png",
+    "box": [
+      685,
+      351,
+      1024,
+      749
+    ],
+    "scale": 1,
+    "dest": [
+      1110,
+      569
+    ],
+    "sheet": "female-packed.png"
+  },
+  {
+    "source": "female-generated/generated.png",
+    "box": [
+      0,
+      749,
+      358,
+      1102
+    ],
+    "scale": 1,
+    "dest": [
+      77,
+      1103
+    ],
+    "sheet": "female-packed.png"
+  },
+  {
+    "source": "female-generated/generated.png",
+    "box": [
+      358,
+      749,
+      685,
+      1102
+    ],
+    "scale": 1,
+    "dest": [
+      604,
+      1103
+    ],
+    "sheet": "female-packed.png"
+  },
+  {
+    "source": "female-generated/generated.png",
+    "box": [
+      685,
+      749,
+      1024,
+      1102
+    ],
+    "scale": 1,
+    "dest": [
+      1110,
+      1103
+    ],
+    "sheet": "female-packed.png"
+  },
+  {
+    "source": "female-generated/generated.png",
+    "box": [
+      0,
+      1102,
+      358,
+      1536
+    ],
+    "scale": 1,
+    "dest": [
+      77,
+      1575
+    ],
+    "sheet": "female-packed.png"
+  },
+  {
+    "source": "female-generated/generated.png",
+    "box": [
+      358,
+      1102,
+      685,
+      1536
+    ],
+    "scale": 1,
+    "dest": [
+      604,
+      1575
+    ],
+    "sheet": "female-packed.png"
+  },
+  {
+    "source": "female-generated/generated.png",
+    "box": [
+      685,
+      1102,
+      1024,
+      1536
+    ],
+    "scale": 1,
+    "dest": [
+      1110,
+      1575
+    ],
+    "sheet": "female-packed.png"
+  },
+  {
+    "source": "outfit-retry/generated.png",
+    "box": [
+      0,
+      0,
+      433,
+      426
+    ],
+    "scale": 1,
+    "dest": [
+      39,
+      43
+    ],
+    "sheet": "outfit-packed.png"
+  },
+  {
+    "source": "outfit-retry/generated.png",
+    "box": [
+      433,
+      0,
+      873,
+      426
+    ],
+    "scale": 1,
+    "dest": [
+      548,
+      43
+    ],
+    "sheet": "outfit-packed.png"
+  },
+  {
+    "source": "outfit-retry/generated.png",
+    "box": [
+      873,
+      0,
+      1254,
+      426
+    ],
+    "scale": 1,
+    "dest": [
+      1089,
+      43
+    ],
+    "sheet": "outfit-packed.png"
+  },
+  {
+    "source": "outfit-retry/generated.png",
+    "box": [
+      0,
+      426,
+      433,
+      823
+    ],
+    "scale": 1,
+    "dest": [
+      39,
+      569
+    ],
+    "sheet": "outfit-packed.png"
+  },
+  {
+    "source": "outfit-retry/generated.png",
+    "box": [
+      433,
+      426,
+      873,
+      823
+    ],
+    "scale": 1,
+    "dest": [
+      548,
+      569
+    ],
+    "sheet": "outfit-packed.png"
+  },
+  {
+    "source": "outfit-retry/generated.png",
+    "box": [
+      873,
+      426,
+      1254,
+      823
+    ],
+    "scale": 1,
+    "dest": [
+      1089,
+      569
+    ],
+    "sheet": "outfit-packed.png"
+  },
+  {
+    "source": "outfit-retry/generated.png",
+    "box": [
+      0,
+      823,
+      433,
+      1254
+    ],
+    "scale": 1,
+    "dest": [
+      39,
+      1064
+    ],
+    "sheet": "outfit-packed.png"
+  },
+  {
+    "source": "outfit-retry/generated.png",
+    "box": [
+      433,
+      823,
+      873,
+      1254
+    ],
+    "scale": 1,
+    "dest": [
+      548,
+      1064
+    ],
+    "sheet": "outfit-packed.png"
+  },
+  {
+    "source": "outfit-retry/generated.png",
+    "box": [
+      873,
+      823,
+      1254,
+      1254
+    ],
+    "scale": 1,
+    "dest": [
+      1089,
+      1064
+    ],
+    "sheet": "outfit-packed.png"
+  }
+]

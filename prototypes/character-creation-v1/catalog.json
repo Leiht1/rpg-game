@@ -1,0 +1,209 @@
+{
+  "version": 2,
+  "hair": {
+    "male_natural": {
+      "name": "自然短发",
+      "gender": "male",
+      "front": {
+        "front": "res://prototypes/character-hair-v2/hair/male_natural-front.png",
+        "rear": ""
+      },
+      "back": {
+        "front": "res://prototypes/character-hair-v2/hair/male_natural-back.png",
+        "rear": ""
+      },
+      "side": {
+        "front": "res://prototypes/character-hair-v2/hair/male_natural-side.png",
+        "rear": ""
+      }
+    },
+    "male_fluffy": {
+      "name": "蓬松短发",
+      "gender": "male",
+      "front": {
+        "front": "res://prototypes/character-hair-v2/hair/male_fluffy-front.png",
+        "rear": ""
+      },
+      "back": {
+        "front": "res://prototypes/character-hair-v2/hair/male_fluffy-back.png",
+        "rear": ""
+      },
+      "side": {
+        "front": "res://prototypes/character-hair-v2/hair/male_fluffy-side.png",
+        "rear": ""
+      }
+    },
+    "male_parted": {
+      "name": "美式前刺",
+      "gender": "male",
+      "front": {
+        "front": "res://prototypes/character-hair-v2/hair/male_parted-front.png",
+        "rear": ""
+      },
+      "back": {
+        "front": "res://prototypes/character-hair-v2/hair/male_parted-back.png",
+        "rear": ""
+      },
+      "side": {
+        "front": "res://prototypes/character-hair-v2/hair/male_parted-side.png",
+        "rear": ""
+      }
+    },
+    "male_curly": {
+      "name": "微卷短发",
+      "gender": "male",
+      "front": {
+        "front": "res://prototypes/character-hair-v2/hair/male_curly-front.png",
+        "rear": ""
+      },
+      "back": {
+        "front": "res://prototypes/character-hair-v2/hair/male_curly-back.png",
+        "rear": ""
+      },
+      "side": {
+        "front": "res://prototypes/character-hair-v2/hair/male_curly-side.png",
+        "rear": ""
+      }
+    },
+    "female_bob": {
+      "name": "齐肩短发",
+      "gender": "female",
+      "front": {
+        "front": "res://prototypes/character-hair-v2/hair/female_bob-front.png",
+        "rear": ""
+      },
+      "back": {
+        "front": "res://prototypes/character-hair-v2/hair/female_bob-back.png",
+        "rear": ""
+      },
+      "side": {
+        "front": "res://prototypes/character-hair-v2/hair/female_bob-side.png",
+        "rear": ""
+      }
+    },
+    "female_straight": {
+      "name": "长直发",
+      "gender": "female",
+      "front": {
+        "front": "res://prototypes/character-hair-v2/hair/female_straight-front.png",
+        "rear": ""
+      },
+      "back": {
+        "front": "res://prototypes/character-hair-v2/hair/female_straight-back.png",
+        "rear": ""
+      },
+      "side": {
+        "front": "res://prototypes/character-hair-v2/hair/female_straight-side.png",
+        "rear": ""
+      }
+    },
+    "female_twintail": {
+      "name": "双马尾",
+      "gender": "female",
+      "front": {
+        "front": "res://prototypes/character-hair-v2/hair/female_twintail-front.png",
+        "rear": ""
+      },
+      "back": {
+        "front": "res://prototypes/character-hair-v2/hair/female_twintail-back.png",
+        "rear": ""
+      },
+      "side": {
+        "front": "res://prototypes/character-hair-v2/hair/female_twintail-side.png",
+        "rear": ""
+      }
+    },
+    "female_ponytail": {
+      "name": "低马尾",
+      "gender": "female",
+      "front": {
+        "front": "res://prototypes/character-hair-v2/hair/female_ponytail-front.png",
+        "rear": ""
+      },
+      "back": {
+        "front": "res://prototypes/character-hair-v2/hair/female_ponytail-back.png",
+        "rear": ""
+      },
+      "side": {
+        "front": "res://prototypes/ponytail-side-v3/female_ponytail-side.png",
+        "rear": ""
+      }
+    }
+  },
+  "skin": {
+    "skin_1": {
+      "name": "瓷白",
+      "color": "#f7d6b4"
+    },
+    "skin_2": {
+      "name": "浅肤",
+      "color": "#efb67e"
+    },
+    "skin_3": {
+      "name": "自然",
+      "color": "#d99a65"
+    },
+    "skin_4": {
+      "name": "麦色",
+      "color": "#b97c4d"
+    },
+    "skin_5": {
+      "name": "棕肤",
+      "color": "#945b38"
+    },
+    "skin_6": {
+      "name": "深棕",
+      "color": "#633c29"
+    }
+  },
+  "outfits": {
+    "modern_outfit": {
+      "parts": {
+        "front": {
+          "torso": "outfit/front_torso.png",
+          "arm_l": "outfit/front_arm.png",
+          "arm_r": "outfit/front_arm.png",
+          "leg_l": "outfit/front_leg.png",
+          "leg_r": "outfit/front_leg.png"
+        },
+        "back": {
+          "torso": "outfit/back_torso.png",
+          "arm_l": "outfit/back_arm.png",
+          "arm_r": "outfit/back_arm.png",
+          "leg_l": "outfit/back_leg.png",
+          "leg_r": "outfit/back_leg.png"
+        },
+        "side": {
+          "torso": "outfit/side_torso.png",
+          "arm_l": "outfit/side_arm.png",
+          "arm_r": "outfit/side_arm.png",
+          "leg_l": "outfit/side_leg.png",
+          "leg_r": "outfit/side_leg.png"
+        }
+      },
+      "skin_regions": {
+        "torso": [
+          0,
+          0.2
+        ],
+        "arm_l": [
+          0.72,
+          1
+        ],
+        "arm_r": [
+          0.72,
+          1
+        ]
+      }
+    }
+  },
+  "heads": {
+    "front": "heads/front.png",
+    "back": "heads/back.png",
+    "side": "res://prototypes/character-hair-v2/heads/side.png"
+  },
+  "sleep_side_eye_center": [
+    0.7300998789346247,
+    0.6064164648910412
+  ]
+}

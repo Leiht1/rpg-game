@@ -1,0 +1,1112 @@
+{
+  "checks": [
+    {
+      "name": "compile pre-task baseline fishing_population.gd",
+      "pass": true
+    },
+    {
+      "name": "sample seeds reach doubled school count [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "global fish limit [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "new fish JSON roundtrip [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-8 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-17 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-25 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-29 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-4 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-2-14 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-2-5 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-2-31 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-2-18 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-3-5 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-3-15 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-5-28 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-5-12 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-5-4 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-36-19-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-55-52-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-59-16-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-45-63-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-61-76-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-43-60-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-36-67-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-44-11-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-49-34-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-64-65-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-41-59-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-31-17-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-43-33-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-48-61-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-62-72-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-28-19-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-68-34-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-49-8-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-49-43-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-28-76-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-66-62-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-40-86-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-35-63-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-57-18-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-38-59-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-30-70-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-50-80-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-45-15-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-33-29-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-62-57-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-45-58-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-44-52-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-47-84-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-32-78-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-66-45-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-56-77-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-27-22-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-67-39-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-63-68-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-54-19-0 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-36-60-1 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "lake cap 6 [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "ocean schools retained [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "old population accepted [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "migration preserves every fish remaining/deadline [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "migration adds only bounded extra schools [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "revision prevents repeat fish top-up [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "migrated spacing/IDs/lake caps valid [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "unknown fish revision rejected [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "old empty school not refilled by migration [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "delayed refill uses different legal shore [81273, 1536]",
+      "pass": true
+    },
+    {
+      "name": "sample seeds reach doubled school count [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "global fish limit [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "new fish JSON roundtrip [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-0-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-0-10 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-0-5 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-2-6 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-2-15 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-4-8 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-4-10 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-4-30 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-32-60-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-57-45-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-61-24-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-84-39-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-5-32-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-28-56-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-43-68-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-32-57-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-34-32-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-71-56-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-69-35-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-47-69-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-13-42-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-59-59-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-38-66-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-58-63-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-25-52-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-85-49-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-21-33-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-69-64-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-52-73-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-68-38-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-56-28-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-72-40-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-77-55-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-51-35-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-69-40-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-56-31-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-30-28-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-81-51-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-37-62-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-66-31-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-57-71-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-56-73-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-68-61-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-38-40-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-74-41-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-40-68-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-63-27-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-27-46-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-61-62-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-26-30-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-23-41-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-6-34-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-16-43-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-41-36-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-14-30-0 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-76-40-1 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "lake cap 6 [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "ocean schools retained [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "old population accepted [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "migration preserves every fish remaining/deadline [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "migration adds only bounded extra schools [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "revision prevents repeat fish top-up [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "migrated spacing/IDs/lake caps valid [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "unknown fish revision rejected [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "old empty school not refilled by migration [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "delayed refill uses different legal shore [271828, 1536]",
+      "pass": true
+    },
+    {
+      "name": "sample seeds reach doubled school count [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "global fish limit [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "new fish JSON roundtrip [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-0-23 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-0-20 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-27 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-6 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-23 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-2-21 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-2-9 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-3-2 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-3-16 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-3-14 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-3-30 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-3-29 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-5-26 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-5-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-48-20-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-61-74-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-57-8-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-62-62-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-50-84-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-62-51-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-30-15-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-26-21-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-50-79-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-56-86-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-54-67-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-66-34-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-52-54-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-49-14-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-45-34-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-59-77-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-52-68-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-51-19-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-50-57-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-60-9-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-60-38-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-58-44-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-46-42-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-67-25-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-49-73-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-29-28-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-54-9-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-66-57-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-50-17-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-36-32-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-70-19-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-46-47-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-44-41-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-60-81-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-65-31-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-46-31-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-48-17-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-37-29-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-63-11-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-49-49-1 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-42-12-0 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "lake cap 6 [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "ocean schools retained [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "old population accepted [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "migration preserves every fish remaining/deadline [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "migration adds only bounded extra schools [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "revision prevents repeat fish top-up [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "migrated spacing/IDs/lake caps valid [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "unknown fish revision rejected [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "old empty school not refilled by migration [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "delayed refill uses different legal shore [902106, 1536]",
+      "pass": true
+    },
+    {
+      "name": "sample seeds reach doubled school count [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "global fish limit [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "new fish JSON roundtrip [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-5 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-15 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-20 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-1-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-2-9 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-2-14 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-2-19 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-2-2 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-3-7 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-3-17 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore lake-3-30 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-49-73-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-32-41-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-22-39-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-80-37-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-72-75-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-49-22-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-26-77-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-43-66-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-16-59-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-18-39-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-81-48-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-85-59-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-16-66-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-63-76-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-60-56-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-33-74-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-9-50-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-67-52-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-66-30-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-11-44-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-28-40-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-40-64-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-82-67-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-56-28-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-38-28-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-63-60-0 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-41-57-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-15-41-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "fish dry shore coast-68-77-1 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "lake cap 6 [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "ocean schools retained [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "old population accepted [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "migration preserves every fish remaining/deadline [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "migration adds only bounded extra schools [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "revision prevents repeat fish top-up [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "migrated spacing/IDs/lake caps valid [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "unknown fish revision rejected [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "old empty school not refilled by migration [81273, 1024]",
+      "pass": true
+    },
+    {
+      "name": "delayed refill uses different legal shore [81273, 1024]",
+      "pass": true
+    }
+  ],
+  "failed": 0,
+  "stats": {
+    "populations": [
+      {
+        "actual_after_migration": 56,
+        "cells": 1536,
+        "coast": 41,
+        "fresh_schools": 56,
+        "lake_counts": {
+          "1": 6,
+          "2": 4,
+          "3": 2,
+          "5": 3
+        },
+        "max_schools": 56,
+        "old_schools": 28,
+        "seed": 81273
+      },
+      {
+        "actual_after_migration": 56,
+        "cells": 1536,
+        "coast": 48,
+        "fresh_schools": 56,
+        "lake_counts": {
+          "0": 3,
+          "2": 2,
+          "4": 3
+        },
+        "max_schools": 56,
+        "old_schools": 28,
+        "seed": 271828
+      },
+      {
+        "actual_after_migration": 56,
+        "cells": 1536,
+        "coast": 41,
+        "fresh_schools": 56,
+        "lake_counts": {
+          "0": 2,
+          "1": 4,
+          "2": 2,
+          "3": 5,
+          "5": 2
+        },
+        "max_schools": 56,
+        "old_schools": 28,
+        "seed": 902106
+      },
+      {
+        "actual_after_migration": 40,
+        "cells": 1024,
+        "coast": 29,
+        "fresh_schools": 40,
+        "lake_counts": {
+          "1": 4,
+          "2": 4,
+          "3": 3
+        },
+        "max_schools": 40,
+        "old_schools": 20,
+        "seed": 81273
+      }
+    ]
+  }
+}

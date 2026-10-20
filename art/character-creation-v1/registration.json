@@ -1,0 +1,758 @@
+[
+  {
+    "target": "heads/front.png",
+    "source": "bald-generated/generated.png",
+    "cell": [
+      0,
+      0,
+      724,
+      724
+    ],
+    "bbox": [
+      41,
+      128,
+      704,
+      592
+    ],
+    "scale": 0.2956259426847662
+  },
+  {
+    "target": "heads/back.png",
+    "source": "bald-generated/generated.png",
+    "cell": [
+      724,
+      0,
+      1448,
+      724
+    ],
+    "bbox": [
+      33,
+      124,
+      690,
+      589
+    ],
+    "scale": 0.2983257229832572
+  },
+  {
+    "target": "heads/side.png",
+    "source": "bald-generated/generated.png",
+    "cell": [
+      1448,
+      0,
+      2172,
+      724
+    ],
+    "bbox": [
+      75,
+      125,
+      659,
+      595
+    ],
+    "scale": 0.3253424657534247
+  },
+  {
+    "target": "hair/male_natural-front",
+    "source": "male-packed.png",
+    "cell": [
+      0,
+      0,
+      512,
+      512
+    ],
+    "bbox": [
+      95,
+      151,
+      424,
+      368
+    ],
+    "scale": 0.6808510638297872,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 235
+  },
+  {
+    "target": "hair/male_natural-back",
+    "source": "male-packed.png",
+    "cell": [
+      512,
+      0,
+      1024,
+      512
+    ],
+    "bbox": [
+      106,
+      152,
+      412,
+      412
+    ],
+    "scale": 0.7320261437908496,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/male_natural-side",
+    "source": "male-packed.png",
+    "cell": [
+      1024,
+      0,
+      1536,
+      512
+    ],
+    "bbox": [
+      87,
+      151,
+      423,
+      409
+    ],
+    "scale": 0.6666666666666666,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/male_fluffy-front",
+    "source": "male-packed.png",
+    "cell": [
+      0,
+      512,
+      512,
+      1024
+    ],
+    "bbox": [
+      90,
+      122,
+      425,
+      350
+    ],
+    "scale": 0.6686567164179105,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 235
+  },
+  {
+    "target": "hair/male_fluffy-back",
+    "source": "male-packed.png",
+    "cell": [
+      512,
+      512,
+      1024,
+      1024
+    ],
+    "bbox": [
+      110,
+      121,
+      412,
+      392
+    ],
+    "scale": 0.7417218543046358,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/male_fluffy-side",
+    "source": "male-packed.png",
+    "cell": [
+      1024,
+      512,
+      1536,
+      1024
+    ],
+    "bbox": [
+      81,
+      114,
+      422,
+      386
+    ],
+    "scale": 0.656891495601173,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/male_parted-front",
+    "source": "male-packed.png",
+    "cell": [
+      0,
+      1024,
+      512,
+      1536
+    ],
+    "bbox": [
+      71,
+      115,
+      442,
+      339
+    ],
+    "scale": 0.6037735849056604,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 235
+  },
+  {
+    "target": "hair/male_parted-back",
+    "source": "male-packed.png",
+    "cell": [
+      512,
+      1024,
+      1024,
+      1536
+    ],
+    "bbox": [
+      82,
+      115,
+      434,
+      377
+    ],
+    "scale": 0.6363636363636364,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/male_parted-side",
+    "source": "male-packed.png",
+    "cell": [
+      1024,
+      1024,
+      1536,
+      1536
+    ],
+    "bbox": [
+      79,
+      115,
+      455,
+      375
+    ],
+    "scale": 0.5957446808510638,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/male_curly-front",
+    "source": "male-packed.png",
+    "cell": [
+      0,
+      1536,
+      512,
+      2048
+    ],
+    "bbox": [
+      91,
+      78,
+      425,
+      310
+    ],
+    "scale": 0.6706586826347305,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 235
+  },
+  {
+    "target": "hair/male_curly-back",
+    "source": "male-packed.png",
+    "cell": [
+      512,
+      1536,
+      1024,
+      2048
+    ],
+    "bbox": [
+      106,
+      77,
+      410,
+      341
+    ],
+    "scale": 0.7368421052631579,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/male_curly-side",
+    "source": "male-packed.png",
+    "cell": [
+      1024,
+      1536,
+      1536,
+      2048
+    ],
+    "bbox": [
+      86,
+      78,
+      420,
+      338
+    ],
+    "scale": 0.6706586826347305,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/female_bob-front",
+    "source": "female-packed.png",
+    "cell": [
+      0,
+      0,
+      512,
+      512
+    ],
+    "bbox": [
+      100,
+      156,
+      430,
+      408
+    ],
+    "scale": 0.7515151515151515,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 235
+  },
+  {
+    "target": "hair/female_bob-back",
+    "source": "female-packed.png",
+    "cell": [
+      512,
+      0,
+      1024,
+      512
+    ],
+    "bbox": [
+      100,
+      153,
+      413,
+      410
+    ],
+    "scale": 0.792332268370607,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/female_bob-side",
+    "source": "female-packed.png",
+    "cell": [
+      1024,
+      0,
+      1536,
+      512
+    ],
+    "bbox": [
+      92,
+      153,
+      399,
+      412
+    ],
+    "scale": 0.7654723127035831,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/female_straight-front",
+    "source": "female-packed.png",
+    "cell": [
+      0,
+      512,
+      512,
+      1024
+    ],
+    "bbox": [
+      103,
+      81,
+      421,
+      430
+    ],
+    "scale": 0.779874213836478,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 235
+  },
+  {
+    "target": "hair/female_straight-back",
+    "source": "female-packed.png",
+    "cell": [
+      512,
+      512,
+      1024,
+      1024
+    ],
+    "bbox": [
+      104,
+      77,
+      400,
+      434
+    ],
+    "scale": 0.8108108108108109,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/female_straight-side",
+    "source": "female-packed.png",
+    "cell": [
+      1024,
+      512,
+      1536,
+      1024
+    ],
+    "bbox": [
+      101,
+      78,
+      392,
+      440
+    ],
+    "scale": 0.8006872852233677,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/female_twintail-front",
+    "source": "female-packed.png",
+    "cell": [
+      0,
+      1024,
+      512,
+      1536
+    ],
+    "bbox": [
+      99,
+      97,
+      430,
+      403
+    ],
+    "scale": 0.7492447129909365,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 235
+  },
+  {
+    "target": "hair/female_twintail-back",
+    "source": "female-packed.png",
+    "cell": [
+      512,
+      1024,
+      1024,
+      1536
+    ],
+    "bbox": [
+      98,
+      97,
+      412,
+      406
+    ],
+    "scale": 0.7898089171974523,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/female_twintail-side",
+    "source": "female-packed.png",
+    "cell": [
+      1024,
+      1024,
+      1536,
+      1536
+    ],
+    "bbox": [
+      107,
+      95,
+      397,
+      425
+    ],
+    "scale": 0.8103448275862069,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/female_ponytail-front",
+    "source": "female-packed.png",
+    "cell": [
+      0,
+      1536,
+      512,
+      2048
+    ],
+    "bbox": [
+      117,
+      49,
+      406,
+      414
+    ],
+    "scale": 0.7958477508650519,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 235
+  },
+  {
+    "target": "hair/female_ponytail-back",
+    "source": "female-packed.png",
+    "cell": [
+      512,
+      1536,
+      1024,
+      2048
+    ],
+    "bbox": [
+      131,
+      47,
+      381,
+      427
+    ],
+    "scale": 0.764,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "hair/female_ponytail-side",
+    "source": "female-packed.png",
+    "cell": [
+      1024,
+      1536,
+      1536,
+      2048
+    ],
+    "bbox": [
+      105,
+      48,
+      400,
+      419
+    ],
+    "scale": 0.7830508474576271,
+    "registration": [
+      180,
+      200
+    ],
+    "part_top": 110,
+    "split_y": 226
+  },
+  {
+    "target": "outfit/front_torso.png",
+    "source": "outfit-packed.png",
+    "cell": [
+      0,
+      0,
+      512,
+      512
+    ],
+    "bbox": [
+      94,
+      107,
+      446,
+      446
+    ],
+    "scale": 0.2727272727272727
+  },
+  {
+    "target": "outfit/front_arm.png",
+    "source": "outfit-packed.png",
+    "cell": [
+      0,
+      512,
+      512,
+      1024
+    ],
+    "bbox": [
+      199,
+      81,
+      333,
+      428
+    ],
+    "scale": 0.23880597014925373
+  },
+  {
+    "target": "outfit/front_leg.png",
+    "source": "outfit-packed.png",
+    "cell": [
+      0,
+      1024,
+      512,
+      1536
+    ],
+    "bbox": [
+      188,
+      66,
+      348,
+      386
+    ],
+    "scale": 0.225
+  },
+  {
+    "target": "outfit/back_torso.png",
+    "source": "outfit-packed.png",
+    "cell": [
+      512,
+      0,
+      1024,
+      512
+    ],
+    "bbox": [
+      62,
+      107,
+      414,
+      446
+    ],
+    "scale": 0.2727272727272727
+  },
+  {
+    "target": "outfit/back_arm.png",
+    "source": "outfit-packed.png",
+    "cell": [
+      512,
+      512,
+      1024,
+      1024
+    ],
+    "bbox": [
+      169,
+      81,
+      300,
+      428
+    ],
+    "scale": 0.24427480916030533
+  },
+  {
+    "target": "outfit/back_leg.png",
+    "source": "outfit-packed.png",
+    "cell": [
+      512,
+      1024,
+      1024,
+      1536
+    ],
+    "bbox": [
+      160,
+      66,
+      309,
+      386
+    ],
+    "scale": 0.24161073825503357
+  },
+  {
+    "target": "outfit/side_torso.png",
+    "source": "outfit-packed.png",
+    "cell": [
+      1024,
+      0,
+      1536,
+      512
+    ],
+    "bbox": [
+      127,
+      108,
+      360,
+      446
+    ],
+    "scale": 0.2832618025751073
+  },
+  {
+    "target": "outfit/side_arm.png",
+    "source": "outfit-packed.png",
+    "cell": [
+      1024,
+      512,
+      1536,
+      1024
+    ],
+    "bbox": [
+      164,
+      81,
+      292,
+      428
+    ],
+    "scale": 0.25
+  },
+  {
+    "target": "outfit/side_leg.png",
+    "source": "outfit-packed.png",
+    "cell": [
+      1024,
+      1024,
+      1536,
+      1536
+    ],
+    "bbox": [
+      147,
+      66,
+      342,
+      386
+    ],
+    "scale": 0.18461538461538463
+  }
+]

@@ -20,6 +20,8 @@ func valid(data: Variant) -> bool:
  if data.has("spawning"):
   var sp=data.spawning
   if not sp is Dictionary or not sp.get("initialized") is bool:return false
+  var revision=sp.get("population_revision",1)
+  if not number(revision) or revision!=floor(revision) or revision<1 or revision>rules.population_revision:return false
   if not number(sp.get("sequence")) or sp.sequence<0 or sp.sequence!=floor(sp.sequence):return false
   if not number(sp.get("next_at")) or sp.next_at<0:return false
  for key in ["clock","serial"]:
@@ -94,8 +96,16 @@ func seed_chunk(_coord: Vector2i) -> void:
  ensure_population()
 
 func ensure_population() -> void:
- if spawning.initialized or not service.writable:return
+ if not service.writable:return
+ if spawning.initialized:
+  if int(spawning.get("population_revision",1))<int(rules.population_revision):
+   # One-time extra initial batch; never reset existing animals or the deadline.
+   for i in int(rules.initial_count)-int(rules.previous_initial_count):spawn_one()
+   spawning.population_revision=int(rules.population_revision)
+   service.dirty=true
+  return
  spawning.initialized=true
+ spawning.population_revision=int(rules.population_revision)
  for i in int(rules.initial_count):spawn_one()
  spawning.next_at=clock+float(rules.spawn_interval)
  service.dirty=true
@@ -208,8 +218,8 @@ func tick(minutes: float) -> void:
    if r.product>=rules.wool_minutes:r.wool=true
  breed(minutes)
  if spawning.initialized and clock>=float(spawning.next_at):
-  spawn_one()
-  # Each due interval admits at most one, even if no safe location exists.
+  for i in int(rules.spawn_batch):spawn_one()
+  # Each due interval admits one bounded batch, even if safe sites are scarce.
   spawning.next_at+=float(rules.spawn_interval)
 
 func migrate_remote(r: Dictionary, minutes: float) -> void:

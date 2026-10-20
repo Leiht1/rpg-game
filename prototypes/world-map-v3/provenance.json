@@ -1,0 +1,38 @@
+{
+  "art_source": "code",
+  "route": "Godot native procedural drawing; code-drawn, no image model",
+  "model": null,
+  "new_runtime_pngs": [],
+  "references": [
+    "ART_STYLE.md",
+    "MAP_SYSTEM.md",
+    "user task explicitly allows procedural hand-drawn textures"
+  ],
+  "visual_status": "needs-user-visual-review",
+  "candidate_gate": "map_art_v3 only in dedicated preview and fixtures",
+  "runtime_png_replacement": false,
+  "source_sha256": {
+    "scripts/world_map.gd": "4f23469b3b7c007546645175fe3333259deca7108e3bc6fbb242cf706d68f548",
+    "scripts/map_cartography.gd": "72c8acfd89e6bab06980dcbc30941c3043143ffe032e6bc3179af897a5563a2e",
+    "scripts/map_fog.gdshader": "1e26b0adf6cc8a4749f60ae7033d8429246a8e65604a26c4292602af827757a4",
+    "scripts/world_exploration.gd": "f454b6d96f3aed8ccb75cff0ec40b3ad20c3d00d7fca394b1cff93f8ddc970c9",
+    "scripts/world_generator.gd": "40822aaaa2b5b12f649270c9d0f4bba383d519c43d584be9162eaa268a580d02",
+    "scripts/world_generator_base.gd": "c621260ec1c545f64595491ee370dc245073b800eee1cff09b13af4f6d375038",
+    "prototypes/world-map-v3/baseline_generator.gd": "1acd6c893f8bc43e5089f77c17193795a3f902ca7b3a176fc9fa6d094d2030ba",
+    "ART_STYLE.md": "cc9279abd9c9fc58df450399a10a08dde34479528d2d57cf3376571137d8facf"
+  },
+  "qa": {
+    "engine": "4.7.2-stable",
+    "viewport": [
+      1280,
+      720
+    ],
+    "files_verified": 12,
+    "invalid_images": 0,
+    "warnings": [
+      "Subjective style approval pending; structural tests do not approve art.",
+      "forge_doctor overall WARN; see report appendix and doctor.json."
+    ],
+    "screenshot_hashes": "reports/world-map-v3/rendered-qa.json (temporary test output hashes; not art input or approval references)"
+  }
+}

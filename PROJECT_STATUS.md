@@ -4,7 +4,31 @@
 
 ## 当前进度
 
-- 下一轮人物创建与换装 V1 需求已原样保存至[下一步开发任务](下一步开发任务.md)，本轮仅归档任务并同步项目，尚未开始实现。测试/预览 CMD 启动器仅本地保留，不再纳入 Git 同步。
+- 地图已增加后台附近预热、常用视口缓存优先保留及静态层按变化重绘；同区域反复M复用地形，首次预热未完成或远区缓存被淘汰仍会补图。鸡羊初始及周期新增数量按本轮翻倍，鱼群上限和每湖数量扩大；旧档一次补充保留既有状态。四地面脚步统一现草地素材，继续单通道自然播完。默认窗口及定向332项0失败、16份玩家JSON/tmp未变；专项与性能边界见 [缓存/生态/脚步报告](reports/map-cache-population-v4/REPORT.md)。
+
+- 世界与地图V3已交付隔离持久化试玩：新世界1536格、旧正式世界尺寸/布局保持，世界探索位集、M局部视口/缩放/拖拽/回到人物与有上限缓存完成。新手绘配色与地貌图案仅在 `Start-World-Map-V3-Preview.cmd` 等待本批审美确认，无正式PNG替换。新旧独立重启、三Seed分布、存档失败保护与默认窗口实测见 [V3报告](reports/world-map-v3/REPORT.md)，规则见 [世界地图V3](WORLD_MAP_V3.md)。
+
+
+- 关闭按钮已从全局点击入口明确排除，只发关闭声；移除关闭列表中与点击文件相同的01，仅用本批02。默认窗口16项0失败，含真实鼠标关闭背包，见 [V9报告](reports/audio-close-only-v9/REPORT.md)。
+
+
+- 界面声音已改独立单通道，同次输入只选主要反馈，关闭按钮不再叠点击声；连续操作切声不并播。按要求停用8类未替换旧声音，当前33类启用且均为本批素材/V7副本，脚步保持启用。默认窗口62项0失败，见 [V8报告](reports/audio-ui-single-v8/REPORT.md)。
+
+
+- 背包/地图共用开窗声已按要求去尾，只保留前0.30秒并作末端约8ms淡出，原增益与原素材保留；默认窗口9项0失败，见 [去尾报告](reports/audio-ui-open-v7/REPORT.md)。
+
+
+- 本轮工作台已选33类/35音效已正式接入，41类/43路径按用途平衡音量，四地面脚步已重新启用并保持单通道自然播完；补充当前玩法的新声音触发。默认1280×720原生窗口179项0失败、35对来源SHA一致，玩家JSON未改；退出清理诊断与未测听感见 [本轮音效报告](reports/audio-selected-v6/REPORT.md)，配置规则见 [音效规范](AUDIO_SYSTEM.md)。
+
+
+- 独立 Windows 音效配置工作台已开发：75 个声音需求全部重新挑选（含已有素材），提供递归扫描、真实试听、跨目录多选、规范导出与进度恢复；工具自身导出不自动绑定游戏；当前已选批次另由V6正式接入并启用脚步。入口 Start-Audio-Workbench.cmd，完整清单见 [重新配置清单](AUDIO_RESELECTION_CHECKLIST.md)，用法见 [工作台说明](tools/audio_workbench/README.md)，验证见 [报告](reports/audio-workbench-v1/REPORT.md)。
+
+
+- 低马尾侧视V3进一步补齐发带上方后脑覆盖，左右镜像/六肤色默认窗口25项、局部素材4项0失败；刘海/发带/马尾及其他发型保持，仍为候选。见[单项报告](reports/ponytail-side-v3/REPORT.md)。
+
+- 人物外观候选V2按反馈修订：所有发型改黑色，侧分改为美式前刺（保留旧ID兼容）；完整轮廓替代水平拆层，侧底头耳下错误线移除，创建转向关闭插值并统一纸布下拉。窗口专项189项及资源72项均0失败；原玩家/已有试玩档未改，未推广正式美术。见[修订报告](reports/character-hair-v2/REPORT.md)。需关闭旧试玩窗口后从原入口重开查看。
+
+- 人物创建与换装 V1 候选试玩已完成：男女各4种三视图发型、6肤色、现代套装部件替换、真实随机大陆及独立持久化；首次送服装一次，重进恢复外观/装备/Seed/位置。默认窗口与定向逻辑共249项0失败，退出资源诊断和未测边界见[报告](reports/character-creation-v1/REPORT.md)，规则见[人物规范](CHARACTER_CREATION_SYSTEM.md)。入口 Start-Character-Creation-Preview.cmd，新美术待本批审核，正式角色和玩家档保持。任务原文保留，CMD仅本地，PowerShell入口可同步。
 
 - 异次元商人本批已获用户授权正式接入，普通Start-Playtest直接生效；八张PNG按原SHA入assets/merchant/v1，采用回退后的柔和魔法阵，含已修复交易/手电/界面。无候选开关或素材依赖；独立试玩仍备齐材料，正式背包不赠送。默认窗口正式专项124项0失败，旧档缺merchant兼容及8/8哈希通过，玩家档未被测试写入。退出资源警告和未测范围见[报告](reports/merchant-v1/REPORT.md)、[规范](MERCHANT_SYSTEM.md)。
 
@@ -22,7 +46,7 @@
 
 - 钓鱼 V1 正式使用；鱼群新增每群6条、全图最多20群、每湖0–3群与稀疏大陆海岸分布，耗尽后2–3游戏日换随机岸位补充。原items保存鱼数、等待和随机状态，旧档兼容，获得与扣鱼原子提交；保留原尺寸侧视竿/随机窄安全区/深色鱼影/金币宝箱。无头和默认窗口新增专项各66项0失败、三Seed布点通过，测试未写玩家档。见[钓鱼规范](FISHING_SYSTEM.md)、[本轮报告](reports/fishing-population-v2/REPORT.md)。
 
-- 用户提供音效已接入，最新按要求暂时关闭全部脚步声，音频与历史配置保留；其他音效照常。点击/关闭等素材替换保持，小雨/独立雷声仍缺。[音效规范](AUDIO_SYSTEM.md)、[收集清单](AUDIO_COLLECTION.md)、[停用记录](reports/audio-v5/REPORT.md)。
+- 本轮已选音效V6已接入，四类脚步重新启用，小雨/雷声已补齐；旧音频与历史配置保留，当前进度见本页V6记录。[音效规范](AUDIO_SYSTEM.md)、[收集清单](AUDIO_COLLECTION.md)、[停用记录](reports/audio-v5/REPORT.md)。
 
 - 全局界面框已接入短淡入淡出，打开0.12秒、关闭0.09秒，含二级窗口与提示框；默认窗口专项34项0失败，见[报告](reports/ui-fade-v1/REPORT.md)。主观效果待反馈。
 
@@ -90,7 +114,7 @@
 
 ## 下一步（不自动开展）
 
-营地扩展V2本轮完成，等待本批候选美术、现有设施尺寸及四设施试玩验收；入口与范围见[CAMP_EXPANSION_V2.md](CAMP_EXPANSION_V2.md)。确认前不推广正式素材，不进入野外NPC。界面逐面板验收、长期人工平衡及规模性能等原有待办不自动开展。
+等待本轮世界地图V3审美与试玩反馈，以及人物外观与换装候选的具体画稿确认；不自动正式推广，不扩展联机/服务器。此前长期人工平衡及大营地性能边界继续保留。
 
 ## 按任务选择入口（不是必读列表）
 
@@ -105,7 +129,8 @@
 | 背包、快捷栏、装备 | [ITEM_SYSTEM.md](ITEM_SYSTEM.md)、[EQUIPMENT_SYSTEM.md](EQUIPMENT_SYSTEM.md) 中相关章节 |
 | 制作、料理、营地 | [CRAFTING_SYSTEM.md](CRAFTING_SYSTEM.md)、[CAMPFIRE_SYSTEM.md](CAMPFIRE_SYSTEM.md)、[CAMP_BUILD_SYSTEM.md](CAMP_BUILD_SYSTEM.md) 中对应系统 |
 | 采集、矿点、自然资源 | [HARVEST_SYSTEM.md](HARVEST_SYSTEM.md)、[ORE_SYSTEM.md](ORE_SYSTEM.md)、[NATURAL_RESOURCE_ECOLOGY.md](NATURAL_RESOURCE_ECOLOGY.md) 中对应系统 |
-| 地图或世界时间/天气 | [MAP_SYSTEM.md](MAP_SYSTEM.md) 或 [WORLD_ENVIRONMENT.md](WORLD_ENVIRONMENT.md) |
+| 地图或世界时间/天气 | [WORLD_MAP_V3.md](WORLD_MAP_V3.md)、[MAP_SYSTEM.md](MAP_SYSTEM.md) 或 [WORLD_ENVIRONMENT.md](WORLD_ENVIRONMENT.md) |
+| 人物创建、发型/肤色与候选换装 | [CHARACTER_CREATION_SYSTEM.md](CHARACTER_CREATION_SYSTEM.md) |
 | UI或新美术 | [UI_ART.md](UI_ART.md) 或 [ART_STYLE.md](ART_STYLE.md)；再按资源类型及适用约定定位必需工作流 |
 
 定位规范后，用具体符号/配置路径查实现与专项测试；只有发现明确依赖或冲突才扩展读取。历史决策仅按问题搜索 [DEVLOG.md](DEVLOG.md) 或对应报告。

@@ -20,7 +20,7 @@ func plan_snapshot()->Dictionary:
 
 func _build_structure()->void:
 	var rng:=RandomNumberGenerator.new();rng.seed=world_seed^604619
-	var count:=rng.randi_range(12,18)
+	var count:=rng.randi_range(18,24) if map_cells>1024 else rng.randi_range(12,18)
 	var raw:Array[Vector2]=[Vector2.ZERO]
 	var parents:Array[int]=[-1]
 	var degrees:Array[int]=[0]
@@ -136,7 +136,7 @@ func _choose_spawn()->void:
 func _build_lakes()->void:
 	var rng:=RandomNumberGenerator.new();rng.seed=world_seed^70631
 	var unit:=extent/49152.
-	var target:=rng.randi_range(3,5)
+	var target:=rng.randi_range(5,7) if map_cells>1024 else rng.randi_range(3,5)
 	for attempt in 900:
 		if lakes.size()>=target:break
 		var room:Dictionary=rooms[rng.randi_range(0,rooms.size()-1)]
@@ -210,3 +210,14 @@ func props_for_chunk(coord: Vector2i) -> Array[Dictionary]:
 	for row in super.props_for_chunk(coord):
 		if row.kind not in [2,3]: result.append(row)
 	return result
+
+static func layout_configuration(cells: int) -> Dictionary:
+	return {"layout_revision":3 if cells>1024 else 1,"generator":VERSION,"cell_units":CELL}
+
+static func valid_configuration(value: Variant, cells: int) -> bool:
+	if not value is Dictionary:return false
+	var expected:=layout_configuration(cells)
+	if value.size()!=expected.size():return false
+	for key in expected:
+		if value.get(key)!=expected[key]:return false
+	return true

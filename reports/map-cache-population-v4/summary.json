@@ -1,0 +1,44 @@
+{
+  "tests": [
+    {
+      "report": "logic",
+      "checks": 261,
+      "failed": 0
+    },
+    {
+      "report": "window",
+      "checks": 57,
+      "failed": 0
+    },
+    {
+      "report": "resume",
+      "checks": 5,
+      "failed": 0
+    },
+    {
+      "report": "movement",
+      "checks": 9,
+      "failed": 0
+    }
+  ],
+  "checks": 332,
+  "failed": 0,
+  "player_files": 16,
+  "changed_player_files": [],
+  "player_file_set_unchanged": true,
+  "audio_changed_events": [
+    "sfx_step_dirt",
+    "sfx_step_stone",
+    "sfx_step_wood"
+  ],
+  "shared_step_file": "assets\\audio\\v3\\runtime\\sfx_step_grass_03_0e3019daa7.wav",
+  "shared_step_sha256": "0e3019daa768b9e66bbbeea55169385a317689c00060540003152187f4645dd6",
+  "source_sha256": {
+    "scripts/world_map.gd": "f4afeee9217f110be3fdffc572f43e99fd6fab2f14def70f208850ce6cbffcf7",
+    "scripts/animals.gd": "40e2d7d45c57fe9c54703c2dcdfc2c2cde2e213106d67c5a726e74aaff1ecee3",
+    "scripts/fishing_population.gd": "a157f5b2bfb81e3e59f7eef7e69da1d211f8179791d032109212547d3b879e18",
+    "scripts/item_service.gd": "444a40c51e63d56568400108bfb110ca58c75ee179c6cbfddcb65e1fa81d02ba",
+    "data/animals.json": "99ced8443e3e1b533dc767a89fbc8e204ae89da7243a4b6cb0e1c484df57a64f",
+    "data/audio.json": "c997934533cd2b73ec10df3169d6e3003de3d847b69e79828b31781bb19bcea1"
+  }
+}

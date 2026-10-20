@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "name": "only distinct selected close sound remains",
+      "pass": true
+    },
+    {
+      "name": "close sound differs from click data",
+      "pass": true
+    },
+    {
+      "name": "actual window close buttons explicitly tagged",
+      "pass": true
+    },
+    {
+      "name": "close button without visibility callback still emits close, never click",
+      "pass": true
+    },
+    {
+      "name": "ordinary button still emits click",
+      "pass": true
+    },
+    {
+      "name": "backpack close tagged",
+      "pass": true
+    },
+    {
+      "name": "real mouse closes backpack",
+      "pass": true
+    },
+    {
+      "name": "real close click emits exactly one close sound and zero click sounds",
+      "pass": true
+    },
+    {
+      "name": "sole UI player uses distinct close file",
+      "pass": true
+    },
+    {
+      "name": "map hide emits only close",
+      "pass": true
+    },
+    {
+      "name": "repeat close callbacks never layer click or extra players",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass unchanged",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt unchanged",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone unchanged",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood unchanged",
+      "pass": true
+    },
+    {
+      "name": "player saves unchanged",
+      "pass": true
+    }
+  ],
+  "count": 16,
+  "failed": 0
+}

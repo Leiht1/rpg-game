@@ -18,7 +18,6 @@ config/features=PackedStringArray("4.7", "GL Compatibility")
 [autoload]
 
 AudioFX="*res://scripts/audio_fx.gd"
-
 UIFade="*res://scripts/ui_fade.gd"
 
 [display]

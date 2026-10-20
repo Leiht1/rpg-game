@@ -1,0 +1,765 @@
+[
+  {
+    "id": "male_natural",
+    "view": "front",
+    "source": "male-keyed/raw-sheet-clean.png",
+    "source_box": [
+      0,
+      0,
+      341,
+      384
+    ],
+    "alpha_bbox": [
+      45,
+      96,
+      327,
+      280
+    ],
+    "uniform_scale": 0.7943262411347518,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      68,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "male_natural",
+    "view": "back",
+    "source": "male-keyed/raw-sheet-clean.png",
+    "source_box": [
+      341,
+      0,
+      683,
+      384
+    ],
+    "alpha_bbox": [
+      46,
+      95,
+      304,
+      314
+    ],
+    "uniform_scale": 0.8682170542635659,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      68,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "male_natural",
+    "view": "side",
+    "source": "male-keyed/raw-sheet-clean.png",
+    "source_box": [
+      683,
+      0,
+      1024,
+      384
+    ],
+    "alpha_bbox": [
+      27,
+      97,
+      311,
+      312
+    ],
+    "uniform_scale": 0.7887323943661971,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      68,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "male_fluffy",
+    "view": "front",
+    "source": "male-keyed/raw-sheet-clean.png",
+    "source_box": [
+      0,
+      384,
+      341,
+      768
+    ],
+    "alpha_bbox": [
+      38,
+      65,
+      331,
+      266
+    ],
+    "uniform_scale": 0.764505119453925,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      68,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "male_fluffy",
+    "view": "back",
+    "source": "male-keyed/raw-sheet-clean.png",
+    "source_box": [
+      341,
+      384,
+      683,
+      768
+    ],
+    "alpha_bbox": [
+      42,
+      64,
+      303,
+      299
+    ],
+    "uniform_scale": 0.8582375478927203,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      68,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "male_fluffy",
+    "view": "side",
+    "source": "male-keyed/raw-sheet-clean.png",
+    "source_box": [
+      683,
+      384,
+      1024,
+      768
+    ],
+    "alpha_bbox": [
+      17,
+      60,
+      311,
+      295
+    ],
+    "uniform_scale": 0.7619047619047619,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      68,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "male_parted",
+    "view": "front",
+    "source": "crop-keyed/raw-sheet-clean.png",
+    "source_box": [
+      0,
+      0,
+      724,
+      724
+    ],
+    "alpha_bbox": [
+      76,
+      122,
+      676,
+      526
+    ],
+    "uniform_scale": 0.37333333333333335,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      68,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "male_parted",
+    "view": "back",
+    "source": "crop-keyed/raw-sheet-clean.png",
+    "source_box": [
+      724,
+      0,
+      1448,
+      724
+    ],
+    "alpha_bbox": [
+      88,
+      121,
+      622,
+      584
+    ],
+    "uniform_scale": 0.41947565543071164,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      68,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "male_parted",
+    "view": "side",
+    "source": "crop-keyed/raw-sheet-clean.png",
+    "source_box": [
+      1448,
+      0,
+      2172,
+      724
+    ],
+    "alpha_bbox": [
+      56,
+      126,
+      659,
+      581
+    ],
+    "uniform_scale": 0.3714759535655058,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      68,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "male_curly",
+    "view": "front",
+    "source": "male-keyed/raw-sheet-clean.png",
+    "source_box": [
+      0,
+      1152,
+      341,
+      1536
+    ],
+    "alpha_bbox": [
+      39,
+      16,
+      329,
+      222
+    ],
+    "uniform_scale": 0.7724137931034483,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      68,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "male_curly",
+    "view": "back",
+    "source": "male-keyed/raw-sheet-clean.png",
+    "source_box": [
+      341,
+      1152,
+      683,
+      1536
+    ],
+    "alpha_bbox": [
+      35,
+      15,
+      301,
+      244
+    ],
+    "uniform_scale": 0.8421052631578947,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      68,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "male_curly",
+    "view": "side",
+    "source": "male-keyed/raw-sheet-clean.png",
+    "source_box": [
+      683,
+      1152,
+      1024,
+      1536
+    ],
+    "alpha_bbox": [
+      16,
+      18,
+      310,
+      247
+    ],
+    "uniform_scale": 0.7619047619047619,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      68,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "female_bob",
+    "view": "front",
+    "source": "female-keyed/raw-sheet-clean.png",
+    "source_box": [
+      0,
+      0,
+      362,
+      362
+    ],
+    "alpha_bbox": [
+      61,
+      105,
+      315,
+      297
+    ],
+    "uniform_scale": 0.9763779527559056,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      56,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "female_bob",
+    "view": "back",
+    "source": "female-keyed/raw-sheet-clean.png",
+    "source_box": [
+      362,
+      0,
+      724,
+      362
+    ],
+    "alpha_bbox": [
+      62,
+      102,
+      302,
+      298
+    ],
+    "uniform_scale": 1.0333333333333334,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      56,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "female_bob",
+    "view": "side",
+    "source": "female-keyed/raw-sheet-clean.png",
+    "source_box": [
+      724,
+      0,
+      1086,
+      362
+    ],
+    "alpha_bbox": [
+      56,
+      103,
+      292,
+      302
+    ],
+    "uniform_scale": 0.9957627118644068,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      62,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "female_straight",
+    "view": "front",
+    "source": "female-keyed/raw-sheet-clean.png",
+    "source_box": [
+      0,
+      362,
+      362,
+      724
+    ],
+    "alpha_bbox": [
+      66,
+      31,
+      311,
+      318
+    ],
+    "uniform_scale": 1.0104529616724738,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      56,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "female_straight",
+    "view": "back",
+    "source": "female-keyed/raw-sheet-clean.png",
+    "source_box": [
+      362,
+      362,
+      724,
+      724
+    ],
+    "alpha_bbox": [
+      66,
+      29,
+      295,
+      321
+    ],
+    "uniform_scale": 0.9931506849315068,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      66,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "female_straight",
+    "view": "side",
+    "source": "female-keyed/raw-sheet-clean.png",
+    "source_box": [
+      724,
+      362,
+      1086,
+      724
+    ],
+    "alpha_bbox": [
+      64,
+      32,
+      294,
+      327
+    ],
+    "uniform_scale": 0.9830508474576272,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      67,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "female_twintail",
+    "view": "front",
+    "source": "female-keyed/raw-sheet-clean.png",
+    "source_box": [
+      0,
+      724,
+      362,
+      1086
+    ],
+    "alpha_bbox": [
+      57,
+      49,
+      319,
+      293
+    ],
+    "uniform_scale": 0.9465648854961832,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      56,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "female_twintail",
+    "view": "back",
+    "source": "female-keyed/raw-sheet-clean.png",
+    "source_box": [
+      362,
+      724,
+      724,
+      1086
+    ],
+    "alpha_bbox": [
+      58,
+      48,
+      302,
+      294
+    ],
+    "uniform_scale": 1.0163934426229508,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      56,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "female_twintail",
+    "view": "side",
+    "source": "female-keyed/raw-sheet-clean.png",
+    "source_box": [
+      724,
+      724,
+      1086,
+      1086
+    ],
+    "alpha_bbox": [
+      65,
+      47,
+      293,
+      309
+    ],
+    "uniform_scale": 1.030701754385965,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      62,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "female_ponytail",
+    "view": "front",
+    "source": "female-keyed/raw-sheet-clean.png",
+    "source_box": [
+      0,
+      1086,
+      362,
+      1448
+    ],
+    "alpha_bbox": [
+      74,
+      15,
+      301,
+      300
+    ],
+    "uniform_scale": 1.0175438596491229,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      64,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "female_ponytail",
+    "view": "back",
+    "source": "female-keyed/raw-sheet-clean.png",
+    "source_box": [
+      362,
+      1086,
+      724,
+      1448
+    ],
+    "alpha_bbox": [
+      87,
+      12,
+      276,
+      306
+    ],
+    "uniform_scale": 0.9863945578231292,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      87,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "female_ponytail",
+    "view": "side",
+    "source": "female-keyed/raw-sheet-clean.png",
+    "source_box": [
+      724,
+      1086,
+      1086,
+      1448
+    ],
+    "alpha_bbox": [
+      66,
+      15,
+      294,
+      304
+    ],
+    "uniform_scale": 1.0034602076124568,
+    "canvas": [
+      360,
+      440
+    ],
+    "registration": [
+      180,
+      220
+    ],
+    "paste": [
+      65,
+      130
+    ],
+    "layers": "complete silhouette; no horizontal split"
+  },
+  {
+    "id": "bald_side",
+    "source": "side-head-keyed/clean.png",
+    "bbox": [
+      29,
+      61,
+      355,
+      322
+    ],
+    "uniform_scale": 0.5862068965517241,
+    "size": [
+      224,
+      180
+    ],
+    "paste": [
+      16,
+      27
+    ]
+  }
+]

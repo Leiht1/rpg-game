@@ -1,30 +1,37 @@
 extends RefCounted
 ## Mutable resource state shares the existing atomic item snapshot.
-const MAX_SCHOOLS := 20
+const MAX_SCHOOLS := 40
 const FISH_PER_SCHOOL := 6
-const MAX_PER_LAKE := 3
+const MAX_PER_LAKE := 6
 const COAST_SPACING := 1800.0
 const LAKE_SPACING := 320.0
 const RESPAWN_MIN_MINUTES := 2880.0
 const RESPAWN_MAX_MINUTES := 4320.0
+var max_schools := MAX_SCHOOLS
 var candidates: Array[Dictionary]=[]
 var spots: Array[Dictionary]=[]
 var rng := RandomNumberGenerator.new()
 
 func configure(generator: WildGenerator) -> void:
 	spots.clear()
+	max_schools=56 if generator.map_cells>1024 else MAX_SCHOOLS
 	candidates=preload("res://scripts/fishing_spots.gd").new().candidates(generator)
 	rng.seed=generator.world_seed^918721
+	fill_population(generator.lakes.size())
+
+func fill_population(lake_count: int) -> void:
 	var choices := shuffled_candidates()
-	for lake in generator.lakes.size():
+	for lake in lake_count:
 		var target := rng.randi_range(0,MAX_PER_LAKE)
 		var count := 0
+		for existing in spots:
+			if existing.lake==lake and existing.remaining>0:count+=1
 		for candidate in choices:
-			if count>=target or spots.size()>=MAX_SCHOOLS: break
+			if count>=target or spots.size()>=max_schools: break
 			if candidate.lake==lake and eligible(candidate,-1):
 				spots.append(fresh(candidate));count+=1
 	for candidate in choices:
-		if spots.size()>=MAX_SCHOOLS: break
+		if spots.size()>=max_schools: break
 		if candidate.lake==-1 and eligible(candidate,-1): spots.append(fresh(candidate))
 
 func fresh(candidate: Dictionary) -> Dictionary:
@@ -77,10 +84,12 @@ func advance(minutes: float) -> bool:
 func serialize() -> Dictionary:
 	var rows: Array=[]
 	for spot in spots: rows.append({"id":spot.id,"remaining":spot.remaining,"respawn_minutes":spot.respawn_minutes})
-	return {"version":1,"rng_state":str(rng.state),"schools":rows}
+	return {"version":1,"population_revision":2,"rng_state":str(rng.state),"schools":rows}
 
 func valid(value: Variant) -> bool:
-	if not value is Dictionary or value.get("version")!=1 or not value.get("schools") is Array or value.schools.size()>MAX_SCHOOLS: return false
+	if not value is Dictionary or value.get("version")!=1 or not value.get("schools") is Array or value.schools.size()>max_schools: return false
+	var revision=value.get("population_revision",1)
+	if not (revision is int or revision is float) or not is_finite(float(revision)) or revision!=floor(revision) or revision<1 or revision>2:return false
 	if not value.get("rng_state") is String or not value.rng_state.is_valid_int(): return false
 	var by_id := {}
 	for candidate in candidates: by_id[candidate.id]=candidate
@@ -112,3 +121,7 @@ func restore(value: Dictionary) -> void:
 		spot.remaining=int(row.remaining);spot.respawn_minutes=float(row.respawn_minutes)
 		spots.append(spot)
 	rng.state=int(value.rng_state)
+	if int(value.get("population_revision",1))<2:
+		var lake_count:=0
+		for candidate in candidates:lake_count=maxi(lake_count,int(candidate.lake)+1)
+		fill_population(lake_count)

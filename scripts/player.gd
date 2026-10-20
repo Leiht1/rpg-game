@@ -3,6 +3,8 @@ extends CharacterBody2D
 
 const Interaction = preload("res://scripts/world_interaction.gd")
 var appearance := preload("res://scripts/equipment_appearance.gd").new()
+var character_look: Dictionary={}
+var look_renderer := preload("res://scripts/character_look.gd").new()
 var equipment_inventory: ItemInventory
 var held_tool := preload("res://scripts/held_tool.gd").new()
 var animal_feed := preload("res://scripts/animal_feed.gd").new()
@@ -211,6 +213,7 @@ func update_animation() -> void:
 	if animation_player.current_animation!=animation: animation_player.play(animation)
 	animation_player.seek(clock,true)
 	appearance.apply(character,equipment_inventory,facing)
+	look_renderer.apply(character,character_look,equipment_inventory,facing)
 	held_tool.apply(character,equipment_inventory,facing,"" if action in ["throw","feed","fertilize"] else action)
 	if body!=null: preload("res://scripts/body_shape.gd").apply(character,body.build)
 	carried_wood.visible=action=="pickup" and action_succeeded and not harvesting and carried_wood.texture!=null and action_clock<.63

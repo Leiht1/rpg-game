@@ -1,0 +1,45 @@
+{
+  "checks": [
+    {
+      "name": "M opening single audio cue retained",
+      "pass": true
+    },
+    {
+      "name": "recenter uses shared single UI feedback",
+      "pass": true
+    },
+    {
+      "name": "known sign actual GPU marker visible",
+      "pass": true
+    },
+    {
+      "name": "unknown sign and label suppressed",
+      "pass": true
+    },
+    {
+      "name": "discovered sign appears at true world coordinate",
+      "pass": true
+    },
+    {
+      "name": "removed sign disappears without second registry",
+      "pass": true
+    },
+    {
+      "name": "overview covers exact saved world bounds",
+      "pass": true
+    },
+    {
+      "name": "Escape closes map and restores input",
+      "pass": true
+    },
+    {
+      "name": "map operations preserve real camera",
+      "pass": true
+    },
+    {
+      "name": "shared union participates in normal save scheduling",
+      "pass": true
+    }
+  ],
+  "failed": 0
+}

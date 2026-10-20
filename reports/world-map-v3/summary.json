@@ -1,0 +1,61 @@
+{
+  "tests": [
+    {
+      "report": "logic",
+      "checks": 35,
+      "failed": 0
+    },
+    {
+      "report": "distribution",
+      "checks": 54,
+      "failed": 0
+    },
+    {
+      "report": "storage",
+      "checks": 17,
+      "failed": 0
+    },
+    {
+      "report": "window",
+      "checks": 29,
+      "failed": 0
+    },
+    {
+      "report": "resume",
+      "checks": 9,
+      "failed": 0
+    },
+    {
+      "report": "resume-old",
+      "checks": 9,
+      "failed": 0
+    },
+    {
+      "report": "markers",
+      "checks": 10,
+      "failed": 0
+    },
+    {
+      "report": "preview-create",
+      "checks": 4,
+      "failed": 0
+    },
+    {
+      "report": "preview-resume",
+      "checks": 7,
+      "failed": 0
+    }
+  ],
+  "checks": 174,
+  "failed": 0,
+  "player_integrity": {
+    "protected_files": 15,
+    "changed": [],
+    "new_isolated_files": [
+      "world-map-v3-preview\\state.json"
+    ],
+    "only_isolated_new_files": true,
+    "pass": true
+  },
+  "rendered_images": 12
+}

@@ -1,0 +1,506 @@
+[
+  {
+    "bundle": "male",
+    "qa": {
+      "status": "pass",
+      "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+      "notProven": [
+        "pose quality, anatomy, identity and facing",
+        "loop seam, phase order and timing at game size",
+        "colour fidelity of keyed edges beyond the matte_qa residue counts",
+        "that the subject is complete where it does not touch a cell edge"
+      ],
+      "checks": [
+        {
+          "id": "empty_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "paste_clamped_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "output_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "source_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "body_scale_cv",
+          "status": "skipped",
+          "value": 0.11478795735550418,
+          "threshold": null
+        },
+        {
+          "id": "anchor_y_std",
+          "status": "skipped",
+          "value": 0.05264925183068564,
+          "threshold": null
+        },
+        {
+          "id": "key_residue",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0
+        },
+        {
+          "id": "key_ring_spill",
+          "status": "pass",
+          "value": 0.0,
+          "threshold": 0.01
+        }
+      ],
+      "inputs": [
+        {
+          "path": "raw-sheet.png",
+          "sha256": "0bf74a6d84e00b9eb48df891ae75debf99ef52e6201c4ecf11943a04cab1db2e",
+          "bytes": 1733249
+        }
+      ],
+      "outputs": [
+        {
+          "path": "sheet-1.png",
+          "sha256": "f2b9f0d67f41b81fa483c8d38d1c790f472199daa2b6e3e8f49373695c933264",
+          "bytes": 58566
+        },
+        {
+          "path": "sheet-2.png",
+          "sha256": "d08470fd4530eeae38b0a077d1be03185638941d3fc406274cb87aadb3abb62f",
+          "bytes": 81968
+        },
+        {
+          "path": "sheet-3.png",
+          "sha256": "b0566e31604c7e512faa02a31d7b1fc71d6cfaad11832775bf5b99ae64e3585c",
+          "bytes": 66303
+        },
+        {
+          "path": "sheet-4.png",
+          "sha256": "e9d0c2f575313b781bbf0396b6691d4d305091f581358900b159226c2b7fdb81",
+          "bytes": 68005
+        },
+        {
+          "path": "sheet-5.png",
+          "sha256": "30c8a3ccc236d9f513194e58494f161d4ed806543547f5b18d4629149a916165",
+          "bytes": 88330
+        },
+        {
+          "path": "sheet-6.png",
+          "sha256": "b5fce830585d9d06f5e7098845530fc30b1133d775513a8a4bc2fc63130b0f6e",
+          "bytes": 73239
+        },
+        {
+          "path": "sheet-7.png",
+          "sha256": "3688897c28a6b44d4ad6071a20f3040015eaede294f3a2e9dc3c053880319eaf",
+          "bytes": 53242
+        },
+        {
+          "path": "sheet-8.png",
+          "sha256": "278fed028d42fae4cf9d9b3ed90869e949a1a4fbbd0c30eeeef06f5a82cc7c03",
+          "bytes": 75844
+        },
+        {
+          "path": "sheet-9.png",
+          "sha256": "61c77a9e3300f8d7a53abc1602353b918585106d0eeb74040a418c3644b3fc8a",
+          "bytes": 59981
+        },
+        {
+          "path": "sheet-10.png",
+          "sha256": "9695c60d79f5b9280d496f405b2d60fefd4da2ad84a63c37e0b35abccb1c8859",
+          "bytes": 68388
+        },
+        {
+          "path": "sheet-11.png",
+          "sha256": "5d2ea0ce7c367194bcc7ca23d1bf2cbd39e27f747475d6aa2ee20b6c0b454f22",
+          "bytes": 94405
+        },
+        {
+          "path": "sheet-12.png",
+          "sha256": "e209616de5a71844e254ee697d7e500699d252b331ed3be14a681c1e10ec4769",
+          "bytes": 71934
+        },
+        {
+          "path": "sheet-transparent.png",
+          "sha256": "7366919f8022c935b3db66abf716861d8bac8ab695ad3c97af845fcb431e5cfd",
+          "bytes": 858882
+        }
+      ],
+      "tool": {
+        "name": "generate2dsprite.py process",
+        "version": "0.4.0"
+      }
+    }
+  },
+  {
+    "bundle": "female",
+    "qa": {
+      "status": "pass",
+      "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+      "notProven": [
+        "pose quality, anatomy, identity and facing",
+        "loop seam, phase order and timing at game size",
+        "colour fidelity of keyed edges beyond the matte_qa residue counts",
+        "that the subject is complete where it does not touch a cell edge"
+      ],
+      "checks": [
+        {
+          "id": "empty_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "paste_clamped_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "output_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "source_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "body_scale_cv",
+          "status": "skipped",
+          "value": 0.0872001605129164,
+          "threshold": null
+        },
+        {
+          "id": "anchor_y_std",
+          "status": "skipped",
+          "value": 0.03423727151730176,
+          "threshold": null
+        },
+        {
+          "id": "key_residue",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0
+        },
+        {
+          "id": "key_ring_spill",
+          "status": "pass",
+          "value": 0.0,
+          "threshold": 0.01
+        }
+      ],
+      "inputs": [
+        {
+          "path": "raw-sheet.png",
+          "sha256": "51aa3787e5e38b4da721f6e82e5860493ebecf8989999ca27034ef80d7b281b3",
+          "bytes": 1686577
+        }
+      ],
+      "outputs": [
+        {
+          "path": "sheet-1.png",
+          "sha256": "8222464363464e8344088431cacc11d0f13abf5f9285474acf72037cdd063b8d",
+          "bytes": 73327
+        },
+        {
+          "path": "sheet-2.png",
+          "sha256": "85418ef18118720939a3491c032895073d5ee113ba918aff7e0c5cc256f06016",
+          "bytes": 85586
+        },
+        {
+          "path": "sheet-3.png",
+          "sha256": "00b78b4216491d5b831b21b98d896f2d1cb0cde4c97e1b6eee57d2c8f2d65127",
+          "bytes": 77247
+        },
+        {
+          "path": "sheet-4.png",
+          "sha256": "2e7dda69b13e5e842682388601a777fdc24238cbc628dbc76fe5c7106b009a10",
+          "bytes": 87739
+        },
+        {
+          "path": "sheet-5.png",
+          "sha256": "ee9abf2756b96d6bc7f757a5e3372914758e72a1c24e3af2778f27dfce7592d8",
+          "bytes": 89901
+        },
+        {
+          "path": "sheet-6.png",
+          "sha256": "e8613668b6cd2cd0e6dd79e0c2a4815288bba8feb3f926b0b0696fdda0ecf5da",
+          "bytes": 76198
+        },
+        {
+          "path": "sheet-7.png",
+          "sha256": "bdfc5bd863fd0762400328b7c20e30d84e870fadb6cfcf7d20214f43c4bcba70",
+          "bytes": 87631
+        },
+        {
+          "path": "sheet-8.png",
+          "sha256": "fcb03df60d6b600d4ce09954c6166b59c46a557ccff38fa921cb8bd68f5931e1",
+          "bytes": 102562
+        },
+        {
+          "path": "sheet-9.png",
+          "sha256": "52422cc37cce732446f98f93f7d0f5c7e30981a91edb02b4548ec657b91e3dca",
+          "bytes": 81485
+        },
+        {
+          "path": "sheet-10.png",
+          "sha256": "0c5615eaf0bd5a0610486d3acb0b55053b2e22d5747ee9a7bc72a022804a4cf9",
+          "bytes": 75340
+        },
+        {
+          "path": "sheet-11.png",
+          "sha256": "9a3f2a2597a0565ce104b5744201366c037ced521398aa24239e52e02b25ed7b",
+          "bytes": 72436
+        },
+        {
+          "path": "sheet-12.png",
+          "sha256": "c941a6a1f6e6f413c20aeaa248122d67a5d9e22c829c886b4fa02d38fafb153e",
+          "bytes": 75513
+        },
+        {
+          "path": "sheet-transparent.png",
+          "sha256": "fbb268034edb8751c2b409fba591d08f4995f387f370ae11924c5e391ff0e706",
+          "bytes": 983850
+        }
+      ],
+      "tool": {
+        "name": "generate2dsprite.py process",
+        "version": "0.4.0"
+      }
+    }
+  },
+  {
+    "bundle": "bald",
+    "qa": {
+      "status": "pass",
+      "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+      "notProven": [
+        "pose quality, anatomy, identity and facing",
+        "loop seam, phase order and timing at game size",
+        "colour fidelity of keyed edges beyond the matte_qa residue counts",
+        "that the subject is complete where it does not touch a cell edge"
+      ],
+      "checks": [
+        {
+          "id": "empty_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "paste_clamped_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "output_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "source_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "body_scale_cv",
+          "status": "skipped",
+          "value": 0.06395085649596949,
+          "threshold": null
+        },
+        {
+          "id": "anchor_y_std",
+          "status": "skipped",
+          "value": 0.002304351707777384,
+          "threshold": null
+        },
+        {
+          "id": "key_residue",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0
+        },
+        {
+          "id": "key_ring_spill",
+          "status": "pass",
+          "value": 0.0,
+          "threshold": 0.01
+        }
+      ],
+      "inputs": [
+        {
+          "path": "raw-sheet.png",
+          "sha256": "9acbbd5ca79a75898c260d1e91e4bfcf86d977ab006b9f640ae6f69c1f06f8c1",
+          "bytes": 1299652
+        }
+      ],
+      "outputs": [
+        {
+          "path": "sheet-1.png",
+          "sha256": "0cd3291e2cddfbce19e8f47bbe7554daed5dbed2e7a1d7b06a5c0face36fcd3b",
+          "bytes": 75166
+        },
+        {
+          "path": "sheet-2.png",
+          "sha256": "34e3dfc7d25ccf9104f94475891380996377b23fbe2c4f53ed0d121649e781a6",
+          "bytes": 68538
+        },
+        {
+          "path": "sheet-3.png",
+          "sha256": "b559bb430564c0d04ce511e6a825b1b078214143c21e5402458f05a58ab2488a",
+          "bytes": 89249
+        },
+        {
+          "path": "sheet-transparent.png",
+          "sha256": "25bb570dc44b70bf2aecf8aff4d3867550cd926e807225b35bf783d69735b021",
+          "bytes": 229991
+        }
+      ],
+      "tool": {
+        "name": "generate2dsprite.py process",
+        "version": "0.4.0"
+      }
+    }
+  },
+  {
+    "bundle": "outfit",
+    "qa": {
+      "status": "pass",
+      "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+      "notProven": [
+        "pose quality, anatomy, identity and facing",
+        "loop seam, phase order and timing at game size",
+        "colour fidelity of keyed edges beyond the matte_qa residue counts",
+        "that the subject is complete where it does not touch a cell edge"
+      ],
+      "checks": [
+        {
+          "id": "empty_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "paste_clamped_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "output_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "source_edge_touch_frames",
+          "status": "pass",
+          "value": [],
+          "threshold": []
+        },
+        {
+          "id": "body_scale_cv",
+          "status": "skipped",
+          "value": 0.015429514997005945,
+          "threshold": null
+        },
+        {
+          "id": "anchor_y_std",
+          "status": "skipped",
+          "value": 0.04114845766395238,
+          "threshold": null
+        },
+        {
+          "id": "key_residue",
+          "status": "pass",
+          "value": 0,
+          "threshold": 0
+        },
+        {
+          "id": "key_ring_spill",
+          "status": "pass",
+          "value": 0.0,
+          "threshold": 0.01
+        }
+      ],
+      "inputs": [
+        {
+          "path": "raw-sheet.png",
+          "sha256": "3cafbdba202f15b466c314df8274167943d8c093f86d44fdb8fb5a8bfce184e6",
+          "bytes": 1505608
+        }
+      ],
+      "outputs": [
+        {
+          "path": "sheet-1.png",
+          "sha256": "3e9b6c96a8466f20f0640df4d6d1142d2e0c8765a159103486540a97218ffde4",
+          "bytes": 138405
+        },
+        {
+          "path": "sheet-2.png",
+          "sha256": "b339de9996e77a166907eb0a0993fd18217e1a44adf279ff1674ee3cd98d7f02",
+          "bytes": 119815
+        },
+        {
+          "path": "sheet-3.png",
+          "sha256": "7880264bd0d68ce4b32a306db170e3500348c1642a9934e2136a1db6b3713bd7",
+          "bytes": 100059
+        },
+        {
+          "path": "sheet-4.png",
+          "sha256": "92bb488a1da62a7e27b00606a83e3adae7491b66ae8a1c654a11275e84605390",
+          "bytes": 57662
+        },
+        {
+          "path": "sheet-5.png",
+          "sha256": "4213b543d156ea994a94965cc6fbb91a294f215ddb670ad9d15f060a6c481894",
+          "bytes": 57405
+        },
+        {
+          "path": "sheet-6.png",
+          "sha256": "6608f507693b401286580a47a58bdfa88473aec4c5e7e4429d573416bc9cc178",
+          "bytes": 57820
+        },
+        {
+          "path": "sheet-7.png",
+          "sha256": "117b9f71a4b52239d1e261fa9dcf9a55f33d75ba32dac7f9bd114a69278c82a6",
+          "bytes": 60569
+        },
+        {
+          "path": "sheet-8.png",
+          "sha256": "c5f4e06a3d4104747268e08137f79bb1a39af586116bd8b57d743f7fc036846b",
+          "bytes": 58955
+        },
+        {
+          "path": "sheet-9.png",
+          "sha256": "110f8593a0d13d08a49b84106c3b15f5d08aeaa6762e5b86207d69f6dfbbb306",
+          "bytes": 64480
+        },
+        {
+          "path": "sheet-transparent.png",
+          "sha256": "4aa049106de9f3cf9a05be7bef2bdece9567195931c353ab28291c82470e8272",
+          "bytes": 709586
+        }
+      ],
+      "tool": {
+        "name": "generate2dsprite.py process",
+        "version": "0.4.0"
+      }
+    }
+  }
+]

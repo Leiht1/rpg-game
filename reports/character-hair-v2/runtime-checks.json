@@ -1,0 +1,622 @@
+{
+	"checks": [
+		{
+			"name": "creation rig interpolation disabled without changing world player",
+			"pass": true
+		},
+		{
+			"name": "real gender dropdown opens",
+			"pass": true
+		},
+		{
+			"name": "gender popup uses paper texture",
+			"pass": true
+		},
+		{
+			"name": "real hairstyle dropdown opens",
+			"pass": true
+		},
+		{
+			"name": "hair popup uses paper texture",
+			"pass": true
+		},
+		{
+			"name": "popup has unified dark text",
+			"pass": true
+		},
+		{
+			"name": "spiky crop name replaces parted while ID remains compatible",
+			"pass": true
+		},
+		{
+			"name": "common theme covers unrelated OptionButton popups too",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_natural front",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_natural front",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_natural front",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_natural front",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_natural back",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_natural back",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_natural back",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_natural back",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_natural right",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_natural right",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base male_natural right",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_natural right",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_natural right",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_natural left",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_natural left",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base male_natural left",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_natural left",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_natural left",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_fluffy front",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_fluffy front",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_fluffy front",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_fluffy front",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_fluffy back",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_fluffy back",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_fluffy back",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_fluffy back",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_fluffy right",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_fluffy right",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base male_fluffy right",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_fluffy right",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_fluffy right",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_fluffy left",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_fluffy left",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base male_fluffy left",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_fluffy left",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_fluffy left",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_parted front",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_parted front",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_parted front",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_parted front",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_parted back",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_parted back",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_parted back",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_parted back",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_parted right",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_parted right",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base male_parted right",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_parted right",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_parted right",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_parted left",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_parted left",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base male_parted left",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_parted left",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_parted left",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_curly front",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_curly front",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_curly front",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_curly front",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_curly back",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_curly back",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_curly back",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_curly back",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_curly right",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_curly right",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base male_curly right",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_curly right",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_curly right",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch male_curly left",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split male_curly left",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base male_curly left",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation male_curly left",
+			"pass": true
+		},
+		{
+			"name": "fixed character root male_curly left",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_bob front",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_bob front",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_bob front",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_bob front",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_bob back",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_bob back",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_bob back",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_bob back",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_bob right",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_bob right",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base female_bob right",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_bob right",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_bob right",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_bob left",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_bob left",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base female_bob left",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_bob left",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_bob left",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_straight front",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_straight front",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_straight front",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_straight front",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_straight back",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_straight back",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_straight back",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_straight back",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_straight right",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_straight right",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base female_straight right",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_straight right",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_straight right",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_straight left",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_straight left",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base female_straight left",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_straight left",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_straight left",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_twintail front",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_twintail front",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_twintail front",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_twintail front",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_twintail back",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_twintail back",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_twintail back",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_twintail back",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_twintail right",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_twintail right",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base female_twintail right",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_twintail right",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_twintail right",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_twintail left",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_twintail left",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base female_twintail left",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_twintail left",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_twintail left",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_ponytail front",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_ponytail front",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_ponytail front",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_ponytail front",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_ponytail back",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_ponytail back",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_ponytail back",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_ponytail back",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_ponytail right",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_ponytail right",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base female_ponytail right",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_ponytail right",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_ponytail right",
+			"pass": true
+		},
+		{
+			"name": "zero transient pixels after direction switch female_ponytail left",
+			"pass": true
+		},
+		{
+			"name": "complete hair silhouette, no hard split female_ponytail left",
+			"pass": true
+		},
+		{
+			"name": "corrected shared side base female_ponytail left",
+			"pass": true
+		},
+		{
+			"name": "mirror orientation female_ponytail left",
+			"pass": true
+		},
+		{
+			"name": "fixed character root female_ponytail left",
+			"pass": true
+		},
+		{
+			"name": "appearance and popup tests never create a world or save",
+			"pass": true
+		},
+		{
+			"name": "formal and current user preview save hashes unchanged",
+			"pass": true
+		}
+	],
+	"failed": 0,
+	"total": 154
+}

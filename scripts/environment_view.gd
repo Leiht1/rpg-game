@@ -30,7 +30,7 @@ func configure(owner_world: Node2D) -> void:
 	simulation.rng.seed = world.world_seed ^ 78041
 	lightning_random.seed=world.world_seed ^ 93617
 	lightning_wait=lightning_random.randf_range(LIGHTNING_INTERVAL_MIN,LIGHTNING_INTERVAL_MAX)
-	if world.persistent_world:
+	if world.persistent_world and not world.get_meta("character_preview",false) and not world.get_meta("isolated_environment",false):
 		save_path = "user://environment-%s-%d.json" % [world.generator.VERSION,world.world_seed]
 		if FileAccess.file_exists(save_path):
 			var data = JSON.parse_string(FileAccess.get_file_as_string(save_path))
@@ -186,6 +186,7 @@ func update_lightning(delta: float, storm: float) -> void:
 		lightning_wait-=delta
 		if lightning_wait<=0.0:
 			lightning_age=0.0
+			AudioFX.play_sfx("sfx_thunder")
 			lightning_wait=lightning_random.randf_range(LIGHTNING_INTERVAL_MIN,LIGHTNING_INTERVAL_MAX)
 	material_effect.set_shader_parameter("lightning",lightning_strength(lightning_age)*storm)
 

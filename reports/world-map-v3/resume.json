@@ -1,0 +1,49 @@
+{
+  "adapter": "NVIDIA GeForce RTX 5060",
+  "checks": [
+    {
+      "name": "test save valid",
+      "pass": true
+    },
+    {
+      "name": "real world uses saved size",
+      "pass": true
+    },
+    {
+      "name": "actual entry dry and safe",
+      "pass": true
+    },
+    {
+      "name": "single merchant exists",
+      "pass": true
+    },
+    {
+      "name": "merchant singleton in scene",
+      "pass": true
+    },
+    {
+      "name": "abandoned camps bounded",
+      "pass": true
+    },
+    {
+      "name": "independent process restores exact exploration",
+      "pass": true
+    },
+    {
+      "name": "independent process restores position",
+      "pass": true
+    },
+    {
+      "name": "independent process restores identity",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failed": 0,
+  "measurements": {
+    "camps": 5,
+    "navigation_ms": 2588.673,
+    "startup_ms": 8212.884,
+    "static_memory_mib": 111.324433326721
+  }
+}

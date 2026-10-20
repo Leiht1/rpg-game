@@ -37,6 +37,7 @@ var equip_button := Button.new()
 var preview_actor: Node2D
 var portrait_held_tool := preload("res://scripts/held_tool.gd").new()
 var portrait_appearance := preload("res://scripts/equipment_appearance.gd").new()
+var portrait_look := preload("res://scripts/character_look.gd").new()
 var portrait_clock := 0.0
 var preview_view: SubViewport
 var target_tip := PanelContainer.new()
@@ -127,6 +128,7 @@ func configure(owner_world: Node, items: Node) -> void:
 	header.add_child(organize_button)
 	var close := Button.new()
 	close.text="关闭"
+	close.set_meta("audio_window_close",true)
 	close.pressed.connect(close_panels)
 	header.add_child(close)
 	# Main paper's upper-right binding is outside the button/text safety region.
@@ -870,6 +872,7 @@ func update_portrait(delta: float) -> void:
 	visual.scale=Vector2.ONE
 	visual.position=Vector2.ZERO
 	portrait_appearance.apply(preview_actor,service.inventory,"front")
+	portrait_look.apply(preview_actor,world.player.character_look,service.inventory,"front")
 	portrait_held_tool.apply(preview_actor,service.inventory,"front","")
 	preload("res://scripts/body_shape.gd").apply(preview_actor,service.body.build)
 

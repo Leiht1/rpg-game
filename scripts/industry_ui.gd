@@ -44,7 +44,7 @@ var tray_fingerprint := ""
 var refresh_clock := 0.0
 var last_area := Vector2.ZERO
 func button(text_value: String, callback: Callable) -> Button:
-	var value := Button.new();value.text=text_value;value.pressed.connect(callback);return value
+	var value := Button.new();value.text=text_value;value.set_meta("audio_window_close",text_value=="关闭");value.pressed.connect(callback);return value
 func clear(node: Node) -> void:
 	for child in node.get_children():node.remove_child(child);child.queue_free()
 func popup_frame(popup: PopupPanel) -> VBoxContainer:

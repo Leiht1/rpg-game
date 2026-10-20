@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "hair": {
+    "male_natural": {
+      "name": "自然短发",
+      "gender": "male",
+      "front": {
+        "front": "hair/male_natural-front-front.png",
+        "rear": "hair/male_natural-front-rear.png"
+      },
+      "back": {
+        "front": "hair/male_natural-back-front.png",
+        "rear": "hair/male_natural-back-rear.png"
+      },
+      "side": {
+        "front": "hair/male_natural-side-front.png",
+        "rear": "hair/male_natural-side-rear.png"
+      }
+    },
+    "male_fluffy": {
+      "name": "蓬松短发",
+      "gender": "male",
+      "front": {
+        "front": "hair/male_fluffy-front-front.png",
+        "rear": "hair/male_fluffy-front-rear.png"
+      },
+      "back": {
+        "front": "hair/male_fluffy-back-front.png",
+        "rear": "hair/male_fluffy-back-rear.png"
+      },
+      "side": {
+        "front": "hair/male_fluffy-side-front.png",
+        "rear": "hair/male_fluffy-side-rear.png"
+      }
+    },
+    "male_parted": {
+      "name": "侧分短发",
+      "gender": "male",
+      "front": {
+        "front": "hair/male_parted-front-front.png",
+        "rear": "hair/male_parted-front-rear.png"
+      },
+      "back": {
+        "front": "hair/male_parted-back-front.png",
+        "rear": "hair/male_parted-back-rear.png"
+      },
+      "side": {
+        "front": "hair/male_parted-side-front.png",
+        "rear": "hair/male_parted-side-rear.png"
+      }
+    },
+    "male_curly": {
+      "name": "微卷短发",
+      "gender": "male",
+      "front": {
+        "front": "hair/male_curly-front-front.png",
+        "rear": "hair/male_curly-front-rear.png"
+      },
+      "back": {
+        "front": "hair/male_curly-back-front.png",
+        "rear": "hair/male_curly-back-rear.png"
+      },
+      "side": {
+        "front": "hair/male_curly-side-front.png",
+        "rear": "hair/male_curly-side-rear.png"
+      }
+    },
+    "female_bob": {
+      "name": "齐肩短发",
+      "gender": "female",
+      "front": {
+        "front": "hair/female_bob-front-front.png",
+        "rear": "hair/female_bob-front-rear.png"
+      },
+      "back": {
+        "front": "hair/female_bob-back-front.png",
+        "rear": "hair/female_bob-back-rear.png"
+      },
+      "side": {
+        "front": "hair/female_bob-side-front.png",
+        "rear": "hair/female_bob-side-rear.png"
+      }
+    },
+    "female_straight": {
+      "name": "长直发",
+      "gender": "female",
+      "front": {
+        "front": "hair/female_straight-front-front.png",
+        "rear": "hair/female_straight-front-rear.png"
+      },
+      "back": {
+        "front": "hair/female_straight-back-front.png",
+        "rear": "hair/female_straight-back-rear.png"
+      },
+      "side": {
+        "front": "hair/female_straight-side-front.png",
+        "rear": "hair/female_straight-side-rear.png"
+      }
+    },
+    "female_twintail": {
+      "name": "双马尾",
+      "gender": "female",
+      "front": {
+        "front": "hair/female_twintail-front-front.png",
+        "rear": "hair/female_twintail-front-rear.png"
+      },
+      "back": {
+        "front": "hair/female_twintail-back-front.png",
+        "rear": "hair/female_twintail-back-rear.png"
+      },
+      "side": {
+        "front": "hair/female_twintail-side-front.png",
+        "rear": "hair/female_twintail-side-rear.png"
+      }
+    },
+    "female_ponytail": {
+      "name": "低马尾",
+      "gender": "female",
+      "front": {
+        "front": "hair/female_ponytail-front-front.png",
+        "rear": "hair/female_ponytail-front-rear.png"
+      },
+      "back": {
+        "front": "hair/female_ponytail-back-front.png",
+        "rear": "hair/female_ponytail-back-rear.png"
+      },
+      "side": {
+        "front": "hair/female_ponytail-side-front.png",
+        "rear": "hair/female_ponytail-side-rear.png"
+      }
+    }
+  },
+  "skin": {
+    "skin_1": {
+      "name": "瓷白",
+      "color": "#f7d6b4"
+    },
+    "skin_2": {
+      "name": "浅肤",
+      "color": "#efb67e"
+    },
+    "skin_3": {
+      "name": "自然",
+      "color": "#d99a65"
+    },
+    "skin_4": {
+      "name": "麦色",
+      "color": "#b97c4d"
+    },
+    "skin_5": {
+      "name": "棕肤",
+      "color": "#945b38"
+    },
+    "skin_6": {
+      "name": "深棕",
+      "color": "#633c29"
+    }
+  },
+  "outfits": {
+    "modern_outfit": {
+      "parts": {
+        "front": {
+          "torso": "outfit/front_torso.png",
+          "arm_l": "outfit/front_arm.png",
+          "arm_r": "outfit/front_arm.png",
+          "leg_l": "outfit/front_leg.png",
+          "leg_r": "outfit/front_leg.png"
+        },
+        "back": {
+          "torso": "outfit/back_torso.png",
+          "arm_l": "outfit/back_arm.png",
+          "arm_r": "outfit/back_arm.png",
+          "leg_l": "outfit/back_leg.png",
+          "leg_r": "outfit/back_leg.png"
+        },
+        "side": {
+          "torso": "outfit/side_torso.png",
+          "arm_l": "outfit/side_arm.png",
+          "arm_r": "outfit/side_arm.png",
+          "leg_l": "outfit/side_leg.png",
+          "leg_r": "outfit/side_leg.png"
+        }
+      },
+      "skin_regions": {
+        "torso": [
+          0,
+          0.2
+        ],
+        "arm_l": [
+          0.72,
+          1
+        ],
+        "arm_r": [
+          0.72,
+          1
+        ]
+      }
+    }
+  }
+}

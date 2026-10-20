@@ -1,0 +1,832 @@
+[
+  {
+    "id": "sfx_step_grass",
+    "name": "草地脚步（走 / 跑）",
+    "category": "角色与采集",
+    "output_group": "player",
+    "evidence": [
+      "scripts/audio_fx.gd",
+      "scripts/harvest_node.gd",
+      "scripts/player.gd"
+    ],
+    "description": "轻踩草叶，柔软、短促；建议多个版本"
+  },
+  {
+    "id": "sfx_step_dirt",
+    "name": "泥地脚步（走 / 跑）",
+    "category": "角色与采集",
+    "output_group": "player",
+    "evidence": [
+      "scripts/audio_fx.gd",
+      "scripts/harvest_node.gd",
+      "scripts/player.gd"
+    ],
+    "description": "干土、轻碎砂的脚步；建议多个版本"
+  },
+  {
+    "id": "sfx_step_stone",
+    "name": "石面 / 石路脚步（走 / 跑）",
+    "category": "角色与采集",
+    "output_group": "player",
+    "evidence": [
+      "scripts/audio_fx.gd",
+      "scripts/harvest_node.gd",
+      "scripts/player.gd"
+    ],
+    "description": "清晰偏硬的石面脚步"
+  },
+  {
+    "id": "sfx_step_wood",
+    "name": "木地板脚步（走 / 跑）",
+    "category": "角色与采集",
+    "output_group": "player",
+    "evidence": [
+      "scripts/audio_fx.gd",
+      "scripts/harvest_node.gd",
+      "scripts/player.gd"
+    ],
+    "description": "轻微空腔感的木板脚步"
+  },
+  {
+    "id": "sfx_chop_hit",
+    "name": "砍树命中",
+    "category": "角色与采集",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/audio_fx.gd",
+      "scripts/harvest_node.gd",
+      "scripts/player.gd"
+    ],
+    "description": "短促木头劈砍声，不要附带整棵树倒下"
+  },
+  {
+    "id": "sfx_tree_fall",
+    "name": "树木砍完、倒下",
+    "category": "角色与采集",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/audio_fx.gd",
+      "scripts/harvest_node.gd",
+      "scripts/player.gd"
+    ],
+    "description": "木头断裂、树冠枝叶落下"
+  },
+  {
+    "id": "sfx_mine_hit",
+    "name": "镐实际命中矿点",
+    "category": "角色与采集",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/audio_fx.gd",
+      "scripts/harvest_node.gd",
+      "scripts/player.gd"
+    ],
+    "description": "镐敲石的硬质撞击；石、燧石、铜银金矿可先共用"
+  },
+  {
+    "id": "sfx_ore_break",
+    "name": "矿点开采完成",
+    "category": "角色与采集",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/audio_fx.gd",
+      "scripts/harvest_node.gd",
+      "scripts/player.gd"
+    ],
+    "description": "小块岩石碎裂、碎石散落"
+  },
+  {
+    "id": "sfx_dig_soil",
+    "name": "铲子挖掘、清除作物残根",
+    "category": "角色与采集",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/audio_fx.gd",
+      "scripts/harvest_node.gd",
+      "scripts/player.gd"
+    ],
+    "description": "铲入土、翻松土壤的短音；可按动作拆配"
+  },
+  {
+    "id": "sfx_pickup",
+    "name": "地上物品成功拾取",
+    "category": "角色与采集",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/audio_fx.gd",
+      "scripts/harvest_node.gd",
+      "scripts/player.gd"
+    ],
+    "description": "很轻的收取声，可带少量布料感；多件合并播放"
+  },
+  {
+    "id": "sfx_gather_plant",
+    "name": "采摘野外植物",
+    "category": "角色与采集",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/audio_fx.gd",
+      "scripts/harvest_node.gd",
+      "scripts/player.gd"
+    ],
+    "description": "摘取、叶片摩擦，与普通捡东西略有区别"
+  },
+  {
+    "id": "sfx_drop_land",
+    "name": "掉落物落地",
+    "category": "角色与采集",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/audio_fx.gd",
+      "scripts/harvest_node.gd",
+      "scripts/player.gd"
+    ],
+    "description": "轻小物体落在地上的声音，避免每件都很响"
+  },
+  {
+    "id": "sfx_tool_swing",
+    "name": "砍、镐、锤挥动阶段",
+    "category": "角色与采集",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/audio_fx.gd",
+      "scripts/harvest_node.gd",
+      "scripts/player.gd"
+    ],
+    "description": "很轻的短挥动风声；命中声优先，可先不找"
+  },
+  {
+    "id": "sfx_ui_click",
+    "name": "普通按钮点击",
+    "category": "背包与界面",
+    "output_group": "ui",
+    "evidence": [
+      "scripts/item_ui.gd",
+      "scripts/item_inventory.gd"
+    ],
+    "description": "轻柔、短、干净的点击，不要鼠标机械按键录音"
+  },
+  {
+    "id": "sfx_ui_open",
+    "name": "打开背包、制作、地图等窗口",
+    "category": "背包与界面",
+    "output_group": "ui",
+    "evidence": [
+      "scripts/item_ui.gd",
+      "scripts/item_inventory.gd"
+    ],
+    "description": "柔和纸张或布料展开；通用一条即可"
+  },
+  {
+    "id": "sfx_ui_close",
+    "name": "关闭窗口",
+    "category": "背包与界面",
+    "output_group": "ui",
+    "evidence": [
+      "scripts/item_ui.gd",
+      "scripts/item_inventory.gd"
+    ],
+    "description": "与打开音配套的轻收拢声"
+  },
+  {
+    "id": "sfx_item_move",
+    "name": "拖放物品成功、背包与箱子转移",
+    "category": "背包与界面",
+    "output_group": "ui",
+    "evidence": [
+      "scripts/item_ui.gd",
+      "scripts/item_inventory.gd"
+    ],
+    "description": "很轻的放置声，不在拖动经过每个格时播放"
+  },
+  {
+    "id": "sfx_bag_organize",
+    "name": "背包一键整理成功",
+    "category": "背包与界面",
+    "output_group": "ui",
+    "evidence": [
+      "scripts/item_ui.gd",
+      "scripts/item_inventory.gd"
+    ],
+    "description": "短促收纳、整理声"
+  },
+  {
+    "id": "sfx_equip",
+    "name": "装备或切换工具成功",
+    "category": "背包与界面",
+    "output_group": "ui",
+    "evidence": [
+      "scripts/item_ui.gd",
+      "scripts/item_inventory.gd"
+    ],
+    "description": "取出工具、轻扣或布料摩擦；不同材质先共用"
+  },
+  {
+    "id": "sfx_ui_error",
+    "name": "无材料、满包等操作失败",
+    "category": "背包与界面",
+    "output_group": "ui",
+    "evidence": [
+      "scripts/item_ui.gd",
+      "scripts/item_inventory.gd"
+    ],
+    "description": "柔和低短音，不刺耳，不对持续条件反复报警"
+  },
+  {
+    "id": "sfx_item_obtained",
+    "name": "制作、料理领取等获得提示",
+    "category": "背包与界面",
+    "output_group": "ui",
+    "evidence": [
+      "scripts/item_ui.gd",
+      "scripts/item_inventory.gd"
+    ],
+    "description": "轻巧、克制的确认声；与拾取共用也可以"
+  },
+  {
+    "id": "sfx_map_mark",
+    "name": "路标命名确认成功",
+    "category": "背包与界面",
+    "output_group": "ui",
+    "evidence": [
+      "scripts/item_ui.gd",
+      "scripts/item_inventory.gd"
+    ],
+    "description": "轻落笔或纸面印记；可复用普通确认音"
+  },
+  {
+    "id": "sfx_build_wood",
+    "name": "木栅栏、木地板、木家具等成功放置",
+    "category": "营地建造",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_grid.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "木材落位、轻敲固定的短组合音"
+  },
+  {
+    "id": "sfx_build_stone",
+    "name": "石墙、石路、石制设施等成功放置",
+    "category": "营地建造",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_grid.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "石块落位、低沉但轻量的碰撞"
+  },
+  {
+    "id": "sfx_build_soft",
+    "name": "草席、睡袋、地毯等放置",
+    "category": "营地建造",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_grid.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "布料或草编物落地、展开"
+  },
+  {
+    "id": "sfx_demolish_hit",
+    "name": "锤子每次有效拆除命中",
+    "category": "营地建造",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_grid.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "短促敲击；先用一条通用锤击即可"
+  },
+  {
+    "id": "sfx_demolish_break",
+    "name": "建筑最终拆除、返还材料",
+    "category": "营地建造",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_grid.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "结构松散、碎料散落，别像爆炸"
+  },
+  {
+    "id": "sfx_door_open",
+    "name": "石墙门、栅栏门打开成功",
+    "category": "营地建造",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_grid.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "木门轴轻响、门栓松开；两种门先共用"
+  },
+  {
+    "id": "sfx_door_close",
+    "name": "门关闭成功",
+    "category": "营地建造",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_grid.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "木门合拢、轻门栓声"
+  },
+  {
+    "id": "sfx_chest_open",
+    "name": "木箱打开",
+    "category": "营地建造",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_grid.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "小木箱盖开启、轻轴响"
+  },
+  {
+    "id": "sfx_chest_close",
+    "name": "木箱关闭",
+    "category": "营地建造",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_grid.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "木盖轻合"
+  },
+  {
+    "id": "sfx_fridge_open",
+    "name": "冰箱打开",
+    "category": "营地建造",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_grid.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "小型金属柜门打开，不含电机声"
+  },
+  {
+    "id": "sfx_fridge_close",
+    "name": "冰箱关闭",
+    "category": "营地建造",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_grid.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "金属柜门轻合"
+  },
+  {
+    "id": "sfx_craft_complete",
+    "name": "徒手、工具台、金属工具台制作成功",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/campfire.gd",
+      "scripts/industry_service.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "短小收工、轻敲完成声；不是长胜利音乐"
+  },
+  {
+    "id": "sfx_craft_work",
+    "name": "有制作进度时的短劳动表现",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/campfire.gd",
+      "scripts/industry_service.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "轻敲、轻摩擦的短工作音；不需要长循环"
+  },
+  {
+    "id": "sfx_fire_ignite",
+    "name": "篝火、熔炉、烤箱点火成功",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/campfire.gd",
+      "scripts/industry_service.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "小火点燃、轻微呼一下"
+  },
+  {
+    "id": "sfx_fire_extinguish",
+    "name": "主动熄火或燃料耗尽",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/campfire.gd",
+      "scripts/industry_service.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "火焰收弱熄灭，不要固定带泼水声"
+  },
+  {
+    "id": "amb_campfire_loop",
+    "name": "点燃且靠近篝火",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/campfire.gd",
+      "scripts/industry_service.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "柔和柴火噼啪，可无缝循环"
+  },
+  {
+    "id": "sfx_fuel_add",
+    "name": "篝火、熔炉、烤箱成功加燃料",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/campfire.gd",
+      "scripts/industry_service.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "木料轻落、添柴；每次成功投放一次"
+  },
+  {
+    "id": "amb_furnace_loop",
+    "name": "熔炉燃烧、玩家靠近",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/campfire.gd",
+      "scripts/industry_service.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "低而柔的炉火气流，少量火星噼啪"
+  },
+  {
+    "id": "amb_oven_loop",
+    "name": "铜烤箱燃烧、玩家靠近",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/campfire.gd",
+      "scripts/industry_service.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "封闭炉腔内的小火声；也可先复用熔炉并调低"
+  },
+  {
+    "id": "sfx_cook_start",
+    "name": "篝火或烤箱成功提交料理",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/campfire.gd",
+      "scripts/industry_service.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "轻放食材、器皿碰触；避免所有菜都固定油炸声"
+  },
+  {
+    "id": "sfx_process_ready",
+    "name": "料理或工业产物刚完成、可领取",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/campfire.gd",
+      "scripts/industry_service.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "轻巧完成提示；可与制作完成共用，远处不必提示"
+  },
+  {
+    "id": "sfx_product_collect",
+    "name": "成功领取料理、炉内产物",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/campfire.gd",
+      "scripts/industry_service.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "轻取出、收纳；可复用获得提示"
+  },
+  {
+    "id": "sfx_lantern_on",
+    "name": "提灯、银提灯或铜立灯成功开启",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/campfire.gd",
+      "scripts/industry_service.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "小开关、灯具点亮的轻音"
+  },
+  {
+    "id": "sfx_lantern_off",
+    "name": "灯具关闭或耗尽",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/campfire.gd",
+      "scripts/industry_service.gd",
+      "scripts/item_service.gd"
+    ],
+    "description": "与开启配套的短收音"
+  },
+  {
+    "id": "sfx_till_soil",
+    "name": "石镐开垦、耕地成功生成",
+    "category": "种植",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/planting.gd"
+    ],
+    "description": "土块松动、短促刨土声"
+  },
+  {
+    "id": "sfx_seed_sow",
+    "name": "种子选择后成功播种",
+    "category": "种植",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/planting.gd"
+    ],
+    "description": "轻撒种、小颗粒落土，柔和细碎"
+  },
+  {
+    "id": "sfx_crop_harvest",
+    "name": "成熟作物成功收获",
+    "category": "种植",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/planting.gd"
+    ],
+    "description": "植株拔取、叶片摩擦、收拢"
+  },
+  {
+    "id": "sfx_chicken_idle",
+    "name": "附近鸡偶尔叫",
+    "category": "动物",
+    "output_group": "animal",
+    "evidence": [
+      "scripts/animals.gd",
+      "scripts/animal_feed.gd"
+    ],
+    "description": "短、温和的咕咕声；建议几个版本"
+  },
+  {
+    "id": "sfx_sheep_idle",
+    "name": "附近羊偶尔叫",
+    "category": "动物",
+    "output_group": "animal",
+    "evidence": [
+      "scripts/animals.gd",
+      "scripts/animal_feed.gd"
+    ],
+    "description": "轻柔短咩声，避免持续大喊；建议几个版本"
+  },
+  {
+    "id": "sfx_animal_feed",
+    "name": "拖食物给动物并成功投喂",
+    "category": "动物",
+    "output_group": "animal",
+    "evidence": [
+      "scripts/animals.gd",
+      "scripts/animal_feed.gd"
+    ],
+    "description": "轻递食、咀嚼或啄食；鸡羊先共用柔和版本"
+  },
+  {
+    "id": "sfx_shear",
+    "name": "剪毛有效动作",
+    "category": "动物",
+    "output_group": "animal",
+    "evidence": [
+      "scripts/animals.gd",
+      "scripts/animal_feed.gd"
+    ],
+    "description": "手动剪刀短咔嚓，带一点毛料摩擦；不要电动剃毛器"
+  },
+  {
+    "id": "sfx_trough_add",
+    "name": "饲料槽成功补料",
+    "category": "动物",
+    "output_group": "animal",
+    "evidence": [
+      "scripts/animals.gd",
+      "scripts/animal_feed.gd"
+    ],
+    "description": "一小把干料落入木槽"
+  },
+  {
+    "id": "sfx_animal_ack",
+    "name": "驯养动物切换跟随／留守",
+    "category": "动物",
+    "output_group": "animal",
+    "evidence": [
+      "scripts/animals.gd",
+      "scripts/animal_feed.gd"
+    ],
+    "description": "很轻的回应；可直接复用各自叫声，无需另找"
+  },
+  {
+    "id": "sfx_eat",
+    "name": "真正成功食用一份食物",
+    "category": "食用与睡眠",
+    "output_group": "player",
+    "evidence": [
+      "scripts/item_service.gd",
+      "scripts/environment_view.gd"
+    ],
+    "description": "短、轻的咀嚼吞咽；不夸张，不带说话"
+  },
+  {
+    "id": "sfx_sleep_enter",
+    "name": "成功进入床、草席或睡袋睡眠",
+    "category": "食用与睡眠",
+    "output_group": "player",
+    "evidence": [
+      "scripts/item_service.gd",
+      "scripts/environment_view.gd"
+    ],
+    "description": "轻躺下、布料或草席窸窣"
+  },
+  {
+    "id": "sfx_sleep_exit",
+    "name": "按 E 醒来、退出睡眠",
+    "category": "食用与睡眠",
+    "output_group": "player",
+    "evidence": [
+      "scripts/item_service.gd",
+      "scripts/environment_view.gd"
+    ],
+    "description": "轻起身、布料摩擦；与进入可共用"
+  },
+  {
+    "id": "amb_rain_light_loop",
+    "name": "小雨天气随雨量淡入",
+    "category": "天气与环境",
+    "output_group": "ambience",
+    "evidence": [
+      "scripts/environment_view.gd",
+      "scripts/world_environment.gd"
+    ],
+    "description": "自然、稀疏的雨滴，底噪低，不像电子水滴或子弹"
+  },
+  {
+    "id": "amb_rain_storm_loop",
+    "name": "雷暴雨随雨量增强",
+    "category": "天气与环境",
+    "output_group": "ambience",
+    "evidence": [
+      "scripts/environment_view.gd",
+      "scripts/world_environment.gd"
+    ],
+    "description": "更密集真实雨声，不把雷声混在循环里"
+  },
+  {
+    "id": "sfx_thunder",
+    "name": "雷暴闪电对应的雷声",
+    "category": "天气与环境",
+    "output_group": "ambience",
+    "evidence": [
+      "scripts/environment_view.gd",
+      "scripts/world_environment.gd"
+    ],
+    "description": "自然低沉雷声，起音不过度炸耳；建议多个版本"
+  },
+  {
+    "id": "amb_wind_soft_loop",
+    "name": "晴天野外的低层环境底声",
+    "category": "天气与环境",
+    "output_group": "ambience",
+    "evidence": [
+      "scripts/environment_view.gd",
+      "scripts/world_environment.gd"
+    ],
+    "description": "很轻的自然风与少量草叶，不含音乐"
+  },
+  {
+    "id": "amb_forest_day_loop",
+    "name": "白天森林附近",
+    "category": "天气与环境",
+    "output_group": "ambience",
+    "evidence": [
+      "scripts/environment_view.gd",
+      "scripts/world_environment.gd"
+    ],
+    "description": "稀疏鸟鸣、轻叶响，别过于热带或密集"
+  },
+  {
+    "id": "amb_night_loop",
+    "name": "夜晚环境",
+    "category": "天气与环境",
+    "output_group": "ambience",
+    "evidence": [
+      "scripts/environment_view.gd",
+      "scripts/world_environment.gd"
+    ],
+    "description": "克制虫鸣，舒缓，不做恐怖氛围"
+  },
+  {
+    "id": "amb_water_stream_loop",
+    "name": "靠近河流",
+    "category": "天气与环境",
+    "output_group": "ambience",
+    "evidence": [
+      "scripts/environment_view.gd",
+      "scripts/world_environment.gd"
+    ],
+    "description": "自然流水，连续但柔和"
+  },
+  {
+    "id": "amb_water_shore_loop",
+    "name": "靠近湖岸／海岸",
+    "category": "天气与环境",
+    "output_group": "ambience",
+    "evidence": [
+      "scripts/environment_view.gd",
+      "scripts/world_environment.gd"
+    ],
+    "description": "轻拍岸水声，避免默认大风巨浪"
+  },
+  {
+    "id": "sfx_fishing_cast",
+    "name": "钓鱼抛竿",
+    "category": "钓鱼",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/fishing.gd"
+    ]
+  },
+  {
+    "id": "sfx_fishing_bite",
+    "name": "鱼咬钩",
+    "category": "钓鱼",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/fishing.gd"
+    ]
+  },
+  {
+    "id": "sfx_fishing_success",
+    "name": "钓鱼成功",
+    "category": "钓鱼",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/fishing.gd"
+    ]
+  },
+  {
+    "id": "sfx_fishing_failure",
+    "name": "钓鱼失败",
+    "category": "钓鱼",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/fishing.gd"
+    ]
+  },
+  {
+    "id": "sfx_merchant_trade",
+    "name": "商人交易成功",
+    "category": "交易",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/merchant.gd"
+    ]
+  },
+  {
+    "id": "sfx_crop_fertilize",
+    "name": "施肥成功",
+    "category": "种植",
+    "output_group": "resource",
+    "evidence": [
+      "scripts/planting.gd"
+    ]
+  },
+  {
+    "id": "sfx_compost_add",
+    "name": "堆肥投料",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_expansion.gd"
+    ]
+  },
+  {
+    "id": "sfx_smoker_start",
+    "name": "熏制开始",
+    "category": "料理与工业",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_expansion.gd"
+    ]
+  },
+  {
+    "id": "sfx_build_repair",
+    "name": "维修建筑",
+    "category": "营地建造",
+    "output_group": "building",
+    "evidence": [
+      "scripts/camp_expansion.gd"
+    ]
+  }
+]

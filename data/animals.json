@@ -31,6 +31,9 @@
     ],
     "speed": 30.0
   },
-  "initial_count": 6,
-  "spawn_interval": 10080.0
+  "initial_count": 12,
+  "spawn_interval": 10080.0,
+  "spawn_batch": 2,
+  "population_revision": 2,
+  "previous_initial_count": 6
 }

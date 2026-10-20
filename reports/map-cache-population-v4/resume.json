@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "name": "independent restart loads animal upgrade",
+      "pass": true
+    },
+    {
+      "name": "independent restart preserves all extra animals and baby",
+      "pass": true
+    },
+    {
+      "name": "restart never repeats animal migration",
+      "pass": true
+    },
+    {
+      "name": "independent restart preserves upgraded fish",
+      "pass": true
+    },
+    {
+      "name": "fish upgrade marker retained",
+      "pass": true
+    }
+  ],
+  "failed": 0,
+  "stats": {}
+}

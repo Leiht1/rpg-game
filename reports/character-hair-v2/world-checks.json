@@ -1,0 +1,146 @@
+{
+	"checks": [
+		{
+			"name": "old persisted hairstyle ID resumes with new spiky crop",
+			"pass": true
+		},
+		{
+			"name": "appearance revision preserves saved world seed and position",
+			"pass": true
+		},
+		{
+			"name": "world player interpolation stays unchanged",
+			"pass": true
+		},
+		{
+			"name": "world uses current complete silhouette front",
+			"pass": true
+		},
+		{
+			"name": "no residual split layer front",
+			"pass": true
+		},
+		{
+			"name": "world uses current complete silhouette back",
+			"pass": true
+		},
+		{
+			"name": "no residual split layer back",
+			"pass": true
+		},
+		{
+			"name": "world uses current complete silhouette left",
+			"pass": true
+		},
+		{
+			"name": "no residual split layer left",
+			"pass": true
+		},
+		{
+			"name": "world uses current complete silhouette right",
+			"pass": true
+		},
+		{
+			"name": "no residual split layer right",
+			"pass": true
+		},
+		{
+			"name": "original outfit transaction remains functional",
+			"pass": true
+		},
+		{
+			"name": "outfit does not reset new hair",
+			"pass": true
+		},
+		{
+			"name": "bag preview uses black updated hairstyle",
+			"pass": true
+		},
+		{
+			"name": "unequip remains functional",
+			"pass": true
+		},
+		{
+			"name": "sleep copies corrected side base skin_1",
+			"pass": true
+		},
+		{
+			"name": "sleep eye closure follows new asset anchor skin_1",
+			"pass": true
+		},
+		{
+			"name": "sleep skin retained skin_1",
+			"pass": true
+		},
+		{
+			"name": "sleep copies corrected side base skin_2",
+			"pass": true
+		},
+		{
+			"name": "sleep eye closure follows new asset anchor skin_2",
+			"pass": true
+		},
+		{
+			"name": "sleep skin retained skin_2",
+			"pass": true
+		},
+		{
+			"name": "sleep copies corrected side base skin_3",
+			"pass": true
+		},
+		{
+			"name": "sleep eye closure follows new asset anchor skin_3",
+			"pass": true
+		},
+		{
+			"name": "sleep skin retained skin_3",
+			"pass": true
+		},
+		{
+			"name": "sleep copies corrected side base skin_4",
+			"pass": true
+		},
+		{
+			"name": "sleep eye closure follows new asset anchor skin_4",
+			"pass": true
+		},
+		{
+			"name": "sleep skin retained skin_4",
+			"pass": true
+		},
+		{
+			"name": "sleep copies corrected side base skin_5",
+			"pass": true
+		},
+		{
+			"name": "sleep eye closure follows new asset anchor skin_5",
+			"pass": true
+		},
+		{
+			"name": "sleep skin retained skin_5",
+			"pass": true
+		},
+		{
+			"name": "sleep copies corrected side base skin_6",
+			"pass": true
+		},
+		{
+			"name": "sleep eye closure follows new asset anchor skin_6",
+			"pass": true
+		},
+		{
+			"name": "sleep skin retained skin_6",
+			"pass": true
+		},
+		{
+			"name": "sleep duplicate does not close awake character eyes",
+			"pass": true
+		},
+		{
+			"name": "new hairstyle appearance remains compatible with original atomic save",
+			"pass": true
+		}
+	],
+	"failed": 0,
+	"total": 35
+}

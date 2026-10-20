@@ -80,7 +80,7 @@ func configure(owner_ui: Control) -> void:
 	var title := Label.new();title.text="身体状态";title.add_theme_font_size_override("font_size",23);content.add_child(title)
 	content.add_child(details)
 	details.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;details.custom_minimum_size=Vector2(460,276)
-	var close := Button.new();close.text="关闭 · Esc";content.add_child(close);close.pressed.connect(close_panel)
+	var close := Button.new();close.text="关闭 · Esc";close.set_meta("audio_window_close",true);content.add_child(close);close.pressed.connect(close_panel)
 	overlay.hide()
 	refresh()
 

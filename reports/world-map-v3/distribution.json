@@ -1,0 +1,411 @@
+{
+  "checks": [
+    {
+      "name": "safe entry and save 1024/81273",
+      "pass": true
+    },
+    {
+      "name": "distributed resource-bearing land chunks 1024/81273",
+      "pass": true
+    },
+    {
+      "name": "basic resources remain abundant 1024/81273",
+      "pass": true
+    },
+    {
+      "name": "camp total 1024/81273",
+      "pass": true
+    },
+    {
+      "name": "fish total 1024/81273",
+      "pass": true
+    },
+    {
+      "name": "single reachable merchant 1024/81273",
+      "pass": true
+    },
+    {
+      "name": "merchant samples distant world sectors 1024/81273",
+      "pass": true
+    },
+    {
+      "name": "save 1024/81273",
+      "pass": true
+    },
+    {
+      "name": "size/seed reload 1024/81273",
+      "pass": true
+    },
+    {
+      "name": "safe entry and save 1024/271828",
+      "pass": true
+    },
+    {
+      "name": "distributed resource-bearing land chunks 1024/271828",
+      "pass": true
+    },
+    {
+      "name": "basic resources remain abundant 1024/271828",
+      "pass": true
+    },
+    {
+      "name": "camp total 1024/271828",
+      "pass": true
+    },
+    {
+      "name": "fish total 1024/271828",
+      "pass": true
+    },
+    {
+      "name": "single reachable merchant 1024/271828",
+      "pass": true
+    },
+    {
+      "name": "merchant samples distant world sectors 1024/271828",
+      "pass": true
+    },
+    {
+      "name": "save 1024/271828",
+      "pass": true
+    },
+    {
+      "name": "size/seed reload 1024/271828",
+      "pass": true
+    },
+    {
+      "name": "safe entry and save 1024/902106",
+      "pass": true
+    },
+    {
+      "name": "distributed resource-bearing land chunks 1024/902106",
+      "pass": true
+    },
+    {
+      "name": "basic resources remain abundant 1024/902106",
+      "pass": true
+    },
+    {
+      "name": "camp total 1024/902106",
+      "pass": true
+    },
+    {
+      "name": "fish total 1024/902106",
+      "pass": true
+    },
+    {
+      "name": "single reachable merchant 1024/902106",
+      "pass": true
+    },
+    {
+      "name": "merchant samples distant world sectors 1024/902106",
+      "pass": true
+    },
+    {
+      "name": "save 1024/902106",
+      "pass": true
+    },
+    {
+      "name": "size/seed reload 1024/902106",
+      "pass": true
+    },
+    {
+      "name": "safe entry and save 1536/81273",
+      "pass": true
+    },
+    {
+      "name": "distributed resource-bearing land chunks 1536/81273",
+      "pass": true
+    },
+    {
+      "name": "basic resources remain abundant 1536/81273",
+      "pass": true
+    },
+    {
+      "name": "camp total 1536/81273",
+      "pass": true
+    },
+    {
+      "name": "fish total 1536/81273",
+      "pass": true
+    },
+    {
+      "name": "single reachable merchant 1536/81273",
+      "pass": true
+    },
+    {
+      "name": "merchant samples distant world sectors 1536/81273",
+      "pass": true
+    },
+    {
+      "name": "save 1536/81273",
+      "pass": true
+    },
+    {
+      "name": "size/seed reload 1536/81273",
+      "pass": true
+    },
+    {
+      "name": "safe entry and save 1536/271828",
+      "pass": true
+    },
+    {
+      "name": "distributed resource-bearing land chunks 1536/271828",
+      "pass": true
+    },
+    {
+      "name": "basic resources remain abundant 1536/271828",
+      "pass": true
+    },
+    {
+      "name": "camp total 1536/271828",
+      "pass": true
+    },
+    {
+      "name": "fish total 1536/271828",
+      "pass": true
+    },
+    {
+      "name": "single reachable merchant 1536/271828",
+      "pass": true
+    },
+    {
+      "name": "merchant samples distant world sectors 1536/271828",
+      "pass": true
+    },
+    {
+      "name": "save 1536/271828",
+      "pass": true
+    },
+    {
+      "name": "size/seed reload 1536/271828",
+      "pass": true
+    },
+    {
+      "name": "safe entry and save 1536/902106",
+      "pass": true
+    },
+    {
+      "name": "distributed resource-bearing land chunks 1536/902106",
+      "pass": true
+    },
+    {
+      "name": "basic resources remain abundant 1536/902106",
+      "pass": true
+    },
+    {
+      "name": "camp total 1536/902106",
+      "pass": true
+    },
+    {
+      "name": "fish total 1536/902106",
+      "pass": true
+    },
+    {
+      "name": "single reachable merchant 1536/902106",
+      "pass": true
+    },
+    {
+      "name": "merchant samples distant world sectors 1536/902106",
+      "pass": true
+    },
+    {
+      "name": "save 1536/902106",
+      "pass": true
+    },
+    {
+      "name": "size/seed reload 1536/902106",
+      "pass": true
+    }
+  ],
+  "failed": 0,
+  "measurements": [
+    {
+      "biomes": {
+        "岩石区": 1,
+        "森林": 9,
+        "泥地": 6,
+        "草原": 16
+      },
+      "camps": 3,
+      "cells": 1024,
+      "fish_schools": 20,
+      "harvest_nodes": 78,
+      "merchant_sample_sectors": 4,
+      "natural_resources": 198,
+      "navigation_ms": 1844.498,
+      "nonempty_chunks": 32,
+      "resource_types": {
+        "branch": 46,
+        "broad_leaf": 22,
+        "brown_mushroom": 12,
+        "flint": 7,
+        "plant_fiber": 32,
+        "wild_berry": 14,
+        "wild_carrot": 28,
+        "wildflower": 37
+      },
+      "sampled_chunks": 32,
+      "seed": 81273,
+      "startup_ms": 7102.538,
+      "static_memory_delta_mib": 154.010139465332,
+      "trees": 128
+    },
+    {
+      "biomes": {
+        "岩石区": 5,
+        "森林": 6,
+        "泥地": 10,
+        "草原": 11
+      },
+      "camps": 3,
+      "cells": 1024,
+      "fish_schools": 20,
+      "harvest_nodes": 105,
+      "merchant_sample_sectors": 4,
+      "natural_resources": 144,
+      "navigation_ms": 1564.332,
+      "nonempty_chunks": 32,
+      "resource_types": {
+        "branch": 29,
+        "broad_leaf": 12,
+        "brown_mushroom": 14,
+        "flint": 13,
+        "plant_fiber": 25,
+        "wild_berry": 5,
+        "wild_carrot": 23,
+        "wildflower": 23
+      },
+      "sampled_chunks": 32,
+      "seed": 271828,
+      "startup_ms": 6692.576,
+      "static_memory_delta_mib": 98.0308437347412,
+      "trees": 127
+    },
+    {
+      "biomes": {
+        "岩石区": 7,
+        "森林": 14,
+        "泥地": 8,
+        "草原": 3
+      },
+      "camps": 3,
+      "cells": 1024,
+      "fish_schools": 20,
+      "harvest_nodes": 127,
+      "merchant_sample_sectors": 4,
+      "natural_resources": 186,
+      "navigation_ms": 1480.739,
+      "nonempty_chunks": 32,
+      "resource_types": {
+        "branch": 68,
+        "broad_leaf": 18,
+        "brown_mushroom": 27,
+        "flint": 18,
+        "plant_fiber": 18,
+        "wild_apple": 1,
+        "wild_berry": 12,
+        "wild_carrot": 15,
+        "wildflower": 9
+      },
+      "sampled_chunks": 32,
+      "seed": 902106,
+      "startup_ms": 6131.231,
+      "static_memory_delta_mib": 102.950414657593,
+      "trees": 148
+    },
+    {
+      "biomes": {
+        "岩石区": 3,
+        "森林": 6,
+        "泥地": 10,
+        "草原": 13
+      },
+      "camps": 5,
+      "cells": 1536,
+      "fish_schools": 28,
+      "harvest_nodes": 76,
+      "merchant_sample_sectors": 4,
+      "natural_resources": 165,
+      "navigation_ms": 2688.508,
+      "nonempty_chunks": 32,
+      "resource_types": {
+        "branch": 33,
+        "broad_leaf": 12,
+        "brown_mushroom": 9,
+        "flint": 13,
+        "plant_fiber": 40,
+        "wild_berry": 6,
+        "wild_carrot": 26,
+        "wildflower": 26
+      },
+      "sampled_chunks": 32,
+      "seed": 81273,
+      "startup_ms": 9002.376,
+      "static_memory_delta_mib": 106.804664611816,
+      "trees": 105
+    },
+    {
+      "biomes": {
+        "岩石区": 11,
+        "森林": 6,
+        "泥地": 7,
+        "草原": 8
+      },
+      "camps": 5,
+      "cells": 1536,
+      "fish_schools": 28,
+      "harvest_nodes": 134,
+      "merchant_sample_sectors": 4,
+      "natural_resources": 158,
+      "navigation_ms": 2977.342,
+      "nonempty_chunks": 32,
+      "resource_types": {
+        "branch": 36,
+        "broad_leaf": 15,
+        "brown_mushroom": 24,
+        "flint": 15,
+        "plant_fiber": 17,
+        "wild_berry": 7,
+        "wild_carrot": 24,
+        "wildflower": 20
+      },
+      "sampled_chunks": 32,
+      "seed": 271828,
+      "startup_ms": 9649.462,
+      "static_memory_delta_mib": 107.875356674194,
+      "trees": 105
+    },
+    {
+      "biomes": {
+        "岩石区": 6,
+        "森林": 6,
+        "泥地": 13,
+        "草原": 7
+      },
+      "camps": 5,
+      "cells": 1536,
+      "fish_schools": 28,
+      "harvest_nodes": 122,
+      "merchant_sample_sectors": 3,
+      "natural_resources": 126,
+      "navigation_ms": 2316.837,
+      "nonempty_chunks": 32,
+      "resource_types": {
+        "branch": 28,
+        "broad_leaf": 9,
+        "brown_mushroom": 8,
+        "flint": 10,
+        "plant_fiber": 34,
+        "wild_apple": 1,
+        "wild_berry": 6,
+        "wild_carrot": 20,
+        "wildflower": 10
+      },
+      "sampled_chunks": 32,
+      "seed": 902106,
+      "startup_ms": 7709.968,
+      "static_memory_delta_mib": 103.992258071899,
+      "trees": 86
+    }
+  ]
+}

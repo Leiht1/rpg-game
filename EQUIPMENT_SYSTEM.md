@@ -1,3 +1,7 @@
+## 2026-10-20 · 套装部件替换候选
+
+本轮人物创建任务明确授权独立候选换装，覆盖历史“未开发换装”的本轮范围限制。新发型、肤色与现代套装只在独立人物试玩启用；保留正式部件/关节/动作及原工具层级。参数、逐角色存档、统一部件模板和适用边界以 [CHARACTER_CREATION_SYSTEM.md](CHARACTER_CREATION_SYSTEM.md) 为准；本批美术待具体确认，不自动推广。
+
 # 2026-10-19 正视工具最新修订
 
 按最新用户要求，正视工具（含剪刀）在原手掌前绘制，转向/释放恢复侧背原顺序。铜工具待机外倾由held_tools.json的idle_rotation_degrees登记，仅待机应用；银提灯不再登记手持，使用方式见INDUSTRY_SYSTEM.md。专项见reports/front-tool-layer-v13/REPORT.md；下方历史手掌压柄条款被本次正视局部规则覆盖。

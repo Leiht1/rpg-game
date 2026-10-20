@@ -404,6 +404,7 @@ func strike(id: String, target: Node2D) -> bool:
 	else:
 		if target.has_method("update_damage"): target.update_damage()
 		target.modulate=Color(.84,.78,.68);target.create_tween().tween_property(target,"modulate",Color.WHITE,.18)
+	AudioFX.play_sfx("sfx_demolish_hit",Vector2(before.x,before.y))
 	inv.changed.emit();busy=false;return true
 
 func set_chest_open(id: String, opened: bool) -> String:

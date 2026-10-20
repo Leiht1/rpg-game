@@ -1,0 +1,22 @@
+{
+	"checks": [
+		{
+			"name": "independent process directly resumes without creation UI",
+			"pass": true
+		},
+		{
+			"name": "fresh process restores recorded seed and last position",
+			"pass": true
+		},
+		{
+			"name": "fresh process restores all appearance IDs",
+			"pass": true
+		},
+		{
+			"name": "destroyed clothing stays absent, one-time grant remains true",
+			"pass": true
+		}
+	],
+	"failed": 0,
+	"total": 4
+}

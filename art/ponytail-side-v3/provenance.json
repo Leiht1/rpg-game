@@ -1,0 +1,53 @@
+{
+  "status": "pending_user",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "exact_revision": "unknown",
+  "cost": "unknown, local quota",
+  "source_job": "generated/job.json",
+  "source_sha256": "bdccc60f87f26e3362aa509e009f4a3f679ba5e34572add1d2324c81f5145d72",
+  "reference_sha256": {
+    "prototypes/character-hair-v2/hair/female_ponytail-side.png": "a8398ad22ef728c5d68ff4ea0cffce707d88c8b8c10f1e7ae53ca11764b656b6",
+    "prototypes/character-hair-v2/heads/side.png": "cb64dd24daab7b21efaf02461d2ba309e39437bfed44a01ba91c4fbc3ef59675",
+    "art/ponytail-side-v3/user-reference.png": "43cdfaab28c100555dc52f2e08c30c3e56e1ffc00e67cee01b72c393d200e81c",
+    "reports/ponytail-side-v3/before-composite.png": "2ff997c465755302092f300561873de0e66565b4c6e901d3a6cd27275114d9ec"
+  },
+  "output": "prototypes/ponytail-side-v3/female_ponytail-side.png",
+  "output_sha256": "dac02c3a5bdab8c6396ad6ae35953f4fdac490bd626f9b8232c64f90b86068e4",
+  "registration": {
+    "source_box": [
+      83,
+      38,
+      429,
+      473
+    ],
+    "uniform_scale": 0.661849710982659,
+    "paste": [
+      51,
+      130
+    ],
+    "canvas": [
+      360,
+      440
+    ],
+    "generated_patch_only": [
+      65,
+      220,
+      120,
+      286
+    ],
+    "top_feather": [
+      220,
+      240
+    ],
+    "mask": "existing bald head alpha in localized area",
+    "compositing": "original hair over generated underlay; all original opaque hair unchanged"
+  },
+  "qa": "qa.json",
+  "note": "Only female low-ponytail side texture reference changes; left shares original rig mirror. Fringe, tie, ponytail and all other hairstyle PNGs preserved.",
+  "preserve_reference_media": [
+    "reports/ponytail-side-v3/before-composite.png"
+  ],
+  "historical_qa": "qa-initial.json: outside-patch transparent RGB differed in first composite; restored exact original outside ROI, final QA passes"
+}

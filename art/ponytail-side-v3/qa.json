@@ -1,0 +1,25 @@
+{
+  "checks": [
+    {
+      "name": "exposed rear scalp removed",
+      "before": 62,
+      "after": 0,
+      "pass": true
+    },
+    {
+      "name": "all pixels outside localized region identical",
+      "changed": 0,
+      "pass": true
+    },
+    {
+      "name": "all original opaque hair pixels identical",
+      "pass": true
+    },
+    {
+      "name": "all 25 previous V2 PNGs unchanged",
+      "pass": true
+    }
+  ],
+  "failed": 0,
+  "total": 4
+}

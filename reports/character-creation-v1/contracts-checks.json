@@ -1,0 +1,42 @@
+{
+	"checks": [
+		{
+			"name": "formal modern outfit definition remains collectible",
+			"pass": true
+		},
+		{
+			"name": "formal inventory equip fallback unchanged",
+			"pass": true
+		},
+		{
+			"name": "formal unequip fallback unchanged",
+			"pass": true
+		},
+		{
+			"name": "failed equip commit restores inventory and equipment",
+			"pass": true
+		},
+		{
+			"name": "hotbar alias uses original equipment path",
+			"pass": true
+		},
+		{
+			"name": "failed hotbar unequip restores alias and instance",
+			"pass": true
+		},
+		{
+			"name": "successful alias unequip returns same original instance",
+			"pass": true
+		},
+		{
+			"name": "all nine approved original body PNGs unchanged",
+			"pass": true
+		},
+		{
+			"name": "all sixty candidate hashes match source record",
+			"pass": true
+		}
+	],
+	"failed": 0,
+	"total": 9
+}

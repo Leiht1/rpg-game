@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "name": "runtime uses shortened copy",
+      "pass": true
+    },
+    {
+      "name": "short copy decodes as 0.30 seconds",
+      "pass": true
+    },
+    {
+      "name": "opening volume unchanged",
+      "pass": true
+    },
+    {
+      "name": "actual backpack open plays shortened event",
+      "pass": true
+    },
+    {
+      "name": "backpack cue finishes without tail",
+      "pass": true
+    },
+    {
+      "name": "map open uses same shortened event",
+      "pass": true
+    },
+    {
+      "name": "map cue finishes without tail",
+      "pass": true
+    },
+    {
+      "name": "close variants retained",
+      "pass": true
+    },
+    {
+      "name": "player saves untouched",
+      "pass": true
+    }
+  ],
+  "count": 9,
+  "failed": 0
+}

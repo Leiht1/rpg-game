@@ -1,197 +1,455 @@
 {
   "amb_rain_storm_loop": {
     "files": [
-      "res://assets/audio/v1/runtime/amb_rain_storm_loop.ogg"
+      "res://assets/audio/v3/runtime/amb_rain_storm_loop_01_3ff13bffa6.wav"
     ],
-    "volume_db": -5,
-    "cooldown": 0.1
+    "volume_db": -9.62,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/amb_rain_storm_loop_01_3ff13bffa6.wav": 0.0
+    }
   },
   "sfx_step_grass": {
     "files": [
-      "res://assets/audio/v2/sfx_step_dirt_01.mp3"
+      "res://assets/audio/v3/runtime/sfx_step_grass_03_0e3019daa7.wav"
     ],
-    "volume_db": -6.7,
+    "volume_db": 4.04,
     "cooldown": 0.1,
-    "enabled": false
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_step_grass_03_0e3019daa7.wav": 0.0
+    }
   },
   "sfx_bag_organize": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_bag_organize_01.wav"
+      "res://assets/audio/v3/runtime/sfx_bag_organize_01_e1d6097c59.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -9.55,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_bag_organize_01_e1d6097c59.wav": 0.0
+    }
   },
   "sfx_build_stone": {
     "files": [
       "res://assets/audio/v1/runtime/sfx_build_stone_01.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -6.92,
+    "cooldown": 0.1,
+    "file_gain_db": {
+      "res://assets/audio/v1/runtime/sfx_build_stone_01.wav": 0.0
+    },
+    "enabled": false
   },
   "sfx_build_wood": {
     "files": [
       "res://assets/audio/v1/runtime/sfx_build_wood_01.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -2.5,
+    "cooldown": 0.1,
+    "file_gain_db": {
+      "res://assets/audio/v1/runtime/sfx_build_wood_01.wav": 0.0
+    },
+    "enabled": false
   },
   "sfx_chest_close": {
     "files": [
       "res://assets/audio/v1/runtime/sfx_chest_close_01.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -8.11,
+    "cooldown": 0.1,
+    "file_gain_db": {
+      "res://assets/audio/v1/runtime/sfx_chest_close_01.wav": 0.0
+    },
+    "enabled": false
   },
   "sfx_chest_open": {
     "files": [
       "res://assets/audio/v1/runtime/sfx_chest_open_01.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -7.19,
+    "cooldown": 0.1,
+    "file_gain_db": {
+      "res://assets/audio/v1/runtime/sfx_chest_open_01.wav": 0.0
+    },
+    "enabled": false
   },
   "sfx_dig_soil": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_dig_soil_01.wav"
+      "res://assets/audio/v3/runtime/sfx_dig_soil_01_7d93145002.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -6.13,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_dig_soil_01_7d93145002.wav": 0.0
+    }
   },
   "sfx_door_close": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_door_close_01.wav"
+      "res://assets/audio/v3/runtime/sfx_door_close_02_437368c0bf.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": 0.27,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_door_close_02_437368c0bf.wav": 0.0
+    }
   },
   "sfx_door_open": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_door_open_01.wav"
+      "res://assets/audio/v3/runtime/sfx_door_open_02_437368c0bf.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": 0.27,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_door_open_02_437368c0bf.wav": 0.0
+    }
   },
   "sfx_drop_land": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_drop_land_01.wav"
+      "res://assets/audio/v3/runtime/sfx_drop_land_01_6c7c4ce4c0.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -11.51,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_drop_land_01_6c7c4ce4c0.wav": 0.0
+    }
   },
   "sfx_eat": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_eat_01.wav"
+      "res://assets/audio/v3/runtime/sfx_eat_02_890797e9be.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -3.04,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_eat_02_890797e9be.wav": 0.0
+    }
   },
   "sfx_equip": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_equip_01.wav"
+      "res://assets/audio/v3/runtime/sfx_equip_01_4b2069b92e.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -5.85,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_equip_01_4b2069b92e.wav": 0.0
+    }
   },
   "sfx_fridge_close": {
     "files": [
       "res://assets/audio/v1/runtime/sfx_fridge_close_01.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -6.13,
+    "cooldown": 0.1,
+    "file_gain_db": {
+      "res://assets/audio/v1/runtime/sfx_fridge_close_01.wav": 0.0
+    },
+    "enabled": false
   },
   "sfx_fridge_open": {
     "files": [
       "res://assets/audio/v1/runtime/sfx_fridge_open_01.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -6.13,
+    "cooldown": 0.1,
+    "file_gain_db": {
+      "res://assets/audio/v1/runtime/sfx_fridge_open_01.wav": 0.0
+    },
+    "enabled": false
   },
   "sfx_item_move": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_item_move_01.wav"
+      "res://assets/audio/v3/runtime/sfx_item_move_01_50694b20fa.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -20.43,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_item_move_01_50694b20fa.wav": 0.0
+    }
   },
   "sfx_lantern_off": {
     "files": [
       "res://assets/audio/v1/runtime/sfx_lantern_off_01.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -11.82,
+    "cooldown": 0.1,
+    "file_gain_db": {
+      "res://assets/audio/v1/runtime/sfx_lantern_off_01.wav": 0.0
+    },
+    "enabled": false
   },
   "sfx_lantern_on": {
     "files": [
       "res://assets/audio/v1/runtime/sfx_lantern_on_01.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -5.78,
+    "cooldown": 0.1,
+    "file_gain_db": {
+      "res://assets/audio/v1/runtime/sfx_lantern_on_01.wav": 0.0
+    },
+    "enabled": false
   },
   "sfx_map_mark": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_map_mark_01.wav"
+      "res://assets/audio/v3/runtime/sfx_map_mark_01_6aa38c9b9f.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": 0.57,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_map_mark_01_6aa38c9b9f.wav": 0.0
+    }
   },
   "sfx_mine_hit": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_mine_hit_01.wav"
+      "res://assets/audio/v3/runtime/sfx_mine_hit_01_19c13a87e0.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -6.94,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_mine_hit_01_19c13a87e0.wav": 0.0
+    }
   },
   "sfx_step_dirt": {
     "files": [
-      "res://assets/audio/v2/sfx_step_grass_01.ogg"
+      "res://assets/audio/v3/runtime/sfx_step_grass_03_0e3019daa7.wav"
     ],
-    "volume_db": 9.7,
+    "volume_db": 4.04,
     "cooldown": 0.1,
-    "enabled": false
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_step_grass_03_0e3019daa7.wav": 0.0
+    }
   },
   "sfx_step_stone": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_step_stone_01.wav"
+      "res://assets/audio/v3/runtime/sfx_step_grass_03_0e3019daa7.wav"
     ],
-    "volume_db": -12,
+    "volume_db": 4.04,
     "cooldown": 0.1,
-    "enabled": false
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_step_grass_03_0e3019daa7.wav": 0.0
+    }
   },
   "sfx_step_wood": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_step_wood_01.wav"
+      "res://assets/audio/v3/runtime/sfx_step_grass_03_0e3019daa7.wav"
     ],
-    "volume_db": -12,
+    "volume_db": 4.04,
     "cooldown": 0.1,
-    "enabled": false
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_step_grass_03_0e3019daa7.wav": 0.0
+    }
   },
   "sfx_tool_swing": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_tool_swing_01.wav",
-      "res://assets/audio/v1/runtime/sfx_tool_swing_02.wav",
-      "res://assets/audio/v1/runtime/sfx_tool_swing_03.wav"
+      "res://assets/audio/v3/runtime/sfx_tool_swing_01_c7d50b9cb2.wav"
     ],
-    "volume_db": -16,
-    "cooldown": 0.1
+    "volume_db": -20.64,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_tool_swing_01_c7d50b9cb2.wav": 0.0
+    }
   },
   "sfx_ui_click": {
     "files": [
-      "res://assets/audio/v2/sfx_ui_click_01.wav"
+      "res://assets/audio/v3/runtime/sfx_ui_click_01_150042880a.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -1.92,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_ui_click_01_150042880a.wav": 0.0
+    }
   },
   "sfx_ui_close": {
     "files": [
-      "res://assets/audio/v2/sfx_ui_close_01.wav"
+      "res://assets/audio/v3/runtime/sfx_ui_close_02_3793dd767f.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.1
+    "volume_db": -2.96,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_ui_close_02_3793dd767f.wav": -2.05
+    }
   },
   "sfx_ui_error": {
     "files": [
-      "res://assets/audio/v1/runtime/sfx_ui_error_01.wav"
+      "res://assets/audio/v3/runtime/sfx_ui_error_01_ce7dafdbdc.wav"
     ],
-    "volume_db": -8,
-    "cooldown": 0.7
+    "volume_db": -0.66,
+    "cooldown": 0.7,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_ui_error_01_ce7dafdbdc.wav": 0.0
+    }
+  },
+  "sfx_chop_hit": {
+    "cooldown": 0.1,
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_chop_hit_01_11b2b0c8b9.wav"
+    ],
+    "enabled": true,
+    "volume_db": 2.61,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_chop_hit_01_11b2b0c8b9.wav": 0.0
+    }
+  },
+  "sfx_tree_fall": {
+    "cooldown": 0.1,
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_tree_fall_01_5009eb50f9.wav"
+    ],
+    "enabled": true,
+    "volume_db": -9.31,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_tree_fall_01_5009eb50f9.wav": 0.0
+    }
+  },
+  "sfx_fishing_cast": {
+    "cooldown": 0.1,
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_fishing_cast_01_678114398f.wav"
+    ],
+    "enabled": true,
+    "volume_db": 4.74,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_fishing_cast_01_678114398f.wav": 0.0
+    }
+  },
+  "sfx_merchant_trade": {
+    "cooldown": 0.1,
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_merchant_trade_01_7eedea05c1.wav"
+    ],
+    "enabled": true,
+    "volume_db": -4.67,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_merchant_trade_01_7eedea05c1.wav": 0.0
+    }
+  },
+  "sfx_ore_break": {
+    "cooldown": 0.1,
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_ore_break_01_7d93145002.wav",
+      "res://assets/audio/v3/runtime/sfx_ore_break_02_a3d1aa0460.wav"
+    ],
+    "enabled": true,
+    "volume_db": -6.4,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_ore_break_01_7d93145002.wav": 1.27,
+      "res://assets/audio/v3/runtime/sfx_ore_break_02_a3d1aa0460.wav": -1.28
+    }
+  },
+  "sfx_demolish_hit": {
+    "cooldown": 0.1,
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_demolish_hit_01_57999a9dda.wav"
+    ],
+    "enabled": true,
+    "volume_db": -18.3,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_demolish_hit_01_57999a9dda.wav": 0.0
+    }
+  },
+  "sfx_chicken_idle": {
+    "cooldown": 8.0,
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_chicken_idle_01_8028004dc7.wav"
+    ],
+    "enabled": true,
+    "volume_db": -4.14,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_chicken_idle_01_8028004dc7.wav": 0.0
+    }
+  },
+  "sfx_fire_ignite": {
+    "cooldown": 0.1,
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_fire_ignite_01_f5cbb6b580.wav"
+    ],
+    "enabled": true,
+    "volume_db": -14.67,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_fire_ignite_01_f5cbb6b580.wav": 0.0
+    }
+  },
+  "sfx_ui_open": {
+    "cooldown": 0.1,
+    "files": [
+      "res://assets/audio/v4/sfx_ui_open_short.wav"
+    ],
+    "enabled": true,
+    "volume_db": -0.14,
+    "file_gain_db": {
+      "res://assets/audio/v4/sfx_ui_open_short.wav": 0.0
+    }
+  },
+  "sfx_pickup": {
+    "cooldown": 0.1,
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_pickup_01_461dab5d1f.wav"
+    ],
+    "enabled": true,
+    "volume_db": 5.38,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_pickup_01_461dab5d1f.wav": 0.0
+    }
+  },
+  "sfx_gather_plant": {
+    "cooldown": 0.1,
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_gather_plant_01_461dab5d1f.wav"
+    ],
+    "enabled": true,
+    "volume_db": 5.38,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_gather_plant_01_461dab5d1f.wav": 0.0
+    }
+  },
+  "sfx_fishing_bite": {
+    "cooldown": 0.1,
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_fishing_bite_02_a41e4514f9.mp3"
+    ],
+    "enabled": true,
+    "volume_db": -4.46,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_fishing_bite_02_a41e4514f9.mp3": 0.0
+    }
+  },
+  "sfx_thunder": {
+    "cooldown": 2.0,
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_thunder_01_b5db30599a.wav"
+    ],
+    "enabled": true,
+    "volume_db": -12.28,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_thunder_01_b5db30599a.wav": 0.0
+    }
+  },
+  "amb_rain_light_loop": {
+    "cooldown": 0.1,
+    "files": [
+      "res://assets/audio/v3/runtime/amb_rain_light_loop_01_3b36f1e43f.wav"
+    ],
+    "enabled": true,
+    "volume_db": -3.57,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/amb_rain_light_loop_01_3b36f1e43f.wav": 0.0
+    }
   }
 }

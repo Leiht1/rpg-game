@@ -1,0 +1,738 @@
+{
+	"checks": [
+		{
+			"name": "creation UI before world or save exists",
+			"pass": true
+		},
+		{
+			"name": "compact default 1280x720 UI fits",
+			"pass": true
+		},
+		{
+			"name": "four hairstyles gender 0",
+			"pass": true
+		},
+		{
+			"name": "hair head male_natural front",
+			"pass": true
+		},
+		{
+			"name": "hair head male_natural back",
+			"pass": true
+		},
+		{
+			"name": "hair head male_natural right",
+			"pass": true
+		},
+		{
+			"name": "hair head male_natural left",
+			"pass": true
+		},
+		{
+			"name": "hair head male_fluffy front",
+			"pass": true
+		},
+		{
+			"name": "hair head male_fluffy back",
+			"pass": true
+		},
+		{
+			"name": "hair head male_fluffy right",
+			"pass": true
+		},
+		{
+			"name": "hair head male_fluffy left",
+			"pass": true
+		},
+		{
+			"name": "hair head male_parted front",
+			"pass": true
+		},
+		{
+			"name": "hair head male_parted back",
+			"pass": true
+		},
+		{
+			"name": "hair head male_parted right",
+			"pass": true
+		},
+		{
+			"name": "hair head male_parted left",
+			"pass": true
+		},
+		{
+			"name": "hair head male_curly front",
+			"pass": true
+		},
+		{
+			"name": "hair head male_curly back",
+			"pass": true
+		},
+		{
+			"name": "hair head male_curly right",
+			"pass": true
+		},
+		{
+			"name": "hair head male_curly left",
+			"pass": true
+		},
+		{
+			"name": "four hairstyles gender 1",
+			"pass": true
+		},
+		{
+			"name": "hair head female_bob front",
+			"pass": true
+		},
+		{
+			"name": "hair head female_bob back",
+			"pass": true
+		},
+		{
+			"name": "hair head female_bob right",
+			"pass": true
+		},
+		{
+			"name": "hair head female_bob left",
+			"pass": true
+		},
+		{
+			"name": "hair head female_straight front",
+			"pass": true
+		},
+		{
+			"name": "hair head female_straight back",
+			"pass": true
+		},
+		{
+			"name": "hair head female_straight right",
+			"pass": true
+		},
+		{
+			"name": "hair head female_straight left",
+			"pass": true
+		},
+		{
+			"name": "hair head female_twintail front",
+			"pass": true
+		},
+		{
+			"name": "hair head female_twintail back",
+			"pass": true
+		},
+		{
+			"name": "hair head female_twintail right",
+			"pass": true
+		},
+		{
+			"name": "hair head female_twintail left",
+			"pass": true
+		},
+		{
+			"name": "hair head female_ponytail front",
+			"pass": true
+		},
+		{
+			"name": "hair head female_ponytail back",
+			"pass": true
+		},
+		{
+			"name": "hair head female_ponytail right",
+			"pass": true
+		},
+		{
+			"name": "hair head female_ponytail left",
+			"pass": true
+		},
+		{
+			"name": "skin shader choice skin_1",
+			"pass": true
+		},
+		{
+			"name": "skin shader choice skin_2",
+			"pass": true
+		},
+		{
+			"name": "skin shader choice skin_3",
+			"pass": true
+		},
+		{
+			"name": "skin shader choice skin_4",
+			"pass": true
+		},
+		{
+			"name": "skin shader choice skin_5",
+			"pass": true
+		},
+		{
+			"name": "skin shader choice skin_6",
+			"pass": true
+		},
+		{
+			"name": "cross gender invalid appearance rejected",
+			"pass": true
+		},
+		{
+			"name": "first save failure restores creation choices and retry",
+			"pass": true
+		},
+		{
+			"name": "failed first save has no committed world",
+			"pass": true
+		},
+		{
+			"name": "real Enter World button creates playable world",
+			"pass": true
+		},
+		{
+			"name": "original full continent generator",
+			"pass": true
+		},
+		{
+			"name": "safe actual-land spawn after original builds generation",
+			"pass": true
+		},
+		{
+			"name": "selected look transferred before first visible frame",
+			"pass": true
+		},
+		{
+			"name": "one outfit in bag, not auto equipped",
+			"pass": true
+		},
+		{
+			"name": "no unrelated debug items granted",
+			"pass": true
+		},
+		{
+			"name": "single atomic world and per-player appearance record validates",
+			"pass": true
+		},
+		{
+			"name": "original inventory equips candidate outfit",
+			"pass": true
+		},
+		{
+			"name": "same unique clothing instance preserved",
+			"pass": true
+		},
+		{
+			"name": "torso replacement front",
+			"pass": true
+		},
+		{
+			"name": "limb front Visual/ArmLBehind",
+			"pass": true
+		},
+		{
+			"name": "limb front Visual/Pelvis/ArmR/Sprite",
+			"pass": true
+		},
+		{
+			"name": "limb front Visual/LegL/Sprite",
+			"pass": true
+		},
+		{
+			"name": "limb front Visual/LegR/Sprite",
+			"pass": true
+		},
+		{
+			"name": "torso replacement back",
+			"pass": true
+		},
+		{
+			"name": "limb back Visual/ArmLBehind",
+			"pass": true
+		},
+		{
+			"name": "limb back Visual/Pelvis/ArmR/Sprite",
+			"pass": true
+		},
+		{
+			"name": "limb back Visual/LegL/Sprite",
+			"pass": true
+		},
+		{
+			"name": "limb back Visual/LegR/Sprite",
+			"pass": true
+		},
+		{
+			"name": "torso replacement right",
+			"pass": true
+		},
+		{
+			"name": "limb right Visual/ArmLBehind",
+			"pass": true
+		},
+		{
+			"name": "limb right Visual/Pelvis/ArmR/Sprite",
+			"pass": true
+		},
+		{
+			"name": "limb right Visual/LegL/Sprite",
+			"pass": true
+		},
+		{
+			"name": "limb right Visual/LegR/Sprite",
+			"pass": true
+		},
+		{
+			"name": "torso replacement left",
+			"pass": true
+		},
+		{
+			"name": "limb left Visual/ArmLBehind",
+			"pass": true
+		},
+		{
+			"name": "limb left Visual/Pelvis/ArmR/Sprite",
+			"pass": true
+		},
+		{
+			"name": "limb left Visual/LegL/Sprite",
+			"pass": true
+		},
+		{
+			"name": "limb left Visual/LegR/Sprite",
+			"pass": true
+		},
+		{
+			"name": "outfit body shape keeps height -1.0",
+			"pass": true
+		},
+		{
+			"name": "outfit body shape keeps height 0.0",
+			"pass": true
+		},
+		{
+			"name": "outfit body shape keeps height 1.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_breathe 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_breathe 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_breathe 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_chop 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_chop 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_chop 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_chop_link 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_chop_link 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_chop_link 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_pickup 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_pickup 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_pickup 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_run 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_run 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_run 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_walk 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_walk 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite back_walk 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/back_throw_left 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/back_throw_left 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/back_throw_left 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/back_throw_right 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/back_throw_right 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/back_throw_right 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/front_throw_left 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/front_throw_left 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/front_throw_left 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/front_throw_right 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/front_throw_right 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/front_throw_right 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/side_throw_left 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/side_throw_left 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/side_throw_left 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/side_throw_right 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/side_throw_right 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite camp/side_throw_right 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_breathe 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_breathe 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_breathe 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_chop 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_chop 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_chop 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_chop_link 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_chop_link 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_chop_link 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_pickup 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_pickup 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_pickup 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_run 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_run 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_run 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_walk 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_walk 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite front_walk 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/back_dig 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/back_dig 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/back_dig 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/back_mine 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/back_mine 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/back_mine 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/front_dig 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/front_dig 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/front_dig 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/front_mine 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/front_mine 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/front_mine 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/side_dig 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/side_dig 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/side_dig 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/side_mine 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/side_mine 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite harvest/side_mine 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_breathe 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_breathe 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_breathe 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_chop 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_chop 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_chop 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_chop_link 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_chop_link 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_chop_link 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_pickup 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_pickup 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_pickup 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_run 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_run 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_run 0.8",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_walk 0.0",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_walk 0.4",
+			"pass": true
+		},
+		{
+			"name": "native clip grip finite side_walk 0.8",
+			"pass": true
+		},
+		{
+			"name": "outfit and actions preserve appearance IDs",
+			"pass": true
+		},
+		{
+			"name": "bag uses same real appearance renderer",
+			"pass": true
+		},
+		{
+			"name": "world character actually moves",
+			"pass": true
+		},
+		{
+			"name": "original run animation and movement path",
+			"pass": true
+		},
+		{
+			"name": "unequip save failure rolls back unique equipped instance",
+			"pass": true
+		},
+		{
+			"name": "original unequip restores default body parts",
+			"pass": true
+		},
+		{
+			"name": "default torso restored by native animation",
+			"pass": true
+		},
+		{
+			"name": "real bag menu equip button",
+			"pass": true
+		},
+		{
+			"name": "world appearance inventory position atomic save",
+			"pass": true
+		},
+		{
+			"name": "one-time grant stored",
+			"pass": true
+		},
+		{
+			"name": "restart restores same isolated snapshot",
+			"pass": true
+		},
+		{
+			"name": "same seed and exact saved exit position restored",
+			"pass": true
+		},
+		{
+			"name": "outfit and selected appearance restored",
+			"pass": true
+		},
+		{
+			"name": "loaded character world ownership validates",
+			"pass": true
+		},
+		{
+			"name": "re-entry does not grant clothing again",
+			"pass": true
+		},
+		{
+			"name": "all original player JSON hashes unchanged",
+			"pass": true
+		}
+	],
+	"failed": 0,
+	"total": 183
+}

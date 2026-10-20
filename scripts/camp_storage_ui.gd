@@ -19,7 +19,7 @@ func configure(items: Node) -> void:
 	panel.size=Vector2(156,184);panel.z_index=8
 	panel.add_theme_stylebox_override("panel",CampSkin.section(8));add_child(panel);panel.hide()
 	var title := Label.new();title.text="木箱";title.name="ChestTitle";title.position=Vector2(26,12);title.size=Vector2(104,20);title.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;title.mouse_filter=Control.MOUSE_FILTER_IGNORE;panel.add_child(title)
-	var close := Button.new();close.text="×";close.position=Vector2(128,9);close.size=Vector2(22,24);close.add_theme_stylebox_override("normal",CampSkin.button_style("normal",true));close.add_theme_stylebox_override("hover",CampSkin.button_style("hover",true));close.add_theme_stylebox_override("pressed",CampSkin.button_style("pressed",true));panel.add_child(close);close.pressed.connect(close_panel)
+	var close := Button.new();close.text="×";close.set_meta("audio_window_close",true);close.position=Vector2(128,9);close.size=Vector2(22,24);close.add_theme_stylebox_override("normal",CampSkin.button_style("normal",true));close.add_theme_stylebox_override("hover",CampSkin.button_style("hover",true));close.add_theme_stylebox_override("pressed",CampSkin.button_style("pressed",true));panel.add_child(close);close.pressed.connect(close_panel)
 	var chest := GridContainer.new();chest.name="ChestGrid";chest.columns=3;chest.position=Vector2(8,38);chest.add_theme_constant_override("h_separation",4);chest.add_theme_constant_override("v_separation",4);panel.add_child(chest)
 	for i in 24:
 		var cell := preload("res://scripts/camp_storage_slot.gd").new();cell.owner_ui=self;cell.index=i;chest.add_child(cell);cells.append(cell)

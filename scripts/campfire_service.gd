@@ -193,12 +193,22 @@ func feed(id: String, slot: int, expected: Dictionary, count: int) -> String:
 	if not reason.is_empty(): return reason
 	if count<1 or count>feed_amount(id,expected): return "燃时或物品数量已变化，请重新投入"
 	busy=true
+	var before: Dictionary=states[id].duplicate(true)
+	var before_slots: Array=service.inventory.slots.duplicate(true)
+	var before_burning := burning.duplicate(true)
+	var was_lit: bool=bool(before.lit) and float(before.fuel)>0.0
 	var staged := ItemInventory.new(service.database);staged.slots=service.inventory.slots.duplicate(true)
 	staged.slots[slot].count-=count
 	if staged.slots[slot].count==0: staged.slots[slot]={}
 	states[id].fuel+=float(rules.fuel_items[expected.item_id])*count
 	states[id].lit=true;burning[id]=true
-	commit(staged);busy=false
+	service.inventory.slots=staged.slots;service.dirty=true
+	if not service.save_state():
+		states[id]=before;service.inventory.slots=before_slots;burning=before_burning;busy=false
+		return "保存失败，燃料投放已回滚"
+	service.inventory.changed.emit()
+	if not was_lit:AudioFX.play_sfx("sfx_fire_ignite",Vector2(before.x,before.y))
+	busy=false
 	return ""
 
 func target_at(at: Vector2) -> String:

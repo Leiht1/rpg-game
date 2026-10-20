@@ -1,0 +1,722 @@
+{
+  "checks": [
+    {
+      "name": "isolated fixture never saves player world",
+      "pass": true
+    },
+    {
+      "name": "amb_rain_storm_loop decodes res://assets/audio/v3/runtime/amb_rain_storm_loop_01_3ff13bffa6.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass decodes res://assets/audio/v3/runtime/sfx_step_grass_03_0e3019daa7.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_bag_organize decodes res://assets/audio/v3/runtime/sfx_bag_organize_01_e1d6097c59.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_bag_organize actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_bag_organize applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_build_stone decodes res://assets/audio/v1/runtime/sfx_build_stone_01.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_build_stone actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_build_stone applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_build_wood decodes res://assets/audio/v1/runtime/sfx_build_wood_01.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_build_wood actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_build_wood applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_chest_close decodes res://assets/audio/v1/runtime/sfx_chest_close_01.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_chest_close actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_chest_close applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_chest_open decodes res://assets/audio/v1/runtime/sfx_chest_open_01.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_chest_open actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_chest_open applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_dig_soil decodes res://assets/audio/v3/runtime/sfx_dig_soil_01_7d93145002.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_dig_soil actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_dig_soil applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_door_close decodes res://assets/audio/v3/runtime/sfx_door_close_02_437368c0bf.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_door_close actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_door_close applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_door_open decodes res://assets/audio/v3/runtime/sfx_door_open_02_437368c0bf.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_door_open actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_door_open applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_drop_land decodes res://assets/audio/v3/runtime/sfx_drop_land_01_6c7c4ce4c0.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_drop_land actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_drop_land applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_eat decodes res://assets/audio/v3/runtime/sfx_eat_02_890797e9be.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_eat actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_eat applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_equip decodes res://assets/audio/v3/runtime/sfx_equip_01_4b2069b92e.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_equip actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_equip applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_fridge_close decodes res://assets/audio/v1/runtime/sfx_fridge_close_01.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_fridge_close actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_fridge_close applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_fridge_open decodes res://assets/audio/v1/runtime/sfx_fridge_open_01.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_fridge_open actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_fridge_open applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_item_move decodes res://assets/audio/v3/runtime/sfx_item_move_01_50694b20fa.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_item_move actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_item_move applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_lantern_off decodes res://assets/audio/v1/runtime/sfx_lantern_off_01.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_lantern_off actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_lantern_off applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_lantern_on decodes res://assets/audio/v1/runtime/sfx_lantern_on_01.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_lantern_on actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_lantern_on applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_map_mark decodes res://assets/audio/v3/runtime/sfx_map_mark_01_6aa38c9b9f.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_map_mark actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_map_mark applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_mine_hit decodes res://assets/audio/v3/runtime/sfx_mine_hit_01_19c13a87e0.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_mine_hit actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_mine_hit applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt decodes res://assets/audio/v3/runtime/sfx_step_dirt_01_8541c6d20b.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone decodes res://assets/audio/v3/runtime/sfx_step_stone_01_770fcc42ba.mp3",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood decodes res://assets/audio/v3/runtime/sfx_step_wood_01_84dccfbd84.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_tool_swing decodes res://assets/audio/v3/runtime/sfx_tool_swing_01_c7d50b9cb2.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_tool_swing actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_tool_swing applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_click decodes res://assets/audio/v3/runtime/sfx_ui_click_01_150042880a.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_click actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_click applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_close decodes res://assets/audio/v3/runtime/sfx_ui_close_01_150042880a.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_close decodes res://assets/audio/v3/runtime/sfx_ui_close_02_3793dd767f.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_close actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_close applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_error decodes res://assets/audio/v3/runtime/sfx_ui_error_01_ce7dafdbdc.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_error actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_error applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_chop_hit decodes res://assets/audio/v3/runtime/sfx_chop_hit_01_11b2b0c8b9.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_chop_hit actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_chop_hit applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_tree_fall decodes res://assets/audio/v3/runtime/sfx_tree_fall_01_5009eb50f9.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_tree_fall actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_tree_fall applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_fishing_cast decodes res://assets/audio/v3/runtime/sfx_fishing_cast_01_678114398f.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_fishing_cast actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_fishing_cast applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_merchant_trade decodes res://assets/audio/v3/runtime/sfx_merchant_trade_01_7eedea05c1.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_merchant_trade actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_merchant_trade applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_ore_break decodes res://assets/audio/v3/runtime/sfx_ore_break_01_7d93145002.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_ore_break decodes res://assets/audio/v3/runtime/sfx_ore_break_02_a3d1aa0460.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_ore_break actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_ore_break applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_demolish_hit decodes res://assets/audio/v3/runtime/sfx_demolish_hit_01_57999a9dda.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_demolish_hit actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_demolish_hit applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_chicken_idle decodes res://assets/audio/v3/runtime/sfx_chicken_idle_01_8028004dc7.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_chicken_idle actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_chicken_idle applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_fire_ignite decodes res://assets/audio/v3/runtime/sfx_fire_ignite_01_f5cbb6b580.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_fire_ignite actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_fire_ignite applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_open decodes res://assets/audio/v3/runtime/sfx_ui_open_01_f18580e418.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_open actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_ui_open applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_pickup decodes res://assets/audio/v3/runtime/sfx_pickup_01_461dab5d1f.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_pickup actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_pickup applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_gather_plant decodes res://assets/audio/v3/runtime/sfx_gather_plant_01_461dab5d1f.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_gather_plant actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_gather_plant applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_fishing_bite decodes res://assets/audio/v3/runtime/sfx_fishing_bite_02_a41e4514f9.mp3",
+      "pass": true
+    },
+    {
+      "name": "sfx_fishing_bite actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_fishing_bite applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "sfx_thunder decodes res://assets/audio/v3/runtime/sfx_thunder_01_b5db30599a.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_thunder actual player starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_thunder applies calibrated gain including variant offset",
+      "pass": true
+    },
+    {
+      "name": "amb_rain_light_loop decodes res://assets/audio/v3/runtime/amb_rain_light_loop_01_3b36f1e43f.wav",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass explicitly re-enabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass footstep starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass original pitch",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass busy voice skips next footfall",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass naturally finishes",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_grass no queued replay",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt explicitly re-enabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt footstep starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt original pitch",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt busy voice skips next footfall",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt naturally finishes",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_dirt no queued replay",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone explicitly re-enabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone footstep starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone original pitch",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone busy voice skips next footfall",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone naturally finishes",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_stone no queued replay",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood explicitly re-enabled",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood footstep starts",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood original pitch",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood busy voice skips next footfall",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood naturally finishes",
+      "pass": true
+    },
+    {
+      "name": "sfx_step_wood no queued replay",
+      "pass": true
+    },
+    {
+      "name": "real keyboard bag open and close",
+      "pass": true
+    },
+    {
+      "name": "successful actual ground pickup sounds",
+      "pass": true
+    },
+    {
+      "name": "protected pickup has no success cue",
+      "pass": true
+    },
+    {
+      "name": "axe equips for real tree hit",
+      "pass": true
+    },
+    {
+      "name": "actual final tree hit and felling sound",
+      "pass": true
+    },
+    {
+      "name": "pickaxe equips",
+      "pass": true
+    },
+    {
+      "name": "actual ore depletion emits break sound",
+      "pass": true
+    },
+    {
+      "name": "double lightning flash produces exactly one thunder",
+      "pass": true
+    },
+    {
+      "name": "light rain uses its own selected loop",
+      "pass": true
+    },
+    {
+      "name": "selected light WAV loops correctly",
+      "pass": true
+    },
+    {
+      "name": "storm transitions to selected storm loop",
+      "pass": true
+    },
+    {
+      "name": "weather pause freezes active storm and leaves inactive light rain stopped",
+      "pass": true
+    },
+    {
+      "name": "clear weather fades both loops to silence",
+      "pass": true
+    },
+    {
+      "name": "fishing state transitions sound",
+      "pass": true
+    },
+    {
+      "name": "actual committed merchant trade cue: ",
+      "pass": true
+    },
+    {
+      "name": "sold-out trade has no success cue",
+      "pass": true
+    },
+    {
+      "name": "fire save failure restores fuel and source stack",
+      "pass": true
+    },
+    {
+      "name": "failed ignition has no success sound",
+      "pass": true
+    },
+    {
+      "name": "successful new campfire ignition cue",
+      "pass": true
+    },
+    {
+      "name": "adding fuel to burning campfire does not replay ignition",
+      "pass": true
+    },
+    {
+      "name": "stone hammer equips for demolition",
+      "pass": true
+    },
+    {
+      "name": "demolition save failure stays silent",
+      "pass": true
+    },
+    {
+      "name": "actual committed demolition strike cue",
+      "pass": true
+    },
+    {
+      "name": "wood paving selects wood footstep",
+      "pass": true
+    },
+    {
+      "name": "stone paving selects stone footstep",
+      "pass": true
+    },
+    {
+      "name": "actual half-stride movement triggers enabled footsteps",
+      "pass": true
+    },
+    {
+      "name": "stationary player stays silent",
+      "pass": true
+    },
+    {
+      "name": "blocked movement has no footstep",
+      "pass": true
+    },
+    {
+      "name": "nearby actual chicken emits occasional selected call",
+      "pass": true
+    },
+    {
+      "name": "audio never consumes animal movement RNG",
+      "pass": true
+    },
+    {
+      "name": "paused simulation has no animal chatter",
+      "pass": true
+    },
+    {
+      "name": "world exit clears both loops and voices",
+      "pass": true
+    },
+    {
+      "name": "player JSON saves untouched",
+      "pass": true
+    }
+  ],
+  "count": 179,
+  "failed": 0
+}

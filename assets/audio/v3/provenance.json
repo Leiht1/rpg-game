@@ -1,0 +1,322 @@
+{
+  "date": "2026-10-20",
+  "authorization": "这一轮我选了这些，放在这个文件夹了，你替换一些，然后主要音量的平衡，脚步声先启用",
+  "scope": "33 selected events; 35 byte-identical runtime files; existing unsupplied events retained and gain balanced; four footsteps re-enabled",
+  "files": [
+    {
+      "event": "sfx_step_dirt",
+      "selected": "assets/audio/selected/player/sfx_step_dirt/sfx_step_dirt_01_8541c6d20b.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_step_dirt_01_8541c6d20b.wav",
+      "sha256": "8541c6d20bb07e3be204d65fb0751fa460ebd7bf6bedc8b6d95e242bab939bfa",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\01人物\\01移动状态\\脚步声、沙地-xys20070517.wav",
+      "source_sha256": "8541c6d20bb07e3be204d65fb0751fa460ebd7bf6bedc8b6d95e242bab939bfa",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_step_grass",
+      "selected": "assets/audio/selected/player/sfx_step_grass/sfx_step_grass_03_0e3019daa7.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_step_grass_03_0e3019daa7.wav",
+      "sha256": "0e3019daa768b9e66bbbeea55169385a317689c00060540003152187f4645dd6",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\01人物\\01移动状态\\06落叶地面\\草地行走2zth070509.wav",
+      "source_sha256": "0e3019daa768b9e66bbbeea55169385a317689c00060540003152187f4645dd6",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_step_stone",
+      "selected": "assets/audio/selected/player/sfx_step_stone/sfx_step_stone_01_770fcc42ba.mp3",
+      "runtime": "res://assets/audio/v3/runtime/sfx_step_stone_01_770fcc42ba.mp3",
+      "sha256": "770fcc42ba1169315a2b190e364bbdaea8675dd7d76d193af204fdd28a86a5e7",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\01人物\\01移动状态\\04沙石地\\偏松软的沙土地上的脚步声1-xys20070524.mp3",
+      "source_sha256": "770fcc42ba1169315a2b190e364bbdaea8675dd7d76d193af204fdd28a86a5e7",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_step_wood",
+      "selected": "assets/audio/selected/player/sfx_step_wood/sfx_step_wood_01_84dccfbd84.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_step_wood_01_84dccfbd84.wav",
+      "sha256": "84dccfbd8429d30b4ae263d7e5e188b5135eaf4081d94bbf578f02bf9662b3ca",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\01人物\\01移动状态\\01硬地面\\脚步-WQ20070419.wav",
+      "source_sha256": "84dccfbd8429d30b4ae263d7e5e188b5135eaf4081d94bbf578f02bf9662b3ca",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_chop_hit",
+      "selected": "assets/audio/selected/resource/sfx_chop_hit/sfx_chop_hit_01_11b2b0c8b9.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_chop_hit_01_11b2b0c8b9.wav",
+      "sha256": "11b2b0c8b91a3a8a2d4f408e6e40b5f9e55a77711b2447b502d9f98fbe125a66",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\01人物\\06工作生产\\建设\\木质\\伐木1-xys20070416.wav",
+      "source_sha256": "11b2b0c8b91a3a8a2d4f408e6e40b5f9e55a77711b2447b502d9f98fbe125a66",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_tree_fall",
+      "selected": "assets/audio/selected/resource/sfx_tree_fall/sfx_tree_fall_01_5009eb50f9.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_tree_fall_01_5009eb50f9.wav",
+      "sha256": "5009eb50f9879deaed892a4711aef16a49ba7bba2ca37fc7ec793908b546685c",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\01人物\\06工作生产\\建设\\木质\\伐木5-xys20070416.wav",
+      "source_sha256": "5009eb50f9879deaed892a4711aef16a49ba7bba2ca37fc7ec793908b546685c",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_tool_swing",
+      "selected": "assets/audio/selected/resource/sfx_tool_swing/sfx_tool_swing_01_c7d50b9cb2.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_tool_swing_01_c7d50b9cb2.wav",
+      "sha256": "c7d50b9cb20ccda5aee6c023f4450915594061e36f3f9e78af241ca9fde0f817",
+      "original_source": "D:\\windrest_audio\\sfx_tool_swing_01.wav",
+      "source_sha256": "c7d50b9cb20ccda5aee6c023f4450915594061e36f3f9e78af241ca9fde0f817",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_mine_hit",
+      "selected": "assets/audio/selected/resource/sfx_mine_hit/sfx_mine_hit_01_19c13a87e0.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_mine_hit_01_19c13a87e0.wav",
+      "sha256": "19c13a87e0f241cf05417506760d32eb1e2a61dc77c7798ea86b22fa9260f596",
+      "original_source": "D:\\windrest_audio\\sfx_mine_hit_01.wav",
+      "source_sha256": "19c13a87e0f241cf05417506760d32eb1e2a61dc77c7798ea86b22fa9260f596",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_dig_soil",
+      "selected": "assets/audio/selected/resource/sfx_dig_soil/sfx_dig_soil_01_7d93145002.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_dig_soil_01_7d93145002.wav",
+      "sha256": "7d931450025b99bee9817b29643e3615c91c448e7976739bce1db14447f36ea2",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\01人物\\06工作生产\\建设\\矿物\\摩擦2-xys20070416.wav",
+      "source_sha256": "7d931450025b99bee9817b29643e3615c91c448e7976739bce1db14447f36ea2",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_fishing_cast",
+      "selected": "assets/audio/selected/resource/sfx_fishing_cast/sfx_fishing_cast_01_678114398f.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_fishing_cast_01_678114398f.wav",
+      "sha256": "678114398f1d43b4a6045fd3a0f2d29c165fd345bd9534ab61b75b0079336ced",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\01人物\\06工作生产\\垂钓\\抛杆-XYS20070425.wav",
+      "source_sha256": "678114398f1d43b4a6045fd3a0f2d29c165fd345bd9534ab61b75b0079336ced",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_drop_land",
+      "selected": "assets/audio/selected/resource/sfx_drop_land/sfx_drop_land_01_6c7c4ce4c0.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_drop_land_01_6c7c4ce4c0.wav",
+      "sha256": "6c7c4ce4c0cdcf96ae548fcdf380d6817bdd536d60bbb73962902ee7e197e77a",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\04物品\\其他\\物品落草地zth070511.wav",
+      "source_sha256": "6c7c4ce4c0cdcf96ae548fcdf380d6817bdd536d60bbb73962902ee7e197e77a",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_merchant_trade",
+      "selected": "assets/audio/selected/resource/sfx_merchant_trade/sfx_merchant_trade_01_7eedea05c1.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_merchant_trade_01_7eedea05c1.wav",
+      "sha256": "7eedea05c1ee723dfde58114402b42eb47cb27a87edfa12f17d9cfd08d6d514c",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\04物品\\携带附件摩擦\\金属制品\\钱币zth070509.wav",
+      "source_sha256": "7eedea05c1ee723dfde58114402b42eb47cb27a87edfa12f17d9cfd08d6d514c",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_item_move",
+      "selected": "assets/audio/selected/ui/sfx_item_move/sfx_item_move_01_50694b20fa.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_item_move_01_50694b20fa.wav",
+      "sha256": "50694b20faf0d0f5c9547df1b139cc55dc65df92a7d38f18d483002b365fc487",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\04物品\\衣服或布料的摩擦\\布类物品被移动-YS070521.wav",
+      "source_sha256": "50694b20faf0d0f5c9547df1b139cc55dc65df92a7d38f18d483002b365fc487",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_bag_organize",
+      "selected": "assets/audio/selected/ui/sfx_bag_organize/sfx_bag_organize_01_e1d6097c59.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_bag_organize_01_e1d6097c59.wav",
+      "sha256": "e1d6097c597c87e84e8a61451d87e39c60f8a2e79437b39e757b36d36f28bb36",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\04物品\\衣服或布料的摩擦\\衣服抖动－mcx070518.wav",
+      "source_sha256": "e1d6097c597c87e84e8a61451d87e39c60f8a2e79437b39e757b36d36f28bb36",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_ore_break",
+      "selected": "assets/audio/selected/resource/sfx_ore_break/sfx_ore_break_01_7d93145002.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_ore_break_01_7d93145002.wav",
+      "sha256": "7d931450025b99bee9817b29643e3615c91c448e7976739bce1db14447f36ea2",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\01人物\\06工作生产\\建设\\矿物\\摩擦2-xys20070416.wav",
+      "source_sha256": "7d931450025b99bee9817b29643e3615c91c448e7976739bce1db14447f36ea2",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_ore_break",
+      "selected": "assets/audio/selected/resource/sfx_ore_break/sfx_ore_break_02_a3d1aa0460.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_ore_break_02_a3d1aa0460.wav",
+      "sha256": "a3d1aa0460abce0fa4f16a0b03c1dc76e4a40d6b3e03007a05960878f999f3f2",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\04物品\\金属物品\\金属物落地1zth070511.wav",
+      "source_sha256": "a3d1aa0460abce0fa4f16a0b03c1dc76e4a40d6b3e03007a05960878f999f3f2",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_door_open",
+      "selected": "assets/audio/selected/building/sfx_door_open/sfx_door_open_02_437368c0bf.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_door_open_02_437368c0bf.wav",
+      "sha256": "437368c0bfdabce16417c9689d38cdf42e7cbccacc1ead9128a3a7e77477b8a7",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\04物品\\门\\打开房间木门－YS070511.wav",
+      "source_sha256": "437368c0bfdabce16417c9689d38cdf42e7cbccacc1ead9128a3a7e77477b8a7",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_door_close",
+      "selected": "assets/audio/selected/building/sfx_door_close/sfx_door_close_02_437368c0bf.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_door_close_02_437368c0bf.wav",
+      "sha256": "437368c0bfdabce16417c9689d38cdf42e7cbccacc1ead9128a3a7e77477b8a7",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\04物品\\门\\打开房间木门－YS070511.wav",
+      "source_sha256": "437368c0bfdabce16417c9689d38cdf42e7cbccacc1ead9128a3a7e77477b8a7",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_demolish_hit",
+      "selected": "assets/audio/selected/building/sfx_demolish_hit/sfx_demolish_hit_01_57999a9dda.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_demolish_hit_01_57999a9dda.wav",
+      "sha256": "57999a9dda0372c63a2b4b41412d4fcb565d3f9db84a7aa489b881545f96f2a4",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\05冷兵器\\盔甲类\\盾\\盾与武器的碰撞2－YS20070423.wav",
+      "source_sha256": "57999a9dda0372c63a2b4b41412d4fcb565d3f9db84a7aa489b881545f96f2a4",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_chicken_idle",
+      "selected": "assets/audio/selected/animal/sfx_chicken_idle/sfx_chicken_idle_01_8028004dc7.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_chicken_idle_01_8028004dc7.wav",
+      "sha256": "8028004dc74782d362c83b86dcadbbf695870e2566b5a2b01258c1b392ed3d60",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\通用动作\\02动物\\02小型动物\\叫声\\家禽3-声音大-LTT20070517.wav",
+      "source_sha256": "8028004dc74782d362c83b86dcadbbf695870e2566b5a2b01258c1b392ed3d60",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_fire_ignite",
+      "selected": "assets/audio/selected/building/sfx_fire_ignite/sfx_fire_ignite_01_f5cbb6b580.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_fire_ignite_01_f5cbb6b580.wav",
+      "sha256": "f5cbb6b58062ce6dad47b9932b246678f0267b696a213b77241d988588cc201b",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\技能音效\\04火\\呼啸－有火的感觉－mcx20070416.wav",
+      "source_sha256": "f5cbb6b58062ce6dad47b9932b246678f0267b696a213b77241d988588cc201b",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_eat",
+      "selected": "assets/audio/selected/player/sfx_eat/sfx_eat_02_890797e9be.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_eat_02_890797e9be.wav",
+      "sha256": "890797e9be3246f35131a395540effcafed851b8f1da9525eb73471f29d63492",
+      "original_source": "C:\\Users\\雷\\Downloads\\游视影视音效资料包\\上古卷轴5 天际\\sound\\fx\\npc\\human\\eat\\npc_human_eat_01.wav",
+      "source_sha256": "890797e9be3246f35131a395540effcafed851b8f1da9525eb73471f29d63492",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_ui_open",
+      "selected": "assets/audio/selected/ui/sfx_ui_open/sfx_ui_open_01_f18580e418.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_ui_open_01_f18580e418.wav",
+      "sha256": "f18580e4183f5a4360eddba9c46f63fef9db5e3de82900a520128af705bef273",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\interface 界面\\打开日志－xh20070419.wav",
+      "source_sha256": "f18580e4183f5a4360eddba9c46f63fef9db5e3de82900a520128af705bef273",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_ui_click",
+      "selected": "assets/audio/selected/ui/sfx_ui_click/sfx_ui_click_01_150042880a.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_ui_click_01_150042880a.wav",
+      "sha256": "150042880a8b31fd9042e7e1587c4df2bc358d111a992421d132b346ee914012",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\interface 界面\\按钮类2－mcx20070509.wav",
+      "source_sha256": "150042880a8b31fd9042e7e1587c4df2bc358d111a992421d132b346ee914012",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_ui_close",
+      "selected": "assets/audio/selected/ui/sfx_ui_close/sfx_ui_close_01_150042880a.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_ui_close_01_150042880a.wav",
+      "sha256": "150042880a8b31fd9042e7e1587c4df2bc358d111a992421d132b346ee914012",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\interface 界面\\按钮类2－mcx20070509.wav",
+      "source_sha256": "150042880a8b31fd9042e7e1587c4df2bc358d111a992421d132b346ee914012",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_ui_close",
+      "selected": "assets/audio/selected/ui/sfx_ui_close/sfx_ui_close_02_3793dd767f.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_ui_close_02_3793dd767f.wav",
+      "sha256": "3793dd767ff701f62530e8e1fa8f8a51dd3773455b477da7fb4963cc6e0be47f",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\interface 界面\\取消－xh20070419.wav",
+      "source_sha256": "3793dd767ff701f62530e8e1fa8f8a51dd3773455b477da7fb4963cc6e0be47f",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_ui_error",
+      "selected": "assets/audio/selected/ui/sfx_ui_error/sfx_ui_error_01_ce7dafdbdc.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_ui_error_01_ce7dafdbdc.wav",
+      "sha256": "ce7dafdbdce82e471506f0fce4346a8d05b93d22ec5839ef2aebddf0fcd7ba3a",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\interface 界面\\错误声－xh20070419.wav",
+      "source_sha256": "ce7dafdbdce82e471506f0fce4346a8d05b93d22ec5839ef2aebddf0fcd7ba3a",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_pickup",
+      "selected": "assets/audio/selected/resource/sfx_pickup/sfx_pickup_01_461dab5d1f.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_pickup_01_461dab5d1f.wav",
+      "sha256": "461dab5d1fe50ee7a7ab14110e9bf69d78e2035fbb0b1f01c714a9a790fc685c",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\interface 界面\\PickUp\\捡起\\捡起药草－xh20070419.wav",
+      "source_sha256": "461dab5d1fe50ee7a7ab14110e9bf69d78e2035fbb0b1f01c714a9a790fc685c",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_gather_plant",
+      "selected": "assets/audio/selected/resource/sfx_gather_plant/sfx_gather_plant_01_461dab5d1f.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_gather_plant_01_461dab5d1f.wav",
+      "sha256": "461dab5d1fe50ee7a7ab14110e9bf69d78e2035fbb0b1f01c714a9a790fc685c",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\interface 界面\\PickUp\\捡起\\捡起药草－xh20070419.wav",
+      "source_sha256": "461dab5d1fe50ee7a7ab14110e9bf69d78e2035fbb0b1f01c714a9a790fc685c",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_equip",
+      "selected": "assets/audio/selected/ui/sfx_equip/sfx_equip_01_4b2069b92e.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_equip_01_4b2069b92e.wav",
+      "sha256": "4b2069b92efa0752f038aac6edfafe3c268f904f71786a7b38a3b034f22fe30f",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\interface 界面\\PickUp\\放好\\把衣服放在背包里－xh20070419.wav",
+      "source_sha256": "4b2069b92efa0752f038aac6edfafe3c268f904f71786a7b38a3b034f22fe30f",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_map_mark",
+      "selected": "assets/audio/selected/ui/sfx_map_mark/sfx_map_mark_01_6aa38c9b9f.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_map_mark_01_6aa38c9b9f.wav",
+      "sha256": "6aa38c9b9f025e95a33ddaec8aa186cc34bf49e3c40a4927ac6cb288b49755ec",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\interface 界面\\PickUp\\放好\\把铃铛放在背包里－xh20070419.wav",
+      "source_sha256": "6aa38c9b9f025e95a33ddaec8aa186cc34bf49e3c40a4927ac6cb288b49755ec",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_fishing_bite",
+      "selected": "assets/audio/selected/resource/sfx_fishing_bite/sfx_fishing_bite_02_a41e4514f9.mp3",
+      "runtime": "res://assets/audio/v3/runtime/sfx_fishing_bite_02_a41e4514f9.mp3",
+      "sha256": "a41e4514f9ffe9daed151c51067b2b31a075fb420d035fe9d1a60336340bd080",
+      "original_source": "D:\\音乐\\JDSherbert - Footstep Foley SFX Pack (FREE)\\JDSherbert - Footstep Foley SFX Pack (FREE)\\Stereo\\mp3\\JDSherbert - Footstep Foley SFX Pack - Footstep (Water - 1).mp3",
+      "source_sha256": "a41e4514f9ffe9daed151c51067b2b31a075fb420d035fe9d1a60336340bd080",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "sfx_thunder",
+      "selected": "assets/audio/selected/ambience/sfx_thunder/sfx_thunder_01_b5db30599a.wav",
+      "runtime": "res://assets/audio/v3/runtime/sfx_thunder_01_b5db30599a.wav",
+      "sha256": "b5db30599ac47d5567035010477b9664ee94226d31abcd198a21799ee24fa8c8",
+      "original_source": "C:\\Users\\雷\\Downloads\\Y 游戏音效素材库动画动作人声软件开发影视后期音频技能游戏音效库\\游戏动画音效全集\\环境音效\\05雷电\\闪电－mcx20070418mcx20070418.wav",
+      "source_sha256": "b5db30599ac47d5567035010477b9664ee94226d31abcd198a21799ee24fa8c8",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "amb_rain_light_loop",
+      "selected": "assets/audio/selected/ambience/amb_rain_light_loop/amb_rain_light_loop_01_3b36f1e43f.wav",
+      "runtime": "res://assets/audio/v3/runtime/amb_rain_light_loop_01_3b36f1e43f.wav",
+      "sha256": "3b36f1e43f135d6326e0c7788fdbb104ab41f8a802626fb34e6043692b65fa6d",
+      "original_source": "C:\\Users\\雷\\Downloads\\游视影视音效资料包\\上古卷轴5 天际\\sound\\fx\\amb\\weather\\rain\\amb_weather_rain_light_lp.wav",
+      "source_sha256": "3b36f1e43f135d6326e0c7788fdbb104ab41f8a802626fb34e6043692b65fa6d",
+      "processing": "byte-identical copy; playback gain only"
+    },
+    {
+      "event": "amb_rain_storm_loop",
+      "selected": "assets/audio/selected/ambience/amb_rain_storm_loop/amb_rain_storm_loop_01_3ff13bffa6.wav",
+      "runtime": "res://assets/audio/v3/runtime/amb_rain_storm_loop_01_3ff13bffa6.wav",
+      "sha256": "3ff13bffa6d7e1a7275d40378a73ac2e8883a381553895d026f26cf50ac31dd6",
+      "original_source": "C:\\Users\\雷\\Downloads\\游视影视音效资料包\\上古卷轴5 天际\\sound\\fx\\amb\\weather\\rain\\amb_weather_rain_medium_lp.wav",
+      "source_sha256": "3ff13bffa6d7e1a7275d40378a73ac2e8883a381553895d026f26cf50ac31dd6",
+      "processing": "byte-identical copy; playback gain only"
+    }
+  ]
+}

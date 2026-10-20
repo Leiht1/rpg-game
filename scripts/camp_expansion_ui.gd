@@ -22,7 +22,7 @@ func configure(items: Node) -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);mouse_filter=MOUSE_FILTER_STOP;z_index=15
 	add_child(panel);panel.size=Vector2(600,520);panel.add_theme_stylebox_override("panel",preload("res://scripts/item_ui_style.gd").frame(18))
 	title.position=Vector2(28,20);title.add_theme_font_size_override("font_size",23);panel.add_child(title)
-	close.text="关闭";close.position=Vector2(500,20);close.size=Vector2(72,36);close.pressed.connect(close_panel);panel.add_child(close)
+	close.text="关闭";close.set_meta("audio_window_close",true);close.position=Vector2(500,20);close.size=Vector2(72,36);close.pressed.connect(close_panel);panel.add_child(close)
 	status.position=Vector2(28,65);status.size=Vector2(540,48);status.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;panel.add_child(status)
 	progress.position=Vector2(28,118);progress.size=Vector2(544,16);progress.max_value=1;progress.show_percentage=false;panel.add_child(progress);preload("res://scripts/item_ui_style.gd").progress_style(progress)
 	scroll.position=Vector2(28,148);scroll.size=Vector2(544,342);panel.add_child(scroll)

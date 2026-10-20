@@ -1,0 +1,49 @@
+{
+  "checks": [
+    {
+      "name": "found legal distant player position for cache test",
+      "pass": true
+    },
+    {
+      "name": "real player position updates preheat only new local tiles",
+      "pass": true
+    },
+    {
+      "name": "new explored region retains cached old terrain",
+      "pass": true
+    },
+    {
+      "name": "actual player positions reveal independent permanent regions",
+      "pass": true
+    },
+    {
+      "name": "fog mask synchronised before first visible callback",
+      "pass": true
+    },
+    {
+      "name": "fog view matches newly opened terrain before rendering",
+      "pass": true
+    },
+    {
+      "name": "new local map opens from background cache",
+      "pass": true
+    },
+    {
+      "name": "returning to earlier explored location reuses its terrain",
+      "pass": true
+    },
+    {
+      "name": "incremental preheating stays within memory bound",
+      "pass": true
+    }
+  ],
+  "failed": 0,
+  "stats": {
+    "background_frames": 614,
+    "background_max_ms": 50.145,
+    "background_p95_ms": 16.723,
+    "cache_tiles": 18,
+    "hidden_max_build_ms": 1.405,
+    "new_tiles": 9
+  }
+}

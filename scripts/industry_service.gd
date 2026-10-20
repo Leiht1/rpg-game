@@ -156,6 +156,8 @@ func act(id: String, action: String, index: int=0, key: String="", count: int=1,
 		if not service.save_state():reason="保存失败，操作已回滚"
 	if not reason.is_empty():service.builds.states[id]=old;service.inventory.slots=slots
 	else:
+		if action=="ignite" and not bool(old.machine.enabled) and bool(m.enabled):
+			AudioFX.play_sfx("sfx_fire_ignite",Vector2(row.x,row.y))
 		if action=="toggle" and bool(old.machine.enabled)!=bool(m.enabled):
 			AudioFX.play_sfx("sfx_lantern_on" if m.enabled else "sfx_lantern_off",Vector2(row.x,row.y))
 		service.inventory.changed.emit()

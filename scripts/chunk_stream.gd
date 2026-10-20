@@ -265,6 +265,7 @@ func chop_tree(tree: Node2D) -> void:
 	if items: items.body.spend_labor("chop")
 	tree_hits[id]=int(tree_hits.get(id,0))+1
 	tree.hit()
+	AudioFX.play_sfx("sfx_chop_hit",tree.position)
 	if items:
 		var held: Dictionary=items.inventory.equipment.get("main_hand",{})
 		items.inventory.wear_held(str(held.get("instance_id","")),"chop")
@@ -278,7 +279,7 @@ func chop_tree(tree: Node2D) -> void:
 	call_deferred("refresh_grounding",tree.position)
 	tree.remove_from_group("trees")
 	tree.fade_out()
-	if items: items.save_state()
+	if items and items.save_state():AudioFX.play_sfx("sfx_tree_fall",tree.position)
 
 func _refresh_canopy(_alpha:float,coord:Vector2i)->void:
 	if loaded.has(coord):loaded[coord].canopy.queue_redraw()

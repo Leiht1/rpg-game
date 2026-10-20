@@ -1,0 +1,21 @@
+{
+  "adapter": "NVIDIA GeForce RTX 5060",
+  "cache_tiles": 20,
+  "cells": 1024,
+  "final_static_mib": 132.583780288696,
+  "local_map_ready_ms": 2194.843,
+  "local_map_tiles": 16,
+  "map_first_frame_ms": 21.561,
+  "map_max_ms": 24.305,
+  "map_p50_ms": 16.673,
+  "map_p95_ms": 23.01,
+  "max_tile_frame_ms": 2.031,
+  "ready_static_mib": 118.346658706665,
+  "startup_ms": 6910.277,
+  "video_mib": 115.328165054321,
+  "viewport": "(1280, 720)",
+  "world_max_ms": 18.592,
+  "world_memory_delta_mib": 86.8128223419189,
+  "world_p50_ms": 16.662,
+  "world_p95_ms": 16.776
+}

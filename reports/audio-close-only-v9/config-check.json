@@ -1,0 +1,28 @@
+{
+  "before": {
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_ui_close_01_150042880a.wav",
+      "res://assets/audio/v3/runtime/sfx_ui_close_02_3793dd767f.wav"
+    ],
+    "volume_db": -2.96,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_ui_close_01_150042880a.wav": 2.04,
+      "res://assets/audio/v3/runtime/sfx_ui_close_02_3793dd767f.wav": -2.05
+    }
+  },
+  "after": {
+    "files": [
+      "res://assets/audio/v3/runtime/sfx_ui_close_02_3793dd767f.wav"
+    ],
+    "volume_db": -2.96,
+    "cooldown": 0.1,
+    "enabled": true,
+    "file_gain_db": {
+      "res://assets/audio/v3/runtime/sfx_ui_close_02_3793dd767f.wav": -2.05
+    }
+  },
+  "removed_click_identical_variant": true,
+  "retained_gain_unchanged": true
+}

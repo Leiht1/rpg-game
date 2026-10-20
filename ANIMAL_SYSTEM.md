@@ -1,5 +1,9 @@
 # 动物生态与养殖系统 V1
 
+## 2026-10-20 · 野生数量翻倍（当前）
+
+初始全图12只（通常鸡6、羊6），每7游戏日新增2只（鸡羊各1）；位置不足时沿原有限尝试宁缺勿滥，不清场。单位时间、生态/净空/离开/驯养/繁殖及450范围8只繁殖上限不变，权威配置仍为 `data/animals.json`。已有世界通过 `spawning.population_revision=2` 一次补充相较旧初始批新增的6只；旧身份、已驯养动物、幼崽和下次刷新时间保留，不按当前可见数量重复补满。迁移随原世界原子快照保存，重复加载不重做。下方初始6只、每次1只的描述属于被覆盖历史。验证见 [本轮报告](reports/map-cache-population-v4/REPORT.md)。
+
 美术专用入口：[ANIMAL_ART_STYLE.md](ANIMAL_ART_STYLE.md)。2026-10-19用户确认鸡羊重绘本批，正式assets/animals/v2已采用（报告reports/animals-art-formal-v2/REPORT.md），保持侧向朝右/左右镜像并协调正式场景轻斜俯视，不增加正背视；玩法与以下数值不变。
 
 2026-10-19。本轮仅鸡、羊，侧视，基于当前正式工程。实现 `scripts/animals.gd` / `animal_actor.gd`，唯一数值来源为 `data/animals.json`；验证边界见 [报告](reports/animals-v1/REPORT.md)。

@@ -13,7 +13,7 @@ func candidates(source: WildGenerator) -> Array[Dictionary]:
 			var angle := float(step)*TAU/32.0
 			var outward := Vector2.from_angle(angle)
 			var previous_water := false
-			for radius in range(80,2200,8):
+			for radius in range(80,3300 if generator.map_cells>1024 else 2200,8):
 				var point := center+outward*float(radius)
 				var is_water := generator.sample(point).z>.56
 				if previous_water and not is_water:

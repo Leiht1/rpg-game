@@ -54,6 +54,8 @@ var writable := true
 var fishing_population := preload("res://scripts/fishing_population.gd").new()
 var restored_player_position := false
 var save_path := ""
+var exploration=preload("res://scripts/world_exploration.gd").new()
+var saved_exploration_revision := -1
 var rules: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/natural_resources.json"))
 var raw_cells: Dictionary = {}
 var chunk_cache: Dictionary = {}
@@ -74,6 +76,10 @@ func notify_build_cost(materials: Dictionary) -> void:
 
 func configure(owner_world: Node, art_preview: bool) -> void:
 	world = owner_world
+	var identity: String=world.world_id if not world.world_id.is_empty() else "%s:%d:%d"%[world.Gen.VERSION,world.world_seed,world.map_cells]
+	if world.get("record") is Dictionary: identity=str(world.record.get("world_id",identity))
+	exploration.configure(identity,world.generator.extent)
+	if world.get_meta("character_preview",false):preload("res://scripts/character_catalog.gd").enable_candidate(database)
 	add_child(merchant);merchant.configure(self)
 	fishing_population.configure(world.generator)
 	camps.service=self
@@ -96,6 +102,7 @@ func configure(owner_world: Node, art_preview: bool) -> void:
 	# Once during the loading screen; immutable navigation is shared by workers.
 	prepare_navigation()
 	save_path = "user://items-%s-%d-%d-%s%s.json" % [world.Gen.VERSION,world.world_seed,world.map_cells,RESOURCE_VERSION,"-preview" if preview else ""]
+	if world.has_meta("character_save_path"):save_path=str(world.get_meta("character_save_path"))
 	var existing_world_items: bool=world.persistent_world and FileAccess.file_exists(save_path)
 	if not existing_world_items:
 		for previous in [ECOLOGY_PREVIOUS_VERSION,PREVIOUS_RESOURCE_VERSION,LEGACY_RESOURCE_VERSION]:
@@ -112,6 +119,7 @@ func configure(owner_world: Node, art_preview: bool) -> void:
 	world.stream.items = self
 	world.player.body=body
 	inventory.body=body
+	if world.get_meta("character_preview",false):inventory.commit_equipment=save_state
 	body.changed.connect(func(): dirty=true)
 	inventory.changed.connect(func(): dirty = true; call_deferred("save_state"))
 	inventory.used.connect(func(id,effect):
@@ -290,6 +298,8 @@ func texture(id: String, kind: String) -> Texture2D:
 	return null
 
 func _process(delta: float) -> void:
+	exploration.reveal(world.player.position)
+	if exploration.revision!=saved_exploration_revision:dirty=true
 	advance_craft(delta)
 	clock += delta
 	if clock > 15:
@@ -297,7 +307,14 @@ func _process(delta: float) -> void:
 		if dirty: save_state()
 
 func snapshot() -> Dictionary:
-	return {"merchant":merchant.serialize(),"fishing":fishing_population.serialize(),"player_position":{"x":world.player.position.x,"y":world.player.position.y},"animals":animals.serialize(),"ecology_layout_version":2,"planting_cycle_version":2,"body_environment":world.environment_view.body_environment_snapshot(),"buildings":builds.serialize(),"campfires":camps.serialize(),"body":body.serialize(),"lantern_remaining":lantern_remaining,"version":1,"harvest_version":HARVEST_VERSION,"props_version":world.Gen.PROP_VERSION,"resource_hits":resource_hits,"resource_version":RESOURCE_VERSION,"seed":world.world_seed,"map_cells":world.map_cells,"generator":world.Gen.VERSION,"slots":inventory.slots,"selected":inventory.selected,"hotbar_equipment":inventory.hotbar_equipment,"equipment":inventory.equipment,"ore_nodes":ore_nodes,"equipment_quarantine":inventory.quarantined_equipment,"consumed":consumed,"loose":loose,"harvested":world.stream.harvested,"tree_hits":world.stream.tree_hits}
+	exploration.reveal(world.player.position,true)
+	var result: Dictionary = {"merchant":merchant.serialize(),"fishing":fishing_population.serialize(),"player_position":{"x":world.player.position.x,"y":world.player.position.y},"animals":animals.serialize(),"ecology_layout_version":2,"planting_cycle_version":2,"body_environment":world.environment_view.body_environment_snapshot(),"buildings":builds.serialize(),"campfires":camps.serialize(),"body":body.serialize(),"lantern_remaining":lantern_remaining,"version":1,"harvest_version":HARVEST_VERSION,"props_version":world.Gen.PROP_VERSION,"resource_hits":resource_hits,"resource_version":RESOURCE_VERSION,"seed":world.world_seed,"map_cells":world.map_cells,"generator":world.Gen.VERSION,"slots":inventory.slots,"selected":inventory.selected,"hotbar_equipment":inventory.hotbar_equipment,"equipment":inventory.equipment,"ore_nodes":ore_nodes,"equipment_quarantine":inventory.quarantined_equipment,"consumed":consumed,"loose":loose,"harvested":world.stream.harvested,"tree_hits":world.stream.tree_hits}
+
+	result["world_generation"]=world.Gen.layout_configuration(world.map_cells)
+	result["world_id"]=exploration.world_id
+	result["world_exploration"]=exploration.serialize()
+	if world.has_method("character_snapshot"): result.merge(world.character_snapshot())
+	return result
 
 func organize_bag() -> String:
 	if not writable: return "存档受保护，不能整理"
@@ -322,9 +339,11 @@ func save_state() -> bool:
 	var file := FileAccess.open(temporary,FileAccess.WRITE)
 	if file == null: notice.emit("物品存档未能写入"); return false
 	file.store_string(JSON.stringify(snapshot()))
+	var write_error := file.get_error()
 	file.close()
+	if write_error!=OK:notice.emit("物品存档写入失败，原存档已保留");return false
 	var error := DirAccess.rename_absolute(ProjectSettings.globalize_path(temporary),ProjectSettings.globalize_path(save_path))
-	if error == OK: dirty = false
+	if error == OK: dirty = false;saved_exploration_revision=exploration.revision
 	else: notice.emit("物品存档保存失败，暂存文件已保留")
 	return error == OK
 
@@ -335,6 +354,9 @@ func load_state(source_path: String = "", migrate: bool = false) -> void:
 	if not value is Dictionary or int(value.get("version",0)) != 1 or value.get("generator","") != world.Gen.VERSION or int(value.get("seed",-1)) != world.world_seed or int(value.get("map_cells",0)) != world.map_cells or not str(value.get("resource_version","")) in ([ECOLOGY_PREVIOUS_VERSION,PREVIOUS_RESOURCE_VERSION,LEGACY_RESOURCE_VERSION] if migrate else [RESOURCE_VERSION]):
 		writable = false
 		return
+	if value.has("world_generation") and not world.Gen.valid_configuration(value.world_generation,world.map_cells):writable=false;return
+	if value.has("world_exploration") and not exploration.valid(value.world_exploration): writable=false;return
+	if value.has("world_id") and value.world_id!=exploration.world_id: writable=false;return
 	if value.has("player_position"):
 		var point=value.player_position
 		if not point is Dictionary: writable=false;return
@@ -404,8 +426,11 @@ func load_state(source_path: String = "", migrate: bool = false) -> void:
 				plot.growth_minutes=float(progress)/previous_minutes[plot.crop]*float(planting.rules.crops[plot.crop].minutes)
 	if value.has("buildings") and not builds.validate(value.buildings,seen_instances): writable=false;return
 	if not sleep.valid_pair(staged_body,value.get("buildings",{"objects":{}}).objects): writable=false;return
+	if value.has("world_exploration"): exploration.restore(value.world_exploration)
 	if value.has("merchant"):merchant.restore(value.merchant)
-	if value.has("fishing"): fishing_population.restore(value.fishing)
+	if value.has("fishing"):
+		fishing_population.restore(value.fishing)
+		if int(value.fishing.get("population_revision",1))<2:dirty=true
 	if value.has("animals"): animals.restore(value.animals)
 	builds.states=value.get("buildings",{"objects":{}}).objects.duplicate(true)
 	builds.abandoned_version=int(value.get("buildings",{}).get("abandoned_version",0))
@@ -724,6 +749,7 @@ func pickup(drop: Node2D) -> bool:
 	inventory.slots=staged.slots;dirty=true
 	if not save_state():
 		inventory.slots=before_slots;loose=before_loose;consumed=before_consumed;notice.emit("保存失败，拾取已回滚");return false
+	AudioFX.play_sfx("sfx_gather_plant" if drop.get_meta("natural",false) and rules.resources.get(item_id,{}).get("mode","")=="harvest" else "sfx_pickup",drop.position)
 	if left>0: drop.set_meta("count",left)
 	else:
 		drop.set_meta("collected",true);world.stream.drops.erase(drop);drop.queue_free()
@@ -842,7 +868,9 @@ func harvest_hit(target: Node2D, action: String) -> bool:
 			serial+=1
 		consumed[id]=true
 	target.feedback(world.player.position,completed)
-	dirty=true;save_state()
+	dirty=true
+	var saved := save_state()
+	if saved and completed and action=="mine":AudioFX.play_sfx("sfx_ore_break",target.position)
 	if completed: notice.emit("已完成 · 按E拾取掉落物")
 	return true
 

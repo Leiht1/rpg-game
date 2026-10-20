@@ -75,3 +75,35 @@ dist/
 /prototypes/.native_rig_release_check/
 /prototypes/biome-v02/save-check.json
 /reports/chest-volume-render-v2/save-observation.json
+
+# Character candidate test saves (never player data).
+/reports/character-creation-v1/*save*.json
+/reports/character-creation-v1/blocker
+/reports/character-creation-v1/*.tmp
+
+# Isolated hair/UI validation snapshots.
+/reports/character-hair-v2/*save*.json
+/reports/character-hair-v2/*.tmp
+
+/reports/ponytail-side-v3/*save*.json
+
+# Independent audio workbench build outputs and local progress.
+/tools/audio_workbench/dist/
+/tools/audio_workbench/build/
+/tools/audio_workbench/*.spec
+/tools/audio_workbench/__pycache__/
+
+
+# World/map V3 uses only isolated disposable snapshots.
+/reports/world-map-v3/*save.json
+/reports/world-map-v3/*.tmp
+
+/reports/world-map-v3/preview-session.json
+
+# Isolated cache/population follow-up snapshots.
+/reports/map-cache-population-v4/*save.json
+/reports/map-cache-population-v4/*.tmp
+
+# Machine-local inventory of player save file fingerprints (no runtime dependency).
+/reports/world-map-v3/player-before.json
+/reports/map-cache-population-v4/player-before.json

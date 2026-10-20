@@ -1,0 +1,213 @@
+{
+  "checks": [
+    {
+      "name": "old topology/water/ecology unchanged seed 81273",
+      "pass": true
+    },
+    {
+      "name": "old props unchanged 81273",
+      "pass": true
+    },
+    {
+      "name": "1536 extent 81273",
+      "pass": true
+    },
+    {
+      "name": "continuous room count 81273",
+      "pass": true
+    },
+    {
+      "name": "worker same world 81273",
+      "pass": true
+    },
+    {
+      "name": "large continuous ecologies 81273",
+      "pass": true
+    },
+    {
+      "name": "generator spawn dry 81273",
+      "pass": true
+    },
+    {
+      "name": "bounded fish populations 81273",
+      "pass": true
+    },
+    {
+      "name": "old topology/water/ecology unchanged seed 271828",
+      "pass": true
+    },
+    {
+      "name": "old props unchanged 271828",
+      "pass": true
+    },
+    {
+      "name": "1536 extent 271828",
+      "pass": true
+    },
+    {
+      "name": "continuous room count 271828",
+      "pass": true
+    },
+    {
+      "name": "worker same world 271828",
+      "pass": true
+    },
+    {
+      "name": "large continuous ecologies 271828",
+      "pass": true
+    },
+    {
+      "name": "generator spawn dry 271828",
+      "pass": true
+    },
+    {
+      "name": "bounded fish populations 271828",
+      "pass": true
+    },
+    {
+      "name": "old topology/water/ecology unchanged seed 902106",
+      "pass": true
+    },
+    {
+      "name": "old props unchanged 902106",
+      "pass": true
+    },
+    {
+      "name": "1536 extent 902106",
+      "pass": true
+    },
+    {
+      "name": "continuous room count 902106",
+      "pass": true
+    },
+    {
+      "name": "worker same world 902106",
+      "pass": true
+    },
+    {
+      "name": "large continuous ecologies 902106",
+      "pass": true
+    },
+    {
+      "name": "generator spawn dry 902106",
+      "pass": true
+    },
+    {
+      "name": "bounded fish populations 902106",
+      "pass": true
+    },
+    {
+      "name": "bounded 1536 bitset 72KiB",
+      "pass": true
+    },
+    {
+      "name": "spawn revealed",
+      "pass": true
+    },
+    {
+      "name": "unknown remains concealed",
+      "pass": true
+    },
+    {
+      "name": "stationary explorer no growth",
+      "pass": true
+    },
+    {
+      "name": "world shared union",
+      "pass": true
+    },
+    {
+      "name": "union idempotent",
+      "pass": true
+    },
+    {
+      "name": "teleport reveals no intervening corridor",
+      "pass": true
+    },
+    {
+      "name": "exact exploration roundtrip",
+      "pass": true
+    },
+    {
+      "name": "cross-world merge rejected",
+      "pass": true
+    },
+    {
+      "name": "truncated bitset preserves memory",
+      "pass": true
+    },
+    {
+      "name": "checksum corruption rejected",
+      "pass": true
+    }
+  ],
+  "failed": 0,
+  "measurements": [
+    {
+      "biome_samples": {
+        "岩石区": 648,
+        "森林": 827,
+        "水岸": 49,
+        "泥地": 1314,
+        "海洋": 20860,
+        "湖泊": 68,
+        "草原": 1834
+      },
+      "fish": 28,
+      "fish_build_ms": 753.83,
+      "fish_candidates": 429,
+      "lakes": 6,
+      "new_generation_ms": 2747.874,
+      "old_generation_ms": 1954.145,
+      "rivers": 5,
+      "rooms": 18,
+      "sampled_land_fraction": 0.18515625,
+      "seed": 81273,
+      "static_memory_mib": 39.2484731674194
+    },
+    {
+      "biome_samples": {
+        "岩石区": 727,
+        "森林": 1852,
+        "水岸": 42,
+        "泥地": 1278,
+        "海洋": 20366,
+        "湖泊": 76,
+        "草原": 1259
+      },
+      "fish": 28,
+      "fish_build_ms": 734.09,
+      "fish_candidates": 445,
+      "lakes": 6,
+      "new_generation_ms": 3396.883,
+      "old_generation_ms": 2644.615,
+      "rivers": 6,
+      "rooms": 23,
+      "sampled_land_fraction": 0.204453125,
+      "seed": 271828,
+      "static_memory_mib": 39.3412199020386
+    },
+    {
+      "biome_samples": {
+        "岩石区": 564,
+        "森林": 852,
+        "水岸": 41,
+        "泥地": 1669,
+        "海洋": 21529,
+        "湖泊": 64,
+        "草原": 881
+      },
+      "fish": 28,
+      "fish_build_ms": 628.247,
+      "fish_candidates": 426,
+      "lakes": 6,
+      "new_generation_ms": 2681.767,
+      "old_generation_ms": 1879.694,
+      "rivers": 4,
+      "rooms": 18,
+      "sampled_land_fraction": 0.1590234375,
+      "seed": 902106,
+      "static_memory_mib": 39.2430486679077
+    }
+  ]
+}

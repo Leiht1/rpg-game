@@ -1,0 +1,96 @@
+{
+  "disabled_legacy_events": [
+    "sfx_build_stone",
+    "sfx_build_wood",
+    "sfx_chest_close",
+    "sfx_chest_open",
+    "sfx_fridge_close",
+    "sfx_fridge_open",
+    "sfx_lantern_off",
+    "sfx_lantern_on"
+  ],
+  "active_current_events": 33,
+  "all_active_paths_current": true,
+  "before": {
+    "sfx_build_stone": {
+      "files": [
+        "res://assets/audio/v1/runtime/sfx_build_stone_01.wav"
+      ],
+      "volume_db": -6.92,
+      "cooldown": 0.1,
+      "file_gain_db": {
+        "res://assets/audio/v1/runtime/sfx_build_stone_01.wav": 0.0
+      }
+    },
+    "sfx_build_wood": {
+      "files": [
+        "res://assets/audio/v1/runtime/sfx_build_wood_01.wav"
+      ],
+      "volume_db": -2.5,
+      "cooldown": 0.1,
+      "file_gain_db": {
+        "res://assets/audio/v1/runtime/sfx_build_wood_01.wav": 0.0
+      }
+    },
+    "sfx_chest_close": {
+      "files": [
+        "res://assets/audio/v1/runtime/sfx_chest_close_01.wav"
+      ],
+      "volume_db": -8.11,
+      "cooldown": 0.1,
+      "file_gain_db": {
+        "res://assets/audio/v1/runtime/sfx_chest_close_01.wav": 0.0
+      }
+    },
+    "sfx_chest_open": {
+      "files": [
+        "res://assets/audio/v1/runtime/sfx_chest_open_01.wav"
+      ],
+      "volume_db": -7.19,
+      "cooldown": 0.1,
+      "file_gain_db": {
+        "res://assets/audio/v1/runtime/sfx_chest_open_01.wav": 0.0
+      }
+    },
+    "sfx_fridge_close": {
+      "files": [
+        "res://assets/audio/v1/runtime/sfx_fridge_close_01.wav"
+      ],
+      "volume_db": -6.13,
+      "cooldown": 0.1,
+      "file_gain_db": {
+        "res://assets/audio/v1/runtime/sfx_fridge_close_01.wav": 0.0
+      }
+    },
+    "sfx_fridge_open": {
+      "files": [
+        "res://assets/audio/v1/runtime/sfx_fridge_open_01.wav"
+      ],
+      "volume_db": -6.13,
+      "cooldown": 0.1,
+      "file_gain_db": {
+        "res://assets/audio/v1/runtime/sfx_fridge_open_01.wav": 0.0
+      }
+    },
+    "sfx_lantern_off": {
+      "files": [
+        "res://assets/audio/v1/runtime/sfx_lantern_off_01.wav"
+      ],
+      "volume_db": -11.82,
+      "cooldown": 0.1,
+      "file_gain_db": {
+        "res://assets/audio/v1/runtime/sfx_lantern_off_01.wav": 0.0
+      }
+    },
+    "sfx_lantern_on": {
+      "files": [
+        "res://assets/audio/v1/runtime/sfx_lantern_on_01.wav"
+      ],
+      "volume_db": -5.78,
+      "cooldown": 0.1,
+      "file_gain_db": {
+        "res://assets/audio/v1/runtime/sfx_lantern_on_01.wav": 0.0
+      }
+    }
+  }
+}
