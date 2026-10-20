@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "7a928529594cfb44bfb39e6ea81ca405bc74b6aed37a9b2c6f23290df441419f",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-16T04:49:59.675Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-16T04:49:59.675Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Preview-only axe tree and fallen fruit for two reusable puppet animations",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a142ce-8c0d-7dd3-aa94-a502f9863598",
+    "source": "CODEX_HOME/generated_images/01a142ce-8c0d-7dd3-aa94-a502f9863598/exec-3025581f-3278-4618-89cd-be5094ce29f2.png",
+    "sourceSha256": "5b95958defd7f4c66ffc89469d962d35da37a9072c0c058e7ce54a543523f874",
+    "sourceMtime": "2026-10-16T04:49:06Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "5b95958defd7f4c66ffc89469d962d35da37a9072c0c058e7ce54a543523f874",
+    "bytes": 1087191,
+    "format": "PNG",
+    "size": [
+      1536,
+      1024
+    ]
+  }
+}

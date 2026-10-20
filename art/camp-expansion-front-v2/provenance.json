@@ -1,0 +1,165 @@
+{
+  "status": "pending_user",
+  "approval": null,
+  "user_request": "视角不对，建筑物应该都是正视视角，你改好后，把现在所有的建筑物都放在地图上排列好，我来对比",
+  "route": "generate2dsprite -> built-in image_gen edit (host_image)",
+  "model": "not exposed by host",
+  "cost": "not exposed by host; no API key used",
+  "prompts": [
+    "buildings-prompt.txt",
+    "refrigerator-prompt.txt"
+  ],
+  "references": [
+    {
+      "path": "art/camp-expansion-v2/revised/generated.png",
+      "sha256": "489f1f6144a4caf0a2265537292f86397d8e1916adf659139ff0e3edcb968c0a"
+    },
+    {
+      "path": "assets/industry/v1/refrigerator.png",
+      "sha256": "b1278a1b4d167ff2f6c7966e4066727b5257ec111405e97ea7081098b7ccf66e"
+    }
+  ],
+  "sources": [
+    {
+      "path": "generated.png",
+      "sha256": "75f553c9cb3a0ee58d265815764fa2111b1df3c97d74b15618855c7218da7ab6"
+    },
+    {
+      "path": "refrigerator-generated.png",
+      "sha256": "6efc15701b84291f5d8c99d6083bc4f03b5a0e40c1ce1bfac7cca3c2fb7fab18"
+    }
+  ],
+  "processing": "Four building source ownership row boundary y=470 (blank gap y454..480), centered unchanged in 896x768, soft chroma key; refrigerator native alpha; Lanczos 512 canvas, feet anchor. See processing.json and five processing metadata files.",
+  "qa_history": [
+    "First equal 512-high fuel crop included next-row chimney and failed source-cell-edge QC; not published. Corrected ownership at blank y470, no painted pixels cut.",
+    "All five final single-image strict QC passed; front-camera visual inspection at source and game size; subjective style pending user."
+  ],
+  "records": [
+    {
+      "name": "precision_repair_bench",
+      "runtime": "prototypes/camp-expansion-front-v2/final/precision_repair_bench.png",
+      "sha256": "d83aed5ac57fdf696cece401e06c548ee4450940f44516b64723bbf282d6f6d2",
+      "processing_metadata": "art/camp-expansion-front-v2/processed-padded/precision_repair_bench/pipeline-meta.json",
+      "qa": {
+        "key": [
+          255.0,
+          0.0,
+          255.0
+        ],
+        "opaque_key_px": 0,
+        "outer_ring_spill_fraction": 0.0,
+        "semitransparent_fraction": 0.027466092657171082,
+        "enclosed_key_pockets": 0,
+        "key_hued_px": 0,
+        "visible_px": 152843,
+        "outer_ring_px": 1863,
+        "thresholds": {
+          "key_tolerance": 48.0,
+          "spill_threshold": 20.0,
+          "min_pocket_area": 16,
+          "opaque_alpha": 128,
+          "spill_hue_balance": 0.5
+        },
+        "method": "forge_matte.matte_qa v1: straight-colour key distance and dominance on the keyed image; two-channel keys count spill only where the key channels are balanced"
+      },
+      "pending_user": true
+    },
+    {
+      "name": "fuel_supply_box",
+      "runtime": "prototypes/camp-expansion-front-v2/final/fuel_supply_box.png",
+      "sha256": "4154b1e4c643a4246c2fadc5d133fd813d20dd92e3fa1feacaac55f8f3c9f858",
+      "processing_metadata": "art/camp-expansion-front-v2/processed-padded/fuel_supply_box/pipeline-meta.json",
+      "qa": {
+        "key": [
+          255.0,
+          0.0,
+          255.0
+        ],
+        "opaque_key_px": 0,
+        "outer_ring_spill_fraction": 0.0,
+        "semitransparent_fraction": 0.0272409632672418,
+        "enclosed_key_pockets": 0,
+        "key_hued_px": 0,
+        "visible_px": 143387,
+        "outer_ring_px": 1874,
+        "thresholds": {
+          "key_tolerance": 48.0,
+          "spill_threshold": 20.0,
+          "min_pocket_area": 16,
+          "opaque_alpha": 128,
+          "spill_hue_balance": 0.5
+        },
+        "method": "forge_matte.matte_qa v1: straight-colour key distance and dominance on the keyed image; two-channel keys count spill only where the key channels are balanced"
+      },
+      "pending_user": true
+    },
+    {
+      "name": "compost_bin",
+      "runtime": "prototypes/camp-expansion-front-v2/final/compost_bin.png",
+      "sha256": "048f43b4524c33b6be084e27da5df0697077125a5c1b96cdd2386f03561737a9",
+      "processing_metadata": "art/camp-expansion-front-v2/processed-padded/compost_bin/pipeline-meta.json",
+      "qa": {
+        "key": [
+          255.0,
+          0.0,
+          255.0
+        ],
+        "opaque_key_px": 0,
+        "outer_ring_spill_fraction": 0.0,
+        "semitransparent_fraction": 0.024683204688983367,
+        "enclosed_key_pockets": 0,
+        "key_hued_px": 0,
+        "visible_px": 96908,
+        "outer_ring_px": 1197,
+        "thresholds": {
+          "key_tolerance": 48.0,
+          "spill_threshold": 20.0,
+          "min_pocket_area": 16,
+          "opaque_alpha": 128,
+          "spill_hue_balance": 0.5
+        },
+        "method": "forge_matte.matte_qa v1: straight-colour key distance and dominance on the keyed image; two-channel keys count spill only where the key channels are balanced"
+      },
+      "pending_user": true
+    },
+    {
+      "name": "advanced_smokehouse",
+      "runtime": "prototypes/camp-expansion-front-v2/final/advanced_smokehouse.png",
+      "sha256": "0a37e8426b6a51a699a513731f0c6d098a6c4b84a318e0aacc50ab0e33e7469f",
+      "processing_metadata": "art/camp-expansion-front-v2/processed-padded/advanced_smokehouse/pipeline-meta.json",
+      "qa": {
+        "key": [
+          255.0,
+          0.0,
+          255.0
+        ],
+        "opaque_key_px": 0,
+        "outer_ring_spill_fraction": 0.0,
+        "semitransparent_fraction": 0.020635382532673743,
+        "enclosed_key_pockets": 0,
+        "key_hued_px": 0,
+        "visible_px": 158078,
+        "outer_ring_px": 1581,
+        "thresholds": {
+          "key_tolerance": 48.0,
+          "spill_threshold": 20.0,
+          "min_pocket_area": 16,
+          "opaque_alpha": 128,
+          "spill_hue_balance": 0.5
+        },
+        "method": "forge_matte.matte_qa v1: straight-colour key distance and dominance on the keyed image; two-channel keys count spill only where the key channels are balanced"
+      },
+      "pending_user": true
+    },
+    {
+      "name": "refrigerator",
+      "runtime": "prototypes/camp-expansion-front-v2/final/refrigerator.png",
+      "sha256": "64759f19f336702bc74dad603424ccd18fbe5b8852f402b68f257941508ea405",
+      "processing_metadata": "art/camp-expansion-front-v2/processed-padded/refrigerator/pipeline-meta.json",
+      "qa": {},
+      "pending_user": true
+    }
+  ],
+  "official_assets_replaced": false,
+  "scope": "Only isolated preview; existing formal refrigerator retained byte-for-byte. Old candidate generation source retained."
+}

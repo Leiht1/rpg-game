@@ -64,10 +64,12 @@ func unequip(index: int) -> bool:
 func instance(id: String) -> Dictionary:
 	var value := {"item_id":id,"count":1,"instance_id":str(ResourceUID.create_id()),"state":{},"durability":database.item(id).get("durability")}
 	if database.item(id).get("use_action","")=="light":value.lamp_id=value.instance_id;value.fuel=float(database.item(id).get("lamp_lifetime",1800.0))
+	if id=="solar_flashlight":value.state=preload("res://scripts/solar_flashlight.gd").fresh()
 	return value
 
 func normalize_durability(value: Dictionary) -> bool:
 	var definition := database.item(str(value.get("item_id","")))
+	if value.get("item_id")=="solar_flashlight" and not preload("res://scripts/solar_flashlight.gd").valid(value.get("state")):return false
 	if definition.get("use_action","")=="light" and definition.get("equippable",false):
 		var fuel = value.get("fuel")
 		if str(value.get("lamp_id","")).is_empty() or not (fuel is int or fuel is float) or not is_finite(float(fuel)) or fuel<0 or fuel>float(definition.get("lamp_lifetime",1800)):return false
@@ -266,7 +268,7 @@ func use_slot(index: int) -> bool:
 	if index<8 and database.item(id).get("equippable",false) and not slots[index].is_empty(): return equip(index)
 	var definition := database.item(id)
 	if not definition.usable: return false
-	if definition.use_action in ["light","place_campfire","place_sleeping_bag"]:
+	if definition.use_action in ["light","solar_light","place_campfire","place_sleeping_bag"]:
 		used.emit(id,{"slot":index})
 		return true
 	if definition.use_action=="unpack":

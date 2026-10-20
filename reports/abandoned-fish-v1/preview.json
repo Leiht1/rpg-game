@@ -1,0 +1,31 @@
+{
+	"camps": [],
+	"checks": [
+		{
+			"name": "preview disables all player save IO",
+			"pass": true
+		},
+		{
+			"name": "preview provides fish and cabbage",
+			"pass": true
+		},
+		{
+			"name": "preview provides hammer and rod",
+			"pass": true
+		},
+		{
+			"name": "preview starts beside generated camp",
+			"pass": true
+		},
+		{
+			"name": "preview save remains no-op",
+			"pass": true
+		},
+		{
+			"name": "all real player save hashes unchanged",
+			"pass": true
+		}
+	],
+	"count": 6,
+	"failed": 0
+}

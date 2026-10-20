@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "b6a9b23ab6027a84101d7dddd55889f4d38604513e5f6d52a7bbf3ba6f2f66e6",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-16T04:43:21.021Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-16T04:43:21.021Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Front single pant tube correction; adopt only top-right component",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a142ce-8c0d-7dd3-aa94-a502f9863598",
+    "source": "CODEX_HOME/generated_images/01a142ce-8c0d-7dd3-aa94-a502f9863598/exec-e06ce739-ea04-4496-8805-a2d0111b0494.png",
+    "sourceSha256": "fd2e1d9e531b0f47bf75e74abacfee96d65b39111e00fbb94b287b1953be87cf",
+    "sourceMtime": "2026-10-16T04:42:32Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "fd2e1d9e531b0f47bf75e74abacfee96d65b39111e00fbb94b287b1953be87cf",
+    "bytes": 1310150,
+    "format": "PNG",
+    "size": [
+      1536,
+      1024
+    ]
+  }
+}

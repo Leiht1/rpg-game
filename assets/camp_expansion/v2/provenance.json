@@ -1,0 +1,64 @@
+{
+  "status": "approved_user",
+  "approval_date": "2026-10-20",
+  "approval_quote": "接入吧，然后做一些改动",
+  "scope": "本批营地扩展V2、正视建筑、既有体量调整、肥料/熏制食物及三种完整鱼形腐烂图；不批准未来素材",
+  "source_records": [
+    "art/camp-expansion-v2/provenance.json",
+    "art/camp-expansion-front-v2/provenance.json",
+    "art/rotten-fish-v1/provenance.json"
+  ],
+  "processing": "批准候选PNG逐字节复制；未重新生成或加工",
+  "files": [
+    {
+      "source": "prototypes/camp-expansion-front-v2/final/precision_repair_bench.png",
+      "runtime": "assets/camp_expansion/v2/precision_repair_bench.png",
+      "sha256": "d83aed5ac57fdf696cece401e06c548ee4450940f44516b64723bbf282d6f6d2"
+    },
+    {
+      "source": "prototypes/camp-expansion-front-v2/final/fuel_supply_box.png",
+      "runtime": "assets/camp_expansion/v2/fuel_supply_box.png",
+      "sha256": "4154b1e4c643a4246c2fadc5d133fd813d20dd92e3fa1feacaac55f8f3c9f858"
+    },
+    {
+      "source": "prototypes/camp-expansion-front-v2/final/compost_bin.png",
+      "runtime": "assets/camp_expansion/v2/compost_bin.png",
+      "sha256": "048f43b4524c33b6be084e27da5df0697077125a5c1b96cdd2386f03561737a9"
+    },
+    {
+      "source": "prototypes/camp-expansion-front-v2/final/advanced_smokehouse.png",
+      "runtime": "assets/camp_expansion/v2/advanced_smokehouse.png",
+      "sha256": "0a37e8426b6a51a699a513731f0c6d098a6c4b84a318e0aacc50ab0e33e7469f"
+    },
+    {
+      "source": "prototypes/camp-expansion-front-v2/final/refrigerator.png",
+      "runtime": "assets/camp_expansion/v2/refrigerator.png",
+      "sha256": "64759f19f336702bc74dad603424ccd18fbe5b8852f402b68f257941508ea405"
+    },
+    {
+      "source": "prototypes/camp-expansion-v2/final/compost_fertilizer.png",
+      "runtime": "assets/camp_expansion/v2/compost_fertilizer.png",
+      "sha256": "4a8818bbb8767755066560bc3be07d570d00d2dbb2ac649ea3fa3693d63befb9"
+    },
+    {
+      "source": "prototypes/camp-expansion-v2/final/smoked_fish.png",
+      "runtime": "assets/camp_expansion/v2/smoked_fish.png",
+      "sha256": "218678509aa6fabcffa9fb301238b53c9a32b4e241ff443c1d4af6e55ffb062a"
+    },
+    {
+      "source": "prototypes/rotten-fish-v1/final/rotten_lake_fish.png",
+      "runtime": "assets/camp_expansion/v2/rotten_lake_fish.png",
+      "sha256": "69b60829e849a3755ee984432ea1a977c87e3c6496ef5d78b6e9621f90655298"
+    },
+    {
+      "source": "prototypes/rotten-fish-v1/final/rotten_roasted_fish.png",
+      "runtime": "assets/camp_expansion/v2/rotten_roasted_fish.png",
+      "sha256": "90529d51652c9763ea832be9c0ec16fb47ace0f53b1f045fede6075162a81c6a"
+    },
+    {
+      "source": "prototypes/rotten-fish-v1/final/rotten_smoked_fish.png",
+      "runtime": "assets/camp_expansion/v2/rotten_smoked_fish.png",
+      "sha256": "d0c0b2718c65a4d54e3c91af2f51858793c4dd6912297105ba098fa0a90c8874"
+    }
+  ]
+}

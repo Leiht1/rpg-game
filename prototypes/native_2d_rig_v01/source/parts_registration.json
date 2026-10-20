@@ -1,0 +1,230 @@
+{
+  "head": {
+    "ownership_box": [
+      50,
+      30,
+      395,
+      330
+    ],
+    "crop_in_box": [
+      31,
+      22,
+      320,
+      281
+    ],
+    "source_size": [
+      293,
+      263
+    ],
+    "operation": "whole newly drawn part; alpha padding; no anatomical cuts"
+  },
+  "base": {
+    "ownership_box": [
+      460,
+      70,
+      675,
+      350
+    ],
+    "crop_in_box": [
+      29,
+      31,
+      183,
+      260
+    ],
+    "source_size": [
+      158,
+      233
+    ],
+    "operation": "whole newly drawn part; alpha padding; no anatomical cuts"
+  },
+  "olive_torso": {
+    "ownership_box": [
+      780,
+      70,
+      1035,
+      350
+    ],
+    "crop_in_box": [
+      27,
+      23,
+      229,
+      263
+    ],
+    "source_size": [
+      206,
+      244
+    ],
+    "operation": "whole newly drawn part; alpha padding; no anatomical cuts"
+  },
+  "teal_torso": {
+    "ownership_box": [
+      1130,
+      65,
+      1365,
+      350
+    ],
+    "crop_in_box": [
+      23,
+      19,
+      203,
+      271
+    ],
+    "source_size": [
+      184,
+      256
+    ],
+    "operation": "whole newly drawn part; alpha padding; no anatomical cuts"
+  },
+  "shorts": {
+    "ownership_box": [
+      65,
+      435,
+      375,
+      665
+    ],
+    "crop_in_box": [
+      25,
+      20,
+      287,
+      212
+    ],
+    "source_size": [
+      266,
+      196
+    ],
+    "operation": "whole newly drawn part; alpha padding; no anatomical cuts"
+  },
+  "arm": {
+    "ownership_box": [
+      490,
+      355,
+      650,
+      710
+    ],
+    "crop_in_box": [
+      27,
+      26,
+      138,
+      330
+    ],
+    "source_size": [
+      115,
+      308
+    ],
+    "operation": "whole newly drawn part; alpha padding; no anatomical cuts"
+  },
+  "leg": {
+    "ownership_box": [
+      820,
+      350,
+      975,
+      700
+    ],
+    "crop_in_box": [
+      25,
+      27,
+      129,
+      323
+    ],
+    "source_size": [
+      108,
+      300
+    ],
+    "operation": "whole newly drawn part; alpha padding; no anatomical cuts"
+  },
+  "boot": {
+    "ownership_box": [
+      1125,
+      460,
+      1410,
+      660
+    ],
+    "crop_in_box": [
+      25,
+      26,
+      263,
+      190
+    ],
+    "source_size": [
+      242,
+      168
+    ],
+    "operation": "whole newly drawn part; alpha padding; no anatomical cuts"
+  },
+  "olive_sleeve": {
+    "ownership_box": [
+      115,
+      720,
+      305,
+      1020
+    ],
+    "crop_in_box": [
+      26,
+      28,
+      168,
+      268
+    ],
+    "source_size": [
+      146,
+      244
+    ],
+    "operation": "whole newly drawn part; alpha padding; no anatomical cuts"
+  },
+  "teal_sleeve": {
+    "ownership_box": [
+      480,
+      720,
+      670,
+      1040
+    ],
+    "crop_in_box": [
+      15,
+      27,
+      158,
+      290
+    ],
+    "source_size": [
+      147,
+      267
+    ],
+    "operation": "whole newly drawn part; alpha padding; no anatomical cuts"
+  },
+  "scarf": {
+    "ownership_box": [
+      785,
+      740,
+      1040,
+      1000
+    ],
+    "crop_in_box": [
+      28,
+      24,
+      227,
+      235
+    ],
+    "source_size": [
+      203,
+      215
+    ],
+    "operation": "whole newly drawn part; alpha padding; no anatomical cuts"
+  },
+  "neutral_reference": {
+    "ownership_box": [
+      1135,
+      662,
+      1370,
+      1085
+    ],
+    "crop_in_box": [
+      29,
+      4,
+      203,
+      402
+    ],
+    "source_size": [
+      178,
+      402
+    ],
+    "operation": "whole newly drawn part; alpha padding; no anatomical cuts"
+  }
+}

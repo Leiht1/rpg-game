@@ -1,0 +1,17 @@
+{
+  "scope": "portable prototype delivery only",
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "cold_import_exit_code": 0,
+  "headless_main_preview_exit_code": 0,
+  "resource_or_script_errors": [],
+  "native_gpu_capture": "pass; 386 RGBA frames and comparison screens",
+  "art_acceptance": "pending user visual review; v11 quality not reached",
+  "environment_doctor": "WARN; see QA.md",
+  "staging_copy": "../.native_rig_release_check retained as cold-import evidence",
+  "archive_excludes": [
+    ".godot/",
+    "__pycache__/",
+    "evidence/renders/"
+  ],
+  "status": "pass"
+}

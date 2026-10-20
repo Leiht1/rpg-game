@@ -1,0 +1,309 @@
+{
+  "checks": [
+    {
+      "name": "formal world: global cap 20",
+      "pass": true
+    },
+    {
+      "name": "formal world: no lake exceeds 3",
+      "pass": true
+    },
+    {
+      "name": "formal world: irregular continent coast has schools",
+      "pass": true
+    },
+    {
+      "name": "formal world: all stands walkable and effects fully over water",
+      "pass": true
+    },
+    {
+      "name": "formal world: sparse sea coast and separated lake schools",
+      "pass": true
+    },
+    {
+      "name": "formal world: initial state validates",
+      "pass": true
+    },
+    {
+      "name": "controller shares persistent population array",
+      "pass": true
+    },
+    {
+      "name": "existing generated bank can be interacted with",
+      "pass": true
+    },
+    {
+      "name": "live school starts fishing",
+      "pass": true
+    },
+    {
+      "name": "failed fishing consumes no fish",
+      "pass": true
+    },
+    {
+      "name": "restart after failure",
+      "pass": true
+    },
+    {
+      "name": "cancel consumes no fish",
+      "pass": true
+    },
+    {
+      "name": "start rare catch",
+      "pass": true
+    },
+    {
+      "name": "coin does not consume fish stock",
+      "pass": true
+    },
+    {
+      "name": "start full-bag catch",
+      "pass": true
+    },
+    {
+      "name": "full bag consumes no fish",
+      "pass": true
+    },
+    {
+      "name": "start rollback catch",
+      "pass": true
+    },
+    {
+      "name": "save failure rolls back stock and reward together",
+      "pass": true
+    },
+    {
+      "name": "catch 1 starts",
+      "pass": true
+    },
+    {
+      "name": "catch 1 consumes exactly one fish",
+      "pass": true
+    },
+    {
+      "name": "catch 2 starts",
+      "pass": true
+    },
+    {
+      "name": "catch 2 consumes exactly one fish",
+      "pass": true
+    },
+    {
+      "name": "catch 3 starts",
+      "pass": true
+    },
+    {
+      "name": "catch 3 consumes exactly one fish",
+      "pass": true
+    },
+    {
+      "name": "catch 4 starts",
+      "pass": true
+    },
+    {
+      "name": "catch 4 consumes exactly one fish",
+      "pass": true
+    },
+    {
+      "name": "catch 5 starts",
+      "pass": true
+    },
+    {
+      "name": "catch 5 consumes exactly one fish",
+      "pass": true
+    },
+    {
+      "name": "catch 6 starts",
+      "pass": true
+    },
+    {
+      "name": "catch 6 consumes exactly one fish",
+      "pass": true
+    },
+    {
+      "name": "school yields exactly six fish",
+      "pass": true
+    },
+    {
+      "name": "exhausted school no longer interactable",
+      "pass": true
+    },
+    {
+      "name": "sixth success ends normally without cancellation or extra award",
+      "pass": true
+    },
+    {
+      "name": "respawn waits 2 to 3 game days",
+      "pass": true
+    },
+    {
+      "name": "sixth reward atomically saves exhausted stock and timer",
+      "pass": true
+    },
+    {
+      "name": "paused world does not advance respawn timer",
+      "pass": true
+    },
+    {
+      "name": "respawn follows shared game clock",
+      "pass": true
+    },
+    {
+      "name": "loading restores exact exhausted stock, timer and RNG",
+      "pass": true
+    },
+    {
+      "name": "no early respawn",
+      "pass": true
+    },
+    {
+      "name": "after delay new school appears at different random bank",
+      "pass": true
+    },
+    {
+      "name": "saved RNG reproduces respawn rather than rerolling on load",
+      "pass": true
+    },
+    {
+      "name": "replacement preserves cap, spacing and lake limits",
+      "pass": true
+    },
+    {
+      "name": "JSON fishing round trip validates",
+      "pass": true
+    },
+    {
+      "name": "reject malformed population: too_many_fish",
+      "pass": true
+    },
+    {
+      "name": "reject malformed population: duplicate",
+      "pass": true
+    },
+    {
+      "name": "reject malformed population: timer",
+      "pass": true
+    },
+    {
+      "name": "reject malformed population: unknown",
+      "pass": true
+    },
+    {
+      "name": "reject malformed population: fraction",
+      "pass": true
+    },
+    {
+      "name": "reject malformed population: rng",
+      "pass": true
+    },
+    {
+      "name": "reject malformed population: nan",
+      "pass": true
+    },
+    {
+      "name": "old saves without fishing field initialize once without rejection",
+      "pass": true
+    },
+    {
+      "name": "invalid persisted fish data protects save and inventory",
+      "pass": true
+    },
+    {
+      "name": "seed 271828: global cap 20",
+      "pass": true
+    },
+    {
+      "name": "seed 271828: no lake exceeds 3",
+      "pass": true
+    },
+    {
+      "name": "seed 271828: irregular continent coast has schools",
+      "pass": true
+    },
+    {
+      "name": "seed 271828: all stands walkable and effects fully over water",
+      "pass": true
+    },
+    {
+      "name": "seed 271828: sparse sea coast and separated lake schools",
+      "pass": true
+    },
+    {
+      "name": "seed 271828: initial state validates",
+      "pass": true
+    },
+    {
+      "name": "seed 123456: global cap 20",
+      "pass": true
+    },
+    {
+      "name": "seed 123456: no lake exceeds 3",
+      "pass": true
+    },
+    {
+      "name": "seed 123456: irregular continent coast has schools",
+      "pass": true
+    },
+    {
+      "name": "seed 123456: all stands walkable and effects fully over water",
+      "pass": true
+    },
+    {
+      "name": "seed 123456: sparse sea coast and separated lake schools",
+      "pass": true
+    },
+    {
+      "name": "seed 123456: initial state validates",
+      "pass": true
+    },
+    {
+      "name": "sample maps include naturally empty lakes",
+      "pass": true
+    },
+    {
+      "name": "all player JSON and tmp names and hashes unchanged",
+      "pass": true
+    }
+  ],
+  "display": "headless",
+  "engine": "4.7.2-stable (official)",
+  "fail": 0,
+  "maps": [
+    {
+      "coast": 15,
+      "empty_lakes": 2,
+      "lakes": {
+        "2": 2,
+        "3": 2,
+        "4": 1
+      },
+      "seed": 447349832,
+      "total": 20
+    },
+    {
+      "coast": 15,
+      "empty_lakes": 1,
+      "lakes": {
+        "0": 2,
+        "2": 1,
+        "3": 2
+      },
+      "seed": 271828,
+      "total": 20
+    },
+    {
+      "coast": 11,
+      "empty_lakes": 0,
+      "lakes": {
+        "0": 1,
+        "1": 3,
+        "2": 2,
+        "3": 3
+      },
+      "seed": 123456,
+      "total": 20
+    }
+  ],
+  "pass": 66,
+  "player_files": 15
+}

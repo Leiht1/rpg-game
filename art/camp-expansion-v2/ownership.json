@@ -1,0 +1,65 @@
+{
+  "source_sha256": "489f1f6144a4caf0a2265537292f86397d8e1916adf659139ff0e3edcb968c0a",
+  "records": [
+    {
+      "name": "precision_repair_bench",
+      "ownership_rect": [
+        0,
+        0,
+        512,
+        470
+      ],
+      "repack": "unscaled, centered in 640x640; no painted pixels added or deleted"
+    },
+    {
+      "name": "fuel_supply_box",
+      "ownership_rect": [
+        512,
+        0,
+        1024,
+        470
+      ],
+      "repack": "unscaled, centered in 640x640; no painted pixels added or deleted"
+    },
+    {
+      "name": "compost_bin",
+      "ownership_rect": [
+        1024,
+        0,
+        1536,
+        470
+      ],
+      "repack": "unscaled, centered in 640x640; no painted pixels added or deleted"
+    },
+    {
+      "name": "advanced_smokehouse",
+      "ownership_rect": [
+        0,
+        470,
+        512,
+        1024
+      ],
+      "repack": "unscaled, centered in 640x640; no painted pixels added or deleted"
+    },
+    {
+      "name": "compost_fertilizer",
+      "ownership_rect": [
+        512,
+        470,
+        1024,
+        1024
+      ],
+      "repack": "unscaled, centered in 640x640; no painted pixels added or deleted"
+    },
+    {
+      "name": "smoked_fish",
+      "ownership_rect": [
+        1024,
+        470,
+        1536,
+        1024
+      ],
+      "repack": "unscaled, centered in 640x640; no painted pixels added or deleted"
+    }
+  ]
+}

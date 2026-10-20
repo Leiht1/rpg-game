@@ -1,0 +1,68 @@
+{
+  "schema": "windrest.native-2d-rig-plan.v1",
+  "scope": "isolated native Godot 2D rig feasibility; no production integration",
+  "identity": "approved v11, warm bright simplified hand-painted cartoon",
+  "camera": "true right side, left by mirror; no front or back",
+  "display": {
+    "canvas": [
+      128,
+      128
+    ],
+    "foot_origin": [
+      64,
+      112
+    ],
+    "finish": "HD hand-painted source with 128px runtime reference",
+    "scaling": "shared fixed anatomical register per complete part, no per-phase rescaling"
+  },
+  "actions": [
+    {
+      "name": "walk",
+      "duration": 0.5797101449275363,
+      "loop": true,
+      "phases": [
+        "near contact",
+        "near stance / far low swing",
+        "far contact",
+        "far stance / near low swing"
+      ],
+      "stance_travel_px_per_cycle": 32,
+      "swing_ankle_lift_px": 2.0
+    },
+    {
+      "name": "breathe",
+      "duration": 1.8,
+      "loop": true,
+      "feet": "fixed",
+      "motion": "subtle chest/shoulder/head only"
+    },
+    {
+      "name": "wave",
+      "duration": 2.4,
+      "loop": true,
+      "phases": [
+        "ease raise",
+        "two wrist waves",
+        "ease lower"
+      ],
+      "feet": "fixed"
+    }
+  ],
+  "garments": [
+    "sage olive open jacket",
+    "teal pullover with cream piping"
+  ],
+  "output": [
+    "editable Skeleton2D/Bone2D",
+    "weighted Polygon2D",
+    "AnimationPlayer bone tracks",
+    "independent Godot scene",
+    "comparison preview"
+  ],
+  "source_generation_budget": {
+    "image_calls": 1,
+    "video_calls": 0
+  },
+  "quality_gate": "technical reuse and visual quality assessed separately; do not generate many variants to force a pass",
+  "user_acceptance": "pending"
+}

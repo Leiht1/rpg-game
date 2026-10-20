@@ -9,6 +9,8 @@ var chimney := Vector2.ZERO
 func _ready() -> void:
 	var row: Dictionary=building.manager.states[building.building_id]
 	var image: Texture2D=load(building.manager.definitions[row.kind].art)
+	if not building.manager.volume_profile(str(row.kind)).is_empty():
+		var trimmed := AtlasTexture.new();trimmed.atlas=image;trimmed.region=Rect2(image.get_image().get_used_rect());image=trimmed
 	var rect: Rect2=building.industry_rect(image)
 	chimney=rect.position+rect.size*Vector2(.5,.10)
 	if row.kind=="stone_furnace":

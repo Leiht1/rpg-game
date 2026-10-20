@@ -300,13 +300,13 @@ func make_item_card(index: int) -> Control:
 	var heading := HBoxContainer.new()
 	column.add_child(heading)
 	var image := TextureRect.new()
-	image.texture=service.texture(slot.item_id,"icon")
+	image.texture=service.stack_texture(slot,"icon")
 	image.custom_minimum_size=Vector2(40,40)
 	image.expand_mode=TextureRect.EXPAND_IGNORE_SIZE
 	image.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	heading.add_child(image)
 	var title := Label.new()
-	title.text=definition.name+"\n"+category_name(definition.category)
+	title.text=service.stack_name(slot)+"\n"+category_name(definition.category)
 	title.add_theme_font_size_override("font_size",16)
 	heading.add_child(title)
 	column.add_child(HSeparator.new())
@@ -406,7 +406,7 @@ func update_target_tip(target: Node2D, delta: float) -> void:
 	target_tip.visible = not (is_instance_valid(world.camp_ui) and (world.camp_ui.panel.visible or world.camp_ui.placing)) and current_id != 0 and target_tip_time > 0.0 and not bag.visible and not catalog.visible and not craft_panel.visible and not item_modal_open() and not world.map_view.visible
 	if target_tip.visible:
 		var name_text := "树木"
-		if target.is_in_group("drops"): name_text=service.database.item(str(target.get_meta("item_id","wood"))).get("name","物品")
+		if target.is_in_group("drops"): name_text=service.stack_name(target.get_meta("instance",{"item_id":str(target.get_meta("item_id","wood"))}))
 		elif target.has_meta("display_name"): name_text=str(target.get_meta("display_name"))
 		target_caption.text=name_text+" · "+preload("res://scripts/world_interaction.gd").caption(target,service.inventory)
 		target_tip.reset_size()
@@ -443,6 +443,7 @@ func rebuild_catalog() -> void:
 			row.add_child(grant)
 
 func close_panels() -> void:
+	if is_instance_valid(service.expansion_ui): service.expansion_ui.close_panel()
 	if is_instance_valid(service.planting_ui): service.planting_ui.close_panel()
 	service.craft_station_id=""
 	if is_instance_valid(world.camp_ui): world.camp_ui.close_panel()
@@ -583,6 +584,8 @@ func item_modal_open() -> bool:
 	return service.body.sleep_active() or (is_instance_valid(world.camp_ui) and world.camp_ui.sign_dialog.visible) or (is_instance_valid(modal) and modal.visible)
 
 func update_input_block() -> void:
+	if service.merchant.interacting:world.player.input_blocked=true;return
+	if is_instance_valid(service.expansion_ui) and service.expansion_ui.visible:world.player.input_blocked=true;return
 	if is_instance_valid(service.industry_ui) and service.industry_ui.visible:world.player.input_blocked=true;return
 	if is_instance_valid(service.planting_ui) and service.planting_ui.visible:
 		world.player.input_blocked=true;return
@@ -618,7 +621,8 @@ func open_item_menu(index: int, at: Vector2) -> void:
 	equip_button.set_meta("equipment_index",equipped_action_index(index))
 	equip_button.text="卸下" if equipped_action_index(index)>=40 else "装备"
 	use_button.text=("关闭" if is_instance_valid(service.lantern) and service.lantern.visible and modal_stack.get("lamp_id","")==service.active_lamp else "打开") if service.database.item(modal_stack.item_id).get("use_action","")=="light" else "使用"
-	use_button.visible=index<40
+	if modal_stack.item_id=="solar_flashlight":use_button.text="关闭" if modal_stack.state.on else "打开"
+	use_button.visible=index<40 or modal_stack.item_id=="solar_flashlight"
 	destroy_button.visible=index<40 and not (index<8 and service.inventory.slots[index].is_empty())
 	use_button.disabled=not service.database.item(modal_stack.item_id).usable
 	item_menu.reset_size()
@@ -628,10 +632,11 @@ func open_item_menu(index: int, at: Vector2) -> void:
 func run_item_action(destroy: bool) -> void:
 	if not stack_unchanged(): close_item_actions(); return
 	var index := modal_index
-	var item_name: String=service.database.item(modal_stack.item_id).name
+	var item_name: String=service.stack_name(modal_stack)
 	close_item_actions()
 	if destroy:
 		if service.inventory.destroy_slot(index): show_notice("已销毁 "+item_name)
+	elif service.inventory.get_slot(index).get("item_id")=="solar_flashlight":service.merchant.lights.toggle(index)
 	elif not service.inventory.use_slot(index): show_notice(use_failure(index))
 	service.save_state()
 
@@ -647,7 +652,7 @@ func open_split(index: int) -> void:
 	if int(modal_stack.count)<2: show_notice("数量至少为2才能拆分"); return
 	modal.show()
 	split_panel.show()
-	split_title.text="拆分 · %s（共%d个）"%[service.database.item(modal_stack.item_id).name,modal_stack.count]
+	split_title.text="拆分 · %s（共%d个）"%[service.stack_name(modal_stack),modal_stack.count]
 	split_amount.text=str(maxi(1,int(modal_stack.count)/2))
 	split_panel.position=(get_viewport_rect().size-Vector2(320,190))*.5
 	validate_split()
@@ -679,7 +684,7 @@ func open_drop_quantity(index: int, camp_id: String = "") -> void:
 	if not choose_stack(index): return
 	quantity_action="ground" if camp_id.is_empty() else "fuel";quantity_camp=camp_id
 	modal.show();split_panel.show();split_confirm.text="投放";split_amount.placeholder_text="输入投放数量"
-	split_title.text=("投向地面" if camp_id.is_empty() else "投入篝火")+" · "+str(service.database.item(modal_stack.item_id).name)
+	split_title.text=("投向地面" if camp_id.is_empty() else "投入篝火")+" · "+str(service.stack_name(modal_stack))
 	split_amount.text="1";split_panel.position=(get_viewport_rect().size-Vector2(320,190))*.5
 	validate_split();split_amount.grab_focus();split_amount.select_all();update_input_block()
 
@@ -758,6 +763,12 @@ func _notification(what: int) -> void:
 		call_deferred("update_input_block")
 
 func _input(event: InputEvent) -> void:
+	if service.merchant.interacting:
+		if service.merchant.ui.handle_input(event):get_viewport().set_input_as_handled()
+		return
+	if is_instance_valid(service.expansion_ui) and service.expansion_ui.visible:
+		if service.expansion_ui.handle_input(event):get_viewport().set_input_as_handled()
+		return
 	if is_instance_valid(service.industry_ui) and service.industry_ui.visible:return
 	if is_instance_valid(service.planting_ui) and service.planting_ui.handle_input(event):
 		get_viewport().set_input_as_handled();return

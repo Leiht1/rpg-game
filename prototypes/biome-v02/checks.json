@@ -1,0 +1,68 @@
+{
+  "seeds": [
+    {
+      "animation": "side_walk",
+      "boundary_weight_jump": 0.0010225772857666,
+      "connectivity": {
+        "dry_cells": 5695,
+        "fraction": 1.0,
+        "reachable": 5695
+      },
+      "coverage_samples": [
+        31298,
+        19804,
+        40552,
+        7291
+      ],
+      "field_sha256": "d7c0acc3c1c6da6730f11a8a516aeec5d69c5807753e83d982119d46dce04a5b",
+      "objects_repeatable": true,
+      "props": 1064,
+      "repeatable": true,
+      "seed": 271828,
+      "walk_distance": 196.661865234375
+    },
+    {
+      "animation": "side_walk",
+      "boundary_weight_jump": 0.00160878896713257,
+      "connectivity": {
+        "dry_cells": 5625,
+        "fraction": 1.0,
+        "reachable": 5625
+      },
+      "coverage_samples": [
+        32986,
+        19598,
+        38039,
+        8322
+      ],
+      "field_sha256": "0400c3eed3a8eca7503e21f0527611969e2d27363eb6fcdb28f7a46103a27e27",
+      "objects_repeatable": true,
+      "props": 1040,
+      "repeatable": true,
+      "seed": 81273,
+      "walk_distance": 196.661865234375
+    },
+    {
+      "animation": "side_walk",
+      "boundary_weight_jump": 0.00123852491378784,
+      "connectivity": {
+        "dry_cells": 5846,
+        "fraction": 0.999657885733835,
+        "reachable": 5844
+      },
+      "coverage_samples": [
+        33007,
+        22273,
+        38910,
+        4755
+      ],
+      "field_sha256": "e1389daf141638b3586c9c0527cc8415806e60a2c9444433fffad07e8f3559fa",
+      "objects_repeatable": true,
+      "props": 1068,
+      "repeatable": true,
+      "seed": 902106,
+      "walk_distance": 196.661865234375
+    }
+  ],
+  "version": "biome-world-0.2.0"
+}

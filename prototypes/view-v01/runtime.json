@@ -1,0 +1,71 @@
+[
+  {
+    "before": true,
+    "camera_zoom": "(1.0, 1.0)",
+    "lake_count": 284,
+    "loaded": 14,
+    "position": "(24576.0, 24576.0)",
+    "view": "spawn"
+  },
+  {
+    "before": true,
+    "camera_zoom": "(1.0, 1.0)",
+    "lake_count": 284,
+    "loaded": 12,
+    "position": "(8760.991, 2615.64)",
+    "view": "lake"
+  },
+  {
+    "before": true,
+    "camera_zoom": "(1.0, 1.0)",
+    "lake_count": 284,
+    "loaded": 21,
+    "position": "(5139.098, 5280.204)",
+    "view": "forest"
+  },
+  {
+    "before": true,
+    "camera_zoom": "(1.0, 1.0)",
+    "lake_count": 284,
+    "loaded": 12,
+    "position": "(13668.01, 5034.175)",
+    "view": "rocks"
+  },
+  {
+    "before": false,
+    "camera_zoom": "(1.0, 1.0)",
+    "lake_count": 133,
+    "loaded": 14,
+    "position": "(24576.0, 24576.0)",
+    "view": "spawn"
+  },
+  {
+    "before": false,
+    "camera_zoom": "(1.0, 1.0)",
+    "lake_count": 133,
+    "loaded": 12,
+    "position": "(8760.991, 2615.64)",
+    "view": "lake"
+  },
+  {
+    "before": false,
+    "camera_zoom": "(1.0, 1.0)",
+    "lake_count": 133,
+    "loaded": 21,
+    "position": "(5139.098, 5280.204)",
+    "view": "forest"
+  },
+  {
+    "before": false,
+    "camera_zoom": "(1.0, 1.0)",
+    "lake_count": 133,
+    "loaded": 12,
+    "position": "(13668.01, 5034.175)",
+    "view": "rocks"
+  },
+  {
+    "distance": 63.345703125,
+    "pass": true,
+    "test": "actual spawn movement"
+  }
+]

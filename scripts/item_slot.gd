@@ -120,6 +120,10 @@ func _get_drag_data(_position: Vector2) -> Variant:
 	if slot.is_empty() or Input.is_key_pressed(KEY_CTRL) or screen.item_modal_open(): return null
 	screen.hide_item_hover()
 	var preview := PanelContainer.new()
+	# Native drag previews are top-level: they must also draw above the bag (Z=12).
+	preview.z_index=100
+	preview.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	preview.name="InventoryDragPreview"
 	preview.add_theme_stylebox_override("panel",ItemSkin.slot(true,true))
 	var image := TextureRect.new()
 	image.texture=icon.texture

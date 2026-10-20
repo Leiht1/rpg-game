@@ -232,7 +232,7 @@
     "hits": 3,
     "frame": 0,
     "industry": true,
-    "art": "res://assets/industry/v1/refrigerator.png",
+    "art": "res://assets/camp_expansion/v2/refrigerator.png",
     "storage_slots": 12
   },
   "wool_carpet": {
@@ -246,5 +246,68 @@
     "frame": 0,
     "industry": true,
     "art": "res://assets/industry/v1/wool_carpet.png"
+  },
+  "precision_repair_bench": {
+    "name": "精密维修台",
+    "layer": "free",
+    "cost": {
+      "wood": 14,
+      "stone": 12,
+      "flint": 6,
+      "copper_parts": 8,
+      "silver_ingot": 3
+    },
+    "hits": 4,
+    "frame": 0,
+    "expansion_v2": true,
+    "art": "res://assets/camp_expansion/v2/precision_repair_bench.png"
+  },
+  "fuel_supply_box": {
+    "name": "自动燃料供给箱",
+    "layer": "free",
+    "cost": {
+      "wood": 18,
+      "stone": 18,
+      "plant_fiber": 12,
+      "copper_plate": 6,
+      "copper_parts": 4,
+      "silver_ingot": 4
+    },
+    "hits": 4,
+    "frame": 0,
+    "expansion_v2": true,
+    "art": "res://assets/camp_expansion/v2/fuel_supply_box.png"
+  },
+  "compost_bin": {
+    "name": "发酵堆肥桶",
+    "layer": "free",
+    "cost": {
+      "wood": 18,
+      "stone": 14,
+      "plant_fiber": 16,
+      "copper_plate": 3,
+      "metal_connector": 2
+    },
+    "hits": 4,
+    "frame": 0,
+    "expansion_v2": true,
+    "art": "res://assets/camp_expansion/v2/compost_bin.png"
+  },
+  "advanced_smokehouse": {
+    "name": "高级熏制房",
+    "layer": "free",
+    "cost": {
+      "wood": 28,
+      "stone": 24,
+      "flint": 8,
+      "plant_fiber": 12,
+      "copper_plate": 6,
+      "metal_connector": 4,
+      "silver_ingot": 4
+    },
+    "hits": 4,
+    "frame": 0,
+    "expansion_v2": true,
+    "art": "res://assets/camp_expansion/v2/advanced_smokehouse.png"
   }
 }

@@ -126,6 +126,25 @@
       "seconds": 36,
       "default_unlocked": false,
       "industry": true
+    },
+    "roast_fish": {
+      "name": "烤鱼",
+      "materials": {
+        "lake_fish": 1
+      },
+      "output": "roasted_fish",
+      "seconds": 12,
+      "default_unlocked": true
+    },
+    "vegetable_fish_soup": {
+      "name": "蔬菜鱼汤",
+      "materials": {
+        "lake_fish": 1,
+        "cabbage": 1
+      },
+      "output": "vegetable_fish_soup",
+      "seconds": 18,
+      "default_unlocked": false
     }
   }
 }

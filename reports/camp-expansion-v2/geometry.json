@@ -1,0 +1,90 @@
+{
+	"checks": [
+		{
+			"name": "wood_fence vertical=false open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "wood_fence vertical=true open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "fence_gate vertical=false open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "fence_gate vertical=false open=true geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "fence_gate vertical=true open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "fence_gate vertical=true open=true geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "stone_wall vertical=false open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "stone_wall vertical=true open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "stone_gate vertical=false open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "stone_gate vertical=false open=true geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "stone_gate vertical=true open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "stone_gate vertical=true open=true geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "wood_bed vertical=false open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "wood_bed vertical=true open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "straw_mat vertical=false open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "straw_mat vertical=true open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "sleeping_bag vertical=false open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "wood_floor vertical=false open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "wood_floor vertical=true open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "stone_path vertical=false open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		},
+		{
+			"name": "stone_path vertical=true open=false geometry, joints, collider, sleep footprint unchanged",
+			"pass": true
+		}
+	],
+	"count": 21,
+	"failed": 0
+}

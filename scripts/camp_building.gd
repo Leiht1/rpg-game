@@ -27,7 +27,7 @@ func _ready() -> void:
 	var row: Dictionary=manager.states[building_id]
 	var d: Dictionary=manager.definitions[row.kind]
 	set_meta("planting_soil",row.kind=="tilled_soil");set_meta("building_id",building_id);set_meta("prop_id",building_id);set_meta("camp_layer",row.layer)
-	set_meta("display_name",str(row.text) if row.kind=="signpost" else d.name);set_meta("interaction_action","open" if d.get("door",false) or row.kind in ["wood_chest","workbench"] or d.get("industry",false) else "sleep" if d.get("sleep",false) else "inspect")
+	set_meta("display_name",str(row.text) if row.kind=="signpost" else d.name);set_meta("interaction_action","open" if d.get("door",false) or row.kind in ["wood_chest","workbench"] or d.get("industry",false) or d.get("expansion_v2",false) else "sleep" if d.get("sleep",false) else "inspect")
 	set_meta("interaction_range",100.0);add_to_group("world_interactables")
 	if row.layer=="ground": z_index=-2
 	if row.layer=="overlay":z_index=-1
@@ -43,7 +43,7 @@ func _ready() -> void:
 		var rect := RectangleShape2D.new()
 		rect.size=(Vector2(8,64) if row.vertical else Vector2(96,8)) if row.layer=="edge" else manager.footprint(row)
 		shape.shape=rect
-		if d.get("sleep",false): shape.position=manager.footprint_rect(row).get_center()
+		if row.layer=="free": shape.position=manager.footprint_rect(row).get_center()
 	else: body.collision_layer=0
 	rendered_hinge_end=int(row.get("hinge_end",0))
 	gate_angle=preload("res://scripts/camp_grid.gd").gate_base(row)+(PI*.5*int(row.get("swing",1 if row.inward else -1)) if row.open else 0.0)
@@ -100,15 +100,47 @@ func planting_texture(asset: String) -> Texture2D:
 	return manager.textures[path]
 
 func industry_rect(image: Texture2D) -> Rect2:
+	var profile: Dictionary=manager.volume_profile(str(manager.states[building_id].kind))
+	if not profile.is_empty():return volume_rect(image,profile)
 	var extent: Vector2=image.get_size()*minf(88.0/image.get_width(),96.0/image.get_height())
 	if manager.states[building_id].kind=="metal_workbench":
 		var painted: Rect2i=image.get_image().get_used_rect()
 		extent=Vector2(80,80.0*painted.size.y/painted.size.x)
 	return Rect2(Vector2(-extent.x*.5,8-extent.y),extent)
 
+func volume_rect(image: Texture2D, profile: Dictionary) -> Rect2:
+	var painted: Vector2=Vector2(image.get_image().get_used_rect().size)
+	var extent := painted*minf(float(profile.width)/painted.x,float(profile.max_height)/painted.y)
+	return Rect2(Vector2(-extent.x*.5,8-extent.y),extent)
+
+func draw_volume(row: Dictionary, definition: Dictionary) -> bool:
+	var profile: Dictionary=manager.volume_profile(str(row.kind))
+	if profile.is_empty():return false
+	var image: Texture2D
+	var path := ""
+	if profile.has("art"):
+		path=profile.art
+	elif definition.has("art"):
+		path=definition.art
+	elif row.kind=="wood_chest" and row.open:path="res://assets/buildings/chest-open-v1/wood_chest_open.png"
+	elif row.kind=="signpost":path="res://assets/buildings/signpost_v1/signpost.png"
+	else:image=texture(int(definition.frame))
+	if not path.is_empty():
+		# Draw commands need the resource alive after _draw returns, as in texture().
+		if not manager.textures.has(path):
+			manager.textures[path]=preload("res://scripts/candidate_art.gd").texture(path) if path.begins_with("res://prototypes/") else load(path)
+		image=manager.textures[path]
+	if image==null:return true
+	var region := Rect2(image.get_image().get_used_rect())
+	var rect := volume_rect(image,profile)
+	if row.kind=="wool_carpet":rect=Rect2(-Vector2(profile.width,profile.max_height)*.5,Vector2(profile.width,profile.max_height))
+	draw_texture_rect_region(image,rect,region)
+	return true
+
 func _draw() -> void:
 	if not manager.states.has(building_id): return
 	var r: Dictionary=manager.states[building_id];var d: Dictionary=manager.definitions[r.kind]
+	if draw_volume(r,d):return
 	if d.get("industry",false):
 		var path: String=d.art
 		if ResourceLoader.exists(path):
@@ -217,6 +249,7 @@ func gate_collision() -> void:
 
 func perform_interaction(_action: String, _player: Node2D) -> bool:
 	var r: Dictionary=manager.states[building_id];var d: Dictionary=manager.definitions[r.kind]
+	if r.get("abandoned",false): return false
 	if d.get("door",false):
 		var reason: String=manager.toggle(building_id)
 		if not reason.is_empty(): manager.service.notice.emit(reason)
@@ -228,6 +261,7 @@ func perform_interaction(_action: String, _player: Node2D) -> bool:
 		var reason: String=manager.service.industry.act(building_id,"toggle")
 		if not reason.is_empty():manager.service.notice.emit(reason)
 		return reason.is_empty()
+	if r.kind in manager.service.expansion.KINDS:return manager.service.expansion_ui.open(building_id)
 	if r.kind in ["workbench","metal_workbench"]: manager.service.world.item_ui.toggle_craft(building_id);return true
 	if manager.service.industry.machine(r.kind):manager.service.industry_ui.open(building_id);return true
 	if r.kind=="wood_chest": manager.service.storage_ui.open(building_id);return true
@@ -313,8 +347,14 @@ func position_damage() -> void:
 	elif r.kind=="signpost":
 		top=-78.0
 	elif r.layer=="free":
-		var image := texture(int(manager.definitions[r.kind].frame))
-		top=8-image.get_height()*minf(80.0/image.get_width(),92.0/image.get_height())
+		var definition: Dictionary=manager.definitions[r.kind]
+		var profile: Dictionary=manager.volume_profile(str(r.kind))
+		if not profile.is_empty():
+			var image: Texture2D=preload("res://scripts/candidate_art.gd").texture(definition.art) if str(definition.get("art","")).begins_with("res://prototypes/") else load(definition.art) if definition.has("art") else texture(int(definition.frame))
+			top=volume_rect(image,profile).position.y
+		else:
+			var image := texture(int(definition.frame))
+			top=8-image.get_height()*minf(80.0/image.get_width(),92.0/image.get_height())
 	damage.position=Vector2(-18,top-7)
 
 func setup_torch() -> void:

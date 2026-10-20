@@ -5,7 +5,13 @@ var states: Dictionary={}
 var visuals: Dictionary={}
 var busy := false
 var textures: Dictionary={}
+var abandoned_version := 0
 var definitions: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/camp_buildings.json"))
+
+var volume_profiles: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/camp_volume_v2.json"))
+
+func volume_profile(kind: String) -> Dictionary:
+	return volume_profiles.get(kind,{})
 
 func footprint(row: Dictionary) -> Vector2:
 	return footprint_rect(row).size
@@ -14,6 +20,10 @@ func footprint_rect(row: Dictionary) -> Rect2:
 	var spec: Dictionary=preload("res://scripts/sleep_rules.gd").facility(row.kind)
 	var bounds: Array=spec.get("vertical_collision_rect" if row.get("vertical",false) else "collision_rect",[])
 	if bounds.size()==4: return Rect2(bounds[0],bounds[1],bounds[2],bounds[3])
+	var volume: Dictionary=volume_profile(str(row.kind))
+	if volume.has("collision") and volume.collision.size()==4:
+		var b: Array=volume.collision
+		return Rect2(b[0],b[1],b[2],b[3])
 	var size_value := Vector2(42,22)
 	if not spec.is_empty():
 		var extent: Array=spec.get("vertical_footprint",spec.footprint) if row.get("vertical",false) else spec.footprint
@@ -34,15 +44,19 @@ func map_signposts() -> Array[Dictionary]:
 	return result
 
 func serialize() -> Dictionary:
-	return {"version":1,"grid_version":1,"objects":states.duplicate(true)}
+	return {"version":1,"grid_version":1,"objects":states.duplicate(true),"abandoned_version":abandoned_version}
 
 func validate(data: Variant, seen: Dictionary) -> bool:
 	if not data is Dictionary or data.get("version")!=1 or data.get("grid_version")!=1 or not data.get("objects") is Dictionary: return false
+	var version = data.get("abandoned_version",0)
+	if not (version is int or version is float) or not is_finite(float(version)) or (version!=0 and version!=1): return false
 	var occupied := {}
 	for id in data.objects:
 		var row = data.objects[id]
 		if not id is String or id.is_empty() or not row is Dictionary or not definitions.has(row.get("kind","")): return false
 		var d: Dictionary=definitions[row.kind]
+		if row.has("abandoned") and not row.abandoned is bool: return false
+		if row.get("abandoned",false) and (row.kind not in ["wood_fence","wood_floor","stone_path","wood_chest","workbench","straw_mat","wood_bed"] or row.open): return false
 		if row.kind=="signpost" and not valid_sign_text(row.get("text")):return false
 		if row.kind=="tilled_soil" and not service.planting.valid(row): return false
 		if d.get("sleep",false):
@@ -68,7 +82,7 @@ func validate(data: Variant, seen: Dictionary) -> bool:
 			if p.gx!=row.gx or p.gy!=row.gy or not is_equal_approx(p.x,row.x) or not is_equal_approx(p.y,row.y): return false
 		if not row.get("contents") is Array or row.contents.size()!=int(d.get("storage_slots",12)): return false
 		if row.kind!="wood_chest" and not d.has("storage_slots") and row.contents.any(func(v): return not v is Dictionary or not v.is_empty()): return false
-		if not service.industry.valid(row):return false
+		if not service.industry.valid(row) or not service.expansion.valid(row):return false
 		if row.has("machine"):
 			for job in row.machine.jobs+row.machine.queue+row.machine.completed+row.machine.legacy_queue:
 				if job.is_empty() or not job.output.has("instance_id"):continue
@@ -97,6 +111,7 @@ func candidate(kind: String, at: Vector2, vertical: bool, inward: bool, facing: 
 	if kind=="tilled_soil": row.merge({"crop":"","growth_minutes":0.0,"roots":false});row.vertical=false
 	for i in int(d.get("storage_slots",12)): row.contents.append({})
 	if service.industry.machine(kind):row.machine=service.industry.initial(kind)
+	if kind in service.expansion.KINDS:row.expansion=service.expansion.initial()
 	return row
 
 func occupant(row: Dictionary) -> String:
@@ -150,7 +165,7 @@ func reason(row: Dictionary) -> String:
 	if not occupied.is_empty() and replace_id.is_empty(): return "此位置已有建筑"
 	var paving: bool=row.kind in ["wood_floor","stone_path"]
 	var offsets: Array=[Vector2.ZERO]
-	if definitions[row.kind].get("sleep",false):
+	if definitions[row.kind].get("sleep",false) or (row.layer=="free" and not volume_profile(str(row.kind)).is_empty()):
 		var bounds := footprint_rect(row)
 		var half := bounds.size*.5
 		for xx in [-half.x,0,half.x]:
@@ -165,7 +180,7 @@ func reason(row: Dictionary) -> String:
 			if paving and paving_can_cover(node): continue
 			if node.get_meta("building_id","")==replace_id and not replace_id.is_empty(): continue
 			if node.get_meta("camp_layer","")=="ground": continue
-			if definitions[row.kind].get("sleep",false):
+			if definitions[row.kind].get("sleep",false) or (row.layer=="free" and not volume_profile(str(row.kind)).is_empty()):
 				# Buildings use their real collider below, not a 40-unit halo at
 				# each footprint sample (which rejected clear enclosed rooms).
 				if not str(node.get_meta("building_id","")).is_empty(): continue
@@ -184,7 +199,7 @@ func reason(row: Dictionary) -> String:
 	var footprint := RectangleShape2D.new()
 	footprint.size=Vector2(84,52) if row.layer in ["ground","overlay"] else (Vector2(8,64) if row.vertical else Vector2(96,8)) if row.layer=="edge" else footprint(row)
 	var area := PhysicsShapeQueryParameters2D.new();area.shape=footprint;area.transform=Transform2D(0,at)
-	if definitions[row.kind].get("sleep",false): area.transform.origin+=footprint_rect(row).get_center()
+	if row.layer=="free": area.transform.origin+=footprint_rect(row).get_center()
 	for hit in world.get_world_2d().direct_space_state.intersect_shape(area,32):
 		var parent: Node=hit.collider.get_parent()
 		if paving and paving_can_cover(parent): continue
@@ -198,7 +213,7 @@ func reason(row: Dictionary) -> String:
 
 func place(row: Dictionary, expected: Array) -> String:
 	if busy or service.body.sleep_active(): return "正在处理"
-	if service.inventory.slots!=expected: return "背包已变化，请重新建造"
+	if not preload("res://scripts/food_freshness.gd").matches_slots(service.inventory.slots,expected): return "背包已变化，请重新建造"
 	var error := reason(row)
 	if not error.is_empty(): return error
 	if row.kind=="signpost" and not valid_sign_text(row.get("text")):return "请填写1至6个字的路标文字"
@@ -274,6 +289,7 @@ func refresh_around(row: Dictionary) -> void:
 		if service.world.stream.loaded.has(coord): install(coord)
 
 func toggle(id: String) -> String:
+	if states.get(id,{}).get("abandoned",false): return "废弃设施无法使用"
 	if busy or not service.writable or not states.has(id): return "暂不能操作"
 	var row: Dictionary=states[id]
 	if not definitions[row.kind].get("door",false): return "这不是门"
@@ -314,10 +330,12 @@ func protected_reason(id: String) -> String:
 		if states[id].kind in ["wood_floor","stone_path"]:
 			for over in states.values():
 				if over.kind=="wool_carpet" and Grid.key(over,false)==Grid.key(states[id],false):return "请先拆除地毯"
+		var expansion_reason: String=service.expansion.protected_reason(states[id])
+		if not expansion_reason.is_empty():return expansion_reason
 		if states[id].has("machine"):
 			var m: Dictionary=states[id].machine
 			if not m.feed.is_empty() or not m.queue.is_empty() or not m.completed.is_empty() or not m.legacy_queue.is_empty() or m.jobs.any(func(j):return not j.is_empty()):return "设施内还有物品"
-		if states[id].contents.any(func(v): return not v.is_empty()): return "请先清空木箱"
+		if not states[id].get("abandoned",false) and states[id].contents.any(func(v): return not v.is_empty()): return "请先清空木箱"
 		return ""
 	if service.camps.states.has(id):
 		var row: Dictionary=service.camps.states[id]
@@ -354,6 +372,13 @@ func strike(id: String, target: Node2D) -> bool:
 			if landing==Vector2.INF: busy=false;service.notice.emit("附近没有安全的返料落点");return false
 			var entry := {"id":id+":refund:"+str(material),"item_id":material,"count":amount,"x":landing.x,"y":landing.y,"mode":"pickup","origin":"demolition"}
 			rewards.append(entry)
+	if hits>=int(d.hits) and row.get("abandoned",false):
+		for i in row.contents.size():
+			var value: Dictionary=row.contents[i]
+			if value.is_empty(): continue
+			if rewards.is_empty(): busy=false;return false
+			var landing: Dictionary=rewards[0]
+			rewards.append({"id":id+":contents:"+str(i),"item_id":value.item_id,"count":value.count,"instance":value.duplicate(true),"x":landing.x,"y":landing.y,"mode":"pickup","origin":"abandoned_storage"})
 	row.hits=hits
 	var held: Dictionary=inv.equipment.main_hand
 	inv.wear_held(str(held.instance_id),"demolish")
@@ -382,6 +407,7 @@ func strike(id: String, target: Node2D) -> bool:
 	inv.changed.emit();busy=false;return true
 
 func set_chest_open(id: String, opened: bool) -> String:
+	if states.get(id,{}).get("abandoned",false): return "废弃设施无法使用"
 	if busy or not service.writable or not states.has(id) or not storage_kind(str(states[id].kind)): return "木箱不可用"
 	if opened and service.world.player.position.distance_to(Vector2(states[id].x,states[id].y))>100: return "请靠近木箱"
 	var before: Dictionary={}
@@ -402,6 +428,7 @@ func set_chest_open(id: String, opened: bool) -> String:
 	busy=false;return ""
 
 func transfer(id: String, chest_index: int, player_index: int, expected_chest: Dictionary, expected_player: Dictionary) -> String:
+	if states.get(id,{}).get("abandoned",false): return "废弃设施无法使用"
 	if busy or not service.writable or not states.has(id): return "木箱不可用"
 	if not storage_kind(str(states[id].kind)) or chest_index<0 or chest_index>=states[id].contents.size() or player_index<0 or player_index>=43: return "物品格无效"
 	if service.world.player.position.distance_to(Vector2(states[id].x,states[id].y))>100: return "请靠近木箱"
@@ -412,7 +439,7 @@ func transfer(id: String, chest_index: int, player_index: int, expected_chest: D
 	if player_index<40 and inv.hotbar_equipment.has(str(player_index)):
 		for i in range(40,43):
 			if inv.get_slot(i).get("instance_id","")==expected_player.get("instance_id",""): player_index=i;break
-	if states[id].kind=="refrigerator" and not expected_player.is_empty() and service.database.item(str(expected_player.item_id)).get("food_kind","") not in ["raw","cooked"]:return "冰箱只能存放食物"
+	if states[id].kind=="refrigerator" and not expected_player.is_empty() and service.database.item(str(expected_player.item_id)).get("food_kind","") not in ["raw","raw_fish","cooked"]:return "冰箱只能存放食物"
 	if not inv.accepts(player_index,expected_chest): return "这个装备槽不能放入箱内物品"
 	busy=true
 	var a: Dictionary=contents[chest_index].duplicate(true)
@@ -437,6 +464,7 @@ func transfer(id: String, chest_index: int, player_index: int, expected_chest: D
 	inv.changed.emit();busy=false;return ""
 
 func chest_edit(id: String, source: int, expected: Dictionary, action: String, target: int = -1, quantity: int = 0) -> String:
+	if states.get(id,{}).get("abandoned",false): return "废弃设施无法使用"
 	if busy or not service.writable or not states.has(id) or not storage_kind(str(states[id].kind)) or source<0 or source>=states[id].contents.size(): return "木箱不可用"
 	if service.world.player.position.distance_to(Vector2(states[id].x,states[id].y))>100: return "请靠近木箱"
 	var contents: Array=states[id].contents

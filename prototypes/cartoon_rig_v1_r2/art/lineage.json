@@ -1,0 +1,10 @@
+{
+  "art_source": "host_image",
+  "route": "calling agent built-in image_gen + cli_media adopt",
+  "reference_first": "../cartoon_rig_v1/art/source.png",
+  "reference_first_sha256": "0630b251a9d9122da564a093721705f50fc95d6382088021fc93d8050f15e844",
+  "reference_torso": "source.png",
+  "status": "candidate-needs-user-review",
+  "parts_original_torso": "rejected: static shoulder protrusions; replaced by torso_source.png",
+  "generation_edits_this_revision": 2
+}

@@ -205,6 +205,7 @@ func advance_machine(id: String, row: Dictionary, seconds: float, minutes: float
 
 func advance(seconds: float, minutes: float) -> void:
 	if seconds<=0 or not service.writable:return
+	service.expansion.supply()
 	var visual_changed := false
 	for v in service.inventory.slots:
 		var was := Fresh.rotten(v);Fresh.advance(service.database,v,minutes)
@@ -218,6 +219,7 @@ func advance(seconds: float, minutes: float) -> void:
 					if is_instance_valid(drop) and drop.get_meta("drop_id","")==id and drop.has_method("setup"):
 						var texture: Texture2D=service.stack_texture(v.instance,"world")
 						if texture:drop.visual.texture=texture
+						drop.set_meta("instance",v.instance.duplicate(true))
 						break
 	for camp in service.camps.states.values():
 		if camp.ready:
@@ -228,6 +230,7 @@ func advance(seconds: float, minutes: float) -> void:
 		for v in row.contents:Fresh.advance(service.database,v,minutes,row.kind=="refrigerator")
 		if not row.has("machine"):continue
 		if row.kind!="feed_trough" and row.kind!="copper_lamp":advance_machine(str(building_id),row,seconds,minutes)
+	service.expansion.advance(minutes)
 	auto_feed()
 	if visual_changed:service.inventory.changed.emit()
 	service.dirty=true

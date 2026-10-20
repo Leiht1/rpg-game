@@ -136,6 +136,7 @@ func _process(delta: float) -> void:
 		var center: Vector2=viewport.get_canvas_transform()*(world.player.position+Vector2(0,-20))
 		material_effect.set_shader_parameter("lantern_center",center/viewport.get_visible_rect().size)
 		material_effect.set_shader_parameter("lantern_radius",float(world.item_service.database.item(str(world.item_service.lamp_slot().get("item_id",""))).get("light_radius",260.0))*viewport.get_canvas_transform().get_scale().x)
+	if world.item_service.merchant.enabled:world.item_service.merchant.lights.shader_parameters(material_effect)
 	var centers := PackedVector2Array()
 	var radii := PackedFloat32Array()
 	var strengths := PackedFloat32Array()
@@ -238,6 +239,8 @@ func advance_gameplay(seconds: float) -> void:
 		service.industry.advance(step,step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
 		service.planting.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
 		service.animals.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
+		if service.writable and service.fishing_population.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0)): service.dirty=true
+		service.merchant.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
 		service.camps.advance(step,simulation.blend.z+simulation.blend.y,simulation.blend.y)
 		if is_instance_valid(service.lantern) and service.lantern.visible: service.burn_lantern(step)
 		service.sleep.after_body()

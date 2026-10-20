@@ -1,0 +1,26 @@
+{
+  "schema": "windrest.rig-master.v1",
+  "reference_identity": "v11 approved; new rig art candidate",
+  "route": {
+    "route": "host_image",
+    "tool": "image_gen",
+    "adoption_tool": "generate2dmedia/cli_media.py adopt",
+    "requestedModel": "codex-image_gen",
+    "model": null,
+    "model_note": "underlying model not exposed by host tool",
+    "estimateUsd": null,
+    "estimate_note": "generation price unavailable; adoption receipt 0 USD describes adoption only",
+    "imageCalls": 1,
+    "videoCalls": 0
+  },
+  "file": "source/generated/generated.png",
+  "sha256": "c75a59ee077b639213b9606aca56538330e11b8dbd26ab11f543922accd7a09f",
+  "dimensions": [
+    1448,
+    1086
+  ],
+  "complete_hidden_anatomy": true,
+  "drawn_parts": 11,
+  "neutral_whole_character": "reference only; never cut into animated parts",
+  "acceptance": "not yet user-approved; preserve approved v11"
+}

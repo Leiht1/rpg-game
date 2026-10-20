@@ -21,7 +21,7 @@ func refresh() -> void:
 	image.texture=null;amount.text="";tooltip_text="空木箱格";bar.hide()
 	if v.is_empty(): return
 	image.texture=owner_ui.service.stack_texture(v,"icon");amount.text=str(v.count)
-	var d: Dictionary=owner_ui.service.database.item(v.item_id);tooltip_text=d.name+"\n"+d.description
+	var d: Dictionary=owner_ui.service.database.item(v.item_id);tooltip_text=owner_ui.service.stack_name(v)+"\n"+d.description
 	if d.get("durability")!=null:
 		bar.show();bar.max_value=d.durability;bar.value=v.durability
 		var track := StyleBoxFlat.new();track.bg_color=Color("c6baa4");bar.add_theme_stylebox_override("background",track)

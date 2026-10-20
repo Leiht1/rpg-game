@@ -1,0 +1,31 @@
+{
+  "status": "approved_and_integrated",
+  "route": "local:codex-cli",
+  "art_source": "host_image",
+  "model": "codex-image_gen; underlying image model undisclosed",
+  "actual_cost": "unknown",
+  "prompt": "art/roasted-fish-icon-v1/prompt.txt",
+  "contract": "art/roasted-fish-icon-v1/contract.json",
+  "source": "art/roasted-fish-icon-v1/candidate-01/generated.png",
+  "source_sha256": "dc3374a772e6ba354197496ad9e8867937c2d5e6799446666a1a12089304f763",
+  "receipt": "art/roasted-fish-icon-v1/candidate-01/job.json",
+  "candidate": "prototypes/roasted-fish-icon-v1/final/roasted_fish.png",
+  "candidate_sha256": "e3ff79edf6cab95231edb588c8f6119e44ac48c5d98cee6be17cdb7c2b153700",
+  "size": [
+    256,
+    256
+  ],
+  "alpha_bbox": [
+    16,
+    61,
+    240,
+    195
+  ],
+  "qa": "prototypes/roasted-fish-icon-v1/processed-256/pipeline-meta.json",
+  "review": "reports/roasted-fish-icon-v1/size-review.png",
+  "runtime_modified": true,
+  "approval_quote": "确认，可以替换",
+  "approval_date": "2026-10-20",
+  "approval_scope": "本批烤鱼图标；不批准未来素材",
+  "formal": "assets/cooking/fish-v1/roasted_fish.png"
+}

@@ -258,8 +258,9 @@ func refresh() -> void:
 	if active:
 		var output: String=manager.rules.recipes[row.recipe].output
 		var visible_output: bool=row.ready or manager.known(row.recipe) or manager.rules.recipes[row.recipe].get("legacy_only",false)
-		output_icon.texture=world.item_service.texture(output,"icon") if visible_output else null
-		output_text.text=("%s ×1 · 饥饿 +%d · %s"%[db.item(output).name,db.item(output).effects.hunger,"可领取" if row.ready else "制作中"]) if visible_output else "？ 神秘料理 · 制作中"
+		var output_stack: Dictionary=row.get("output",{"item_id":output,"count":1})
+		output_icon.texture=world.item_service.stack_texture(output_stack,"icon") if visible_output else null
+		output_text.text=("%s ×1 · 饥饿 +%d · %s"%[world.item_service.stack_name(output_stack),db.item(output).effects.hunger,"可领取" if row.ready else "制作中"]) if visible_output else "？ 神秘料理 · 制作中"
 	cook_button.disabled=active or not row.lit or not enough or (mode=="book" and not revealed)
 	claim_button.disabled=not row.ready
 
@@ -341,7 +342,7 @@ func _process(delta: float) -> void:
 			return
 		var reason: String=manager.placement_reason(at)
 		if not building_id.is_empty():
-			if world.item_service.inventory.slots!=expected_slots: reason="背包已变化，请取消后重新建造"
+			if not preload("res://scripts/food_freshness.gd").matches_slots(world.item_service.inventory.slots,expected_slots): reason="背包已变化，请取消后重新建造"
 			elif not manager.build_check(building_id).is_empty(): reason=manager.build_check(building_id)
 		ghost.modulate=Color(.65,1,.65,.75) if reason.is_empty() else Color(1,.55,.45,.7)
 		placement_tip.text=("可以放置" if reason.is_empty() else reason)+" · 左键放置 / 右键或E取消"

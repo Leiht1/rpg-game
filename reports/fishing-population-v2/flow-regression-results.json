@@ -1,0 +1,532 @@
+{
+	"captured": false,
+	"checks": [
+		{
+			"name": "direct preview.tscn initializes with three lakeshore fish spots",
+			"pass": true
+		},
+		{
+			"name": "candidate rod uses original 256 canvas and original 0.24 held size",
+			"pass": true
+		},
+		{
+			"name": "all candidate textures imported and loaded",
+			"pass": true
+		},
+		{
+			"name": "uses project default 1280x720 only",
+			"pass": true
+		},
+		{
+			"name": "world/environment save paths disabled before initialization",
+			"pass": true
+		},
+		{
+			"name": "fish definition is local to preview database",
+			"pass": true
+		},
+		{
+			"name": "starts with one equipped rod in original inventory",
+			"pass": true
+		},
+		{
+			"name": "whole school footprint stays in water 0",
+			"pass": true
+		},
+		{
+			"name": "all ripple phases clipped to water 0",
+			"pass": true
+		},
+		{
+			"name": "fish spot 0 is actual water",
+			"pass": true
+		},
+		{
+			"name": "fish spot 0 is near safe walkable shore",
+			"pass": true
+		},
+		{
+			"name": "same selector finds near fish spot 0",
+			"pass": true
+		},
+		{
+			"name": "whole school footprint stays in water 1",
+			"pass": true
+		},
+		{
+			"name": "all ripple phases clipped to water 1",
+			"pass": true
+		},
+		{
+			"name": "fish spot 1 is actual water",
+			"pass": true
+		},
+		{
+			"name": "fish spot 1 is near safe walkable shore",
+			"pass": true
+		},
+		{
+			"name": "same selector finds near fish spot 1",
+			"pass": true
+		},
+		{
+			"name": "whole school footprint stays in water 2",
+			"pass": true
+		},
+		{
+			"name": "all ripple phases clipped to water 2",
+			"pass": true
+		},
+		{
+			"name": "fish spot 2 is actual water",
+			"pass": true
+		},
+		{
+			"name": "fish spot 2 is near safe walkable shore",
+			"pass": true
+		},
+		{
+			"name": "same selector finds near fish spot 2",
+			"pass": true
+		},
+		{
+			"name": "far from fish cannot interact",
+			"pass": true
+		},
+		{
+			"name": "without equipped fishing rod cannot begin",
+			"pass": true
+		},
+		{
+			"name": "open inventory prevents accidental fishing start",
+			"pass": true
+		},
+		{
+			"name": "E turns to existing right-side rig and starts cast",
+			"pass": true
+		},
+		{
+			"name": "fishing owns movement without leaking a generic tool action",
+			"pass": true
+		},
+		{
+			"name": "side cast changes from backswing to forward delivery",
+			"pass": true
+		},
+		{
+			"name": "side-only native rig left0.0",
+			"pass": true
+		},
+		{
+			"name": "fixed feet and native mirror left0.0",
+			"pass": true
+		},
+		{
+			"name": "rod remains registered at original hand left0.0",
+			"pass": true
+		},
+		{
+			"name": "side-only native rig left0.3",
+			"pass": true
+		},
+		{
+			"name": "fixed feet and native mirror left0.3",
+			"pass": true
+		},
+		{
+			"name": "rod remains registered at original hand left0.3",
+			"pass": true
+		},
+		{
+			"name": "side-only native rig left0.52",
+			"pass": true
+		},
+		{
+			"name": "fixed feet and native mirror left0.52",
+			"pass": true
+		},
+		{
+			"name": "rod remains registered at original hand left0.52",
+			"pass": true
+		},
+		{
+			"name": "side-only native rig left0.84",
+			"pass": true
+		},
+		{
+			"name": "fixed feet and native mirror left0.84",
+			"pass": true
+		},
+		{
+			"name": "rod remains registered at original hand left0.84",
+			"pass": true
+		},
+		{
+			"name": "side-only native rig right0.0",
+			"pass": true
+		},
+		{
+			"name": "fixed feet and native mirror right0.0",
+			"pass": true
+		},
+		{
+			"name": "rod remains registered at original hand right0.0",
+			"pass": true
+		},
+		{
+			"name": "side-only native rig right0.3",
+			"pass": true
+		},
+		{
+			"name": "fixed feet and native mirror right0.3",
+			"pass": true
+		},
+		{
+			"name": "rod remains registered at original hand right0.3",
+			"pass": true
+		},
+		{
+			"name": "side-only native rig right0.52",
+			"pass": true
+		},
+		{
+			"name": "fixed feet and native mirror right0.52",
+			"pass": true
+		},
+		{
+			"name": "rod remains registered at original hand right0.52",
+			"pass": true
+		},
+		{
+			"name": "side-only native rig right0.84",
+			"pass": true
+		},
+		{
+			"name": "fixed feet and native mirror right0.84",
+			"pass": true
+		},
+		{
+			"name": "rod remains registered at original hand right0.84",
+			"pass": true
+		},
+		{
+			"name": "cast automatically enters waiting",
+			"pass": true
+		},
+		{
+			"name": "runtime line starts exactly at registered rod tip",
+			"pass": true
+		},
+		{
+			"name": "runtime line terminates at float top",
+			"pass": true
+		},
+		{
+			"name": "float stays on selected water target",
+			"pass": true
+		},
+		{
+			"name": "active input consumes menu, movement, E and hotbar keys",
+			"pass": true
+		},
+		{
+			"name": "echo cannot submit a timing attempt",
+			"pass": true
+		},
+		{
+			"name": "float disappears and large bite cue precedes minigame",
+			"pass": true
+		},
+		{
+			"name": "bite opens lightweight timing bar",
+			"pass": true
+		},
+		{
+			"name": "circle marker moves across the bar",
+			"pass": true
+		},
+		{
+			"name": "first Space success randomizes safe region",
+			"pass": true
+		},
+		{
+			"name": "rapid repeated Space cannot count as second success",
+			"pass": true
+		},
+		{
+			"name": "two successful Space inputs enter success sequence",
+			"pass": true
+		},
+		{
+			"name": "success hides bar, lifts fish above water and draws splash",
+			"pass": true
+		},
+		{
+			"name": "successful catch gives exactly one fish through original obtained signal",
+			"pass": true
+		},
+		{
+			"name": "reward has once-only guard",
+			"pass": true
+		},
+		{
+			"name": "existing obtained FIFO displays real fish icon/name/count",
+			"pass": true
+		},
+		{
+			"name": "success restores movement and releases UI",
+			"pass": true
+		},
+		{
+			"name": "three misses fail",
+			"pass": true
+		},
+		{
+			"name": "failure gives no fish or obtained notification",
+			"pass": true
+		},
+		{
+			"name": "three expired rounds fail without trapping player",
+			"pass": true
+		},
+		{
+			"name": "Esc cancels waiting and clears line/lock",
+			"pass": true
+		},
+		{
+			"name": "Esc cancels minigame with no reward",
+			"pass": true
+		},
+		{
+			"name": "equipment loss cancels safely",
+			"pass": true
+		},
+		{
+			"name": "losing focus cancels safely",
+			"pass": true
+		},
+		{
+			"name": "full inventory releases fish, emits no obtained result",
+			"pass": true
+		},
+		{
+			"name": "200 randomized narrower safe zones stay legal and varied",
+			"pass": true
+		},
+		{
+			"name": "ring crossing real irregular shoreline drops land sections",
+			"pass": true
+		},
+		{
+			"name": "loot thresholds exactly fish 98.5 percent coin 1 percent chest 0.5 percent",
+			"pass": true
+		},
+		{
+			"name": "rare item registered formally gold_coin",
+			"pass": true
+		},
+		{
+			"name": "rare item has candidate texture and no use action gold_coin",
+			"pass": true
+		},
+		{
+			"name": "rare success gives exactly one through obtained FIFO gold_coin",
+			"pass": true
+		},
+		{
+			"name": "rare result appears in existing obtained UI gold_coin",
+			"pass": true
+		},
+		{
+			"name": "rare failure gives no loot gold_coin",
+			"pass": true
+		},
+		{
+			"name": "rare item registered formally locked_chest",
+			"pass": true
+		},
+		{
+			"name": "rare item has candidate texture and no use action locked_chest",
+			"pass": true
+		},
+		{
+			"name": "rare success gives exactly one through obtained FIFO locked_chest",
+			"pass": true
+		},
+		{
+			"name": "rare result appears in existing obtained UI locked_chest",
+			"pass": true
+		},
+		{
+			"name": "rare failure gives no loot locked_chest",
+			"pass": true
+		},
+		{
+			"name": "coin description matches requested text",
+			"pass": true
+		},
+		{
+			"name": "automatic facing selects left, never front/back",
+			"pass": true
+		},
+		{
+			"name": "formal reward commits before notification",
+			"pass": true
+		},
+		{
+			"name": "reward survives serialized inventory reload",
+			"pass": true
+		},
+		{
+			"name": "save failure rolls back reward and suppresses obtained notice",
+			"pass": true
+		},
+		{
+			"name": "save failure cannot retry into duplicate reward",
+			"pass": true
+		},
+		{
+			"name": "formal lake points generated sparsely",
+			"pass": true
+		},
+		{
+			"name": "formal generated points have walkable banks and full water footprint",
+			"pass": true
+		},
+		{
+			"name": "formal controller has no candidate dependency",
+			"pass": true
+		},
+		{
+			"name": "preview save request is a successful no-op",
+			"pass": true
+		},
+		{
+			"name": "all existing player JSON/tmp names and hashes unchanged after play and explicit save/close",
+			"pass": true
+		},
+		{
+			"name": "formal entry, configuration, original rod, native rig and production scripts unchanged",
+			"pass": true
+		},
+		{
+			"name": "teardown also leaves player saves untouched",
+			"pass": true
+		},
+		{
+			"name": "ordinary world automatically initializes fishing without preview flag",
+			"pass": true
+		},
+		{
+			"name": "ordinary world does not inject test rods or rewards",
+			"pass": true
+		},
+		{
+			"name": "ordinary idle world has no global fishing tutorial",
+			"pass": true
+		},
+		{
+			"name": "ordinary-world isolated fixture also preserves player files",
+			"pass": true
+		}
+	],
+	"display": "headless",
+	"engine": "4.7.2-stable (official)",
+	"fail": 0,
+	"formal_hashes": {
+		"Start-Playtest.cmd": "7b1507bc1a6d94307f69017a4ee21942ac18029a783b438440d679f23d29e8c2",
+		"assets/hero/cartoon/character.tscn": "ca333699ff9fa7cf9975f322569cffa6ac3013ccc20edfa0a9eba58048d3e1b3",
+		"assets/hero/cartoon/harvest_actions.tres": "e65628858512b8dd2be356f19ae530a030dadbdc9469dd8c439c98594e4c1923",
+		"assets/industry/v1/fishing_rod.png": "7023a424f37bd27a89af6942f05ddd9f8f0e92e5df8eda2f5f93a8ded34ee7fa",
+		"data/held_tools.json": "3b1ae168853328c1ade382d348ab3dc6d9aef3a05d563a7320b04e770b339d47",
+		"data/items.json": "e5582767c048a550d633015aea61b86c06382fe1656376f94a645e71cce6275d",
+		"project.godot": "06e286f3c25d33bcc5459c04776e36117027807858db17e845d5754d60567b39",
+		"scripts/item_service.gd": "f241f004ff606c2ba59a0b2ff8a2ade3cbcf9feca95632882d4b5087fe4eaf2b",
+		"scripts/player.gd": "3294ca97f0bf91f1cd5fe26898522460f7f75c442d34600331ee6d68af3ab6f1",
+		"scripts/world.gd": "d0e343b1187641cc8dadc542ff6d6dd18828f5056bde68e46062d48a8ba2d30c",
+		"scripts/world_interaction.gd": "0c4facc05ebaf7cb98d8ad9f86c6834ea22583bd19c0db19d1d38d8f44c531ed"
+	},
+	"pass": 107,
+	"phases": [
+		"idle",
+		"cast",
+		"wait",
+		"bite",
+		"game",
+		"success",
+		"idle",
+		"cast",
+		"wait",
+		"bite",
+		"game",
+		"failure",
+		"idle",
+		"cast",
+		"wait",
+		"bite",
+		"game",
+		"failure",
+		"idle",
+		"cast",
+		"wait",
+		"idle",
+		"cast",
+		"wait",
+		"bite",
+		"game",
+		"idle",
+		"cast",
+		"idle",
+		"cast",
+		"idle",
+		"cast",
+		"wait",
+		"bite",
+		"game",
+		"success",
+		"idle",
+		"cast",
+		"wait",
+		"bite",
+		"game",
+		"success",
+		"idle",
+		"cast",
+		"wait",
+		"bite",
+		"game",
+		"failure",
+		"idle",
+		"cast",
+		"wait",
+		"bite",
+		"game",
+		"success",
+		"idle",
+		"cast",
+		"wait",
+		"bite",
+		"game",
+		"failure",
+		"idle",
+		"cast",
+		"idle",
+		"cast",
+		"wait",
+		"bite",
+		"game",
+		"success",
+		"idle",
+		"cast",
+		"wait",
+		"bite",
+		"game",
+		"success",
+		"idle"
+	],
+	"player_save_files_compared": 15,
+	"resolution": [
+		1280,
+		720
+	]
+}

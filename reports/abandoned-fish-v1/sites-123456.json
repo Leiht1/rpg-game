@@ -1,0 +1,206 @@
+{
+	"camps": [
+		{
+			"group": "0",
+			"kinds": [
+				"wood_chest",
+				"workbench",
+				"straw_mat",
+				"wood_fence"
+			],
+			"x": 8981.4287109375,
+			"y": 11878.0
+		},
+		{
+			"group": "1",
+			"kinds": [
+				"wood_chest",
+				"wood_bed",
+				"stone_path",
+				"wood_fence"
+			],
+			"x": 10437.4287109375,
+			"y": 23788.572265625
+		},
+		{
+			"group": "2",
+			"kinds": [
+				"wood_chest",
+				"workbench",
+				"straw_mat",
+				"wood_floor",
+				"wood_fence"
+			],
+			"x": 32032.25,
+			"y": 31341.25
+		}
+	],
+	"checks": [
+		{
+			"name": "item database validates",
+			"pass": true
+		},
+		{
+			"name": "new world generates three grouped camps",
+			"pass": true
+		},
+		{
+			"name": "multiple structures in camp 0",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:0",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:1",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:2",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:3",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:4",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:5",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:6",
+			"pass": true
+		},
+		{
+			"name": "spawn clearance 0",
+			"pass": true
+		},
+		{
+			"name": "living camp and broken enclosure 0",
+			"pass": true
+		},
+		{
+			"name": "multiple structures in camp 1",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:0",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:1",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:2",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:3",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:4",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:5",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:6",
+			"pass": true
+		},
+		{
+			"name": "spawn clearance 1",
+			"pass": true
+		},
+		{
+			"name": "living camp and broken enclosure 1",
+			"pass": true
+		},
+		{
+			"name": "multiple structures in camp 2",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:0",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:1",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:2",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:3",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:4",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:5",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:6",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:7",
+			"pass": true
+		},
+		{
+			"name": "spawn clearance 2",
+			"pass": true
+		},
+		{
+			"name": "living camp and broken enclosure 2",
+			"pass": true
+		},
+		{
+			"name": "generated buildings and loot validate",
+			"pass": true
+		},
+		{
+			"name": "entire site clear and connected 0",
+			"pass": true
+		},
+		{
+			"name": "resource and mineral clearance 0",
+			"pass": true
+		},
+		{
+			"name": "entire site clear and connected 1",
+			"pass": true
+		},
+		{
+			"name": "resource and mineral clearance 1",
+			"pass": true
+		},
+		{
+			"name": "entire site clear and connected 2",
+			"pass": true
+		},
+		{
+			"name": "resource and mineral clearance 2",
+			"pass": true
+		},
+		{
+			"name": "all real player save hashes unchanged",
+			"pass": true
+		}
+	],
+	"count": 41,
+	"failed": 0
+}

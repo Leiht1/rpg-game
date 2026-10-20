@@ -6,6 +6,7 @@ const PREVIOUS_RESOURCE_VERSION := "natural-resources-0.3.1"
 const LEGACY_RESOURCE_VERSION := "natural-resources-0.3.0"
 const Scenery = preload("res://scripts/scenery_catalog.gd")
 var database := ItemDatabase.new()
+var merchant: Node=preload("res://scripts/merchant.gd").new()
 var sleep: RefCounted=preload("res://scripts/sleep_controller.gd").new()
 var sleep_ui: Control
 var planting: RefCounted=preload("res://scripts/planting.gd").new()
@@ -13,6 +14,8 @@ var planting_ui: Control
 var animals: Node
 var builds: RefCounted=preload("res://scripts/camp_buildings.gd").new()
 var industry: RefCounted=preload("res://scripts/industry_service.gd").new()
+var expansion: RefCounted=preload("res://scripts/camp_expansion.gd").new()
+var expansion_ui: Control
 var industry_ui: Control
 var storage_ui: Control
 var inventory := ItemInventory.new(database)
@@ -21,6 +24,7 @@ var craft_busy := false
 var craft_station_id := ""
 
 func workbench_valid(id: String) -> bool:
+	if builds.states.get(id,{}).get("abandoned",false): return false
 	if not builds.states.has(id) or builds.states[id].kind not in ["workbench","metal_workbench"]: return false
 	if not builds.visuals.has(id) or not is_instance_valid(builds.visuals[id]): return false
 	return preload("res://scripts/world_interaction.gd").in_reach(world.stream,world.player.position,builds.visuals[id])
@@ -47,6 +51,7 @@ var loose: Dictionary = {}
 var clock := 0.0
 var dirty := false
 var writable := true
+var fishing_population := preload("res://scripts/fishing_population.gd").new()
 var restored_player_position := false
 var save_path := ""
 var rules: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/natural_resources.json"))
@@ -69,9 +74,12 @@ func notify_build_cost(materials: Dictionary) -> void:
 
 func configure(owner_world: Node, art_preview: bool) -> void:
 	world = owner_world
+	add_child(merchant);merchant.configure(self)
+	fishing_population.configure(world.generator)
 	camps.service=self
 	builds.service=self
 	industry.service=self
+	expansion.service=self
 	planting.service=self
 	animals=preload("res://scripts/animals.gd").new()
 	animals.service=self
@@ -88,13 +96,17 @@ func configure(owner_world: Node, art_preview: bool) -> void:
 	# Once during the loading screen; immutable navigation is shared by workers.
 	prepare_navigation()
 	save_path = "user://items-%s-%d-%d-%s%s.json" % [world.Gen.VERSION,world.world_seed,world.map_cells,RESOURCE_VERSION,"-preview" if preview else ""]
-	if not FileAccess.file_exists(save_path):
+	var existing_world_items: bool=world.persistent_world and FileAccess.file_exists(save_path)
+	if not existing_world_items:
 		for previous in [ECOLOGY_PREVIOUS_VERSION,PREVIOUS_RESOURCE_VERSION,LEGACY_RESOURCE_VERSION]:
 			var legacy := save_path.replace(RESOURCE_VERSION,previous)
-			if FileAccess.file_exists(legacy):
+			if world.persistent_world and FileAccess.file_exists(legacy):
+				existing_world_items=true
 				load_state(legacy,true)
 				break
 	else: load_state()
+	if not existing_world_items and writable:
+		preload("res://scripts/abandoned_camps.gd").generate(self)
 	camps.rebuild()
 	for coord in world.stream.loaded: builds.install(coord)
 	world.stream.items = self
@@ -106,6 +118,7 @@ func configure(owner_world: Node, art_preview: bool) -> void:
 		if database.item(id).use_action=="unpack": notice.emit("打开补给包 · 野胡萝卜×2、燧石×1、遗物碎片×2")
 		elif database.item(id).use_action=="place_sleeping_bag": world.camp_ui.begin_sleeping_bag(int(effect.slot))
 		elif database.item(id).use_action=="place_campfire": world.camp_ui.begin_placement(int(effect.slot))
+		elif database.item(id).use_action=="solar_light": merchant.lights.toggle(int(effect.get("slot",-1)))
 		elif database.item(id).use_action=="light": toggle_lantern(int(effect.get("slot",-1)))
 		else: notice.emit("吃下了%s" % database.item(id).name); food_effect.emit(id,effect))
 
@@ -239,9 +252,16 @@ func toggle_lantern(index: int = -1) -> void:
 	AudioFX.play_sfx("sfx_lantern_on" if lantern.visible else "sfx_lantern_off",world.player.position)
 	dirty=true
 
+func stack_name(value: Dictionary) -> String:
+	var item_name: String=database.item(str(value.get("item_id",""))).get("name","")
+	return item_name+"（腐烂）" if preload("res://scripts/food_freshness.gd").rotten(value) else item_name
+
 func stack_texture(value: Dictionary, kind: String) -> Texture2D:
 	if preload("res://scripts/food_freshness.gd").rotten(value):
-		var path := "res://assets/industry/v1/rotten_"+str(value.item_id)+".png"
+		if value.get("item_id","") in ["lake_fish","roasted_fish","smoked_fish"]:
+			return load("res://assets/camp_expansion/v2/rotten_"+str(value.item_id)+".png")
+		var reused := {"vegetable_fish_soup":"vegetable_soup"}
+		var path := "res://assets/industry/v1/rotten_"+str(reused.get(str(value.item_id),value.item_id))+".png"
 		if ResourceLoader.exists(path):
 			if not texture_cache.has(path): texture_cache[path]=load(path)
 			return texture_cache[path]
@@ -277,7 +297,7 @@ func _process(delta: float) -> void:
 		if dirty: save_state()
 
 func snapshot() -> Dictionary:
-	return {"player_position":{"x":world.player.position.x,"y":world.player.position.y},"animals":animals.serialize(),"ecology_layout_version":2,"planting_cycle_version":2,"body_environment":world.environment_view.body_environment_snapshot(),"buildings":builds.serialize(),"campfires":camps.serialize(),"body":body.serialize(),"lantern_remaining":lantern_remaining,"version":1,"harvest_version":HARVEST_VERSION,"props_version":world.Gen.PROP_VERSION,"resource_hits":resource_hits,"resource_version":RESOURCE_VERSION,"seed":world.world_seed,"map_cells":world.map_cells,"generator":world.Gen.VERSION,"slots":inventory.slots,"selected":inventory.selected,"hotbar_equipment":inventory.hotbar_equipment,"equipment":inventory.equipment,"ore_nodes":ore_nodes,"equipment_quarantine":inventory.quarantined_equipment,"consumed":consumed,"loose":loose,"harvested":world.stream.harvested,"tree_hits":world.stream.tree_hits}
+	return {"merchant":merchant.serialize(),"fishing":fishing_population.serialize(),"player_position":{"x":world.player.position.x,"y":world.player.position.y},"animals":animals.serialize(),"ecology_layout_version":2,"planting_cycle_version":2,"body_environment":world.environment_view.body_environment_snapshot(),"buildings":builds.serialize(),"campfires":camps.serialize(),"body":body.serialize(),"lantern_remaining":lantern_remaining,"version":1,"harvest_version":HARVEST_VERSION,"props_version":world.Gen.PROP_VERSION,"resource_hits":resource_hits,"resource_version":RESOURCE_VERSION,"seed":world.world_seed,"map_cells":world.map_cells,"generator":world.Gen.VERSION,"slots":inventory.slots,"selected":inventory.selected,"hotbar_equipment":inventory.hotbar_equipment,"equipment":inventory.equipment,"ore_nodes":ore_nodes,"equipment_quarantine":inventory.quarantined_equipment,"consumed":consumed,"loose":loose,"harvested":world.stream.harvested,"tree_hits":world.stream.tree_hits}
 
 func organize_bag() -> String:
 	if not writable: return "存档受保护，不能整理"
@@ -334,6 +354,8 @@ func load_state(source_path: String = "", migrate: bool = false) -> void:
 		if preload("res://scripts/food_freshness.gd").cooked(database,entry.item_id):
 			if not entry.has("instance"):entry.instance={"item_id":entry.item_id,"count":entry.count}
 			if not entry.instance is Dictionary or entry.instance.get("item_id")!=entry.item_id or entry.instance.get("count")!=entry.count or not preload("res://scripts/food_freshness.gd").normalize(database,entry.instance):writable=false;return
+	if value.has("merchant") and not merchant.valid(value.merchant):writable=false;return
+	if value.has("fishing") and not fishing_population.valid(value.fishing): writable=false;return
 	if value.has("animals") and not animals.valid(value.animals): writable=false;return
 	if value.has("campfires") and not camps.validate(value.campfires): writable=false;return
 	if value.has("body_environment") and not valid_body_environment(value.body_environment): writable=false;return
@@ -382,8 +404,11 @@ func load_state(source_path: String = "", migrate: bool = false) -> void:
 				plot.growth_minutes=float(progress)/previous_minutes[plot.crop]*float(planting.rules.crops[plot.crop].minutes)
 	if value.has("buildings") and not builds.validate(value.buildings,seen_instances): writable=false;return
 	if not sleep.valid_pair(staged_body,value.get("buildings",{"objects":{}}).objects): writable=false;return
+	if value.has("merchant"):merchant.restore(value.merchant)
+	if value.has("fishing"): fishing_population.restore(value.fishing)
 	if value.has("animals"): animals.restore(value.animals)
 	builds.states=value.get("buildings",{"objects":{}}).objects.duplicate(true)
+	builds.abandoned_version=int(value.get("buildings",{}).get("abandoned_version",0))
 	if value.get("harvest_version",LEGACY_HARVEST_VERSION)!=HARVEST_VERSION: dirty=true
 	for coord in camps.bins.keys(): camps.unload(coord)
 	camps.states=value.get("campfires",{"objects":{}}).objects.duplicate(true)
@@ -725,6 +750,7 @@ func discard(index: int, count: int = 1) -> bool:
 		id="player:%d:%d"%[Time.get_unix_time_from_system()*1000,discard_serial]
 	var entry := {"id":id,"item_id":slot.item_id,"count":amount,"x":place.x,"y":place.y,"origin":"player","mode":"pickup"}
 	entry["instance"]=slot.duplicate(true);entry.instance.count=amount
+	if slot.item_id=="solar_flashlight":entry.instance.state.facing=world.player.facing
 	# Create successfully before removing inventory; never use natural IDs.
 	var animated := entry.duplicate(true)
 	animated["drop_animation"]=true
@@ -739,7 +765,7 @@ func discard(index: int, count: int = 1) -> bool:
 		inventory.slots=before_slots;loose.erase(id);world.stream.drops.erase(node);node.queue_free()
 		notice.emit("保存失败，放下已回滚");return false
 	inventory.changed.emit()
-	notice.emit("放下 %s ×%d"%[database.item(entry.item_id).name,amount])
+	notice.emit("放下 %s ×%d"%[stack_name(entry.get("instance",entry)),amount])
 	return true
 
 func _exit_tree() -> void:
@@ -839,3 +865,4 @@ func valid_body_environment(value: Variant) -> bool:
 		for number in value[key]:
 			if not (number is float or number is int) or not is_finite(float(number)) or number<0 or number>(1000 if key=="weights" else 1): return false
 	return value.get("rng_state") is String and value.rng_state.is_valid_int()
+

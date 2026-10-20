@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "status": "approved_user",
+  "supply_range": 210,
+  "supply_capacity": 99,
+  "supply_threshold": 30,
+  "organic_items": [
+    "plant_fiber",
+    "broad_leaf",
+    "wildflower",
+    "wild_berry",
+    "wild_carrot",
+    "potato",
+    "cabbage",
+    "wild_apple",
+    "brown_mushroom"
+  ],
+  "processes": {
+    "compost_bin": {
+      "minutes": 720,
+      "input_count": 3,
+      "output": "compost_fertilizer"
+    },
+    "advanced_smokehouse": {
+      "minutes": 120,
+      "output": "smoked_fish",
+      "input": "roasted_fish"
+    }
+  },
+  "repairs": {
+    "stone_axe": {
+      "stone": 1
+    },
+    "stone_pickaxe": {
+      "stone": 1
+    },
+    "simple_shovel": {
+      "stone": 1
+    },
+    "stone_hammer": {
+      "stone": 1
+    },
+    "copper_axe": {
+      "copper_parts": 1
+    },
+    "copper_pickaxe": {
+      "copper_parts": 1
+    },
+    "copper_shovel": {
+      "copper_parts": 1
+    },
+    "copper_hammer": {
+      "copper_parts": 1
+    },
+    "shears": {
+      "copper_parts": 1
+    },
+    "fishing_rod": {
+      "copper_parts": 1
+    }
+  },
+  "fertilizer_speed": 1.25
+}

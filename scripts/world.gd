@@ -110,8 +110,11 @@ func _ready() -> void:
 	ui.move_child(item_service.storage_ui,item_ui.get_index())
 	item_service.industry_ui=preload("res://scripts/industry_ui.gd").new()
 	ui.add_child(item_service.industry_ui);item_service.industry_ui.configure(item_service)
+	item_service.expansion_ui=preload("res://scripts/camp_expansion_ui.gd").new()
+	ui.add_child(item_service.expansion_ui);item_service.expansion_ui.configure(item_service)
 	item_service.planting_ui=preload("res://scripts/planting_ui.gd").new()
 	ui.add_child(item_service.planting_ui);item_service.planting_ui.configure(item_service)
+	item_service.merchant.ready_world()
 	map_view.item_screen=item_ui
 	if OS.has_feature("debug"):
 		var resource_debug := preload("res://scripts/resource_debug.gd").new()
@@ -119,6 +122,11 @@ func _ready() -> void:
 		add_child(resource_debug)
 		resource_debug.configure(self)
 	AudioFX.bind_world(self)
+	if not Engine.get_meta("fishing_preview_fixture",false):
+		var fishing := preload("res://scripts/fishing.gd").new()
+		fishing.name="Fishing"
+		add_child(fishing)
+		fishing.configure(self,item_service.fishing_population.spots)
 	if benchmark:
 		player.automated=true
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)

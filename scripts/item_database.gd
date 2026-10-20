@@ -9,6 +9,7 @@ func _init(path: String = "res://data/items.json") -> void:
 	if not rows is Array:
 		errors.append("物品数据不是数组")
 		return
+	rows.append_array(JSON.parse_string(FileAccess.get_file_as_string("res://data/merchant_items.json")))
 	for row in rows:
 		if not row is Dictionary or not row.has("item_id"):
 			errors.append("物品缺少 ID")
@@ -31,3 +32,4 @@ func item(id: String) -> Dictionary:
 
 func ids() -> Array:
 	return definitions.keys()
+

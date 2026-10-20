@@ -1,0 +1,58 @@
+{
+  "status": "pending_user",
+  "approval": null,
+  "route": "generate2dsprite -> built-in image_gen edit",
+  "model": "not exposed by host",
+  "billing": "not exposed by host",
+  "source": "generated.png",
+  "source_sha256": "128efaee3d48efeb099fe428deef1dce148e530f9a9c190b1a2dd5d2fb3ab1da",
+  "prompt": "prompt.txt",
+  "references": [
+    "assets/fishing/v1/fish.png",
+    "assets/cooking/fish-v1/roasted_fish.png",
+    "prototypes/camp-expansion-v2/final/smoked_fish.png"
+  ],
+  "processing": "Exact equal 724x724 ownership crops, unscaled padded to896, soft chroma-key, Lanczos256, feet registration; no painted pixels removed.",
+  "records": [
+    {
+      "item_id": "lake_fish",
+      "source_rect": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "file": "prototypes/rotten-fish-v1/final/rotten_lake_fish.png",
+      "sha256": "69b60829e849a3755ee984432ea1a977c87e3c6496ef5d78b6e9621f90655298",
+      "qa": "art/rotten-fish-v1/processed-despill/lake_fish/pipeline-meta.json"
+    },
+    {
+      "item_id": "roasted_fish",
+      "source_rect": [
+        724,
+        0,
+        1448,
+        724
+      ],
+      "file": "prototypes/rotten-fish-v1/final/rotten_roasted_fish.png",
+      "sha256": "90529d51652c9763ea832be9c0ec16fb47ace0f53b1f045fede6075162a81c6a",
+      "qa": "art/rotten-fish-v1/processed/roasted_fish/pipeline-meta.json"
+    },
+    {
+      "item_id": "smoked_fish",
+      "source_rect": [
+        1448,
+        0,
+        2172,
+        724
+      ],
+      "file": "prototypes/rotten-fish-v1/final/rotten_smoked_fish.png",
+      "sha256": "d0c0b2718c65a4d54e3c91af2f51858793c4dd6912297105ba098fa0a90c8874",
+      "qa": "art/rotten-fish-v1/processed/smoked_fish/pipeline-meta.json"
+    }
+  ],
+  "scope": "camp expansion candidate only; official assets unchanged",
+  "qa_history": [
+    "First lake_fish: key_ring_spill WARN value0.087655 threshold0.01 (processed/lake_fish/clean.png); retained as superseded record. Reprocessed with despill-radius1; all three final QA envelopes pass."
+  ]
+}

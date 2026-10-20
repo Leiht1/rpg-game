@@ -58,3 +58,20 @@ dist/
 
 # Isolated industry interaction V2 snapshots.
 /reports/industry-refine-v2/isolated-save.json
+
+# Isolated abandoned camp / fish validation snapshots.
+/reports/abandoned-fish-v1/*save.json
+
+/reports/build-freshness-v1/*save.json
+
+# Candidate camp expansion uses only disposable isolated snapshots.
+/reports/camp-expansion-v2/*save.json
+
+# Local test / preview launchers stay on disk and are not pushed.
+*.cmd
+
+# Runtime logs, duplicate release checks and disposable test snapshots.
+*.log
+/prototypes/.native_rig_release_check/
+/prototypes/biome-v02/save-check.json
+/reports/chest-volume-render-v2/save-observation.json

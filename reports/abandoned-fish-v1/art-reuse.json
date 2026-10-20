@@ -1,0 +1,27 @@
+{
+  "status": "reuse_existing_approved_assets_no_new_art",
+  "date": "2026-10-20",
+  "notes": "生鱼复用正式钓鱼图；烤鱼暂复用烤蘑菇，鱼汤暂复用蔬菜汤；对应腐坏暂复用现有腐坏图。没有生成或批准专属鱼料理新图。",
+  "assets": [
+    {
+      "path": "assets/fishing/v1/fish.res",
+      "sha256": "c623cfdef770de2984b8e9be2db867820b6acf011f8881c1bc9bbfc83f487c0a"
+    },
+    {
+      "path": "assets/campfire/v1/roasted_mushroom.png",
+      "sha256": "6539fe7dfba4fdc8b6bdf7014be394dc89ac20f1a2c2385fc4ddfeb89ff244fc"
+    },
+    {
+      "path": "assets/cooking/v2/vegetable_soup.png",
+      "sha256": "e312220d507defa86aef764bb0579ce05bd975609661f6f5c8e14ef3a2bfc86a"
+    },
+    {
+      "path": "assets/industry/v1/rotten_roasted_mushroom.png",
+      "sha256": "e492cca15ce46b955f5df82b026ebb3897cf56efde0d00a028ee5c9ac259cc6b"
+    },
+    {
+      "path": "assets/industry/v1/rotten_vegetable_soup.png",
+      "sha256": "25d8deb6a85e3c92327299872cb88776576c7162282b89f82e2a0fc609c3b6f6"
+    }
+  ]
+}

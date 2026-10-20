@@ -1,6 +1,6 @@
 extends RefCounted
 ## One contract for selection, hints and execution. Names never grant abilities.
-const BASIC := ["animal","sow","cook","pickup","open","talk","inspect","sleep"]
+const BASIC := ["fertilize","animal","sow","cook","pickup","open","talk","inspect","sleep"]
 const VERBS := {"sow":"播种","sleep":"睡觉","cook":"烹饪","pickup":"拾取","open":"打开","talk":"交谈","inspect":"查看","chop":"砍伐","mine":"开采","dig":"挖掘"}
 const NEEDS := {"chop":"斧头","mine":"镐子","dig":"铲子"}
 
@@ -12,6 +12,7 @@ static func action_for(target: Node2D) -> String:
 		if manager.service.inventory.has_capability("demolish"): return "demolish"
 		if target.get_meta("building_id","")!="":
 			var row: Dictionary=manager.states.get(target.building_id,{})
+			if row.get("abandoned",false): return ""
 			if row.get("kind","")=="tilled_soil": return manager.service.planting.action(target.building_id)
 			if not row.is_empty() and (row.layer in ["ground","overlay"] or row.kind in ["stone_wall","wood_fence","camp_torch"]): return ""
 	if target.is_in_group("drops"): return "pickup"
@@ -33,6 +34,10 @@ static func in_reach(stream: Node, at: Vector2, target: Node2D) -> bool:
 	return at.distance_to(point)<distance and stream.clear_reach(at,point,target)
 
 static func reach_point(at: Vector2, target: Node2D) -> Vector2:
+	if target.get_meta("building_id","")!="" and not target.manager.volume_profile(str(target.manager.states.get(target.building_id,{}).get("kind",""))).is_empty():
+		var row: Dictionary=target.manager.states[target.building_id]
+		var bounds: Rect2=target.manager.footprint_rect(row)
+		return target.to_global(target.to_local(at).clamp(bounds.position,bounds.end))
 	if target.get_meta("interaction_action","")=="sleep":
 		var row: Dictionary=target.manager.states.get(target.building_id,{})
 		if not row.is_empty():
@@ -74,6 +79,7 @@ static func caption(target: Node2D, inventory: ItemInventory) -> String:
 	if not allowed(inventory,action): return "需要"+str(NEEDS.get(action,action))
 	if action=="demolish": return "E 敲击拆除"
 	if target.get_meta("planting_soil",false):
+		if action=="fertilize":return "E 施肥"
 		return "E 清除残根" if action=="dig" else "E 采集成熟作物" if action=="pickup" else "E 选择种子"
 	if action=="open" and target.get_meta("building_id","")!="":
 		var row: Dictionary=target.manager.states.get(target.building_id,{})
@@ -87,10 +93,12 @@ static func caption(target: Node2D, inventory: ItemInventory) -> String:
 static func execute(stream: Node, player: Node2D, target: Node2D) -> bool:
 	if not in_reach(stream,player.position,target): return false
 	var action := action_for(target)
+	if player.action=="fertilize" and action!="fertilize":return false
 	if not allowed(stream.items.inventory if stream.items else null,action): return false
 	var body = player.get("body")
 	if body!=null and (body.down or body.sleep_active() or (action in ["chop","mine","dig","demolish"] and not body.can_labor(action,player.action==action))): return false
 	if target.get_meta("building_id","")!="" and stream.items.builds.states.get(target.building_id,{}).get("kind","")=="tilled_soil" and action!="demolish":
+		if action=="fertilize":return stream.items.planting.fertilize(target.building_id,target)
 		if action=="sow":return stream.items.planting_ui.open(target.building_id)
 		return stream.items.planting.interact(target.building_id,target)
 	var success := false

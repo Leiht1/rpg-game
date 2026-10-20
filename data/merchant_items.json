@@ -1,0 +1,128 @@
+[
+  {
+    "item_id": "solar_flashlight",
+    "name": "太阳能手电筒",
+    "category": "tool",
+    "description": "现代太阳能手电筒。主手装备后按朝向照明；晴朗白天地面充电，天亮自动关闭。",
+    "icon": "res://assets/merchant/v1/solar_flashlight.png",
+    "world_visual": "res://assets/merchant/v1/solar_flashlight.png",
+    "max_stack": 1,
+    "usable": true,
+    "use_action": "solar_light",
+    "consumable": false,
+    "tags": [
+      "dimensional"
+    ],
+    "rarity": "rare",
+    "drop_rules": {
+      "source": "异次元商人",
+      "habitat": "trade_only",
+      "chance": 0.0
+    },
+    "effects": {},
+    "world_size": 30,
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "tool",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "tool:solar_flashlight",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "modern_outfit",
+    "name": "时髦服装",
+    "category": "outfit",
+    "description": "来自另一边的现代夹克，轻巧的面料上缀着醒目的色块。",
+    "icon": "res://assets/merchant/v1/modern_outfit.png",
+    "world_visual": "res://assets/merchant/v1/modern_outfit.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "dimensional"
+    ],
+    "rarity": "rare",
+    "drop_rules": {
+      "source": "异次元商人",
+      "habitat": "trade_only",
+      "chance": 0.0
+    },
+    "effects": {},
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "frequency_blade",
+    "name": "高频切割刃",
+    "category": "material",
+    "description": "精密的高频切割刃，细窄的刃口泛着冷光。",
+    "icon": "res://assets/merchant/v1/frequency_blade.png",
+    "world_visual": "res://assets/merchant/v1/frequency_blade.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "dimensional"
+    ],
+    "rarity": "rare",
+    "drop_rules": {
+      "source": "异次元商人",
+      "habitat": "trade_only",
+      "chance": 0.0
+    },
+    "effects": {},
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "unknown_alloy",
+    "name": "未知合金",
+    "category": "material",
+    "description": "带着冷色光泽的未知合金，异常轻盈，表面有细密的纹路。",
+    "icon": "res://assets/merchant/v1/unknown_alloy.png",
+    "world_visual": "res://assets/merchant/v1/unknown_alloy.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "dimensional"
+    ],
+    "rarity": "rare",
+    "drop_rules": {
+      "source": "异次元商人",
+      "habitat": "trade_only",
+      "chance": 0.0
+    },
+    "effects": {},
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  }
+]
+
+

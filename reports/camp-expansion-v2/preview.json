@@ -1,0 +1,78 @@
+{
+	"checks": [
+		{
+			"name": "candidate preview disables all player save IO",
+			"pass": true
+		},
+		{
+			"name": "preview places all fifteen functional comparison facilities",
+			"pass": true
+		},
+		{
+			"name": "preview building records validate",
+			"pass": true
+		},
+		{
+			"name": "preview crop supplies",
+			"pass": true
+		},
+		{
+			"name": "candidate precision_repair_bench collider matches its individual base",
+			"pass": true
+		},
+		{
+			"name": "candidate precision_repair_bench opens through world interaction",
+			"pass": true
+		},
+		{
+			"name": "candidate fuel_supply_box collider matches its individual base",
+			"pass": true
+		},
+		{
+			"name": "candidate fuel_supply_box opens through world interaction",
+			"pass": true
+		},
+		{
+			"name": "candidate compost_bin collider matches its individual base",
+			"pass": true
+		},
+		{
+			"name": "candidate compost_bin opens through world interaction",
+			"pass": true
+		},
+		{
+			"name": "candidate advanced_smokehouse collider matches its individual base",
+			"pass": true
+		},
+		{
+			"name": "candidate advanced_smokehouse opens through world interaction",
+			"pass": true
+		},
+		{
+			"name": "wood_bed still accepts sleep in candidate camp",
+			"pass": true
+		},
+		{
+			"name": "wood_bed wakes with original lifecycle",
+			"pass": true
+		},
+		{
+			"name": "straw_mat still accepts sleep in candidate camp",
+			"pass": true
+		},
+		{
+			"name": "straw_mat wakes with original lifecycle",
+			"pass": true
+		},
+		{
+			"name": "V panel contains candidate smokehouse from start",
+			"pass": true
+		},
+		{
+			"name": "all actual player save hashes unchanged",
+			"pass": true
+		}
+	],
+	"count": 18,
+	"failed": 0
+}

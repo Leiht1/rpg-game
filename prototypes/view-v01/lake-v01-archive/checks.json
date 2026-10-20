@@ -1,0 +1,163 @@
+{
+  "candidate_version": "windrest-view-0.1.0",
+  "checks": [
+    {
+      "detail": {
+        "after": 133,
+        "before": 284,
+        "seed": 271828,
+        "spawn_biome": "山地"
+      },
+      "name": "lake thinning 271828",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "same seed lake retention 271828",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "retained lake geometry 271828",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "macro sites unchanged 271828",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "spawn inherits macro ground 271828",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "spawn safe movement 271828",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "props reproducible 271828",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "no fixed spawn samples / obstacle clearance 271828",
+      "pass": true
+    },
+    {
+      "detail": {
+        "after": 134,
+        "before": 280,
+        "seed": 81273,
+        "spawn_biome": "草原"
+      },
+      "name": "lake thinning 81273",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "same seed lake retention 81273",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "retained lake geometry 81273",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "macro sites unchanged 81273",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "spawn inherits macro ground 81273",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "spawn safe movement 81273",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "props reproducible 81273",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "no fixed spawn samples / obstacle clearance 81273",
+      "pass": true
+    },
+    {
+      "detail": {
+        "after": 149,
+        "before": 292,
+        "seed": 902106,
+        "spawn_biome": "草原"
+      },
+      "name": "lake thinning 902106",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "same seed lake retention 902106",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "retained lake geometry 902106",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "macro sites unchanged 902106",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "spawn inherits macro ground 902106",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "spawn safe movement 902106",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "props reproducible 902106",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "name": "no fixed spawn samples / obstacle clearance 902106",
+      "pass": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": 0,
+  "lake_counts": [
+    {
+      "after": 133,
+      "before": 284,
+      "seed": 271828,
+      "spawn_biome": "山地"
+    },
+    {
+      "after": 134,
+      "before": 280,
+      "seed": 81273,
+      "spawn_biome": "草原"
+    },
+    {
+      "after": 149,
+      "before": 292,
+      "seed": 902106,
+      "spawn_biome": "草原"
+    }
+  ],
+  "note": "Map images are generated data visualization, not new painted terrain assets. No full regression or performance benchmark."
+}

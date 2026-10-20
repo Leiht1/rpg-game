@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "206fea0f221050211be30aa0e0118fed949acb1afdce2d6772d316f1bcf2e1de",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-16T05:07:30.464Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-16T05:07:30.464Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "Actual rear-view head for independent puppet preview, no face",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a142ce-8c0d-7dd3-aa94-a502f9863598",
+    "source": "CODEX_HOME/generated_images/01a142ce-8c0d-7dd3-aa94-a502f9863598/exec-ada46c33-d6b6-4624-b2e2-9e612ca8608d.png",
+    "sourceSha256": "4808e3078c199a257b0eb091d3172fe087fbe64d6204bdbedfc2db5b9e2ccb2a",
+    "sourceMtime": "2026-10-16T05:06:42Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "4808e3078c199a257b0eb091d3172fe087fbe64d6204bdbedfc2db5b9e2ccb2a",
+    "bytes": 984580,
+    "format": "PNG",
+    "size": [
+      1399,
+      1124
+    ]
+  }
+}

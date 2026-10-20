@@ -1,0 +1,170 @@
+{
+  "front_head.png": {
+    "source_region": [
+      0,
+      0,
+      540,
+      500
+    ],
+    "alpha_crop": [
+      30,
+      82,
+      490,
+      448
+    ],
+    "logical_size": [
+      56,
+      45
+    ],
+    "density": 4,
+    "sha256": "b4879db7c1c1aa6131ede6ddbfbee906aa0b3addf81bb90db85d1218e7b57fa7",
+    "source_file": "source.png"
+  },
+  "front_torso.png": {
+    "source_region": [
+      550,
+      0,
+      860,
+      500
+    ],
+    "alpha_crop": [
+      44,
+      196,
+      253,
+      424
+    ],
+    "logical_size": [
+      24,
+      24
+    ],
+    "density": 4,
+    "sha256": "37e19edb6b3ee349c1036232e4aa1117ea51dfda07d52f33d83efe8ad02f2e2f",
+    "source_file": "source.png"
+  },
+  "front_arm.png": {
+    "source_region": [
+      900,
+      0,
+      1130,
+      500
+    ],
+    "alpha_crop": [
+      64,
+      178,
+      151,
+      450
+    ],
+    "logical_size": [
+      8,
+      25
+    ],
+    "density": 4,
+    "sha256": "8d70857ee0ce294c09a8274cbfcbe7339c3cb672805ef6e8f3716bd9323e9c21",
+    "source_file": "source.png"
+  },
+  "front_leg.png": {
+    "source_region": [
+      1200,
+      0,
+      1500,
+      500
+    ],
+    "alpha_crop": [
+      83,
+      186,
+      201,
+      451
+    ],
+    "logical_size": [
+      9,
+      27
+    ],
+    "density": 4,
+    "sha256": "aac9ea1e471f6285e02237862875fd351d364a7d80a60aa8c7e55f0fb35f6612",
+    "source_file": "pant_fix_source.png"
+  },
+  "side_head.png": {
+    "source_region": [
+      0,
+      510,
+      540,
+      1024
+    ],
+    "alpha_crop": [
+      37,
+      31,
+      517,
+      396
+    ],
+    "logical_size": [
+      56,
+      45
+    ],
+    "density": 4,
+    "sha256": "6b258174cb9071ad4a7bf88b2e26d17151ebccbfcb9b9fcf4ec1ffa38b27c59c",
+    "source_file": "source.png"
+  },
+  "side_torso.png": {
+    "source_region": [
+      550,
+      510,
+      860,
+      1024
+    ],
+    "alpha_crop": [
+      61,
+      146,
+      225,
+      383
+    ],
+    "logical_size": [
+      20,
+      24
+    ],
+    "density": 4,
+    "sha256": "096a5b9faaba913db0bff78e8d645987653062c0abea7c4f76e1488a2118b8a0",
+    "source_file": "source.png"
+  },
+  "side_arm.png": {
+    "source_region": [
+      900,
+      510,
+      1130,
+      1024
+    ],
+    "alpha_crop": [
+      64,
+      145,
+      151,
+      409
+    ],
+    "logical_size": [
+      8,
+      25
+    ],
+    "density": 4,
+    "sha256": "493a16b16cdaa685e0cbcf9c38083d9aeb65875766f318a8a36693e1284966d2",
+    "source_file": "source.png"
+  },
+  "side_leg.png": {
+    "source_region": [
+      1200,
+      510,
+      1500,
+      1024
+    ],
+    "alpha_crop": [
+      90,
+      146,
+      206,
+      404
+    ],
+    "logical_size": [
+      9,
+      27
+    ],
+    "density": 4,
+    "sha256": "da106c24d0aaf7b2a931991b00458b3bdf2728d81a5077927b640827fbd6b0b3",
+    "source_file": "source.png"
+  }
+}

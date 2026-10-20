@@ -267,7 +267,7 @@ func build(at: Vector2, recipe_id: String, expected_slots: Array) -> String:
 		return service.builds.place(row,expected_slots)
 	var reason := build_check(recipe_id)
 	if not reason.is_empty(): return reason
-	if service.inventory.slots!=expected_slots: return "背包已变化，请重新选择建造"
+	if not preload("res://scripts/food_freshness.gd").matches_slots(service.inventory.slots,expected_slots): return "背包已变化，请重新选择建造"
 	reason=placement_reason(at)
 	if not reason.is_empty(): return reason
 	busy=true

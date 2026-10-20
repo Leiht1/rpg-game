@@ -1,0 +1,128 @@
+{
+  "wood_chest": {
+    "width": 60,
+    "max_height": 43,
+    "collision": [
+      -23,
+      -10,
+      46,
+      20
+    ]
+  },
+  "reinforced_cabinet": {
+    "width": 69,
+    "max_height": 82,
+    "collision": [
+      -25,
+      -13,
+      50,
+      26
+    ]
+  },
+  "refrigerator": {
+    "width": 78,
+    "max_height": 91,
+    "collision": [
+      -28,
+      -16,
+      56,
+      32
+    ],
+    "art": "res://assets/camp_expansion/v2/refrigerator.png"
+  },
+  "workbench": {
+    "width": 102,
+    "max_height": 63,
+    "collision": [
+      -40,
+      -13,
+      80,
+      26
+    ]
+  },
+  "copper_oven": {
+    "width": 104,
+    "max_height": 96,
+    "collision": [
+      -34,
+      -20,
+      68,
+      40
+    ]
+  },
+  "metal_workbench": {
+    "width": 118,
+    "max_height": 84,
+    "collision": [
+      -46,
+      -18,
+      92,
+      36
+    ]
+  },
+  "stone_furnace": {
+    "width": 132,
+    "max_height": 146,
+    "collision": [
+      -42,
+      -25,
+      84,
+      50
+    ]
+  },
+  "signpost": {
+    "width": 38,
+    "max_height": 66,
+    "collision": [
+      -8,
+      -6,
+      16,
+      12
+    ]
+  },
+  "wool_carpet": {
+    "width": 144,
+    "max_height": 96,
+    "collision": []
+  },
+  "precision_repair_bench": {
+    "width": 112,
+    "max_height": 74,
+    "collision": [
+      -43,
+      -15,
+      86,
+      30
+    ]
+  },
+  "fuel_supply_box": {
+    "width": 90,
+    "max_height": 80,
+    "collision": [
+      -32,
+      -19,
+      64,
+      38
+    ]
+  },
+  "compost_bin": {
+    "width": 56,
+    "max_height": 43,
+    "collision": [
+      -21,
+      -12,
+      42,
+      24
+    ]
+  },
+  "advanced_smokehouse": {
+    "width": 126,
+    "max_height": 144,
+    "collision": [
+      -43,
+      -25,
+      86,
+      50
+    ]
+  }
+}

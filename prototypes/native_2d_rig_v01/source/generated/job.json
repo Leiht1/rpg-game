@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "7f63bf2b975731c650b64e915333897eea784585a91d84de98b4970f70e6449b",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-16T02:19:26.891Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-16T02:19:26.891Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "New complete neutral rig atlas, not cut from v11 walking frames",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a1427b-e5d2-7710-a0a2-407505138580",
+    "source": "CODEX_HOME/generated_images/01a1427b-e5d2-7710-a0a2-407505138580/exec-ffcd6b9f-c6dd-4c32-ac98-bed51908b1ba.png",
+    "sourceSha256": "c75a59ee077b639213b9606aca56538330e11b8dbd26ab11f543922accd7a09f",
+    "sourceMtime": "2026-10-16T02:18:56Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "c75a59ee077b639213b9606aca56538330e11b8dbd26ab11f543922accd7a09f",
+    "bytes": 905001,
+    "format": "PNG",
+    "size": [
+      1448,
+      1086
+    ]
+  }
+}

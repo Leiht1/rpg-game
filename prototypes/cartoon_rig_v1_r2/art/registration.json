@@ -1,0 +1,170 @@
+{
+  "front_head": {
+    "source_file": "source.png",
+    "source_region": [
+      0,
+      0,
+      560,
+      508
+    ],
+    "alpha_crop": [
+      26,
+      32,
+      534,
+      502
+    ],
+    "logical_size": [
+      52,
+      49
+    ],
+    "density": 4,
+    "construction": "arm includes sleeve; leg includes shorts tube; torso has hip band only; head no neck"
+  },
+  "front_torso": {
+    "source_file": "torso_source.png",
+    "source_region": [
+      0,
+      0,
+      887,
+      887
+    ],
+    "alpha_crop": [
+      337,
+      190,
+      862,
+      734
+    ],
+    "logical_size": [
+      28,
+      28
+    ],
+    "density": 4,
+    "construction": "arm includes sleeve; leg includes shorts tube; torso has hip band only; head no neck"
+  },
+  "front_arm": {
+    "source_file": "source.png",
+    "source_region": [
+      950,
+      100,
+      1170,
+      510
+    ],
+    "alpha_crop": [
+      36,
+      45,
+      174,
+      397
+    ],
+    "logical_size": [
+      12,
+      31
+    ],
+    "density": 4,
+    "construction": "arm includes sleeve; leg includes shorts tube; torso has hip band only; head no neck"
+  },
+  "front_leg": {
+    "source_file": "source.png",
+    "source_region": [
+      1230,
+      90,
+      1510,
+      510
+    ],
+    "alpha_crop": [
+      29,
+      35,
+      233,
+      410
+    ],
+    "logical_size": [
+      14,
+      31
+    ],
+    "density": 4,
+    "construction": "arm includes sleeve; leg includes shorts tube; torso has hip band only; head no neck"
+  },
+  "side_head": {
+    "source_file": "source.png",
+    "source_region": [
+      0,
+      508,
+      560,
+      1024
+    ],
+    "alpha_crop": [
+      30,
+      1,
+      525,
+      434
+    ],
+    "logical_size": [
+      52,
+      49
+    ],
+    "density": 4,
+    "construction": "arm includes sleeve; leg includes shorts tube; torso has hip band only; head no neck"
+  },
+  "side_torso": {
+    "source_file": "torso_source.png",
+    "source_region": [
+      887,
+      0,
+      1774,
+      887
+    ],
+    "alpha_crop": [
+      140,
+      176,
+      553,
+      736
+    ],
+    "logical_size": [
+      23,
+      28
+    ],
+    "density": 4,
+    "construction": "arm includes sleeve; leg includes shorts tube; torso has hip band only; head no neck"
+  },
+  "side_arm": {
+    "source_file": "source.png",
+    "source_region": [
+      950,
+      540,
+      1170,
+      1024
+    ],
+    "alpha_crop": [
+      26,
+      53,
+      181,
+      415
+    ],
+    "logical_size": [
+      12,
+      31
+    ],
+    "density": 4,
+    "construction": "arm includes sleeve; leg includes shorts tube; torso has hip band only; head no neck"
+  },
+  "side_leg": {
+    "source_file": "source.png",
+    "source_region": [
+      1230,
+      540,
+      1536,
+      1024
+    ],
+    "alpha_crop": [
+      61,
+      45,
+      258,
+      420
+    ],
+    "logical_size": [
+      14,
+      31
+    ],
+    "density": 4,
+    "construction": "arm includes sleeve; leg includes shorts tube; torso has hip band only; head no neck"
+  }
+}

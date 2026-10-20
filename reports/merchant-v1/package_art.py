@@ -1,0 +1,14 @@
+from pathlib import Path
+import shutil,json,hashlib
+p=Path('prototypes/merchant-v1/final')
+for i,name in enumerate(['flashlight_side','flashlight_front','flashlight_back','modern_outfit','frequency_blade','unknown_alloy'],1):shutil.copyfile(f'art/merchant-v1/props-processed/sheet-{i}.png',p/f'{name}.png')
+shutil.copyfile(p/'flashlight_side.png',p/'solar_flashlight.png')
+shutil.copyfile('art/merchant-v1/merchant-processed/clean.png',p/'merchant.png')
+f=Path('scripts/item_ui.gd');s=f.read_text(encoding='utf-8-sig').replace('elif modal_stack.item_id=="solar_flashlight":service.merchant.lights.toggle(index)','elif service.inventory.get_slot(index).get("item_id")=="solar_flashlight":service.merchant.lights.toggle(index)');f.write_text(s,encoding='utf-8')
+f=Path('scripts/solar_flashlight.gd');s=f.read_text(encoding='utf-8-sig');a=s.index('\tif not is_instance_valid(bar):');b=s.index('\tfor entry in service.loose.values():',a);s=s[:a]+s[b:];s=s.replace('var bar: ProgressBar\n','');f.write_text(s,encoding='utf-8')
+f=Path('scripts/body_ui.gd');s=f.read_text(encoding='utf-8-sig');needle='\tif not active.is_empty(): lamp_icon.texture=items.service.texture(str(active.item_id),"icon")';assert needle in s;s=s.replace(needle,needle+'\n\tvar torch: Dictionary=items.service.inventory.equipment.get("main_hand",{})\n\tif torch.get("item_id")=="solar_flashlight":\n\t\tlamp.visible=hud.visible and items.dock.visible\n\t\tlamp_icon.texture=items.service.texture("solar_flashlight","icon");fuel.value=float(torch.state.energy)\n\t\tstyle_bar(fuel,Color("8fe4ef"))');f.write_text(s,encoding='utf-8')
+provenance={'status':'pending_user','approval':None,'scope':'Isolated Start-Merchant-Preview only; no assets/ replacement','sources':[],'files':{},'qa':{'raw':'art/merchant-v1/props-raw-qc/sheet-qc.json','props':'art/merchant-v1/props-processed/pipeline-meta.json','merchant':'art/merchant-v1/merchant-processed/pipeline-meta.json'},'processing':'generate2dsprite soft chroma key; center-aligned 256px props; 512px single character; copy only; no repaint; left/right mirror same side prop','references':['art/animals-style-v2/hero-reference.png']}
+for kind in ['merchant','props']:
+ source=Path(f'art/merchant-v1/{kind}-generated/generated.png');provenance['sources'].append({'route':'generate2dsprite -> generate2dmedia route_media -> Codex (local CLI)','model':'codex-image_gen','source':str(source),'sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'prompt':f'art/merchant-v1/{kind}-prompt.txt','job':f'art/merchant-v1/{kind}-generated/job.json','estimateUsd':0.0})
+for file in p.glob('*.png'):provenance['files'][str(file)]=hashlib.sha256(file.read_bytes()).hexdigest()
+Path('art/merchant-v1/provenance.json').write_text(json.dumps(provenance,ensure_ascii=False,indent=2),encoding='utf-8')

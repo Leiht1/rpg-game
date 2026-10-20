@@ -1,0 +1,26 @@
+{
+	"checks": [
+		{
+			"name": "formal icon and world reference roasted_fish",
+			"pass": true
+		},
+		{
+			"name": "approved hash roasted_fish",
+			"pass": true
+		},
+		{
+			"name": "inventory world and loose texture load roasted_fish",
+			"pass": true
+		},
+		{
+			"name": "ordinary formal mode without art switch",
+			"pass": true
+		},
+		{
+			"name": "formal recipe card icon roast_fish",
+			"pass": true
+		}
+	],
+	"count": 5,
+	"failed": 0
+}

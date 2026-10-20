@@ -53,7 +53,7 @@ func ready_reason() -> String:
 	return ""
 
 func available(id: String) -> bool:
-	return service.builds.states.has(id) and not Rules.facility(str(service.builds.states[id].kind)).is_empty() and service.builds.states[id].get("sleep_state","PLACED")=="PLACED"
+	return service.builds.states.has(id) and not service.builds.states[id].get("abandoned",false) and not Rules.facility(str(service.builds.states[id].kind)).is_empty() and service.builds.states[id].get("sleep_state","PLACED")=="PLACED"
 
 func start(id: String, option: String="maximum", forced: bool=false) -> String:
 	var error := ready_reason()

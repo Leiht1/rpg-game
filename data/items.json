@@ -1920,8 +1920,8 @@
     "name": "冰箱",
     "category": "material",
     "description": "",
-    "icon": "res://assets/industry/v1/refrigerator.png",
-    "world_visual": "res://assets/industry/v1/refrigerator.png",
+    "icon": "res://assets/camp_expansion/v2/refrigerator.png",
+    "world_visual": "res://assets/camp_expansion/v2/refrigerator.png",
     "max_stack": 1,
     "usable": false,
     "use_action": "",
@@ -2465,5 +2465,359 @@
     "industry": true,
     "food_kind": "cooked",
     "shelf_days": 2.5
+  },
+  {
+    "item_id": "lake_fish",
+    "name": "湖鱼",
+    "category": "food",
+    "description": "新鲜湖鱼，不能生吃，可在篝火烹饪。",
+    "icon": "res://assets/fishing/v1/fish.res",
+    "world_visual": "res://assets/fishing/v1/fish.res",
+    "max_stack": 30,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "fishing",
+      "food",
+      "ingredient"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "湖泊钓鱼"
+    },
+    "effects": {},
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "food_kind": "raw_fish",
+    "shelf_days": 2.5
+  },
+  {
+    "item_id": "gold_coin",
+    "name": "金币",
+    "category": "material",
+    "description": "闪闪发光，看起来很值钱。",
+    "icon": "res://assets/fishing/v1/coin.res",
+    "world_visual": "res://assets/fishing/v1/coin.res",
+    "max_stack": 30,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "fishing"
+    ],
+    "rarity": "rare",
+    "drop_rules": {
+      "source": "湖泊钓鱼"
+    },
+    "effects": {},
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "locked_chest",
+    "name": "密码锁宝箱",
+    "category": "material",
+    "description": "带着密码锁的宝箱。",
+    "icon": "res://assets/fishing/v1/locked_chest.res",
+    "world_visual": "res://assets/fishing/v1/locked_chest.res",
+    "max_stack": 30,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "fishing"
+    ],
+    "rarity": "rare",
+    "drop_rules": {
+      "source": "湖泊钓鱼"
+    },
+    "effects": {},
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "roasted_fish",
+    "name": "烤鱼",
+    "category": "food",
+    "description": "篝火慢烤的湖鱼。",
+    "icon": "res://assets/cooking/fish-v1/roasted_fish.png",
+    "world_visual": "res://assets/cooking/fish-v1/roasted_fish.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 18
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
+  },
+  {
+    "item_id": "vegetable_fish_soup",
+    "name": "蔬菜鱼汤",
+    "category": "food",
+    "description": "湖鱼与卷心菜煮成的热汤。",
+    "icon": "res://assets/cooking/v2/vegetable_soup.png",
+    "world_visual": "res://assets/cooking/v2/vegetable_soup.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "篝火烹饪"
+    },
+    "effects": {
+      "hunger": 28
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "food_kind": "cooked",
+    "shelf_days": 2.5
+  },
+  {
+    "item_id": "precision_repair_bench",
+    "name": "精密维修台",
+    "category": "material",
+    "description": "消耗少量材料修复仍存在的磨损工具。",
+    "icon": "res://assets/camp_expansion/v2/precision_repair_bench.png",
+    "world_visual": "res://assets/camp_expansion/v2/precision_repair_bench.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry": true
+  },
+  {
+    "item_id": "fuel_supply_box",
+    "name": "自动燃料供给箱",
+    "category": "material",
+    "description": "储存真实燃料，给附近熔炉与烤箱补充，不自动开火。",
+    "icon": "res://assets/camp_expansion/v2/fuel_supply_box.png",
+    "world_visual": "res://assets/camp_expansion/v2/fuel_supply_box.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry": true
+  },
+  {
+    "item_id": "compost_bin",
+    "name": "发酵堆肥桶",
+    "category": "material",
+    "description": "发酵腐坏食物和植物，制成加速本季生长的肥料。",
+    "icon": "res://assets/camp_expansion/v2/compost_bin.png",
+    "world_visual": "res://assets/camp_expansion/v2/compost_bin.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry": true
+  },
+  {
+    "item_id": "advanced_smokehouse",
+    "name": "高级熏制房",
+    "category": "material",
+    "description": "用湖鱼和木材制作耐储存的烟熏鱼。",
+    "icon": "res://assets/camp_expansion/v2/advanced_smokehouse.png",
+    "world_visual": "res://assets/camp_expansion/v2/advanced_smokehouse.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "营地建造"
+    },
+    "effects": {
+      "hunger": 3
+    },
+    "world_size": 42,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "industry": true
+  },
+  {
+    "item_id": "compost_fertilizer",
+    "name": "发酵肥料",
+    "category": "material",
+    "description": "在生长中的耕地旁按 E 施肥，本季生长速度提高25%，每季一次。",
+    "icon": "res://assets/camp_expansion/v2/compost_fertilizer.png",
+    "world_visual": "res://assets/camp_expansion/v2/compost_fertilizer.png",
+    "max_stack": 99,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "wood",
+      "craft"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "habitat": "meadow",
+      "chance": 0.2,
+      "source": "纤维草本"
+    },
+    "effects": {},
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null
+  },
+  {
+    "item_id": "smoked_fish",
+    "name": "熏制烤鱼",
+    "category": "food",
+    "description": "烤鱼经木烟熏制，适合远行储备，可存放三十个游戏日。",
+    "icon": "res://assets/camp_expansion/v2/smoked_fish.png",
+    "world_visual": "res://assets/camp_expansion/v2/smoked_fish.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [
+      "cooked",
+      "food"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "高级熏制房"
+    },
+    "effects": {
+      "hunger": 22
+    },
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "food_kind": "cooked",
+    "shelf_days": 30.0,
+    "chilled_shelf_days": 30.0
   }
 ]

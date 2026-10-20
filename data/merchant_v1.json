@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "migration_minutes": 5760,
+  "capacity": 100.0,
+  "discharge_minutes": 480.0,
+  "charge_minutes": 360.0,
+  "sunrise": 300,
+  "sunset": 1020,
+  "beam_length": 360,
+  "beam_half_angle": 0.38,
+  "dialogue": [
+    "你有吃的吗？我用别的东西跟你换。",
+    "别盯着看，这些东西不是这里造得出来的。",
+    "上一个世界里，这玩意儿只是日用品。",
+    "有时候我也忘了，自己到底从哪边来的。",
+    "太阳落下去之前，有些东西还能再充一点。",
+    "别问我怎么来的，问就是路走错了。",
+    "我见过比这更亮的夜晚，也见过不会熄灭的灯。",
+    "这个地方安静得可怕……但也挺适合做买卖。",
+    "你们这里的人，居然还会把鱼烤得这么认真。",
+    "我卖的不是宝贝，只是你们这里没有。",
+    "有些门一旦打开，人就再也回不去了。",
+    "我带来的东西不多，能换到什么，全看你身上有什么。",
+    "昨天我还在另一边，今天就到这里了。别问是哪一边。",
+    "我不收钱。钱这种东西，不是每个地方都认。",
+    "有的材料你们叫不出名字，我也不确定它原本是不是这么叫。",
+    "我带来的这些东西，在别处可能只是垃圾。",
+    "有些光照得太远了，连影子都会变得奇怪。",
+    "等你见过更多东西，就知道我不算最奇怪的。",
+    "别担心，我卖的东西大多不会爆炸。大多。",
+    "这地方没有电，可我带来的东西偏偏都想吃光。"
+  ],
+  "products": {
+    "solar_flashlight": [
+      {
+        "gold_ingot": 2,
+        "silver_ingot": 4,
+        "copper_parts": 8,
+        "roasted_fish": 3
+      },
+      {
+        "gold_ingot": 2,
+        "silver_ingot": 3,
+        "copper_parts": 10,
+        "smoked_fish": 2
+      },
+      {
+        "gold_ingot": 3,
+        "silver_ingot": 2,
+        "copper_parts": 8,
+        "vegetable_fish_soup": 2
+      }
+    ],
+    "modern_outfit": [
+      {
+        "gold_ingot": 2,
+        "wool": 8,
+        "silver_ingot": 2,
+        "smoked_fish": 2
+      },
+      {
+        "gold_ingot": 2,
+        "wool": 10,
+        "copper_parts": 6,
+        "roasted_fish": 3
+      },
+      {
+        "gold_ingot": 3,
+        "wool": 6,
+        "silver_ingot": 2,
+        "vegetable_fish_soup": 2
+      }
+    ],
+    "frequency_blade": [
+      {
+        "gold_ingot": 4,
+        "silver_ingot": 5,
+        "copper_parts": 10,
+        "smoked_fish": 2
+      },
+      {
+        "gold_ingot": 4,
+        "silver_ingot": 4,
+        "copper_parts": 12,
+        "vegetable_fish_soup": 2
+      },
+      {
+        "gold_ingot": 5,
+        "silver_ingot": 3,
+        "copper_parts": 10,
+        "roasted_fish": 4
+      }
+    ],
+    "unknown_alloy": [
+      {
+        "gold_ingot": 3,
+        "silver_ingot": 4,
+        "copper_parts": 8,
+        "smoked_fish": 1
+      },
+      {
+        "gold_ingot": 3,
+        "silver_ingot": 3,
+        "copper_parts": 10,
+        "roasted_fish": 3
+      },
+      {
+        "gold_ingot": 4,
+        "silver_ingot": 2,
+        "wool": 6,
+        "vegetable_fish_soup": 2
+      }
+    ]
+  }
+}

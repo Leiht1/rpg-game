@@ -1,0 +1,50 @@
+[
+  {
+    "name": "precision_repair_bench",
+    "ownership_rect": [
+      0,
+      0,
+      768,
+      470
+    ],
+    "padding": "unscaled centered in 896x768, no painted pixel removed",
+    "runtime": "prototypes\\camp-expansion-front-v2\\final\\precision_repair_bench.png",
+    "sha256": "d83aed5ac57fdf696cece401e06c548ee4450940f44516b64723bbf282d6f6d2"
+  },
+  {
+    "name": "fuel_supply_box",
+    "ownership_rect": [
+      768,
+      0,
+      1536,
+      470
+    ],
+    "padding": "unscaled centered in 896x768, no painted pixel removed",
+    "runtime": "prototypes\\camp-expansion-front-v2\\final\\fuel_supply_box.png",
+    "sha256": "4154b1e4c643a4246c2fadc5d133fd813d20dd92e3fa1feacaac55f8f3c9f858"
+  },
+  {
+    "name": "compost_bin",
+    "ownership_rect": [
+      0,
+      470,
+      768,
+      1024
+    ],
+    "padding": "unscaled centered in 896x768, no painted pixel removed",
+    "runtime": "prototypes\\camp-expansion-front-v2\\final\\compost_bin.png",
+    "sha256": "048f43b4524c33b6be084e27da5df0697077125a5c1b96cdd2386f03561737a9"
+  },
+  {
+    "name": "advanced_smokehouse",
+    "ownership_rect": [
+      768,
+      470,
+      1536,
+      1024
+    ],
+    "padding": "unscaled centered in 896x768, no painted pixel removed",
+    "runtime": "prototypes\\camp-expansion-front-v2\\final\\advanced_smokehouse.png",
+    "sha256": "0a37e8426b6a51a699a513731f0c6d098a6c4b84a318e0aacc50ab0e33e7469f"
+  }
+]

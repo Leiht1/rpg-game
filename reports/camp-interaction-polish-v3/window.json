@@ -1,0 +1,326 @@
+{
+	"checks": [
+		{
+			"name": "supply compact frame",
+			"pass": true
+		},
+		{
+			"name": "supply main only has deposit action",
+			"pass": true
+		},
+		{
+			"name": "supply displays total separately",
+			"pass": true
+		},
+		{
+			"name": "secondary fuel selector opens",
+			"pass": true
+		},
+		{
+			"name": "fuel selector uses real icon",
+			"pass": true
+		},
+		{
+			"name": "opening selector consumes nothing",
+			"pass": true
+		},
+		{
+			"name": "cancel selector consumes nothing",
+			"pass": true
+		},
+		{
+			"name": "material card selects wood",
+			"pass": true
+		},
+		{
+			"name": "selected material toggles off",
+			"pass": true
+		},
+		{
+			"name": "secondary quantity accepts native keyboard input",
+			"pass": true
+		},
+		{
+			"name": "secondary confirm deposits chosen quantity",
+			"pass": true
+		},
+		{
+			"name": "inventory and material total update together",
+			"pass": true
+		},
+		{
+			"name": "stored fuel has icon and text",
+			"pass": true
+		},
+		{
+			"name": "backend rejects withdrawal",
+			"pass": true
+		},
+		{
+			"name": "withdraw rejection preserves stock and inventory",
+			"pass": true
+		},
+		{
+			"name": "deposit save failure reported",
+			"pass": true
+		},
+		{
+			"name": "failed deposit rolls back",
+			"pass": true
+		},
+		{
+			"name": "compost frame stays compact after wide repair UI",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "compost button stays inside right edge",
+			"pass": true
+		},
+		{
+			"name": "long compost list scrolls vertically",
+			"pass": true
+		},
+		{
+			"name": "long rotten item name cannot expand scroll width",
+			"pass": true
+		},
+		{
+			"name": "native wheel scrolls compost choices inside frame",
+			"pass": true
+		},
+		{
+			"name": "smokehouse has no description under name",
+			"pass": true
+		},
+		{
+			"name": "smokehouse shrinks after description removal",
+			"pass": true
+		},
+		{
+			"name": "smoking button information unchanged",
+			"pass": true
+		},
+		{
+			"name": "trough shows material summary",
+			"pass": true
+		},
+		{
+			"name": "trough summary has small icon",
+			"pass": true
+		},
+		{
+			"name": "trough summary retains name and quantity",
+			"pass": true
+		},
+		{
+			"name": "feed_trough in planting category",
+			"pass": true
+		},
+		{
+			"name": "compost_bin in planting category",
+			"pass": true
+		},
+		{
+			"name": "E interaction starts fertilizer action",
+			"pass": true
+		},
+		{
+			"name": "fertilizing opens no UI",
+			"pass": true
+		},
+		{
+			"name": "fertilizer not consumed before gesture contact",
+			"pass": true
+		},
+		{
+			"name": "fertilizing reuses bending hand gesture",
+			"pass": true
+		},
+		{
+			"name": "gesture applies fertilizer exactly once",
+			"pass": true
+		},
+		{
+			"name": "successful fertilizer shows minus one",
+			"pass": true
+		},
+		{
+			"name": "crop briefly glows after successful save",
+			"pass": true
+		},
+		{
+			"name": "remaining animation cannot double consume",
+			"pass": true
+		},
+		{
+			"name": "fertilizer save failure rejected",
+			"pass": true
+		},
+		{
+			"name": "failed fertilizer restores crop and inventory without success notice",
+			"pass": true
+		},
+		{
+			"name": "isolated test cannot write player save",
+			"pass": true
+		}
+	],
+	"count": 80,
+	"failed": 0
+}

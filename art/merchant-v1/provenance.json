@@ -1,0 +1,54 @@
+{
+  "status": "approved",
+  "approval": "这几次的修改接入正式游戏了没，没接入的话接一下吧",
+  "scope": "本批八张PNG正式使用，视觉采用回退后的V5魔法阵；不批准未来素材",
+  "sources": [
+    {
+      "route": "generate2dsprite -> generate2dmedia route_media -> Codex (local CLI)",
+      "model": "codex-image_gen",
+      "source": "art\\merchant-v1\\merchant-generated\\generated.png",
+      "sha256": "1c58707c0a28f49b0adf0c1a4ed003850a9c1093a861a628b4954711f325903d",
+      "prompt": "art/merchant-v1/merchant-prompt.txt",
+      "job": "art/merchant-v1/merchant-generated/job.json",
+      "estimateUsd": 0.0,
+      "status": "rejected: too similar to protagonist"
+    },
+    {
+      "route": "generate2dsprite -> generate2dmedia route_media -> Codex (local CLI)",
+      "model": "codex-image_gen",
+      "source": "art\\merchant-v1\\props-generated\\generated.png",
+      "sha256": "493a4cbd44748a451285e122a9e4d610ab66c133adc6dc84de286500a449308a",
+      "prompt": "art/merchant-v1/props-prompt.txt",
+      "job": "art/merchant-v1/props-generated/job.json",
+      "estimateUsd": 0.0,
+      "status": "approved"
+    },
+    {
+      "route": "image_gen edit -> generate2dsprite soft chroma processing",
+      "source": "art/merchant-v1/merchant-revision-v2/generated.png",
+      "sha256": "b0ee45ad0558a8d2587842988c5cf0ef36b4d794eac7aa4bbed4c8213b87c8fd",
+      "prompt": "art/merchant-v1/merchant-revision-v2/prompt.txt",
+      "user_correction": "不要黑皮肤的，要白皮肤",
+      "status": "approved"
+    }
+  ],
+  "files": {
+    "prototypes\\merchant-v1\\final\\flashlight_back.png": "afdfebbafea265c4c0db02d7ea6002d14666fe92102154f4ec099d1ab04a89ee",
+    "prototypes\\merchant-v1\\final\\flashlight_front.png": "55ede91cbef90f2b08869396b9a7a9c2a8f5595891a2b6bfc6bcdb631cb5fdb4",
+    "prototypes\\merchant-v1\\final\\flashlight_side.png": "26aa5ede557bccff628fd4801b959877ed0a7a4d1248bb556a9ac9bdfa41561c",
+    "prototypes\\merchant-v1\\final\\frequency_blade.png": "20e1138e9a0ff5957583a37bc953d8a8899d7eb2ba0f341254036fd748697523",
+    "prototypes\\merchant-v1\\final\\merchant.png": "56b074436ddd9ac2f3e073f118072974bc67efe2bd26b534496e11dc75898814",
+    "prototypes\\merchant-v1\\final\\modern_outfit.png": "3b58ff75776ca504f8220b7b76d036ca8f9782d6132699aaa76a97050ce04b0a",
+    "prototypes\\merchant-v1\\final\\solar_flashlight.png": "26aa5ede557bccff628fd4801b959877ed0a7a4d1248bb556a9ac9bdfa41561c",
+    "prototypes\\merchant-v1\\final\\unknown_alloy.png": "fcbff2b6953ef777ce7cbb23265b53d96739c1083e90214fff834990e1996452"
+  },
+  "qa": {
+    "raw": "art/merchant-v1/props-raw-qc/sheet-qc.json",
+    "props": "art/merchant-v1/props-processed/pipeline-meta.json",
+    "merchant": "art/merchant-v1/merchant-revision-v2/processed/pipeline-meta.json"
+  },
+  "processing": "generate2dsprite soft chroma key; center-aligned 256px props; 512px single character; copy only; no repaint; left/right mirror same side prop",
+  "references": [
+    "art/animals-style-v2/hero-reference.png"
+  ]
+}

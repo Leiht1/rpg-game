@@ -1,0 +1,94 @@
+{
+  "status": "approved_current_selected_batch",
+  "scope": "Fishing V1 isolated preview only; no approval or formal adoption",
+  "art_source": "existing native character rig + generated props; procedural ripples/shadows/splash/line/UI explicitly permitted by request",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "estimateUsd": 0.0,
+  "exact_model_version": "not disclosed",
+  "prompt": "art/fishing-v1/prompt.txt",
+  "receipt": "art/fishing-v1/generated/job.json",
+  "original": "art/fishing-v1/generated/generated.png",
+  "original_sha256": "b06af1c24be36232d899e9ec95292247b2354bede85ca032dd647dccb4d6b99a",
+  "references": [
+    {
+      "path": "assets/hero/cartoon/art/side_head.png",
+      "sha256": "6b258174cb9071ad4a7bf88b2e26d17151ebccbfcb9b9fcf4ec1ffa38b27c59c"
+    },
+    {
+      "path": "assets/industry/v1/fishing_rod.png",
+      "sha256": "7023a424f37bd27a89af6942f05ddd9f8f0e92e5df8eda2f5f93a8ded34ee7fa"
+    }
+  ],
+  "ownership": "art/fishing-v1/ownership.json",
+  "processing": "generate2dsprite process: single 256 / chroma_key magenta / soft / despill 1 / Lanczos / strict QC; no character frame generation",
+  "files": {
+    "rod": {
+      "source": "art/fishing-v1/processed-rod-matched/clean.png",
+      "candidate": "prototypes/fishing-v1/art/rod.png",
+      "sha256": "513dc3a4d893ff95f8c5a40bb98cdce670f5c0236d7f6d246457545053e882ea",
+      "runtime": "prototypes/fishing-v1/art/rod.res",
+      "runtime_sha256": "ee9cb75d925358fe67d0334ae95874d02b3a625c5f4173f52d6bdb5285260da2"
+    },
+    "float": {
+      "source": "art/fishing-v1/processed-float/clean.png",
+      "candidate": "prototypes/fishing-v1/art/float.png",
+      "sha256": "c4643551d97b59373c9b8059affeb9c880dcc9a54fe4ab094f743b3bfd1b5f24",
+      "runtime": "prototypes/fishing-v1/art/float.res",
+      "runtime_sha256": "7abc1ffa96d08674ad3771a773b8c3a650123e047ce807582d2c60b3fda74817"
+    },
+    "fish": {
+      "source": "art/fishing-v1/processed-fish/clean.png",
+      "candidate": "prototypes/fishing-v1/art/fish.png",
+      "sha256": "adf224adf9c71b4e3f83a21fbe8147f387742a351ffe8d5d20d36f7b8dc86f0b",
+      "runtime": "prototypes/fishing-v1/art/fish.res",
+      "runtime_sha256": "c623cfdef770de2984b8e9be2db867820b6acf011f8881c1bc9bbfc83f487c0a"
+    }
+  },
+  "qa": [
+    "art/fishing-v1/qc-rod-matched/sheet-qc.json",
+    "art/fishing-v1/processed-rod-matched/pipeline-meta.json",
+    "art/fishing-v1/qc-float/sheet-qc.json",
+    "art/fishing-v1/processed-float/pipeline-meta.json",
+    "art/fishing-v1/qc-fish/sheet-qc.json",
+    "art/fishing-v1/processed-fish/pipeline-meta.json"
+  ],
+  "pose_source": "prototypes/fishing-v1/side_poses.json",
+  "retention": "Generated original, prompt, receipts, QC and provenance are source records; runtime screenshots under reports/fishing-v1 are temporary pending user review.",
+  "rod_revision": {
+    "user_instruction": "现在游戏里已经可以制作鱼竿了，鱼竿的造型要跟那个保持一致",
+    "prompt": "art/fishing-v1/rod-match-prompt.txt",
+    "receipt": "art/fishing-v1/rod-matched/job.json",
+    "source": "art/fishing-v1/rod-matched/generated.png",
+    "source_sha256": "c075ce0608340267427bc7dc74de965d96c915cbc4c405bf51861e009d38ffd9",
+    "processing": "native_alpha; alpha-hygiene both removes 4595 pixels with alpha <=4; single 256 / Lanczos / strict QC pass",
+    "superseded": "First sheet rod is retained for provenance only; NOT loaded by runtime. Existing brown curved rod/reel/bindings retained in matched revision."
+  },
+  "rod_size_revision": {
+    "user_instruction": "这个鱼竿也太大了吧，要用原来的尺寸",
+    "scale": 0.24,
+    "canvas": [
+      256,
+      256
+    ],
+    "reference": "data/held_tools.json:tool:fishing_rod",
+    "superseded_scale": 0.48,
+    "note": "Original held scale restored; grip and tip remain candidate texture coordinates. No formal file changed."
+  },
+  "qa_warning": {
+    "id": "faint_specks",
+    "value": {
+      "floor_px": 4595,
+      "detached_components": 0
+    },
+    "threshold": 0,
+    "file": "art/fishing-v1/qc-rod-matched/sheet-qc.json",
+    "resolution": "Removed by alpha-hygiene both; processed output QA pass, source warning retained."
+  },
+  "approval": {
+    "quote": "可以，全部接游戏吧",
+    "date": "2026-10-20",
+    "formal_provenance": "assets/fishing/v1/provenance.json",
+    "scope": "本批实际采用五图与当前侧视姿势；历史未采用直杆不纳入"
+  }
+}

@@ -277,7 +277,7 @@
       "wood": 8,
       "metal_connector": 1
     },
-    "category": "生活",
+    "category": "种植",
     "conditions": [],
     "default_unlocked": true,
     "description": "",
@@ -311,5 +311,76 @@
     "default_unlocked": true,
     "description": "",
     "industry": true
+  },
+  {
+    "recipe_id": "build_precision_repair_bench",
+    "output_id": "precision_repair_bench",
+    "output_count": 1,
+    "materials": {
+      "wood": 14,
+      "stone": 12,
+      "flint": 6,
+      "copper_parts": 8,
+      "silver_ingot": 3
+    },
+    "category": "科技",
+    "conditions": [],
+    "default_unlocked": true,
+    "description": "消耗少量材料修复仍存在的磨损工具。",
+    "craft_time": 1.5
+  },
+  {
+    "recipe_id": "build_fuel_supply_box",
+    "output_id": "fuel_supply_box",
+    "output_count": 1,
+    "materials": {
+      "wood": 18,
+      "stone": 18,
+      "plant_fiber": 12,
+      "copper_plate": 6,
+      "copper_parts": 4,
+      "silver_ingot": 4
+    },
+    "category": "科技",
+    "conditions": [],
+    "default_unlocked": true,
+    "description": "储存真实燃料，给附近熔炉与烤箱补充，不自动开火。",
+    "craft_time": 1.5
+  },
+  {
+    "recipe_id": "build_compost_bin",
+    "output_id": "compost_bin",
+    "output_count": 1,
+    "materials": {
+      "wood": 18,
+      "stone": 14,
+      "plant_fiber": 16,
+      "copper_plate": 3,
+      "metal_connector": 2
+    },
+    "category": "种植",
+    "conditions": [],
+    "default_unlocked": true,
+    "description": "发酵腐坏食物和植物，制成加速本季生长的肥料。",
+    "craft_time": 1.5
+  },
+  {
+    "recipe_id": "build_advanced_smokehouse",
+    "output_id": "advanced_smokehouse",
+    "output_count": 1,
+    "materials": {
+      "wood": 28,
+      "stone": 24,
+      "flint": 8,
+      "plant_fiber": 12,
+      "copper_plate": 6,
+      "metal_connector": 4,
+      "silver_ingot": 4
+    },
+    "category": "科技",
+    "conditions": [],
+    "default_unlocked": true,
+    "description": "用湖鱼和木材制作耐储存的烟熏鱼。",
+    "craft_time": 1.5
   }
 ]

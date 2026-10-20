@@ -137,6 +137,7 @@ func _physics_process(delta: float) -> void:
 				AudioFX.play_sfx("sfx_mine_hit" if action=="mine" else "sfx_dig_soil",position)
 		var view := "side" if facing in ["left","right"] else facing
 		var clip_name := ("harvest/" if action in ["mine","dig","demolish"] else "")+view+"_"+("mine" if action=="demolish" else action)
+		if action=="fertilize":clip_name=view+"_pickup"
 		if action=="shear":clip_name="camp/"+view+"_throw_right"
 		if action_clock>=animation_player.get_animation(clip_name).length:
 			if action in ["chop","mine","dig","demolish"] and action_succeeded and hold_chop and Input.is_action_pressed("interact") and is_instance_valid(action_target) and Interaction.in_reach(stream,position,action_target) and Interaction.allowed(equipment_inventory,action) and (body==null or body.can_labor(action)):
@@ -194,6 +195,7 @@ func update_animation() -> void:
 	var view := "side" if facing in ["left","right"] else facing
 	var animation := StringName(("harvest/" if action in ["mine","dig","demolish"] else "")+"%s_%s"%[view,"mine" if next_action=="demolish" else next_action]+("_link" if action=="chop" and chained_chop else ""))
 	if view=="back" and action in ["chop","mine","dig","demolish"]: animation=&"harvest/back_mine"
+	if action=="fertilize": animation=StringName(view+"_pickup")
 	if action=="shear": animation=StringName("camp/%s_throw_right"%view)
 	if action=="feed": animation=StringName("camp/%s_throw_%s"%[view,animal_feed.hand])
 	if action=="throw": animation=StringName("camp/%s_throw_%s"%[view,camp_throw.hand])
@@ -209,7 +211,7 @@ func update_animation() -> void:
 	if animation_player.current_animation!=animation: animation_player.play(animation)
 	animation_player.seek(clock,true)
 	appearance.apply(character,equipment_inventory,facing)
-	held_tool.apply(character,equipment_inventory,facing,"" if action in ["throw","feed"] else action)
+	held_tool.apply(character,equipment_inventory,facing,"" if action in ["throw","feed","fertilize"] else action)
 	if body!=null: preload("res://scripts/body_shape.gd").apply(character,body.build)
 	carried_wood.visible=action=="pickup" and action_succeeded and not harvesting and carried_wood.texture!=null and action_clock<.63
 	carried_wood.modulate.a=clampf((.69-action_clock)/.10,0,1)

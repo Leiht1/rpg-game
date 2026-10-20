@@ -6,6 +6,7 @@ var panel := Panel.new()
 var column := VBoxContainer.new()
 var title := Label.new()
 var status := Label.new()
+var feed_summary := HFlowContainer.new()
 var fuel_bar := ProgressBar.new()
 var fuel_section := VBoxContainer.new()
 var fuel_cards := GridContainer.new()
@@ -54,7 +55,7 @@ func configure(owner_service: Node) -> void:
 	service=owner_service;theme=IndustrySkin.theme();set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);mouse_filter=MOUSE_FILTER_IGNORE;z_index=15
 	add_child(panel);panel.add_theme_stylebox_override("panel",IndustrySkin.frame(18));panel.add_child(column);column.position=Vector2(20,18);column.add_theme_constant_override("separation",8)
 	var header := HBoxContainer.new();column.add_child(header);title.size_flags_horizontal=SIZE_EXPAND_FILL;header.add_child(title);header.add_child(button("关闭",close_panel))
-	column.add_child(status);column.add_child(fuel_section)
+	column.add_child(status);column.add_child(feed_summary);column.add_child(fuel_section)
 	var fuel_line := HBoxContainer.new();fuel_section.add_child(fuel_line);var caption := Label.new();caption.text="燃料";fuel_line.add_child(caption)
 	fuel_bar.max_value=float(service.industry.rules.max_fuel);fuel_bar.show_percentage=false;fuel_bar.size_flags_horizontal=SIZE_EXPAND_FILL;fuel_bar.custom_minimum_size=Vector2(0,18);fuel_line.add_child(fuel_bar)
 	fuel_section.add_child(switches)
@@ -174,9 +175,17 @@ func refresh() -> void:
 	status.text="已开火" if burner and service.industry.burning(row) else "已关火" if burner else ""
 	if m.completed.size()>=int(service.industry.rules.completed_limit):status.text+=" · 产物已满"
 	if row.kind=="feed_trough":
-		var labels: Array=[]
-		for id in m.feed:labels.append(service.database.item(id).name+" ×%d"%int(m.feed[id]))
-		status.text="  ".join(labels) if not labels.is_empty() else "暂无饲料"
+		status.hide()
+	feed_summary.visible=row.kind=="feed_trough"
+	clear(feed_summary)
+	if row.kind=="feed_trough":
+		for id in m.feed:
+			var line := HBoxContainer.new();feed_summary.add_child(line)
+			var icon := TextureRect.new();icon.texture=service.texture(id,"icon");icon.custom_minimum_size=Vector2(24,24);icon.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;icon.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;line.add_child(icon)
+			var label := Label.new();label.text=service.database.item(id).name+" ×%d"%int(m.feed[id]);line.add_child(label)
+		if m.feed.is_empty():
+			var label := Label.new();label.text="暂无饲料";feed_summary.add_child(label)
+	else:status.show()
 	fuel_section.visible=burner or row.kind=="feed_trough";fuel_bar.get_parent().visible=burner;add.text="添加饲料" if row.kind=="feed_trough" else "添加燃料";fuel_bar.value=float(m.fuel)
 	IndustrySkin.progress_style(fuel_bar,true,service.industry.burning(row))
 	separator.visible=burner;switches.visible=burner;ignite.disabled=m.enabled or float(m.fuel)+float(m.legacy_fuel)<=0;extinguish.disabled=not m.enabled
@@ -209,7 +218,7 @@ func refresh_tray() -> void:
 		var empty := Label.new();empty.text="暂无";tray_rows.add_child(empty)
 	for j in jobs:
 		var line := HBoxContainer.new();tray_rows.add_child(line);var image := TextureRect.new();image.texture=service.stack_texture(j.output,"icon");image.custom_minimum_size=Vector2(40,40);image.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;image.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;line.add_child(image)
-		var label := Label.new();label.text=service.database.item(j.output.item_id).name+" ×%d"%int(j.output.count);line.add_child(label)
+		var label := Label.new();label.text=service.stack_name(j.output)+" ×%d"%int(j.output.count);line.add_child(label)
 func _process(dt: float) -> void:
 	if not visible:return
 	if not service.builds.states.has(current) or service.body.sleep_active() or service.world.player.position.distance_to(Vector2(service.builds.states[current].x,service.builds.states[current].y))>100:close_panel();return

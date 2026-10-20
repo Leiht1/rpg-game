@@ -1,3 +1,21 @@
+## 2026-10-20 · 鱼类食用与烹饪 V1
+
+## 2026-10-20 · 烤鱼专属图标正式采用
+
+用户明确“确认，可以替换”。已确认候选按原SHA迁入assets/cooking/fish-v1/roasted_fish.png，正式provenance保留授权原话及范围；data/items.json中烤鱼icon/world_visual统一改为正式路径，普通入口直接使用，旧库存按原ID显示新图，无存档迁移。仅批准本张，不批准未来素材。原pending记录仅为确认前历史。腐坏烤鱼和蔬菜鱼汤仍复用原图，本次未制作对应新图。验证见reports/roasted-fish-formal-v1/REPORT.md。
+
+
+## 2026-10-20 · 烤鱼图标专属候选
+
+用户指出烤鱼仍复用蘑菇图；新增单张金黄整鱼候选，generate2dsprite→route_media→Codex(local CLI)。候选prototypes/roasted-fish-icon-v1/final/roasted_fish.png，来源art/roasted-fish-icon-v1，SHA与pending_user见provenance。256RGBA安全边与抠图结构QA通过，人工查看18/32/48像素；主观画风待用户确认。未改正式物品引用或存档，无运行代码变更，未重复料理回归。报告reports/roasted-fish-icon-v1/REPORT.md。
+
+
+湖鱼沿原ID `lake_fish` 纳入食材，不能生吃。`food_kind=raw_fish` 复用 FoodFreshness 原实例比例、2.5游戏日/冰箱7游戏日、拆分/合并/地面/储物与原子保存；其他原料仍不腐坏，旧湖鱼无字段按新鲜迁移，非法比例保护源档。
+
+仅新增 `roast_fish`（湖鱼1→烤鱼，12秒，饥饿18，默认已知）和 `vegetable_fish_soup`（湖鱼1＋卷心菜1→蔬菜鱼汤，18秒，饥饿28，自由搭配完成后发现）。参数权威来源仍为data/campfire_rules.json与data/items.json。复用原单任务、精确匹配、熄火暂停、待领、满包保护、真实领取后唯一获得提示、食用与熟食腐坏；无额外健康/精力收益。与既有食材消费规则一致，腐坏原料也可投料，不新增腐坏食材禁用策略。
+
+本轮没有新增图片：生鱼用正式钓鱼图；烤鱼暂复用正式烤蘑菇图，鱼汤暂复用正式蔬菜汤图；腐坏表现暂复用对应现有烤蘑菇/蔬菜汤腐坏图。不是专属图标获批，也没有待验收的新候选图。复用文件SHA见reports/abandoned-fish-v1/art-reuse.json；后续专属图需独立候选与具体确认。本轮逻辑可由普通Start-Playtest直接使用，独立试玩见报告。
+
 ## 2026-10-19 · 四道料理图标正式采用
 
 用户确认“还不错，接入游戏吧”，本批四张图标已按获准候选SHA原样迁入assets/cooking/v2，物品icon/world_visual统一引用正式路径，普通入口无需候选开关。批准范围与来源见该目录provenance.json，不扩大到未来素材；旧候选pending记录仅为确认前历史。原图QA警告保留，不重复生成美术。默认1280×720原生窗口17项0失败，覆盖正式模式、四图哈希、背包/地面纹理及食谱图标加载；隔离测试不写玩家档，不重复料理逻辑回归。报告reports/food-formal-v2/REPORT.md。

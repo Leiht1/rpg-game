@@ -1,0 +1,800 @@
+{
+  "status": "pending_user",
+  "approval": null,
+  "scope": "Only isolated camp expansion preview. No official asset replacement.",
+  "sources": [
+    {
+      "route": "generate2dsprite -> generate2dmedia route_media -> local Codex CLI",
+      "job": "generated/job.json",
+      "result": "generated/generated.png",
+      "disposition": "rejected equal-grid layout; original retained"
+    },
+    {
+      "route": "local Codex CLI revision",
+      "prompt": "revision-prompt.txt",
+      "result": "TOOL_UNAVAILABLE: the CLI does not offer its native image tool to this sign-in",
+      "run": "7dd333cd33cc41e6b36f0010d87cc147"
+    },
+    {
+      "route": "built-in image_gen image edit",
+      "model": "not exposed by host tool",
+      "prompt": "builtin-prompt.txt",
+      "result": "revised/generated.png",
+      "sha256": "489f1f6144a4caf0a2265537292f86397d8e1916adf659139ff0e3edcb968c0a",
+      "billing": "host call; exact cost/token quota not exposed; no API key used"
+    }
+  ],
+  "references": [
+    {
+      "path": "art/camp-expansion-v2/generated/generated.png",
+      "sha256": "67eda9eaeba42077389cd454c84b791af39dd1274e9fa4edad85cff64f859489"
+    },
+    {
+      "path": "art/reference/hero.png",
+      "sha256": "b5cf99577c02c053236d86760b9654b7c3fc88210d606dbacf8a2bf6de6dcdbf"
+    },
+    {
+      "path": "art/animals-style-v2/scene-reference.png",
+      "sha256": "8c4708b7e0577d35da5d592e2ed5f33d850c139d46d626a0085d61d34716b15a"
+    },
+    {
+      "path": "assets/environment/view_v01/tree_0.png",
+      "sha256": "ecaa9cc692f4b1e23d8e8ecbf8856a199e4bdf5e6fc42019eb4883361f8282d8"
+    },
+    {
+      "path": "assets/environment/view_v01/rock_0.png",
+      "sha256": "ab4ae57cac51ff5dd1978b6f9bb2893b778cdb2a6df7541b5934d67d71a68243"
+    }
+  ],
+  "ownership": "ownership.json",
+  "processing_script": "process_art.py",
+  "raw_qa": [
+    "raw-qc/sheet-qc.json",
+    "revised-raw-qc/sheet-qc.json"
+  ],
+  "packed_qa": "packed-qc/sheet-qc.json",
+  "outputs": [
+    {
+      "id": "precision_repair_bench",
+      "path": "prototypes/camp-expansion-v2/final/precision_repair_bench.png",
+      "sha256": "3bf9c9cdc2792453ca67f1a4cea6df95ffeaa58c4dda83dddbeeeacf146c1aed",
+      "processing": "art/camp-expansion-v2/processed/precision_repair_bench/pipeline-meta.json",
+      "qa": {
+        "status": "pass",
+        "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+        "notProven": [
+          "pose quality, anatomy, identity and facing",
+          "loop seam, phase order and timing at game size",
+          "colour fidelity of keyed edges beyond the matte_qa residue counts",
+          "that the subject is complete where it does not touch a cell edge"
+        ],
+        "checks": [
+          {
+            "id": "empty_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "paste_clamped_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "output_edge_touch_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "source_edge_touch_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "body_scale_cv",
+            "status": "skipped",
+            "value": 0.0,
+            "threshold": null
+          },
+          {
+            "id": "anchor_y_std",
+            "status": "skipped",
+            "value": 0.0,
+            "threshold": null
+          },
+          {
+            "id": "key_residue",
+            "status": "pass",
+            "value": 0,
+            "threshold": 0
+          },
+          {
+            "id": "key_ring_spill",
+            "status": "pass",
+            "value": 0.0,
+            "threshold": 0.01
+          }
+        ],
+        "inputs": [
+          {
+            "path": "raw.png",
+            "sha256": "38a58634c1b3b56aea61490333b3a4a8a445b2f1bd668688aac6fa7fdf100497",
+            "bytes": 271555
+          }
+        ],
+        "outputs": [
+          {
+            "path": "clean.png",
+            "sha256": "3bf9c9cdc2792453ca67f1a4cea6df95ffeaa58c4dda83dddbeeeacf146c1aed",
+            "bytes": 230665
+          }
+        ],
+        "tool": {
+          "name": "generate2dsprite.py process",
+          "version": "0.4.0"
+        }
+      }
+    },
+    {
+      "id": "fuel_supply_box",
+      "path": "prototypes/camp-expansion-v2/final/fuel_supply_box.png",
+      "sha256": "e36fab7ecbb22499caadbae11a4c6bb1fda1e309e8bc367b0dd8212f65e802c3",
+      "processing": "art/camp-expansion-v2/processed/fuel_supply_box/pipeline-meta.json",
+      "qa": {
+        "status": "pass",
+        "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+        "notProven": [
+          "pose quality, anatomy, identity and facing",
+          "loop seam, phase order and timing at game size",
+          "colour fidelity of keyed edges beyond the matte_qa residue counts",
+          "that the subject is complete where it does not touch a cell edge"
+        ],
+        "checks": [
+          {
+            "id": "empty_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "paste_clamped_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "output_edge_touch_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "source_edge_touch_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "body_scale_cv",
+            "status": "skipped",
+            "value": 0.0,
+            "threshold": null
+          },
+          {
+            "id": "anchor_y_std",
+            "status": "skipped",
+            "value": 0.0,
+            "threshold": null
+          },
+          {
+            "id": "key_residue",
+            "status": "pass",
+            "value": 0,
+            "threshold": 0
+          },
+          {
+            "id": "key_ring_spill",
+            "status": "pass",
+            "value": 0.0,
+            "threshold": 0.01
+          }
+        ],
+        "inputs": [
+          {
+            "path": "raw.png",
+            "sha256": "5f735b8133c49bf888b542be96b8f57340dd1dcb9fdb5a84e79de731bb2befb5",
+            "bytes": 273074
+          }
+        ],
+        "outputs": [
+          {
+            "path": "clean.png",
+            "sha256": "e36fab7ecbb22499caadbae11a4c6bb1fda1e309e8bc367b0dd8212f65e802c3",
+            "bytes": 253302
+          }
+        ],
+        "tool": {
+          "name": "generate2dsprite.py process",
+          "version": "0.4.0"
+        }
+      }
+    },
+    {
+      "id": "compost_bin",
+      "path": "prototypes/camp-expansion-v2/final/compost_bin.png",
+      "sha256": "cde49358f00a2c9de4cb46c75deba2536bc90eb2b7e1827b5c46bbee49617148",
+      "processing": "art/camp-expansion-v2/processed/compost_bin/pipeline-meta.json",
+      "qa": {
+        "status": "pass",
+        "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+        "notProven": [
+          "pose quality, anatomy, identity and facing",
+          "loop seam, phase order and timing at game size",
+          "colour fidelity of keyed edges beyond the matte_qa residue counts",
+          "that the subject is complete where it does not touch a cell edge"
+        ],
+        "checks": [
+          {
+            "id": "empty_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "paste_clamped_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "output_edge_touch_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "source_edge_touch_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "body_scale_cv",
+            "status": "skipped",
+            "value": 0.0,
+            "threshold": null
+          },
+          {
+            "id": "anchor_y_std",
+            "status": "skipped",
+            "value": 0.0,
+            "threshold": null
+          },
+          {
+            "id": "key_residue",
+            "status": "pass",
+            "value": 0,
+            "threshold": 0
+          },
+          {
+            "id": "key_ring_spill",
+            "status": "pass",
+            "value": 0.0,
+            "threshold": 0.01
+          }
+        ],
+        "inputs": [
+          {
+            "path": "raw.png",
+            "sha256": "dcf210b5fc5cf706be497bd88ff7cd40874ecc95a41433d11062c85ead471dc0",
+            "bytes": 227079
+          }
+        ],
+        "outputs": [
+          {
+            "path": "clean.png",
+            "sha256": "cde49358f00a2c9de4cb46c75deba2536bc90eb2b7e1827b5c46bbee49617148",
+            "bytes": 299884
+          }
+        ],
+        "tool": {
+          "name": "generate2dsprite.py process",
+          "version": "0.4.0"
+        }
+      }
+    },
+    {
+      "id": "advanced_smokehouse",
+      "path": "prototypes/camp-expansion-v2/final/advanced_smokehouse.png",
+      "sha256": "47045d980a7c24dc4ef76ce349043b21c75cfa383571df6610e2c4534c472ce3",
+      "processing": "art/camp-expansion-v2/processed/advanced_smokehouse/pipeline-meta.json",
+      "qa": {
+        "status": "pass",
+        "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+        "notProven": [
+          "pose quality, anatomy, identity and facing",
+          "loop seam, phase order and timing at game size",
+          "colour fidelity of keyed edges beyond the matte_qa residue counts",
+          "that the subject is complete where it does not touch a cell edge"
+        ],
+        "checks": [
+          {
+            "id": "empty_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "paste_clamped_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "output_edge_touch_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "source_edge_touch_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "body_scale_cv",
+            "status": "skipped",
+            "value": 0.0,
+            "threshold": null
+          },
+          {
+            "id": "anchor_y_std",
+            "status": "skipped",
+            "value": 0.0,
+            "threshold": null
+          },
+          {
+            "id": "key_residue",
+            "status": "pass",
+            "value": 0,
+            "threshold": 0
+          },
+          {
+            "id": "key_ring_spill",
+            "status": "pass",
+            "value": 0.0,
+            "threshold": 0.01
+          }
+        ],
+        "inputs": [
+          {
+            "path": "raw.png",
+            "sha256": "06a464983dfcdda01e26c112d1f99d766e0d2a4df4f439577ec0dd67ddba9a7b",
+            "bytes": 338446
+          }
+        ],
+        "outputs": [
+          {
+            "path": "clean.png",
+            "sha256": "47045d980a7c24dc4ef76ce349043b21c75cfa383571df6610e2c4534c472ce3",
+            "bytes": 290909
+          }
+        ],
+        "tool": {
+          "name": "generate2dsprite.py process",
+          "version": "0.4.0"
+        }
+      }
+    },
+    {
+      "id": "compost_fertilizer",
+      "path": "prototypes/camp-expansion-v2/final/compost_fertilizer.png",
+      "sha256": "4a8818bbb8767755066560bc3be07d570d00d2dbb2ac649ea3fa3693d63befb9",
+      "processing": "art/camp-expansion-v2/processed/compost_fertilizer/pipeline-meta.json",
+      "qa": {
+        "status": "pass",
+        "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+        "notProven": [
+          "pose quality, anatomy, identity and facing",
+          "loop seam, phase order and timing at game size",
+          "colour fidelity of keyed edges beyond the matte_qa residue counts",
+          "that the subject is complete where it does not touch a cell edge"
+        ],
+        "checks": [
+          {
+            "id": "empty_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "paste_clamped_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "output_edge_touch_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "source_edge_touch_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "body_scale_cv",
+            "status": "skipped",
+            "value": 0.0,
+            "threshold": null
+          },
+          {
+            "id": "anchor_y_std",
+            "status": "skipped",
+            "value": 0.0,
+            "threshold": null
+          },
+          {
+            "id": "key_residue",
+            "status": "pass",
+            "value": 0,
+            "threshold": 0
+          },
+          {
+            "id": "key_ring_spill",
+            "status": "pass",
+            "value": 0.0,
+            "threshold": 0.01
+          }
+        ],
+        "inputs": [
+          {
+            "path": "raw.png",
+            "sha256": "f35493bbad8ff033ee8f4472216aafebaac7299bb1087a2cc03314f99969e2c9",
+            "bytes": 246287
+          }
+        ],
+        "outputs": [
+          {
+            "path": "clean.png",
+            "sha256": "4a8818bbb8767755066560bc3be07d570d00d2dbb2ac649ea3fa3693d63befb9",
+            "bytes": 269641
+          }
+        ],
+        "tool": {
+          "name": "generate2dsprite.py process",
+          "version": "0.4.0"
+        }
+      }
+    },
+    {
+      "id": "smoked_fish",
+      "path": "prototypes/camp-expansion-v2/final/smoked_fish.png",
+      "sha256": "218678509aa6fabcffa9fb301238b53c9a32b4e241ff443c1d4af6e55ffb062a",
+      "processing": "art/camp-expansion-v2/processed/smoked_fish/pipeline-meta.json",
+      "qa": {
+        "status": "pass",
+        "method": "generate2dsprite process geometry v2: alpha above the geometry threshold, 8- or 4-connected components, ground-line anchors, one shared sampling grid with whole-pixel offsets, output-space scale metrics, forge_matte.matte_qa key residue",
+        "notProven": [
+          "pose quality, anatomy, identity and facing",
+          "loop seam, phase order and timing at game size",
+          "colour fidelity of keyed edges beyond the matte_qa residue counts",
+          "that the subject is complete where it does not touch a cell edge"
+        ],
+        "checks": [
+          {
+            "id": "empty_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "paste_clamped_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "output_edge_touch_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "source_edge_touch_frames",
+            "status": "pass",
+            "value": [],
+            "threshold": []
+          },
+          {
+            "id": "body_scale_cv",
+            "status": "skipped",
+            "value": 0.0,
+            "threshold": null
+          },
+          {
+            "id": "anchor_y_std",
+            "status": "skipped",
+            "value": 0.0,
+            "threshold": null
+          },
+          {
+            "id": "key_residue",
+            "status": "pass",
+            "value": 0,
+            "threshold": 0
+          },
+          {
+            "id": "key_ring_spill",
+            "status": "pass",
+            "value": 0.0,
+            "threshold": 0.01
+          }
+        ],
+        "inputs": [
+          {
+            "path": "raw.png",
+            "sha256": "e5a24556fbcdf53b181d51bfabb3372cfa89c96360a175663e14e750c7218916",
+            "bytes": 251495
+          }
+        ],
+        "outputs": [
+          {
+            "path": "clean.png",
+            "sha256": "218678509aa6fabcffa9fb301238b53c9a32b4e241ff443c1d4af6e55ffb062a",
+            "bytes": 152942
+          }
+        ],
+        "tool": {
+          "name": "generate2dsprite.py process",
+          "version": "0.4.0"
+        }
+      }
+    }
+  ],
+  "reused_official_sources": [
+    {
+      "id": "wood_chest",
+      "path": "assets/buildings/v2/wood_chest.png",
+      "sha256": "cb2114ce8abc8fb02b695ac80fec290f072b988a79e9cefceea7eb5d13b3a091",
+      "change": "original PNG unchanged; candidate geometry/draw profile only"
+    },
+    {
+      "id": "reinforced_cabinet",
+      "path": "assets/industry/v1/reinforced_cabinet.png",
+      "sha256": "44b0f6b7e8788fe38d06769e5c8a41e418d390e625b09a70b52bbce34637c377",
+      "change": "original PNG unchanged; candidate geometry/draw profile only"
+    },
+    {
+      "id": "refrigerator",
+      "path": "assets/industry/v1/refrigerator.png",
+      "sha256": "b1278a1b4d167ff2f6c7966e4066727b5257ec111405e97ea7081098b7ccf66e",
+      "change": "original PNG unchanged; candidate geometry/draw profile only"
+    },
+    {
+      "id": "workbench",
+      "path": "assets/buildings/v2/workbench.png",
+      "sha256": "b45afdfd93e2f9334578be5c6d9dbfdc23d5ac1164fe67d395b2f8e4df194b65",
+      "change": "original PNG unchanged; candidate geometry/draw profile only"
+    },
+    {
+      "id": "copper_oven",
+      "path": "assets/industry/v1/copper_oven.png",
+      "sha256": "3d4c2c986aeba5330789570283b4ed73c161665956cb95ba8258f86722b9e55a",
+      "change": "original PNG unchanged; candidate geometry/draw profile only"
+    },
+    {
+      "id": "metal_workbench",
+      "path": "assets/industry/v1/metal_workbench.png",
+      "sha256": "c0049ca359040c873be57ad0820b9c67d4534cd2a2c638b96c9c4c1100ecd6bd",
+      "change": "original PNG unchanged; candidate geometry/draw profile only"
+    },
+    {
+      "id": "stone_furnace",
+      "path": "assets/industry/v1/stone_furnace.png",
+      "sha256": "bdf7c064fbaac68577a6e13deb31abcd04cbdf2276a8be19637d42fe1059d8be",
+      "change": "original PNG unchanged; candidate geometry/draw profile only"
+    },
+    {
+      "id": "signpost",
+      "path": "assets/buildings/signpost_v1/signpost.png",
+      "sha256": "6762cc11f4393347100629d671374d1f72a1762b3e7b66061929b1fb42d02bd8",
+      "change": "original PNG unchanged; candidate geometry/draw profile only"
+    },
+    {
+      "id": "wool_carpet",
+      "path": "assets/industry/v1/wool_carpet.png",
+      "sha256": "c02a48a2a0fac64f96709440e7da259ae7bb9beb83187979f6a55a66347b597f",
+      "change": "original PNG unchanged; candidate geometry/draw profile only"
+    }
+  ],
+  "measurements": [
+    {
+      "kind": "wood_chest",
+      "visible_width_height": [
+        56.21,
+        43.0
+      ],
+      "collision": [
+        -23,
+        -10,
+        46,
+        20
+      ],
+      "source": "assets/buildings/v2/wood_chest.png"
+    },
+    {
+      "kind": "reinforced_cabinet",
+      "visible_width_height": [
+        69.0,
+        69.0
+      ],
+      "collision": [
+        -25,
+        -13,
+        50,
+        26
+      ],
+      "source": "assets/industry/v1/reinforced_cabinet.png"
+    },
+    {
+      "kind": "refrigerator",
+      "visible_width_height": [
+        72.55,
+        91.0
+      ],
+      "collision": [
+        -28,
+        -16,
+        56,
+        32
+      ],
+      "source": "assets/industry/v1/refrigerator.png"
+    },
+    {
+      "kind": "workbench",
+      "visible_width_height": [
+        75.95,
+        63.0
+      ],
+      "collision": [
+        -40,
+        -13,
+        80,
+        26
+      ],
+      "source": "assets/buildings/v2/workbench.png"
+    },
+    {
+      "kind": "copper_oven",
+      "visible_width_height": [
+        87.15,
+        96.0
+      ],
+      "collision": [
+        -34,
+        -20,
+        68,
+        40
+      ],
+      "source": "assets/industry/v1/copper_oven.png"
+    },
+    {
+      "kind": "metal_workbench",
+      "visible_width_height": [
+        107.86,
+        84.0
+      ],
+      "collision": [
+        -46,
+        -18,
+        92,
+        36
+      ],
+      "source": "assets/industry/v1/metal_workbench.png"
+    },
+    {
+      "kind": "stone_furnace",
+      "visible_width_height": [
+        132.0,
+        132.0
+      ],
+      "collision": [
+        -42,
+        -25,
+        84,
+        50
+      ],
+      "source": "assets/industry/v1/stone_furnace.png"
+    },
+    {
+      "kind": "signpost",
+      "visible_width_height": [
+        38.0,
+        41.02
+      ],
+      "collision": [
+        -8,
+        -6,
+        16,
+        12
+      ],
+      "source": "assets/buildings/signpost_v1/signpost.png"
+    },
+    {
+      "kind": "wool_carpet",
+      "visible_width_height": [
+        144,
+        96
+      ],
+      "collision": [],
+      "source": "assets/industry/v1/wool_carpet.png"
+    },
+    {
+      "kind": "precision_repair_bench",
+      "visible_width_height": [
+        100.71,
+        74.0
+      ],
+      "collision": [
+        -43,
+        -15,
+        86,
+        30
+      ],
+      "source": "prototypes/camp-expansion-v2/final/precision_repair_bench.png"
+    },
+    {
+      "kind": "fuel_supply_box",
+      "visible_width_height": [
+        90.0,
+        73.57
+      ],
+      "collision": [
+        -32,
+        -19,
+        64,
+        38
+      ],
+      "source": "prototypes/camp-expansion-v2/final/fuel_supply_box.png"
+    },
+    {
+      "kind": "compost_bin",
+      "visible_width_height": [
+        43.0,
+        43.0
+      ],
+      "collision": [
+        -21,
+        -12,
+        42,
+        24
+      ],
+      "source": "prototypes/camp-expansion-v2/final/compost_bin.png"
+    },
+    {
+      "kind": "advanced_smokehouse",
+      "visible_width_height": [
+        126.0,
+        137.67
+      ],
+      "collision": [
+        -43,
+        -25,
+        86,
+        50
+      ],
+      "source": "prototypes/camp-expansion-v2/final/advanced_smokehouse.png"
+    }
+  ],
+  "visual_review": "Complete props, light/dark backgrounds and actual 1280x720 scene inspected. Aesthetic acceptance remains pending_user.",
+  "retained_acceptance_reference": "art/camp-expansion-v2/acceptance-sheet.png",
+  "temporary_media": "reports/camp-expansion-v2/*.png; remove after user confirms this batch, unless explicitly retained"
+}

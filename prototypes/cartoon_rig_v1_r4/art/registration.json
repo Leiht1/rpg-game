@@ -1,0 +1,182 @@
+{
+  "front_head.png": {
+    "source_region": [
+      0,
+      0,
+      540,
+      500
+    ],
+    "alpha_crop": [
+      30,
+      82,
+      490,
+      448
+    ],
+    "logical_size": [
+      56,
+      45
+    ],
+    "density": 4,
+    "sha256": "b4879db7c1c1aa6131ede6ddbfbee906aa0b3addf81bb90db85d1218e7b57fa7",
+    "source_file": "source.png"
+  },
+  "front_torso.png": {
+    "source_file": "white_torso_source.png",
+    "source_region": [
+      0,
+      0,
+      887,
+      887
+    ],
+    "crop": [
+      119,
+      106,
+      844,
+      779
+    ],
+    "logical_size": [
+      24,
+      24
+    ],
+    "density": 4,
+    "sha256": "ab28f37b5793225803389ece6006a6ba9f79ed6dd4361597ddd82f4f61e82701"
+  },
+  "front_arm.png": {
+    "source_region": [
+      900,
+      0,
+      1130,
+      500
+    ],
+    "alpha_crop": [
+      64,
+      178,
+      151,
+      450
+    ],
+    "logical_size": [
+      8,
+      25
+    ],
+    "density": 4,
+    "sha256": "8d70857ee0ce294c09a8274cbfcbe7339c3cb672805ef6e8f3716bd9323e9c21",
+    "source_file": "source.png"
+  },
+  "front_leg.png": {
+    "source_region": [
+      1200,
+      0,
+      1500,
+      500
+    ],
+    "alpha_crop": [
+      83,
+      186,
+      201,
+      451
+    ],
+    "logical_size": [
+      9,
+      20
+    ],
+    "density": 4,
+    "sha256": "5a81024f0291b01b452ddd76e44a1a49ef50e0535617db74b82ca89446c7b0bd",
+    "source_file": "pant_fix_source.png",
+    "shortening_note": "Same approved leg component, premultiplied resize from 27 to 20 logical pixels; sole offset 18."
+  },
+  "side_head.png": {
+    "source_region": [
+      0,
+      510,
+      540,
+      1024
+    ],
+    "alpha_crop": [
+      37,
+      31,
+      517,
+      396
+    ],
+    "logical_size": [
+      56,
+      45
+    ],
+    "density": 4,
+    "sha256": "6b258174cb9071ad4a7bf88b2e26d17151ebccbfcb9b9fcf4ec1ffa38b27c59c",
+    "source_file": "source.png"
+  },
+  "side_torso.png": {
+    "source_file": "white_torso_source.png",
+    "source_region": [
+      887,
+      0,
+      1774,
+      887
+    ],
+    "crop": [
+      206,
+      124,
+      791,
+      784
+    ],
+    "logical_size": [
+      20,
+      24
+    ],
+    "density": 4,
+    "sha256": "1780698fc06ecd4eb88d858c36eb8cc3f72772e3b3095e21ba812ac17a9db920"
+  },
+  "side_arm.png": {
+    "source_region": [
+      900,
+      510,
+      1130,
+      1024
+    ],
+    "alpha_crop": [
+      64,
+      145,
+      151,
+      409
+    ],
+    "logical_size": [
+      8,
+      25
+    ],
+    "density": 4,
+    "sha256": "493a16b16cdaa685e0cbcf9c38083d9aeb65875766f318a8a36693e1284966d2",
+    "source_file": "source.png"
+  },
+  "side_leg.png": {
+    "source_region": [
+      1200,
+      510,
+      1500,
+      1024
+    ],
+    "alpha_crop": [
+      90,
+      146,
+      206,
+      404
+    ],
+    "logical_size": [
+      9,
+      20
+    ],
+    "density": 4,
+    "sha256": "75d278611393a09a916590fb28e15761135dbd27afcc5455ccdcd2f33be38ca9",
+    "source_file": "source.png",
+    "shortening_note": "Same approved leg component, premultiplied resize from 27 to 20 logical pixels; sole offset 18."
+  },
+  "back_head.png": {
+    "source_file": "back_head_source.png",
+    "logical_size": [
+      56,
+      45
+    ],
+    "density": 4,
+    "sha256": "59362439d6c87b72c98f4f049b7c144739c517c8e616a56d07d91f31f5aa690a",
+    "note": "Rear head separately generated; rear torso and limbs intentionally reuse plain unadorned front components."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "status": "pending_user",
+  "game_files_unchanged": {
+    "scripts/terrain.gdshader": true,
+    "scripts/ground_candidate.gd": true,
+    "scripts/ground_preview.gd": true,
+    "scripts/chunk_stream.gd": true,
+    "scripts/nature_prop.gd": true,
+    "scripts/world.gd": true,
+    "scripts/world_generator.gd": true,
+    "scripts/player.gd": true,
+    "project.godot": true,
+    "scenes/world.tscn": true
+  },
+  "resolution": [
+    1280,
+    720
+  ],
+  "fixed_overlay_sha256": "e29611945c41d9cef1159372915ddd3e4b95d344560a5f795f8b8a06557d0fbb",
+  "visual_review": {
+    "A": "Sparse short rounded strokes, calm near-value painterly ground; no closed contour bands or visible tile seams.",
+    "B": "More paired light/dark short brush marks and clustered highlights, more detail than A; no large terrain regions.",
+    "C": "Fine slanted grass dashes grouped in uneven small swathes, quiet central area; no standalone grass stamps or contour bands."
+  },
+  "limits": [
+    "One independent full-viewport plate per direction, not a tested seamless world texture.",
+    "No game integration, performance or gameplay tests this round.",
+    "Final visual acceptance and direction selection remain with user."
+  ],
+  "route": "local:codex-cli",
+  "art_source": "host_image",
+  "reported_model": "codex-image_gen; underlying model unknown",
+  "estimateUsd": 0.0,
+  "cost_note": "subscription quota estimate, actual cost unknown",
+  "render_engine": "Godot 4.7.2 Stable Compatibility; browser pages checked via IAB"
+}

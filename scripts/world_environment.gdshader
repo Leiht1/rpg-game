@@ -14,6 +14,15 @@ uniform vec2 camp_centers[32];
 uniform float camp_radii[32];
 uniform float camp_strengths[32];
 uniform float hallucination = 0.0;
+uniform int torch_count = 0;
+uniform vec2 torch_centers[32];
+uniform vec2 torch_directions[32];
+uniform float torch_length = 360.0;
+uniform float torch_angle = 0.38;
+uniform sampler2D torch_player_mask : filter_nearest, repeat_disable;
+uniform vec2 merchant_ground = vec2(-2.0);
+uniform vec2 merchant_center = vec2(-2.0);
+uniform float merchant_glow_scale = 0.0;
 void fragment() {
  vec2 drift = vec2(sin(SCREEN_UV.y*15.0+TIME*.65),cos(SCREEN_UV.x*12.0+TIME*.48))*.007*hallucination;
  vec2 uv = clamp(SCREEN_UV+drift,vec2(0.0),vec2(1.0));
@@ -33,6 +42,27 @@ void fragment() {
   fire_glow = max(fire_glow,(1.0-smoothstep(12.0,max(13.0,camp_radii[i]),d))*camp_strengths[i]);
  }
  color = mix(color,original*vec3(1.06,.99,.86),clamp(fire_glow*.78,0.0,1.0));
+ float torch_glow = 0.0;
+ for (int i=0;i<32;i++) {
+  if (i>=torch_count) { break; }
+  vec2 rel = (SCREEN_UV-torch_centers[i])/SCREEN_PIXEL_SIZE;
+  float along = dot(rel,torch_directions[i]);
+  float cross_distance = abs(rel.x*torch_directions[i].y-rel.y*torch_directions[i].x);
+  float width = max(2.0,along*tan(torch_angle));
+  float cone = (1.0-smoothstep(width*.70,width,cross_distance))*smoothstep(0.0,5.0,along)*(1.0-smoothstep(torch_length*.65,torch_length,along));
+  torch_glow=max(torch_glow,cone);
+ }
+ float player_alpha=smoothstep(0.01,0.95,texture(torch_player_mask,SCREEN_UV).a);
+ color=mix(color,original*vec3(1.16,1.20,1.22)+vec3(.06,.09,.10),clamp(torch_glow*.96*(1.0-player_alpha),0.0,1.0));
+ if (merchant_glow_scale>0.0) {
+  vec2 local=(SCREEN_UV-merchant_center)/SCREEN_PIXEL_SIZE/merchant_glow_scale;
+  float aura=max(1.0-smoothstep(8.0,44.0,length((local-vec2(-30.0,0.0))*vec2(1.0,.75))),1.0-smoothstep(8.0,44.0,length((local-vec2(30.0,0.0))*vec2(1.0,.75))));
+  float pulse=.86+.14*sin(TIME*2.0);
+  color=mix(color,original*vec3(.75,1.0,1.18)+vec3(.01,.12,.26),aura*pulse*.58);
+  vec2 ground=(SCREEN_UV-merchant_ground)/SCREEN_PIXEL_SIZE/merchant_glow_scale;
+  float ground_aura=1.0-smoothstep(18.0,76.0,length(ground*vec2(1.0,1.8)));
+  color=mix(color,original*vec3(.78,1.02,1.22)+vec3(.01,.09,.20),ground_aura*.38);
+ }
  // Slow hue drift around the neutral axis keeps gray neutral and avoids flashing.
  float hue_angle = (.45+.9*sin(TIME*.27+SCREEN_UV.y*1.4))*hallucination;
  vec3 neutral_axis = vec3(.577350269);

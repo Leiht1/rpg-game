@@ -1,0 +1,536 @@
+{
+  "checks": [
+    {
+      "name": "formal merchant enabled without candidate flag",
+      "pass": true
+    },
+    {
+      "name": "candidate enabled and exactly four offers",
+      "pass": true
+    },
+    {
+      "name": "merchant snapshot validates",
+      "pass": true
+    },
+    {
+      "name": "candidate definitions satisfy item database contract",
+      "pass": true
+    },
+    {
+      "name": "twenty short dialogue lines",
+      "pass": true
+    },
+    {
+      "name": "four game day migration interval",
+      "pass": true
+    },
+    {
+      "name": "initial global point clear and reachable",
+      "pass": true
+    },
+    {
+      "name": "all twelve price templates require real gold and official materials",
+      "pass": true
+    },
+    {
+      "name": "migration commits 0",
+      "pass": true
+    },
+    {
+      "name": "migration safely changes position 0",
+      "pass": true
+    },
+    {
+      "name": "migration commits 1",
+      "pass": true
+    },
+    {
+      "name": "migration safely changes position 1",
+      "pass": true
+    },
+    {
+      "name": "migration commits 2",
+      "pass": true
+    },
+    {
+      "name": "migration safely changes position 2",
+      "pass": true
+    },
+    {
+      "name": "migration commits 3",
+      "pass": true
+    },
+    {
+      "name": "migration safely changes position 3",
+      "pass": true
+    },
+    {
+      "name": "migration commits 4",
+      "pass": true
+    },
+    {
+      "name": "migration safely changes position 4",
+      "pass": true
+    },
+    {
+      "name": "migration commits 5",
+      "pass": true
+    },
+    {
+      "name": "migration safely changes position 5",
+      "pass": true
+    },
+    {
+      "name": "migration commits 6",
+      "pass": true
+    },
+    {
+      "name": "migration safely changes position 6",
+      "pass": true
+    },
+    {
+      "name": "migration commits 7",
+      "pass": true
+    },
+    {
+      "name": "migration safely changes position 7",
+      "pass": true
+    },
+    {
+      "name": "price pools produce varied visits",
+      "pass": true
+    },
+    {
+      "name": "global samples span map independently of player",
+      "pass": true
+    },
+    {
+      "name": "migration deferred while interacting",
+      "pass": true
+    },
+    {
+      "name": "deferred migration occurs after interaction",
+      "pass": true
+    },
+    {
+      "name": "exactly one NPC actor after many migrations",
+      "pass": true
+    },
+    {
+      "name": "merchant enlarged beyond protagonist",
+      "pass": true
+    },
+    {
+      "name": "backpack has two blue glow emitters",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 0",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 1",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 2",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 3",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 4",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 5",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 6",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 7",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 8",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 9",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 10",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 11",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 12",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 13",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 14",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 15",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 16",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 17",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 18",
+      "pass": true
+    },
+    {
+      "name": "E interaction routes to talk 19",
+      "pass": true
+    },
+    {
+      "name": "reopened dialogue changes lines",
+      "pass": true
+    },
+    {
+      "name": "simple dialogue modal and trade button",
+      "pass": true
+    },
+    {
+      "name": "single line dialogue uses compact content sized frame",
+      "pass": true
+    },
+    {
+      "name": "real mouse trade click displays four rows",
+      "pass": true
+    },
+    {
+      "name": "prices vertically centered on product rows",
+      "pass": true
+    },
+    {
+      "name": "exact insufficient material notice",
+      "pass": true
+    },
+    {
+      "name": "full bag purchase preserves materials and stock",
+      "pass": true
+    },
+    {
+      "name": "save failure reports rollback",
+      "pass": true
+    },
+    {
+      "name": "save rollback restores stock inventory and emits no reward",
+      "pass": true
+    },
+    {
+      "name": "failed relocation preserves RNG and position",
+      "pass": true
+    },
+    {
+      "name": "real mouse selects solar_flashlight",
+      "pass": true
+    },
+    {
+      "name": "real mouse purchases solar_flashlight",
+      "pass": true
+    },
+    {
+      "name": "exact exchange and stock decrement solar_flashlight",
+      "pass": true
+    },
+    {
+      "name": "sold out blocks repeat solar_flashlight",
+      "pass": true
+    },
+    {
+      "name": "real mouse selects modern_outfit",
+      "pass": true
+    },
+    {
+      "name": "real mouse purchases modern_outfit",
+      "pass": true
+    },
+    {
+      "name": "exact exchange and stock decrement modern_outfit",
+      "pass": true
+    },
+    {
+      "name": "sold out blocks repeat modern_outfit",
+      "pass": true
+    },
+    {
+      "name": "real mouse selects frequency_blade",
+      "pass": true
+    },
+    {
+      "name": "real mouse purchases frequency_blade",
+      "pass": true
+    },
+    {
+      "name": "exact exchange and stock decrement frequency_blade",
+      "pass": true
+    },
+    {
+      "name": "sold out blocks repeat frequency_blade",
+      "pass": true
+    },
+    {
+      "name": "real mouse selects unknown_alloy",
+      "pass": true
+    },
+    {
+      "name": "real mouse purchases unknown_alloy",
+      "pass": true
+    },
+    {
+      "name": "exact exchange and stock decrement unknown_alloy",
+      "pass": true
+    },
+    {
+      "name": "sold out blocks repeat unknown_alloy",
+      "pass": true
+    },
+    {
+      "name": "exactly four existing item obtained signals",
+      "pass": true
+    },
+    {
+      "name": "real mouse close restores gameplay input",
+      "pass": true
+    },
+    {
+      "name": "flashlight has independent valid state",
+      "pass": true
+    },
+    {
+      "name": "bag menu equips and opens flashlight",
+      "pass": true
+    },
+    {
+      "name": "right click toggle switches on",
+      "pass": true
+    },
+    {
+      "name": "passive battery discharge does not invalidate drag",
+      "pass": true
+    },
+    {
+      "name": "different flashlight instance still invalidates snapshot",
+      "pass": true
+    },
+    {
+      "name": "real mouse closes bag flashlight after passive discharge",
+      "pass": true
+    },
+    {
+      "name": "real mouse reopens bag flashlight",
+      "pass": true
+    },
+    {
+      "name": "context label follows switch state",
+      "pass": true
+    },
+    {
+      "name": "real mouse equips switched on flashlight after discharge",
+      "pass": true
+    },
+    {
+      "name": "equipped slot retains switch action",
+      "pass": true
+    },
+    {
+      "name": "equipped flashlight shows existing energy HUD",
+      "pass": true
+    },
+    {
+      "name": "off flashlight has no energy HUD",
+      "pass": true
+    },
+    {
+      "name": "on flashlight restores energy HUD",
+      "pass": true
+    },
+    {
+      "name": "energy HUD finishes fade without per frame visibility resets",
+      "pass": true
+    },
+    {
+      "name": "handheld consumes ten percent in 48 game minutes without charging",
+      "pass": true
+    },
+    {
+      "name": "clear daytime ground charges ten percent per 36 minutes",
+      "pass": true
+    },
+    {
+      "name": "no charge unless grounded daylight dry [false, true, true]",
+      "pass": true
+    },
+    {
+      "name": "no charge unless grounded daylight dry [true, false, true]",
+      "pass": true
+    },
+    {
+      "name": "no charge unless grounded daylight dry [true, true, false]",
+      "pass": true
+    },
+    {
+      "name": "exhausted battery auto off, item remains",
+      "pass": true
+    },
+    {
+      "name": "dawn closes switch without clearing energy",
+      "pass": true
+    },
+    {
+      "name": "held cone follows front",
+      "pass": true
+    },
+    {
+      "name": "GPU rear hair stays dark while beam passes behind player",
+      "pass": true
+    },
+    {
+      "name": "GPU forward ground still illuminated",
+      "pass": true
+    },
+    {
+      "name": "held cone follows back",
+      "pass": true
+    },
+    {
+      "name": "held cone follows left",
+      "pass": true
+    },
+    {
+      "name": "held cone follows right",
+      "pass": true
+    },
+    {
+      "name": "equipped switch closes",
+      "pass": true
+    },
+    {
+      "name": "equipped switch opens",
+      "pass": true
+    },
+    {
+      "name": "unequip preserves instance",
+      "pass": true
+    },
+    {
+      "name": "ordinary discard creates persistent flashlight",
+      "pass": true
+    },
+    {
+      "name": "drop preserves energy switch and throw facing",
+      "pass": true
+    },
+    {
+      "name": "ground torch emits cone",
+      "pass": true
+    },
+    {
+      "name": "ground torch has no energy HUD",
+      "pass": true
+    },
+    {
+      "name": "ground on continues draining at night",
+      "pass": true
+    },
+    {
+      "name": "atomic dedicated snapshot written",
+      "pass": true
+    },
+    {
+      "name": "reload restores position countdown templates stock and RNG",
+      "pass": true
+    },
+    {
+      "name": "disk reload restores loose flashlight direction switch energy",
+      "pass": true
+    },
+    {
+      "name": "other three goods survive disk load",
+      "pass": true
+    },
+    {
+      "name": "actual dawn clock edge closes ground lamp and starts solar charge",
+      "pass": true
+    },
+    {
+      "name": "ground torch pickup succeeds",
+      "pass": true
+    },
+    {
+      "name": "pickup preserves current live state",
+      "pass": true
+    },
+    {
+      "name": "invalid merchant countdown rejected",
+      "pass": true
+    },
+    {
+      "name": "invalid battery and direction rejected",
+      "pass": true
+    },
+    {
+      "name": "player json files unchanged by isolated test",
+      "pass": true
+    }
+  ],
+  "failed": 0,
+  "pass": 124,
+  "positions": [
+    [
+      21299.673828125,
+      27957.982421875
+    ],
+    [
+      18324.259765625,
+      27283.22265625
+    ],
+    [
+      30294.099609375,
+      31855.65234375
+    ],
+    [
+      33378.6015625,
+      31720.046875
+    ],
+    [
+      25770.431640625,
+      25200.177734375
+    ],
+    [
+      17621.431640625,
+      23669.302734375
+    ],
+    [
+      34683.86328125,
+      32371.396484375
+    ],
+    [
+      24647.447265625,
+      20727.13671875
+    ]
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "eb5ef19fa93b6fb331d41ae0d71e68a11d251d47d07891efcab8e0afb0badf79",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-16T04:05:59.770Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-16T04:05:59.770Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "clothed-limbs-neckless-head-revision",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a142ce-8c0d-7dd3-aa94-a502f9863598",
+    "source": "CODEX_HOME/generated_images/01a142ce-8c0d-7dd3-aa94-a502f9863598/exec-24cdd4b8-ba58-43c5-be8e-408ee037f6b2.png",
+    "sourceSha256": "e40a977ab277cc317b5eeeb0f113c9e169bc921e040a127be24434730ee3bda8",
+    "sourceMtime": "2026-10-16T04:05:06Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "e40a977ab277cc317b5eeeb0f113c9e169bc921e040a127be24434730ee3bda8",
+    "bytes": 1942780,
+    "format": "PNG",
+    "size": [
+      1536,
+      1024
+    ]
+  }
+}

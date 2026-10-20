@@ -1,0 +1,802 @@
+{
+	"checks": [
+		{
+			"name": "items and build recipes validate",
+			"pass": true
+		},
+		{
+			"name": "existing building snapshot remains valid without expansion fields",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench has no unlock or facility prerequisites",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench visible from preview start without resources gate",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench build cost has one consistent value",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench legal site exists",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench entering/cancelling placement costs nothing",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench placement reaches atomic save failure",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench placement rolls back building and materials",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench legal placement commits",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench pays wood",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench pays stone",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench pays flint",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench pays copper_parts",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench pays silver_ingot",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box has no unlock or facility prerequisites",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box visible from preview start without resources gate",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box build cost has one consistent value",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box legal site exists",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box entering/cancelling placement costs nothing",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box placement reaches atomic save failure",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box placement rolls back building and materials",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box legal placement commits",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box pays wood",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box pays stone",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box pays plant_fiber",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box pays copper_plate",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box pays copper_parts",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box pays silver_ingot",
+			"pass": true
+		},
+		{
+			"name": "compost_bin has no unlock or facility prerequisites",
+			"pass": true
+		},
+		{
+			"name": "compost_bin visible from preview start without resources gate",
+			"pass": true
+		},
+		{
+			"name": "compost_bin build cost has one consistent value",
+			"pass": true
+		},
+		{
+			"name": "compost_bin legal site exists",
+			"pass": true
+		},
+		{
+			"name": "compost_bin entering/cancelling placement costs nothing",
+			"pass": true
+		},
+		{
+			"name": "compost_bin placement reaches atomic save failure",
+			"pass": true
+		},
+		{
+			"name": "compost_bin placement rolls back building and materials",
+			"pass": true
+		},
+		{
+			"name": "compost_bin legal placement commits",
+			"pass": true
+		},
+		{
+			"name": "compost_bin pays wood",
+			"pass": true
+		},
+		{
+			"name": "compost_bin pays stone",
+			"pass": true
+		},
+		{
+			"name": "compost_bin pays plant_fiber",
+			"pass": true
+		},
+		{
+			"name": "compost_bin pays copper_plate",
+			"pass": true
+		},
+		{
+			"name": "compost_bin pays metal_connector",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse has no unlock or facility prerequisites",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse visible from preview start without resources gate",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse build cost has one consistent value",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse legal site exists",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse entering/cancelling placement costs nothing",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse placement reaches atomic save failure",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse placement rolls back building and materials",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse legal placement commits",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse pays wood",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse pays stone",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse pays flint",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse pays plant_fiber",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse pays copper_plate",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse pays metal_connector",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse pays silver_ingot",
+			"pass": true
+		},
+		{
+			"name": "all four functional buildings placed through original V transaction",
+			"pass": true
+		},
+		{
+			"name": "stone_axe repair save failure",
+			"pass": true
+		},
+		{
+			"name": "stone_axe repair restores exact instance and payment",
+			"pass": true
+		},
+		{
+			"name": "stone_axe repair succeeds",
+			"pass": true
+		},
+		{
+			"name": "stone_axe restored to max with same instance",
+			"pass": true
+		},
+		{
+			"name": "stone_axe repair material consumed",
+			"pass": true
+		},
+		{
+			"name": "stone_axe full tool rejects repair",
+			"pass": true
+		},
+		{
+			"name": "stone_axe repair uses less than complete recipe",
+			"pass": true
+		},
+		{
+			"name": "stone_pickaxe repair save failure",
+			"pass": true
+		},
+		{
+			"name": "stone_pickaxe repair restores exact instance and payment",
+			"pass": true
+		},
+		{
+			"name": "stone_pickaxe repair succeeds",
+			"pass": true
+		},
+		{
+			"name": "stone_pickaxe restored to max with same instance",
+			"pass": true
+		},
+		{
+			"name": "stone_pickaxe repair material consumed",
+			"pass": true
+		},
+		{
+			"name": "stone_pickaxe full tool rejects repair",
+			"pass": true
+		},
+		{
+			"name": "stone_pickaxe repair uses less than complete recipe",
+			"pass": true
+		},
+		{
+			"name": "simple_shovel repair save failure",
+			"pass": true
+		},
+		{
+			"name": "simple_shovel repair restores exact instance and payment",
+			"pass": true
+		},
+		{
+			"name": "simple_shovel repair succeeds",
+			"pass": true
+		},
+		{
+			"name": "simple_shovel restored to max with same instance",
+			"pass": true
+		},
+		{
+			"name": "simple_shovel repair material consumed",
+			"pass": true
+		},
+		{
+			"name": "simple_shovel full tool rejects repair",
+			"pass": true
+		},
+		{
+			"name": "simple_shovel repair uses less than complete recipe",
+			"pass": true
+		},
+		{
+			"name": "stone_hammer repair save failure",
+			"pass": true
+		},
+		{
+			"name": "stone_hammer repair restores exact instance and payment",
+			"pass": true
+		},
+		{
+			"name": "stone_hammer repair succeeds",
+			"pass": true
+		},
+		{
+			"name": "stone_hammer restored to max with same instance",
+			"pass": true
+		},
+		{
+			"name": "stone_hammer repair material consumed",
+			"pass": true
+		},
+		{
+			"name": "stone_hammer full tool rejects repair",
+			"pass": true
+		},
+		{
+			"name": "stone_hammer repair uses less than complete recipe",
+			"pass": true
+		},
+		{
+			"name": "copper_axe repair save failure",
+			"pass": true
+		},
+		{
+			"name": "copper_axe repair restores exact instance and payment",
+			"pass": true
+		},
+		{
+			"name": "copper_axe repair succeeds",
+			"pass": true
+		},
+		{
+			"name": "copper_axe restored to max with same instance",
+			"pass": true
+		},
+		{
+			"name": "copper_axe repair material consumed",
+			"pass": true
+		},
+		{
+			"name": "copper_axe full tool rejects repair",
+			"pass": true
+		},
+		{
+			"name": "copper_axe repair uses less than complete recipe",
+			"pass": true
+		},
+		{
+			"name": "copper_pickaxe repair save failure",
+			"pass": true
+		},
+		{
+			"name": "copper_pickaxe repair restores exact instance and payment",
+			"pass": true
+		},
+		{
+			"name": "copper_pickaxe repair succeeds",
+			"pass": true
+		},
+		{
+			"name": "copper_pickaxe restored to max with same instance",
+			"pass": true
+		},
+		{
+			"name": "copper_pickaxe repair material consumed",
+			"pass": true
+		},
+		{
+			"name": "copper_pickaxe full tool rejects repair",
+			"pass": true
+		},
+		{
+			"name": "copper_pickaxe repair uses less than complete recipe",
+			"pass": true
+		},
+		{
+			"name": "copper_shovel repair save failure",
+			"pass": true
+		},
+		{
+			"name": "copper_shovel repair restores exact instance and payment",
+			"pass": true
+		},
+		{
+			"name": "copper_shovel repair succeeds",
+			"pass": true
+		},
+		{
+			"name": "copper_shovel restored to max with same instance",
+			"pass": true
+		},
+		{
+			"name": "copper_shovel repair material consumed",
+			"pass": true
+		},
+		{
+			"name": "copper_shovel full tool rejects repair",
+			"pass": true
+		},
+		{
+			"name": "copper_shovel repair uses less than complete recipe",
+			"pass": true
+		},
+		{
+			"name": "copper_hammer repair save failure",
+			"pass": true
+		},
+		{
+			"name": "copper_hammer repair restores exact instance and payment",
+			"pass": true
+		},
+		{
+			"name": "copper_hammer repair succeeds",
+			"pass": true
+		},
+		{
+			"name": "copper_hammer restored to max with same instance",
+			"pass": true
+		},
+		{
+			"name": "copper_hammer repair material consumed",
+			"pass": true
+		},
+		{
+			"name": "copper_hammer full tool rejects repair",
+			"pass": true
+		},
+		{
+			"name": "copper_hammer repair uses less than complete recipe",
+			"pass": true
+		},
+		{
+			"name": "shears repair save failure",
+			"pass": true
+		},
+		{
+			"name": "shears repair restores exact instance and payment",
+			"pass": true
+		},
+		{
+			"name": "shears repair succeeds",
+			"pass": true
+		},
+		{
+			"name": "shears restored to max with same instance",
+			"pass": true
+		},
+		{
+			"name": "shears repair material consumed",
+			"pass": true
+		},
+		{
+			"name": "shears full tool rejects repair",
+			"pass": true
+		},
+		{
+			"name": "shears repair uses less than complete recipe",
+			"pass": true
+		},
+		{
+			"name": "fishing_rod repair save failure",
+			"pass": true
+		},
+		{
+			"name": "fishing_rod repair restores exact instance and payment",
+			"pass": true
+		},
+		{
+			"name": "fishing_rod repair succeeds",
+			"pass": true
+		},
+		{
+			"name": "fishing_rod restored to max with same instance",
+			"pass": true
+		},
+		{
+			"name": "fishing_rod repair material consumed",
+			"pass": true
+		},
+		{
+			"name": "fishing_rod full tool rejects repair",
+			"pass": true
+		},
+		{
+			"name": "fishing_rod repair uses less than complete recipe",
+			"pass": true
+		},
+		{
+			"name": "missing destroyed instance cannot be recreated",
+			"pass": true
+		},
+		{
+			"name": "equipped hotbar alias repairs original instance",
+			"pass": true
+		},
+		{
+			"name": "repair creates no duplicate equipped tool",
+			"pass": true
+		},
+		{
+			"name": "native repair panel mouse click repairs selected instance",
+			"pass": false
+		},
+		{
+			"name": "fuel supply stores real wood",
+			"pass": true
+		},
+		{
+			"name": "fuel transfer conserves inventory",
+			"pass": true
+		},
+		{
+			"name": "automatic supply save failure rolls back all suppliers and recipients",
+			"pass": true
+		},
+		{
+			"name": "nearby furnace and oven each receive paid fuel",
+			"pass": true
+		},
+		{
+			"name": "supply never ignites either machine",
+			"pass": true
+		},
+		{
+			"name": "range and station whitelist enforced",
+			"pass": true
+		},
+		{
+			"name": "each recipient consumes one actual stored item",
+			"pass": true
+		},
+		{
+			"name": "fuel supply preserves an already burning machine through low fuel",
+			"pass": true
+		},
+		{
+			"name": "fuel withdrawal failure rolls back",
+			"pass": true
+		},
+		{
+			"name": "remaining fuel can be reclaimed",
+			"pass": true
+		},
+		{
+			"name": "rotten fish accepted",
+			"pass": true
+		},
+		{
+			"name": "fresh fish rejected by composter",
+			"pass": true
+		},
+		{
+			"name": "rotten cooked food accepted",
+			"pass": true
+		},
+		{
+			"name": "inorganic items rejected",
+			"pass": true
+		},
+		{
+			"name": "compost input and process roll back on save failure",
+			"pass": true
+		},
+		{
+			"name": "three rotten fish start one batch",
+			"pass": true
+		},
+		{
+			"name": "compost not ready before twelve normal game hours",
+			"pass": true
+		},
+		{
+			"name": "in-progress process cannot be demolished",
+			"pass": true
+		},
+		{
+			"name": "compost becomes fertilizer after normal gameplay time",
+			"pass": true
+		},
+		{
+			"name": "fertilizer claim failure preserves output and no false event",
+			"pass": true
+		},
+		{
+			"name": "fertilizer enters original inventory",
+			"pass": true
+		},
+		{
+			"name": "fertilizer uses obtained queue only after commit",
+			"pass": true
+		},
+		{
+			"name": "fertilizer duplicate claim refused",
+			"pass": true
+		},
+		{
+			"name": "fertilizer effect and item roll back",
+			"pass": true
+		},
+		{
+			"name": "fertilizer applies to current growing crop",
+			"pass": true
+		},
+		{
+			"name": "same crop cannot stack fertilizer",
+			"pass": true
+		},
+		{
+			"name": "fertilized crop grows 25 percent faster",
+			"pass": true
+		},
+		{
+			"name": "smokehouse rejects rotten fish",
+			"pass": true
+		},
+		{
+			"name": "smokehouse fish and wood roll back",
+			"pass": true
+		},
+		{
+			"name": "smoking consumes exactly one fresh fish and one wood",
+			"pass": true
+		},
+		{
+			"name": "smoked fish waits for normal two game hours",
+			"pass": true
+		},
+		{
+			"name": "smokehouse produces smoked fish",
+			"pass": true
+		},
+		{
+			"name": "full inventory preserves smoked fish",
+			"pass": true
+		},
+		{
+			"name": "smoked fish claim save failure rolls back without notification",
+			"pass": true
+		},
+		{
+			"name": "smoked fish claims into original inventory",
+			"pass": true
+		},
+		{
+			"name": "smoked fish sends one obtained event",
+			"pass": true
+		},
+		{
+			"name": "smoked fish lasts longer than roasted fish",
+			"pass": true
+		},
+		{
+			"name": "smoked fish chilled shelf life exceeds ambient eight days",
+			"pass": true
+		},
+		{
+			"name": "smoked fish retains existing rotten food effects",
+			"pass": true
+		},
+		{
+			"name": "all new live building states validate",
+			"pass": true
+		},
+		{
+			"name": "invalid process state rejected",
+			"pass": true
+		},
+		{
+			"name": "wood_fence connection or sleep geometry unchanged",
+			"pass": true
+		},
+		{
+			"name": "fence_gate connection or sleep geometry unchanged",
+			"pass": true
+		},
+		{
+			"name": "stone_wall connection or sleep geometry unchanged",
+			"pass": true
+		},
+		{
+			"name": "stone_gate connection or sleep geometry unchanged",
+			"pass": true
+		},
+		{
+			"name": "wood_bed connection or sleep geometry unchanged",
+			"pass": true
+		},
+		{
+			"name": "straw_mat connection or sleep geometry unchanged",
+			"pass": true
+		},
+		{
+			"name": "sleeping_bag connection or sleep geometry unchanged",
+			"pass": true
+		},
+		{
+			"name": "wood_chest visible bounds obey independent profile",
+			"pass": true
+		},
+		{
+			"name": "reinforced_cabinet visible bounds obey independent profile",
+			"pass": true
+		},
+		{
+			"name": "refrigerator visible bounds obey independent profile",
+			"pass": true
+		},
+		{
+			"name": "workbench visible bounds obey independent profile",
+			"pass": true
+		},
+		{
+			"name": "copper_oven visible bounds obey independent profile",
+			"pass": true
+		},
+		{
+			"name": "metal_workbench visible bounds obey independent profile",
+			"pass": true
+		},
+		{
+			"name": "stone_furnace visible bounds obey independent profile",
+			"pass": true
+		},
+		{
+			"name": "signpost visible bounds obey independent profile",
+			"pass": true
+		},
+		{
+			"name": "wool_carpet visible bounds obey independent profile",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench visible bounds obey independent profile",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box visible bounds obey independent profile",
+			"pass": true
+		},
+		{
+			"name": "compost_bin visible bounds obey independent profile",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse visible bounds obey independent profile",
+			"pass": true
+		},
+		{
+			"name": "chest shrinks and carpet expands",
+			"pass": true
+		},
+		{
+			"name": "formal mode retains approved original scale",
+			"pass": true
+		},
+		{
+			"name": "unapproved candidates not promoted to ordinary entry",
+			"pass": true
+		},
+		{
+			"name": "isolated restart snapshot saves",
+			"pass": true
+		},
+		{
+			"name": "same-process snapshot round trip",
+			"pass": true
+		},
+		{
+			"name": "all actual player save hashes unchanged",
+			"pass": true
+		}
+	],
+	"count": 199,
+	"failed": 1
+}

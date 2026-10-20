@@ -112,13 +112,19 @@ func _process(delta: float) -> void:
 	# Share the dock's bottom baseline while keeping a dedicated left-hand lane.
 	hud.position=Vector2(16,items.dock.get_global_rect().end.y-hud.size.y)
 	hud.visible=not overlay.visible and not items.world.map_view.visible and not items.craft_panel.visible
-	lamp.visible=hud.visible and items.dock.visible and is_instance_valid(items.service.lantern) and items.service.lantern.visible
-	preload("res://scripts/item_ui_style.gd").progress_style(fuel,true,is_instance_valid(items.service.lantern) and items.service.lantern.visible)
+	var torch: Dictionary=items.service.inventory.equipment.get("main_hand",{})
+	var has_torch: bool=torch.get("item_id")=="solar_flashlight"
+	var lamp_on: bool=bool(torch.state.on) if has_torch else is_instance_valid(items.service.lantern) and items.service.lantern.visible
+	lamp.visible=hud.visible and items.dock.visible and lamp_on
+	preload("res://scripts/item_ui_style.gd").progress_style(fuel,true,lamp_on)
 	lamp.position=Vector2(items.dock.position.x+items.dock.size.x*.5-94,items.dock.position.y-54)
 	var active: Dictionary=items.service.lamp_slot()
 	var lifetime := float(items.service.database.item(str(active.get("item_id",""))).get("lamp_lifetime",state.rules.lantern_seconds))
 	fuel.value=items.service.lantern_remaining/lifetime*100.0
 	if not active.is_empty(): lamp_icon.texture=items.service.texture(str(active.item_id),"icon")
+	if has_torch:
+		lamp_icon.texture=items.service.texture("solar_flashlight","icon");fuel.value=float(torch.state.energy)
+		style_bar(fuel,Color("8fe4ef"))
 	var factor := minf(1.0,minf((area.x-24)/paper.size.x,(area.y-24)/paper.size.y))
 	paper.scale=Vector2.ONE*factor;paper.position=(area-paper.size*factor)*.5
 	refresh_clock+=delta

@@ -1,0 +1,294 @@
+{
+	"checks": [
+		{
+			"name": "candidate preview disables all player save IO",
+			"pass": true
+		},
+		{
+			"name": "preview places all twenty-six registered buildings",
+			"pass": true
+		},
+		{
+			"name": "preview building records validate",
+			"pass": true
+		},
+		{
+			"name": "separate campfire is included",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes stone_wall",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes stone_gate",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes wood_fence",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes fence_gate",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes wood_floor",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes stone_path",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes wood_chest",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes workbench",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes camp_torch",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes sleeping_bag",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes straw_mat",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes wood_bed",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes tilled_soil",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes signpost",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes stone_furnace",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes metal_workbench",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes copper_oven",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes copper_lamp",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes reinforced_cabinet",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes feed_trough",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes refrigerator",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes wool_carpet",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes precision_repair_bench",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes fuel_supply_box",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes compost_bin",
+			"pass": true
+		},
+		{
+			"name": "exhibition includes advanced_smokehouse",
+			"pass": true
+		},
+		{
+			"name": "preview crop supplies",
+			"pass": true
+		},
+		{
+			"name": "building is visible: wood_chest",
+			"pass": true
+		},
+		{
+			"name": "building is visible: compost_bin",
+			"pass": true
+		},
+		{
+			"name": "building is visible: camp_torch",
+			"pass": true
+		},
+		{
+			"name": "building is visible: signpost",
+			"pass": true
+		},
+		{
+			"name": "building is visible: copper_lamp",
+			"pass": true
+		},
+		{
+			"name": "building is visible: feed_trough",
+			"pass": true
+		},
+		{
+			"name": "building is visible: reinforced_cabinet",
+			"pass": true
+		},
+		{
+			"name": "building is visible: refrigerator",
+			"pass": true
+		},
+		{
+			"name": "building is visible: workbench",
+			"pass": true
+		},
+		{
+			"name": "building is visible: precision_repair_bench",
+			"pass": true
+		},
+		{
+			"name": "building is visible: fuel_supply_box",
+			"pass": true
+		},
+		{
+			"name": "building is visible: copper_oven",
+			"pass": true
+		},
+		{
+			"name": "building is visible: metal_workbench",
+			"pass": true
+		},
+		{
+			"name": "building is visible: stone_furnace",
+			"pass": true
+		},
+		{
+			"name": "building is visible: advanced_smokehouse",
+			"pass": true
+		},
+		{
+			"name": "building is visible: wood_bed",
+			"pass": true
+		},
+		{
+			"name": "building is visible: straw_mat",
+			"pass": true
+		},
+		{
+			"name": "building is visible: sleeping_bag",
+			"pass": true
+		},
+		{
+			"name": "building is visible: tilled_soil",
+			"pass": true
+		},
+		{
+			"name": "building is visible: wool_carpet",
+			"pass": true
+		},
+		{
+			"name": "building is visible: wood_fence",
+			"pass": true
+		},
+		{
+			"name": "building is visible: fence_gate",
+			"pass": true
+		},
+		{
+			"name": "building is visible: stone_wall",
+			"pass": true
+		},
+		{
+			"name": "building is visible: stone_gate",
+			"pass": true
+		},
+		{
+			"name": "building is visible: wood_floor",
+			"pass": true
+		},
+		{
+			"name": "building is visible: stone_path",
+			"pass": true
+		},
+		{
+			"name": "campfire is visible",
+			"pass": true
+		},
+		{
+			"name": "candidate compost_bin collider matches its individual base",
+			"pass": true
+		},
+		{
+			"name": "candidate compost_bin opens through world interaction",
+			"pass": true
+		},
+		{
+			"name": "candidate precision_repair_bench collider matches its individual base",
+			"pass": true
+		},
+		{
+			"name": "candidate precision_repair_bench opens through world interaction",
+			"pass": true
+		},
+		{
+			"name": "candidate fuel_supply_box collider matches its individual base",
+			"pass": true
+		},
+		{
+			"name": "candidate fuel_supply_box opens through world interaction",
+			"pass": true
+		},
+		{
+			"name": "candidate advanced_smokehouse collider matches its individual base",
+			"pass": true
+		},
+		{
+			"name": "candidate advanced_smokehouse opens through world interaction",
+			"pass": true
+		},
+		{
+			"name": "wood_bed still accepts sleep in candidate camp",
+			"pass": true
+		},
+		{
+			"name": "wood_bed wakes with original lifecycle",
+			"pass": true
+		},
+		{
+			"name": "straw_mat still accepts sleep in candidate camp",
+			"pass": true
+		},
+		{
+			"name": "straw_mat wakes with original lifecycle",
+			"pass": true
+		},
+		{
+			"name": "V panel contains candidate smokehouse from start",
+			"pass": true
+		},
+		{
+			"name": "all actual player save hashes unchanged",
+			"pass": true
+		}
+	],
+	"count": 72,
+	"failed": 0
+}

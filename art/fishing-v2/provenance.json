@@ -1,0 +1,74 @@
+{
+  "status": "approved_current_selected_batch",
+  "scope": "Fishing V1 independent preview only; no formal item adoption",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "exact_model_version": "not disclosed",
+  "estimateUsd": 0.0,
+  "prompt": "art/fishing-v2/prompt.txt",
+  "receipt": "art/fishing-v2/generated/job.json",
+  "source": "art/fishing-v2/generated/generated.png",
+  "source_sha256": "eacf4a39c75d84f789b77831511c99b7f623842e87d3c89deba8ea1e9160dd5e",
+  "references": [
+    {
+      "path": "assets/industry/v1/fishing_rod.png",
+      "sha256": "7023a424f37bd27a89af6942f05ddd9f8f0e92e5df8eda2f5f93a8ded34ee7fa"
+    },
+    {
+      "path": "prototypes/fishing-v1/art/fish.png",
+      "sha256": "adf224adf9c71b4e3f83a21fbe8147f387742a351ffe8d5d20d36f7b8dc86f0b"
+    }
+  ],
+  "ownership": "art/fishing-v2/ownership.json",
+  "processing": "2 ownership crops; single 256; chroma_key magenta / soft / despill 1 / Lanczos / strict QC; all visible components retained",
+  "files": {
+    "coin": {
+      "source": "art\\fishing-v2\\processed-coin\\clean.png",
+      "candidate": "prototypes\\fishing-v1\\art\\coin.png",
+      "sha256": "24907b9cc3e5b3773671a612a9b09a8763bf6e94febd1a1454cd830d29b3c7f8",
+      "runtime": "prototypes\\fishing-v1\\art\\coin.res",
+      "runtime_sha256": "fc0f0b9fe1ed05e148ee57a4ada767d1c4f2310c5a7a0313c549135f5a5b34b7"
+    },
+    "locked_chest": {
+      "source": "art\\fishing-v2\\processed-locked_chest\\clean.png",
+      "candidate": "prototypes\\fishing-v1\\art\\locked_chest.png",
+      "sha256": "e9df604ae991077833c8db1e9c4006e2d51b9158acde25c8f0eeb20bffbb6bea",
+      "runtime": "prototypes\\fishing-v1\\art\\locked_chest.res",
+      "runtime_sha256": "ccf4cbd568d114723e2e887db837ea21a5f184aee47260833a09c00ef7764f70"
+    }
+  },
+  "qa_files": [
+    "art/fishing-v2/qc-source/sheet-qc.json",
+    "art/fishing-v2/processed-coin/pipeline-meta.json",
+    "art/fishing-v2/processed-locked_chest/pipeline-meta.json"
+  ],
+  "warnings": [
+    {
+      "file": "art/fishing-v2/qc-source/sheet-qc.json",
+      "id": "safe_frame",
+      "status": "warn",
+      "value": 1,
+      "threshold": 0,
+      "cells": [
+        [
+          0,
+          1
+        ]
+      ],
+      "note": "owned art closer than 15% of the cell to its edge; ask for more margin next time"
+    }
+  ],
+  "warning_resolution": "Chest is fully inside its ownership cell with no crossing or edge cut; retained entire source and normalized to a padded 256 canvas. Raw safe_frame margin warning retained, processed geometry QA passes. Not an aesthetic approval.",
+  "runtime_rules": "prototypes/fishing-v1/fishing_preview.gd",
+  "item_descriptions": {
+    "coin": "闪闪发光，看起来很值钱。",
+    "locked_chest": "带着密码锁的宝箱。"
+  },
+  "no_uses_added": true,
+  "approval": {
+    "quote": "可以，全部接游戏吧",
+    "date": "2026-10-20",
+    "formal_provenance": "assets/fishing/v1/provenance.json",
+    "scope": "本批实际采用五图与当前侧视姿势；历史未采用直杆不纳入"
+  }
+}

@@ -169,10 +169,10 @@
     }
   },
   "tool:fishing_rod": {
-    "texture": "res://assets/industry/v1/fishing_rod.png",
+    "texture": "res://assets/fishing/v1/rod.res",
     "grip_px": [
-      70,
-      192
+      73,
+      191
     ],
     "scale": 0.24,
     "rotation_degrees": 0,
@@ -184,6 +184,39 @@
       "front": -20,
       "back": -20,
       "side": -30
+    }
+  },
+  "tool:solar_flashlight": {
+    "texture": "res://assets/merchant/v1/flashlight_side.png",
+    "grip_px": [
+      128,
+      170
+    ],
+    "scale": 0.14,
+    "rotation_degrees": 0,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "side": -20,
+      "front": -15,
+      "back": -15
+    },
+    "directional": true,
+    "source_angle": -1.5707963267948966,
+    "views": {
+      "front": {
+        "texture": "res://assets/merchant/v1/flashlight_front.png",
+        "source_angle": 1.5707963267948966,
+        "grip_px": [
+          128,
+          56
+        ]
+      },
+      "back": {
+        "texture": "res://assets/merchant/v1/flashlight_back.png"
+      }
     }
   }
 }

@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-16",
+  "identity": "approved v11 side walk + existing project identity reference",
+  "route": {
+    "route": "host_image",
+    "tool": "image_gen",
+    "adoption_tool": "generate2dmedia/cli_media.py adopt",
+    "requestedModel": "codex-image_gen",
+    "model": null,
+    "model_note": "underlying model not exposed by host tool",
+    "estimateUsd": null,
+    "estimate_note": "generation price unavailable; adoption receipt 0 USD describes adoption only",
+    "imageCalls": 1,
+    "videoCalls": 0
+  },
+  "references": [
+    {
+      "file": "source/input_references/v11_side_contact.png",
+      "original": "art/hero_v08_pose_redraw_preview_v11/side_contact.png",
+      "sha256": "eaebb8f3d10d74845ff61ebe204fc9191a293336ecdaa39848c1b086d8bfdfb8"
+    },
+    {
+      "file": "source/input_references/identity.png",
+      "original": "assets/hero/reference/identity.png",
+      "sha256": "b5cf99577c02c053236d86760b9654b7c3fc88210d606dbacf8a2bf6de6dcdbf"
+    }
+  ],
+  "prompt": "source/art_prompt.txt",
+  "original": "source/generated/generated.png",
+  "original_sha256": "c75a59ee077b639213b9606aca56538330e11b8dbd26ab11f543922accd7a09f",
+  "operation": "one new purpose-drawn complete neutral modular atlas; independent-object isolation, minor alpha cleanup, weighted meshes; never cut limbs from v11 frames",
+  "license": "generated art under account/provider terms; no new public-domain or open-source art license asserted",
+  "acceptance": "prototype candidate; user visual acceptance pending"
+}

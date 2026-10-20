@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "provider": "openai",
+  "kind": "image",
+  "requestedModel": "codex-image_gen",
+  "status": "done",
+  "artSource": "host_image",
+  "fingerprint": "36e9cc0cf14d735f6c6ff136a22850336d7a5ba28908d386d283fed2d4e060f6",
+  "estimate": {
+    "usd": 0.0,
+    "currency": "USD",
+    "pricesVersion": "none",
+    "items": [],
+    "basis": "adopted: the image was generated earlier in the user's own Codex thread; this tool made and counted no call"
+  },
+  "receipt": {
+    "startedAt": "2026-10-16T03:45:38.752Z",
+    "submittedAt": null,
+    "completedAt": "2026-10-16T03:45:38.752Z",
+    "wallMs": 0,
+    "providerMs": null,
+    "attempt": 1,
+    "purpose": "cartoon-rig-parts",
+    "toolVersion": "cli_media/0.4.0",
+    "outcomeCode": "adopted"
+  },
+  "adoption": {
+    "method": "codex-thread-folder",
+    "threadId": "01a142ce-8c0d-7dd3-aa94-a502f9863598",
+    "source": "CODEX_HOME/generated_images/01a142ce-8c0d-7dd3-aa94-a502f9863598/exec-66d5ac12-a0df-4ef8-b4b5-0956368f2b05.png",
+    "sourceSha256": "0630b251a9d9122da564a093721705f50fc95d6382088021fc93d8050f15e844",
+    "sourceMtime": "2026-10-16T03:44:44Z"
+  },
+  "artifact": {
+    "path": "generated.png",
+    "sha256": "0630b251a9d9122da564a093721705f50fc95d6382088021fc93d8050f15e844",
+    "bytes": 1780072,
+    "format": "PNG",
+    "size": [
+      1536,
+      1024
+    ]
+  }
+}

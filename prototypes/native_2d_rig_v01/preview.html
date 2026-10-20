@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>风栖原野 · v11 / 原生骨骼对比</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#edf0e5;color:#35483c;font:15px/1.55 "Microsoft YaHei",system-ui,sans-serif}main{max-width:1180px;margin:22px auto;padding:0 24px}h1{font-size:25px;margin:0}p{margin:5px 0 16px;color:#6c7e62}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:18px 0}button,select{font:inherit;border:1px solid #becbb1;border-radius:7px;background:#fafbf7;color:#35483c;padding:7px 11px;cursor:pointer}button.primary{background:#526e54;color:white;border-color:#526e54}label{cursor:pointer;white-space:nowrap}input{accent-color:#58795e}section{display:grid;grid-template-columns:1fr 1fr;gap:20px}.pane{min-width:0}h2{font-size:20px;margin:6px 0}small{color:#6c7e62}.pane>small{display:block;min-height:24px}.stage{margin-top:12px;border-radius:14px;background:#e4ebd7;border:1px solid #dce5ce;display:flex;justify-content:center;padding:0 4px}.stage canvas{width:min(100%,512px);height:auto;display:block}.small{display:flex;align-items:center;justify-content:center;gap:12px;padding-top:14px}.small canvas{width:128px;height:128px}.timeline{margin-top:20px}.timeline input{width:100%}#status{font-variant-numeric:tabular-nums;font-size:14px}.note{font-size:13px;margin-top:18px;border-top:1px solid #d5dfca;padding-top:12px}a{color:#456a4d}body.dark .stage{background:#333e3a}body.dark{background:#222c27;color:#dce7d7}body.dark p,body.dark small{color:#b4c3ac}@media(max-width:720px){.pane>small{min-height:46px}main{padding:0 12px}section{gap:10px}.toolbar{gap:6px}h2{font-size:16px}.small{flex-direction:column;gap:0}.small canvas{width:128px}}
+</style></head><body><main>
+<h1>风栖原野 / 原生 2D 骨骼实验</h1>
+<p>已确认 v11 与新中性骨架对比 · 两侧均从 128×128 源画布显示 · 脚底原点 (64,112)</p>
+<div class="toolbar">
+<select id="action" aria-label="动作"><option value="walk">行走 · 0.580 秒</option><option value="breathe">呼吸 · 1.800 秒</option><option value="wave">挥手 · 2.400 秒</option></select>
+<select id="outfit" aria-label="上衣"><option value="0">鼠尾草短外套</option><option value="1">青蓝套头上衣</option></select>
+<select id="speed" aria-label="播放速度"><option value="1">正常 1×</option><option value="0.25">慢速 0.25×</option><option value="0.5">半速 0.5×</option></select>
+<button id="play" class="primary">暂停</button><button id="step">步进 1/64</button>
+<label>行走周期 <input id="cycle" aria-label="行走周期（秒）" type="number" min="0.35" max="1.2" step="0.001" value="0.580" style="width:76px;padding:7px;border:1px solid #becbb1;border-radius:7px"> 秒</label>
+<label><input id="bones" type="checkbox"> 骨骼</label><label><input id="mirror" type="checkbox"> 镜像左侧</label><label><input id="dark" type="checkbox"> 深色底</label>
+</div>
+<section>
+<div class="pane"><h2>已确认 v11 · 完整序列帧</h2><small id="leftNote">原版八帧 / 相同周期</small><div class="stage"><canvas id="left" width="512" height="350"></canvas></div><div class="small"><canvas id="smallLeft" width="128" height="128"></canvas><small>原始 1:1 尺寸</small></div></div>
+<div class="pane"><h2>18 骨骼 · 连续网格变形</h2><small>同一 AnimationPlayer 动作 / 两套上衣复用</small><div class="stage"><canvas id="right" width="512" height="350"></canvas></div><div class="small"><canvas id="smallRight" width="128" height="128"></canvas><small>原始 1:1 尺寸</small></div></div>
+</section>
+<div class="timeline"><input id="phase" aria-label="动作相位" type="range" min="0" max="1" step="0.0001" value="0"><div id="status">正在读取 Godot 渲染…</div></div>
+<p class="note">网页右侧播放的是<strong>实际 Godot GPU 渲染</strong>，骨骼叠加来自同次渲染的实际关节坐标。需要编辑骨骼、权重或关键帧，请打开本目录的独立 <a href="project.godot">Godot 工程</a>与 <a href="hero_rig.tscn">角色场景</a>。<br>按 1 / 2 / 3 切动作，C 换上衣，B 显示骨骼，空格暂停，← / → 步进。挥手模式左侧保持原版待机，v11 没有挥手素材。</p>
+</main><script src="preview_data/data.js"></script><script>
+const $=id=>document.getElementById(id),images={};let action='walk',outfit=0,speed=1,paused=false,clock=0,last=0,ready=false,walkDuration=RIG_DATA.durations.walk;
+function duration(){return action==='walk'?walkDuration:RIG_DATA.durations[action]}
+function load(key,url){return new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{images[key]=im;resolve()};im.onerror=()=>reject(new Error(url));im.src=url})}
+Promise.all(['walk','breathe','wave'].flatMap(a=>[0,1].map(o=>load(a+'_'+o,`preview_data/${a}_${o}.png`))).concat(['walk','idle'].flatMap(a=>Array.from({length:a==='walk'?8:4},(_,i)=>load(a+i,`reference/side_${a}_${String(i).padStart(2,'0')}.png`))))).then(()=>{ready=true;requestAnimationFrame(tick)}).catch(e=>{$('status').textContent='加载失败：'+e.message});
+function frame(){return Math.min(63,Math.floor(clock/duration()*64))}
+function draw(canvas,isRig,small=false){const ctx=canvas.getContext('2d');ctx.clearRect(0,0,canvas.width,canvas.height);const scale=small?1:3,px=small?64:256,py=small?112:310,flip=$('mirror').checked?-1:1;
+if(!small){ctx.strokeStyle=$('dark').checked?'#687b6b':'#acbb9f';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(20,py+.5);ctx.lineTo(492,py+.5);ctx.stroke();ctx.beginPath();ctx.moveTo(px-6,py);ctx.lineTo(px+6,py);ctx.moveTo(px,py-6);ctx.lineTo(px,py+6);ctx.stroke()}
+ctx.save();ctx.translate(px,py);ctx.scale(scale*flip,scale);const i=frame();let im,sx=0,sy=0;
+if(isRig){im=images[action+'_'+outfit];sx=i%8*128;sy=Math.floor(i/8)*128}else{const refAction=action==='walk'?'walk':'idle',count=refAction==='walk'?8:4;const idx=action==='wave'?0:Math.min(count-1,Math.floor(clock/duration()*count));im=images[refAction+idx]}
+ctx.imageSmoothingEnabled=true;ctx.drawImage(im,sx,sy,128,128,-64,-112,128,128);
+if(isRig&&!small&&$('bones').checked){const joints=RIG_DATA.joints[action][i];for(const [name,p] of Object.entries(joints)){const par=RIG_DATA.parents[name];if(par){const q=joints[par];ctx.beginPath();ctx.moveTo(q[0]-64,q[1]-112);ctx.lineTo(p[0]-64,p[1]-112);ctx.lineWidth=.9;ctx.strokeStyle='rgba(255,255,255,.9)';ctx.stroke();ctx.lineWidth=.4;ctx.strokeStyle=name.startsWith('Near')?'#167c83':'#b36920';ctx.stroke()}ctx.fillStyle=name.startsWith('Near')?'#167c83':'#b36920';ctx.beginPath();ctx.arc(p[0]-64,p[1]-112,.8,0,Math.PI*2);ctx.fill()}}
+ctx.restore()}
+function render(){if(!ready)return;draw($('left'),false);draw($('right'),true);draw($('smallLeft'),false,true);draw($('smallRight'),true,true);$('phase').value=clock/duration();$('play').textContent=paused?'播放':'暂停';$('status').textContent=`${paused?'暂停':'播放'} · ${clock.toFixed(3)} / ${duration().toFixed(3)} 秒 · 相位 ${(clock/duration()*100).toFixed(1)}% · 骨骼采样 ${frame()+1}/64`}
+function tick(t){if(last&&!paused)clock=(clock+Math.min(.05,(t-last)/1000)*speed)%duration();last=t;render();requestAnimationFrame(tick)}
+$('action').onchange=e=>{action=e.target.value;clock=0;$('leftNote').textContent=action==='wave'?'v11 无挥手，保持原待机作体型参照':action==='walk'?'原版八帧 / 相同周期':'原版四帧 / 相同周期';render()};$('outfit').onchange=e=>{outfit=+e.target.value;render()};$('speed').onchange=e=>speed=+e.target.value;$('play').onclick=()=>{paused=!paused;render()};
+function step(amount=1/64){paused=true;clock=(clock+amount*duration()+duration())%duration();render()}
+$('cycle').onchange=e=>{const phase=clock/duration();walkDuration=Math.min(1.2,Math.max(.35,Number(e.target.value)||8/13.8));e.target.value=walkDuration.toFixed(3);if(action==='walk')clock=phase*duration();render()};$('step').onclick=()=>step();$('phase').oninput=e=>{paused=true;clock=Math.min(.999999,+e.target.value)*duration();render()};$('dark').onchange=()=>document.body.classList.toggle('dark',$('dark').checked);$('bones').onchange=render;$('mirror').onchange=render;
+document.addEventListener('keydown',e=>{if(['INPUT','SELECT'].includes(document.activeElement.tagName))return;if(e.code==='Space'){e.preventDefault();$('play').click()}if(e.code==='ArrowRight')step();if(e.code==='ArrowLeft')step(-1/64);if(e.code==='KeyB'){$('bones').checked=!$('bones').checked;render()}if(e.code==='KeyC'){outfit=1-outfit;$('outfit').value=outfit;render()}if(['Digit1','Digit2','Digit3'].includes(e.code)){$('action').value=['walk','breathe','wave'][+e.code.slice(-1)-1];$('action').dispatchEvent(new Event('change'))}});
+</script></body></html>

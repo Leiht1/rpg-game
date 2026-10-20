@@ -1,0 +1,270 @@
+{
+	"checks": [
+		{
+			"name": "ordinary behavior in isolated world without candidate flag",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/precision_repair_bench.png byte-identical approved art",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/precision_repair_bench.png imports as runtime texture",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/fuel_supply_box.png byte-identical approved art",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/fuel_supply_box.png imports as runtime texture",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/compost_bin.png byte-identical approved art",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/compost_bin.png imports as runtime texture",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/advanced_smokehouse.png byte-identical approved art",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/advanced_smokehouse.png imports as runtime texture",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/refrigerator.png byte-identical approved art",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/refrigerator.png imports as runtime texture",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/compost_fertilizer.png byte-identical approved art",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/compost_fertilizer.png imports as runtime texture",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/smoked_fish.png byte-identical approved art",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/smoked_fish.png imports as runtime texture",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/rotten_lake_fish.png byte-identical approved art",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/rotten_lake_fish.png imports as runtime texture",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/rotten_roasted_fish.png byte-identical approved art",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/rotten_roasted_fish.png imports as runtime texture",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/rotten_smoked_fish.png byte-identical approved art",
+			"pass": true
+		},
+		{
+			"name": "assets/camp_expansion/v2/rotten_smoked_fish.png imports as runtime texture",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench visible from start without unlock",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench formal item icon",
+			"pass": true
+		},
+		{
+			"name": "precision_repair_bench formal world art",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box visible from start without unlock",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box formal item icon",
+			"pass": true
+		},
+		{
+			"name": "fuel_supply_box formal world art",
+			"pass": true
+		},
+		{
+			"name": "compost_bin visible from start without unlock",
+			"pass": true
+		},
+		{
+			"name": "compost_bin formal item icon",
+			"pass": true
+		},
+		{
+			"name": "compost_bin formal world art",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse visible from start without unlock",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse formal item icon",
+			"pass": true
+		},
+		{
+			"name": "advanced_smokehouse formal world art",
+			"pass": true
+		},
+		{
+			"name": "ordinary entry enables compact chest",
+			"pass": true
+		},
+		{
+			"name": "ordinary entry enables expanded carpet",
+			"pass": true
+		},
+		{
+			"name": "wood_fence stable connection or sleeping geometry",
+			"pass": true
+		},
+		{
+			"name": "fence_gate stable connection or sleeping geometry",
+			"pass": true
+		},
+		{
+			"name": "stone_wall stable connection or sleeping geometry",
+			"pass": true
+		},
+		{
+			"name": "stone_gate stable connection or sleeping geometry",
+			"pass": true
+		},
+		{
+			"name": "wood_bed stable connection or sleeping geometry",
+			"pass": true
+		},
+		{
+			"name": "straw_mat stable connection or sleeping geometry",
+			"pass": true
+		},
+		{
+			"name": "lake_fish whole rotten fish active without preview",
+			"pass": true
+		},
+		{
+			"name": "roasted_fish whole rotten fish active without preview",
+			"pass": true
+		},
+		{
+			"name": "smoked_fish whole rotten fish active without preview",
+			"pass": true
+		},
+		{
+			"name": "smoked fish explicit name",
+			"pass": true
+		},
+		{
+			"name": "bag-drag native drag starts",
+			"pass": true
+		},
+		{
+			"name": "bag-drag one native preview",
+			"pass": true
+		},
+		{
+			"name": "bag-drag preview follows mouse",
+			"pass": true
+		},
+		{
+			"name": "bag-drag preview draws above bag",
+			"pass": true
+		},
+		{
+			"name": "bag-drag release ends drag",
+			"pass": true
+		},
+		{
+			"name": "bag drag transfers exact stack",
+			"pass": true
+		},
+		{
+			"name": "hotbar-drag native drag starts",
+			"pass": true
+		},
+		{
+			"name": "hotbar-drag one native preview",
+			"pass": true
+		},
+		{
+			"name": "hotbar-drag preview follows mouse",
+			"pass": true
+		},
+		{
+			"name": "hotbar-drag preview draws above bag",
+			"pass": true
+		},
+		{
+			"name": "hotbar-drag release ends drag",
+			"pass": true
+		},
+		{
+			"name": "hotbar to bag transfers stack",
+			"pass": true
+		},
+		{
+			"name": "bag-to-hotbar native drag starts",
+			"pass": true
+		},
+		{
+			"name": "bag-to-hotbar one native preview",
+			"pass": true
+		},
+		{
+			"name": "bag-to-hotbar preview follows mouse",
+			"pass": true
+		},
+		{
+			"name": "bag-to-hotbar preview draws above bag",
+			"pass": true
+		},
+		{
+			"name": "bag-to-hotbar release ends drag",
+			"pass": true
+		},
+		{
+			"name": "bag to hotbar transfers stack",
+			"pass": true
+		},
+		{
+			"name": "cancel drag preserves all inventory",
+			"pass": true
+		},
+		{
+			"name": "drag does not close bag",
+			"pass": true
+		},
+		{
+			"name": "actual player saves unchanged",
+			"pass": true
+		}
+	],
+	"count": 66,
+	"failed": 0
+}

@@ -1,0 +1,86 @@
+{
+	"checks": [
+		{
+			"name": "open texture retained beyond draw callback",
+			"pass": true
+		},
+		{
+			"name": "open=false GPU pixels match approved art, differing=0",
+			"pass": true
+		},
+		{
+			"name": "open=false retains painted wood colors instead of white rectangle",
+			"pass": true
+		},
+		{
+			"name": "open texture retained beyond draw callback",
+			"pass": true
+		},
+		{
+			"name": "open=true GPU pixels match approved art, differing=0",
+			"pass": true
+		},
+		{
+			"name": "open=true retains painted wood colors instead of white rectangle",
+			"pass": true
+		},
+		{
+			"name": "open texture retained beyond draw callback",
+			"pass": true
+		},
+		{
+			"name": "open=false GPU pixels match approved art, differing=0",
+			"pass": true
+		},
+		{
+			"name": "open=false retains painted wood colors instead of white rectangle",
+			"pass": true
+		},
+		{
+			"name": "open texture retained beyond draw callback",
+			"pass": true
+		},
+		{
+			"name": "open=true GPU pixels match approved art, differing=0",
+			"pass": true
+		},
+		{
+			"name": "open=true retains painted wood colors instead of white rectangle",
+			"pass": true
+		},
+		{
+			"name": "real chest opens through existing save transaction",
+			"pass": true
+		},
+		{
+			"name": "open grid and persistent lid texture both present",
+			"pass": true
+		},
+		{
+			"name": "deposit stack succeeds",
+			"pass": true
+		},
+		{
+			"name": "deposit keeps exact inventory counts",
+			"pass": true
+		},
+		{
+			"name": "withdraw stack succeeds",
+			"pass": true
+		},
+		{
+			"name": "withdraw keeps exact inventory counts",
+			"pass": true
+		},
+		{
+			"name": "close restores closed state and hides storage",
+			"pass": true
+		},
+		{
+			"name": "test world disables persistent saves and isolates item path",
+			"pass": true
+		}
+	],
+	"count": 20,
+	"failed": 0
+}

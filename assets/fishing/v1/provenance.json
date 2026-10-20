@@ -1,0 +1,26 @@
+{
+  "status": "approved",
+  "approval_quote": "可以，全部接游戏吧",
+  "approval_date": "2026-10-20",
+  "scope": "本批五张图、原尺寸鱼竿、侧视动作和钓鱼V1；不批准未来素材",
+  "sources": [
+    "art/fishing-v1/provenance.json",
+    "art/fishing-v2/provenance.json"
+  ],
+  "source_qa_warnings": [
+    "v1原图 faint_specks，处理后通过",
+    "v2原图 safe_frame，处理后通过"
+  ],
+  "files": {
+    "coin.png": "24907b9cc3e5b3773671a612a9b09a8763bf6e94febd1a1454cd830d29b3c7f8",
+    "coin.res": "fc0f0b9fe1ed05e148ee57a4ada767d1c4f2310c5a7a0313c549135f5a5b34b7",
+    "fish.png": "adf224adf9c71b4e3f83a21fbe8147f387742a351ffe8d5d20d36f7b8dc86f0b",
+    "fish.res": "c623cfdef770de2984b8e9be2db867820b6acf011f8881c1bc9bbfc83f487c0a",
+    "float.png": "c4643551d97b59373c9b8059affeb9c880dcc9a54fe4ab094f743b3bfd1b5f24",
+    "float.res": "7abc1ffa96d08674ad3771a773b8c3a650123e047ce807582d2c60b3fda74817",
+    "locked_chest.png": "e9df604ae991077833c8db1e9c4006e2d51b9158acde25c8f0eeb20bffbb6bea",
+    "locked_chest.res": "ccf4cbd568d114723e2e887db837ea21a5f184aee47260833a09c00ef7764f70",
+    "rod.png": "513dc3a4d893ff95f8c5a40bb98cdce670f5c0236d7f6d246457545053e882ea",
+    "rod.res": "ee9cb75d925358fe67d0334ae95874d02b3a625c5f4173f52d6bdb5285260da2"
+  }
+}

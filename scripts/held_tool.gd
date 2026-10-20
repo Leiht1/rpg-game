@@ -61,8 +61,11 @@ func apply(character: Node2D, inventory: ItemInventory, facing: String, action: 
 	var definition := inventory.database.item(str(instance.item_id))
 	var row: Dictionary=definitions.get(definition.get("visual_id",""),{})
 	if row.is_empty(): return
+	if row.has("views"):
+		row=row.duplicate(true)
+		row.merge(row.views.get("side" if facing in ["left","right"] else facing,{}),true)
 	var path := str(row.texture)
-	if not textures.has(path): textures[path]=load(path)
+	if not textures.has(path): textures[path]=preload("res://scripts/candidate_art.gd").texture(path) if path.begins_with("res://prototypes/") else load(path)
 	tool.texture=textures[path]
 	var pin: Array=row.grip_px
 	tool.offset=-Vector2(pin[0],pin[1])
@@ -94,6 +97,10 @@ func apply(character: Node2D, inventory: ItemInventory, facing: String, action: 
 		var forward := Vector2.DOWN if facing=="front" else Vector2.UP if facing=="back" else Vector2.RIGHT
 		var local_forward := arm.to_local(visual.to_global(forward))-arm.to_local(visual.global_position)
 		tool.rotation=local_forward.angle()+PI*.5
+	if row.get("directional",false):
+		var forward: Vector2={"front":Vector2.DOWN,"back":Vector2.UP,"left":Vector2.LEFT,"right":Vector2.RIGHT}[facing]
+		var local_forward := arm.to_local(arm.global_position+forward)-arm.to_local(arm.global_position)
+		tool.rotation=local_forward.angle()-float(row.get("source_angle",-PI*.5))
 	if facing=="back": show_behind_legs(character,tool)
 
 func show_behind_legs(character: Node2D, source: Sprite2D) -> void:
@@ -161,3 +168,4 @@ func align_front_shoulders(character: Node2D, arm: Node2D) -> void:
 	if front_free_source!=source:
 		front_free_source=source;front_free_was_visible=source.visible
 	source.hide()
+

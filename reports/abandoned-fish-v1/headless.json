@@ -1,0 +1,454 @@
+{
+	"camps": [
+		{
+			"group": "0",
+			"kinds": [
+				"wood_chest",
+				"workbench",
+				"straw_mat",
+				"wood_fence"
+			],
+			"x": 18197.427734375,
+			"y": 28966.0
+		},
+		{
+			"group": "1",
+			"kinds": [
+				"wood_chest",
+				"wood_bed",
+				"stone_path",
+				"wood_fence"
+			],
+			"x": 34725.4296875,
+			"y": 25132.572265625
+		},
+		{
+			"group": "2",
+			"kinds": [
+				"wood_chest",
+				"workbench",
+				"straw_mat",
+				"wood_floor",
+				"wood_fence"
+			],
+			"x": 29824.25,
+			"y": 19373.25
+		}
+	],
+	"checks": [
+		{
+			"name": "item database validates",
+			"pass": true
+		},
+		{
+			"name": "new world generates three grouped camps",
+			"pass": true
+		},
+		{
+			"name": "multiple structures in camp 0",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:0",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:1",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:2",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:3",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:4",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:5",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:0:6",
+			"pass": true
+		},
+		{
+			"name": "spawn clearance 0",
+			"pass": true
+		},
+		{
+			"name": "living camp and broken enclosure 0",
+			"pass": true
+		},
+		{
+			"name": "multiple structures in camp 1",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:0",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:1",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:2",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:3",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:4",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:5",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:1:6",
+			"pass": true
+		},
+		{
+			"name": "spawn clearance 1",
+			"pass": true
+		},
+		{
+			"name": "living camp and broken enclosure 1",
+			"pass": true
+		},
+		{
+			"name": "multiple structures in camp 2",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:0",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:1",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:2",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:3",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:4",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:5",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:6",
+			"pass": true
+		},
+		{
+			"name": "dry land abandoned:v1:2:7",
+			"pass": true
+		},
+		{
+			"name": "spawn clearance 2",
+			"pass": true
+		},
+		{
+			"name": "living camp and broken enclosure 2",
+			"pass": true
+		},
+		{
+			"name": "generated buildings and loot validate",
+			"pass": true
+		},
+		{
+			"name": "generated camp snapshot saves",
+			"pass": true
+		},
+		{
+			"name": "generation cannot duplicate",
+			"pass": true
+		},
+		{
+			"name": "stream installs camp",
+			"pass": true
+		},
+		{
+			"name": "no functional interaction without hammer",
+			"pass": true
+		},
+		{
+			"name": "abandoned chest direct interaction refused",
+			"pass": true
+		},
+		{
+			"name": "abandoned chest service refuses open",
+			"pass": true
+		},
+		{
+			"name": "abandoned storage direct transfer refused",
+			"pass": true
+		},
+		{
+			"name": "abandoned workbench unavailable",
+			"pass": true
+		},
+		{
+			"name": "abandoned sleep facility unavailable",
+			"pass": true
+		},
+		{
+			"name": "abandoned sleep facility unavailable",
+			"pass": true
+		},
+		{
+			"name": "abandoned workbench unavailable",
+			"pass": true
+		},
+		{
+			"name": "abandoned sleep facility unavailable",
+			"pass": true
+		},
+		{
+			"name": "hammer selects demolition",
+			"pass": true
+		},
+		{
+			"name": "chest demolition hit 0",
+			"pass": true
+		},
+		{
+			"name": "chest demolition hit 1",
+			"pass": true
+		},
+		{
+			"name": "final demolition save failure",
+			"pass": true
+		},
+		{
+			"name": "failed demolition restores building contents durability and loose",
+			"pass": true
+		},
+		{
+			"name": "last chest hit commits",
+			"pass": true
+		},
+		{
+			"name": "chest removed",
+			"pass": true
+		},
+		{
+			"name": "original 50 percent chest refund",
+			"pass": true
+		},
+		{
+			"name": "contents preserved 0",
+			"pass": true
+		},
+		{
+			"name": "contents preserved 1",
+			"pass": true
+		},
+		{
+			"name": "contents preserved 2",
+			"pass": true
+		},
+		{
+			"name": "contents use real drop node",
+			"pass": true
+		},
+		{
+			"name": "pickup save failure refused",
+			"pass": true
+		},
+		{
+			"name": "pickup rollback and no obtained event",
+			"pass": true
+		},
+		{
+			"name": "contents can be picked up",
+			"pass": true
+		},
+		{
+			"name": "pickup obtained once",
+			"pass": true
+		},
+		{
+			"name": "demolition and pickup snapshot saved",
+			"pass": true
+		},
+		{
+			"name": "reload never restores demolished chest or picked loot",
+			"pass": true
+		},
+		{
+			"name": "nonstorage demolition 0",
+			"pass": true
+		},
+		{
+			"name": "nonstorage demolition 1",
+			"pass": true
+		},
+		{
+			"name": "nonstorage demolition 2",
+			"pass": true
+		},
+		{
+			"name": "nonstorage original refund",
+			"pass": true
+		},
+		{
+			"name": "legacy fish fresh migration",
+			"pass": true
+		},
+		{
+			"name": "invalid freshness refused",
+			"pass": true
+		},
+		{
+			"name": "fish acquisition creates freshness",
+			"pass": true
+		},
+		{
+			"name": "raw fish cannot be eaten",
+			"pass": true
+		},
+		{
+			"name": "fish rots after 2.5 game days",
+			"pass": true
+		},
+		{
+			"name": "reused rotten appearance present",
+			"pass": true
+		},
+		{
+			"name": "fridge slows fish decay",
+			"pass": true
+		},
+		{
+			"name": "unrelated material does not rot",
+			"pass": true
+		},
+		{
+			"name": "exact fish recipe roast_fish",
+			"pass": true
+		},
+		{
+			"name": "cook start rollback roast_fish",
+			"pass": true
+		},
+		{
+			"name": "cook starts roast_fish",
+			"pass": true
+		},
+		{
+			"name": "cook completes roast_fish",
+			"pass": true
+		},
+		{
+			"name": "recipe discovered roast_fish",
+			"pass": true
+		},
+		{
+			"name": "ready meal survives reload roast_fish",
+			"pass": true
+		},
+		{
+			"name": "claim rollback roast_fish",
+			"pass": true
+		},
+		{
+			"name": "claim cooked fish roast_fish",
+			"pass": true
+		},
+		{
+			"name": "meal obtained event roast_fish",
+			"pass": true
+		},
+		{
+			"name": "duplicate claim refused roast_fish",
+			"pass": true
+		},
+		{
+			"name": "meal edible roast_fish",
+			"pass": true
+		},
+		{
+			"name": "conservative hunger gain roast_fish",
+			"pass": true
+		},
+		{
+			"name": "exact fish recipe vegetable_fish_soup",
+			"pass": true
+		},
+		{
+			"name": "cook start rollback vegetable_fish_soup",
+			"pass": true
+		},
+		{
+			"name": "cook starts vegetable_fish_soup",
+			"pass": true
+		},
+		{
+			"name": "cook completes vegetable_fish_soup",
+			"pass": true
+		},
+		{
+			"name": "recipe discovered vegetable_fish_soup",
+			"pass": true
+		},
+		{
+			"name": "ready meal survives reload vegetable_fish_soup",
+			"pass": true
+		},
+		{
+			"name": "claim rollback vegetable_fish_soup",
+			"pass": true
+		},
+		{
+			"name": "claim cooked fish vegetable_fish_soup",
+			"pass": true
+		},
+		{
+			"name": "meal obtained event vegetable_fish_soup",
+			"pass": true
+		},
+		{
+			"name": "duplicate claim refused vegetable_fish_soup",
+			"pass": true
+		},
+		{
+			"name": "meal edible vegetable_fish_soup",
+			"pass": true
+		},
+		{
+			"name": "conservative hunger gain vegetable_fish_soup",
+			"pass": true
+		},
+		{
+			"name": "existing recipe intact",
+			"pass": true
+		},
+		{
+			"name": "old building snapshot compatible, no camp injection",
+			"pass": true
+		},
+		{
+			"name": "all real player save hashes unchanged",
+			"pass": true
+		}
+	],
+	"count": 103,
+	"failed": 0
+}

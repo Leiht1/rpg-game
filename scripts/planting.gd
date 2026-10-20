@@ -16,6 +16,8 @@ static func soil_rect() -> Rect2:
 
 func valid(row: Dictionary) -> bool:
 	if not row.get("crop") is String or not row.get("roots") is bool: return false
+	if row.has("fertilized") and not row.fertilized is bool:return false
+	if row.get("fertilized",false) and (row.crop.is_empty() or row.roots):return false
 	var elapsed = row.get("growth_minutes")
 	if not (elapsed is int or elapsed is float) or not is_finite(float(elapsed)) or elapsed<0: return false
 	if row.crop.is_empty(): return elapsed==0
@@ -35,7 +37,7 @@ func advance(minutes: float) -> void:
 		var row: Dictionary=service.builds.states[id]
 		if row.kind!="tilled_soil" or row.crop.is_empty() or row.roots: continue
 		var old := stage(row)
-		row.growth_minutes=minf(float(rules.crops[row.crop].minutes),float(row.growth_minutes)+minutes)
+		row.growth_minutes=minf(float(rules.crops[row.crop].minutes),float(row.growth_minutes)+minutes*(float(service.expansion.rules.fertilizer_speed) if row.get("fertilized",false) else 1.0))
 		service.dirty=true
 		if old!=stage(row) and service.builds.visuals.has(id): service.builds.visuals[id].queue_redraw()
 
@@ -44,7 +46,9 @@ func action(id: String) -> String:
 	if row.is_empty(): return ""
 	if row.roots: return "dig"
 	if row.crop.is_empty(): return "sow"
-	return "pickup" if stage(row)==2 else ""
+	if stage(row)==2:return "pickup"
+	if not row.get("fertilized",false) and service.inventory.count_item("compost_fertilizer")>0:return "fertilize"
+	return ""
 
 func interact(id: String, target: Node2D, seed_id: String="") -> bool:
 	var builds: RefCounted=service.builds
@@ -80,7 +84,7 @@ func interact(id: String, target: Node2D, seed_id: String="") -> bool:
 		rewards={str(spec.produce):int(spec.yield_count),str(spec.seed):int(spec.seed_count)}
 		for item in rewards:
 			if staged.add(item,rewards[item])>0: service.notice.emit("背包空间不足，请留出收获和种子的空间");return false
-		row.crop="";row.growth_minutes=0.0;row.roots=true
+		row.crop="";row.growth_minutes=0.0;row.roots=true;row.erase("fertilized")
 	else: return false
 	builds.busy=true;inv.slots=staged.slots;service.dirty=true
 	if not service.save_state():
@@ -89,4 +93,14 @@ func interact(id: String, target: Node2D, seed_id: String="") -> bool:
 		service.notice.emit("保存失败，种植操作已回滚");return false
 	inv.changed.emit();builds.busy=false;target.queue_redraw()
 	for item in rewards: service.item_obtained.emit(item,int(rewards[item]))
+	return true
+
+func fertilize(id: String, target: Node2D) -> bool:
+	var reason: String=service.expansion.act(id,"fertilize")
+	if not reason.is_empty():service.notice.emit(reason);return false
+	service.notice.emit("肥料 -1")
+	target.modulate=Color(1.4,1.65,1.15)
+	var glow := target.create_tween()
+	glow.tween_property(target,"modulate",Color.WHITE,.65)
+	target.queue_redraw()
 	return true

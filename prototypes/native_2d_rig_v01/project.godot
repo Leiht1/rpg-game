@@ -1,0 +1,18 @@
+config_version=5
+
+[application]
+config/name="风栖原野 · 原生 2D 骨骼实验 v01"
+run/main_scene="res://preview.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[display]
+window/size/viewport_width=1200
+window/size/viewport_height=800
+window/size/window_width_override=1200
+window/size/window_height_override=800
+window/stretch/mode="canvas_items"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+environment/defaults/default_clear_color=Color(0.91, 0.93, 0.87, 1)

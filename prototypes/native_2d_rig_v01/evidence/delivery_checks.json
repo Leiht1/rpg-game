@@ -1,0 +1,31 @@
+{
+  "breathe_feet_max_rgba_delta": 0,
+  "wave_feet_max_rgba_delta": 0,
+  "bounds": {
+    "walk": {
+      "height_min": 92,
+      "height_max": 93,
+      "alpha_touches_canvas": false
+    },
+    "breathe": {
+      "height_min": 94,
+      "height_max": 95,
+      "alpha_touches_canvas": false
+    },
+    "wave": {
+      "height_min": 94,
+      "height_max": 95,
+      "alpha_touches_canvas": false
+    }
+  },
+  "protected_files": 111,
+  "protected_changes": [],
+  "pixel_region": [
+    45,
+    96,
+    86,
+    116
+  ],
+  "status": "pass",
+  "visual_quality": "needs-user-review; measurements do not approve art or natural gait"
+}

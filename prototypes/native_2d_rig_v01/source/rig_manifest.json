@@ -1,0 +1,461 @@
+{
+  "canvas": [
+    128,
+    128
+  ],
+  "foot_origin": [
+    64,
+    112
+  ],
+  "skeleton": [
+    {
+      "name": "Pelvis",
+      "parent": null,
+      "rest_position": [
+        63,
+        84
+      ],
+      "length": 9
+    },
+    {
+      "name": "Spine",
+      "parent": "Pelvis",
+      "rest_position": [
+        0,
+        -9
+      ],
+      "length": 13
+    },
+    {
+      "name": "Chest",
+      "parent": "Spine",
+      "rest_position": [
+        -1,
+        -13
+      ],
+      "length": 6
+    },
+    {
+      "name": "Neck",
+      "parent": "Chest",
+      "rest_position": [
+        0,
+        -6
+      ],
+      "length": 3
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "rest_position": [
+        0,
+        -3
+      ],
+      "length": 19
+    },
+    {
+      "name": "Scarf",
+      "parent": "Chest",
+      "rest_position": [
+        4,
+        -5
+      ],
+      "length": 10
+    },
+    {
+      "name": "FarUpperArm",
+      "parent": "Chest",
+      "rest_position": [
+        4.5,
+        2
+      ],
+      "length": 10.5
+    },
+    {
+      "name": "FarForearm",
+      "parent": "FarUpperArm",
+      "rest_position": [
+        0,
+        10.5
+      ],
+      "length": 9
+    },
+    {
+      "name": "FarHand",
+      "parent": "FarForearm",
+      "rest_position": [
+        0,
+        9
+      ],
+      "length": 4
+    },
+    {
+      "name": "NearUpperArm",
+      "parent": "Chest",
+      "rest_position": [
+        -2.5,
+        2
+      ],
+      "length": 10.5
+    },
+    {
+      "name": "NearForearm",
+      "parent": "NearUpperArm",
+      "rest_position": [
+        0,
+        10.5
+      ],
+      "length": 9
+    },
+    {
+      "name": "NearHand",
+      "parent": "NearForearm",
+      "rest_position": [
+        0,
+        9
+      ],
+      "length": 4
+    },
+    {
+      "name": "FarThigh",
+      "parent": "Pelvis",
+      "rest_position": [
+        2,
+        0
+      ],
+      "length": 10
+    },
+    {
+      "name": "FarShin",
+      "parent": "FarThigh",
+      "rest_position": [
+        0,
+        10
+      ],
+      "length": 10
+    },
+    {
+      "name": "FarFoot",
+      "parent": "FarShin",
+      "rest_position": [
+        0,
+        10
+      ],
+      "length": 9
+    },
+    {
+      "name": "NearThigh",
+      "parent": "Pelvis",
+      "rest_position": [
+        -1,
+        0
+      ],
+      "length": 10
+    },
+    {
+      "name": "NearShin",
+      "parent": "NearThigh",
+      "rest_position": [
+        0,
+        10
+      ],
+      "length": 10
+    },
+    {
+      "name": "NearFoot",
+      "parent": "NearShin",
+      "rest_position": [
+        0,
+        10
+      ],
+      "length": 9
+    }
+  ],
+  "meshes": [
+    {
+      "name": "FarLeg",
+      "texture": "leg",
+      "vertices": 95,
+      "triangles": 144,
+      "bones": [
+        "FarThigh",
+        "FarShin",
+        "FarFoot"
+      ],
+      "outfit": -1,
+      "rest_bounds": [
+        60.79027027027027,
+        81.83783783783784,
+        8.756756756756758,
+        24.324324324324326
+      ]
+    },
+    {
+      "name": "FarBoot",
+      "texture": "boot",
+      "vertices": 65,
+      "triangles": 96,
+      "bones": [
+        "FarFoot"
+      ],
+      "outfit": -1,
+      "rest_bounds": [
+        58.23609756097561,
+        99.85365853658537,
+        17.70731707317073,
+        12.292682926829267
+      ]
+    },
+    {
+      "name": "FarArm",
+      "texture": "arm",
+      "vertices": 95,
+      "triangles": 144,
+      "bones": [
+        "FarUpperArm",
+        "FarForearm",
+        "FarHand"
+      ],
+      "outfit": -1,
+      "rest_bounds": [
+        62.10180921052631,
+        60.51907894736842,
+        10.40296052631579,
+        27.861842105263158
+      ]
+    },
+    {
+      "name": "FarOliveSleeve",
+      "texture": "olive_sleeve",
+      "vertices": 65,
+      "triangles": 96,
+      "bones": [
+        "FarUpperArm",
+        "FarForearm",
+        "FarHand"
+      ],
+      "outfit": 0,
+      "rest_bounds": [
+        62.2027,
+        60.790499999999994,
+        8.942499999999999,
+        14.945
+      ]
+    },
+    {
+      "name": "FarTealSleeve",
+      "texture": "teal_sleeve",
+      "vertices": 65,
+      "triangles": 96,
+      "bones": [
+        "FarUpperArm",
+        "FarForearm",
+        "FarHand"
+      ],
+      "outfit": 1,
+      "rest_bounds": [
+        62.202509505703425,
+        60.51832699619772,
+        8.94296577946768,
+        16.24334600760456
+      ]
+    },
+    {
+      "name": "NearLeg",
+      "texture": "leg",
+      "vertices": 95,
+      "triangles": 144,
+      "bones": [
+        "NearThigh",
+        "NearShin",
+        "NearFoot"
+      ],
+      "outfit": -1,
+      "rest_bounds": [
+        57.79027027027027,
+        81.83783783783784,
+        8.756756756756758,
+        24.324324324324326
+      ]
+    },
+    {
+      "name": "NearBoot",
+      "texture": "boot",
+      "vertices": 65,
+      "triangles": 96,
+      "bones": [
+        "NearFoot"
+      ],
+      "outfit": -1,
+      "rest_bounds": [
+        55.23609756097561,
+        99.85365853658537,
+        17.70731707317073,
+        12.292682926829267
+      ]
+    },
+    {
+      "name": "NearArm",
+      "texture": "arm",
+      "vertices": 95,
+      "triangles": 144,
+      "bones": [
+        "NearUpperArm",
+        "NearForearm",
+        "NearHand"
+      ],
+      "outfit": -1,
+      "rest_bounds": [
+        55.10180921052631,
+        60.51907894736842,
+        10.40296052631579,
+        27.861842105263158
+      ]
+    },
+    {
+      "name": "NearOliveSleeve",
+      "texture": "olive_sleeve",
+      "vertices": 65,
+      "triangles": 96,
+      "bones": [
+        "NearUpperArm",
+        "NearForearm",
+        "NearHand"
+      ],
+      "outfit": 0,
+      "rest_bounds": [
+        55.2027,
+        60.790499999999994,
+        8.942499999999999,
+        14.945
+      ]
+    },
+    {
+      "name": "NearTealSleeve",
+      "texture": "teal_sleeve",
+      "vertices": 65,
+      "triangles": 96,
+      "bones": [
+        "NearUpperArm",
+        "NearForearm",
+        "NearHand"
+      ],
+      "outfit": 1,
+      "rest_bounds": [
+        55.202509505703425,
+        60.51832699619772,
+        8.94296577946768,
+        16.24334600760456
+      ]
+    },
+    {
+      "name": "Shorts",
+      "texture": "shorts",
+      "vertices": 65,
+      "triangles": 96,
+      "bones": [
+        "Pelvis"
+      ],
+      "outfit": -1,
+      "rest_bounds": [
+        53.35145833333333,
+        77.33895833333332,
+        20.088541666666664,
+        14.802083333333332
+      ]
+    },
+    {
+      "name": "BaseBody",
+      "texture": "base",
+      "vertices": 65,
+      "triangles": 96,
+      "bones": [
+        "Pelvis",
+        "Spine",
+        "Chest"
+      ],
+      "outfit": -1,
+      "rest_bounds": [
+        54.96401746724891,
+        54.635458515283844,
+        19.318777292576417,
+        28.489082969432314
+      ]
+    },
+    {
+      "name": "OliveTorso",
+      "texture": "olive_torso",
+      "vertices": 65,
+      "triangles": 96,
+      "bones": [
+        "Pelvis",
+        "Spine",
+        "Chest"
+      ],
+      "outfit": 0,
+      "rest_bounds": [
+        53.958,
+        55.425,
+        23.175,
+        27.45
+      ]
+    },
+    {
+      "name": "TealTorso",
+      "texture": "teal_torso",
+      "vertices": 65,
+      "triangles": 96,
+      "bones": [
+        "Pelvis",
+        "Spine",
+        "Chest"
+      ],
+      "outfit": 1,
+      "rest_bounds": [
+        55.75714285714286,
+        55.43571428571428,
+        19.71428571428571,
+        27.428571428571427
+      ]
+    },
+    {
+      "name": "Scarf",
+      "texture": "scarf",
+      "vertices": 65,
+      "triangles": 96,
+      "bones": [
+        "Chest",
+        "Scarf"
+      ],
+      "outfit": -1,
+      "rest_bounds": [
+        59.79805687203792,
+        52.75308056872038,
+        14.912322274881516,
+        15.793838862559241
+      ]
+    },
+    {
+      "name": "Head",
+      "texture": "head",
+      "vertices": 65,
+      "triangles": 96,
+      "bones": [
+        "Head"
+      ],
+      "outfit": -1,
+      "rest_bounds": [
+        39.533301158301164,
+        17.46042471042471,
+        42.42277992277992,
+        38.07915057915058
+      ]
+    }
+  ],
+  "animation_durations": {
+    "walk": 0.5797101449275363,
+    "breathe": 1.8,
+    "wave": 2.4
+  },
+  "runtime": "native saved Bone2D keyframes and Polygon2D skin weights; no runtime procedural rig generation"
+}

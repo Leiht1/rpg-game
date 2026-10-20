@@ -1,0 +1,338 @@
+{
+	"checks": [
+		{
+			"name": "isolated candidate world",
+			"pass": true
+		},
+		{
+			"name": "roasted_carrot fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "roasted_carrot rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "roasted_carrot rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "roasted_mushroom fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "roasted_mushroom rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "roasted_mushroom rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "herb_roasted_mushroom fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "herb_roasted_mushroom rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "herb_roasted_mushroom rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "roasted_fruit_platter fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "roasted_fruit_platter rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "roasted_fruit_platter rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "field_harvest_platter fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "field_harvest_platter rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "field_harvest_platter rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "roasted_potato fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "roasted_potato rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "roasted_potato rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "roasted_cabbage fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "roasted_cabbage rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "roasted_cabbage rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "vegetable_soup fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "vegetable_soup rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "vegetable_soup rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "stewed_vegetables fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "stewed_vegetables rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "stewed_vegetables rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "egg_vegetable_bake fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "egg_vegetable_bake rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "egg_vegetable_bake rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "small_hodgepodge fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "small_hodgepodge rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "small_hodgepodge rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "large_hodgepodge fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "large_hodgepodge rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "large_hodgepodge rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "lake_fish fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "lake_fish rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "lake_fish rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "lake_fish uses whole fish candidate in inventory and world",
+			"pass": true
+		},
+		{
+			"name": "roasted_fish fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "roasted_fish rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "roasted_fish rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "roasted_fish uses whole fish candidate in inventory and world",
+			"pass": true
+		},
+		{
+			"name": "vegetable_fish_soup fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "vegetable_fish_soup rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "vegetable_fish_soup rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "smoked_fish fresh name unchanged",
+			"pass": true
+		},
+		{
+			"name": "smoked_fish rotten name suffix",
+			"pass": true
+		},
+		{
+			"name": "smoked_fish rotten texture available",
+			"pass": true
+		},
+		{
+			"name": "smoked_fish uses whole fish candidate in inventory and world",
+			"pass": true
+		},
+		{
+			"name": "inventory hover uses rotten name",
+			"pass": true
+		},
+		{
+			"name": "inventory hover uses actual spoiled stack icon",
+			"pass": true
+		},
+		{
+			"name": "compost compact fixed frame",
+			"pass": true
+		},
+		{
+			"name": "compost input uses rotten name",
+			"pass": true
+		},
+		{
+			"name": "long input list cannot enlarge compost frame",
+			"pass": true
+		},
+		{
+			"name": "long list overflows into vertical scroll",
+			"pass": true
+		},
+		{
+			"name": "long list can scroll to later choices",
+			"pass": true
+		},
+		{
+			"name": "native mouse wheel scrolls long input list without enlarging frame",
+			"pass": true
+		},
+		{
+			"name": "lake_fish cannot be smoked",
+			"pass": true
+		},
+		{
+			"name": "roasted_carrot cannot be smoked",
+			"pass": true
+		},
+		{
+			"name": "vegetable_fish_soup cannot be smoked",
+			"pass": true
+		},
+		{
+			"name": "rotten roasted fish cannot be smoked",
+			"pass": true
+		},
+		{
+			"name": "smokehouse compact fixed frame",
+			"pass": true
+		},
+		{
+			"name": "smoking button shows roasted fish input",
+			"pass": true
+		},
+		{
+			"name": "smoking save failure reported",
+			"pass": true
+		},
+		{
+			"name": "roasted fish wood and job rollback together",
+			"pass": true
+		},
+		{
+			"name": "roasted fish starts smoking",
+			"pass": true
+		},
+		{
+			"name": "smoking pays one roasted fish and one wood",
+			"pass": true
+		},
+		{
+			"name": "working status keeps same frame",
+			"pass": true
+		},
+		{
+			"name": "smoking finishes in normal game time",
+			"pass": true
+		},
+		{
+			"name": "claim button names smoked roasted fish",
+			"pass": true
+		},
+		{
+			"name": "ready status keeps same frame",
+			"pass": true
+		},
+		{
+			"name": "ready product updates rotten name when aging",
+			"pass": true
+		},
+		{
+			"name": "ready product updates spoiled fish icon",
+			"pass": true
+		},
+		{
+			"name": "ready output remains save compatible",
+			"pass": true
+		},
+		{
+			"name": "smoked roasted fish claims into inventory",
+			"pass": true
+		},
+		{
+			"name": "smoked fish remains good until just before thirty days",
+			"pass": true
+		},
+		{
+			"name": "smoked fish spoils at thirty days",
+			"pass": true
+		},
+		{
+			"name": "smoking and rotten name suffix compose",
+			"pass": true
+		},
+		{
+			"name": "refrigeration cannot shorten thirty day shelf life",
+			"pass": true
+		},
+		{
+			"name": "all actual player save hashes unchanged",
+			"pass": true
+		}
+	],
+	"count": 83,
+	"failed": 0
+}
