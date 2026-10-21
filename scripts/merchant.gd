@@ -118,6 +118,7 @@ func price(id: String) -> Dictionary:
 	return result
 
 func buy(id: String) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"buy",[id]):return ""
 	if not enabled or not service.writable:return "存档受保护，暂不能交易"
 	if busy or not interacting or not state.get("offers",{}).has(id):return "交易已失效"
 	if not is_instance_valid(actor) or not preload("res://scripts/world_interaction.gd").in_reach(service.world.stream,service.world.player.position,actor):return "请靠近商人"

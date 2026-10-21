@@ -1,0 +1,29 @@
+[
+  {
+    "path": "dist/Windrest-Client-v0.1.0.zip",
+    "bytes": 118539567,
+    "sha256": "5b1ca78a9b91214c8170cf230c14568a9ccef0d709c3b7786b04c46551fc11e9",
+    "files": [
+      "Config/network-client.json",
+      "Config/server-public.crt",
+      "Candidates.pck",
+      "Windrest.exe",
+      "Windrest.pck"
+    ]
+  },
+  {
+    "path": "dist/Windrest-Server-v0.1.0.zip",
+    "bytes": 150411331,
+    "sha256": "7cf12b32755d5b302cc504ce1d4c626493260cdd6beb450ad4453faf122c7da3",
+    "files": [
+      "Server/Candidates.pck",
+      "Server/WindrestServer.exe",
+      "Server/WorldWorker.exe",
+      "Server/WorldWorker.pck",
+      "Config/network-server.json",
+      "Initialize-Server.cmd",
+      "Start-Server.cmd",
+      "部署说明.md"
+    ]
+  }
+]

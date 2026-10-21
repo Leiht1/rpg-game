@@ -24,7 +24,8 @@ static func matches(a: Dictionary, b: Dictionary) -> bool:
 		for key in ["energy","facing"]:
 			if x.get("state") is Dictionary:x.state.erase(key)
 			if y.get("state") is Dictionary:y.state.erase(key)
-	return x==y
+	# JSON transports numbers as floats; compare the same wire representation.
+	return JSON.parse_string(JSON.stringify(x))==JSON.parse_string(JSON.stringify(y))
 
 # Passive aging must not invalidate an inventory transaction snapshot.
 static func matches_slots(a: Array, b: Array) -> bool:

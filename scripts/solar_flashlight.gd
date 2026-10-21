@@ -38,7 +38,7 @@ func evolve(state: Dictionary, minutes: float, ground: bool, daylight: bool, cle
 	if ground and daylight and clear:state.energy=minf(100,float(state.energy)+minutes*100.0/float(merchant.rules.charge_minutes))
 	if state.energy<=0:state.energy=0.0;state.on=false
 
-func advance(minutes: float) -> void:
+func advance(minutes: float, personal_only: bool=false) -> void:
 	var sim=merchant.service.world.environment_view.simulation
 	var now: float=(sim.day-1)*1440.0+sim.minute
 	var last: float=merchant.state.get("last_time",now)
@@ -46,7 +46,8 @@ func advance(minutes: float) -> void:
 	merchant.state.last_time=now
 	var daylight: bool=sim.minute>=merchant.rules.sunrise and sim.minute<merchant.rules.sunset
 	var clear: bool=sim.target_weather==0 and sim.current_weather==0 and sim.blend.y+sim.blend.z<.001
-	for row in rows():evolve(row.instance.state,minutes,row.ground,daylight,clear,dawn)
+	for row in rows():
+		if not personal_only or not row.ground:evolve(row.instance.state,minutes,row.ground,daylight,clear,dawn)
 
 func ground_texture(facing: String) -> Texture2D:
 	var view := "side" if facing in ["left","right"] else facing

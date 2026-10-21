@@ -46,6 +46,7 @@ func has_capability(capability: String) -> bool:
 	return not held.is_empty() and database.item(str(held.item_id)).get("capabilities",[]).has(capability)
 
 func equip(index: int) -> bool:
+	if preload("res://scripts/network_game_route.gd").send(self,"inventory",["equip",index]):return true
 	if index<0 or index>=SLOT_COUNT or get_slot(index).is_empty(): return false
 	if slots[index].is_empty(): return true
 	var key := str(database.item(str(slots[index].item_id)).get("equip_slot",""))
@@ -54,6 +55,7 @@ func equip(index: int) -> bool:
 	return false
 
 func unequip(index: int) -> bool:
+	if preload("res://scripts/network_game_route.gd").send(self,"inventory",["unequip",index]):return true
 	if index<SLOT_COUNT or get_slot(index).is_empty(): return false
 	var value := get_slot(index)
 	for key in hotbar_equipment.keys():
@@ -209,6 +211,7 @@ func restore_hotbar_links(value: Variant) -> void:
 				hotbar_equipment[str(int(key))]=id;seen[id]=true
 
 func equip_hotbar(from: int, to: int) -> bool:
+	if preload("res://scripts/network_game_route.gd").send(self,"inventory",["equip_hotbar",from,to]):return true
 	var source := slots[from]
 	if source.is_empty() or not accepts(to,source): return false
 	var previous := get_slot(to)
@@ -231,6 +234,7 @@ func equip_hotbar(from: int, to: int) -> bool:
 	changed.emit();sound_requested.emit("sfx_equip" if from>=40 or to>=40 else "sfx_item_move");return true
 
 func move_slot(from: int, to: int) -> bool:
+	if preload("res://scripts/network_game_route.gd").send(self,"inventory",["move_slot",from,to]):return true
 	if not commit_equipment.is_valid() or (from<40 and to<40):return _move_slot(from,to)
 	var before_slots: Array[Dictionary]=slots.duplicate(true)
 	var before_equipment:=equipment.duplicate(true)
@@ -280,6 +284,7 @@ func use_slot(index: int) -> bool:
 	if index<8 and database.item(id).get("equippable",false) and not slots[index].is_empty(): return equip(index)
 	var definition := database.item(id)
 	if not definition.usable: return false
+	if definition.use_action not in ["place_campfire","place_sleeping_bag"] and preload("res://scripts/network_game_route.gd").send(self,"inventory",["use_slot",index]):return true
 	if definition.use_action in ["light","solar_light","place_campfire","place_sleeping_bag"]:
 		used.emit(id,{"slot":index})
 		return true
@@ -307,6 +312,7 @@ func use_slot(index: int) -> bool:
 	return true
 
 func split_slot(index: int, count: int) -> int:
+	if preload("res://scripts/network_game_route.gd").send(self,"inventory",["split_slot",index,count]):return 0
 	if index<0 or index>=slots.size() or slots[index].is_empty(): return -1
 	if count<1 or count>=int(slots[index].count): return -1
 	# New stacks go to bag storage; empty hotbar slots remain player-assigned.
@@ -320,6 +326,7 @@ func split_slot(index: int, count: int) -> int:
 	return -1
 
 func destroy_slot(index: int) -> bool:
+	if preload("res://scripts/network_game_route.gd").send(self,"inventory",["destroy_slot",index]):return true
 	if index<0 or index>=slots.size() or slots[index].is_empty(): return false
 	# Destruction intentionally creates no world drop.
 	slots[index]={}

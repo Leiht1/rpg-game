@@ -1,0 +1,46 @@
+{
+  "status": "pending_user",
+  "approval": null,
+  "scope": "Independent menu candidate assets; no formal assets overwritten",
+  "date": "2026-10-21",
+  "background_route": "generate2dmap -> route_media.py -> local Codex CLI; background-source/job.json",
+  "logo_route": "Built-in image_gen.imagegen with transparent_background=true",
+  "model_revision": "not exposed",
+  "cost": "subscription quota; USD equivalent unknown",
+  "logo_prompt": "logo-prompt.txt",
+  "background_prompt": "background-prompt.txt",
+  "logo_source": "logo-source.png",
+  "files": [
+    {
+      "file": "prototypes/network-menu-v1/background.png",
+      "sha256": "8b23d3f3beea7b60bb9ffe230f19bcca84597087de904f15b5f3f264420754ce",
+      "size": [
+        1672,
+        940
+      ],
+      "mode": "RGB"
+    },
+    {
+      "file": "prototypes/network-menu-v1/logo.png",
+      "sha256": "58c013c50a1a2948fec95c8628f64ebddf072e33527e672f9f586880aad9c786",
+      "size": [
+        1942,
+        809
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 986582,
+      "bbox": [
+        0,
+        9,
+        1932,
+        809
+      ],
+      "source_sha_matches": true
+    }
+  ],
+  "visual_qa": "Inspected standalone art and actual 1280x720 native menu; title text present; subjective approval pending"
+}

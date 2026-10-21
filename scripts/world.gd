@@ -69,7 +69,7 @@ func _ready() -> void:
 	add_child(stream)
 	add_child(object_root)
 	stream.configure(generator,object_root)
-	player=Player.new()
+	player=create_player()
 	player.name="Wanderer"
 	player.generator=generator
 	player.stream=stream
@@ -124,7 +124,7 @@ func _ready() -> void:
 	ui.add_child(item_service.planting_ui);item_service.planting_ui.configure(item_service)
 	item_service.merchant.ready_world()
 	map_view.item_screen=item_ui
-	if OS.has_feature("debug"):
+	if OS.has_feature("debug") and not get_meta("network_game",false):
 		var resource_debug := preload("res://scripts/resource_debug.gd").new()
 		resource_debug.name="ResourceDebug"
 		add_child(resource_debug)
@@ -145,6 +145,9 @@ func _notification(what: int) -> void:
 		if get_tree().current_scene==self:
 			if saved or not item_service.writable or not persistent_world:get_tree().quit()
 			elif item_ui:item_ui.show_notice("保存失败，请稍后再次关闭重试")
+
+func create_player() -> WildPlayer:
+	return Player.new()
 
 func load_world_identity(path: String = WORLD_ID_PATH) -> void:
 	world_id=str(ResourceUID.create_id())

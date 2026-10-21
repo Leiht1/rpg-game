@@ -1,4 +1,6 @@
 extends Node
+signal appearance_selected(appearance: Dictionary)
+var selection_only := false
 const Catalog=preload("res://scripts/character_catalog.gd")
 const CreationSkin=preload("res://scripts/item_ui_style.gd")
 const World=preload("res://scripts/character_preview_world.gd")
@@ -54,7 +56,7 @@ func _ready() -> void:
 	status.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;status.custom_minimum_size.x=600;box.add_child(status)
 	enter.text="进入世界";enter.custom_minimum_size.y=42;box.add_child(enter);enter.pressed.connect(begin_creation)
 	select_gender(0)
-	if FileAccess.file_exists(save_path):
+	if not selection_only and FileAccess.file_exists(save_path):
 		var value=JSON.parse_string(FileAccess.get_file_as_string(save_path))
 		if valid_session(value):
 			await open_world(value.character_session,false)
@@ -89,6 +91,8 @@ func valid_session(value: Variant) -> bool:
 	return active.get("test_outfit_granted")==true and Catalog.valid(active.get("appearance")) and active.get("outfit_id","") in ["","modern_outfit"] and active.get("outfit_id","")==value.equipment.get("outfit",{}).get("item_id","")
 func begin_creation() -> void:
 	if busy or protected_save:return
+	if selection_only:
+		busy=true;enter.disabled=true;appearance_selected.emit(look.duplicate(true));return
 	var id:=str(ResourceUID.create_id());var world_id:=str(ResourceUID.create_id())
 	var seed_value:=int(Time.get_unix_time_from_system()*1000+Time.get_ticks_usec())%2147483646+1
 	var record:={"version":1,"active_character_id":id,"world_id":world_id,"seed":seed_value,"map_cells":1536,"characters":{id:{"world_id":world_id,"appearance":look.duplicate(true),"test_outfit_granted":false,"outfit_id":""}}}

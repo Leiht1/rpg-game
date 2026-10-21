@@ -212,6 +212,7 @@ func reason(row: Dictionary) -> String:
 	return ""
 
 func place(row: Dictionary, expected: Array) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"building_place",[row,expected]):return ""
 	if busy or service.body.sleep_active(): return "正在处理"
 	if not preload("res://scripts/food_freshness.gd").matches_slots(service.inventory.slots,expected): return "背包已变化，请重新建造"
 	var error := reason(row)
@@ -241,6 +242,7 @@ func place(row: Dictionary, expected: Array) -> String:
 	return ""
 
 func place_bag(row: Dictionary, index: int, expected: Dictionary) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"building_bag",[row,index,expected]):return ""
 	if busy or service.body.sleep_active(): return "正在处理"
 	if row.get("kind","")!="sleeping_bag": return "睡袋放置数据无效"
 	if index<0 or index>=40 or service.inventory.slots[index]!=expected or expected.get("item_id")!="sleeping_bag": return "原物品已变化"
@@ -289,6 +291,7 @@ func refresh_around(row: Dictionary) -> void:
 		if service.world.stream.loaded.has(coord): install(coord)
 
 func toggle(id: String) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"building_toggle",[id]):return ""
 	if states.get(id,{}).get("abandoned",false): return "废弃设施无法使用"
 	if busy or not service.writable or not states.has(id): return "暂不能操作"
 	var row: Dictionary=states[id]
@@ -408,6 +411,7 @@ func strike(id: String, target: Node2D) -> bool:
 	inv.changed.emit();busy=false;return true
 
 func set_chest_open(id: String, opened: bool) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"building_open",[id,opened]):return ""
 	if states.get(id,{}).get("abandoned",false): return "废弃设施无法使用"
 	if busy or not service.writable or not states.has(id) or not storage_kind(str(states[id].kind)): return "木箱不可用"
 	if opened and service.world.player.position.distance_to(Vector2(states[id].x,states[id].y))>100: return "请靠近木箱"
@@ -429,6 +433,7 @@ func set_chest_open(id: String, opened: bool) -> String:
 	busy=false;return ""
 
 func transfer(id: String, chest_index: int, player_index: int, expected_chest: Dictionary, expected_player: Dictionary) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"building_transfer",[id,chest_index,player_index,expected_chest,expected_player]):return ""
 	if states.get(id,{}).get("abandoned",false): return "废弃设施无法使用"
 	if busy or not service.writable or not states.has(id): return "木箱不可用"
 	if not storage_kind(str(states[id].kind)) or chest_index<0 or chest_index>=states[id].contents.size() or player_index<0 or player_index>=43: return "物品格无效"
@@ -465,6 +470,7 @@ func transfer(id: String, chest_index: int, player_index: int, expected_chest: D
 	inv.changed.emit();busy=false;return ""
 
 func chest_edit(id: String, source: int, expected: Dictionary, action: String, target: int = -1, quantity: int = 0) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"building_edit",[id,source,expected,action,target,quantity]):return ""
 	if states.get(id,{}).get("abandoned",false): return "废弃设施无法使用"
 	if busy or not service.writable or not states.has(id) or not storage_kind(str(states[id].kind)) or source<0 or source>=states[id].contents.size(): return "木箱不可用"
 	if service.world.player.position.distance_to(Vector2(states[id].x,states[id].y))>100: return "请靠近木箱"

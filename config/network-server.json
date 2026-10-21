@@ -1,0 +1,26 @@
+{
+  "version": "0.1.0",
+  "protocol": 1,
+  "bind": "0.0.0.0",
+  "port": 24870,
+  "max_players": 16,
+  "data_dir": "../server-data",
+  "world_cells": 1536,
+  "godot": "WorldWorker.exe",
+  "project": "..",
+  "hair_ids": {
+    "male": [
+      "male_natural",
+      "male_fluffy",
+      "male_parted",
+      "male_curly"
+    ],
+    "female": [
+      "female_bob",
+      "female_straight",
+      "female_twintail",
+      "female_ponytail"
+    ]
+  },
+  "gameplay_preview": true
+}

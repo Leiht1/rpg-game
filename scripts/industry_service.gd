@@ -93,6 +93,7 @@ func check(id: String) -> String:
 	return ""
 
 func act(id: String, action: String, index: int=0, key: String="", count: int=1, materials: Dictionary={}) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"industry",[id,action,index,key,count,materials]):return ""
 	var reason := check(id)
 	if not reason.is_empty():return reason
 	var row: Dictionary=service.builds.states[id];var m: Dictionary=row.machine
@@ -205,13 +206,16 @@ func advance_machine(id: String, row: Dictionary, seconds: float, minutes: float
 				product_finished.emit(id)
 		if step<=.000001:break
 
-func advance(seconds: float, minutes: float) -> void:
+func advance(seconds: float, minutes: float, shared: bool=true) -> void:
 	if seconds<=0 or not service.writable:return
-	service.expansion.supply()
+	if shared:service.expansion.supply()
 	var visual_changed := false
 	for v in service.inventory.slots:
 		var was := Fresh.rotten(v);Fresh.advance(service.database,v,minutes)
 		visual_changed=visual_changed or was!=Fresh.rotten(v)
+	if not shared:
+		if visual_changed:service.inventory.changed.emit()
+		service.dirty=true;return
 	for id in service.loose:
 		var v: Dictionary=service.loose[id]
 		if v.has("instance"):

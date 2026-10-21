@@ -1,0 +1,71 @@
+extends "res://scripts/player.gd"
+var target_position:=Vector2.ZERO
+var own:=false
+var network_equipment:Dictionary={}
+var correction:=Vector2.ZERO
+var confirmed_at:=0
+var pending_inputs:Array=[]
+var input_id:=0
+var sleep_cover=preload("res://scripts/sleep_head_cover.gd").new()
+var sleep_symbols: Label
+func _physics_process(delta:float)->void:
+	var previous:=position
+	if own:
+		var world:=objects_world()
+		var direction:Vector2=world.movement_direction()
+		var outstanding:=0.0
+		for item in pending_inputs:outstanding+=float(item.dt)
+		var can_predict:=Time.get_ticks_msec()-confirmed_at<=1000 and outstanding<1.48
+		if not can_predict:direction=Vector2.ZERO
+		running=not direction.is_zero_approx() and Input.is_action_pressed("run")
+		moving=not direction.is_zero_approx()
+		if moving:facing=("right" if direction.x>0 else "left") if absf(direction.x)>absf(direction.y) else ("front" if direction.y>0 else "back")
+		var duration:=minf(delta,.05)
+		if can_predict and pending_inputs.size()<90:
+			input_id+=1
+			pending_inputs.append({"id":input_id,"dx":direction.x,"dy":direction.y,"run":running,"dt":duration})
+			position+=direction*(RUN_SPEED if running else WALK_SPEED)*duration
+		var adjustment:=correction*(1.0-exp(-16.0*delta))
+		position+=adjustment;correction-=adjustment
+
+	else:position=position.lerp(target_position,minf(1,delta*16))
+	gait_distance+=position.distance_to(previous)
+	idle_clock+=delta
+	update_animation()
+	if not own and body!=null and body.sleep_active() and not body.sleep_session.is_empty():
+		var world=objects_world()
+		var anchor: Vector2=sleep_cover.render(self,body.sleep_session,world.item_service.builds)
+		if not is_instance_valid(sleep_symbols):sleep_symbols=Label.new();sleep_symbols.text="z  z  z";add_child(sleep_symbols)
+		sleep_symbols.show();sleep_symbols.position=anchor+Vector2(-12,-38+sin(idle_clock*1.5)*2)
+	elif is_instance_valid(sleep_symbols):sleep_symbols.hide()
+func _unhandled_input(event:InputEvent)->void:
+	if own:zoom_from_wheel(event)
+func objects_world()->Node:
+	return get_parent().get_parent()
+func receive(row:Dictionary,reconcile:bool=true,round_trip:float=0.0)->void:
+	if reconcile:
+		target_position=Vector2(row.x,row.y);confirmed_at=Time.get_ticks_msec()
+		if own:
+			var predicted:=target_position
+			for item in pending_inputs:
+				predicted+=Vector2(item.dx,item.dy)*(RUN_SPEED if item.run else WALK_SPEED)*item.dt
+			correction=predicted-position
+			if correction.length()>320.0:position=predicted;correction=Vector2.ZERO;reset_physics_interpolation()
+		else:facing=row.facing;moving=row.moving;running=row.running
+	character_look=row.appearance
+	if row.has("visual_body"):
+		if body==null:body=preload("res://scripts/body_state.gd").new()
+		body.build=float(row.visual_body.get("build",50));body.sleeping=bool(row.visual_body.get("sleeping",false));body.sleep_session=row.visual_body.get("sleep_session",{}).duplicate(true)
+		var pose: Dictionary=row.get("pose",{})
+		action=str(pose.get("action",""));action_clock=float(pose.get("clock",0))
+		if pose.has("facing"):facing=pose.facing
+	if equipment_inventory==null or row.get("equipment",{})!=network_equipment:
+		network_equipment=row.get("equipment",{}).duplicate(true)
+		var db:=preload("res://scripts/item_database.gd").new()
+		preload("res://scripts/character_catalog.gd").enable_candidate(db)
+		equipment_inventory=preload("res://scripts/item_inventory.gd").new(db)
+		equipment_inventory.restore_equipment(network_equipment)
+
+func acknowledge(row:Dictionary,ack:int)->void:
+	while not pending_inputs.is_empty() and int(pending_inputs[0].id)<=ack:pending_inputs.pop_front()
+	receive(row)

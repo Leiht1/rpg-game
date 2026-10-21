@@ -1,0 +1,27 @@
+{
+  "unit_cases": 12,
+  "unit_seconds": 14.08,
+  "native_client_checks": [
+    16,
+    19
+  ],
+  "native_fps_samples": [
+    60.0,
+    60.0
+  ],
+  "server_restart_checks": 7,
+  "shared_item_conservation": "pass",
+  "actual_second_computer_tested": false,
+  "firewall_rule": "Windows access denied; not installed",
+  "existing_save_fingerprints": {
+    "count": 19,
+    "changed": 0
+  },
+  "production_server_endpoint": "https://10.215.26.56:24870",
+  "terrain": {
+    "seconds": 16.226,
+    "exit": 0,
+    "cells": 1536,
+    "bytes": 3145840
+  }
+}

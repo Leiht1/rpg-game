@@ -110,6 +110,7 @@ func try_start() -> bool:
 	if not service.writable or not service.inventory.has_capability("fishing_ready"): return false
 	var index := nearest_spot()
 	if index<0: return false
+	if preload("res://scripts/network_game_route.gd").send(self,"fish_start",[]):return true
 	selected=index;held_instance=str(service.inventory.equipment.main_hand.instance_id)
 	hits=0;misses=0;reward_committed=false
 	catch_id=catch_for_roll(loot_rng.randf())
@@ -163,6 +164,7 @@ func valid_session() -> bool:
 	return (int(spots[selected].get("remaining",6))>0 or (state=="success" and reward_committed)) and not held.is_empty() and str(held.get("instance_id",""))==held_instance and service.inventory.has_capability("fishing_ready") and not service.body.down and not service.body.sleep_active() and player.position.distance_to(spots[selected].stand)<100
 
 func judge() -> void:
+	if preload("res://scripts/network_game_route.gd").send(self,"fish_judge",[]):return
 	if state!="game" or input_cooldown>0: return
 	resolve_attempt(bar.is_hit())
 
@@ -216,6 +218,7 @@ func commit_reward() -> void:
 	message_remaining=2.4
 
 func finish(text: String) -> void:
+	if preload("res://scripts/network_game_route.gd").send(self,"fish_cancel",[]):return
 	if state=="idle": return
 	if not text.is_empty(): message=text;message_remaining=2.2
 	state="idle";clock=0;phase_history.append("idle")
@@ -244,10 +247,35 @@ func _input(event: InputEvent) -> void:
 	if event.physical_keycode==KEY_E and try_start(): get_viewport().set_input_as_handled()
 func _process(delta: float) -> void:
 	if not is_instance_valid(world): return
-	advance(delta)
+	if world.get_meta("network_game",false):
+		# Predict only the visible marker; the rules host owns rounds and rewards.
+		if state=="game":
+			marker_phase+=delta*.72;bar.marker=pingpong(marker_phase,1.0)
+	else:advance(delta)
 	if state!="idle":
 		player.input_blocked=true;pose();update_line()
 	update_ui();queue_redraw()
+
+func network_snapshot() -> Dictionary:
+	var value: Dictionary={}
+	for key in ["state","clock","wait_time","hits","misses","round_clock","input_cooldown","marker_phase","selected","held_instance","reward_committed","catch_id","message","message_remaining"]:value[key]=get(key)
+	value.safe_center=bar.safe_center
+	return value
+
+func network_restore(value: Dictionary) -> void:
+	var previous:=state
+	for key in ["state","clock","wait_time","hits","misses","round_clock","input_cooldown","marker_phase","selected","held_instance","reward_committed","catch_id","message","message_remaining"]:
+		if value.has(key):set(key,value[key])
+	if value.is_empty():state="idle";selected=-1
+	bar.safe_center=float(value.get("safe_center",.5));bar.marker=pingpong(marker_phase,1.0)
+	spots=service.fishing_population.spots
+	if state!="idle" and (selected<0 or selected>=spots.size()):state="idle"
+	blocker.visible=state!="idle"
+	if state!="idle":
+		player.input_blocked=true
+		player.facing="right" if spots[selected].water.x>=player.position.x else "left"
+	elif previous!="idle":
+		player.held_tool.release_pose();world.item_ui.update_input_block()
 
 func pose() -> void:
 	# Reset to the approved side rig before each sample: joint offsets never accumulate.

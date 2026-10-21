@@ -50,8 +50,13 @@ func number(v: Variant) -> bool:
  return (v is int or v is float) and is_finite(float(v))
 
 func restore(data: Dictionary) -> void:
- for v in visuals.values(): v.queue_free()
- visuals.clear();states=data.objects.duplicate(true);generated=data.generated.duplicate();clock=float(data.clock);serial=int(data.serial)
+ var network=service.world.get_meta("network_game",false) or service.world.get_meta("network_rules_host",false)
+ for id in visuals.keys():
+  if not network or not data.objects.has(id) or data.objects[id].species!=states[id].species:
+   visuals[id].queue_free();visuals.erase(id)
+ states=data.objects.duplicate(true);generated=data.generated.duplicate();clock=float(data.clock);serial=int(data.serial)
+ if service.world.get_meta("network_rules_host",false):
+  for id in visuals:visuals[id].position=point(states[id])
  if data.has("spawning"):spawning=data.spawning.duplicate()
  else:
   var legacy=not generated.is_empty() or not states.is_empty()
@@ -158,6 +163,7 @@ func debug_spawn_near() -> bool:
  return false
 
 func _physics_process(delta: float) -> void:
+ if service!=null and service.world.get_meta("network_game",false):return
  if service==null or not service.world.started or not service.writable:return
  sync_clock+=delta
  if sync_clock<.5:return
@@ -345,6 +351,7 @@ func interact(id: String, target: Node2D) -> bool:
   r.wool=false;r.product=0.0;reward=true;message="获得羊毛 ×2"
  elif r.tamed:
   r.mode="stay" if r.mode=="follow" else "follow";r.wild_age=0.0;r.home_x=r.x;r.home_y=r.y
+  if service.world.get_meta("network_rules_host",false):r.network_owner=str(service.world.get_meta("network_player_id",""))
   message="留在这里" if r.mode=="stay" else "跟随你"
  else:return false
  busy=true;service.dirty=true
@@ -380,6 +387,7 @@ func feed_check(id: String, slot: int, expected: Dictionary) -> String:
  return ""
 
 func feed(id: String, slot: int, expected: Dictionary) -> String:
+ if preload("res://scripts/network_game_route.gd").send(self,"animal_feed",[id,slot,expected]):return ""
  var reason=feed_check(id,slot,expected)
  if not reason.is_empty():return reason
  var r:Dictionary=states[id];var before=r.duplicate(true);var slots=service.inventory.slots.duplicate(true);var was_dirty=service.dirty
@@ -387,6 +395,7 @@ func feed(id: String, slot: int, expected: Dictionary) -> String:
  if service.inventory.slots[slot].count==0:service.inventory.slots[slot]={}
  r.feed_at=clock;r.wild_age=0.0;r.move_minutes=0.0;r.home_x=r.x;r.home_y=r.y;r.fed_until=clock+float(rules.feed_minutes)
  r.trust=mini(int(rules[r.species].trust_feeds),int(r.trust)+1);r.tamed=r.trust>=rules[r.species].trust_feeds
+ if r.tamed and service.world.get_meta("network_rules_host",false):r.network_owner=str(service.world.get_meta("network_player_id",""))
  busy=true;service.dirty=true
  if not service.save_state():
   states[id]=before;service.inventory.slots=slots;service.dirty=was_dirty;busy=false

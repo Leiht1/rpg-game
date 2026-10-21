@@ -51,6 +51,7 @@ func action(id: String) -> String:
 	return ""
 
 func interact(id: String, target: Node2D, seed_id: String="") -> bool:
+	if preload("res://scripts/network_game_route.gd").send(self,"plant",[id,seed_id]):return true
 	var builds: RefCounted=service.builds
 	if builds.busy or not service.writable or service.body.sleep_active() or service.body.down: return false
 	if not builds.states.has(id) or builds.states[id].kind!="tilled_soil": return false
@@ -96,6 +97,7 @@ func interact(id: String, target: Node2D, seed_id: String="") -> bool:
 	return true
 
 func fertilize(id: String, target: Node2D) -> bool:
+	if preload("res://scripts/network_game_route.gd").send(self,"fertilize",[id]):return true
 	var reason: String=service.expansion.act(id,"fertilize")
 	if not reason.is_empty():service.notice.emit(reason);return false
 	service.notice.emit("肥料 -1")

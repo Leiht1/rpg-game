@@ -73,6 +73,10 @@ func stream_for(path: String) -> AudioStream:
 	return streams[path] as AudioStream
 
 func play_sfx(key: String, at: Vector2=Vector2.INF) -> bool:
+	if Engine.has_meta("network_rules_events"):
+		var events: Array=Engine.get_meta("network_rules_events")
+		if events.size()<48:events.append({"kind":"sound","key":key,"at":{"x":at.x,"y":at.y} if at.is_finite() else {}})
+		return true
 	if not is_instance_valid(world) or not configuration.has(key):return false
 	if get_tree().paused:return false
 	var entry: Dictionary=configuration[key]

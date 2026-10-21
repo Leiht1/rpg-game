@@ -99,6 +99,7 @@ func commit(staged: ItemInventory = null) -> void:
 	service.save_state()
 
 func place(at: Vector2, slot: int, expected: Dictionary) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"camp_place",[at,slot,expected]):return ""
 	if busy: return "正在处理"
 	var reason := placement_reason(at)
 	if not reason.is_empty(): return reason
@@ -131,6 +132,7 @@ func match_materials(materials: Dictionary) -> String:
 	return ""
 
 func act(id: String, action: String, recipe: String = "", materials: Dictionary = {}) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"camp_act",[id,action,recipe,materials]):return ""
 	if busy: return "正在处理"
 	if not service.writable: return "存档受保护，不能操作"
 	if not states.has(id): return "篝火不存在"
@@ -189,6 +191,7 @@ func feed_amount(id: String, expected: Dictionary) -> int:
 	return mini(int(expected.count),int(floor((float(rules.max_fuel)-float(states[id].fuel))/float(rules.fuel_items[expected.item_id]))))
 
 func feed(id: String, slot: int, expected: Dictionary, count: int) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"camp_feed",[id,slot,expected,count]):return ""
 	var reason := feed_check(id,slot,expected)
 	if not reason.is_empty(): return reason
 	if count<1 or count>feed_amount(id,expected): return "燃时或物品数量已变化，请重新投入"
@@ -271,6 +274,7 @@ func build_check(recipe_id: String) -> String:
 	return ""
 
 func build(at: Vector2, recipe_id: String, expected_slots: Array) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"camp_build",[at,recipe_id,expected_slots]):return ""
 	var definition: Dictionary=build_book.recipe(recipe_id)
 	if service.builds.definitions.has(definition.get("output_id","")):
 		var row: Dictionary=service.builds.candidate(str(definition.output_id),at,false,true,0)

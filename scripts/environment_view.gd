@@ -115,7 +115,9 @@ func stop_preview() -> void:
 
 func _process(delta: float) -> void:
 	if not is_instance_valid(world) or not world.started: return
-	if not preview and not simulation.paused and is_instance_valid(world.item_service):
+	if world.get_meta("network_game",false):
+		pass
+	elif not preview and not simulation.paused and is_instance_valid(world.item_service):
 		var body = world.item_service.body
 		if body.energy<=0.0 and not body.sleep_active():
 			try_start_sleep(body.energy<=0.0)
@@ -217,7 +219,7 @@ func _notification(what: int) -> void:
 func try_start_sleep(forced: bool) -> bool:
 	return world.item_service.sleep.start("","maximum",forced).is_empty() if forced else false
 
-func advance_gameplay(seconds: float) -> void:
+func advance_gameplay(seconds: float, shared: bool=true) -> void:
 	if seconds<=0 or preview or simulation.paused: return
 	var remaining := seconds
 	var service = world.item_service
@@ -234,15 +236,17 @@ func advance_gameplay(seconds: float) -> void:
 			minutes_left=minf(minutes_left,maxf(.000001,(target-body.energy)/rate*60))
 			step=minf(step,minutes_left*simulation.day_length_minutes*60.0/1440.0)
 		var original_scale: float=simulation.time_scale
-		simulation.time_scale=1.0;simulation.advance(step);simulation.time_scale=original_scale
+		if shared:simulation.time_scale=1.0;simulation.advance(step);simulation.time_scale=original_scale
 		body.busy=player.input_blocked and not body.sleeping
 		body.advance(step,step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0),player.running and player.moving and not player.input_blocked,player.action in ["chop","mine","dig"] and not player.input_blocked)
-		service.industry.advance(step,step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
-		service.planting.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
-		service.animals.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
-		if service.writable and service.fishing_population.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0)): service.dirty=true
-		service.merchant.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
-		service.camps.advance(step,simulation.blend.z+simulation.blend.y,simulation.blend.y)
+		service.industry.advance(step,step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0),shared)
+		if shared:
+			service.planting.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
+			service.animals.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
+			if service.writable and service.fishing_population.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0)): service.dirty=true
+			service.merchant.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
+			service.camps.advance(step,simulation.blend.z+simulation.blend.y,simulation.blend.y)
+		elif service.merchant.enabled:service.merchant.lights.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0),true)
 		if is_instance_valid(service.lantern) and service.lantern.visible: service.burn_lantern(step)
 		service.sleep.after_body()
 		remaining-=step

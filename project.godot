@@ -12,13 +12,15 @@ config_version=5
 
 config/name="风栖原野 V0.4"
 config/description="卡通草地与景物融合 · Seed地图 · 连续挥砍与快速拾取"
-run/main_scene="res://scenes/world.tscn"
+run/main_scene="res://scenes/launcher.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+config/windows_native_icon="res://prototypes/network-menu-v1/app-icon.ico"
 
 [autoload]
 
 AudioFX="*res://scripts/audio_fx.gd"
 UIFade="*res://scripts/ui_fade.gd"
+Network="*res://scripts/network_client.gd"
 
 [display]
 

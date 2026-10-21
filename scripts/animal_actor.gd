@@ -85,6 +85,14 @@ func refresh() -> void:
 
 func _physics_process(delta: float) -> void:
  if not manager.states.has(animal_id):return
+ if manager.service.world.get_meta("network_game",false):
+  var state=row();var previous=position;position=position.lerp(Vector2(state.x,state.y),minf(1,delta*12));refresh()
+  phase+=delta;travel+=position.distance_to(previous)
+  if absf(position.x-previous.x)>.01:rig.scale.x=absf(rig.scale.x)*signf(position.x-previous.x)
+  for key in bones:
+   if key.begins_with("Leg"):bones[key].rotation=sin(travel*.18+(0 if int(key.trim_prefix("Leg")) in [0,3] else PI))*.38 if position.distance_squared_to(previous)>.001 else sin(phase*2)*.025
+  bones.Head.rotation=sin(phase*1.7)*.04
+  return
  var r=row();var env=manager.service.world.environment_view
  if not manager.service.writable or env.simulation.paused or env.preview:return
  if r.departed:hide();return

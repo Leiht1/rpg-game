@@ -40,7 +40,10 @@ func valid_pair(body: RefCounted, objects: Dictionary) -> bool:
 			if row.kind!=s.source or row.get("vertical",false)!=s.get("vertical",false) or not is_equal_approx(row.x,s.x) or not is_equal_approx(row.y,s.y): return false
 			if row.get("sleep_state","PLACED") not in (["RESERVED"] if s.phase in ["align","lie"] else ["IN_USE"] if s.phase=="sleep" else ["RESERVED","IN_USE"]): return false
 	for id in objects:
-		if objects[id].get("sleep_state","PLACED")!="PLACED" and (s.is_empty() or s.id!=id): return false
+		if objects[id].get("sleep_state","PLACED")!="PLACED" and (s.is_empty() or s.id!=id):
+			var owner:=str(objects[id].get("network_sleep_owner",""))
+			if (service.world.get_meta("network_game",false) or service.world.get_meta("network_rules_host",false)) and not owner.is_empty() and owner!=str(service.world.get_meta("network_player_id","")):continue
+			return false
 	return true
 
 func ready_reason() -> String:
@@ -56,6 +59,7 @@ func available(id: String) -> bool:
 	return service.builds.states.has(id) and not service.builds.states[id].get("abandoned",false) and not Rules.facility(str(service.builds.states[id].kind)).is_empty() and service.builds.states[id].get("sleep_state","PLACED")=="PLACED"
 
 func start(id: String, option: String="maximum", forced: bool=false) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"sleep",[id,option]):return ""
 	var error := ready_reason()
 	if not error.is_empty(): return error
 	var w=service.world
@@ -110,6 +114,7 @@ func path_clear(from: Vector2, to: Vector2, id: String) -> bool:
 	return true
 
 func interrupt(reason: String="manual") -> void:
+	if preload("res://scripts/network_game_route.gd").send(self,"wake",[]):return
 	if not active(): return
 	if service.body.sleep_session.is_empty(): migrate_legacy()
 	if service.body.sleep_session.is_empty(): return

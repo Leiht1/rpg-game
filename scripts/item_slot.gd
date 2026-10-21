@@ -107,6 +107,8 @@ func _notification(what: int) -> void:
 	if what in [NOTIFICATION_DRAG_BEGIN,NOTIFICATION_DRAG_END] and is_instance_valid(screen): call_deferred("refresh")
 
 func on_input(event: InputEvent) -> void:
+	if index<8 and screen.world.get_meta("network_game",false) and event is InputEventMouseButton and event.pressed and event.button_index==MOUSE_BUTTON_LEFT and not event.ctrl_pressed:
+		screen.service.inventory.selected=index;screen.refresh()
 	if event is InputEventMouseButton and event.pressed and event.button_index==MOUSE_BUTTON_LEFT and event.ctrl_pressed:
 		screen.open_split(index) if index<40 else screen.show_notice("装备槽不拆分")
 		accept_event()

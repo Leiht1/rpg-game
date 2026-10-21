@@ -154,6 +154,7 @@ func craft_check(recipe_id: String, batches: int) -> String:
 	return inventory.craft_exchange(materials,str(row.output_id),int(row.output_count)*batches)
 
 func start_craft(recipe_id: String, batches: int) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"craft",[recipe_id,batches]):return ""
 	var reason := craft_check(recipe_id,batches)
 	if not reason.is_empty(): return reason
 	var row: Dictionary=craft_book.recipe(recipe_id)
@@ -163,6 +164,7 @@ func start_craft(recipe_id: String, batches: int) -> String:
 	return ""
 
 func cancel_craft() -> void:
+	if preload("res://scripts/network_game_route.gd").send(self,"craft_cancel",[]):return
 	if craft_job.is_empty(): return
 	var job := craft_job
 	craft_job={}
@@ -237,6 +239,7 @@ func burn_lantern(dt: float) -> void:
 			active_lamp="";inventory.changed.emit()
 
 func toggle_lantern(index: int = -1) -> void:
+	if preload("res://scripts/network_game_route.gd").send(self,"lamp",[index]):return
 	if index<0:
 		for i in inventory.slots.size():
 			if inventory.slots[i].get("item_id","")=="field_lantern": index=i;break
@@ -259,6 +262,13 @@ func toggle_lantern(index: int = -1) -> void:
 	lantern.visible=not lantern.visible if same else true
 	AudioFX.play_sfx("sfx_lantern_on" if lantern.visible else "sfx_lantern_off",world.player.position)
 	dirty=true
+
+func restore_network_lamp(snapshot_value: Dictionary) -> void:
+	active_lamp=str(snapshot_value.get("network_active_lamp",""))
+	var enabled: bool=bool(snapshot_value.get("network_lamp_on",false)) and not lamp_slot().is_empty()
+	if enabled and not is_instance_valid(lantern):
+		lantern=preload("res://scripts/field_lantern.gd").new();world.player.add_child(lantern);lantern.service=self
+	if is_instance_valid(lantern):lantern.visible=enabled
 
 func stack_name(value: Dictionary) -> String:
 	var item_name: String=database.item(str(value.get("item_id",""))).get("name","")
@@ -298,6 +308,7 @@ func texture(id: String, kind: String) -> Texture2D:
 	return null
 
 func _process(delta: float) -> void:
+	if world.get_meta("network_game",false):return
 	exploration.reveal(world.player.position)
 	if exploration.revision!=saved_exploration_revision:dirty=true
 	advance_craft(delta)
@@ -317,6 +328,7 @@ func snapshot() -> Dictionary:
 	return result
 
 func organize_bag() -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"organize",[]):return ""
 	if not writable: return "存档受保护，不能整理"
 	if body.sleep_active(): return "睡眠中不能整理"
 	if craft_busy or not craft_job.is_empty() or camps.busy or builds.busy or not world.player.action.is_empty(): return "请等待当前操作完成后再整理"
@@ -347,10 +359,14 @@ func save_state() -> bool:
 	else: notice.emit("物品存档保存失败，暂存文件已保留")
 	return error == OK
 
-func load_state(source_path: String = "", migrate: bool = false) -> void:
+func load_state(source_path: String = "", migrate: bool = false, authoritative: Dictionary = {}) -> void:
+	var online: bool=world.get_meta("network_game",false)
+	var previous_inventory: Array=[inventory.slots.duplicate(true),inventory.equipment.duplicate(true),inventory.hotbar_equipment.duplicate(true),inventory.quarantined_equipment.duplicate(true)] if online else []
+	var previous_buildings: Dictionary=builds.states.duplicate(true) if online else {}
+	var previous_camps: Dictionary=camps.states.duplicate(true) if online else {}
 	var path := save_path if source_path.is_empty() else source_path
-	if not world.persistent_world or not FileAccess.file_exists(path): return
-	var value = JSON.parse_string(FileAccess.get_file_as_string(path))
+	if authoritative.is_empty() and (not world.persistent_world or not FileAccess.file_exists(path)): return
+	var value = authoritative.duplicate(true) if not authoritative.is_empty() else JSON.parse_string(FileAccess.get_file_as_string(path))
 	if not value is Dictionary or int(value.get("version",0)) != 1 or value.get("generator","") != world.Gen.VERSION or int(value.get("seed",-1)) != world.world_seed or int(value.get("map_cells",0)) != world.map_cells or not str(value.get("resource_version","")) in ([ECOLOGY_PREVIOUS_VERSION,PREVIOUS_RESOURCE_VERSION,LEGACY_RESOURCE_VERSION] if migrate else [RESOURCE_VERSION]):
 		writable = false
 		return
@@ -426,7 +442,7 @@ func load_state(source_path: String = "", migrate: bool = false) -> void:
 				plot.growth_minutes=float(progress)/previous_minutes[plot.crop]*float(planting.rules.crops[plot.crop].minutes)
 	if value.has("buildings") and not builds.validate(value.buildings,seen_instances): writable=false;return
 	if not sleep.valid_pair(staged_body,value.get("buildings",{"objects":{}}).objects): writable=false;return
-	if value.has("world_exploration"): exploration.restore(value.world_exploration)
+	if value.has("world_exploration") and value.world_exploration.bits!=Marshalls.raw_to_base64(exploration.bits): exploration.restore(value.world_exploration)
 	if value.has("merchant"):merchant.restore(value.merchant)
 	if value.has("fishing"):
 		fishing_population.restore(value.fishing)
@@ -435,13 +451,17 @@ func load_state(source_path: String = "", migrate: bool = false) -> void:
 	builds.states=value.get("buildings",{"objects":{}}).objects.duplicate(true)
 	builds.abandoned_version=int(value.get("buildings",{}).get("abandoned_version",0))
 	if value.get("harvest_version",LEGACY_HARVEST_VERSION)!=HARVEST_VERSION: dirty=true
-	for coord in camps.bins.keys(): camps.unload(coord)
+	if not online:
+		for coord in camps.bins.keys(): camps.unload(coord)
 	camps.states=value.get("campfires",{"objects":{}}).objects.duplicate(true)
 	camps.discovered=value.get("campfires",{}).get("discovered",{}).duplicate(true)
 	# Old ready tasks have already completed; old in-progress tasks keep their paid output.
 	for camp in camps.states.values():
 		if camp.ready: camps.discovered[camp.recipe]=true
 	camps.rebuild()
+	if online:
+		for id in camps.visuals.keys():
+			if not camps.states.has(id):camps.visuals[id].queue_free();camps.visuals.erase(id)
 	for coord in world.stream.loaded: camps.install(coord)
 	body.restore(staged_body.serialize())
 	restored_player_position=value.has("player_position")
@@ -458,7 +478,7 @@ func load_state(source_path: String = "", migrate: bool = false) -> void:
 	inventory.slots=staged.slots
 	inventory.equipment=staged.equipment
 	inventory.quarantined_equipment=staged.quarantined_equipment
-	inventory.changed.emit()
+	if not online or previous_inventory!=[inventory.slots,inventory.equipment,inventory.hotbar_equipment,inventory.quarantined_equipment]:inventory.changed.emit()
 	if value.get("ore_nodes",{}) is Dictionary: ore_nodes=value.get("ore_nodes",{})
 	inventory.selected = clampi(int(value.get("selected",0)),0,7)
 	consumed = value.consumed
@@ -471,7 +491,12 @@ func load_state(source_path: String = "", migrate: bool = false) -> void:
 	var previous_pins:=ore_nodes.size()
 	preload("res://scripts/harvest_distribution.gd").preserve_current_minerals(self)
 	if ore_nodes.size()!=previous_pins:dirty=true
-	builds.refresh_all()
+	if online:
+		for id in previous_buildings:
+			if not builds.states.has(id):builds.refresh_around(previous_buildings[id])
+		for id in builds.states:
+			if previous_buildings.get(id,{})!=builds.states[id]:builds.refresh_around(builds.states[id])
+	else:builds.refresh_all()
 	if migrate:
 		# Keep stable candidate IDs and consumed edits, preventing collected resources from respawning.
 		dirty = true
@@ -762,6 +787,7 @@ func pickup(drop: Node2D) -> bool:
 	return true
 
 func discard(index: int, count: int = 1) -> bool:
+	if preload("res://scripts/network_game_route.gd").send(self,"discard",[index,count]):return true
 	if index<0 or index>=inventory.slots.size() or inventory.slots[index].is_empty() or count<1: return false
 	var p: Vector2 = world.player.position
 	var place := Vector2.INF

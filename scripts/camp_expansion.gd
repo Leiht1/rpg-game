@@ -46,6 +46,7 @@ func compost_allowed(value: Dictionary) -> bool:
 	return not value.is_empty() and (str(value.item_id) in rules.organic_items or (Fresh.cooked(service.database,str(value.item_id)) and Fresh.rotten(value)))
 
 func act(id: String, action: String, index: int=-1, expected: Dictionary={}, key: String="", count: int=1) -> String:
+	if preload("res://scripts/network_game_route.gd").send(self,"expansion",[id,action,index,expected,key,count]):return ""
 	var reason := check(id)
 	if not reason.is_empty():return reason
 	var row: Dictionary=service.builds.states[id]

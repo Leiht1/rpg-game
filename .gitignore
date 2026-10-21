@@ -4,6 +4,16 @@
 art/.staging*/
 __pycache__/
 dist/
+/server-data/
+/config/server-public.crt
+/tools/network/build/
+/tools/network/dist/
+/tools/network/*.spec
+/reports/network-v01/private/
+/reports/network-v01/player-before.json
+/reports/network-movement-v4/build/
+/reports/network-movement-v4/staged/
+/reports/network-movement-v4/*.private.json
 
 # Temporary test captures and recordings; keep reports, metrics and test sources.
 /reports/**/*.png
@@ -72,6 +82,7 @@ dist/
 
 # Runtime logs, duplicate release checks and disposable test snapshots.
 *.log
+*.pid
 /prototypes/.native_rig_release_check/
 /prototypes/biome-v02/save-check.json
 /reports/chest-volume-render-v2/save-observation.json
@@ -107,3 +118,6 @@ dist/
 # Machine-local inventory of player save file fingerprints (no runtime dependency).
 /reports/world-map-v3/player-before.json
 /reports/map-cache-population-v4/player-before.json
+
+# Isolated multiplayer gameplay rules fixtures, never production/player data.
+/reports/network-gameplay-v5/private/
