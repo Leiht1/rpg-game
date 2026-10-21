@@ -1,0 +1,23 @@
+{
+  "unique_suites": 137,
+  "attempts": 144,
+  "statuses": {
+    "pass": 77,
+    "blocked-dependencies": 1,
+    "fail": 40,
+    "incomplete": 19
+  },
+  "categories": {
+    "import": 1,
+    "service": 3,
+    "tool": 1,
+    "logic": 26,
+    "native": 103,
+    "multiplayer": 3
+  },
+  "latest_seconds": 3819.75,
+  "all_attempt_seconds": 4103.86,
+  "structured_assertions_recorded": 5672,
+  "structured_assertions_failed": 189,
+  "note": "Structured counts omit scripts with other report formats; incomplete suites are not passes. Counts include distinct suite phases, not retries."
+}

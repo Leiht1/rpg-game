@@ -1,0 +1,3280 @@
+[
+  {
+    "label": "project-import",
+    "category": "import",
+    "exit": 0,
+    "seconds": 51.7,
+    "log": "logs\\project-import.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "test_network_server.py",
+    "category": "service",
+    "exit": 0,
+    "seconds": 15.99,
+    "log": "logs\\test_network_server_py.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "Ran 15 tests in 15.744s",
+      "OK"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "test_network_game_host.py",
+    "category": "service",
+    "exit": 0,
+    "seconds": 37.72,
+    "log": "logs\\test_network_game_host_py.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "Ran 27 tests in 37.464s",
+      "OK"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "test_network_game_job.py",
+    "category": "service",
+    "exit": 0,
+    "seconds": 13.95,
+    "log": "logs\\test_network_game_job_py.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "OK"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "audio-workbench",
+    "category": "tool",
+    "exit": 1,
+    "seconds": 0.16,
+    "log": "logs\\audio-workbench.log",
+    "errors": [
+      "ERROR: test_workbench (unittest.loader._FailedTest.test_workbench)",
+      "Traceback (most recent call last):",
+      "FAILED (errors=1)"
+    ],
+    "error_count": 3,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "network_game_compile",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 2.23,
+    "log": "logs\\network_game_compile.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "launcher_startup_smoke",
+    "category": "native",
+    "exit": 0,
+    "seconds": 3.67,
+    "log": "logs\\launcher_startup_smoke.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "LAUNCHER_STARTUP_PASS 4"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "launcher_click_smoke",
+    "category": "native",
+    "exit": 0,
+    "seconds": 3.58,
+    "log": "logs\\launcher_click_smoke.log",
+    "errors": [
+      "ERROR: 2 RID allocations of type 'N5GLES37TextureE' were leaked at exit.",
+      "ERROR: 1 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+      "ERROR: Texture with GL ID of 37: leaked 174762 bytes.",
+      "ERROR: Texture with GL ID of 39: leaked 174762 bytes."
+    ],
+    "error_count": 4,
+    "summaries": [
+      "LAUNCHER_CLICK_PASS 3"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "login_memory_smoke",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 0.66,
+    "log": "logs\\login_memory_smoke.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "LOGIN_MEMORY_PASS encrypted roundtrip, endpoint isolation, unchecked clears password"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "login_prefill_smoke-write",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 0.59,
+    "log": "logs\\login_prefill_smoke-write.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "LOGIN_PREFILL_PASS write"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "login_prefill_smoke-read",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 2.36,
+    "log": "logs\\login_prefill_smoke-read.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "LOGIN_PREFILL_PASS read"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "login_prefill_smoke-clear",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 2.38,
+    "log": "logs\\login_prefill_smoke-clear.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "LOGIN_PREFILL_PASS clear"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "test_player",
+    "category": "logic",
+    "exit": 1,
+    "seconds": 0.42,
+    "log": "logs\\test_player.log",
+    "errors": [
+      "SCRIPT ERROR: Parse Error: Cannot infer the type of \"phase_frame\" variable because the value doesn't have a set type.",
+      "ERROR: Failed to load script \"res://tests/test_player.gd\" with error \"Parse error\"."
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_world_v06",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 120.66,
+    "log": "logs\\test_world_v06.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\world-v06\\generation.json",
+        "checks": 83,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_ore_distribution_v06",
+    "category": "logic",
+    "exit": "timeout",
+    "seconds": 150.36,
+    "log": "logs\\test_ore_distribution_v06.log",
+    "errors": [
+      "SCRIPT ERROR: Compile Error: Identifier not found: AudioFX",
+      "SCRIPT ERROR: Compile Error: Failed to compile depended scripts.",
+      "ERROR: Failed to load script \"res://tests/test_ore_distribution_v06.gd\" with error \"Compilation failed\".",
+      "SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'."
+    ],
+    "error_count": 4,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_random_entry_v1",
+    "category": "logic",
+    "exit": 4294967295,
+    "seconds": 17.38,
+    "log": "logs\\test_random_entry_v1.log",
+    "errors": [
+      "SCRIPT ERROR: Compile Error: Identifier not found: AudioFX",
+      "SCRIPT ERROR: Compile Error: Identifier not found: AudioFX",
+      "SCRIPT ERROR: Compile Error: Failed to compile depended scripts.",
+      "ERROR: Failed to load script \"res://tests/test_random_entry_v1.gd\" with error \"Compilation failed\".",
+      "SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'."
+    ],
+    "error_count": 5,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_ecology_v03",
+    "category": "logic",
+    "exit": 4294967295,
+    "seconds": 18.72,
+    "log": "logs\\test_ecology_v03.log",
+    "errors": [
+      "SCRIPT ERROR: Compile Error: Identifier not found: AudioFX",
+      "SCRIPT ERROR: Compile Error: Failed to compile depended scripts.",
+      "ERROR: Failed to load script \"res://tests/test_ecology_v03.gd\" with error \"Compilation failed\"."
+    ],
+    "error_count": 3,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_resources_v031",
+    "category": "logic",
+    "exit": 1,
+    "seconds": 67.78,
+    "log": "logs\\test_resources_v031.log",
+    "errors": [
+      "ERROR: player drop API",
+      "ERROR: player drop namespace separate",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 3,
+    "summaries": [
+      "RESOURCES_TEST 4251 checks / 2 failures; [{\"by_ecology\":{\"forest\":{\"branch\":11,\"broad_leaf\":11,\"brown_mushroom\":8,\"flint\":1,\"wild_berry\":2},\"meadow\":{\"branch\":12,\"broad_leaf\":11,\"plant_fiber\":37,\"wild_berry\":5,\"wild_carrot\":25,\"wildflower\":25},\"mountain\":{\"branch\":6,\"flint\":2,\"plant_fiber\":18,\"wild_carrot\":11,\"wildflower\":1},\"rocky\":{\"flint\":16,\"plant_fiber\":1,\"wild_carrot\":1}},\"chunks\":51,\"empty_chunks\":3,\"generation_max_ms\":81.369,\"navigation_ms\":4430.846,\"resources\":204,\"seed\":271828,\"spawn_visible\":2},{\"by_ecology\":{\"forest\":{\"branch\":28,\"broad_leaf\":17,\"brown_mushroom\":21,\"flint\":1,\"wild_apple\":1,\"wild_berry\":6},\"meadow\":{\"branch\":7,\"broad_leaf\":10,\"flint\":5,\"plant_fiber\":19,\"wild_berry\":4,\"wild_carrot\":20,\"wildflower\":26},\"mountain\":{\"branch\":9,\"flint\":3,\"plant_fiber\":17,\"wild_carrot\":14},\"rocky\":{\"branch\":1,\"flint\":6,\"plant_fiber\":1},\"shore\":{\"plant_fiber\":1}},\"chunks\":45,\"empty_chunks\":3,\"generation_max_ms\":117.502,\"navigation_ms\":3853.479,\"resources\":217,\"seed\":447349832,\"spawn_visible\":0},{\"by_ecology\":{\"forest\":{\"branch\":30,\"broad_leaf\":11,\"brown_mushroom\":21,\"flint\":2,\"wild_apple\":1,\"wild_berry\":9,\"wild_carrot\":1},\"meadow\":{\"branch\":13,\"broad_leaf\":10,\"flint\":8,\"plant_fiber\":19,\"wild_berry\":10,\"wild_carrot\":25,\"wildflower\":19},\"mountain\":{\"branch\":12,\"brown_mushroom\":1,\"flint\":4,\"plant_fiber\":23,\"wild_carrot\":20,\"wildflower\":1},\"rocky\":{\"branch\":2,\"flint\":11,\"plant_fiber\":1,\"wild_carrot\":1},\"shore\":{\"plant_fiber\":1}},\"chunks\":54,\"empty_chunks\":2,\"generation_max_ms\":57.851,\"navigation_ms\":1905.099,\"resources\":256,\"seed\":1671081329,\"spawn_visible\":2}]"
+    ],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "audio-workbench",
+    "category": "tool",
+    "exit": 1,
+    "seconds": 0.84,
+    "log": "logs\\audio-workbench-attempt2.log",
+    "errors": [
+      "ERROR: test_workbench (unittest.loader._FailedTest.test_workbench)",
+      "Traceback (most recent call last):",
+      "FAILED (errors=1)"
+    ],
+    "error_count": 3,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_ore_distribution_v06",
+    "category": "logic",
+    "exit": 1,
+    "seconds": 28.87,
+    "log": "logs\\test_ore_distribution_v06-attempt2.log",
+    "errors": [
+      "ERROR: metal restricted to stable mud interior mineral:2:28:27:10",
+      "ERROR: metal restricted to stable mud interior mineral:2:29:27:6",
+      "ERROR: metal restricted to stable mud interior mineral:2:29:27:12",
+      "ERROR: metal restricted to stable mud interior mineral:2:29:28:3",
+      "ERROR: metal restricted to stable mud interior mineral:2:29:28:4",
+      "ERROR: metal restricted to stable mud interior mineral:2:45:29:8",
+      "ERROR: metal restricted to stable mud interior mineral:2:46:29:1",
+      "ERROR: metal restricted to stable mud interior mineral:2:49:48:1",
+      "ERROR: metal restricted to stable mud interior mineral:2:49:48:5",
+      "ERROR: metal restricted to stable mud interior mineral:2:49:48:11",
+      "ERROR: metal restricted to stable mud interior mineral:2:50:48:9",
+      "ERROR: metal restricted to stable mud interior mineral:2:50:49:0",
+      "ERROR: metal restricted to stable mud interior mineral:2:37:37:10",
+      "ERROR: metal restricted to stable mud interior mineral:2:37:41:8",
+      "ERROR: metal restricted to stable mud interior mineral:2:38:41:0",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 16,
+    "summaries": [
+      "ORE_DISTRIBUTION 162 checks; 15 failures; counts={ \"copper_outcrop\": 7, \"flint_outcrop\": 14, \"stone_outcrop\": 37, \"gold_outcrop\": 4, \"silver_outcrop\": 4 }"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ores-v06\\distribution.json",
+        "checks": 162,
+        "failures": [
+          "metal restricted to stable mud interior mineral:2:28:27:10",
+          "metal restricted to stable mud interior mineral:2:29:27:6",
+          "metal restricted to stable mud interior mineral:2:29:27:12",
+          "metal restricted to stable mud interior mineral:2:29:28:3",
+          "metal restricted to stable mud interior mineral:2:29:28:4",
+          "metal restricted to stable mud interior mineral:2:45:29:8",
+          "metal restricted to stable mud interior mineral:2:46:29:1",
+          "metal restricted to stable mud interior mineral:2:49:48:1",
+          "metal restricted to stable mud interior mineral:2:49:48:5",
+          "metal restricted to stable mud interior mineral:2:49:48:11",
+          "metal restricted to stable mud interior mineral:2:50:48:9",
+          "metal restricted to stable mud interior mineral:2:50:49:0",
+          "metal restricted to stable mud interior mineral:2:37:37:10",
+          "metal restricted to stable mud interior mineral:2:37:41:8",
+          "metal restricted to stable mud interior mineral:2:38:41:0"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "audio-workbench",
+    "category": "tool",
+    "exit": 1,
+    "seconds": 0.21,
+    "log": "logs\\audio-workbench-attempt3.log",
+    "errors": [
+      "ERROR: test_workbench (unittest.loader._FailedTest.test_workbench)",
+      "Traceback (most recent call last):",
+      "FAILED (errors=1)"
+    ],
+    "error_count": 3,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_ore_distribution_v06",
+    "category": "logic",
+    "exit": 1,
+    "seconds": 29.87,
+    "log": "logs\\test_ore_distribution_v06-attempt3.log",
+    "errors": [
+      "ERROR: metal restricted to stable mud interior mineral:2:28:27:10",
+      "ERROR: metal restricted to stable mud interior mineral:2:29:27:6",
+      "ERROR: metal restricted to stable mud interior mineral:2:29:27:12",
+      "ERROR: metal restricted to stable mud interior mineral:2:29:28:3",
+      "ERROR: metal restricted to stable mud interior mineral:2:29:28:4",
+      "ERROR: metal restricted to stable mud interior mineral:2:45:29:8",
+      "ERROR: metal restricted to stable mud interior mineral:2:46:29:1",
+      "ERROR: metal restricted to stable mud interior mineral:2:49:48:1",
+      "ERROR: metal restricted to stable mud interior mineral:2:49:48:5",
+      "ERROR: metal restricted to stable mud interior mineral:2:49:48:11",
+      "ERROR: metal restricted to stable mud interior mineral:2:50:48:9",
+      "ERROR: metal restricted to stable mud interior mineral:2:50:49:0",
+      "ERROR: metal restricted to stable mud interior mineral:2:37:37:10",
+      "ERROR: metal restricted to stable mud interior mineral:2:37:41:8",
+      "ERROR: metal restricted to stable mud interior mineral:2:38:41:0",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 16,
+    "summaries": [
+      "ORE_DISTRIBUTION 162 checks; 15 failures; counts={ \"copper_outcrop\": 7, \"flint_outcrop\": 14, \"stone_outcrop\": 37, \"gold_outcrop\": 4, \"silver_outcrop\": 4 }"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ores-v06\\distribution.json",
+        "checks": 162,
+        "failures": [
+          "metal restricted to stable mud interior mineral:2:28:27:10",
+          "metal restricted to stable mud interior mineral:2:29:27:6",
+          "metal restricted to stable mud interior mineral:2:29:27:12",
+          "metal restricted to stable mud interior mineral:2:29:28:3",
+          "metal restricted to stable mud interior mineral:2:29:28:4",
+          "metal restricted to stable mud interior mineral:2:45:29:8",
+          "metal restricted to stable mud interior mineral:2:46:29:1",
+          "metal restricted to stable mud interior mineral:2:49:48:1",
+          "metal restricted to stable mud interior mineral:2:49:48:5",
+          "metal restricted to stable mud interior mineral:2:49:48:11",
+          "metal restricted to stable mud interior mineral:2:50:48:9",
+          "metal restricted to stable mud interior mineral:2:50:49:0",
+          "metal restricted to stable mud interior mineral:2:37:37:10",
+          "metal restricted to stable mud interior mineral:2:37:41:8",
+          "metal restricted to stable mud interior mineral:2:38:41:0"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_random_entry_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 63.21,
+    "log": "logs\\test_random_entry_v1-attempt2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "RANDOM ENTRY: 78 checks, 0 failed; biomes={ \"泥地\": 3, \"森林\": 4, \"岩石区\": 2, \"草原\": 3 }"
+    ],
+    "reports": [
+      {
+        "source": "reports\\random-entry-v1\\results.json",
+        "checks": 78,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_ecology_v03",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 62.78,
+    "log": "logs\\test_ecology_v03-attempt2.log",
+    "errors": [
+      "ERROR: no tiny independent macro regions seed 902106",
+      "SCRIPT ERROR: Invalid access to property or key 'position' on a base object of type 'Nil'."
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_resources_v031",
+    "category": "logic",
+    "exit": 1,
+    "seconds": 73.04,
+    "log": "logs\\test_resources_v031-attempt2.log",
+    "errors": [
+      "ERROR: player drop API",
+      "ERROR: player drop namespace separate",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 3,
+    "summaries": [
+      "RESOURCES_TEST 4251 checks / 2 failures; [{\"by_ecology\":{\"forest\":{\"branch\":11,\"broad_leaf\":11,\"brown_mushroom\":8,\"flint\":1,\"wild_berry\":2},\"meadow\":{\"branch\":12,\"broad_leaf\":11,\"plant_fiber\":37,\"wild_berry\":5,\"wild_carrot\":25,\"wildflower\":25},\"mountain\":{\"branch\":6,\"flint\":2,\"plant_fiber\":18,\"wild_carrot\":11,\"wildflower\":1},\"rocky\":{\"flint\":16,\"plant_fiber\":1,\"wild_carrot\":1}},\"chunks\":51,\"empty_chunks\":3,\"generation_max_ms\":94.511,\"navigation_ms\":3808.636,\"resources\":204,\"seed\":271828,\"spawn_visible\":2},{\"by_ecology\":{\"forest\":{\"branch\":28,\"broad_leaf\":17,\"brown_mushroom\":21,\"flint\":1,\"wild_apple\":1,\"wild_berry\":6},\"meadow\":{\"branch\":7,\"broad_leaf\":10,\"flint\":5,\"plant_fiber\":19,\"wild_berry\":4,\"wild_carrot\":20,\"wildflower\":26},\"mountain\":{\"branch\":9,\"flint\":3,\"plant_fiber\":17,\"wild_carrot\":14},\"rocky\":{\"branch\":1,\"flint\":6,\"plant_fiber\":1},\"shore\":{\"plant_fiber\":1}},\"chunks\":45,\"empty_chunks\":3,\"generation_max_ms\":162.056,\"navigation_ms\":4257.551,\"resources\":217,\"seed\":447349832,\"spawn_visible\":0},{\"by_ecology\":{\"forest\":{\"branch\":30,\"broad_leaf\":11,\"brown_mushroom\":21,\"flint\":2,\"wild_apple\":1,\"wild_berry\":9,\"wild_carrot\":1},\"meadow\":{\"branch\":13,\"broad_leaf\":10,\"flint\":8,\"plant_fiber\":19,\"wild_berry\":10,\"wild_carrot\":25,\"wildflower\":19},\"mountain\":{\"branch\":12,\"brown_mushroom\":1,\"flint\":4,\"plant_fiber\":23,\"wild_carrot\":20,\"wildflower\":1},\"rocky\":{\"branch\":2,\"flint\":11,\"plant_fiber\":1,\"wild_carrot\":1},\"shore\":{\"plant_fiber\":1}},\"chunks\":54,\"empty_chunks\":2,\"generation_max_ms\":64.893,\"navigation_ms\":2488.159,\"resources\":256,\"seed\":1671081329,\"spawn_visible\":2}]"
+    ],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_crafting_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 24.09,
+    "log": "logs\\test_crafting_v1.log",
+    "errors": [
+      "ERROR: five valid real recipes, no invalid items",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "CRAFTING V1 window: 210 checks, 1 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\crafting-v1\\window-tests.json",
+        "checks": 210,
+        "failures": [
+          "five valid real recipes, no invalid items"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_equipment_v04",
+    "category": "native",
+    "exit": 1,
+    "seconds": 23.66,
+    "log": "logs\\test_equipment_v04.log",
+    "errors": [
+      "ERROR: database keeps 12 items and adds three tools",
+      "ERROR: occupied equipment swaps into source cell",
+      "ERROR: instance state and identity survive restoration",
+      "ERROR: bag left and equipment right",
+      "ERROR: F6 developer ore can be placed on clear loaded ground",
+      "ERROR: atomic save reload restores same equipment instance and capabilities",
+      "ERROR: ore state survives same snapshot reload",
+      "ERROR: movement through open equipment bag",
+      "ERROR: registered head appearance updates world and portrait together",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 10,
+    "summaries": [
+      "EQUIPMENT_V04 69 checks; 9 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\equipment-v04\\tests.json",
+        "checks": 69,
+        "failures": [
+          "database keeps 12 items and adds three tools",
+          "occupied equipment swaps into source cell",
+          "instance state and identity survive restoration",
+          "bag left and equipment right",
+          "F6 developer ore can be placed on clear loaded ground",
+          "atomic save reload restores same equipment instance and capabilities",
+          "ore state survives same snapshot reload",
+          "movement through open equipment bag",
+          "registered head appearance updates world and portrait together"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_food_v2",
+    "category": "native",
+    "exit": 1,
+    "seconds": 21.46,
+    "log": "logs\\test_food_v2.log",
+    "errors": [
+      "ERROR: all nine recipes appear in scrolling book",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "FOOD V2 window: 191 checks, 1 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\food-v2\\window.json",
+        "checks": 191,
+        "failures": [
+          "all nine recipes appear in scrolling book"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_food_edges_v2",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 21.27,
+    "log": "logs\\test_food_edges_v2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "FOOD EDGES 9 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\food-v2\\edges.json",
+        "checks": 9,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_world_map_v3_logic",
+    "category": "logic",
+    "exit": 1,
+    "seconds": 47.74,
+    "log": "logs\\test_world_map_v3_logic.log",
+    "errors": [
+      "ERROR: bounded fish populations 81273",
+      "ERROR: bounded fish populations 271828",
+      "ERROR: bounded fish populations 902106"
+    ],
+    "error_count": 3,
+    "summaries": [
+      "MAP V3 LOGIC 35 checks 3 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\world-map-v3\\logic.json",
+        "checks": 35,
+        "failures": [
+          "bounded fish populations 81273",
+          "bounded fish populations 271828",
+          "bounded fish populations 902106"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_world_map_v3_storage",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 3.64,
+    "log": "logs\\test_world_map_v3_storage.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "STORAGE 17 checks 0 failures {\"json_bytes\":98480,\"restore_ms\":39.06,\"reveal_2500_ms\":164.186,\"serialize_ms\":2.293}"
+    ],
+    "reports": [
+      {
+        "source": "reports\\world-map-v3\\storage.json",
+        "checks": 17,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_world_map_v3_distribution",
+    "category": "logic",
+    "exit": "timeout",
+    "seconds": 150.46,
+    "log": "logs\\test_world_map_v3_distribution.log",
+    "errors": [
+      "ERROR: fish total 1024/81273",
+      "ERROR: fish total 1024/271828",
+      "ERROR: fish total 1024/902106",
+      "ERROR: fish total 1536/81273"
+    ],
+    "error_count": 4,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_map_population_v4_logic",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 30.29,
+    "log": "logs\\test_map_population_v4_logic.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "V4 POPULATION LOGIC 261 checks 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\map-cache-population-v4\\logic.json",
+        "checks": 261,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_character_contracts_v1",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 1.61,
+    "log": "logs\\test_character_contracts_v1.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\character-creation-v1\\contracts-checks.json",
+        "checks": 9,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_movement_regression",
+    "category": "native",
+    "exit": 1,
+    "seconds": 23.27,
+    "log": "logs\\test_movement_regression.log",
+    "errors": [
+      "ERROR: chop still starts",
+      "ERROR: chop commits exactly once",
+      "ERROR: chop does not duplicate hit",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 4,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\movement-jitter\\regression.json",
+        "checks": 20,
+        "failures": [
+          "chop still starts",
+          "chop commits exactly once",
+          "chop does not duplicate hit"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_movement_jitter",
+    "category": "native",
+    "exit": 0,
+    "seconds": 20.86,
+    "log": "logs\\test_movement_jitter.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "test_grounding_interactions",
+    "category": "native",
+    "exit": "timeout",
+    "seconds": 150.61,
+    "log": "logs\\test_grounding_interactions.log",
+    "errors": [
+      "ERROR: chop still starts",
+      "ERROR: chop commits exactly once",
+      "ERROR: chop does not duplicate hit"
+    ],
+    "error_count": 3,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_ore_runtime_v06",
+    "category": "native",
+    "exit": 1,
+    "seconds": 88.08,
+    "log": "logs\\test_ore_runtime_v06.log",
+    "errors": [
+      "ERROR: 21 stable item definitions including three raw metal ores",
+      "ERROR: one exact configured reward batch stone_outcrop",
+      "ERROR: held E completes exactly configured hits gold_outcrop",
+      "ERROR: one exact configured reward batch gold_outcrop",
+      "ERROR: new ore inventory persists gold_ore",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 6,
+    "summaries": [
+      "ORE_RUNTIME 49 checks; 5 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ores-v06\\runtime.json",
+        "checks": 49,
+        "failures": [
+          "21 stable item definitions including three raw metal ores",
+          "one exact configured reward batch stone_outcrop",
+          "held E completes exactly configured hits gold_outcrop",
+          "one exact configured reward batch gold_outcrop",
+          "new ore inventory persists gold_ore"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_harvest_v05",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 132.52,
+    "log": "logs\\test_harvest_v05.log",
+    "errors": [
+      "ERROR: unique database: existing 15 plus bone/relic/pouch",
+      "ERROR: damage/reveal stage advances stone_outcrop",
+      "ERROR: exactly one configured reward batch stone_outcrop",
+      "ERROR: damage/reveal stage advances flint_outcrop",
+      "ERROR: damage/reveal stage advances copper_outcrop",
+      "ERROR: damage/reveal stage advances silver_outcrop",
+      "ERROR: damage/reveal stage advances gold_outcrop",
+      "ERROR: resource finishes after configured hit count gold_outcrop",
+      "ERROR: exactly one configured reward batch gold_outcrop",
+      "ERROR: completed target never respawns gold_outcrop",
+      "ERROR: native E starts dedicated action broadleaf_clump",
+      "ERROR: repeated E commits once broadleaf_clump",
+      "ERROR: action locks movement and facing broadleaf_clump",
+      "ERROR: damage/reveal stage advances broadleaf_clump",
+      "ERROR: partial progress survives actual chunk unload/reinstall broadleaf_clump",
+      "SCRIPT ERROR: Invalid access to property or key 'test:harvest:broadleaf_clump' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 16,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_harvest_edges_v05",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.04,
+    "log": "logs\\test_harvest_edges_v05.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid access to property or key '(17, 12)' on a base object of type 'Dictionary'.",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "HARVEST_EDGE 17 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\harvest-v05\\edge-tests.json",
+        "checks": 17,
+        "failures": []
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_harvest_followup_v051",
+    "category": "native",
+    "exit": 1,
+    "seconds": 24.48,
+    "log": "logs\\test_harvest_followup_v051.log",
+    "errors": [
+      "ERROR: held E completes resource once mine",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "HARVEST_FOLLOWUP 119 checks; 1 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\harvest-fix-v051\\tests.json",
+        "checks": 119,
+        "failures": [
+          "held E completes resource once mine"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_harvest_contact_layer_v051",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.84,
+    "log": "logs\\test_harvest_contact_layer_v051.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CONTACT_LAYER 20 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\harvest-fix-v051\\layer-tests.json",
+        "checks": 20,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_buried_solid_v052",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.25,
+    "log": "logs\\test_buried_solid_v052.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "BURIED_SOLID 68 checks; 0 failures; opaque=869 faded=0"
+    ],
+    "reports": [
+      {
+        "source": "reports\\buried-solid-v052\\tests.json",
+        "checks": 68,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_item_actions_followup_v051",
+    "category": "native",
+    "exit": 1,
+    "seconds": 15.65,
+    "log": "logs\\test_item_actions_followup_v051.log",
+    "errors": [
+      "ERROR: bag title drag moves panel and releases",
+      "ERROR: native bag drag onto ground discards whole stack",
+      "ERROR: player drop visible",
+      "ERROR: native item drag starts",
+      "ERROR: hotbar drag onto ground discards whole stack",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 6,
+    "summaries": [
+      "ITEM_ACTIONS 113 checks / 5 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\harvest-fix-v051\\item-actions-headless.json",
+        "checks": 113,
+        "failures": [
+          "bag title drag moves panel and releases",
+          "native bag drag onto ground discards whole stack",
+          "player drop visible",
+          "native item drag starts",
+          "hotbar drag onto ground discards whole stack"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_broadleaf_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 31.08,
+    "log": "logs\\test_broadleaf_v1.log",
+    "errors": [
+      "ERROR: explicit version and one-dig/four-leaf definition",
+      "ERROR: 3 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "BROADLEAF window: 119 checks; 1 failures; [{ \"seed\": 271828, \"sample_chunks\": 175, \"clumps_before_existing_harvest_exclusion\": 46 }, { \"seed\": 447349832, \"sample_chunks\": 141, \"clumps_before_existing_harvest_exclusion\": 35 }]"
+    ],
+    "reports": [
+      {
+        "source": "reports\\broadleaf-v1\\window.json",
+        "checks": 119,
+        "failures": [
+          "explicit version and one-dig/four-leaf definition"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_crafting_progress_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 17.05,
+    "log": "logs\\test_crafting_progress_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CRAFT PROGRESS window: 37 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\crafting-progress-v1\\window-checks.json",
+        "checks": 37,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_crafted_tools_runtime_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 19.26,
+    "log": "logs\\test_crafted_tools_runtime_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CRAFTED TOOLS: 16 checks; 0 failures; headless time_scale=3"
+    ],
+    "reports": [
+      {
+        "source": "reports\\crafting-progress-v1\\crafted-tools-runtime.json",
+        "checks": 16,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_drop_quantity_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 12.84,
+    "log": "logs\\test_drop_quantity_v1.log",
+    "errors": [
+      "ERROR: Error calling deferred method: 'Node(ui_fade.gd)::animate_window': Cannot convert argument 1 from Object to Object.",
+      "ERROR: Error calling deferred method: 'Node(ui_fade.gd)::animate_window': Cannot convert argument 1 from Object to Object.",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 3,
+    "summaries": [
+      "DROP QUANTITY: 19 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\drop-quantity-v1\\tests.json",
+        "checks": 19,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_bag_organize_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 14.04,
+    "log": "logs\\test_bag_organize_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "BAG ORGANIZE window: 29 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\bag-organize-v1\\window.json",
+        "checks": 29,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_bag_organize_v1-restart",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.04,
+    "log": "logs\\test_bag_organize_v1-restart.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "BAG ORGANIZE restart: 17 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\bag-organize-v1\\restart.json",
+        "checks": 17,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_recipe_hint_ui_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 14.24,
+    "log": "logs\\test_recipe_hint_ui_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "RECIPE/HINT UI window: 24 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ui-hints-v1\\window.json",
+        "checks": 24,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_front_tool_layer_v13",
+    "category": "native",
+    "exit": 0,
+    "seconds": 18.26,
+    "log": "logs\\test_front_tool_layer_v13.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "FRONT TOOL LAYER: 491 checks; 0 failures; 4738 repaired pixels"
+    ],
+    "reports": [
+      {
+        "source": "reports\\front-tool-layer-v13\\checks.json",
+        "checks": 491,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_back_tool_layer_v6",
+    "category": "native",
+    "exit": 0,
+    "seconds": 7.03,
+    "log": "logs\\test_back_tool_layer_v6.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "BACK TOOL LAYER: 133 checks, 0 failed; 2540 repaired leg pixels"
+    ],
+    "reports": [
+      {
+        "source": "reports\\back-layer-floor-v6\\back-layer-tests.json",
+        "checks": 133,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_camp_build_v4",
+    "category": "native",
+    "exit": 1,
+    "seconds": 12.25,
+    "log": "logs\\test_camp_build_v4.log",
+    "errors": [
+      "ERROR: formal startup exposes ten buildings and hammer without preview",
+      "ERROR: nine new buildings and existing campfire",
+      "ERROR: find legal real terrain building site",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 4,
+    "summaries": [
+      "CAMP BUILD V1: 41 checks, 3 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-build-v4\\formal-tests.json",
+        "checks": 41,
+        "failures": [
+          "formal startup exposes ten buildings and hammer without preview",
+          "nine new buildings and existing campfire",
+          "find legal real terrain building site"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_camp_door_hinge_transaction_v3",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 27.06,
+    "log": "logs\\test_camp_door_hinge_transaction_v3.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid access to property or key 'corner' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_camp_gate_surface_v4",
+    "category": "native",
+    "exit": 0,
+    "seconds": 145.54,
+    "log": "logs\\test_camp_gate_surface_v4.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'vertical' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'kind' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 3760,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_camp_h_damage_window_v4",
+    "category": "native",
+    "exit": 0,
+    "seconds": 11.23,
+    "log": "logs\\test_camp_h_damage_window_v4.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid access to property or key 'h:gate' on a base object of type 'Dictionary'.",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "H/DAMAGE WINDOW: 0 checks, 0 failed"
+    ],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_floor_formal_v3",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 17.41,
+    "log": "logs\\test_floor_formal_v3.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'industry' on a base object of type 'Nil'.",
+      "SCRIPT ERROR: Invalid access to property or key 'x' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 17,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_floor_under_buildings_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 17.04,
+    "log": "logs\\test_floor_under_buildings_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "FLOOR UNDER BUILDINGS: 198 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\floor-under-buildings-v1\\window.json",
+        "checks": 198,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_camp_effects_v11",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 26.97,
+    "log": "logs\\test_camp_effects_v11.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid access to property or key 'fx:torch' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_inventory_chest_v1",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 27.79,
+    "log": "logs\\test_inventory_chest_v1.log",
+    "errors": [
+      "ERROR: mouse movement cannot drag bag",
+      "ERROR: place real legal chest",
+      "SCRIPT ERROR: Invalid access to property or key of type 'String' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 3,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_chest_ui_v2",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 26.8,
+    "log": "logs\\test_chest_ui_v2.log",
+    "errors": [
+      "ERROR: place legal formal chest",
+      "SCRIPT ERROR: Invalid access to property or key of type 'String' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_chest_ui_v2-restart",
+    "category": "native",
+    "exit": 4294967295,
+    "seconds": 0.61,
+    "log": "logs\\test_chest_ui_v2-restart.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_chest_volume_render_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 14.24,
+    "log": "logs\\test_chest_volume_render_v2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CHEST VOLUME RENDER: 20 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\chest-volume-render-v2\\window.json",
+        "checks": 20,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_cooking_build_v2",
+    "category": "native",
+    "exit": 1,
+    "seconds": 12.23,
+    "log": "logs\\test_cooking_build_v2.log",
+    "errors": [
+      "ERROR: a legal real-world dry placement found near spawn",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "CAMPFIRE V1: 5 checks; 1 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\cooking-build-v2\\headless.json",
+        "checks": 5,
+        "failures": [
+          "a legal real-world dry placement found near spawn"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_cooking_discovery_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 16.44,
+    "log": "logs\\test_cooking_discovery_v1.log",
+    "errors": [
+      "ERROR: exactly four active recipes",
+      "ERROR: hunger-only brown_mushroom",
+      "ERROR: carrot remains twelve",
+      "ERROR: legacy mushroom remains ten",
+      "ERROR: new hunger herb_roasted_mushroom",
+      "ERROR: new hunger roasted_fruit_platter",
+      "ERROR: new hunger field_harvest_platter",
+      "ERROR: reverse order matches",
+      "ERROR: old mushroom combination disabled",
+      "ERROR: legacy start refused without debit",
+      "ERROR: invalid combination unchanged",
+      "ERROR: start disk failure rollback",
+      "ERROR: hidden combination starts",
+      "ERROR: four recipe cards plus future placeholders",
+      "ERROR: hidden card has no real name or icon",
+      "ERROR: closed window completion discovers",
+      "ERROR: ready and discovery saved together",
+      "ERROR: save reload restores discovery and ready",
+      "ERROR: claim once awards once",
+      "ERROR: old mushroom eats hunger-only",
+      "ERROR: known book herb recipe starts",
+      "ERROR: herb claim works",
+      "ERROR: completion reveals output and recipe card",
+      "ERROR: fixed panel (1280, 720)",
+      "ERROR: 3 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 25,
+    "summaries": [
+      "COOKING DISCOVERY: 117 checks, 24 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\cooking-discovery-v1\\tests.json",
+        "checks": 117,
+        "failures": [
+          "exactly four active recipes",
+          "hunger-only brown_mushroom",
+          "carrot remains twelve",
+          "legacy mushroom remains ten",
+          "new hunger herb_roasted_mushroom",
+          "new hunger roasted_fruit_platter",
+          "new hunger field_harvest_platter",
+          "reverse order matches",
+          "old mushroom combination disabled",
+          "legacy start refused without debit",
+          "invalid combination unchanged",
+          "start disk failure rollback",
+          "hidden combination starts",
+          "four recipe cards plus future placeholders",
+          "hidden card has no real name or icon",
+          "closed window completion discovers",
+          "ready and discovery saved together",
+          "save reload restores discovery and ready",
+          "claim once awards once",
+          "old mushroom eats hunger-only",
+          "known book herb recipe starts",
+          "herb claim works",
+          "completion reveals output and recipe card",
+          "fixed panel (1280, 720)"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_cooking_discovery_v1-restart",
+    "category": "native",
+    "exit": 1,
+    "seconds": 13.84,
+    "log": "logs\\test_cooking_discovery_v1-restart.log",
+    "errors": [
+      "ERROR: fresh process discoveries retained",
+      "ERROR: fresh process claimed herb output retained",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 3,
+    "summaries": [
+      "RESTART: 7 checks, 2 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\cooking-discovery-v1\\restart-tests.json",
+        "checks": 7,
+        "failures": [
+          "fresh process discoveries retained",
+          "fresh process claimed herb output retained"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_campfire_drag_v1",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 28.61,
+    "log": "logs\\test_campfire_drag_v1.log",
+    "errors": [
+      "ERROR: real dry legal fire location available",
+      "ERROR: test fire placed with original item consumption",
+      "SCRIPT ERROR: Invalid access of index '0' on a base object of type: 'Array'."
+    ],
+    "error_count": 3,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_campfire_flame_v2",
+    "category": "native",
+    "exit": 1,
+    "seconds": 14.24,
+    "log": "logs\\test_campfire_flame_v2.log",
+    "errors": [
+      "ERROR: actual food benefit wild_carrot +4",
+      "ERROR: actual food benefit wild_apple +4",
+      "ERROR: actual food benefit wild_berry +3",
+      "ERROR: actual food benefit brown_mushroom +3",
+      "ERROR: actual food benefit roasted_carrot +12",
+      "ERROR: actual food benefit roasted_mushroom +10",
+      "ERROR: actual environment adapter supplies small rain exposure",
+      "ERROR: actual environment adapter supplies storm exposure",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 9,
+    "summaries": [
+      "CAMPFIRE TUNING: 32 checks; 8 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\campfire-flame-v2\\headless.json",
+        "checks": 32,
+        "failures": [
+          "actual food benefit wild_carrot +4",
+          "actual food benefit wild_apple +4",
+          "actual food benefit wild_berry +3",
+          "actual food benefit brown_mushroom +3",
+          "actual food benefit roasted_carrot +12",
+          "actual food benefit roasted_mushroom +10",
+          "actual environment adapter supplies small rain exposure",
+          "actual environment adapter supplies storm exposure"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_planting_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 14.24,
+    "log": "logs\\test_planting_v1.log",
+    "errors": [
+      "ERROR: legal plot location found",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "PLANTING V1 21 checks; 1 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\planting-formal-v1\\window-checks.json",
+        "checks": 21,
+        "failures": [
+          "legal plot location found"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_planting_dependencies_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 14.04,
+    "log": "logs\\test_planting_dependencies_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "PLANTING DEPENDENCIES 15 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\planting-formal-v1\\dependencies.json",
+        "checks": 15,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_planting_layout_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 14.64,
+    "log": "logs\\test_planting_layout_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "PLANTING LAYOUT 16 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\planting-formal-v1\\layout-window.json",
+        "checks": 16,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_seed_selector_v2",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 29.0,
+    "log": "logs\\test_seed_selector_v2.log",
+    "errors": [
+      "ERROR: place real legal soil",
+      "SCRIPT ERROR: Invalid access to property or key 'abandoned:v1:0:0' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_seed_selector_v2-restart",
+    "category": "native",
+    "exit": 1,
+    "seconds": 14.04,
+    "log": "logs\\test_seed_selector_v2-restart.log",
+    "errors": [
+      "ERROR: new process restores destroyed plot as absent",
+      "ERROR: new process does not refund planted seed",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 3,
+    "summaries": [
+      "SEED SELECTOR 3 checks; 2 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\planting-ui-floor-v2\\restart-checks.json",
+        "checks": 3,
+        "failures": [
+          "new process restores destroyed plot as absent",
+          "new process does not refund planted seed"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_abandoned_fish_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 19.86,
+    "log": "logs\\test_abandoned_fish_v1.log",
+    "errors": [
+      "ERROR: 3 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "ABANDONED FISH V1: 114 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\abandoned-fish-v1\\window.json",
+        "checks": 114,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_abandoned_fish_v1-restart",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.84,
+    "log": "logs\\test_abandoned_fish_v1-restart.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "ABANDONED FISH V1: 6 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\abandoned-fish-v1\\read.json",
+        "checks": 6,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_roasted_fish_formal_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.63,
+    "log": "logs\\test_roasted_fish_formal_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "FORMAL FOOD: 5 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\roasted-fish-formal-v1\\checks.json",
+        "checks": 5,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_food_formal_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.64,
+    "log": "logs\\test_food_formal_v2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "FORMAL FOOD: 17 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\food-formal-v2\\checks.json",
+        "checks": 17,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_hallucination_visual_v3",
+    "category": "native",
+    "exit": 0,
+    "seconds": 15.04,
+    "log": "logs\\test_hallucination_visual_v3.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "HALLUCINATION V3 6 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\hallucination-visual-v3\\visual.json",
+        "checks": 6,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_animal_art_formal_v2",
+    "category": "native",
+    "exit": "timeout",
+    "seconds": 150.46,
+    "log": "logs\\test_animal_art_formal_v2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_animal_art_formal_shear_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 15.24,
+    "log": "logs\\test_animal_art_formal_shear_v2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "ANIMALS NATIVE: 33 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\animals-art-formal-v2\\native.json",
+        "checks": 33,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_animals_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 20.05,
+    "log": "logs\\test_animals_v1.log",
+    "errors": [
+      "ERROR: shears require workbench",
+      "ERROR: newly tamed sheep not instantly harvestable",
+      "ERROR: repeat shearing refused",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 4,
+    "summaries": [
+      "ANIMALS V1: 95 checks, 3 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\animals-v1\\window.json",
+        "checks": 95,
+        "failures": [
+          "shears require workbench",
+          "newly tamed sheep not instantly harvestable",
+          "repeat shearing refused"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_animals_edges_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 15.04,
+    "log": "logs\\test_animals_edges_v1.log",
+    "errors": [
+      "ERROR: unloaded pair reproduces with same game-time rules",
+      "ERROR: unloaded chickens produce persistent ground eggs",
+      "ERROR: first birth immediately consumes last population slot",
+      "ERROR: cooldown and population cap prevent extra birth",
+      "ERROR: unloaded unconfined wild animal migrates physically",
+      "ERROR: unfenced tame animal can drift away but never disappears",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 7,
+    "summaries": [
+      "ANIMALS RESTART/EDGES: 33 checks, 6 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\animals-v1\\restart-edges.json",
+        "checks": 33,
+        "failures": [
+          "unloaded pair reproduces with same game-time rules",
+          "unloaded chickens produce persistent ground eggs",
+          "first birth immediately consumes last population slot",
+          "cooldown and population cap prevent extra birth",
+          "unloaded unconfined wild animal migrates physically",
+          "unfenced tame animal can drift away but never disappears"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_animal_drag_feed_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 14.03,
+    "log": "logs\\test_animal_drag_feed_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "ANIMAL DRAG FEED: 37 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\animal-drag-feed-v1\\results.json",
+        "checks": 37,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_animal_debug_button_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.04,
+    "log": "logs\\test_animal_debug_button_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "ANIMAL DEBUG BUTTON: 15 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\animal-debug-button-v1\\native.json",
+        "checks": 15,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_scissors_exploration_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 16.24,
+    "log": "logs\\test_scissors_exploration_v1.log",
+    "errors": [
+      "ERROR: front hand and scissors before clothing; palm grips handle false",
+      "ERROR: front hand and scissors before clothing; palm grips handle true",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 3,
+    "summaries": [
+      "SCISSORS EXPLORATION: 34 checks, 2 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\scissors-exploration-v1\\checks.json",
+        "checks": 34,
+        "failures": [
+          "front hand and scissors before clothing; palm grips handle false",
+          "front hand and scissors before clothing; palm grips handle true"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_scissors_restart_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 11.83,
+    "log": "logs\\test_scissors_restart_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "SCISSORS RESTART: 7 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\scissors-exploration-v1\\restart-checks.json",
+        "checks": 7,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_shear_sign_map_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 15.44,
+    "log": "logs\\test_shear_sign_map_v1.log",
+    "errors": [
+      "ERROR: GPU map is identical when hidden spawn changes; no marker or label remains",
+      "ERROR: map zoom unchanged",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 3,
+    "summaries": [
+      "SHEAR SIGN MAP: 32 checks, 2 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\shear-sign-map-v1\\checks.json",
+        "checks": 32,
+        "failures": [
+          "GPU map is identical when hidden spawn changes; no marker or label remains",
+          "map zoom unchanged"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_body_v2",
+    "category": "native",
+    "exit": 1,
+    "seconds": 62.54,
+    "log": "logs\\test_body_v2.log",
+    "errors": [
+      "ERROR: all ten actual edible foods enumerated",
+      "ERROR: eight hours restores full clamps",
+      "ERROR: real labor clock synced 100",
+      "ERROR: real labor clock synced 25",
+      "ERROR: real labor clock synced 10",
+      "ERROR: wakeup unlock and accelerated overshoot discarded",
+      "ERROR: forced total three hours world time",
+      "ERROR: reserved sleep implementation without a player UI entry",
+      "ERROR: night sleep next morning six",
+      "ERROR: sleep closes storage without hiding reusable root",
+      "ERROR: storage usable after waking",
+      "ERROR: engine loops wake and restore input without duplicate hit",
+      "ERROR: modal detail avoids HUD dock overlap (1280, 720)",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 14,
+    "summaries": [
+      "BODY V2 window: 181 checks; 13 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\body-v2\\window.json",
+        "checks": 181,
+        "failures": [
+          "all ten actual edible foods enumerated",
+          "eight hours restores full clamps",
+          "real labor clock synced 100",
+          "real labor clock synced 25",
+          "real labor clock synced 10",
+          "wakeup unlock and accelerated overshoot discarded",
+          "forced total three hours world time",
+          "reserved sleep implementation without a player UI entry",
+          "night sleep next morning six",
+          "sleep closes storage without hiding reusable root",
+          "storage usable after waking",
+          "engine loops wake and restore input without duplicate hit",
+          "modal detail avoids HUD dock overlap (1280, 720)"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_body_ui_revision_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 17.45,
+    "log": "logs\\test_body_ui_revision_v2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "BODY UI REVISION: 13 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\body-v2\\ui-revision\\checks.json",
+        "checks": 13,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_sleep_formal_v9",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 27.21,
+    "log": "logs\\test_sleep_formal_v9.log",
+    "errors": [
+      "ERROR: native placement site sleeping_bag-horizontal",
+      "ERROR: place sleeping_bag-horizontal",
+      "SCRIPT ERROR: Invalid access of index '0' on a base object of type: 'Array'."
+    ],
+    "error_count": 3,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_sleep_fit_v10",
+    "category": "native",
+    "exit": 1,
+    "seconds": 12.43,
+    "log": "logs\\test_sleep_fit_v10.log",
+    "errors": [
+      "ERROR: clear enlarged footprint site wood_bedfalse",
+      "ERROR: clear enlarged footprint site wood_bedtrue",
+      "ERROR: clear enlarged footprint site straw_matfalse",
+      "ERROR: clear enlarged footprint site straw_mattrue",
+      "ERROR: clear enlarged footprint site sleeping_bagfalse",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 6,
+    "summaries": [
+      "SLEEP FIT V10 5 checks; 5 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\sleep-fit-v10\\checks.json",
+        "checks": 5,
+        "failures": [
+          "clear enlarged footprint site wood_bedfalse",
+          "clear enlarged footprint site wood_bedtrue",
+          "clear enlarged footprint site straw_matfalse",
+          "clear enlarged footprint site straw_mattrue",
+          "clear enlarged footprint site sleeping_bagfalse"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_sleep_collision_v11",
+    "category": "native",
+    "exit": 1,
+    "seconds": 12.43,
+    "log": "logs\\test_sleep_collision_v11.log",
+    "errors": [
+      "ERROR: valid offset footprint placement [\"wood_bed\", false]",
+      "ERROR: valid offset footprint placement [\"wood_bed\", true]",
+      "ERROR: valid offset footprint placement [\"straw_mat\", false]",
+      "ERROR: valid offset footprint placement [\"straw_mat\", true]",
+      "ERROR: valid offset footprint placement [\"sleeping_bag\", false]",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 6,
+    "summaries": [
+      "SLEEP COLLISION V11 5 checks; 5 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\sleep-collision-v11\\checks.json",
+        "checks": 5,
+        "failures": [
+          "valid offset footprint placement [\"wood_bed\", false]",
+          "valid offset footprint placement [\"wood_bed\", true]",
+          "valid offset footprint placement [\"straw_mat\", false]",
+          "valid offset footprint placement [\"straw_mat\", true]",
+          "valid offset footprint placement [\"sleeping_bag\", false]"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_industry_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 19.65,
+    "log": "logs\\test_industry_v1.log",
+    "errors": [
+      "ERROR: formal building art refrigerator",
+      "ERROR: formal inventory art refrigerator",
+      "ERROR: formal inventory art precision_repair_bench",
+      "ERROR: formal inventory art fuel_supply_box",
+      "ERROR: formal inventory art compost_bin",
+      "ERROR: formal inventory art advanced_smokehouse",
+      "ERROR: powered furnace advances",
+      "ERROR: copper completes",
+      "ERROR: failed claim restores output and inventory",
+      "ERROR: claim successful",
+      "ERROR: Can't take value from empty array.",
+      "ERROR: claim uses unified obtained event",
+      "ERROR: queued silver completes",
+      "ERROR: silver claimed",
+      "ERROR: start metal_copper_plate",
+      "ERROR: claim metal_copper_plate",
+      "ERROR: start metal_copper_parts",
+      "ERROR: claim metal_copper_parts",
+      "ERROR: start metal_metal_connector",
+      "ERROR: claim metal_metal_connector",
+      "ERROR: start metal_copper_axe",
+      "ERROR: claim metal_copper_axe",
+      "ERROR: start metal_copper_pickaxe",
+      "ERROR: claim metal_copper_pickaxe",
+      "ERROR: start metal_copper_shovel",
+      "ERROR: claim metal_copper_shovel",
+      "ERROR: start metal_copper_hammer",
+      "ERROR: claim metal_copper_hammer",
+      "ERROR: start metal_fishing_rod",
+      "ERROR: claim metal_fishing_rod"
+    ],
+    "error_count": 50,
+    "summaries": [
+      "INDUSTRY V1: 275 checks; 48 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\industry-formal-v1\\window.json",
+        "checks": 275,
+        "failures": [
+          "formal building art refrigerator",
+          "formal inventory art refrigerator",
+          "formal inventory art precision_repair_bench",
+          "formal inventory art fuel_supply_box",
+          "formal inventory art compost_bin",
+          "formal inventory art advanced_smokehouse",
+          "powered furnace advances",
+          "copper completes",
+          "failed claim restores output and inventory",
+          "claim successful",
+          "claim uses unified obtained event",
+          "queued silver completes",
+          "silver claimed",
+          "start metal_copper_plate",
+          "claim metal_copper_plate",
+          "start metal_copper_parts",
+          "claim metal_copper_parts",
+          "start metal_metal_connector",
+          "claim metal_metal_connector",
+          "start metal_copper_axe",
+          "claim metal_copper_axe",
+          "start metal_copper_pickaxe",
+          "claim metal_copper_pickaxe",
+          "start metal_copper_shovel",
+          "claim metal_copper_shovel",
+          "start metal_copper_hammer",
+          "claim metal_copper_hammer",
+          "start metal_fishing_rod",
+          "claim metal_fishing_rod",
+          "start metal_silver_lantern",
+          "claim metal_silver_lantern",
+          "occupied oven slot protected",
+          "all four independent jobs advance",
+          "one fuel supply burns once for four jobs",
+          "oven pauses without losing progress",
+          "four jobs complete independently",
+          "claim oven slot 0",
+          "claim oven slot 1",
+          "claim oven slot 2",
+          "claim oven slot 3",
+          "claimed slots return empty",
+          "fallback output completes small_hodgepodge",
+          "full inventory preserves ready small_hodgepodge",
+          "claim small_hodgepodge",
+          "fallback output completes large_hodgepodge",
+          "full inventory preserves ready large_hodgepodge",
+          "claim large_hodgepodge",
+          "ordinary world clock advances industrial jobs without preview flag"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_industry_v1-restart",
+    "category": "native",
+    "exit": 1,
+    "seconds": 11.83,
+    "log": "logs\\test_industry_v1-restart.log",
+    "errors": [
+      "ERROR: restart retains fallback recipe and paid quantities",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "INDUSTRY V1: 7 checks; 1 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\industry-formal-v1\\restart.json",
+        "checks": 7,
+        "failures": [
+          "restart retains fallback recipe and paid quantities"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_industry_refine_v2",
+    "category": "native",
+    "exit": 1,
+    "seconds": 16.24,
+    "log": "logs\\test_industry_refine_v2.log",
+    "errors": [
+      "ERROR: one actual completion emits small chimney smoke",
+      "ERROR: metal painted width equals ordinary workbench 80 units",
+      "ERROR: GPU small smoke appears at chimney",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 4,
+    "summaries": [
+      "INDUSTRY REFINE V2: 115 checks; 3 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\industry-refine-v2\\window.json",
+        "checks": 115,
+        "failures": [
+          "one actual completion emits small chimney smoke",
+          "metal painted width equals ordinary workbench 80 units",
+          "GPU small smoke appears at chimney"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_industry_polish_v3",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.83,
+    "log": "logs\\test_industry_polish_v3.log",
+    "errors": [
+      "ERROR: 3 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "INDUSTRY POLISH V3: 55 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\industry-polish-v3\\window.json",
+        "checks": 55,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_camp_expansion_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 21.65,
+    "log": "logs\\test_camp_expansion_v2.log",
+    "errors": [
+      "ERROR: 13 RID allocations of type 'P11GodotBody2D' were leaked at exit.",
+      "ERROR: 11 RID allocations of type 'N5GLES37TextureE' were leaked at exit.",
+      "ERROR: 5 RID allocations of type 'PN18TextServerAdvanced22ShapedTextDataAdvancedE' were leaked at exit.",
+      "ERROR: 1 RID allocations of type 'PN18TextServerAdvanced12FontAdvancedE' were leaked at exit.",
+      "ERROR: Texture with GL ID of 194: leaked 131072 bytes.",
+      "ERROR: Texture with GL ID of 196: leaked 174762 bytes.",
+      "ERROR: Texture with GL ID of 197: leaked 131072 bytes.",
+      "ERROR: Texture with GL ID of 199: leaked 131072 bytes.",
+      "ERROR: Texture with GL ID of 202: leaked 174762 bytes.",
+      "ERROR: Texture with GL ID of 203: leaked 174762 bytes.",
+      "ERROR: Texture with GL ID of 204: leaked 131072 bytes.",
+      "ERROR: Texture with GL ID of 205: leaked 131072 bytes.",
+      "ERROR: Texture with GL ID of 255: leaked 131072 bytes.",
+      "ERROR: Texture with GL ID of 257: leaked 131072 bytes.",
+      "ERROR: Texture with GL ID of 285: leaked 174762 bytes.",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 16,
+    "summaries": [
+      "CAMP EXPANSION V2: 210 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-expansion-v2\\window.json",
+        "checks": 210,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_camp_expansion_v2-restart",
+    "category": "native",
+    "exit": 0,
+    "seconds": 11.83,
+    "log": "logs\\test_camp_expansion_v2-restart.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CAMP EXPANSION V2: 7 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-expansion-v2\\read.json",
+        "checks": 7,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_camp_expansion_geometry",
+    "category": "native",
+    "exit": 0,
+    "seconds": 1.61,
+    "log": "logs\\test_camp_expansion_geometry.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "EXPANSION GEOMETRY: 21 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-expansion-v2\\geometry.json",
+        "checks": 21,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_camp_expansion_front_v2",
+    "category": "native",
+    "exit": "timeout",
+    "seconds": 150.43,
+    "log": "logs\\test_camp_expansion_front_v2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_camp_food_polish_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 16.44,
+    "log": "logs\\test_camp_food_polish_v2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CAMP FOOD POLISH: 83 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-food-polish-v2\\window.json",
+        "checks": 83,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_camp_formal_drag_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 15.44,
+    "log": "logs\\test_camp_formal_drag_v2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CAMP FORMAL DRAG V2: 66 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-formal-drag-v2\\window.json",
+        "checks": 66,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_camp_interaction_polish_v3",
+    "category": "native",
+    "exit": 0,
+    "seconds": 18.85,
+    "log": "logs\\test_camp_interaction_polish_v3.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CAMP INTERACTION POLISH: 80 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-interaction-polish-v3\\window.json",
+        "checks": 80,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_build_freshness_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 12.23,
+    "log": "logs\\test_build_freshness_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "RESULT 31 checks, 0 failures"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "test_fishing_formal_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 24.46,
+    "log": "logs\\test_fishing_formal_v1.log",
+    "errors": [
+      "ERROR: Failed to load image. Error 15",
+      "ERROR: Failed to load image. Error 15",
+      "ERROR: all candidate textures imported and loaded",
+      "ERROR: formal lake points generated sparsely",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 5,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\fishing-formal-v1\\headless-results.json",
+        "checks": 107,
+        "failures": [
+          "all candidate textures imported and loaded",
+          "formal lake points generated sparsely"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_fishing_population_v2",
+    "category": "native",
+    "exit": 1,
+    "seconds": 20.65,
+    "log": "logs\\test_fishing_population_v2.log",
+    "errors": [
+      "ERROR: formal world: global cap 20",
+      "ERROR: replacement preserves cap, spacing and lake limits",
+      "ERROR: seed 271828: global cap 20",
+      "ERROR: seed 271828: no lake exceeds 3",
+      "ERROR: seed 123456: global cap 20",
+      "ERROR: seed 123456: no lake exceeds 3",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 7,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\fishing-population-v2\\window-results.json",
+        "checks": 66,
+        "failures": [
+          "formal world: global cap 20",
+          "replacement preserves cap, spacing and lake limits",
+          "seed 271828: global cap 20",
+          "seed 271828: no lake exceeds 3",
+          "seed 123456: global cap 20",
+          "seed 123456: no lake exceeds 3"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_merchant_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 19.05,
+    "log": "logs\\test_merchant_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\merchant-v1\\results.json",
+        "checks": 124,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_merchant_formal_legacy",
+    "category": "native",
+    "exit": 0,
+    "seconds": 11.83,
+    "log": "logs\\test_merchant_formal_legacy.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "test_ui_fade_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 16.85,
+    "log": "logs\\test_ui_fade_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "UI FADE V1: 34 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ui-fade-v1\\window.json",
+        "checks": 34,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_target_tip_timeout",
+    "category": "native",
+    "exit": 0,
+    "seconds": 15.65,
+    "log": "logs\\test_target_tip_timeout.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "Target tip checks: 9, failures: 0"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "test_world_environment",
+    "category": "native",
+    "exit": 0,
+    "seconds": 37.32,
+    "log": "logs\\test_world_environment.log",
+    "errors": [
+      "ERROR: 3 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "ENVIRONMENT_TEST {\"adapter\":\"NVIDIA GeForce RTX 3060\",\"checks\":[{\"details\":\"\",\"name\":\"default 08:00 / 60 real minutes per day\",\"pass\":true},{\"details\":\"\",\"name\":\"3600s advances exactly one day\",\"pass\":true},{\"details\":\"\",\"name\":\"midnight increments date\",\"pass\":true},{\"details\":\"\",\"name\":\"pause freezes date and weather\",\"pass\":true},{\"details\":\"\",\"name\":\"time scale x10\",\"pass\":true},{\"details\":\"\",\"name\":\"phase 5\",\"pass\":true},{\"details\":\"\",\"name\":\"phase 8\",\"pass\":true},{\"details\":\"\",\"name\":\"phase 17\",\"pass\":true},{\"details\":\"\",\"name\":\"phase 20\",\"pass\":true},{\"details\":\"\",\"name\":\"phase 0\",\"pass\":true},{\"details\":\"\",\"name\":\"clear to rain directly starts a smooth transition\",\"pass\":true},{\"details\":\"\",\"name\":\"halfway rain without overcast state\",\"pass\":true},{\"details\":\"\",\"name\":\"JSON restore mid transition\",\"pass\":true},{\"details\":\"\",\"name\":\"transition blend survives roundtrip\",\"pass\":true},{\"details\":\"\",\"name\":\"restored RNG and timer produce identical future weather\",\"pass\":true},{\"details\":\"\",\"name\":\"unknown save version rejected\",\"pass\":true},{\"details\":\"\",\"name\":\"rain to clear preserves rain at start of fade\",\"pass\":true},{\"details\":\"\",\"name\":\"forced clear completes smooth fade\",\"pass\":true},{\"details\":\"\",\"name\":\"v1 overcast save migrates\",\"pass\":true},{\"details\":\"\",\"name\":\"migration retains date/time/rain and queued rain destination\",\"pass\":true},{\"details\":\"\",\"name\":\"retired overcast without queued rain fades to clear\",\"pass\":true},{\"details\":\"\",\"name\":\"long simulation supports clear/light rain/storm without overcast\",\"pass\":true},{\"details\":\"\",\"name\":\"frame-sized steps commit completed weather exactly\",\"pass\":true},{\"details\":\"\",\"name\":\"v2 save migrates without resetting date/time\",\"pass\":true},{\"details\":\"\",\"name\":\"halfway storm transition\",\"pass\":true},{\"details\":\"\",\"name\":\"v3 storm mid-transition save restores\",\"pass\":true},{\"details\":\"\",\"name\":\"storm save restores identical future weather\",\"pass\":true},{\"details\":0.00621947273612022,\"name\":\"continuous light including midnight\",\"pass\":true},{\"details\":0.699999988079071,\"name\":\"night retains readable channel floor\",\"pass\":true},{\"details\":\"\",\"name\":\"daylight identity\",\"pass\":true},{\"details\":\"\",\"name\":\"stream settled 447349832\",\"pass\":true},{\"details\":\"\",\"name\":\"stream settled 447349832\",\"pass\":true},{\"details\":\"\",\"name\":\"rain visible region follows camera zoom 0.65\",\"pass\":true},{\"details\":\"\",\"name\":\"stream settled 447349832\",\"pass\":true},{\"details\":\"\",\"name\":\"rain visible region follows camera zoom 1.6\",\"pass\":true},{\"details\":\"\",\"name\":\"synthetic rain audio removed\",\"pass\":true},{\"details\":\"\",\"name\":\"map generator unchanged\",\"pass\":true},{\"details\":\"\",\"name\":\"atomic disk save restores complete environment\",\"pass\":true},{\"details\":\"\",\"name\":\"stream settled 447349832\",\"pass\":true},{\"details\":\"\",\"name\":\"ground arcs and rain below actors/props, above pure ground copy\",\"pass\":true},{\"details\":{\"arcs_max\":13,\"drops_max\":23},\"name\":\"sparse falling rain with live ground arcs\",\"pass\":true},{\"details\":\"\",\"name\":\"bounded storm slot pools and no per-drop nodes\",\"pass\":true},{\"details\":{\"small_emitted_120frames\":102,\"storm_emitted_120frames\":480,\"storm_max_drops\":89},\"name\":\"storm emission substantially heavier than light rain\",\"pass\":true},{\"details\":\"\",\"name\":\"storm darker and rain renamed light rain\",\"pass\":true},{\"details\":\"\",\"name\":\"storm flash begins then schedules 45-90 real second quiet interval\",\"pass\":true},{\"details\":\"\",\"name\":\"exactly two short flashes within 0.28 seconds\",\"pass\":true},{\"details\":\"\",\"name\":\"no lightning outside storm\",\"pass\":true}],\"engine\":\"4.7.2-stable (official)\",\"failures\":0,\"performance_sample\":{\"max_ground_arcs\":13,\"max_visible_drops\":23,\"median_ms\":16.576,\"method\":\"180 rendered frame intervals, sparse rain in loaded forest, 60 FPS cap; includes pacing; not a full exploration benchmark\",\"nodes\":3603,\"p95_ms\":36.878,\"static_memory_mib\":124.867148399353,\"storm\":{\"emitted_in_120frames\":480,\"max_drops\":89,\"median_ms\":17.827,\"p95_ms\":34.019}},\"renderer\":\"gl_compatibility\"}"
+    ],
+    "reports": [
+      {
+        "source": "reports\\storm-v01\\validation.json",
+        "checks": 47,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_world_map_v3_window",
+    "category": "native",
+    "exit": "timeout",
+    "seconds": 150.39,
+    "log": "logs\\test_world_map_v3_window.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_world_map_v3_markers",
+    "category": "native",
+    "exit": 0,
+    "seconds": 28.09,
+    "log": "logs\\test_world_map_v3_markers.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "MARKERS 10 checks 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\world-map-v3\\markers.json",
+        "checks": 10,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_world_map_v3_perf",
+    "category": "native",
+    "exit": 0,
+    "seconds": 29.72,
+    "log": "logs\\test_world_map_v3_perf.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "test_map_population_v4_window",
+    "category": "native",
+    "exit": 0,
+    "seconds": 27.67,
+    "log": "logs\\test_map_population_v4_window.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "V4 window 57 checks 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\map-cache-population-v4\\window.json",
+        "checks": 57,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_map_population_v4_window-restart",
+    "category": "native",
+    "exit": 0,
+    "seconds": 14.06,
+    "log": "logs\\test_map_population_v4_window-restart.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "V4 resume 5 checks 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\map-cache-population-v4\\resume.json",
+        "checks": 5,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_map_population_v4_movement",
+    "category": "native",
+    "exit": 0,
+    "seconds": 26.29,
+    "log": "logs\\test_map_population_v4_movement.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "V4 INCREMENTAL 9 checks 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\map-cache-population-v4\\movement.json",
+        "checks": 9,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_audio_selected_v6",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 29.31,
+    "log": "logs\\test_audio_selected_v6.log",
+    "errors": [
+      "ERROR: sfx_build_stone actual player starts",
+      "ERROR: Can't take value from empty array.",
+      "SCRIPT ERROR: Invalid access to property or key 'stream' on a base object of type 'Nil'."
+    ],
+    "error_count": 3,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_audio_ui_open_v7",
+    "category": "native",
+    "exit": 1,
+    "seconds": 14.64,
+    "log": "logs\\test_audio_ui_open_v7.log",
+    "errors": [
+      "ERROR: actual backpack open plays shortened event",
+      "ERROR: map open uses same shortened event",
+      "ERROR: close variants retained",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 4,
+    "summaries": [
+      "UI OPEN V7: 9 checks; 3 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\audio-ui-open-v7\\window.json",
+        "checks": 9,
+        "failures": [
+          "actual backpack open plays shortened event",
+          "map open uses same shortened event",
+          "close variants retained"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_audio_ui_single_v8",
+    "category": "native",
+    "exit": 1,
+    "seconds": 13.44,
+    "log": "logs\\test_audio_ui_single_v8.log",
+    "errors": [
+      "ERROR: both user-selected close variants retained, never layered",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "UI SINGLE V8: 62 checks; 1 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\audio-ui-single-v8\\window.json",
+        "checks": 62,
+        "failures": [
+          "both user-selected close variants retained, never layered"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_audio_close_only_v9",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.44,
+    "log": "logs\\test_audio_close_only_v9.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CLOSE ONLY V9: 16 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\audio-close-only-v9\\window.json",
+        "checks": 16,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_character_creation_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 40.32,
+    "log": "logs\\test_character_creation_v1.log",
+    "errors": [
+      "ERROR: original full continent generator",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\character-creation-v1\\checks.json",
+        "checks": 183,
+        "failures": [
+          "original full continent generator"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_character_hair_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 8.83,
+    "log": "logs\\test_character_hair_v2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\character-hair-v2\\runtime-checks.json",
+        "checks": 154,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_character_hair_world_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 15.05,
+    "log": "logs\\test_character_hair_world_v2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\character-hair-v2\\world-checks.json",
+        "checks": 35,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_ponytail_side_v3",
+    "category": "native",
+    "exit": 0,
+    "seconds": 4.43,
+    "log": "logs\\test_ponytail_side_v3.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\ponytail-side-v3\\checks.json",
+        "checks": 25,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_ecology_compat_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 12.84,
+    "log": "logs\\test_ecology_compat_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "ECOLOGY SIGNPOST compat-corrected: 6 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ecology-signpost-v1\\compat-corrected.json",
+        "checks": 6,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_ecology_signpost_revision_v1",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 37.69,
+    "log": "logs\\test_ecology_signpost_revision_v1.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid access to property or key 'x' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_ecology_signpost_revision_ui_v1",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 27.63,
+    "log": "logs\\test_ecology_signpost_revision_ui_v1.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid access to property or key 'x' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_ore_ground_density_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 34.91,
+    "log": "logs\\test_ore_ground_density_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "ORE CONTACT DENSITY 220 checks 0 failed { \"before\": { \"stone_outcrop\": 79, \"flint_outcrop\": 46, \"gold_outcrop\": 7, \"silver_outcrop\": 15, \"copper_outcrop\": 23 }, \"after\": { \"stone_outcrop\": 93, \"copper_outcrop\": 32, \"flint_outcrop\": 57, \"gold_outcrop\": 10, \"silver_outcrop\": 16 }, \"chunks\": 96, &\"changed_pixels\": 4538 }"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ore-ground-density-v1\\window.json",
+        "checks": 220,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_equipment_persistence_v04-phase1",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 18.66,
+    "log": "logs\\test_equipment_persistence_v04-phase1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "PERSISTENCE write 1 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\equipment-v04\\process-write.json",
+        "checks": 1,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_equipment_persistence_v04-phase2",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 18.66,
+    "log": "logs\\test_equipment_persistence_v04-phase2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "PERSISTENCE read 6 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\equipment-v04\\process-read.json",
+        "checks": 6,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_crafting_persistence_v1-phase1",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 19.87,
+    "log": "logs\\test_crafting_persistence_v1-phase1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CRAFT RESTART write: 8 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\crafting-v1\\restart-write.json",
+        "checks": 8,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_crafting_persistence_v1-phase2",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 18.86,
+    "log": "logs\\test_crafting_persistence_v1-phase2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CRAFT RESTART read: 9 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\crafting-v1\\restart-read.json",
+        "checks": 9,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_body_persistence_v2-phase1",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 22.47,
+    "log": "logs\\test_body_persistence_v2-phase1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "BODY V2 PERSISTENCE write: 2 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\body-v2\\persistence-write.json",
+        "checks": 2,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_body_persistence_v2-phase2",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 23.48,
+    "log": "logs\\test_body_persistence_v2-phase2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "BODY V2 PERSISTENCE read: 12 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\body-v2\\persistence-read.json",
+        "checks": 12,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_body_persistence_v2-phase3",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 18.66,
+    "log": "logs\\test_body_persistence_v2-phase3.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "BODY V2 PERSISTENCE awake: 6 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\body-v2\\persistence-awake.json",
+        "checks": 6,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_body_persistence_v2-phase4",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 18.26,
+    "log": "logs\\test_body_persistence_v2-phase4.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "BODY V2 PERSISTENCE legacy-read: 5 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\body-v2\\persistence-legacy-read.json",
+        "checks": 5,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_planting_persistence_v1-phase1",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 19.88,
+    "log": "logs\\test_planting_persistence_v1-phase1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "PLANTING PERSISTENCE 2 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\planting-formal-v1\\persistence-write.json",
+        "checks": 2,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_planting_persistence_v1-phase2",
+    "category": "logic",
+    "exit": "script_error_stall",
+    "seconds": 28.6,
+    "log": "logs\\test_planting_persistence_v1-phase2.log",
+    "errors": [
+      "ERROR: four plot states survive process restart",
+      "ERROR: maturity restored",
+      "SCRIPT ERROR: Invalid access to property or key 'plot-2' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 3,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_planting_persistence_v1-phase3",
+    "category": "logic",
+    "exit": 1,
+    "seconds": 13.24,
+    "log": "logs\\test_planting_persistence_v1-phase3.log",
+    "errors": [
+      "ERROR: third process loads harvested snapshot",
+      "ERROR: harvested mature crop remains roots after another restart",
+      "ERROR: one harvest reward restored exactly once",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 4,
+    "summaries": [
+      "PLANTING PERSISTENCE 5 checks; 3 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\planting-formal-v1\\persistence-after-harvest.json",
+        "checks": 5,
+        "failures": [
+          "third process loads harvested snapshot",
+          "harvested mature crop remains roots after another restart",
+          "one harvest reward restored exactly once"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "network-two-clients",
+    "category": "multiplayer",
+    "exit": 0,
+    "seconds": 69.73,
+    "log": "logs\\network-two-clients.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "FULL_GAME_NATIVE_EXIT_CODES [0, 0]"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "network-two-clients-delay-220ms",
+    "category": "multiplayer",
+    "exit": 1,
+    "seconds": 47.09,
+    "log": "logs\\network-two-clients-delay-220ms.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "FULL_GAME_NATIVE_EXIT_CODES [1, 1]"
+    ],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "network-two-clients-delay-550ms",
+    "category": "multiplayer",
+    "exit": 0,
+    "seconds": 68.32,
+    "log": "logs\\network-two-clients-delay-550ms.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "FULL_GAME_NATIVE_EXIT_CODES [0, 0]"
+    ],
+    "reports": [],
+    "status": "pass"
+  }
+]

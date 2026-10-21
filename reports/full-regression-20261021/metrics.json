@@ -1,0 +1,53 @@
+{
+  "baseline": "a77c659b764f0de916b678a8f2920ba649ed6590",
+  "viewport": [
+    1280,
+    720
+  ],
+  "engine": "Godot 4.7.2 stable / OpenGL Compatibility",
+  "adapter": "NVIDIA GeForce RTX 3060",
+  "fps_cap": 60,
+  "world_map_v3_current_1024": {
+    "adapter": "NVIDIA GeForce RTX 3060",
+    "cache_tiles": 26,
+    "cells": 1024,
+    "final_static_mib": 132.946290969849,
+    "local_map_ready_ms": 4064.156,
+    "local_map_tiles": 18,
+    "map_first_frame_ms": 47.223,
+    "map_max_ms": 100.611,
+    "map_p50_ms": 26.165,
+    "map_p95_ms": 69.526,
+    "max_tile_frame_ms": 4.858,
+    "ready_static_mib": 118.706611633301,
+    "startup_ms": 13921.472,
+    "video_mib": 125.501702308655,
+    "viewport": "(1280, 720)",
+    "world_max_ms": 59.823,
+    "world_memory_delta_mib": 87.404052734375,
+    "world_p50_ms": 16.67,
+    "world_p95_ms": 33.631
+  },
+  "map_population_v4_window": {
+    "animals_after_periodic_batch": 15,
+    "cache_tiles": 15,
+    "fish_schools": 56,
+    "generated_tiles": 15,
+    "hidden_warm_ms": 4173.763,
+    "max_hidden_build_frame_ms": 1.652,
+    "operation_max_ms": 33.955,
+    "operation_p95_ms": 25.118,
+    "static_memory_mib": 124.638989448547,
+    "warm_first_open_ms": 21.92
+  },
+  "map_population_v4_movement": {
+    "background_frames": 623,
+    "background_max_ms": 89.831,
+    "background_p95_ms": 17.133,
+    "cache_tiles": 18,
+    "hidden_max_build_ms": 2.613,
+    "new_tiles": 9
+  },
+  "current_1536_measurement": null,
+  "note": "Short samples only, without a performance acceptance threshold. The copied perf-1536.json is a historical RTX 5060 result, excluded from this run."
+}
