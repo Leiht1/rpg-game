@@ -11,7 +11,7 @@ func run() -> void:
 	check(not b.toggle("corner").is_empty() and not row.open and not row.has("hinge_end"),"failed save rolls back open swing and absent legacy hinge field")
 	check(is_equal_approx(b.visuals.corner.gate_angle,PI*.5),"failed save does not move visual or collider hinge")
 	world.persistent_world=false
-	check(b.toggle("corner").is_empty() and row.open and row.hinge_end==1,"retry after failed save selects clear alternate hinge")
+	check(b.toggle("corner").is_empty() and row.open and row.hinge_end==0,"retry after failed save keeps clear original hinge beside connected wall")
 	await create_timer(.3).timeout
 	check(b.toggle("corner").is_empty(),"alternate hinge closes before obstacle test")
 	await create_timer(.3).timeout
@@ -29,4 +29,4 @@ func run() -> void:
 	var failed: Array=checks.filter(func(v): return not v.pass)
 	FileAccess.open("res://reports/camp-door-v3/hinge-transaction-tests.json",FileAccess.WRITE).store_string(JSON.stringify({"checks":checks,"failed":failed.size()},"  "))
 	print("HINGE TRANSACTION: %d checks, %d failed"%[checks.size(),failed.size()])
-	world.persistent_world=false;world.free();await process_frame;quit(0 if failed.is_empty() else 1)
+	world.persistent_world=false;world.free();await frames(6);quit(0 if failed.is_empty() else 1)

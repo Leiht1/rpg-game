@@ -8,6 +8,12 @@ var pending_inputs:Array=[]
 var input_id:=0
 var sleep_cover=preload("res://scripts/sleep_head_cover.gd").new()
 var sleep_symbols: Label
+func _ready()->void:
+	super._ready()
+	# Remote interpolated poses are presentation only. Their local colliders
+	# otherwise push the predicted player without a matching server movement.
+	collision_layer=0
+	collision_mask=0
 func _physics_process(delta:float)->void:
 	var previous:=position
 	if own:

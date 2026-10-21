@@ -128,7 +128,7 @@ func run() -> void:
 	var start: Vector2=heading.get_global_rect().get_center()
 	await motion(start); await button(start,true)
 	await motion(start+Vector2(120,-80),true); await button(start+Vector2(120,-80),false)
-	check(ui.bag.position.distance_to(old+Vector2(120,-80))<1 and not ui.bag_dragging,"bag title drag moves panel and releases")
+	check(ui.bag.position.is_equal_approx(old) and not ui.bag_dragging,"bag title remains fixed during mouse drag")
 	await shot("draggable-bag")
 	# Invalid UI target must cancel rather than discard.
 	await drag_to(8,ui.bag.get_global_rect().position+Vector2(6,130))
@@ -136,6 +136,8 @@ func run() -> void:
 	await drag_to(8,ui.bag_button.get_global_rect().get_center())
 	check(service.inventory.slots[8].count==6 and service.loose.size()==before_drops,"dropping on navigation cancels")
 	await drag_to(8,Vector2(260,520))
+	check(ui.split_panel.visible and service.inventory.slots[8].count==6,"multi-item ground drop waits for quantity confirmation")
+	ui.split_amount.text="6";ui.validate_split();ui.confirm_split();await frames(3)
 	check(service.inventory.slots[8].is_empty() and service.loose.size()==before_drops+1,"native bag drag onto ground discards whole stack")
 	var dropped: Node2D
 	for node in world.stream.drops:
@@ -155,7 +157,10 @@ func run() -> void:
 		for i in 48: await physics_frame
 		check(count_id("wild_berry")==total+6 and not is_instance_valid(dropped),"landed discarded stack can be picked up with E")
 	# Closed-bag hotbar drag also discards, and restores movement after release.
+	var hotbar_count: int=service.inventory.slots[0].count
 	await drag_to(0,Vector2(260,520))
+	check(ui.split_panel.visible and service.inventory.slots[0].count==hotbar_count,"hotbar drop waits for quantity confirmation")
+	ui.split_amount.text=str(hotbar_count);ui.validate_split();ui.confirm_split();await frames(3)
 	check(service.inventory.slots[0].is_empty() and count_id("wood")==0,"hotbar drag onto ground discards whole stack")
 	await shot("drop-in-flight")
 	await frames(35)

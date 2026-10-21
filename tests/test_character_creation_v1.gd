@@ -56,7 +56,7 @@ func run():
 	if c.world==null:finish();return
 	var w=c.world;var s=w.item_service;var p=w.player
 	w.environment_view.simulation.paused=true
-	check(w.map_cells==1024 and w.generator.VERSION==load("res://scripts/world_generator.gd").VERSION,"original full continent generator")
+	check(w.map_cells==1536 and w.generator.VERSION==load("res://scripts/world_generator.gd").VERSION,"original full continent generator")
 	check(w.safe_entry(),"safe actual-land spawn after original builds generation")
 	check(p.character_look==c.look,"selected look transferred before first visible frame")
 	check(s.inventory.slots[8].get("item_id")=="modern_outfit" and s.inventory.equipment.get("outfit",{}).is_empty(),"one outfit in bag, not auto equipped")

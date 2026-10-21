@@ -20,7 +20,7 @@ func capture(name_value: String) -> void:
 func run() -> void:
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(OUT));Engine.max_fps=60
 	var config: Dictionary=preload("res://scripts/harvest_node.gd").configuration()
-	check(config.version=="harvest-resources-2.1.0" and config.resources.broadleaf_clump.hits==1 and config.resources.broadleaf_clump.drops.broad_leaf==4,"explicit version and one-dig/four-leaf definition")
+	check(config.version==Service.HARVEST_VERSION and config.resources.broadleaf_clump.hits==1 and config.resources.broadleaf_clump.drops.broad_leaf==4,"explicit version and one-dig/four-leaf definition")
 	var b:=preload("res://scripts/body_state.gd").new()
 	b.advance(20,8,true,false);check(is_equal_approx(b.stamina,60),"twenty seconds running spends 40 stamina")
 	b.stamina=0;b.exhausted=true;b.advance(20,8,false,false)
@@ -69,7 +69,7 @@ func run() -> void:
 	world.environment_view.simulation.paused=true;world.environment_view.simulation.set_time(10)
 	var s: Node=world.item_service;var p: Node=world.player;var ui: Control=world.item_ui
 	p.automated=true;p.set_physics_process(false)
-	for resolution in [Vector2i(960,540),Vector2i(1280,720),Vector2i(1600,900)]:
+	for resolution in [preload("res://tests/current_test_contract.gd").viewport_size()]:
 		root.size=resolution;root.content_scale_size=resolution;ui.fit_core_ui();await frames(5)
 		check(is_equal_approx(ui.body_ui.hud.get_global_rect().end.y,ui.dock.get_global_rect().end.y),"body HUD bottom aligns with hotbar "+str(resolution))
 		check(not ui.body_ui.hud.get_global_rect().intersects(ui.dock.get_global_rect()),"aligned HUD avoids dock "+str(resolution))

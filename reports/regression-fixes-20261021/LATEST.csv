@@ -1,0 +1,47 @@
+﻿suite,status,exit,summary,evidence
+game-rules-final-repairs,pass,0,Ran 29 tests in 22.982s | OK,evidence\0080
+test_animals_edges_v1,pass,0,"ANIMALS RESTART/EDGES: 33 checks, 0 failed",evidence\0054
+test_animals_v1,pass,0,"ANIMALS V1: 95 checks, 0 failed",evidence\0027
+test_audio_selected_v6,pass,0,AUDIO SELECTED V6: 170 checks; 0 failures,evidence\0049
+test_audio_ui_open_v7,pass,0,UI OPEN V7: 9 checks; 0 failures,evidence\0088
+test_audio_ui_single_v8,pass,0,UI SINGLE V8: 62 checks; 0 failures,evidence\0089
+test_body_v2,pass,0,BODY V2 window: 182 checks; 0 failures,evidence\0083
+test_broadleaf_v1,pass,0,"BROADLEAF window: 119 checks; 0 failures; [{ ""seed"": 271828, ""sample_chunks"": 175, ""clumps_before_existing_harvest_exclusion"": 46 }, { ""seed"": 447349832, ""sample_chunks"": 141, ""clumps_before_existing_harvest_exclusion"": 35 }]",evidence\0099
+test_camp_build_v4,pass,0,"CAMP BUILD V1: 337 checks, 0 failed",evidence\0100
+test_camp_door_hinge_transaction_v3,pass,0,"HINGE TRANSACTION: 10 checks, 0 failed",evidence\0092
+test_camp_effects_v11,pass,0,CAMP EFFECTS V11: 59 checks; 0 failures,evidence\0078
+test_camp_gate_surface_v4,pass,0,,evidence\0010
+test_camp_h_damage_window_v4,pass,0,"H/DAMAGE WINDOW: 36 checks, 0 failed",evidence\0091
+test_campfire_drag_v1,pass,0,CAMPFIRE DRAG: 53 checks; 0 failures,evidence\0048
+test_campfire_flame_v2,pass,0,CAMPFIRE TUNING: 32 checks; 0 failures,evidence\0059
+test_cooking_build_v2,pass,0,CAMPFIRE V1: 90 checks; 0 failures,evidence\0044
+test_cooking_discovery_v1,pass,0,"COOKING DISCOVERY: 117 checks, 0 failed",evidence\0097
+test_cooking_discovery_v1-restart,pass,0,"RESTART: 7 checks, 0 failed",evidence\0061
+test_crafting_v1,pass,0,"CRAFTING V1 window: 210 checks, 0 failures",evidence\0098
+test_ecology_signpost_revision_ui_v1,pass,0,"ECOLOGY SIGNPOST revision-ui-compat-window: 7 checks, 0 failed",evidence\0067
+test_ecology_signpost_revision_v1,pass,0,"ECOLOGY SIGNPOST revision-final-window: 16 checks, 0 failed",evidence\0055
+test_equipment_v04,pass,0,EQUIPMENT_V04 75 checks; 0 failures,evidence\0058
+test_fishing_formal_v1,pass,0,,evidence\0047
+test_fishing_population_v2,pass,0,,evidence\0076
+test_floor_formal_v3,pass,0,"FORMAL FLOOR: 18 checks, 0 failed",evidence\0101
+test_food_v2,pass,0,"FOOD V2 window: 191 checks, 0 failed",evidence\0086
+test_grounding_interactions,pass,0,,evidence\0069
+test_harvest_edges_v05,pass,0,HARVEST_EDGE 17 checks; 0 failures,evidence\0082
+test_harvest_followup_v051,pass,0,HARVEST_FOLLOWUP 119 checks; 0 failures,evidence\0020
+test_harvest_v05,pass,0,HARVEST_V05 205 checks; 0 failures,evidence\0071
+test_industry_refine_v2,pass,0,INDUSTRY REFINE V2: 115 checks; 0 failures,evidence\0029
+test_industry_v1,pass,0,INDUSTRY V1: 248 checks; 0 failures,evidence\0072
+test_industry_v1-restart,pass,0,INDUSTRY V1: 7 checks; 0 failures,evidence\0063
+test_inventory_chest_v1,pass,0,INVENTORY CHEST 66 checks; 0 failures,evidence\0043
+test_item_actions_followup_v051,pass,0,ITEM_ACTIONS 120 checks / 0 failures,evidence\0033
+test_movement_regression,pass,0,,evidence\0096
+test_ore_distribution_v06,pass,0,"ORE_DISTRIBUTION 162 checks; 0 failures; counts={ ""copper_outcrop"": 7, ""flint_outcrop"": 14, ""stone_outcrop"": 37, ""gold_outcrop"": 4, ""silver_outcrop"": 4 }",evidence\0074
+test_ore_runtime_v06,pass,0,ORE_RUNTIME 50 checks; 0 failures,evidence\0042
+test_player,pass,0,PLAYER_CURRENT 539 checks; 0 failures,evidence\0057
+test_resources_v031,pass,0,"RESOURCES_TEST 4252 checks / 0 failures; [{""by_ecology"":{""forest"":{""branch"":11,""broad_leaf"":11,""brown_mushroom"":8,""flint"":1,""wild_berry"":2},""meadow"":{""branch"":12,""broad_leaf"":11,""plant_fiber"":37,""wild_berry"":5,""wild_carrot"":25,""wildflower"":25},""mountain"":{""branch"":6,""flint"":2,""plant_fiber"":18,""wild_carrot"":11,""wildflower"":1},""rocky"":{""flint"":16,""plant_fiber"":1,""wild_carrot"":1}},""chunks"":51,""empty_chunks"":3,""generation_max_ms"":29.601,""navigation_ms"":1696.308,""resources"":204,""seed"":271828,""spawn_visible"":2},{""by_ecology"":{""forest"":{""branch"":28,""broad_leaf"":17,""brown_mushroom"":21,""flint"":1,""wild_apple"":1,""wild_berry"":6},""meadow"":{""branch"":7,""broad_leaf"":10,""flint"":5,""plant_fiber"":19,""wild_berry"":4,""wild_carrot"":20,""wildflower"":26},""mountain"":{""branch"":9,""flint"":3,""plant_fiber"":17,""wild_carrot"":14},""rocky"":{""branch"":1,""flint"":6,""plant_fiber"":1},""shore"":{""plant_fiber"":1}},""chunks"":45,""empty_chunks"":3,""generation_max_ms"":34.086,""navigation_ms"":1459.754,""resources"":217,""seed"":447349832,""spawn_visible"":0},{""by_ecology"":{""forest"":{""branch"":30,""broad_leaf"":11,""brown_mushroom"":21,""flint"":2,""wild_apple"":1,""wild_berry"":9,""wild_carrot"":1},""meadow"":{""branch"":13,""broad_leaf"":10,""flint"":8,""plant_fiber"":19,""wild_berry"":10,""wild_carrot"":25,""wildflower"":19},""mountain"":{""branch"":12,""brown_mushroom"":1,""flint"":4,""plant_fiber"":23,""wild_carrot"":20,""wildflower"":1},""rocky"":{""branch"":2,""flint"":11,""plant_fiber"":1,""wild_carrot"":1},""shore"":{""plant_fiber"":1}},""chunks"":54,""empty_chunks"":2,""generation_max_ms"":26.867,""navigation_ms"":866.671,""resources"":256,""seed"":1671081329,""spawn_visible"":2}]",evidence\0070
+test_runtime_exit,pass,0,RUNTIME_EXIT 2 checks; 0 failures,evidence\0025
+test_scissors_exploration_v1,pass,0,"SCISSORS EXPLORATION: 34 checks, 0 failed",evidence\0052
+test_shear_sign_map_v1,pass,0,"SHEAR SIGN MAP: 33 checks, 0 failed",evidence\0053
+test_sleep_fit_v10,pass,0,SLEEP FIT V10 185 checks; 0 failures,evidence\0093
+test_world_map_v3_distribution,pass,0,DISTRIBUTION 36 checks 0 failures,evidence\0084
+test_world_map_v3_logic,pass,0,MAP V3 LOGIC 35 checks 0 failed,evidence\0075

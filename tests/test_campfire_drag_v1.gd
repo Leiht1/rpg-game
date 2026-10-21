@@ -32,8 +32,11 @@ func drag(index: int, target: Vector2, bag_drag: bool=false) -> void:
 	check(root.gui_is_dragging(),"native drag begins from slot "+str(index))
 	if bag_drag:
 		await motion(Vector2(6,300),true)
-		check(not ui.bag.visible and ui.bag_hidden_for_world_drag,"bag temporarily folds after dragging out to reveal fire")
+		check(ui.bag.visible,"bag remains visible during world drag")
 	await motion(target,true);await button(target,false)
+	if ui.split_panel.visible:
+		check(int(ui.split_amount.text)==1,"multi-item fuel starts with quantity one")
+		ui.split_amount.text=str(service.inventory.slots[index].count);ui.validate_split();ui.confirm_split();await frames()
 func find_slot(item: String) -> int:
 	for i in 40:
 		if service.inventory.slots[i].get("item_id")==item:return i
@@ -48,7 +51,7 @@ func shot(name_value: String) -> void:
 func run() -> void:
 	capture="--capture" in OS.get_cmdline_user_args();Engine.max_fps=60
 	Engine.set_meta("integration_seed",271828)
-	world=load("res://tests/world_v06_formal_fixture.gd").new();root.add_child(world)
+	world=load("res://tests/world_clean_camp_fixture.gd").new();root.add_child(world)
 	while not world.started:await process_frame
 	service=world.item_service;ui=world.item_ui;camps=service.camps
 	service.notice.connect(func(message):notices.append(message))
@@ -82,13 +85,13 @@ func run() -> void:
 	check(world.player.action.is_empty() and world.player.camp_throw.projectile==null,"one-shot recovery cleans temporary item sprite")
 	var node: Node2D=camps.visuals[id]
 	check(node.fuel_bar.value==360 and node.fuel_bar.visible and node.fuel_bar.position.y>0,"remaining-time bar fixed beneath fire")
-	check(is_equal_approx(node.fuel_bar.scale.y,1.0/3.0) and node.fuel_bar.scale.x==1.0,"fuel bar height is one third with width unchanged")
+	check(is_equal_approx(node.fuel_bar.scale.y,1.0/6.0) and node.fuel_bar.scale.x==1.0,"current compact fuel bar preserves width")
 	camps.advance(360);await frames()
 	check(not camps.states[id].lit and not node.flame.visible and node.fuel_bar.value==0,"timeout extinguishes flame and empties persistent bar")
 	service.inventory.add("branch",4);index=find_slot("branch")
 	ui.toggle_bag();await frames()
 	await drag(index,target,true)
-	check(ui.bag.visible and not ui.bag_hidden_for_world_drag,"bag restored after world drop")
+	check(ui.bag.visible,"bag remains visible after world drop")
 	check(world.player.action=="throw","bag drag routes to same throwing action")
 	await step(.71);await step(.3)
 	check(camps.states[id].lit and camps.states[id].fuel==120 and service.inventory.count_item("branch")==0,"bag fuel reignites expired fire")
@@ -100,7 +103,7 @@ func run() -> void:
 	check(world.player.action=="throw" and world.player.camp_throw.hand=="left","main-hand equipment selects opposite left hand")
 	await step(.30);await shot("throw-left-equipped")
 	var tool: Sprite2D=world.player.character.get_node("Visual/Pelvis/ArmR/HeldTool")
-	check(tool.visible and tool.get_meta("item_id")=="stone_pickaxe","equipped tool stays visible in original main hand")
+	check((tool.visible or world.player.held_tool.rear_tool.visible) and tool.get_meta("item_id")=="stone_pickaxe","equipped tool stays visible through common directional layer")
 	await step(.41);await step(.3)
 	check(camps.states[id].fuel==140 and service.inventory.equipment.main_hand.instance_id==equipped,"left throw refuels without replacing or consuming equipment")
 	# Noncombustibles over the camp must never fall through to ordinary discard.

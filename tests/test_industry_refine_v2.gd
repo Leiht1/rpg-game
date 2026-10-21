@@ -61,7 +61,7 @@ func run() -> void:
 	check(act("furnace","ignite").is_empty(),"manual ignition accepted")
 	s.industry.advance(24,9.6)
 	check(machine("furnace").completed.size()==1 and machine("furnace").jobs[0].is_empty(),"completed ingot moves out and frees processing slot")
-	check(s.builds.visuals.furnace.get_node("IndustryEffects").puffs.size()==3,"one actual completion emits small chimney smoke")
+	check(s.builds.visuals.furnace.get_node("IndustryEffects").puffs.size()==4,"one actual completion emits four bounded chimney puffs")
 	s.industry.advance(5,2);check(machine("furnace").fuel==91,"ignited empty furnace continues burning")
 	act("furnace","extinguish");s.industry.advance(5,2);check(machine("furnace").fuel==91,"extinguish stops fuel use")
 	machine("furnace").fuel=2000;var inventory: Array=s.inventory.slots.duplicate(true)
@@ -173,7 +173,10 @@ func craft_checks() -> void:
 	s.craft_station_id="";check(not s.start_craft("metal_copper_plate",1).is_empty(),"metal crafting rechecks real station")
 	w.item_ui.close_panels()
 	var image: Texture2D=load("res://assets/industry/v1/metal_workbench.png")
-	check(is_equal_approx(s.builds.visuals.metal.industry_rect(image).size.x,80),"metal painted width equals ordinary workbench 80 units")
+	var profile: Dictionary=s.builds.volume_profile("metal_workbench")
+	var painted: Vector2=Vector2(image.get_image().get_used_rect().size)
+	var expected_width: float=painted.x*minf(profile.width/painted.x,profile.max_height/painted.y)
+	check(is_equal_approx(s.builds.visuals.metal.industry_rect(image).size.x,expected_width),"metal painted width follows approved current volume profile")
 	check(s.industry.rules.copper_lamp_radius==300,"copper standing lamp radius increased from 210 to 300")
 	w.environment_view._process(0)
 	var radii: PackedFloat32Array=w.environment_view.material_effect.get_shader_parameter("camp_radii")
@@ -237,9 +240,10 @@ func effect_checks() -> void:
 				if different(on.get_pixel(x,y),changed.get_pixel(x,y)):animated+=1
 		check(lit>0 and animated>0,"GPU actual ignition and motion "+id)
 		if id=="furnace":
-			fx.on_finished(id);fx.update_effect(.5);await frames();await RenderingServer.frame_post_draw;var smoke: Image=view.get_texture().get_image();var pixels := 0
-			for y in range(80,140):
-				for x in range(140,180):
+			fx.on_finished(id);fx.update_effect(.5);fx.phase=.71;fx.update_effect(0);await frames();await RenderingServer.frame_post_draw;var smoke: Image=view.get_texture().get_image();var pixels := 0
+			var chimney: Vector2=node.position+fx.chimney*node.scale
+			for y in range(maxi(0,int(chimney.y)-45),mini(320,int(chimney.y)+15)):
+				for x in range(maxi(0,int(chimney.x)-20),mini(320,int(chimney.x)+20)):
 					if different(changed.get_pixel(x,y),smoke.get_pixel(x,y)):pixels+=1
 			check(pixels>0,"GPU small smoke appears at chimney")
 			smoke.save_png(OUT+"furnace-burning-smoke.png")

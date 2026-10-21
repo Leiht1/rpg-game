@@ -70,7 +70,7 @@ func reload_chunk(c: Vector2i) -> void:
 
 func isolated() -> void:
 	var db := ItemDatabase.new()
-	check(db.errors.is_empty() and db.ids().size()==18,"unique database: existing 15 plus bone/relic/pouch")
+	check(db.errors.is_empty() and db.ids().size()==preload("res://tests/current_test_contract.gd").item_count(),"unique database: existing 15 plus bone/relic/pouch")
 	for id in ["stone","flint","wild_carrot","bone_fragment","relic_fragment","supply_pouch"]:
 		check(ResourceLoader.exists(db.item(id).icon) and ResourceLoader.exists(db.item(id).world_visual),"six real inventory/drop visuals "+id)
 	var inv := ItemInventory.new(db)
@@ -127,6 +127,7 @@ func run() -> void:
 	var serial := 0
 	for kind in Config.configuration().resources:
 		serial+=1
+		service.body.stamina=100;service.body.exhausted=false;service.body.energy=100
 		var id: String="test:harvest:"+str(kind)
 		var row := {"kind":kind,"x":base.x+30,"y":base.y+12}
 		service.ore_nodes[id]=row
@@ -135,6 +136,18 @@ func run() -> void:
 		world.player.reset_physics_interpolation();world.player.camera.reset_smoothing()
 		await frames(5)
 		var action: String=node.definition.action
+		if int(node.definition.hits)==1:
+			var single_expected: Dictionary=node.definition.drops.duplicate(true)
+			for reward in single_expected:single_expected[reward]=int(single_expected[reward])
+			equip("simple_shovel");await point(node)
+			world.player.set_physics_process(true);await key_e();await create_timer(1.3).timeout;world.player.set_physics_process(false)
+			check(service.consumed.has(id) and int(service.resource_hits.get(id,0))==1,"single-hit resource commits exactly once "+kind)
+			var single_rewards := {}
+			for loot in service.loose.values():
+				if str(loot.id).begins_with(id+":loot:"):single_rewards[loot.item_id]=int(single_rewards.get(loot.item_id,0))+int(loot.count)
+			check(single_rewards==single_expected,"single-hit resource yields one exact batch "+kind)
+			world.player.cancel_action()
+			continue
 		for wrong in ["stone_axe","simple_shovel" if action=="mine" else "stone_pickaxe"]:
 			equip(wrong)
 			check(not Interaction.execute(world.stream,world.player,node) and not service.resource_hits.has(id),"wrong capability rejects "+kind+" "+wrong)
@@ -154,7 +167,7 @@ func run() -> void:
 		check(int(service.resource_hits.get(id,0))==1,"repeated E commits once "+kind)
 		check(world.player.position.distance_to(before)<.1,"action locks movement and facing "+kind)
 		check(node.position==Vector2(row.x,row.y) and node.rotation==0 and node.scale==Vector2.ONE,"resource remains anchored "+kind)
-		check(node.sprite.texture!=node.textures[0],"damage/reveal stage advances "+kind)
+		check(float(node.hit_material.get_shader_parameter("damage_amount"))==1.0,"damage/reveal shader advances without swapping the anchored body "+kind)
 		await shot(kind+"-hit")
 		await create_timer(.60).timeout
 		# Real unload/reinstall of a partial target, using the same chunk machinery.
@@ -181,10 +194,14 @@ func run() -> void:
 			await point(node);world.player.set_physics_process(true);await key_e();await create_timer(1.30).timeout;world.player.set_physics_process(false)
 		check(service.consumed.has(id),"resource finishes after configured hit count "+kind)
 		var expected: Dictionary=Config.configuration().resources[kind].drops
+		if kind=="stone_outcrop":
+			expected=expected.duplicate()
+			expected.stone=12+int(abs(id.hash())%5)
+			if abs((id+":flint").hash())%10<3:expected.flint=1
 		for reward in expected: expected[reward]=int(expected[reward])
 		var found := {}
 		for loot in service.loose.values():
-			if str(loot.id).begins_with(id+":loot:"):found[loot.item_id]=loot.count
+			if str(loot.id).begins_with(id+":loot:"):found[loot.item_id]=int(found.get(loot.item_id,0))+int(loot.count)
 		check(found==expected,"exactly one configured reward batch "+kind)
 		# Completed target cannot return after a second real chunk cycle.
 		world.stream.unload_chunk(c);await frames(3);reload_chunk(c);await frames(3)

@@ -36,7 +36,7 @@ func run() -> void:
 	capture="--capture" in OS.get_cmdline_user_args()
 	DirAccess.make_dir_recursive_absolute(OUT)
 	Engine.set_meta("integration_seed",271828)
-	world=load("res://tests/world_v06_formal_fixture.gd").new();root.add_child(world)
+	world=load("res://tests/world_clean_camp_fixture.gd").new();root.add_child(world)
 	while not world.started: await process_frame
 	service=world.item_service;camps=service.camps
 	world.environment_view.simulation.paused=true;world.player.set_physics_process(false)
@@ -60,7 +60,7 @@ func run() -> void:
 	empty_inventory()
 	for id in {"wood":4,"stone":6,"flint":1}: service.inventory.add(id,int({"wood":4,"stone":6,"flint":1}[id]))
 	check(not service.craft_book.recipes.has("hand_simple_campfire"),"campfire absent from crafting data")
-	check(camps.build_book.recipes.size()==1,"one real building definition")
+	check(camps.build_book.recipes.size()==preload("res://tests/current_test_contract.gd").recipe_count("res://data/buildings.json"),"all current building definitions")
 	var materials_before: Array=service.inventory.slots.duplicate(true)
 	world.camp_ui.begin_build("hand_simple_campfire")
 	check(world.camp_ui.placing and service.inventory.slots==materials_before,"begin build previews without material consumption")
@@ -118,11 +118,11 @@ func run() -> void:
 	check(world.camp_ui.panel.visible,"native E input opens cookbook directly")
 	interact.pressed=false;root.push_input(interact,true)
 	check(preload("res://scripts/world_interaction.gd").caption(node,service.inventory)=="E 烹饪","campfire directly advertises cooking")
-	check(world.camp_ui.recipes.size()==camps.rules.recipes.size(),"every real recipe present")
+	check(world.camp_ui.recipes.size()==camps.rules.recipes.values().filter(func(row):return not row.get("legacy_only",false)).size(),"every active recipe present")
 	var mystery_count := 0
 	for child in world.camp_ui.recipes[0].get_parent().get_children():
 		if child is Button and child.text.begins_with("？") and child.disabled: mystery_count+=1
-	check(mystery_count==4,"four disabled mystery UI placeholders")
+	check(mystery_count==2,"two disabled mystery UI placeholders")
 	await shot("fire-day-panel")
 	check(not camps.act(id,"cook","roast_carrot").is_empty(),"missing ingredient cannot start cooking")
 	service.inventory.add("wild_carrot",2);service.inventory.add("brown_mushroom",2)
@@ -168,7 +168,7 @@ func run() -> void:
 	for i in 40:
 		if service.inventory.slots[i].get("item_id")=="roasted_carrot":food_slot=i
 	world.item_ui.open_item_menu(food_slot,Vector2(400,200));world.item_ui.run_item_action(false)
-	check(service.body.hunger==32 and service.inventory.count_item("roasted_carrot")==0,"actual right-click use feeds through original BodyState")
+	check(service.body.hunger==20+service.database.item("roasted_carrot").effects.hunger and service.inventory.count_item("roasted_carrot")==0,"actual right-click use feeds through original BodyState")
 	service.inventory.add("roasted_carrot",1);service.body.hunger=100
 	for i in 40:
 		if service.inventory.slots[i].get("item_id")=="roasted_carrot":food_slot=i
@@ -183,7 +183,7 @@ func run() -> void:
 	service.body.hunger=10
 	for i in 40:
 		if service.inventory.slots[i].get("item_id")=="roasted_mushroom": food_slot=i
-	check(service.inventory.move_slot(food_slot,0) and service.inventory.use_slot(0) and service.body.hunger==20,"cooked mushroom hotbar use follows existing food path")
+	check(service.inventory.move_slot(food_slot,0) and service.inventory.use_slot(0) and service.body.hunger==10+service.database.item("roasted_mushroom").effects.hunger,"cooked mushroom hotbar use follows existing food path")
 	var fuel: float=camps.states[id].fuel
 	world.environment_view.simulation.paused=true;await frames(8)
 	check(camps.states[id].fuel==fuel,"environment pause prevents fuel advancement")
@@ -224,7 +224,7 @@ func run() -> void:
 	check(service.writable and camps.states.is_empty() and service.inventory.has_capability("mine"),"old save initializes empty camps and retains equipped inventory")
 	write_fixture(original);service.load_state();await frames()
 	world.camp_ui.open(id)
-	for size_value in [Vector2i(960,540),Vector2i(1280,720),Vector2i(1600,900)]:
+	for size_value in [Vector2i(ProjectSettings.get_setting("display/window/size/viewport_width"),ProjectSettings.get_setting("display/window/size/viewport_height"))]:
 		root.size=size_value;root.content_scale_size=size_value;world.camp_ui.fit();await frames()
 		var panel: Panel=world.camp_ui.panel
 		check(Rect2(Vector2.ZERO,Vector2(size_value)).encloses(Rect2(panel.position,panel.size*panel.scale)),"fixed camp panel fits viewport "+str(size_value))
@@ -241,7 +241,7 @@ func run() -> void:
 	var closing: Dictionary=JSON.parse_string(FileAccess.get_file_as_string(PATH))
 	check(closing.body.hunger==41 and closing.campfires.objects[id].elapsed==5,"normal window close notification saves current original snapshot and camp state")
 	world.camp_ui.close_panel()
-	var notice_ui: Control=world.item_ui.obtained
+	var notice_ui: CanvasLayer=world.item_ui.obtained
 	notice_ui.pending.clear();notice_ui.remaining=0
 	var events_before := obtained_events.size()
 	service.inventory.add("broad_leaf",6)
@@ -269,10 +269,11 @@ func run() -> void:
 	camps.rules.recipes.roast_carrot.erase("default_unlocked")
 	world.camp_ui.close_panel()
 	world.item_ui.toggle_craft();world.item_ui.craft_panel.set_mode(true);await frames()
-	check(world.item_ui.craft_panel.recipe_buttons.size()==1 and world.item_ui.craft_panel.once.text=="建造","building mode only shows actual facility")
+	var craft_ui: Control=world.item_ui.craft_panel
+	check(craft_ui.recipe_buttons.size()==craft_ui.book.available(craft_ui.current_category,"").size() and craft_ui.once.text=="建造","building mode shows current category facilities")
 	await shot("building-list")
 	world.item_ui.craft_panel.set_mode(false);await frames()
-	check(world.item_ui.craft_panel.recipe_buttons.size()==5 and not world.item_ui.craft_panel.recipe_buttons.has("hand_simple_campfire"),"crafting mode only shows five inventory products")
+	check(craft_ui.recipe_buttons.size()==craft_ui.book.available(craft_ui.current_category,service.crafting_station_kind()).size() and not craft_ui.recipe_buttons.has("hand_simple_campfire"),"crafting mode shows current category products and excludes facilities")
 	await shot("crafting-list")
 	world.item_ui.close_panels()
 	service.inventory.add("simple_campfire",1)

@@ -29,6 +29,10 @@ func run() -> void:
 		await create_timer(.05).timeout
 	verify(world.started,"original world loaded")
 	verify(world.actors.size()==1,"second real player visible")
+	verify(world.actors.values().all(func(actor):return actor.collision_layer==0 and actor.collision_mask==0),"remote interpolated players do not push local prediction")
+	var idle_at: Vector2=world.player.position
+	await create_timer(.35).timeout
+	verify(world.player.position.distance_to(idle_at)<.1,"overlapping players stay still without movement input")
 	verify(world.item_service.inventory.slots[8].item_id=="branch","server inventory restored")
 	world.item_service.start_craft("hand_stone_axe",1)
 	for i in 500:
@@ -109,7 +113,7 @@ func run() -> void:
 	await create_timer(1.0).timeout
 	print("FULL_GAME_STOP drift=",world.player.position.distance_to(stopped)," pending=",world.player.pending_inputs.size()," correction=",world.player.correction)
 	verify(world.player.position.distance_to(stopped)<3,"full game stable stop")
-	var done:=FileAccess.open(folder.path_join("done"+str(fixture.index)),FileAccess.WRITE);done.store_string("done");done.close()
+	var done:=FileAccess.open(folder.path_join("done"+str(int(fixture.index))),FileAccess.WRITE);done.store_string("done");done.close()
 	for i in 400:
 		if FileAccess.file_exists(folder.path_join("done"+str(1-int(fixture.index)))):break
 		await create_timer(.05).timeout

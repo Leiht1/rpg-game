@@ -34,7 +34,9 @@ func finish(mode:String)->void:
  var failed=checks.filter(func(c):return not c.pass)
  save_json(mode+".json",{"engine":Engine.get_version_info().string,"viewport":str(root.size),"count":checks.size(),"failed":failed.size(),"checks":checks,"statistics":stats})
  print("ECOLOGY SIGNPOST ",mode,": ",checks.size()," checks, ",failed.size()," failed")
- w.persistent_world=false;w.free();await process_frame;quit(0 if failed.is_empty() else 1)
+ w.persistent_world=false;w.free();await frames(6)
+ if "--diagnose-exit" in OS.get_cmdline_user_args():Node.print_orphan_nodes()
+ quit(0 if failed.is_empty() else 1)
 func run()->void:
  Engine.set_meta("integration_seed",271828)
  w=load("res://tests/world_v06_formal_fixture.gd").new();root.add_child(w)

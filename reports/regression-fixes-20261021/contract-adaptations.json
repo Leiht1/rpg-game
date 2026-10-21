@@ -1,0 +1,637 @@
+[
+  {
+    "file": "tests/test_crafting_v1.gd",
+    "before": "book.recipes.size()==5",
+    "after": "book.recipes.size()==preload(\"res://tests/current_test_contract.gd\").recipe_count()"
+  },
+  {
+    "file": "tests/test_ore_runtime_v06.gd",
+    "before": "service.database.ids().size()==21",
+    "after": "service.database.ids().size()==preload(\"res://tests/current_test_contract.gd\").item_count()"
+  },
+  {
+    "file": "tests/test_ore_distribution_v06.gd",
+    "before": "Distribution.dirt_region(gen,Vector2(row.x,row.y)),\"metal restricted to stable mud interior ",
+    "after": "Distribution.rocky_region(gen,Vector2(row.x,row.y)),\"metal restricted to stable rocky interior "
+  },
+  {
+    "file": "tests/test_broadleaf_v1.gd",
+    "before": "config.version==\"harvest-resources-2.1.0\"",
+    "after": "config.version==Service.HARVEST_VERSION"
+  },
+  {
+    "file": "tests/test_chest_ui_v2.gd",
+    "before": "res://tests/world_v06_formal_fixture.gd",
+    "after": "res://tests/world_clean_camp_fixture.gd"
+  },
+  {
+    "file": "tests/test_seed_selector_v2.gd",
+    "before": "res://tests/world_v06_formal_fixture.gd",
+    "after": "res://tests/world_clean_camp_fixture.gd"
+  },
+  {
+    "file": "tests/test_planting_v1.gd",
+    "before": "res://tests/world_v06_formal_fixture.gd",
+    "after": "res://tests/world_clean_camp_fixture.gd"
+  },
+  {
+    "file": "tests/test_planting_persistence_v1.gd",
+    "before": "res://tests/world_v06_formal_fixture.gd",
+    "after": "res://tests/world_clean_camp_fixture.gd"
+  },
+  {
+    "file": "tests/test_inventory_chest_v1.gd",
+    "before": "res://tests/world_v06_formal_fixture.gd",
+    "after": "res://tests/world_clean_camp_fixture.gd"
+  },
+  {
+    "file": "tests/test_planting_v1.gd",
+    "before": "growth_minutes=360.0",
+    "after": "growth_minutes=float(s.planting.rules.crops.carrot.minutes)"
+  },
+  {
+    "file": "tests/test_planting_persistence_v1.gd",
+    "before": "360.0 if index==2",
+    "after": "float(s.planting.rules.crops.carrot.minutes) if index==2"
+  },
+  {
+    "file": "tests/test_character_creation_v1.gd",
+    "before": "w.map_cells==1024",
+    "after": "w.map_cells==1536"
+  },
+  {
+    "file": "tests/test_character_resume_v1.gd",
+    "before": "var movement_origin=p.position",
+    "after": "while not w.stream.viewport_ready(p.position,Vector2(640,360)):await process_frame\n\tvar movement_origin=p.position"
+  },
+  {
+    "file": "tests/test_equipment_v04.gd",
+    "before": "ui.cells[8].global_position.x<ui.cells[40].global_position.x,\"bag left and equipment right\"",
+    "after": "ui.cells[8].global_position.x>ui.cells[40].global_position.x,\"bag right and equipment left\""
+  },
+  {
+    "file": "tests/test_inventory_chest_v1.gd",
+    "before": "storage.cells.size()==9",
+    "after": "storage.cells.filter(func(cell):return cell.visible).size()==9"
+  },
+  {
+    "file": "tests/test_cooking_build_v2.gd",
+    "before": "var notice_ui: Control=world.item_ui.obtained",
+    "after": "var notice_ui: CanvasLayer=world.item_ui.obtained"
+  },
+  {
+    "file": "tests/test_camp_gate_surface_v4.gd",
+    "before": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()",
+    "after": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()\n\t\t\t\t\t\tmanager.service=render_service"
+  },
+  {
+    "file": "tests/test_camp_gate_surface_v4.gd",
+    "before": "func run():\n",
+    "after": "func run():\n\tvar render_service=preload(\"res://tests/render_service_fixture.gd\").new();root.add_child(render_service)\n"
+  },
+  {
+    "file": "tests/test_floor_formal_v3.gd",
+    "before": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()",
+    "after": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()\n\t\t\tmanager.service=render_service"
+  },
+  {
+    "file": "tests/test_floor_formal_v3.gd",
+    "before": "func run():\n",
+    "after": "func run():\n\tvar render_service=preload(\"res://tests/render_service_fixture.gd\").new();root.add_child(render_service)\n"
+  },
+  {
+    "file": "tests/test_harvest_v05.gd",
+    "before": "db.ids().size()==18",
+    "after": "db.ids().size()==preload(\"res://tests/current_test_contract.gd\").item_count()"
+  },
+  {
+    "file": "tests/test_food_v2.gd",
+    "before": "w.camp_ui.recipes.size()==9",
+    "after": "w.camp_ui.recipes.size()==JSON.parse_string(FileAccess.get_file_as_string(\"res://data/cooking.json\")).recipes.size()"
+  },
+  {
+    "file": "tests/test_ore_runtime_v06.gd",
+    "before": "rewards[row.item_id]=int(row.count)",
+    "after": "rewards[row.item_id]=int(rewards.get(row.item_id,0))+int(row.count)"
+  },
+  {
+    "file": "tests/test_ore_runtime_v06.gd",
+    "before": "var kind: String=ids[index]",
+    "after": "var kind: String=ids[index]\n\t\tservice.body.stamina=100;service.body.exhausted=false;service.body.energy=100"
+  },
+  {
+    "file": "tests/test_harvest_v05.gd",
+    "before": "serial+=1",
+    "after": "serial+=1\n\t\tservice.body.stamina=100;service.body.exhausted=false;service.body.energy=100"
+  },
+  {
+    "file": "tests/test_harvest_v05.gd",
+    "before": "check(node.sprite.texture!=node.textures[0],\"damage/reveal stage advances \"+kind)",
+    "after": "check(float(node.hit_material.get_shader_parameter(\"damage_amount\"))==1.0,\"damage/reveal shader advances without swapping the anchored body \"+kind)"
+  },
+  {
+    "file": "tests/test_harvest_v05.gd",
+    "before": "found[loot.item_id]=loot.count",
+    "after": "found[loot.item_id]=int(found.get(loot.item_id,0))+int(loot.count)"
+  },
+  {
+    "file": "tests/test_harvest_followup_v051.gd",
+    "before": "await create_timer(1.8).timeout;await key(KEY_E,false)",
+    "after": "await create_timer((int(node.definition.hits)-2)*1.12+.2).timeout;await key(KEY_E,false)"
+  },
+  {
+    "file": "tests/test_harvest_edges_v05.gd",
+    "before": "world.stream.unload_chunk(chunk);await frames()",
+    "after": "world.stream.unload_chunk(chunk);await frames()\n\tvar packet: Dictionary=world.generator.build_chunk(chunk);packet[\"ground_stamps\"]=[];world.stream.install_chunk(packet)"
+  },
+  {
+    "file": "tests/test_movement_regression.gd",
+    "before": "w.player.facing=\"left\";w.player.update_animation()",
+    "after": "w.item_service.inventory.equipment.main_hand=w.item_service.inventory.instance(\"stone_axe\");w.player.set_equipment(w.item_service.inventory)\n\tw.player.facing=\"left\";w.player.update_animation()"
+  },
+  {
+    "file": "tests/test_grounding_interactions.gd",
+    "before": "w.player.facing=\"left\";w.player.update_animation()",
+    "after": "w.item_service.inventory.equipment.main_hand=w.item_service.inventory.instance(\"stone_axe\");w.player.set_equipment(w.item_service.inventory)\n\tw.player.facing=\"left\";w.player.update_animation()"
+  },
+  {
+    "file": "tests/test_world_map_v3_logic.gd",
+    "before": "pop.max_schools==28 and pop.spots.size()<=28",
+    "after": "pop.max_schools==56 and pop.spots.size()<=56"
+  },
+  {
+    "file": "tests/test_world_map_v3_distribution.gd",
+    "before": "(28 if cells>1024 else 20)",
+    "after": "(56 if cells>1024 else 40)"
+  },
+  {
+    "file": "tests/test_fishing_population_v2.gd",
+    "before": "pop.spots.size()<=20",
+    "after": "pop.spots.size()<=pop.max_schools"
+  },
+  {
+    "file": "tests/test_fishing_population_v2.gd",
+    "before": "value<=3",
+    "after": "value<=pop.MAX_PER_LAKE"
+  },
+  {
+    "file": "tests/test_audio_ui_open_v7.gd",
+    "before": "fx.configuration.sfx_ui_close.files.size()==2",
+    "after": "fx.configuration.sfx_ui_close.files.size()==1"
+  },
+  {
+    "file": "tests/test_audio_ui_single_v8.gd",
+    "before": "fx.configuration.sfx_ui_close.files.size()==2",
+    "after": "fx.configuration.sfx_ui_close.files.size()==1"
+  },
+  {
+    "file": "tests/test_audio_ui_open_v7.gd",
+    "before": "w.item_ui.toggle_bag()\n\tcheck",
+    "after": "w.item_ui.toggle_bag();await process_frame;await process_frame\n\tcheck"
+  },
+  {
+    "file": "tests/test_audio_ui_open_v7.gd",
+    "before": "w.map_view.show()\n\tcheck",
+    "after": "w.map_view.show();await process_frame;await process_frame\n\tcheck"
+  },
+  {
+    "file": "tests/test_character_resume_v1.gd",
+    "before": "var movement_origin=p.position",
+    "after": "while not w.stream.viewport_ready(p.position,Vector2(640,360)):await process_frame\n\tvar movement_origin=p.position"
+  },
+  {
+    "file": "tests/test_camp_gate_surface_v4.gd",
+    "before": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()",
+    "after": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()\n\t\t\t\t\t\tmanager.service=render_service"
+  },
+  {
+    "file": "tests/test_camp_gate_surface_v4.gd",
+    "before": "func run():\n",
+    "after": "func run():\n\tvar render_service=preload(\"res://tests/render_service_fixture.gd\").new();root.add_child(render_service)\n"
+  },
+  {
+    "file": "tests/test_floor_formal_v3.gd",
+    "before": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()",
+    "after": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()\n\t\t\tmanager.service=render_service"
+  },
+  {
+    "file": "tests/test_floor_formal_v3.gd",
+    "before": "func run():\n",
+    "after": "func run():\n\tvar render_service=preload(\"res://tests/render_service_fixture.gd\").new();root.add_child(render_service)\n"
+  },
+  {
+    "file": "tests/test_food_v2.gd",
+    "before": "JSON.parse_string(FileAccess.get_file_as_string(\"res://data/cooking.json\")).recipes.size()",
+    "after": "w.item_service.camps.rules.recipes.values().filter(func(row):return not row.get(\"legacy_only\",false)).size()"
+  },
+  {
+    "file": "tests/test_ore_runtime_v06.gd",
+    "before": "var kind: String=ids[index]",
+    "after": "var kind: String=ids[index]\n\t\tservice.body.stamina=100;service.body.exhausted=false;service.body.energy=100"
+  },
+  {
+    "file": "tests/test_harvest_v05.gd",
+    "before": "serial+=1",
+    "after": "serial+=1\n\t\tservice.body.stamina=100;service.body.exhausted=false;service.body.energy=100"
+  },
+  {
+    "file": "tests/test_harvest_edges_v05.gd",
+    "before": "world.stream.unload_chunk(chunk);await frames()",
+    "after": "world.stream.unload_chunk(chunk);await frames()\n\tvar packet: Dictionary=world.generator.build_chunk(chunk);packet[\"ground_stamps\"]=[];world.stream.install_chunk(packet)"
+  },
+  {
+    "file": "tests/test_movement_regression.gd",
+    "before": "w.player.facing=\"left\";w.player.update_animation()",
+    "after": "w.item_service.inventory.equipment.main_hand=w.item_service.inventory.instance(\"stone_axe\");w.player.set_equipment(w.item_service.inventory)\n\tw.player.facing=\"left\";w.player.update_animation()"
+  },
+  {
+    "file": "tests/test_grounding_interactions.gd",
+    "before": "w.player.facing=\"left\";w.player.update_animation()",
+    "after": "w.item_service.inventory.equipment.main_hand=w.item_service.inventory.instance(\"stone_axe\");w.player.set_equipment(w.item_service.inventory)\n\tw.player.facing=\"left\";w.player.update_animation()"
+  },
+  {
+    "file": "tests/test_sleep_fit_v10.gd",
+    "before": "var center=Vector2(row.x,row.y);var half: Vector2=b.footprint(row)*.5",
+    "after": "var bounds: Rect2=b.footprint_rect(row);var center=Vector2(row.x,row.y)+bounds.get_center();var half: Vector2=bounds.size*.5"
+  },
+  {
+    "file": "tests/test_camp_build_v4.gd",
+    "before": "s.camps.build_book.available().size()==10",
+    "after": "s.camps.build_book.available().size()==preload(\"res://tests/current_test_contract.gd\").recipe_count(\"res://data/buildings.json\")"
+  },
+  {
+    "file": "tests/test_camp_build_v4.gd",
+    "before": "b.definitions.size()==9 and s.camps.build_book.recipes.size()==10",
+    "after": "b.definitions.size()==JSON.parse_string(FileAccess.get_file_as_string(\"res://data/camp_buildings.json\")).size() and s.camps.build_book.recipes.size()==preload(\"res://tests/current_test_contract.gd\").recipe_count(\"res://data/buildings.json\")"
+  },
+  {
+    "file": "tests/test_camp_build_v4.gd",
+    "before": "s.storage_ui.panel.size==Vector2(1030,600)",
+    "after": "s.storage_ui.panel.size==Vector2(156,184)"
+  },
+  {
+    "file": "tests/test_camp_build_v4.gd",
+    "before": "world.camp_ui.ghost.get_child_count()==0",
+    "after": "world.camp_ui.ghost.find_children(\"*\",\"CollisionObject2D\",true,false).is_empty() and world.camp_ui.ghost.find_children(\"*\",\"CollisionShape2D\",true,false).is_empty()"
+  },
+  {
+    "file": "tests/test_camp_build_v4.gd",
+    "before": "var node: Node2D=b.visuals.damaged\n\t\tcheck",
+    "after": "var node: Node2D=b.visuals.damaged\n\t\tcheck(not node.damage.visible,\"rebuilding does not resurrect expired hit indicator stage\"+str(step))\n\t\tnode.update_damage()\n\t\tcheck"
+  },
+  {
+    "file": "tests/test_camp_door_hinge_transaction_v3.gd",
+    "before": "row.hinge_end==1,\"retry after failed save selects clear alternate hinge\"",
+    "after": "row.hinge_end==0,\"retry after failed save keeps clear original hinge beside connected wall\""
+  },
+  {
+    "file": "tests/test_character_resume_v1.gd",
+    "before": "var movement_origin=p.position",
+    "after": "while not w.stream.viewport_ready(p.position,Vector2(640,360)):await process_frame\n\tvar movement_origin=p.position"
+  },
+  {
+    "file": "tests/test_camp_gate_surface_v4.gd",
+    "before": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()",
+    "after": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()\n\t\t\t\t\t\tmanager.service=render_service"
+  },
+  {
+    "file": "tests/test_camp_gate_surface_v4.gd",
+    "before": "func run():\n",
+    "after": "func run():\n\tvar render_service=preload(\"res://tests/render_service_fixture.gd\").new();root.add_child(render_service)\n"
+  },
+  {
+    "file": "tests/test_floor_formal_v3.gd",
+    "before": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()",
+    "after": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()\n\t\t\tmanager.service=render_service"
+  },
+  {
+    "file": "tests/test_floor_formal_v3.gd",
+    "before": "func run():\n",
+    "after": "func run():\n\tvar render_service=preload(\"res://tests/render_service_fixture.gd\").new();root.add_child(render_service)\n"
+  },
+  {
+    "file": "tests/test_ore_runtime_v06.gd",
+    "before": "var kind: String=ids[index]",
+    "after": "var kind: String=ids[index]\n\t\tservice.body.stamina=100;service.body.exhausted=false;service.body.energy=100"
+  },
+  {
+    "file": "tests/test_harvest_v05.gd",
+    "before": "serial+=1",
+    "after": "serial+=1\n\t\tservice.body.stamina=100;service.body.exhausted=false;service.body.energy=100"
+  },
+  {
+    "file": "tests/test_harvest_edges_v05.gd",
+    "before": "world.stream.unload_chunk(chunk);await frames()",
+    "after": "world.stream.unload_chunk(chunk);await frames()\n\tvar packet: Dictionary=world.generator.build_chunk(chunk);packet[\"ground_stamps\"]=[];world.stream.install_chunk(packet)"
+  },
+  {
+    "file": "tests/test_movement_regression.gd",
+    "before": "w.player.facing=\"left\";w.player.update_animation()",
+    "after": "w.item_service.inventory.equipment.main_hand=w.item_service.inventory.instance(\"stone_axe\");w.player.set_equipment(w.item_service.inventory)\n\tw.player.facing=\"left\";w.player.update_animation()"
+  },
+  {
+    "file": "tests/test_grounding_interactions.gd",
+    "before": "w.player.facing=\"left\";w.player.update_animation()",
+    "after": "w.item_service.inventory.equipment.main_hand=w.item_service.inventory.instance(\"stone_axe\");w.player.set_equipment(w.item_service.inventory)\n\tw.player.facing=\"left\";w.player.update_animation()"
+  },
+  {
+    "file": "tests/test_camp_build_v4.gd",
+    "before": "var node: Node2D=b.visuals.damaged\n\t\tcheck",
+    "after": "var node: Node2D=b.visuals.damaged\n\t\tcheck(not node.damage.visible,\"rebuilding does not resurrect expired hit indicator stage\"+str(step))\n\t\tnode.update_damage()\n\t\tcheck"
+  },
+  {
+    "file": "tests/test_audio_selected_v6.gd",
+    "before": "fx.last_played.clear();events.clear()",
+    "after": "fx.ui_epoch+=1;fx.pending_ui=\"\";fx.ui_flush_queued=false;fx.ui_voice.stop()\n\tfx.last_played.clear();events.clear()"
+  },
+  {
+    "file": "tests/test_audio_selected_v6.gd",
+    "before": "if key.begins_with(\"amb_\"):continue",
+    "after": "if key.begins_with(\"amb_\"):continue\n\t\tif not bool(fx.configuration[key].get(\"enabled\",true)):\n\t\t\treset();check(not fx.play_sfx(key,w.player.position),key+\" disabled event remains silent\");continue"
+  },
+  {
+    "file": "tests/test_audio_selected_v6.gd",
+    "before": "var voice: Node=fx.voices.back()",
+    "after": "await frames(2)\n\t\tvar voice: Node=fx.ui_voice if key.begins_with(\"sfx_ui_\") else fx.voices.back()"
+  },
+  {
+    "file": "tests/test_audio_selected_v6.gd",
+    "before": "w.item_ui.toggle_bag();w.item_ui.toggle_bag()",
+    "after": "w.item_ui.toggle_bag();await frames(2);w.item_ui.toggle_bag();await frames(2)"
+  },
+  {
+    "file": "tests/test_character_resume_v1.gd",
+    "before": "var movement_origin=p.position",
+    "after": "while not w.stream.viewport_ready(p.position,Vector2(640,360)):await process_frame\n\tvar movement_origin=p.position"
+  },
+  {
+    "file": "tests/test_camp_gate_surface_v4.gd",
+    "before": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()",
+    "after": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()\n\t\t\t\t\t\tmanager.service=render_service"
+  },
+  {
+    "file": "tests/test_camp_gate_surface_v4.gd",
+    "before": "func run():\n",
+    "after": "func run():\n\tvar render_service=preload(\"res://tests/render_service_fixture.gd\").new();root.add_child(render_service)\n"
+  },
+  {
+    "file": "tests/test_floor_formal_v3.gd",
+    "before": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()",
+    "after": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()\n\t\t\tmanager.service=render_service"
+  },
+  {
+    "file": "tests/test_floor_formal_v3.gd",
+    "before": "func run():\n",
+    "after": "func run():\n\tvar render_service=preload(\"res://tests/render_service_fixture.gd\").new();root.add_child(render_service)\n"
+  },
+  {
+    "file": "tests/test_crafting_v1.gd",
+    "before": "book.recipes.size()==5",
+    "after": "book.recipes.size()==preload(\"res://tests/current_test_contract.gd\").recipe_count()"
+  },
+  {
+    "file": "tests/test_ore_runtime_v06.gd",
+    "before": "service.database.ids().size()==21",
+    "after": "service.database.ids().size()==preload(\"res://tests/current_test_contract.gd\").item_count()"
+  },
+  {
+    "file": "tests/test_ore_distribution_v06.gd",
+    "before": "Distribution.dirt_region(gen,Vector2(row.x,row.y)),\"metal restricted to stable mud interior ",
+    "after": "Distribution.rocky_region(gen,Vector2(row.x,row.y)),\"metal restricted to stable rocky interior "
+  },
+  {
+    "file": "tests/test_harvest_v05.gd",
+    "before": "db.ids().size()==18",
+    "after": "db.ids().size()==preload(\"res://tests/current_test_contract.gd\").item_count()"
+  },
+  {
+    "file": "tests/test_food_v2.gd",
+    "before": "w.camp_ui.recipes.size()==9",
+    "after": "w.camp_ui.recipes.size()==w.item_service.camps.rules.recipes.values().filter(func(row):return not row.get(\"legacy_only\",false)).size()"
+  },
+  {
+    "file": "tests/test_ore_runtime_v06.gd",
+    "before": "rewards[row.item_id]=int(row.count)",
+    "after": "rewards[row.item_id]=int(rewards.get(row.item_id,0))+int(row.count)"
+  },
+  {
+    "file": "tests/test_ore_runtime_v06.gd",
+    "before": "var kind: String=ids[index]",
+    "after": "var kind: String=ids[index]\n\t\tservice.body.stamina=100;service.body.exhausted=false;service.body.energy=100"
+  },
+  {
+    "file": "tests/test_harvest_v05.gd",
+    "before": "serial+=1",
+    "after": "serial+=1\n\t\tservice.body.stamina=100;service.body.exhausted=false;service.body.energy=100"
+  },
+  {
+    "file": "tests/test_harvest_v05.gd",
+    "before": "check(node.sprite.texture!=node.textures[0],\"damage/reveal stage advances \"+kind)",
+    "after": "check(float(node.hit_material.get_shader_parameter(\"damage_amount\"))==1.0,\"damage/reveal shader advances without swapping the anchored body \"+kind)"
+  },
+  {
+    "file": "tests/test_harvest_v05.gd",
+    "before": "found[loot.item_id]=loot.count",
+    "after": "found[loot.item_id]=int(found.get(loot.item_id,0))+int(loot.count)"
+  },
+  {
+    "file": "tests/test_harvest_followup_v051.gd",
+    "before": "await create_timer(1.8).timeout;await key(KEY_E,false)",
+    "after": "await create_timer((int(node.definition.hits)-2)*1.12+.2).timeout;await key(KEY_E,false)"
+  },
+  {
+    "file": "tests/test_harvest_edges_v05.gd",
+    "before": "world.stream.unload_chunk(chunk);await frames()",
+    "after": "world.stream.unload_chunk(chunk);await frames()\n\tvar packet: Dictionary=world.generator.build_chunk(chunk);packet[\"ground_stamps\"]=[];world.stream.install_chunk(packet)"
+  },
+  {
+    "file": "tests/test_movement_regression.gd",
+    "before": "w.player.facing=\"left\";w.player.update_animation()",
+    "after": "w.item_service.inventory.equipment.main_hand=w.item_service.inventory.instance(\"stone_axe\");w.player.set_equipment(w.item_service.inventory)\n\tw.player.facing=\"left\";w.player.update_animation()"
+  },
+  {
+    "file": "tests/test_grounding_interactions.gd",
+    "before": "w.player.facing=\"left\";w.player.update_animation()",
+    "after": "w.item_service.inventory.equipment.main_hand=w.item_service.inventory.instance(\"stone_axe\");w.player.set_equipment(w.item_service.inventory)\n\tw.player.facing=\"left\";w.player.update_animation()"
+  },
+  {
+    "file": "tests/test_world_map_v3_logic.gd",
+    "before": "pop.max_schools==28 and pop.spots.size()<=28",
+    "after": "pop.max_schools==56 and pop.spots.size()<=56"
+  },
+  {
+    "file": "tests/test_world_map_v3_distribution.gd",
+    "before": "(28 if cells>1024 else 20)",
+    "after": "(56 if cells>1024 else 40)"
+  },
+  {
+    "file": "tests/test_fishing_population_v2.gd",
+    "before": "pop.spots.size()<=20",
+    "after": "pop.spots.size()<=pop.max_schools"
+  },
+  {
+    "file": "tests/test_fishing_population_v2.gd",
+    "before": "value<=3",
+    "after": "value<=pop.MAX_PER_LAKE"
+  },
+  {
+    "file": "tests/test_audio_ui_open_v7.gd",
+    "before": "fx.configuration.sfx_ui_close.files.size()==2",
+    "after": "fx.configuration.sfx_ui_close.files.size()==1"
+  },
+  {
+    "file": "tests/test_audio_ui_single_v8.gd",
+    "before": "fx.configuration.sfx_ui_close.files.size()==2",
+    "after": "fx.configuration.sfx_ui_close.files.size()==1"
+  },
+  {
+    "file": "tests/test_audio_ui_open_v7.gd",
+    "before": "w.item_ui.toggle_bag()\n\tcheck",
+    "after": "w.item_ui.toggle_bag();await process_frame;await process_frame\n\tcheck"
+  },
+  {
+    "file": "tests/test_audio_ui_open_v7.gd",
+    "before": "w.map_view.show()\n\tcheck",
+    "after": "w.map_view.show();await process_frame;await process_frame\n\tcheck"
+  },
+  {
+    "file": "tests/test_sleep_fit_v10.gd",
+    "before": "var center=Vector2(row.x,row.y);var half: Vector2=b.footprint(row)*.5",
+    "after": "var bounds: Rect2=b.footprint_rect(row);var center=Vector2(row.x,row.y)+bounds.get_center();var half: Vector2=bounds.size*.5"
+  },
+  {
+    "file": "tests/test_camp_build_v4.gd",
+    "before": "s.camps.build_book.available().size()==10",
+    "after": "s.camps.build_book.available().size()==preload(\"res://tests/current_test_contract.gd\").recipe_count(\"res://data/buildings.json\")"
+  },
+  {
+    "file": "tests/test_camp_build_v4.gd",
+    "before": "b.definitions.size()==9 and s.camps.build_book.recipes.size()==10",
+    "after": "b.definitions.size()==JSON.parse_string(FileAccess.get_file_as_string(\"res://data/camp_buildings.json\")).size() and s.camps.build_book.recipes.size()==preload(\"res://tests/current_test_contract.gd\").recipe_count(\"res://data/buildings.json\")"
+  },
+  {
+    "file": "tests/test_camp_build_v4.gd",
+    "before": "s.storage_ui.panel.size==Vector2(1030,600)",
+    "after": "s.storage_ui.panel.size==Vector2(156,184)"
+  },
+  {
+    "file": "tests/test_camp_build_v4.gd",
+    "before": "world.camp_ui.ghost.get_child_count()==0",
+    "after": "world.camp_ui.ghost.find_children(\"*\",\"CollisionObject2D\",true,false).is_empty() and world.camp_ui.ghost.find_children(\"*\",\"CollisionShape2D\",true,false).is_empty()"
+  },
+  {
+    "file": "tests/test_camp_build_v4.gd",
+    "before": "var node: Node2D=b.visuals.damaged\n\t\tcheck",
+    "after": "var node: Node2D=b.visuals.damaged\n\t\tcheck(not node.damage.visible,\"rebuilding does not resurrect expired hit indicator stage\"+str(step))\n\t\tnode.update_damage()\n\t\tcheck"
+  },
+  {
+    "file": "tests/test_camp_door_hinge_transaction_v3.gd",
+    "before": "row.hinge_end==1,\"retry after failed save selects clear alternate hinge\"",
+    "after": "row.hinge_end==0,\"retry after failed save keeps clear original hinge beside connected wall\""
+  },
+  {
+    "file": "tests/test_audio_selected_v6.gd",
+    "before": "fx.last_played.clear();events.clear()",
+    "after": "fx.ui_epoch+=1;fx.pending_ui=\"\";fx.ui_flush_queued=false;fx.ui_voice.stop()\n\tfx.last_played.clear();events.clear()"
+  },
+  {
+    "file": "tests/test_audio_selected_v6.gd",
+    "before": "if key.begins_with(\"amb_\"):continue",
+    "after": "if key.begins_with(\"amb_\"):continue\n\t\tif not bool(fx.configuration[key].get(\"enabled\",true)):\n\t\t\treset();check(not fx.play_sfx(key,w.player.position),key+\" disabled event remains silent\");continue"
+  },
+  {
+    "file": "tests/test_audio_selected_v6.gd",
+    "before": "var voice: Node=fx.voices.back()",
+    "after": "await frames(2)\n\t\tvar voice: Node=fx.ui_voice if key.begins_with(\"sfx_ui_\") else fx.voices.back()"
+  },
+  {
+    "file": "tests/test_audio_selected_v6.gd",
+    "before": "w.item_ui.toggle_bag();w.item_ui.toggle_bag()",
+    "after": "w.item_ui.toggle_bag();await frames(2);w.item_ui.toggle_bag();await frames(2)"
+  },
+  {
+    "file": "tests/test_broadleaf_v1.gd",
+    "before": "config.version==\"harvest-resources-2.1.0\"",
+    "after": "config.version==Service.HARVEST_VERSION"
+  },
+  {
+    "file": "tests/test_chest_ui_v2.gd",
+    "before": "res://tests/world_v06_formal_fixture.gd",
+    "after": "res://tests/world_clean_camp_fixture.gd"
+  },
+  {
+    "file": "tests/test_seed_selector_v2.gd",
+    "before": "res://tests/world_v06_formal_fixture.gd",
+    "after": "res://tests/world_clean_camp_fixture.gd"
+  },
+  {
+    "file": "tests/test_planting_v1.gd",
+    "before": "res://tests/world_v06_formal_fixture.gd",
+    "after": "res://tests/world_clean_camp_fixture.gd"
+  },
+  {
+    "file": "tests/test_planting_persistence_v1.gd",
+    "before": "res://tests/world_v06_formal_fixture.gd",
+    "after": "res://tests/world_clean_camp_fixture.gd"
+  },
+  {
+    "file": "tests/test_inventory_chest_v1.gd",
+    "before": "res://tests/world_v06_formal_fixture.gd",
+    "after": "res://tests/world_clean_camp_fixture.gd"
+  },
+  {
+    "file": "tests/test_planting_v1.gd",
+    "before": "growth_minutes=360.0",
+    "after": "growth_minutes=float(s.planting.rules.crops.carrot.minutes)"
+  },
+  {
+    "file": "tests/test_planting_persistence_v1.gd",
+    "before": "360.0 if index==2",
+    "after": "float(s.planting.rules.crops.carrot.minutes) if index==2"
+  },
+  {
+    "file": "tests/test_character_creation_v1.gd",
+    "before": "w.map_cells==1024",
+    "after": "w.map_cells==1536"
+  },
+  {
+    "file": "tests/test_character_resume_v1.gd",
+    "before": "var movement_origin=p.position",
+    "after": "while not w.stream.viewport_ready(p.position,Vector2(640,360)):await process_frame\n\tvar movement_origin=p.position"
+  },
+  {
+    "file": "tests/test_equipment_v04.gd",
+    "before": "ui.cells[8].global_position.x<ui.cells[40].global_position.x,\"bag left and equipment right\"",
+    "after": "ui.cells[8].global_position.x>ui.cells[40].global_position.x,\"bag right and equipment left\""
+  },
+  {
+    "file": "tests/test_inventory_chest_v1.gd",
+    "before": "storage.cells.size()==9",
+    "after": "storage.cells.filter(func(cell):return cell.visible).size()==9"
+  },
+  {
+    "file": "tests/test_cooking_build_v2.gd",
+    "before": "var notice_ui: Control=world.item_ui.obtained",
+    "after": "var notice_ui: CanvasLayer=world.item_ui.obtained"
+  },
+  {
+    "file": "tests/test_camp_gate_surface_v4.gd",
+    "before": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()",
+    "after": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()\n\t\t\t\t\t\tmanager.service=render_service"
+  },
+  {
+    "file": "tests/test_camp_gate_surface_v4.gd",
+    "before": "func run():\n",
+    "after": "func run():\n\tvar render_service=preload(\"res://tests/render_service_fixture.gd\").new();root.add_child(render_service)\n"
+  },
+  {
+    "file": "tests/test_floor_formal_v3.gd",
+    "before": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()",
+    "after": "var manager=preload(\"res://scripts/camp_buildings.gd\").new()\n\t\t\tmanager.service=render_service"
+  },
+  {
+    "file": "tests/test_floor_formal_v3.gd",
+    "before": "func run():\n",
+    "after": "func run():\n\tvar render_service=preload(\"res://tests/render_service_fixture.gd\").new();root.add_child(render_service)\n"
+  }
+]

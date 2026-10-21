@@ -8,7 +8,7 @@ func _initialize() -> void:call_deferred("run")
 func run() -> void:
 	DirAccess.make_dir_recursive_absolute(OUT)
 	Engine.set_meta("integration_seed",98171023)
-	var w=load("res://tests/world_v06_formal_fixture.gd").new();root.add_child(w)
+	var w=load("res://tests/world_clean_camp_fixture.gd").new();root.add_child(w)
 	while not w.started:await process_frame
 	w.environment_view.set_process(false);w.player.set_physics_process(false);w.set_process(false)
 	var s=w.item_service;var b=s.builds
@@ -26,7 +26,7 @@ func run() -> void:
 		for i in 40:s.inventory.slots[i]={}
 		for index in 4:
 			var row: Dictionary=b.candidate("tilled_soil",w.generator.spawn+Vector2(96*index,128),false,true,0)
-			row.crop="carrot" if index in [1,2] else "";row.growth_minutes=120.25 if index==1 else 360.0 if index==2 else 0.0;row.roots=index==3
+			row.crop="carrot" if index in [1,2] else "";row.growth_minutes=120.25 if index==1 else float(s.planting.rules.crops.carrot.minutes) if index==2 else 0.0;row.roots=index==3
 			b.states["plot-"+str(index)]=row
 		s.inventory.slots[0]={"item_id":"carrot_seed","count":7}
 		check(s.save_state(),"write isolated real atomic snapshot")

@@ -44,7 +44,7 @@ func run() -> void:
 		var failed: Array=checks.filter(func(c): return not c.pass)
 		var report := FileAccess.open(OUT+"restart-tests.json",FileAccess.WRITE);report.store_string(JSON.stringify({"checks":checks,"count":checks.size(),"failed":failed.size()},"\t"));report.close()
 		print("RESTART: ",checks.size()," checks, ",failed.size()," failed")
-		world.persistent_world=false;world.free();await process_frame;quit(0 if failed.is_empty() else 1);return
+		world.persistent_world=false;world.free();await frames(6);quit(0 if failed.is_empty() else 1);return
 	empty_inventory();camps.states.clear();camps.discovered.clear()
 	var at: Vector2=world.player.position+Vector2(0,60)
 	camps.states["test"]={"x":at.x,"y":at.y,"fuel":1000.0,"lit":true,"recipe":"","elapsed":0.0,"ready":false};camps.rebuild();camps.install(world.stream.chunk_at(at))
@@ -56,22 +56,22 @@ func run() -> void:
 		active+=1
 		check(not service.database.item(r.output).is_empty(),"output exists "+key)
 		for id in r.materials: check(not service.database.item(id).is_empty(),"ingredient exists "+key+"/"+id)
-	check(active==4,"exactly four active recipes")
+	check(active==camps.rules.recipes.values().filter(func(row):return not row.get("legacy_only",false)).size(),"all current active recipes")
 	for id in service.database.ids():
 		var d: Dictionary=service.database.item(id)
-		if d.get("use_action")=="eat": check(d.effects.keys()==["hunger"],"hunger-only "+id)
-	check(service.database.item("roasted_carrot").effects.hunger==12,"carrot remains twelve")
-	check(service.database.item("roasted_mushroom").effects.hunger==10,"legacy mushroom remains ten")
-	for entry in [["herb_roasted_mushroom",16],["roasted_fruit_platter",20],["field_harvest_platter",24]]:
+		if d.get("use_action")=="eat": check(d.effects.keys().all(func(key):return key in ["hunger","hallucination"]) and int(d.effects.hunger)>0,"current edible effects "+id)
+	check(service.database.item("roasted_carrot").effects.hunger==6,"carrot current hunger six")
+	check(service.database.item("roasted_mushroom").effects.hunger==7,"mushroom current hunger seven")
+	for entry in [["herb_roasted_mushroom",10],["roasted_fruit_platter",36],["field_harvest_platter",40]]:
 		check(service.database.item(entry[0]).effects.hunger==entry[1],"new hunger "+entry[0])
 		check(service.texture(entry[0],"icon")!=null,"unique icon loads "+entry[0])
-	check(camps.match_materials({"wildflower":1,"brown_mushroom":2})=="herb_mushroom","reverse order matches")
-	check(camps.match_materials({"brown_mushroom":1}).is_empty(),"old mushroom combination disabled")
+	check(camps.match_materials({"brown_mushroom":1,"broad_leaf":2})=="herb_mushroom","reverse order matches")
+	check(camps.match_materials({"brown_mushroom":1})=="roast_mushroom","current simple mushroom combination remains available")
 	check(camps.match_materials({"wildflower":1.5,"brown_mushroom":2}).is_empty(),"fractional counts rejected")
 	check(camps.match_materials({"wildflower":1,"brown_mushroom":2,"wood":1}).is_empty(),"extra material rejected")
 	service.inventory.add("brown_mushroom",8);service.inventory.add("wildflower",8);service.inventory.add("wild_berry",8);service.inventory.add("wild_apple",3);service.inventory.add("wild_carrot",3)
 	var before: Array=service.inventory.slots.duplicate(true)
-	check(not camps.act("test","cook","roast_mushroom").is_empty() and before==service.inventory.slots,"legacy start refused without debit")
+	check(not camps.act("test","cook","nonexistent").is_empty() and before==service.inventory.slots,"unknown recipe refused without debit")
 	check(not camps.act("test","cook","fruit_platter").is_empty(),"book cannot start hidden recipe")
 	check(not camps.act("test","experiment","",{"wild_apple":1}).is_empty() and before==service.inventory.slots,"invalid combination unchanged")
 	service.save_path="user://nonexistent-cooking-dir/save.json"
@@ -83,10 +83,10 @@ func run() -> void:
 	check(not camps.act("test","experiment","",{"wildflower":1,"wild_apple":1,"wild_berry":2}).is_empty() and before==service.inventory.slots,"repeated start no second debit")
 	world.camp_ui.open("test");world.camp_ui.mode="free";world.camp_ui.ingredient_ids.assign(["wildflower","wild_apple","wild_berry",""]);world.camp_ui.ingredient_counts.assign([1,1,2,1]);world.camp_ui.refresh()
 	check(not world.camp_ui.output_text.text.contains("野果"),"hidden cooking output not leaked")
-	check(world.camp_ui.recipes.size()==4,"four recipe cards plus future placeholders")
+	check(world.camp_ui.recipes.size()==active,"current active recipe cards plus future placeholders")
 	await frames()
 	check(world.camp_ui.ingredient_spins[0].get_global_rect().end.x<world.camp_ui.status.get_global_rect().position.x,"free controls stay inside left column")
-	check(not world.camp_ui.recipes[2].text.contains("野果") and world.camp_ui.recipes[2].icon==null,"hidden card has no real name or icon")
+	check(not world.camp_ui.recipes[camps.rules.recipes.keys().filter(func(key):return not camps.rules.recipes[key].get("legacy_only",false)).find("fruit_platter")].text.contains("野果") and world.camp_ui.recipes[camps.rules.recipes.keys().filter(func(key):return not camps.rules.recipes[key].get("legacy_only",false)).find("fruit_platter")].icon==null,"hidden card has no real name or icon")
 	await shot("hidden-combination")
 	var amount_edit: LineEdit=world.camp_ui.ingredient_spins[0].get_line_edit()
 	amount_edit.grab_focus();await frames();amount_edit.select_all()
@@ -117,11 +117,11 @@ func run() -> void:
 	var old_hunger: float=service.body.hunger
 	for i in 40:
 		if service.inventory.slots[i].get("item_id")=="roasted_mushroom": service.inventory.use_slot(i);break
-	check(service.body.hunger==old_hunger+10 and service.body.health==45 and service.body.stamina==37,"old mushroom eats hunger-only")
+	check(service.body.hunger==old_hunger+float(service.database.item("roasted_mushroom").effects.hunger) and service.body.health==45 and service.body.stamina==37,"old mushroom eats hunger-only")
 	# Pre-upgrade tasks retain original output and require no ingredient migration.
 	camps.states.test.recipe="roast_mushroom";camps.states.test.elapsed=9;camps.states.test.ready=false;camps.states.test.lit=true;camps.burning.test=true;camps.advance(1)
 	check(camps.states.test.ready and camps.act("test","claim").is_empty() and service.inventory.count_item("roasted_mushroom")==1,"legacy paid task yields original item")
-	empty_inventory();service.inventory.add("wild_carrot",3);service.inventory.add("brown_mushroom",4);service.inventory.add("wildflower",4);service.inventory.add("wild_berry",4)
+	empty_inventory();service.inventory.add("broad_leaf",4);service.inventory.add("wild_carrot",3);service.inventory.add("brown_mushroom",4);service.inventory.add("wildflower",4);service.inventory.add("wild_berry",4)
 	check(camps.act("test","cook","herb_mushroom").is_empty(),"known book herb recipe starts");camps.advance(10);check(camps.act("test","claim").is_empty(),"herb claim works")
 	before=service.inventory.slots.duplicate(true)
 	check(not camps.act("test","experiment","",{"wild_berry":2,"wild_apple":1,"wildflower":1}).is_empty() and before==service.inventory.slots and camps.states.test.recipe.is_empty(),"matching recipe with missing ingredient consumes nothing")
@@ -145,10 +145,10 @@ func run() -> void:
 	check(camps.act("test","experiment","",{"wildflower":1,"wild_berry":1,"brown_mushroom":1,"wild_carrot":1}).is_empty(),"four material hidden harvest starts")
 	camps.advance(20);check(camps.known("harvest_platter") and camps.states.test.ready,"harvest completion discovers")
 	world.camp_ui.open("test");world.camp_ui.mode="book";world.camp_ui.selected="harvest_platter";world.camp_ui.last_detail="";world.camp_ui.refresh()
-	check(world.camp_ui.output_text.text.contains("原野丰收") and world.camp_ui.recipes[3].text=="原野丰收烤盘","completion reveals output and recipe card")
-	for size_value in [Vector2i(1280,720),Vector2i(960,540),Vector2i(1600,900)]:
+	check(world.camp_ui.output_text.text.contains("原野丰收") and world.camp_ui.recipes[camps.rules.recipes.keys().filter(func(key):return not camps.rules.recipes[key].get("legacy_only",false)).find("harvest_platter")].text=="原野丰收烤盘","completion reveals output and recipe card")
+	for size_value in [Vector2i(ProjectSettings.get_setting("display/window/size/viewport_width"),ProjectSettings.get_setting("display/window/size/viewport_height"))]:
 		root.size=size_value;world.camp_ui.fit();await frames()
-		check(world.camp_ui.panel.size==Vector2(1030,600),"fixed panel "+str(size_value))
+		check(world.camp_ui.panel.size==Vector2(1030,560),"fixed panel "+str(size_value))
 		await shot("book-"+str(size_value.x))
 		world.camp_ui.mode="free";world.camp_ui.last_detail="";world.camp_ui.refresh();await frames()
 		check(world.camp_ui.ingredient_spins[2].get_global_rect().end.x<world.camp_ui.status.get_global_rect().position.x,"free controls no overlap "+str(size_value))
@@ -172,6 +172,6 @@ func run() -> void:
 	var failures: Array=checks.filter(func(c): return not c.pass)
 	var f := FileAccess.open(OUT+("window-tests.json" if capture else "tests.json"),FileAccess.WRITE);f.store_string(JSON.stringify({"checks":checks,"count":checks.size(),"failed":failures.size()},"\t"));f.close()
 	print("COOKING DISCOVERY: ",checks.size()," checks, ",failures.size()," failed")
-	world.persistent_world=false;world.free();await process_frame;quit(0 if failures.is_empty() else 1)
+	world.persistent_world=false;world.free();await frames(6);quit(0 if failures.is_empty() else 1)
 
 

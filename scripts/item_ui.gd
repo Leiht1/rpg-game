@@ -365,9 +365,10 @@ func hide_item_hover(index: int = -1) -> void:
 	hover_index=-1
 	if is_instance_valid(hover_card):
 		hover_card.hide()
-		var retiring: Control=hover_card
+		var retiring: WeakRef=weakref(hover_card)
 		get_tree().create_timer(0.10).timeout.connect(func():
-			if is_instance_valid(retiring):retiring.queue_free())
+			var card=retiring.get_ref()
+			if is_instance_valid(card):card.queue_free())
 	hover_card=null
 
 func show_notice(text: String) -> void:

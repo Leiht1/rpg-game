@@ -29,12 +29,14 @@ func surface_view(renderer: Node2D, reference: bool) -> SubViewport:
 			var part := Node2D.new();origin.add_child(part);part.draw.connect(renderer.draw_leaf_strip.bind(part,i))
 	return view
 func run():
+	var render_service=preload("res://tests/render_service_fixture.gd").new();root.add_child(render_service)
 	for kind in ["stone_gate","fence_gate"]:
 		for vertical in [false,true]:
 			for hinge in [0,1]:
 				for swing in [-1,1]:
 					for phase in [0.0,.15,.5,.85,1.0]:
 						var manager=preload("res://scripts/camp_buildings.gd").new()
+						manager.service=render_service
 						var row: Dictionary=manager.candidate(kind,Vector2.ZERO,vertical,true,0);row.hinge_end=hinge;row.swing=swing
 						manager.states.gate=row
 						var renderer=preload("res://scripts/camp_building.gd").new();renderer.manager=manager;renderer.building_id="gate";renderer.gate_angle=preload("res://scripts/camp_grid.gd").gate_base(row)+PI*.5*swing*phase

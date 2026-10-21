@@ -49,6 +49,7 @@ func run() -> void:
 	service.resource_hits["edge:complete"]=2;node.feedback(p,true)
 	var chunk: Vector2i=world.stream.chunk_at(node.position)
 	world.stream.unload_chunk(chunk);await frames()
+	var packet: Dictionary=world.generator.build_chunk(chunk);var stamps: Array[Dictionary]=[];packet["ground_stamps"]=stamps;world.stream.install_chunk(packet)
 	check(not is_instance_valid(node),"chunk unload releases finished resource and transient soil effects")
 	# Pickup capacity behavior reuses original service without losing the remainder.
 	var saved_slots: Array=service.inventory.slots.duplicate(true)

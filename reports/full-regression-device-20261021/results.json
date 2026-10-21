@@ -1,0 +1,1093 @@
+[
+  {
+    "label": "device-project-import",
+    "category": "import",
+    "exit": 0,
+    "seconds": 42.31,
+    "status": "pass",
+    "log": "logs/device-project-import.log",
+    "errors": [],
+    "error_count": 0,
+    "reports": []
+  },
+  {
+    "label": "network-delay220-delay220-attempt1",
+    "category": "multiplayer",
+    "exit": 1,
+    "seconds": 53.79,
+    "status": "fail",
+    "log": "logs/network-delay220-delay220-attempt1.log",
+    "errors": [
+      "Both clients failed crafting; host request read returned empty and stalled"
+    ],
+    "error_count": 1,
+    "reports": []
+  },
+  {
+    "label": "request-mailbox-exclusive-lock",
+    "category": "service",
+    "exit": 0,
+    "seconds": 8.84,
+    "log": "logs\\request-mailbox-exclusive-lock.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "OK"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "network-delay220-delay220-attempt2",
+    "category": "multiplayer",
+    "exit": 1,
+    "seconds": 0.23,
+    "log": "logs\\network-delay220-delay220-attempt2.log",
+    "errors": [
+      "Traceback (most recent call last):"
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "network-delay220-delay220-attempt3",
+    "category": "multiplayer",
+    "exit": 1,
+    "seconds": 58.15,
+    "log": "logs\\network-delay220-delay220-attempt3.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "FULL_GAME_NATIVE_EXIT_CODES [1, 0]"
+    ],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_camp_build_v4",
+    "category": "native",
+    "exit": 1,
+    "seconds": 39.91,
+    "log": "logs\\test_camp_build_v4.log",
+    "errors": [
+      "ERROR: formal startup exposes ten buildings and hammer without preview",
+      "ERROR: nine new buildings and existing campfire",
+      "ERROR: storage fixed logic canvas 1280",
+      "ERROR: preview has no world collision or interactions camp_torch",
+      "ERROR: damage bar actual3px stage0",
+      "ERROR: damage bar actual3px stage1",
+      "ERROR: damage bar actual3px stage2",
+      "ERROR: 4 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 8,
+    "summaries": [
+      "CAMP BUILD V1: 334 checks, 7 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-build-v4\\formal-tests.json",
+        "checks": 334,
+        "failures": [
+          "formal startup exposes ten buildings and hammer without preview",
+          "nine new buildings and existing campfire",
+          "storage fixed logic canvas 1280",
+          "preview has no world collision or interactions camp_torch",
+          "damage bar actual3px stage0",
+          "damage bar actual3px stage1",
+          "damage bar actual3px stage2"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_camp_door_hinge_transaction_v3",
+    "category": "native",
+    "exit": 1,
+    "seconds": 9.05,
+    "log": "logs\\test_camp_door_hinge_transaction_v3.log",
+    "errors": [
+      "ERROR: retry after failed save selects clear alternate hinge",
+      "ERROR: 4 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "HINGE TRANSACTION: 10 checks, 1 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-door-v3\\hinge-transaction-tests.json",
+        "checks": 10,
+        "failures": [
+          "retry after failed save selects clear alternate hinge"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_camp_h_damage_window_v4",
+    "category": "native",
+    "exit": 1,
+    "seconds": 13.65,
+    "log": "logs\\test_camp_h_damage_window_v4.log",
+    "errors": [
+      "ERROR: damage bar actual3px stage0",
+      "ERROR: damage bar actual3px stage1",
+      "ERROR: damage bar actual3px stage2",
+      "ERROR: 4 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 4,
+    "summaries": [
+      "H/DAMAGE WINDOW: 33 checks, 3 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-build-v4\\h-damage-window-tests.json",
+        "checks": 33,
+        "failures": [
+          "damage bar actual3px stage0",
+          "damage bar actual3px stage1",
+          "damage bar actual3px stage2"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_inventory_chest_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 15.85,
+    "log": "logs\\test_inventory_chest_v1.log",
+    "errors": [
+      "ERROR: mouse movement cannot drag bag",
+      "ERROR: chest has independent nine slots and no duplicate inventory",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 3,
+    "summaries": [
+      "INVENTORY CHEST 66 checks; 2 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\inventory-chest-v1\\checks.json",
+        "checks": 66,
+        "failures": [
+          "mouse movement cannot drag bag",
+          "chest has independent nine slots and no duplicate inventory"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_chest_ui_v2",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 23.48,
+    "log": "logs\\test_chest_ui_v2.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid access to property or key 'abandoned:v1:0:0' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_cooking_build_v2",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 25.21,
+    "log": "logs\\test_cooking_build_v2.log",
+    "errors": [
+      "ERROR: one real building definition",
+      "ERROR: four disabled mystery UI placeholders",
+      "ERROR: actual right-click use feeds through original BodyState",
+      "ERROR: cooked mushroom hotbar use follows existing food path",
+      "SCRIPT ERROR: Trying to assign value of type 'CanvasLayer' to a variable of type 'Control'."
+    ],
+    "error_count": 5,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_campfire_drag_v1",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 24.44,
+    "log": "logs\\test_campfire_drag_v1.log",
+    "errors": [
+      "ERROR: hotbar drag starts right-hand throw when unarmed",
+      "ERROR: native directional throwing animation actually selected",
+      "ERROR: impact consumes dragged stack and ignites with matching burn time",
+      "ERROR: impact committed through authoritative service",
+      "ERROR: remaining-time bar fixed beneath fire",
+      "ERROR: fuel bar height is one third with width unchanged",
+      "ERROR: bag temporarily folds after dragging out to reveal fire",
+      "SCRIPT ERROR: Invalid access to property or key 'bag_hidden_for_world_drag' on a base object of type 'Control (item_ui.gd)'."
+    ],
+    "error_count": 8,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_planting_v1",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 23.39,
+    "log": "logs\\test_planting_v1.log",
+    "errors": [
+      "ERROR: failed till save restores plot and pickaxe durability",
+      "SCRIPT ERROR: Invalid access to property or key 'abandoned:v1:0:0' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_seed_selector_v2",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 23.42,
+    "log": "logs\\test_seed_selector_v2.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid access to property or key 'abandoned:v1:0:0' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_sleep_formal_v9",
+    "category": "native",
+    "exit": 0,
+    "seconds": 10.44,
+    "log": "logs\\test_sleep_formal_v9.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "SLEEP FORMAL V9 84 checks; 0 failures; window (1280, 720)"
+    ],
+    "reports": [
+      {
+        "source": "reports\\sleep-formal-v9\\checks.json",
+        "checks": 84,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_sleep_fit_v10",
+    "category": "native",
+    "exit": 1,
+    "seconds": 13.45,
+    "log": "logs\\test_sleep_fit_v10.log",
+    "errors": [
+      "ERROR: fits tight wall enclosure with real clearance wood_bedfalse",
+      "ERROR: fits tight wall enclosure with real clearance wood_bedtrue",
+      "ERROR: fits tight wall enclosure with real clearance straw_mattrue",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 4,
+    "summaries": [
+      "SLEEP FIT V10 185 checks; 3 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\sleep-fit-v10\\checks.json",
+        "checks": 185,
+        "failures": [
+          "fits tight wall enclosure with real clearance wood_bedfalse",
+          "fits tight wall enclosure with real clearance wood_bedtrue",
+          "fits tight wall enclosure with real clearance straw_mattrue"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_sleep_collision_v11",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.85,
+    "log": "logs\\test_sleep_collision_v11.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "SLEEP COLLISION V11 87 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\sleep-collision-v11\\checks.json",
+        "checks": 87,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "network-delay220-delay220-attempt4",
+    "category": "multiplayer",
+    "exit": 1,
+    "seconds": 60.56,
+    "log": "logs\\network-delay220-delay220-attempt4.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "FULL_GAME_NATIVE_EXIT_CODES [1, 0]"
+    ],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "network-delay220-delay220-attempt5",
+    "category": "multiplayer",
+    "exit": 0,
+    "seconds": 60.53,
+    "log": "logs\\network-delay220-delay220-attempt5.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "FULL_GAME_NATIVE_EXIT_CODES [0, 0]"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "test_animal_art_formal_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 25.3,
+    "log": "logs\\test_animal_art_formal_v2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "ANIMAL ART V2: 76 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\animals-art-formal-v2\\results.json",
+        "checks": 76,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_camp_expansion_front_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 12.07,
+    "log": "logs\\test_camp_expansion_front_v2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CAMP EXPANSION V2: 72 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-expansion-front-v2\\preview.json",
+        "checks": 72,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_build_shortcut_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.65,
+    "log": "logs\\test_build_shortcut_v2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "BUILD SHORTCUT: 12 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\cooking-build-v2\\build-shortcut.json",
+        "checks": 12,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_floor_running_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 10.45,
+    "log": "logs\\test_floor_running_v2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "test_mushroom_density_v2",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 25.89,
+    "log": "logs\\test_mushroom_density_v2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "MUSHROOM DENSITY 14 checks, 0 failed; [{\"after\":{\"branch\":255,\"broad_leaf\":123,\"brown_mushroom\":64,\"flint\":133,\"plant_fiber\":332,\"wild_apple\":1,\"wild_berry\":64,\"wild_carrot\":297,\"wildflower\":242},\"before\":{\"branch\":260,\"broad_leaf\":127,\"brown_mushroom\":52,\"flint\":135,\"plant_fiber\":332,\"wild_apple\":1,\"wild_berry\":64,\"wild_carrot\":297,\"wildflower\":242},\"chunks\":386,\"seed\":271828},{\"after\":{\"branch\":264,\"broad_leaf\":137,\"brown_mushroom\":131,\"flint\":101,\"plant_fiber\":236,\"wild_apple\":2,\"wild_berry\":79,\"wild_carrot\":212,\"wildflower\":177},\"before\":{\"branch\":280,\"broad_leaf\":146,\"brown_mushroom\":101,\"flint\":103,\"plant_fiber\":235,\"wild_apple\":2,\"wild_berry\":82,\"wild_carrot\":212,\"wildflower\":177},\"chunks\":314,\"seed\":447349832},{\"after\":{\"branch\":182,\"broad_leaf\":75,\"brown_mushroom\":68,\"flint\":74,\"plant_fiber\":157,\"wild_apple\":2,\"wild_berry\":48,\"wild_carrot\":157,\"wildflower\":83},\"before\":{\"branch\":194,\"broad_leaf\":76,\"brown_mushroom\":50,\"flint\":73,\"plant_fiber\":158,\"wild_apple\":2,\"wild_berry\":51,\"wild_carrot\":156,\"wildflower\":84},\"chunks\":283,\"seed\":1671081329}]"
+    ],
+    "reports": [
+      {
+        "source": "reports\\mushroom-density-v2\\results.json",
+        "checks": 14,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_ui_fade_freed_window-before-fix",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 0.45,
+    "log": "logs\\test_ui_fade_freed_window-before-fix.log",
+    "errors": [
+      "ERROR: Error calling deferred method: 'Node(ui_fade.gd)::animate_window': Cannot convert argument 1 from Object to Object.",
+      "ERROR: Error calling deferred method: 'Node(ui_fade.gd)::animate_window': Cannot convert argument 1 from Object to Object."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "FREED_WINDOW_DEFERRED_FADE_PASS 2"
+    ],
+    "reports": [],
+    "status": "fail"
+  },
+  {
+    "label": "test_ui_fade_freed_window-after-fix",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 0.43,
+    "log": "logs\\test_ui_fade_freed_window-after-fix.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "FREED_WINDOW_DEFERRED_FADE_PASS 2"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "test_drop_quantity_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.25,
+    "log": "logs\\test_drop_quantity_v1.log",
+    "errors": [
+      "ERROR: 3 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "DROP QUANTITY: 19 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\drop-quantity-v1\\tests.json",
+        "checks": 19,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "game-rules-after-mailbox-fix",
+    "category": "service",
+    "exit": 0,
+    "seconds": 26.06,
+    "log": "logs\\game-rules-after-mailbox-fix.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "Ran 28 tests in 25.755s",
+      "OK"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "audio-workbench-new-device",
+    "category": "tool",
+    "exit": 0,
+    "seconds": 12.85,
+    "log": "logs\\audio-workbench-new-device.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "Ran 6 tests in 11.059s",
+      "OK"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "login_connection_smoke",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.05,
+    "log": "logs\\login_connection_smoke.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "LOGIN_SERVER_RESPONSE_PASS",
+      "LOGIN_TIMEOUT_RECOVERY_PASS 7072"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "test_chest_ui_v2-empty-fixture",
+    "category": "native",
+    "exit": 0,
+    "seconds": 10.84,
+    "log": "logs\\test_chest_ui_v2-empty-fixture.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "FORMAL CHEST 20 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\chest-ui-v2\\checks.json",
+        "checks": 20,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_chest_ui_v2-restart-empty-fixture",
+    "category": "native",
+    "exit": 0,
+    "seconds": 8.87,
+    "log": "logs\\test_chest_ui_v2-restart-empty-fixture.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "FORMAL CHEST 3 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\chest-ui-v2\\restart.json",
+        "checks": 3,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_planting_v1-empty-fixture",
+    "category": "native",
+    "exit": 1,
+    "seconds": 9.85,
+    "log": "logs\\test_planting_v1-empty-fixture.log",
+    "errors": [
+      "ERROR: full bag does not lose crop",
+      "ERROR: failed harvest save rolls back rewards and crop",
+      "ERROR: chunk unload/reinstall preserves mature state",
+      "ERROR: mature plot selected by original E targeting",
+      "ERROR: mature crop starts original character pickup action",
+      "ERROR: pickup action commits harvest at existing animation point",
+      "ERROR: root cleaning starts dig without held-key repeat",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 8,
+    "summaries": [
+      "PLANTING V1 101 checks; 7 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\planting-formal-v1\\window-checks.json",
+        "checks": 101,
+        "failures": [
+          "full bag does not lose crop",
+          "failed harvest save rolls back rewards and crop",
+          "chunk unload/reinstall preserves mature state",
+          "mature plot selected by original E targeting",
+          "mature crop starts original character pickup action",
+          "pickup action commits harvest at existing animation point",
+          "root cleaning starts dig without held-key repeat"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_seed_selector_v2-empty-fixture",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.64,
+    "log": "logs\\test_seed_selector_v2-empty-fixture.log",
+    "errors": [
+      "ERROR: 4 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "SEED SELECTOR 20 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\planting-ui-floor-v2\\seed-menu-checks.json",
+        "checks": 20,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_seed_selector_v2-restart-empty-fixture",
+    "category": "native",
+    "exit": 0,
+    "seconds": 8.84,
+    "log": "logs\\test_seed_selector_v2-restart-empty-fixture.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "SEED SELECTOR 3 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\planting-ui-floor-v2\\restart-checks.json",
+        "checks": 3,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_planting_persistence_v1-device-write",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 8.85,
+    "log": "logs\\test_planting_persistence_v1-device-write.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "PLANTING PERSISTENCE 2 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\planting-formal-v1\\persistence-write.json",
+        "checks": 2,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_planting_persistence_v1-device-read",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 9.04,
+    "log": "logs\\test_planting_persistence_v1-device-read.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "PLANTING PERSISTENCE 15 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\planting-formal-v1\\persistence-read.json",
+        "checks": 15,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_planting_persistence_v1-device-after-harvest",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 9.25,
+    "log": "logs\\test_planting_persistence_v1-device-after-harvest.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "PLANTING PERSISTENCE 5 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\planting-formal-v1\\persistence-after-harvest.json",
+        "checks": 5,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_character_creation_v1-current-map-size",
+    "category": "native",
+    "exit": 0,
+    "seconds": 31.13,
+    "log": "logs\\test_character_creation_v1-current-map-size.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\character-creation-v1\\checks.json",
+        "checks": 183,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_character_resume_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 34.86,
+    "log": "logs\\test_character_resume_v1.log",
+    "errors": [
+      "ERROR: actual walking input (1.0, 0.0)",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\character-creation-v1\\resume-checks.json",
+        "checks": 53,
+        "failures": [
+          "actual walking input (1.0, 0.0)"
+        ]
+      }
+    ],
+    "status": "fail"
+  },
+  {
+    "label": "test_planting_v1-current-maturity",
+    "category": "native",
+    "exit": 0,
+    "seconds": 10.65,
+    "log": "logs\\test_planting_v1-current-maturity.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "PLANTING V1 101 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\planting-formal-v1\\window-checks.json",
+        "checks": 101,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_character_resume_v1-viewport-ready",
+    "category": "native",
+    "exit": 0,
+    "seconds": 19.51,
+    "log": "logs\\test_character_resume_v1-viewport-ready.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\character-creation-v1\\resume-checks.json",
+        "checks": 53,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_character_resume_v1-consumed",
+    "category": "native",
+    "exit": 0,
+    "seconds": 10.89,
+    "log": "logs\\test_character_resume_v1-consumed.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\character-creation-v1\\consumed-checks.json",
+        "checks": 4,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_world_map_v3_distribution-remaining-two-seeds",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 50.05,
+    "log": "logs\\test_world_map_v3_distribution-remaining-two-seeds.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "DISTRIBUTION 18 checks 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\world-map-v3\\distribution.json",
+        "checks": 18,
+        "failures": []
+      }
+    ],
+    "status": "pass"
+  },
+  {
+    "label": "test_world_map_v3_perf-1536-device",
+    "category": "native",
+    "exit": 0,
+    "seconds": 21.36,
+    "log": "logs\\test_world_map_v3_perf-1536-device.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "network-delay0-cells1536-delay0-cells1536-attempt1",
+    "category": "multiplayer",
+    "exit": 0,
+    "seconds": 49.23,
+    "log": "logs\\network-delay0-cells1536-delay0-cells1536-attempt1.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "FULL_GAME_NATIVE_EXIT_CODES [0, 0]"
+    ],
+    "reports": [],
+    "status": "pass"
+  },
+  {
+    "label": "network-delay550-delay550-attempt1",
+    "category": "multiplayer",
+    "exit": 0,
+    "seconds": 41.75,
+    "log": "logs\\network-delay550-delay550-attempt1.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "FULL_GAME_NATIVE_EXIT_CODES [0, 0]"
+    ],
+    "reports": [],
+    "status": "pass",
+    "evidence": "evidence\\0047"
+  },
+  {
+    "label": "test_hover_freed_card-before-fix",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 13.5,
+    "log": "logs\\test_hover_freed_card-before-fix.log",
+    "errors": [
+      "ERROR: Lambda capture at index 0 was freed. Passed \"null\" instead.",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "FREED_HOVER_TIMER_PASS"
+    ],
+    "reports": [],
+    "status": "fail",
+    "evidence": "evidence\\0048"
+  },
+  {
+    "label": "test_hover_freed_card-after-fix",
+    "category": "logic",
+    "exit": "script_error_stall",
+    "seconds": 26.88,
+    "log": "logs\\test_hover_freed_card-after-fix.log",
+    "errors": [
+      "SCRIPT ERROR: Parse Error: The variable type is being inferred from a Variant value, so it will be typed as Variant. (Warning treated as error.)",
+      "SCRIPT ERROR: Compile Error: Failed to compile depended scripts.",
+      "SCRIPT ERROR: Compile Error: Failed to compile depended scripts.",
+      "ERROR: Failed to load script \"res://tests/world_v06_formal_fixture.gd\" with error \"Compilation failed\".",
+      "SCRIPT ERROR: Invalid call. Nonexistent function 'new' in base 'GDScript'.",
+      "SCRIPT ERROR: Invalid call. Nonexistent function 'add_child' in base 'Nil'."
+    ],
+    "error_count": 6,
+    "summaries": [],
+    "reports": [],
+    "status": "fail",
+    "evidence": "evidence\\0049"
+  },
+  {
+    "label": "malformed-mailbox-recovery",
+    "category": "service",
+    "exit": 5,
+    "seconds": 41.69,
+    "log": "logs\\malformed-mailbox-recovery.log",
+    "errors": [
+      "ERROR: setUpClass (test_network_game_host.RulesHostTests)",
+      "Traceback (most recent call last):",
+      "FAILED (errors=1)"
+    ],
+    "error_count": 3,
+    "summaries": [
+      "Ran 0 tests in 41.396s"
+    ],
+    "reports": [],
+    "status": "fail",
+    "evidence": "evidence\\0050"
+  },
+  {
+    "label": "test_hover_freed_card-after-fix",
+    "category": "logic",
+    "exit": 0,
+    "seconds": 13.11,
+    "log": "logs\\test_hover_freed_card-after-fix-attempt2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "FREED_HOVER_TIMER_PASS"
+    ],
+    "reports": [],
+    "status": "pass",
+    "evidence": "evidence\\0051"
+  },
+  {
+    "label": "malformed-mailbox-recovery",
+    "category": "service",
+    "exit": 0,
+    "seconds": 13.51,
+    "log": "logs\\malformed-mailbox-recovery-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "OK"
+    ],
+    "reports": [],
+    "status": "pass",
+    "evidence": "evidence\\0052"
+  },
+  {
+    "label": "network-delay220-delay220-attempt6",
+    "category": "multiplayer",
+    "exit": 0,
+    "seconds": 39.84,
+    "log": "logs\\network-delay220-delay220-attempt6.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "FULL_GAME_NATIVE_EXIT_CODES [0, 0]"
+    ],
+    "reports": [],
+    "status": "pass",
+    "evidence": "evidence\\0053"
+  },
+  {
+    "label": "test_world_map_v3_window-remaining-window",
+    "category": "native",
+    "exit": 0,
+    "seconds": 327.33,
+    "log": "logs\\test_world_map_v3_window-remaining-window.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "MAP V3 window 29 checks 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\world-map-v3\\window.json",
+        "checks": 29,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0054"
+  },
+  {
+    "label": "test_world_map_v3_window-device-restart",
+    "category": "native",
+    "exit": 0,
+    "seconds": 17.48,
+    "log": "logs\\test_world_map_v3_window-device-restart.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "MAP V3 resume 9 checks 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\world-map-v3\\resume.json",
+        "checks": 9,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0055"
+  },
+  {
+    "label": "network-delay550-delay550-attempt2",
+    "category": "multiplayer",
+    "exit": 0,
+    "seconds": 44.61,
+    "log": "logs\\network-delay550-delay550-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "FULL_GAME_NATIVE_EXIT_CODES [0, 0]"
+    ],
+    "reports": [],
+    "status": "pass",
+    "evidence": "evidence\\0056"
+  }
+]

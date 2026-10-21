@@ -11,6 +11,7 @@ func check(ok: bool,label: String) -> void:
 func frames(n: int=3) -> void:
 	for i in n:await process_frame
 func reset() -> void:
+	fx.ui_epoch+=1;fx.pending_ui="";fx.ui_flush_queued=false;fx.ui_voice.stop()
 	fx.last_played.clear();events.clear()
 	for v in fx.voices:
 		if is_instance_valid(v):v.stop();v.queue_free()
@@ -42,9 +43,12 @@ func run() -> void:
 			var stream: AudioStream=fx.stream_for(path)
 			check(stream!=null and stream.get_length()>0,key+" decodes "+str(path))
 		if key.begins_with("amb_"):continue
+		if not bool(fx.configuration[key].get("enabled",true)):
+			reset();check(not fx.play_sfx(key,w.player.position),key+" disabled event remains silent");continue
 		reset()
 		check(fx.play_sfx(key,w.player.position),key+" actual player starts")
-		var voice: Node=fx.voices.back()
+		await frames(2)
+		var voice: Node=fx.ui_voice if key.begins_with("sfx_ui_") else fx.voices.back()
 		var path: String=voice.stream.resource_path
 		var expected: float=float(fx.configuration[key].volume_db)+float(fx.configuration[key].file_gain_db.get(path,0.0))
 		check(is_equal_approx(voice.volume_db,expected),key+" applies calibrated gain including variant offset")
@@ -59,7 +63,7 @@ func run() -> void:
 		check(not is_instance_valid(voice) or not voice.playing,key+" naturally finishes")
 		check(events==[key],key+" no queued replay")
 	reset()
-	w.item_ui.toggle_bag();w.item_ui.toggle_bag()
+	w.item_ui.toggle_bag();await frames(2);w.item_ui.toggle_bag();await frames(2)
 	check(events.has("sfx_ui_open") and events.has("sfx_ui_close"),"real keyboard bag open and close")
 	reset()
 	var drop: Node2D=w.stream.create_item_drop({"id":"audio-v6-pickup","item_id":"wood","count":1,"x":w.player.position.x,"y":w.player.position.y,"mode":"pickup"})
@@ -173,7 +177,7 @@ func run() -> void:
 	check(chicken.rng.state==movement_rng,"audio never consumes animal movement RNG")
 	w.environment_view.simulation.paused=true;reset();fx.animal_wait=0.0;fx._process(.01)
 	check(not events.has("sfx_chicken_idle"),"paused simulation has no animal chatter")
-	animals.states.erase("audio-v6-chicken");chicken.queue_free()
+	chicken.free();animals.states.erase("audio-v6-chicken")
 	reset();w.item_service.dirty=false;w.queue_free();await frames(5)
 	check(fx.world==null and not fx.rain.playing and not fx.light_rain.playing,"world exit clears both loops and voices")
 	check(user_files()==saves_before,"player JSON saves untouched")

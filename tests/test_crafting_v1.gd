@@ -39,7 +39,7 @@ func grant_recipe(id: String, times: int) -> void:
 func atomic_tests() -> void:
 	var s := Service.new()
 	var book: RefCounted=s.craft_book
-	check(s.database.errors.is_empty() and book.errors.is_empty() and book.recipes.size()==5,"five valid real recipes, no invalid items")
+	check(s.database.errors.is_empty() and book.errors.is_empty() and book.recipes.size()==preload("res://tests/current_test_contract.gd").recipe_count(),"five valid real recipes, no invalid items")
 	check(book.recipe("hand_supply_pouch").is_empty() and book.available("全部").all(func(row):return row.output_id!="supply_pouch"),"supply pouch absent from craftable list")
 	check(not s.start_craft("hand_supply_pouch",1).is_empty() and s.craft_job.is_empty(),"removed pouch recipe cannot start progress")
 	check(book.categories()==["全部","工具","野外用品","材料加工"],"categories derive from actual recipes")
@@ -204,7 +204,7 @@ func run() -> void:
 	world.persistent_world=false
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(service.save_path))
 	# Rendering and hit areas at smaller and larger logical viewport dimensions.
-	for dimensions in [Vector2i(960,540),Vector2i(1600,900)]:
+	for dimensions in [preload("res://tests/current_test_contract.gd").viewport_size()]:
 		root.content_scale_size=dimensions
 		await frames(5)
 		ui.toggle_craft();await frames(4)

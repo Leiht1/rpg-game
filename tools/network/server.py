@@ -723,7 +723,11 @@ def main():
     cert,key = certificate(service.root)
     if os.name == "nt":
         # Protect credentials and private key from other Windows users on this PC.
-        user = subprocess.check_output(["whoami"],text=True).strip()
+        # SID is ASCII regardless of the Windows account name / console code page.
+        identity = subprocess.check_output(["whoami", "/user", "/fo", "csv", "/nh"])
+        sid = re.search(rb'S-1-\d+(?:-\d+)+', identity)
+        require(sid is not None, "无法确定当前Windows账户SID")
+        user = "*" + sid.group().decode("ascii")
         subprocess.run(["icacls",str(service.root),"/inheritance:r","/grant:r",f"{user}:(OI)(CI)F","SYSTEM:(OI)(CI)F"],check=True,stdout=subprocess.DEVNULL)
     if args.initialize:
         private = service.initialize()

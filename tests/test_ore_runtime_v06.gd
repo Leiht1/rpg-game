@@ -22,7 +22,7 @@ func run() -> void:
 	while not world.started:await process_frame
 	service=world.item_service;world.player.automated=true;world.player.set_physics_process(false)
 	world.environment_view.simulation.set_time(10);world.environment_view.simulation.paused=true
-	check(service.database.errors.is_empty() and service.database.ids().size()==21,"21 stable item definitions including three raw metal ores")
+	check(service.database.errors.is_empty() and service.database.ids().size()==preload("res://tests/current_test_contract.gd").item_count(),"21 stable item definitions including three raw metal ores")
 	for id in ["copper_ore","silver_ore","gold_ore"]:check(service.texture(id,"icon")!=null and service.texture(id,"world")!=null,"real metal icon/drop visual "+id)
 	check(get_nodes_in_group("rocks").is_empty(),"formal loaded world contains no old scenery rocks")
 	var bad_loose := false
@@ -60,6 +60,7 @@ func run() -> void:
 	var expected_hits: Array=[5,7,9,12,16]
 	for index in ids.size():
 		var kind: String=ids[index]
+		service.body.stamina=100;service.body.exhausted=false;service.body.energy=100
 		world.player.cancel_action()
 		for node in get_nodes_in_group("world_interactables"):
 			if node.position.distance_to(p)<220:node.queue_free()
@@ -84,9 +85,13 @@ func run() -> void:
 		await key(KEY_E,false);await create_timer(.75).timeout;world.player.set_physics_process(false)
 		check(service.consumed.has(id) and int(service.resource_hits.get(id,0))==expected_hits[index],"held E completes exactly configured hits "+kind)
 		var expected: Dictionary=preload("res://scripts/harvest_node.gd").configuration().resources[kind].drops
+		if kind=="stone_outcrop":
+			expected=expected.duplicate()
+			expected.stone=12+int(abs(id.hash())%5)
+			if abs((id+":flint").hash())%10<3:expected.flint=1
 		var rewards := {}
 		for row in service.loose.values():
-			if str(row.id).begins_with(id+":loot:"):rewards[row.item_id]=int(row.count)
+			if str(row.id).begins_with(id+":loot:"):rewards[row.item_id]=int(rewards.get(row.item_id,0))+int(row.count)
 		for item in expected:expected[item]=int(expected[item])
 		check(rewards==expected,"one exact configured reward batch "+kind)
 		for drop in world.stream.drops.duplicate():

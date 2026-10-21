@@ -41,7 +41,7 @@ func run() -> void:
 				if not str(row.id).begins_with("mineral:2:"):continue
 				counts[row.kind]=int(counts.get(row.kind,0))+1
 				check(gen.can_walk(Vector2(row.x,row.y),52),"mine remains dry/walkable "+row.id)
-				if row.kind in ["copper_outcrop","silver_outcrop","gold_outcrop"]:check(Distribution.dirt_region(gen,Vector2(row.x,row.y)),"metal restricted to stable mud interior "+row.id)
+				if row.kind in ["copper_outcrop","silver_outcrop","gold_outcrop"]:check(Distribution.rocky_region(gen,Vector2(row.x,row.y)),"metal restricted to stable rocky interior "+row.id)
 				all_minerals.append(row)
 			chunks.append({"seed":seed_value,"coord":str(coord),"mines":rows.filter(func(row):return str(row.id).begins_with("mineral:2:")).size()})
 			var filtered := layer.entries(coord)

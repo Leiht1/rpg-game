@@ -134,7 +134,7 @@ func run() -> void:
  check(w.environment_view.hallucination_visual>0,"visual smoothly enters")
  w.item_ui.obtained.set_process(false);w.item_ui.obtained.card.hide()
  w.camp_ui.open("test");w.camp_ui.selected="roast_potato";w.camp_ui.refresh()
- check(w.camp_ui.recipes.size()==9,"all nine recipes appear in scrolling book")
+ check(w.camp_ui.recipes.size()==w.item_service.camps.rules.recipes.values().filter(func(row):return not row.get("legacy_only",false)).size(),"all nine recipes appear in scrolling book")
  if not DisplayServer.get_name()=="headless":
   await frames(5);await RenderingServer.frame_post_draw
   var distorted=root.get_texture().get_image()

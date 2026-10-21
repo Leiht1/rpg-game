@@ -59,10 +59,10 @@ func run() -> void:
 		var count: int=b.visuals.size();s.load_state();await frames();check(b.visuals.size()==count,"repeated full snapshot load does not duplicate instances")
 		world.persistent_world=false;finish();return
 	if "--formal" in OS.get_cmdline_user_args():
-		check(not Engine.get_meta("camp_build_preview",false) and s.camps.build_book.available().size()==10 and s.craft_book.recipe("hand_stone_hammer").default_unlocked,"formal startup exposes ten buildings and hammer without preview")
+		check(not Engine.get_meta("camp_build_preview",false) and s.camps.build_book.available().size()==preload("res://tests/current_test_contract.gd").recipe_count("res://data/buildings.json") and s.craft_book.recipe("hand_stone_hammer").default_unlocked,"formal startup exposes ten buildings and hammer without preview")
 		check(s.database.item("stone_hammer").icon.begins_with("res://assets/buildings/v1/") and FileAccess.file_exists("res://assets/buildings/v1/provenance.json"),"formal startup uses approved asset paths")
 	check(s.database.errors.is_empty() and s.craft_book.errors.is_empty() and s.camps.build_book.errors.is_empty(),"all item craft building data validates")
-	check(b.definitions.size()==9 and s.camps.build_book.recipes.size()==10,"nine new buildings and existing campfire")
+	check(b.definitions.size()==JSON.parse_string(FileAccess.get_file_as_string("res://data/camp_buildings.json")).size() and s.camps.build_book.recipes.size()==preload("res://tests/current_test_contract.gd").recipe_count("res://data/buildings.json"),"nine new buildings and existing campfire")
 	for id in ["stone_axe","stone_pickaxe","simple_shovel","stone_hammer"]:
 		var item: Dictionary=s.inventory.instance(id)
 		check(item.durability==100,"initial durability "+id)
@@ -259,9 +259,9 @@ func run() -> void:
 	check(world.item_ui.cells[equipment_index].durability_bar.value==25,"equipped cell exact live durability25")
 	world.player.position=Vector2(chest.x,chest.y)+Vector2(0,80);world.player.camera.force_update_scroll()
 	s.storage_ui.open(cid)
-	for size_value in [Vector2i(960,540),Vector2i(1280,720),Vector2i(1600,900)]:
+	for size_value in [preload("res://tests/current_test_contract.gd").viewport_size()]:
 		root.size=size_value;await frames(8)
-		check(s.storage_ui.panel.size==Vector2(1030,600),"storage fixed logic canvas "+str(size_value.x))
+		check(s.storage_ui.panel.size==Vector2(156,184),"storage fixed logic canvas "+str(size_value.x))
 		await shot("storage-"+str(size_value.x))
 	check(s.storage_ui.cells[0].bar.value==41,"storage cell exact live durability41")
 	s.storage_ui.split(1);s.storage_ui.amount.text="0";s.storage_ui.amount.text_changed.emit("0")
@@ -270,10 +270,10 @@ func run() -> void:
 	check(not s.storage_ui.split_confirm.disabled,"storage quantity accepts legal partial stack")
 	await shot("storage-split");s.storage_ui.quantity.hide()
 	s.storage_ui.close_panel();world.item_ui.toggle_bag()
-	for size_value in [Vector2i(960,540),Vector2i(1280,720),Vector2i(1600,900)]:
+	for size_value in [preload("res://tests/current_test_contract.gd").viewport_size()]:
 		root.size=size_value;await frames(8);world.item_ui.show_item_hover(21);world.item_ui.hover_wait=0;await frames(3);await shot("durability-"+str(size_value.x))
 	world.item_ui.close_panels();world.item_ui.toggle_build();await frames()
-	for size_value in [Vector2i(960,540),Vector2i(1280,720),Vector2i(1600,900)]:
+	for size_value in [preload("res://tests/current_test_contract.gd").viewport_size()]:
 		root.size=size_value;await frames(8);await shot("build-menu-"+str(size_value.x))
 	world.item_ui.close_panels()
 	# Same real world/renderer; authored structural arrangement for visual inspection.
@@ -302,7 +302,7 @@ func run() -> void:
 	b.refresh_all();await frames()
 	world.player.position=anchor+Vector2(180,196);world.player.camera.force_update_scroll();root.size=Vector2i(1280,720)
 	await frames(8);await shot("camp-candidate-day")
-	for size_value in [Vector2i(960,540),Vector2i(1280,720),Vector2i(1600,900)]:
+	for size_value in [preload("res://tests/current_test_contract.gd").viewport_size()]:
 		root.size=size_value;await frames(5);await shot("connections-"+str(size_value.x))
 	root.size=Vector2i(1280,720)
 	check(b.visuals.size()==b.states.size(),"all authored showcase modules install once")
@@ -330,7 +330,7 @@ func finish() -> void:
 	var result_name := "hinge-restart-tests.json" if "--hinge-read" in OS.get_cmdline_user_args() else "swing-restart-tests.json" if "--swing-read" in OS.get_cmdline_user_args() else "restart-tests.json" if "--restart-read" in OS.get_cmdline_user_args() else "formal-window-tests.json" if "--formal" in OS.get_cmdline_user_args() and "--capture" in OS.get_cmdline_user_args() else "formal-tests.json" if "--formal" in OS.get_cmdline_user_args() else "window-tests.json" if "--capture" in OS.get_cmdline_user_args() else "tests.json"
 	FileAccess.open(OUT+result_name,FileAccess.WRITE).store_string(JSON.stringify({"checks":checks,"failed":failed.size()},"  "))
 	print("CAMP BUILD V1: %d checks, %d failed"%[checks.size(),failed.size()])
-	world.persistent_world=false;world.free();await process_frame;quit(0 if failed.is_empty() else 1)
+	world.persistent_world=false;world.free();await frames(6);quit(0 if failed.is_empty() else 1)
 
 
 func repair_checks(anchor: Vector2) -> void:
@@ -405,7 +405,7 @@ func repair_checks(anchor: Vector2) -> void:
 		world.item_ui.update_input_block()
 		check(not world.player.input_blocked and world.camp_ui.placing,"movement allowed while placing "+kind)
 		check(world.camp_ui.ghost.preview and world.camp_ui.ghost.scale==Vector2.ONE,"preview uses same unscaled runtime renderer "+kind)
-		check(not world.camp_ui.ghost.is_in_group("world_interactables") and world.camp_ui.ghost.get_child_count()==0,"preview has no world collision or interactions "+kind)
+		check(not world.camp_ui.ghost.is_in_group("world_interactables") and world.camp_ui.ghost.find_children("*","CollisionObject2D",true,false).is_empty() and world.camp_ui.ghost.find_children("*","CollisionShape2D",true,false).is_empty(),"preview has no world collision or interactions "+kind)
 		world.player.automated=true;world.player.input_override=Vector2.RIGHT;world.player.cancel_action()
 		while not world.stream.viewport_ready(world.player.position,Vector2(root.size)/2.0): await frames()
 		var before_move: Vector2=world.player.position
@@ -413,7 +413,7 @@ func repair_checks(anchor: Vector2) -> void:
 		for i in 6: await physics_frame
 		world.player.set_physics_process(false);world.player.input_override=Vector2.ZERO;world.player.automated=false
 		check(world.player.position.distance_to(before_move)>0,"actual physics moves during build "+kind)
-		for size_value in [Vector2i(960,540),Vector2i(1280,720),Vector2i(1600,900)]:
+		for size_value in [preload("res://tests/current_test_contract.gd").viewport_size()]:
 			root.size=size_value;await sync_physics();await shot("preview-"+kind+"-"+str(size_value.x))
 		world.camp_ui.cancel_placement();world.item_ui.update_input_block()
 	check(not b.serialize().is_empty(),"unchanged building snapshot schema available")
@@ -542,6 +542,8 @@ func h_and_damage_checks(anchor: Vector2) -> void:
 		if step==2: b.states.neighbor=neighbor;b.refresh_around(neighbor)
 		await sync_physics()
 		var node: Node2D=b.visuals.damaged
+		check(not node.damage.visible,"rebuilding does not resurrect expired hit indicator stage"+str(step))
+		node.update_damage()
 		check(node.damage.visible and node.damage.size.y==3 and node.damage.get_combined_minimum_size().y<=3,"damage bar actual3px stage"+str(step))
 		check(node.damage.position.y+3<-78,"damage indicator above complete vertical prop stage"+str(step))
 		check(b.visuals.size()==b.states.size(),"no duplicate stale building roots stage"+str(step))

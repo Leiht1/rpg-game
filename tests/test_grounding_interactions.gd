@@ -31,6 +31,7 @@ func run()->void:
 	await key_m();await advance(15)
 	check(w.player.position.distance_to(start)>20.,"M release restores movement")
 	w.player.input_override=Vector2.ZERO
+	w.item_service.inventory.equipment.main_hand=w.item_service.inventory.instance("stone_axe");w.player.set_equipment(w.item_service.inventory)
 	w.player.facing="left";w.player.update_animation()
 	var visual:Node2D=w.player.character.get_node("Visual")
 	check(visual.scale.x==-1. and visual.position.x==128.,"left flip preserves native pivot")
@@ -57,6 +58,8 @@ func run()->void:
 		check(int(w.stream.tree_hits.get(id,0))==1,"chop does not duplicate hit")
 		w.player.cancel_action()
 		var drop:Node2D=w.stream.spawn_drop(w.player.position+Vector2(-20,0),"interpolation-check")
+		w.player.facing="left";w.player.update_animation()
+		check(w.player.selected_target()==drop,"facing loose pickup selects it ahead of the tree behind")
 		w.player.try_interact()
 		check(w.player.action=="pickup","pickup still starts")
 		await advance(45)

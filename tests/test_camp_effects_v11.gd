@@ -113,4 +113,6 @@ func run() -> void:
 	var failed := checks.filter(func(c):return not c.pass).size()
 	FileAccess.open(OUT+"checks.json",FileAccess.WRITE).store_string(JSON.stringify(checks,"  "))
 	print("CAMP EFFECTS V11: ",checks.size()," checks; ",failed," failures")
-	s.dirty=false;world.queue_free();await frames(6);quit(0 if failed==0 else 1)
+	s.dirty=false;world.queue_free();await frames(6)
+	if "--diagnose-exit" in OS.get_cmdline_user_args():Node.print_orphan_nodes()
+	quit(0 if failed==0 else 1)

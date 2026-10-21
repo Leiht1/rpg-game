@@ -39,7 +39,7 @@ func run() -> void:
 		check(gen.sample(gen.spawn).z<.03 and gen.coast_distance(gen.spawn)>0,'generator spawn dry %d'%seed_value)
 		var pop=preload('res://scripts/fishing_population.gd').new();start=Time.get_ticks_usec();pop.configure(gen)
 		var fishing_ms:=(Time.get_ticks_usec()-start)/1000.
-		check(pop.max_schools==28 and pop.spots.size()<=28 and pop.valid(pop.serialize()),'bounded fish populations %d'%seed_value)
+		check(pop.max_schools==56 and pop.spots.size()<=56 and pop.valid(pop.serialize()),'bounded fish populations %d'%seed_value)
 		var data:={'seed':seed_value,'old_generation_ms':old_ms,'new_generation_ms':generation_ms,'rooms':gen.rooms.size(),'lakes':gen.lakes.size(),'rivers':gen.rivers.size(),'sampled_land_fraction':land_cells/25600.,'biome_samples':counts,'fish':pop.spots.size(),'fish_candidates':pop.candidates.size(),'fish_build_ms':fishing_ms,'static_memory_mib':OS.get_static_memory_usage()/1048576.}
 		measurements.append(data);print(JSON.stringify(data))
 	var a=Explore.new();a.configure('world-a',73728)

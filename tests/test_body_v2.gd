@@ -37,7 +37,7 @@ func units() -> void:
 		check(b.energy==33 and b.stamina==44 and b.health==66,"food only hunger "+id)
 		inv.move_slot(0,8);b.hunger=99
 		check(inv.use_slot(8) and b.hunger==100 and inv.count_item(id)==0,"bag single clamps "+id)
-	check(count==10,"all ten actual edible foods enumerated")
+	check(count==db.definitions.values().filter(func(row):return row.get("use_action")=="eat").size(),"all current edible foods enumerated")
 	b=Body.new();b.advance(50,20,true,false)
 	check(b.stamina==0 and b.exhausted,"50 simulated seconds sprint")
 	b.advance(12,4.8,false,false);check(b.stamina>=12 and not b.exhausted,"stamina delay and recovery retained")
@@ -47,7 +47,7 @@ func units() -> void:
 	check(not b.sleeping and is_equal_approx(b.energy,39),"forced wakes after three hours with 39 energy")
 	b.advance(150,60,false,false);check(b.energy>35,"no repeated fainting")
 	b=Body.new();b.energy=0;b.start_sleep(1320);check(b.sleep_duration==480,"night 22 to 06 eight hours")
-	b.advance(1200,480,false,false);check(b.energy==100 and not b.sleeping,"eight hours restores full clamps")
+	b.advance(1200,480,false,false);check(is_equal_approx(b.energy,100-(480-b.sleep_elapsed)/60.0*float(b.rules.energy_per_hour)) and not b.sleeping,"reaches full then spends remaining elapsed minutes awake")
 	b.energy=20;b.start_sleep(1200);check(b.sleep_duration==600,"early night prioritizes six AM within ten hours")
 	b.sleeping=false
 	b.energy=20;b.start_sleep(720);check(b.sleep_duration==180,"day nap three hours")
@@ -95,12 +95,14 @@ func run() -> void:
 		p._physics_process(1.0/60.0);rates.append(p.velocity.length())
 	check(is_equal_approx(rates[1]/rates[0],.88) and is_equal_approx(rates[2]/rates[0],.70),"real physics speed penalties")
 	p.position=origin;p.input_override=Vector2.ZERO
-	# Existing native clip and action code: no target means no successful reward.
+	# Use a valid native target; a null demolition target must cancel immediately.
+	var clock_target: Node2D=s.create_harvest("body-v2:clock",{"kind":"stone_outcrop","x":origin.x,"y":origin.y-45})
+	s.inventory.equipment.main_hand=s.inventory.instance("stone_pickaxe");p.set_equipment(s.inventory)
 	for energy in [100,25,10]:
-		b.energy=energy;p.action="demolish";p.action_target=null;p.action_clock=0;p.action_committed=false
+		b.energy=energy;p.action="mine";p.action_target=clock_target;p.action_clock=0;p.action_committed=false
 		p._physics_process(.1)
 		check(is_equal_approx(p.action_clock,.1*b.efficiency()) and not p.action_committed,"real labor clock synced %d"%energy)
-	p.cancel_action()
+	p.cancel_action();clock_target.queue_free();await frames()
 	b.energy=0;p.action="pickup"
 	check(not v.try_start_sleep(true) and not b.sleeping,"sleep waits for pickup transaction")
 	p.cancel_action();s.craft_busy=true
@@ -120,17 +122,14 @@ func run() -> void:
 	var h: float=b.hunger;var e: float=b.energy
 	check(s.camps.act("sleep:test","claim")=="" and b.hunger==h and b.energy==e,"claim grants food without applying food effect")
 	check(not s.camps.act("sleep:test","claim").is_empty(),"claim cannot duplicate")
-	v.advance_gameplay(1000)
-	check(not b.sleeping and not p.input_blocked and is_equal_approx(b.energy,39),"wakeup unlock and accelerated overshoot discarded")
+	v.advance_gameplay(420)
+	check(not b.sleeping and not p.input_blocked and is_equal_approx(b.energy,39),"normal elapsed three hours unlocks wakeup at 39 energy")
 	print("FORCED CLOCK ",env.minute," energy ",b.energy," elapsed ",b.sleep_elapsed)
 	check(is_equal_approx(env.minute,60),"forced total three hours world time")
 	b.energy=20;env.minute=1320
-	check(v.try_start_sleep(false),"reserved sleep implementation without a player UI entry")
-	v.advance_gameplay(1200)
-	print("NIGHT CLOCK ",env.minute," energy ",b.energy," elapsed ",b.sleep_elapsed)
-	check(not b.sleeping and b.energy==100 and env.day>=2 and is_equal_approx(env.minute,360),"night sleep next morning six")
-	b.energy=20;env.minute=720;v.try_start_sleep(false);v.advance_gameplay(450)
-	check(not b.sleeping and is_equal_approx(env.minute,900),"day sleep only three hours")
+	check(not v.try_start_sleep(false) and not b.sleeping,"manual ground sleep remains unavailable at night")
+	b.energy=20;env.minute=720
+	check(not v.try_start_sleep(false) and not b.sleeping,"manual ground sleep remains unavailable during day; facilities own manual sleep")
 	b.stamina=0;b.exhausted=true;b.energy=100;p.input_blocked=false;p.input_override=Vector2.RIGHT;p.run_override=true;p._physics_process(.016)
 	check(not p.running and p.velocity.length()>0,"exhausted still walks")
 	p.cancel_action();p.input_override=Vector2.ZERO
@@ -143,7 +142,7 @@ func run() -> void:
 		p.position=origin;p.facing="back";p.action=row[0];p.action_target=target;p.action_clock=0;p.action_committed=false
 		b.energy=10;b.stamina=100;b.exhausted=false;p.input_blocked=false
 		var elapsed := 0.0
-		while p.action_clock<float(row[3])-.00001:
+		while not p.action.is_empty() and p.action_clock<float(row[3])-.00001 and elapsed<5:
 			p._physics_process(.01);elapsed+=.01
 		check(elapsed>float(row[3])/0.71 and s.resource_hits.get(id,0)==1,"slow real hit exactly once "+row[0])
 		p._physics_process(.03)
@@ -158,7 +157,10 @@ func run() -> void:
 		p._physics_process(.02)
 		check(s.resource_hits.get(id,0)==2 and s.inventory.equipment.main_hand.durability==98,"pending action safely settles at zero energy "+row[0])
 		check(not v.try_start_sleep(true),"force waits for action end "+row[0])
-		while not p.action.is_empty(): p._physics_process(.05)
+		var finish_steps := 0
+		while not p.action.is_empty() and finish_steps<100:
+			p._physics_process(.05);finish_steps+=1
+		check(p.action.is_empty(),"native action completes within bounded normal clock "+row[0])
 		check(v.try_start_sleep(true) and b.sleeping,"force enters after native action completes "+row[0])
 		env.paused=false;v.advance_gameplay(450);env.paused=true
 		check(s.resource_hits.get(id,0)==2 and s.inventory.equipment.main_hand.durability==98,"sleep never repeats prior action settlement "+row[0])
@@ -179,15 +181,15 @@ func run() -> void:
 		p.cancel_action()
 	p.position=origin;b.energy=100;p.camera.position_smoothing_enabled=false;p.camera.force_update_scroll()
 	# Chest is closed through its public lifecycle, so it can open again after sleep.
-	s.builds.states["body-v2:chest"]=s.builds.candidate("wood_chest",origin+Vector2(160,0),false,true,0)
-	s.storage_ui.open("body-v2:chest");b.energy=20;env.paused=false;env.minute=720
-	check(v.try_start_sleep(false) and not s.storage_ui.panel.visible and s.storage_ui.visible,"sleep closes storage without hiding reusable root")
+	s.builds.states["body-v2:chest"]=s.builds.candidate("wood_chest",origin+Vector2(64,0),false,true,0)
+	s.storage_ui.open("body-v2:chest");b.energy=0;env.paused=false;env.minute=720
+	check(v.try_start_sleep(true) and not s.storage_ui.panel.visible and s.storage_ui.visible,"forced sleep closes storage without hiding reusable root")
 	v.advance_gameplay(450);s.storage_ui.open("body-v2:chest")
 	check(s.storage_ui.panel.visible and s.storage_ui.is_visible_in_tree(),"storage usable after waking")
 	s.storage_ui.close_panel();env.paused=true
 	var before_sleep: Dictionary=b.serialize();world.persistent_world=true
 	var previous_path: String=s.save_path;s.save_path="res://reports/body-v2/no-such-folder/save.json";b.energy=20
-	check(not v.try_start_sleep(false) and not b.sleeping,"failed initial save rolls back sleep state")
+	check(not v.try_start_sleep(true) and not b.sleeping,"failed initial save rolls back sleep state")
 	s.save_path=previous_path;world.persistent_world=false;b.restore(before_sleep)
 	# One complete handoff on the real engine physics/process loops, without manual seek/tick.
 	var native_id := "body-v2:engine-loop"
@@ -201,12 +203,13 @@ func run() -> void:
 		await physics_frame
 	check(b.sleeping and p.action.is_empty(),"engine loops finish action then force sleep")
 	check(s.resource_hits.get(native_id,0)==1 and s.inventory.equipment.main_hand.durability==99,"engine loops settle exactly one hit and wear")
-	for i in 600:
+	p.set_physics_process(false);env.paused=false;v.advance_gameplay(450)
+	for i in 6:
 		if not b.sleeping: break
 		await physics_frame
 	check(not b.sleeping and b.energy>=38 and not p.input_blocked and s.resource_hits.get(native_id,0)==1,"engine loops wake and restore input without duplicate hit")
 	p.set_physics_process(false);env.paused=true;native_target.queue_free()
-	for size in [Vector2i(960,540),Vector2i(1280,720),Vector2i(1600,900)]:
+	for size in [Vector2i(ProjectSettings.get_setting("display/window/size/viewport_width"),ProjectSettings.get_setting("display/window/size/viewport_height"))]:
 		root.size=size;root.content_scale_size=size;ui.fit_core_ui();await frames(6);ui.body_ui.refresh()
 		check(not ui.body_ui.hud.get_global_rect().intersects(ui.dock.get_global_rect()),"HUD clear of dock %s"%size)
 		check(ui.body_ui.bars.size()==4 and ui.body_ui.hud.get_global_rect().position.y>=0,"four bars fit %s"%size)

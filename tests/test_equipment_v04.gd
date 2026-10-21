@@ -48,7 +48,9 @@ func equip_id(id: String) -> bool:
 	return false
 func isolated_checks() -> void:
 	var db := ItemDatabase.new()
-	check(db.errors.is_empty() and db.ids().size()==15,"database keeps 12 items and adds three tools")
+	var source: Array=JSON.parse_string(FileAccess.get_file_as_string("res://data/items.json"))
+	source.append_array(JSON.parse_string(FileAccess.get_file_as_string("res://data/merchant_items.json")))
+	check(db.errors.is_empty() and db.ids().size()==source.size(),"database loads every current item exactly once")
 	var inv := ItemInventory.new(db)
 	check(inv.add("stone_axe",2)==0,"tools fit as independent instances")
 	var first: Dictionary=inv.slots[8].duplicate(true)
@@ -58,7 +60,7 @@ func isolated_checks() -> void:
 	check(inv.equip(0) and inv.get_slot(40)==first and inv.slots[0].is_empty(),"equip moves whole instance from hotbar")
 	check(inv.has_capability("chop") and not inv.has_capability("mine") and not inv.has_capability("dig"),"axe grants only chop")
 	inv.add("stone_pickaxe",1)
-	check(inv.equip(8) and inv.slots[8]==first and inv.has_capability("mine") and not inv.has_capability("chop"),"occupied equipment swaps into source cell")
+	check(inv.equip(8) and inv.slots[0]==first and inv.slots[8].is_empty() and inv.has_capability("mine") and not inv.has_capability("chop"),"replacement returns old equipment to its original hotbar alias")
 	var before: Array=inv.slots.duplicate(true)
 	check(not inv.move_slot(40,41) and inv.slots==before and inv.has_capability("mine"),"wrong equipment slot rejects without mutation")
 	for i in range(8,40):
@@ -99,6 +101,10 @@ func run() -> void:
 	Engine.max_fps=60
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(OUT))
 	isolated_checks()
+	if "--logic" in OS.get_cmdline_user_args():
+		FileAccess.open(OUT+"logic-tests.json",FileAccess.WRITE).store_string(JSON.stringify({"checks":checks,"failures":failures}))
+		print("EQUIPMENT LOGIC ",checks.size()," checks; ",failures.size()," failures")
+		quit(0 if failures.is_empty() else 1);return
 	Engine.set_meta("integration_seed",271828)
 	world=load("res://tests/world_v06_formal_fixture.gd").new()
 	root.add_child(world)
@@ -111,7 +117,7 @@ func run() -> void:
 	service.inventory.add("wild_berry",3)
 	await key(KEY_B)
 	check(ui.bag.visible and ui.cells.size()==43,"one bag window displays 32 bag cells and three equipment cells")
-	check(ui.cells[8].global_position.x<ui.cells[40].global_position.x,"bag left and equipment right")
+	check(ui.cells[8].global_position.x>ui.cells[40].global_position.x,"bag right and equipment left")
 	check(ui.preview_actor!=null and ui.preview_view.size==Vector2i(156,228),"live original-rig character preview exists")
 	await click(ui.cells[8].get_global_rect().get_center(),MOUSE_BUTTON_RIGHT)
 	check(ui.equip_button.visible and ui.equip_button.text=="装备","right click tool offers equip")
@@ -197,16 +203,25 @@ func run() -> void:
 		await frames(12); await shot("ore-selected")
 		await key(KEY_E)
 		check(world.player.action=="mine","E starts pickaxe mining")
-		await create_timer(.85).timeout
-		check(service.consumed.has(ore_id) and service.loose.has(ore_id+":drop") and service.loose[ore_id+":drop"].count==3,"ore consumes once and creates three existing flint materials")
+		await create_timer(1.2).timeout
+		var required: int=int(ore.definition.hits)
+		var expected: Dictionary=ore.definition.drops.duplicate(true)
+		for reward in expected:expected[reward]=int(expected[reward])
+		for i in range(1,required):
+			await key(KEY_E);await create_timer(1.2).timeout
+		var rewards := {}
+		for row in service.loose.values():
+			if str(row.id).begins_with(ore_id+":loot:"):rewards[row.item_id]=int(rewards.get(row.item_id,0))+int(row.count)
+		check(service.consumed.has(ore_id) and rewards==expected,"ore consumes after configured hits and creates one exact reward batch")
 		var drop: Node2D
 		for node in world.stream.drops:
-			if is_instance_valid(node) and node.get_meta("drop_id","")==ore_id+":drop": drop=node
+			if is_instance_valid(node) and str(node.get_meta("drop_id","")).begins_with(ore_id+":loot:"): drop=node
 		check(drop!=null,"mined material remains a world pickup")
 		if drop!=null:
+			var drop_id: String=drop.get_meta("drop_id")
 			await motion(root.get_canvas_transform()*drop.position)
 			await key(KEY_E); await create_timer(.85).timeout
-			check(not service.loose.has(ore_id+":drop"),"E pickup works with equipped pickaxe")
+			check(not service.loose.has(drop_id),"E pickup works with equipped pickaxe")
 		await shot("mining-complete")
 	# Atomic real file round trip in an isolated fixture path.
 	world.player.cancel_action()
@@ -267,6 +282,7 @@ func run() -> void:
 	head_row.item_id="qa_head"; head_row.equip_slot="head"; head_row.equipment_type="headwear"; head_row.visual_id="qa_existing_head"; head_row.capabilities=[]
 	service.database.definitions.qa_head=head_row
 	world.player.appearance.registry.qa_existing_head={"front":[{"parent":"Visual/Pelvis/Head","texture":"res://assets/hero/cartoon/art/front_head.png","position":[0,0],"scale":.25}]}
+	ui.portrait_appearance.registry=world.player.appearance.registry.duplicate(true)
 	world.player.facing="front"
 	service.inventory.add("qa_head",1)
 	equip_id("qa_head")

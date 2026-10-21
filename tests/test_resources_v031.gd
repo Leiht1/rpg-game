@@ -150,15 +150,19 @@ func state_checks(service: Node, c: Vector2i) -> void:
 	check(JSON.parse_string(FileAccess.get_file_as_string("user://resource-v030-test.json")).resource_version==service.LEGACY_RESOURCE_VERSION,"legacy original preserved")
 	for path in ["user://resource-v031-test.json","user://resource-v030-test.json"]: DirAccess.remove_absolute(ProjectSettings.globalize_path(path))
 	world.persistent_world=false
-	# Discard requires loaded ground, just a dictionary marker suffices here.
-	world.stream.loaded[c]={}
+	# Discard validates real ground packets; a bare loaded marker is insufficient.
+	var drop_coord: Vector2i=world.stream.chunk_at(world.player.position)
+	if not world.stream.has_ground(world.player.position):
+		var packet: Dictionary=world.generator.build_chunk(drop_coord)
+		var stamps: Array[Dictionary]=[];packet["ground_stamps"]=stamps
+		world.stream.install_chunk(packet)
 	check(service.discard(8,1),"player drop API")
 	var player_id := ""
 	for id in service.loose:
 		if str(id).begins_with("player:"): player_id=id
 	check(not player_id.is_empty() and service.loose[player_id].origin=="player","player drop namespace separate")
-	world.stream.loaded.erase(c)
 	service.inventory=ItemInventory.new(service.database)
+	await create_timer(.8).timeout
 	for node in world.stream.drops:
 		if node.get_meta("drop_id")==player_id: check(service.pickup(node),"player drop can be picked back up"); break
 	check(not service.loose.has(player_id),"player drop conserved through pickup")

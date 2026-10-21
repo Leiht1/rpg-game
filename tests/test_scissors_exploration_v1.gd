@@ -47,7 +47,7 @@ func run()->void:
    var tool=p.character.get_node("Visual/Pelvis/ArmR/HeldTool")
    var arm=tool.get_parent()
    check(is_equal_approx(tool.scale.x,.25) and tool.offset==Vector2(-128,-161),"larger scissors registered at actual handle "+facing+str(work))
-   if facing=="front":check(not arm.show_behind_parent and tool.get_index()==0,"front hand and scissors before clothing; palm grips handle "+str(work))
+   if facing=="front":check(not arm.show_behind_parent and tool.get_index()==arm.get_child_count()-1,"front scissors before palm and clothing "+str(work))
    elif facing=="back":check(p.held_tool.rear_tool.visible and not tool.visible,"back scissors use shared layer behind legs "+str(work))
    else:check(tool.visible and not p.held_tool.rear_tool.visible,"side scissors restore native mirrored layer "+facing+str(work))
    await snap(facing+("-shear" if work else "-idle"))

@@ -96,7 +96,8 @@ func run() -> void:
 	f.set_process(false)
 	var formal_rod: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/held_tools.json"))["tool:fishing_rod"]
 	check(is_equal_approx(float(f.registration.scale),float(formal_rod.scale)) and Vector2(f.registration.canvas[0],f.registration.canvas[1])==load(formal_rod.texture).get_size(),"candidate rod uses original 256 canvas and original 0.24 held size")
-	check(is_instance_valid(f.fish_texture) and is_instance_valid(f.float_texture) and is_instance_valid(w.player.character.get_node("Visual/Pelvis/ArmR/HeldTool").texture),"all candidate textures imported and loaded")
+	w.player.update_animation()
+	check(is_instance_valid(f.fish_texture) and is_instance_valid(f.float_texture) and is_instance_valid(load(formal_rod.texture)),"all formal fishing textures imported and loaded")
 	w.environment_view.simulation.paused=true
 	w.item_service.item_obtained.connect(func(id: String,count: int): rewards.append([id,count]))
 	await frames(12)
@@ -286,7 +287,7 @@ func run() -> void:
 	var generated_population=load("res://scripts/fishing_population.gd").new()
 	generated_population.configure(w.generator)
 	var generated: Array[Dictionary]=generated_population.spots
-	check(generated.size()>0 and generated.size()<=20,"formal lake points generated sparsely")
+	check(generated.size()>0 and generated.size()<=generated_population.max_schools,"formal lake points respect current sparse population cap")
 	var valid := true
 	for spot in generated:
 		valid=valid and w.generator.can_walk(spot.stand,20) and w.fish_water_clearance(spot.water) and spot.stand.distance_to(spot.water)<175

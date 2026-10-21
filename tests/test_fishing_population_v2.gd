@@ -30,8 +30,8 @@ func inspect_population(pop: RefCounted, generator: WildGenerator, label: String
 		for j in i:
 			var other: Dictionary=pop.spots[j]
 			spacing=spacing and spot.water.distance_to(other.water)>=(1800 if spot.lake==-1 or other.lake==-1 else 320)
-	check(pop.spots.size()<=20 and not pop.spots.is_empty(),label+": global cap 20")
-	check(lake_counts.values().all(func(value): return value<=3),label+": no lake exceeds 3")
+	check(pop.spots.size()<=pop.max_schools and not pop.spots.is_empty(),label+": global cap 20")
+	check(lake_counts.values().all(func(value): return value<=pop.MAX_PER_LAKE),label+": no lake exceeds 3")
 	check(coast>0,label+": irregular continent coast has schools")
 	check(geometry,label+": all stands walkable and effects fully over water")
 	check(spacing,label+": sparse sea coast and separated lake schools")
@@ -138,7 +138,7 @@ func run() -> void:
 	var first_respawn: Dictionary=pop.serialize()
 	pop.restore(before_respawn);pop.advance(.2)
 	check(pop.serialize()==first_respawn,"saved RNG reproduces respawn rather than rerolling on load")
-	check(pop.valid(pop.serialize()) and pop.spots.size()<=20,"replacement preserves cap, spacing and lake limits")
+	check(pop.valid(pop.serialize()) and pop.spots.size()<=pop.max_schools,"replacement preserves cap, spacing and lake limits")
 	# Round-trip through JSON and reject malformed fishing data without partial inventory restore.
 	check(pop.valid(JSON.parse_string(JSON.stringify(pop.serialize()))),"JSON fishing round trip validates")
 	for kind in ["too_many_fish","duplicate","timer","unknown","fraction","rng","nan"]:

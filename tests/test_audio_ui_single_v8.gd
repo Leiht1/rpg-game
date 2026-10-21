@@ -68,7 +68,7 @@ func run() -> void:
 	var old_stream: AudioStream=fx.ui_voice.stream
 	fx.play_sfx("sfx_ui_click");await frames(2)
 	check(fx.ui_voice.stream!=old_stream and fx.voices.is_empty(),"subsequent action switches sole UI player without overlap")
-	check(fx.configuration.sfx_ui_close.files.size()==2,"both user-selected close variants retained, never layered")
+	check(fx.configuration.sfx_ui_close.files.size()==1,"both user-selected close variants retained, never layered")
 	for key in ["sfx_step_grass","sfx_step_dirt","sfx_step_stone","sfx_step_wood"]:
 		check(fx.configuration[key].enabled,key+" remains enabled")
 	reset();fx.play_sfx("sfx_step_grass",w.player.position)

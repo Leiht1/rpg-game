@@ -39,10 +39,18 @@ func _process(_delta: float) -> void:
 	if startup or busy:return
 	var path:=folder.path_join("request.json")
 	if not FileAccess.file_exists(path):return
+	# Windows scanners can briefly hold an atomically published request. Leave it
+	# pending until it can be opened, instead of consuming an empty failed read.
+	var file:=FileAccess.open(path,FileAccess.READ)
+	if file==null:return
+	var text:=file.get_as_text();file.close()
+	var parser:=JSON.new()
+	var parsed:=parser.parse(text)
+	if DirAccess.remove_absolute(path)!=OK:return
 	busy=true
-	var request=JSON.parse_string(FileAccess.get_file_as_string(path))
-	DirAccess.remove_absolute(path)
-	call_deferred("execute",request)
+	if parsed!=OK or not parser.data is Dictionary:
+		write_result({"ok":false,"error":"服务端请求文件格式错误，原档已保留"});busy=false;return
+	call_deferred("execute",parser.data)
 	return
 func write_result(value: Dictionary) -> void:
 	var temporary:=folder.path_join("result.tmp")

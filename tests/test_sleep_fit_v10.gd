@@ -30,7 +30,7 @@ func run() -> void:
 			if not row.is_empty():break
 		check(not row.is_empty(),"clear enlarged footprint site "+label)
 		if row.is_empty():continue
-		var center=Vector2(row.x,row.y);var half: Vector2=b.footprint(row)*.5
+		var bounds: Rect2=b.footprint_rect(row);var center=Vector2(row.x,row.y)+bounds.get_center();var half: Vector2=bounds.size*.5
 		for side in [Vector2(-1,0),Vector2(1,0),Vector2(0,-1),Vector2(0,1)]:
 			var wall=Node2D.new();wall.position=center+side*(half+Vector2(18,18));wall.set_meta("building_id","test_wall");wall.set_meta("camp_layer","edge");w.add_child(wall);wall.add_to_group("world_interactables")
 			var body=StaticBody2D.new();wall.add_child(body);var shape=CollisionShape2D.new();var rectangle=RectangleShape2D.new();rectangle.size=Vector2(8,half.y*2+44) if side.x else Vector2(half.x*2+44,8);shape.shape=rectangle;body.add_child(shape);room.append(wall)

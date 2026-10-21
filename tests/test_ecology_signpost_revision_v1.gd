@@ -1,7 +1,7 @@
 extends "res://tests/test_ecology_signpost_v1.gd"
 func run()->void:
  Engine.set_meta("integration_seed",271828)
- w=load("res://tests/world_v06_formal_fixture.gd").new();root.add_child(w)
+ w=load("res://tests/world_clean_camp_fixture.gd").new();root.add_child(w)
  while not w.started:await process_frame
  w.environment_view.set_process(false);w.player.set_physics_process(false);w.set_process(false)
  s=w.item_service;s.set_process(false);b=s.builds;p=w.player;ui=w.camp_ui
@@ -30,7 +30,10 @@ func run()->void:
   counts[str(seed_value)]={"rock_interior_cells":rock_count,"pure":pure_count,"outside_old_mud":not_old_mud}
  stats=counts
  s.inventory.add("wood",30);s.inventory.add("plant_fiber",20)
+ while not w.stream.viewport_ready(p.position,Vector2(640,360)):await process_frame
  var row=find_row();var before=s.inventory.slots.duplicate(true)
+ check(not row.is_empty(),"loaded clear site exists for signpost")
+ if row.is_empty():await finish("revision");return
  ui.begin_build("build_signpost");ui.paint_at(Vector2(row.x,row.y));await frames()
  check(ui.sign_dialog.borderless,"paper title stays inside frame without native decoration")
  check(ui.sign_dialog.visible and ui.sign_dialog.get_theme_stylebox("panel") is StyleBoxTexture,"naming reuses paper frame")

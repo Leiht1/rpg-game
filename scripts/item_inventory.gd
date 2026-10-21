@@ -65,7 +65,8 @@ func unequip(index: int) -> bool:
 	return false
 
 func instance(id: String) -> Dictionary:
-	var value := {"item_id":id,"count":1,"instance_id":str(ResourceUID.create_id()),"state":{},"durability":database.item(id).get("durability")}
+	var maximum=database.item(id).get("durability")
+	var value := {"item_id":id,"count":1,"instance_id":str(ResourceUID.create_id()),"state":{},"durability":int(maximum) if maximum!=null else null}
 	if database.item(id).get("use_action","")=="light":value.lamp_id=value.instance_id;value.fuel=float(database.item(id).get("lamp_lifetime",1800.0))
 	if id=="solar_flashlight":value.state=preload("res://scripts/solar_flashlight.gd").fresh()
 	return value

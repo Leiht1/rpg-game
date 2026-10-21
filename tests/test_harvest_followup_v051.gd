@@ -74,7 +74,7 @@ func run() -> void:
 		await create_timer(1.28).timeout
 		check(int(service.resource_hits.get(id,0))==2 and world.player.action.is_empty(),"release finishes current cycle and stops "+action)
 		# Hold again to complete exactly once, never advance to a different object.
-		await key(KEY_E,true);await create_timer(1.8).timeout;await key(KEY_E,false)
+		await key(KEY_E,true);await create_timer((int(node.definition.hits)-2)*1.12+.2).timeout;await key(KEY_E,false)
 		check(service.consumed.has(id) and int(service.resource_hits[id])==int(node.definition.hits) if is_instance_valid(node) else service.consumed.has(id),"held E completes resource once "+action)
 		world.player.set_physics_process(false);world.player.cancel_action()
 	# Native keyboard equips physical hotbar tools and leaves current icon visible.

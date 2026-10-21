@@ -11,4 +11,4 @@ func run() -> void:
 	var failed: Array=checks.filter(func(v): return not v.pass)
 	FileAccess.open(OUT+"h-damage-window-tests.json",FileAccess.WRITE).store_string(JSON.stringify({"checks":checks,"failed":failed.size()},"  "))
 	print("H/DAMAGE WINDOW: %d checks, %d failed"%[checks.size(),failed.size()])
-	world.persistent_world=false;world.free();await process_frame;quit(0 if failed.is_empty() else 1)
+	world.persistent_world=false;world.free();await frames(6);quit(0 if failed.is_empty() else 1)

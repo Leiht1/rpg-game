@@ -27,6 +27,7 @@ func run():
 		await finish("consumed");return
 	check(s.inventory.equipment.get("outfit",{}).get("item_id")=="modern_outfit","fresh process restores equipped outfit")
 	# Move and run through all four actual input paths on the loaded continent.
+	while not w.stream.viewport_ready(p.position,Vector2(640,360)):await process_frame
 	var movement_origin=p.position
 	p.automated=true
 	for direction in [Vector2.RIGHT,Vector2.LEFT,Vector2.DOWN,Vector2.UP]:

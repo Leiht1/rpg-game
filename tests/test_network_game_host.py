@@ -36,6 +36,50 @@ class RulesHostTests(unittest.TestCase):
         for key in ("world_id", "seed", "slots", "body", "buildings", "campfires"):
             self.assertEqual(self.baseline[key], result["snapshot"][key])
 
+    @unittest.skipUnless(os.name == "nt", "Windows mailbox sharing regression")
+    def test_busy_request_is_retried_without_losing_command(self):
+        import ctypes
+        import threading
+        from ctypes import wintypes
+        kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+        kernel.CreateFileW.argtypes = [wintypes.LPCWSTR, wintypes.DWORD, wintypes.DWORD,
+                                      ctypes.c_void_p, wintypes.DWORD, wintypes.DWORD, wintypes.HANDLE]
+        kernel.CreateFileW.restype = wintypes.HANDLE
+        kernel.CloseHandle.argtypes = [wintypes.HANDLE]
+        replace = os.replace
+        held = []
+        timers = []
+        def publish_locked(source, target):
+            # Allow atomic rename but deny Godot's read until the timer releases it.
+            handle = kernel.CreateFileW(str(source), 0x80000000, 4, None, 3, 0, None)
+            self.assertNotEqual(handle, ctypes.c_void_p(-1).value)
+            held.append(handle)
+            try:
+                replace(source, target)
+            finally:
+                timer = threading.Timer(.3, lambda: kernel.CloseHandle(handle))
+                timers.append(timer);timer.start()
+        try:
+            with patch('game_host.os.replace', publish_locked):
+                reply = self.host.execute(copy.deepcopy(self.baseline))
+            self.assertTrue(reply['ok'], reply.get('error'))
+            self.assertEqual(reply['snapshot']['slots'], self.baseline['slots'])
+            self.assertTrue(held)
+            self.assertTrue(self.host.execute(copy.deepcopy(self.baseline))['ok'])
+        finally:
+            for timer in timers:timer.join()
+
+    def test_malformed_mailbox_does_not_stall_next_request(self):
+        temporary = self.host.folder / 'request.tmp'
+        temporary.write_text('{incomplete', encoding='utf-8')
+        os.replace(temporary, self.host.folder / 'request.json')
+        rejected = self.host._receive(5)
+        self.assertFalse(rejected['ok'])
+        self.assertTrue(rejected['error'])
+        restored = self.host.execute(copy.deepcopy(self.baseline))
+        self.assertTrue(restored['ok'], restored.get('error'))
+        self.assertEqual(restored['snapshot']['slots'], self.baseline['slots'])
+
     def test_windows_busy_result_file_does_not_mix_replies(self):
         original=Path.read_text
         attempts=[]

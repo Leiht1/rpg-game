@@ -17,7 +17,7 @@ func native_drag(owner_world:Node,source:Control,target:Control)->void:
 func _initialize()->void:call_deferred("run")
 func run()->void:
 	DirAccess.make_dir_recursive_absolute(OUT);Engine.set_meta("integration_seed",271828);Engine.set_meta("chest_open_preview",false)
-	var w=load("res://tests/world_v06_formal_fixture.gd").new();root.add_child(w)
+	var w=load("res://tests/world_clean_camp_fixture.gd").new();root.add_child(w)
 	while not w.started:await process_frame
 	var s=w.item_service;var b=s.builds;var p=w.player;var storage=s.storage_ui
 	w.set_process(false);w.environment_view.set_process(false);p.set_physics_process(false)

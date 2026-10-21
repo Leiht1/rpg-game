@@ -23,12 +23,22 @@ func stock() -> void:
 		s.inventory.add(id,20)
 func cmd(id: String, action: String, index: int=0,key: String="", count: int=1, materials: Dictionary={}) -> String:
 	return s.industry.act(id,action,index,key,count,materials)
+func approved_art(path: String) -> bool:
+	if path.begins_with("res://assets/industry/v1/"):
+		var source: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://assets/industry/v1/provenance.json"))
+		return source.approval=="approved_by_user" and source.files.get(path.get_file(),"")==FileAccess.get_sha256(path)
+	if path.begins_with("res://assets/camp_expansion/v2/"):
+		var source: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://assets/camp_expansion/v2/provenance.json"))
+		if source.status!="approved_user":return false
+		for row in source.files:
+			if "res://"+row.runtime==path:return row.sha256==FileAccess.get_sha256(path)
+	return false
 func finish() -> void:
 	var failed: Array=checks.filter(func(c):return not c.pass)
 	var f=FileAccess.open(OUT+("window" if "window" in OS.get_cmdline_user_args() else "restart" if "read" in OS.get_cmdline_user_args() else "headless")+".json",FileAccess.WRITE)
 	f.store_string(JSON.stringify({"count":checks.size(),"failed":failed.size(),"checks":checks},"\t"));f.close()
 	print("INDUSTRY V1: ",checks.size()," checks; ",failed.size()," failures")
-	w.persistent_world=false;w.free();await process_frame;quit(0 if failed.is_empty() else 1)
+	w.persistent_world=false;w.free();await frames(6);quit(0 if failed.is_empty() else 1)
 func run() -> void:
 	DirAccess.make_dir_recursive_absolute(OUT)
 	Engine.set_meta("industry_preview",not "formal" in OS.get_cmdline_user_args());Engine.set_meta("integration_seed",271828)
@@ -63,10 +73,10 @@ func run() -> void:
 			if row.get("industry",false): check(row.default_unlocked,"formal construction recipe open "+row.recipe_id)
 		for kind in s.builds.definitions:
 			var d: Dictionary=s.builds.definitions[kind]
-			if d.get("industry",false):check(d.art.begins_with("res://assets/industry/v1/"),"formal building art "+kind)
+			if d.get("industry",false):check(approved_art(d.art),"formal building art retains approved source SHA "+kind)
 		for id in s.database.ids():
 			var d: Dictionary=s.database.item(id)
-			if d.get("industry",false):check(d.icon.begins_with("res://assets/industry/v1/") and s.texture(id,"icon")!=null,"formal inventory art "+id)
+			if d.get("industry",false):check(approved_art(d.icon) and s.texture(id,"icon")!=null,"formal inventory art retains approved source SHA "+id)
 		check(s.stack_texture({"item_id":"roasted_carrot","count":1,"spoilage":1.0},"icon")==load("res://assets/industry/v1/rotten_roasted_carrot.png"),"rotten food uses formal art")
 	stock()
 	make_build("furnace","stone_furnace");make_build("metal","metal_workbench");make_build("oven","copper_oven");make_build("lamp","copper_lamp");make_build("trough","feed_trough");make_build("fridge","refrigerator");make_build("cabinet","reinforced_cabinet")
@@ -80,27 +90,32 @@ func run() -> void:
 	check(cmd("furnace","claim").length()>0,"unfinished output cannot be claimed")
 	check(cmd("furnace","fuel",0,"stone").length()>0,"invalid fuel rejected")
 	check(cmd("furnace","fuel",0,"wood").is_empty(),"fuel added transactionally")
+	check(cmd("furnace","ignite").is_empty(),"manual furnace ignition")
 	s.industry.advance(10,4)
 	check(s.builds.states.furnace.machine.jobs[0].elapsed==10,"powered furnace advances")
 	check(cmd("furnace","start",0,"smelt_silver").is_empty(),"second metal queues")
 	check(s.builds.states.furnace.machine.queue.size()==1,"queue persisted in building")
 	s.industry.advance(14,5.6)
-	check(s.builds.states.furnace.machine.jobs[0].ready,"copper completes")
+	check(s.builds.states.furnace.machine.completed.size()==1 and s.builds.states.furnace.machine.completed[0].ready,"copper completes in output tray")
 	var old_path: String=s.save_path;s.save_path="res://reports/industry-v1/missing/invalid.json"
 	var count: int=s.inventory.count_item("copper_ingot")
 	check(cmd("furnace","claim").length()>0,"claim save failure reported")
-	check(s.inventory.count_item("copper_ingot")==count and s.builds.states.furnace.machine.jobs[0].ready,"failed claim restores output and inventory")
+	check(s.inventory.count_item("copper_ingot")==count and s.builds.states.furnace.machine.completed.size()==1,"failed claim restores output and inventory")
 	s.save_path=old_path
 	check(cmd("furnace","claim").is_empty(),"claim successful")
 	check(events.back()==["copper_ingot",1],"claim uses unified obtained event")
 	check(cmd("furnace","claim").length()>0,"duplicate claim blocked")
 	s.industry.advance(32,12.8)
-	check(s.builds.states.furnace.machine.jobs[0].ready,"queued silver completes")
+	check(s.builds.states.furnace.machine.completed.size()==1 and s.builds.states.furnace.machine.completed[0].ready,"queued silver completes")
 	check(cmd("furnace","claim").is_empty(),"silver claimed")
 	for id in ["metal_copper_plate","metal_copper_parts","metal_metal_connector","metal_copper_axe","metal_copper_pickaxe","metal_copper_shovel","metal_copper_hammer","metal_fishing_rod","metal_silver_lantern"]:
-		check(cmd("metal","start",0,id).is_empty(),"start "+id)
-		s.industry.advance(15,6)
-		check(cmd("metal","claim").is_empty(),"claim "+id)
+		s.craft_station_id="metal"
+		var output: String=s.craft_book.recipe(id).output_id
+		var before_output: int=s.inventory.count_item(output)
+		check(s.start_craft(id,1).is_empty(),"start current metal crafting "+id)
+		s.advance_craft(1.5)
+		check(s.inventory.count_item(output)==before_output+int(s.craft_book.recipe(id).output_count),"atomic current metal crafting output "+id)
+	s.craft_station_id=""
 	for id in ["copper_axe","copper_pickaxe","copper_shovel","copper_hammer"]:
 		check(s.database.item(id).durability==250,"250 durability "+id)
 		check(s.database.item(id).stats.labor_speed>1.0,"labor speed improves "+id)
@@ -110,8 +125,9 @@ func run() -> void:
 	s.inventory.equipment.clear();s.inventory.hotbar_equipment.clear()
 	stock()
 	check(cmd("oven","fuel",0,"wood",2).is_empty(),"oven shared fuel added")
+	check(cmd("oven","ignite").is_empty(),"manual oven ignition")
 	for i in 4:check(cmd("oven","start",i,"",1,{"wild_carrot":1}).is_empty(),"independent oven slot "+str(i))
-	check(cmd("oven","start",0,"",1,{"wild_carrot":1}).length()>0,"occupied oven slot protected")
+	check(cmd("oven","start",0,"",1,{"wild_carrot":1}).is_empty() and s.builds.states.oven.machine.queue.size()==1,"occupied oven slot admits one paid queued job")
 	var slots: Array=s.inventory.slots.duplicate(true)
 	check(cmd("oven","start",3,"",1,{"stone":1}).length()>0 and s.inventory.slots==slots,"bad recipe never consumes")
 	s.industry.advance(6,2.4)
@@ -120,9 +136,12 @@ func run() -> void:
 	s.builds.states.oven.machine.fuel=0
 	s.industry.advance(8,3.2)
 	check(s.builds.states.oven.machine.jobs[0].elapsed==6,"oven pauses without losing progress")
-	cmd("oven","fuel",0,"wood");s.industry.advance(6,2.4)
-	check(s.builds.states.oven.machine.jobs.all(func(j):return j.ready),"four jobs complete independently")
-	for i in 4:check(cmd("oven","claim",i).is_empty(),"claim oven slot "+str(i))
+	cmd("oven","fuel",0,"wood");cmd("oven","ignite");s.industry.advance(6,2.4)
+	check(s.builds.states.oven.machine.completed.size()==4,"four parallel jobs move to output tray")
+	var carrot_before: int=s.inventory.count_item("roasted_carrot")
+	check(cmd("oven","claim_all").is_empty() and s.inventory.count_item("roasted_carrot")==carrot_before+4,"one claim collects four independent products")
+	s.industry.advance(12,4.8)
+	check(cmd("oven","claim_all").is_empty() and s.inventory.count_item("roasted_carrot")==carrot_before+5,"queued fifth product completes exactly once")
 	check(s.builds.states.oven.machine.jobs.all(func(j):return j.is_empty()),"claimed slots return empty")
 	check(s.industry.oven_recipe({"wild_carrot":1})=="roast_carrot","real recipe wins over fallback")
 	check(s.industry.oven_recipe({"wild_carrot":2})=="oven_small_hodgepodge","two total ingredients make small hodgepodge")
@@ -133,10 +152,10 @@ func run() -> void:
 		check(cmd("oven","start",0,"",1,{"wild_carrot":spec[0]}).is_empty(),"start "+spec[1])
 		check(s.inventory.count_item("wild_carrot")==initial_count-spec[0],"fallback pays exact ingredient quantity "+spec[1])
 		s.industry.advance(18,7.2)
-		check(s.builds.states.oven.machine.jobs[0].output.item_id==spec[1] and s.builds.states.oven.machine.jobs[0].ready,"fallback output completes "+spec[1])
+		check(s.builds.states.oven.machine.completed.size()==1 and s.builds.states.oven.machine.completed[0].output.item_id==spec[1],"fallback output completes "+spec[1])
 		var claim_slots: Array=s.inventory.slots.duplicate(true)
 		for i in 40:s.inventory.slots[i]={"item_id":"stone","count":int(s.database.item("stone").max_stack)}
-		check(not cmd("oven","claim").is_empty() and s.builds.states.oven.machine.jobs[0].ready,"full inventory preserves ready "+spec[1])
+		check(not cmd("oven","claim").is_empty() and s.builds.states.oven.machine.completed.size()==1,"full inventory preserves ready "+spec[1])
 		s.inventory.slots.assign(claim_slots)
 		check(cmd("oven","claim").is_empty(),"claim "+spec[1])
 		check(s.database.item(spec[1]).effects.hunger==spec[2] and s.database.item(spec[1]).effects.get("health",0)==0,"only hunger benefit "+spec[1])

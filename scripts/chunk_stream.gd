@@ -247,13 +247,16 @@ func tree_in_reach(at: Vector2, tree: Node2D) -> bool:
 	return is_instance_valid(tree) and tree.is_in_group("trees") and at.distance_to(tree.position)<62 and clear_reach(at,tree.position,tree)
 
 func clear_reach(from: Vector2,to: Vector2,target: Node2D=null) -> bool:
+	if not from.is_finite() or not to.is_finite():return false
+	var direction: Vector2=to-from
+	if direction.is_zero_approx():return true
 	var query := PhysicsRayQueryParameters2D.create(from,to)
 	query.exclude=[]
+	if items!=null and items.world is Node and is_instance_valid(items.world.player):
+		query.exclude=[items.world.player.get_rid()]
 	var hit := get_world_2d().direct_space_state.intersect_ray(query)
-	if hit.is_empty(): return true
-	# The actor itself is ignored by starting the ray outside its ten-pixel feet.
-	query.from=from+(to-from).normalized()*12
-	hit=get_world_2d().direct_space_state.intersect_ray(query)
+	# Exclude the actor by identity. Offsetting a twelve-unit ray by twelve
+	# units made its endpoints equal and triggered physics normalization errors.
 	return hit.is_empty() or (target!=null and (hit.collider==target or hit.collider.get_parent()==target))
 
 func chop_tree(tree: Node2D) -> void:

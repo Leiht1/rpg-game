@@ -63,6 +63,10 @@ func run()->void:
  var map=w.map_view
  map.open_map()
  while map.row<map.resolution:await process_frame
+ await create_timer(.2).timeout
+ var deadline: int=Time.get_ticks_msec()+10000
+ while map.view_loading and Time.get_ticks_msec()<deadline:await process_frame
+ check(not map.view_loading,"map viewport finished before hidden-marker comparison")
  map.set_process(false);map.queue_redraw()
  var a:Image=await capture();a.save_png(OUT+"map.png")
  var original_spawn=w.generator.spawn
@@ -71,8 +75,9 @@ func run()->void:
  check(a.get_data()==b.get_data(),"GPU map is identical when hidden spawn changes; no marker or label remains")
  w.generator.spawn=original_spawn
  check(s.builds.map_signposts().size()==1 and s.builds.map_signposts()[0].text=="原野","player-created signposts remain on map")
+ var previous_zoom: float=map.zoom
  event=InputEventMouseButton.new();event.button_index=MOUSE_BUTTON_WHEEL_UP;event.pressed=true;event.position=map.map_rect.get_center();map._input(event)
- check(is_equal_approx(map.zoom,1.25),"map zoom unchanged")
+ check(is_equal_approx(map.zoom,minf(32,previous_zoom*1.25)),"current local-map zoom advances one original wheel step")
  map.close_map();check(not map.visible,"map closes normally")
  var result={"count":checks.size(),"failed":checks.filter(func(c):return not c.pass).size(),"checks":checks}
  FileAccess.open(OUT+"checks.json",FileAccess.WRITE).store_string(JSON.stringify(result,"\t"))

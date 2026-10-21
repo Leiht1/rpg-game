@@ -68,6 +68,10 @@ var navigation_ms := 0.0
 var discard_serial := 0
 var texture_cache: Dictionary = {}
 signal notice(message: String)
+func _init() -> void:
+	# Distribution workers also instantiate this service. Own the merchant before
+	# configure so freeing those temporary services releases all their nodes.
+	add_child(merchant)
 func notify_build_cost(materials: Dictionary) -> void:
 	var entries: Array[String]=[]
 	for id in materials:
@@ -80,7 +84,7 @@ func configure(owner_world: Node, art_preview: bool) -> void:
 	if world.get("record") is Dictionary: identity=str(world.record.get("world_id",identity))
 	exploration.configure(identity,world.generator.extent)
 	if world.get_meta("character_preview",false):preload("res://scripts/character_catalog.gd").enable_candidate(database)
-	add_child(merchant);merchant.configure(self)
+	merchant.configure(self)
 	fishing_population.configure(world.generator)
 	camps.service=self
 	builds.service=self

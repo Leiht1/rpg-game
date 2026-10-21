@@ -16,7 +16,7 @@ func _initialize() -> void: call_deferred("run")
 func run() -> void:
 	DirAccess.make_dir_recursive_absolute(OUT)
 	Engine.set_meta("integration_seed",98171023)
-	w=load("res://tests/world_v06_formal_fixture.gd").new();root.add_child(w)
+	w=load("res://tests/world_clean_camp_fixture.gd").new();root.add_child(w)
 	while not w.started: await process_frame
 	s=w.item_service;b=s.builds
 	w.environment_view.set_process(false);w.set_process(false);w.player.set_physics_process(false)
@@ -99,7 +99,7 @@ func run() -> void:
 	w.environment_view.advance_gameplay(1)
 	check(is_equal_approx(b.states[id].growth_minutes,1440.0/(sim.day_length_minutes*60.0)),"growth follows real gameplay minutes")
 	# Full bag must retain ripe crop; save failure must restore both sides.
-	b.states[id].growth_minutes=360.0
+	b.states[id].growth_minutes=float(s.planting.rules.crops.carrot.minutes)
 	var slots: Array=s.inventory.slots.duplicate(true)
 	for i in 40: s.inventory.slots[i]={"item_id":"stone","count":99}
 	check(not s.planting.interact(id,node) and s.planting.stage(b.states[id])==2,"full bag does not lose crop")
@@ -132,7 +132,7 @@ func run() -> void:
 	# All four states are ordinary hammer-demolishable buildings, without crop rewards.
 	for state in ["idle","growing","mature","roots"]:
 		var r: Dictionary=row.duplicate(true);r.crop="";r.growth_minutes=0.0;r.roots=false
-		if state in ["growing","mature"]:r.crop="carrot";r.growth_minutes=360.0 if state=="mature" else 1.0
+		if state in ["growing","mature"]:r.crop="carrot";r.growth_minutes=float(s.planting.rules.crops.carrot.minutes) if state=="mature" else 1.0
 		if state=="roots":r.roots=true
 		b.states={id:r};b.refresh_all();await frames();node=b.visuals[id];w.player.position=node.position+Vector2(0,40);await physics_frame
 		equip("stone_hammer");var event_count: int=events.size()

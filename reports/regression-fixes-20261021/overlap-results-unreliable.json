@@ -1,0 +1,2073 @@
+[
+  {
+    "label": "test_equipment_v04",
+    "category": "native",
+    "exit": 1,
+    "seconds": 1.02,
+    "log": "logs\\test_equipment_v04.log",
+    "errors": [
+      "ERROR: occupied equipment swaps into source cell",
+      "ERROR: instance state and identity survive restoration"
+    ],
+    "error_count": 2,
+    "summaries": [
+      "EQUIPMENT LOGIC 25 checks; 2 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\equipment-v04\\logic-tests.json",
+        "checks": 25,
+        "failures": [
+          "occupied equipment swaps into source cell",
+          "instance state and identity survive restoration"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0001"
+  },
+  {
+    "label": "test_equipment_v04",
+    "category": "native",
+    "exit": 0,
+    "seconds": 1.02,
+    "log": "logs\\test_equipment_v04-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "EQUIPMENT LOGIC 25 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\equipment-v04\\logic-tests.json",
+        "checks": 25,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0002"
+  },
+  {
+    "label": "test_ore_runtime_v06",
+    "category": "native",
+    "exit": 1,
+    "seconds": 84.47,
+    "log": "logs\\test_ore_runtime_v06.log",
+    "errors": [
+      "ERROR: one exact configured reward batch stone_outcrop",
+      "ERROR: held E completes exactly configured hits gold_outcrop",
+      "ERROR: one exact configured reward batch gold_outcrop",
+      "ERROR: new ore inventory persists gold_ore",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 5,
+    "summaries": [
+      "ORE_RUNTIME 49 checks; 4 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ores-v06\\runtime.json",
+        "checks": 49,
+        "failures": [
+          "one exact configured reward batch stone_outcrop",
+          "held E completes exactly configured hits gold_outcrop",
+          "one exact configured reward batch gold_outcrop",
+          "new ore inventory persists gold_ore"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0003"
+  },
+  {
+    "label": "test_ore_runtime_v06",
+    "category": "native",
+    "exit": 1,
+    "seconds": 77.27,
+    "log": "logs\\test_ore_runtime_v06-attempt2.log",
+    "errors": [
+      "ERROR: one exact configured reward batch stone_outcrop",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "ORE_RUNTIME 50 checks; 1 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ores-v06\\runtime.json",
+        "checks": 50,
+        "failures": [
+          "one exact configured reward batch stone_outcrop"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0004"
+  },
+  {
+    "label": "test_crafting_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 18.66,
+    "log": "logs\\test_crafting_v1.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CRAFTING V1 window: 212 checks, 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\crafting-v1\\window-tests.json",
+        "checks": 212,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0005"
+  },
+  {
+    "label": "test_food_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 11.25,
+    "log": "logs\\test_food_v2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "FOOD V2 window: 191 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\food-v2\\window.json",
+        "checks": 191,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0006"
+  },
+  {
+    "label": "test_broadleaf_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 25.9,
+    "log": "logs\\test_broadleaf_v1.log",
+    "errors": [
+      "ERROR: 3 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "BROADLEAF window: 127 checks; 0 failures; [{ \"seed\": 271828, \"sample_chunks\": 175, \"clumps_before_existing_harvest_exclusion\": 46 }, { \"seed\": 447349832, \"sample_chunks\": 141, \"clumps_before_existing_harvest_exclusion\": 35 }]"
+    ],
+    "reports": [
+      {
+        "source": "reports\\broadleaf-v1\\window.json",
+        "checks": 127,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0007"
+  },
+  {
+    "label": "test_audio_ui_open_v7",
+    "category": "native",
+    "exit": 0,
+    "seconds": 10.44,
+    "log": "logs\\test_audio_ui_open_v7.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "UI OPEN V7: 9 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\audio-ui-open-v7\\window.json",
+        "checks": 9,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0008"
+  },
+  {
+    "label": "test_audio_ui_single_v8",
+    "category": "native",
+    "exit": 0,
+    "seconds": 10.25,
+    "log": "logs\\test_audio_ui_single_v8.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "UI SINGLE V8: 62 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\audio-ui-single-v8\\window.json",
+        "checks": 62,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0009"
+  },
+  {
+    "label": "test_camp_gate_surface_v4",
+    "category": "native",
+    "exit": 0,
+    "seconds": 6.64,
+    "log": "logs\\test_camp_gate_surface_v4.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [],
+    "status": "pass",
+    "evidence": "evidence\\0010"
+  },
+  {
+    "label": "test_floor_formal_v3",
+    "category": "native",
+    "exit": 0,
+    "seconds": 12.25,
+    "log": "logs\\test_floor_formal_v3.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "FORMAL FLOOR: 20 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\floor-formal-v3\\square-floor-tests.json",
+        "checks": 20,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0011"
+  },
+  {
+    "label": "test_camp_h_damage_window_v4",
+    "category": "native",
+    "exit": 0,
+    "seconds": 14.66,
+    "log": "logs\\test_camp_h_damage_window_v4.log",
+    "errors": [
+      "ERROR: 4 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "H/DAMAGE WINDOW: 36 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-build-v4\\h-damage-window-tests.json",
+        "checks": 36,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0012"
+  },
+  {
+    "label": "test_camp_door_hinge_transaction_v3",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.85,
+    "log": "logs\\test_camp_door_hinge_transaction_v3.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "HINGE TRANSACTION: 10 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-door-v3\\hinge-transaction-tests.json",
+        "checks": 10,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0013"
+  },
+  {
+    "label": "test_sleep_fit_v10",
+    "category": "native",
+    "exit": 0,
+    "seconds": 14.46,
+    "log": "logs\\test_sleep_fit_v10.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "SLEEP FIT V10 185 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\sleep-fit-v10\\checks.json",
+        "checks": 185,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0014"
+  },
+  {
+    "label": "test_inventory_chest_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 16.46,
+    "log": "logs\\test_inventory_chest_v1.log",
+    "errors": [
+      "ERROR: mouse movement cannot drag bag",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "INVENTORY CHEST 66 checks; 1 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\inventory-chest-v1\\checks.json",
+        "checks": 66,
+        "failures": [
+          "mouse movement cannot drag bag"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0015"
+  },
+  {
+    "label": "test_runtime_exit",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.24,
+    "log": "logs\\test_runtime_exit.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "pass",
+    "evidence": "evidence\\0016"
+  },
+  {
+    "label": "test_runtime_exit",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.04,
+    "log": "logs\\test_runtime_exit-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [],
+    "status": "pass",
+    "evidence": "evidence\\0017"
+  },
+  {
+    "label": "test_harvest_v05",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 127.3,
+    "log": "logs\\test_harvest_v05.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid access to property or key 'position' on a base object of type 'previously freed'."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [],
+    "status": "fail",
+    "evidence": "evidence\\0018"
+  },
+  {
+    "label": "test_harvest_edges_v05",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.85,
+    "log": "logs\\test_harvest_edges_v05.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid type in function 'configure' in base 'Node2D (ground_decals.gd)'. The array of argument 3 (Array) does not have the same element type as the expected typed array argument.",
+      "ERROR: 1 RID allocations of type 'N5GLES37TextureE' were leaked at exit.",
+      "ERROR: Texture with GL ID of 23: leaked 8388604 bytes.",
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 4,
+    "summaries": [
+      "HARVEST_EDGE 17 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\harvest-v05\\edge-tests.json",
+        "checks": 17,
+        "failures": []
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0019"
+  },
+  {
+    "label": "test_harvest_followup_v051",
+    "category": "native",
+    "exit": 0,
+    "seconds": 22.28,
+    "log": "logs\\test_harvest_followup_v051.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "HARVEST_FOLLOWUP 119 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\harvest-fix-v051\\tests.json",
+        "checks": 119,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0020"
+  },
+  {
+    "label": "test_movement_regression",
+    "category": "native",
+    "exit": 1,
+    "seconds": 15.45,
+    "log": "logs\\test_movement_regression.log",
+    "errors": [
+      "ERROR: pickup still starts",
+      "ERROR: pickup completes once"
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\movement-jitter\\regression.json",
+        "checks": 20,
+        "failures": [
+          "pickup still starts",
+          "pickup completes once"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0021"
+  },
+  {
+    "label": "test_grounding_interactions",
+    "category": "native",
+    "exit": 1,
+    "seconds": 16.46,
+    "log": "logs\\test_grounding_interactions.log",
+    "errors": [
+      "ERROR: pickup still starts",
+      "ERROR: pickup completes once"
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\grounding-integration\\interactions.json",
+        "checks": 22,
+        "failures": [
+          "pickup still starts",
+          "pickup completes once"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0022"
+  },
+  {
+    "label": "test_resources_v031",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 26.87,
+    "log": "logs\\test_resources_v031.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid type in function 'configure' in base 'Node2D (ground_decals.gd)'. The array of argument 3 (Array) does not have the same element type as the expected typed array argument.",
+      "ERROR: player drop API",
+      "ERROR: player drop namespace separate"
+    ],
+    "error_count": 3,
+    "summaries": [],
+    "reports": [],
+    "status": "fail",
+    "evidence": "evidence\\0023"
+  },
+  {
+    "label": "test_body_v2",
+    "category": "native",
+    "exit": "timeout",
+    "seconds": 180.33,
+    "log": "logs\\test_body_v2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [],
+    "status": "fail",
+    "evidence": "evidence\\0024"
+  },
+  {
+    "label": "test_runtime_exit",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.25,
+    "log": "logs\\test_runtime_exit-attempt3.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "RUNTIME_EXIT 2 checks; 0 failures"
+    ],
+    "reports": [],
+    "status": "pass",
+    "evidence": "evidence\\0025"
+  },
+  {
+    "label": "test_inventory_chest_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 16.67,
+    "log": "logs\\test_inventory_chest_v1-attempt2.log",
+    "errors": [
+      "ERROR: mouse movement cannot drag bag"
+    ],
+    "error_count": 1,
+    "summaries": [
+      "INVENTORY CHEST 66 checks; 1 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\inventory-chest-v1\\checks.json",
+        "checks": 66,
+        "failures": [
+          "mouse movement cannot drag bag"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0026"
+  },
+  {
+    "label": "test_animals_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.44,
+    "log": "logs\\test_animals_v1.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "ANIMALS V1: 95 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\animals-v1\\logic.json",
+        "checks": 95,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0027"
+  },
+  {
+    "label": "test_cooking_build_v2",
+    "category": "native",
+    "exit": 1,
+    "seconds": 11.43,
+    "log": "logs\\test_cooking_build_v2.log",
+    "errors": [
+      "ERROR: building mode only shows actual facility",
+      "ERROR: crafting mode only shows five inventory products"
+    ],
+    "error_count": 2,
+    "summaries": [
+      "CAMPFIRE V1: 90 checks; 2 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\cooking-build-v2\\headless.json",
+        "checks": 90,
+        "failures": [
+          "building mode only shows actual facility",
+          "crafting mode only shows five inventory products"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0028"
+  },
+  {
+    "label": "test_industry_refine_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 12.84,
+    "log": "logs\\test_industry_refine_v2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "INDUSTRY REFINE V2: 115 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\industry-refine-v2\\window.json",
+        "checks": 115,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0029"
+  },
+  {
+    "label": "test_body_v2",
+    "category": "native",
+    "exit": 1,
+    "seconds": 35.28,
+    "log": "logs\\test_body_v2-attempt2.log",
+    "errors": [
+      "ERROR: slow real hit exactly once mine",
+      "ERROR: no extra hit or wear mine",
+      "ERROR: unchanged stamina cost mine",
+      "ERROR: pending action safely settles at zero energy mine",
+      "ERROR: sleep never repeats prior action settlement mine",
+      "ERROR: storage usable after waking"
+    ],
+    "error_count": 6,
+    "summaries": [
+      "BODY V2 window: 182 checks; 6 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\body-v2\\window.json",
+        "checks": 182,
+        "failures": [
+          "slow real hit exactly once mine",
+          "no extra hit or wear mine",
+          "unchanged stamina cost mine",
+          "pending action safely settles at zero energy mine",
+          "sleep never repeats prior action settlement mine",
+          "storage usable after waking"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0030"
+  },
+  {
+    "label": "test_equipment_v04",
+    "category": "native",
+    "exit": 1,
+    "seconds": 17.86,
+    "log": "logs\\test_equipment_v04-attempt3.log",
+    "errors": [
+      "ERROR: ore consumes once and creates three existing flint materials",
+      "ERROR: mined material remains a world pickup",
+      "ERROR: registered head appearance updates world and portrait together"
+    ],
+    "error_count": 3,
+    "summaries": [
+      "EQUIPMENT_V04 74 checks; 3 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\equipment-v04\\tests.json",
+        "checks": 74,
+        "failures": [
+          "ore consumes once and creates three existing flint materials",
+          "mined material remains a world pickup",
+          "registered head appearance updates world and portrait together"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0031"
+  },
+  {
+    "label": "test_fishing_formal_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 20.66,
+    "log": "logs\\test_fishing_formal_v1.log",
+    "errors": [
+      "ERROR: Failed to load image. Error 15",
+      "ERROR: Failed to load image. Error 15"
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\fishing-formal-v1\\headless-results.json",
+        "checks": 107,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0032"
+  },
+  {
+    "label": "test_item_actions_followup_v051",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.84,
+    "log": "logs\\test_item_actions_followup_v051.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "ITEM_ACTIONS 120 checks / 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\harvest-fix-v051\\item-actions-headless.json",
+        "checks": 120,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0033"
+  },
+  {
+    "label": "test_campfire_drag_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 12.84,
+    "log": "logs\\test_campfire_drag_v1.log",
+    "errors": [
+      "ERROR: fuel bar height is one third with width unchanged",
+      "ERROR: equipped tool stays visible in original main hand"
+    ],
+    "error_count": 2,
+    "summaries": [
+      "CAMPFIRE DRAG: 53 checks; 2 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\campfire-v1\\drag-headless.json",
+        "checks": 53,
+        "failures": [
+          "fuel bar height is one third with width unchanged",
+          "equipped tool stays visible in original main hand"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0034"
+  },
+  {
+    "label": "test_audio_selected_v6",
+    "category": "native",
+    "exit": 0,
+    "seconds": 11.44,
+    "log": "logs\\test_audio_selected_v6.log",
+    "errors": [
+      "SCRIPT ERROR: Invalid access to property or key 'audio-v6-chicken' on a base object of type 'Dictionary'.",
+      "SCRIPT ERROR: Invalid access to property or key 'species' on a base object of type 'Dictionary'."
+    ],
+    "error_count": 2,
+    "summaries": [
+      "AUDIO SELECTED V6: 170 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\audio-selected-v6\\window.json",
+        "checks": 170,
+        "failures": []
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0035"
+  },
+  {
+    "label": "test_inventory_chest_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 16.65,
+    "log": "logs\\test_inventory_chest_v1-attempt3.log",
+    "errors": [
+      "ERROR: mouse movement cannot drag bag"
+    ],
+    "error_count": 1,
+    "summaries": [
+      "INVENTORY CHEST 66 checks; 1 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\inventory-chest-v1\\checks.json",
+        "checks": 66,
+        "failures": [
+          "mouse movement cannot drag bag"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0036"
+  },
+  {
+    "label": "test_harvest_v05",
+    "category": "native",
+    "exit": 1,
+    "seconds": 112.35,
+    "log": "logs\\test_harvest_v05-attempt2.log",
+    "errors": [
+      "ERROR: single-hit resource yields one exact batch broadleaf_clump"
+    ],
+    "error_count": 1,
+    "summaries": [
+      "HARVEST_V05 205 checks; 1 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\harvest-v05\\tests.json",
+        "checks": 205,
+        "failures": [
+          "single-hit resource yields one exact batch broadleaf_clump"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0037"
+  },
+  {
+    "label": "test_harvest_edges_v05",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.84,
+    "log": "logs\\test_harvest_edges_v05-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "HARVEST_EDGE 17 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\harvest-v05\\edge-tests.json",
+        "checks": 17,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0038"
+  },
+  {
+    "label": "test_resources_v031",
+    "category": "native",
+    "exit": 1,
+    "seconds": 29.89,
+    "log": "logs\\test_resources_v031-attempt2.log",
+    "errors": [
+      "ERROR: player drop can be picked back up",
+      "ERROR: player drop conserved through pickup"
+    ],
+    "error_count": 2,
+    "summaries": [
+      "RESOURCES_TEST 4252 checks / 2 failures; [{\"by_ecology\":{\"forest\":{\"branch\":11,\"broad_leaf\":11,\"brown_mushroom\":8,\"flint\":1,\"wild_berry\":2},\"meadow\":{\"branch\":12,\"broad_leaf\":11,\"plant_fiber\":37,\"wild_berry\":5,\"wild_carrot\":25,\"wildflower\":25},\"mountain\":{\"branch\":6,\"flint\":2,\"plant_fiber\":18,\"wild_carrot\":11,\"wildflower\":1},\"rocky\":{\"flint\":16,\"plant_fiber\":1,\"wild_carrot\":1}},\"chunks\":51,\"empty_chunks\":3,\"generation_max_ms\":26.544,\"navigation_ms\":1681.873,\"resources\":204,\"seed\":271828,\"spawn_visible\":2},{\"by_ecology\":{\"forest\":{\"branch\":28,\"broad_leaf\":17,\"brown_mushroom\":21,\"flint\":1,\"wild_apple\":1,\"wild_berry\":6},\"meadow\":{\"branch\":7,\"broad_leaf\":10,\"flint\":5,\"plant_fiber\":19,\"wild_berry\":4,\"wild_carrot\":20,\"wildflower\":26},\"mountain\":{\"branch\":9,\"flint\":3,\"plant_fiber\":17,\"wild_carrot\":14},\"rocky\":{\"branch\":1,\"flint\":6,\"plant_fiber\":1},\"shore\":{\"plant_fiber\":1}},\"chunks\":45,\"empty_chunks\":3,\"generation_max_ms\":32.772,\"navigation_ms\":1460.343,\"resources\":217,\"seed\":447349832,\"spawn_visible\":0},{\"by_ecology\":{\"forest\":{\"branch\":30,\"broad_leaf\":11,\"brown_mushroom\":21,\"flint\":2,\"wild_apple\":1,\"wild_berry\":9,\"wild_carrot\":1},\"meadow\":{\"branch\":13,\"broad_leaf\":10,\"flint\":8,\"plant_fiber\":19,\"wild_berry\":10,\"wild_carrot\":25,\"wildflower\":19},\"mountain\":{\"branch\":12,\"brown_mushroom\":1,\"flint\":4,\"plant_fiber\":23,\"wild_carrot\":20,\"wildflower\":1},\"rocky\":{\"branch\":2,\"flint\":11,\"plant_fiber\":1,\"wild_carrot\":1},\"shore\":{\"plant_fiber\":1}},\"chunks\":54,\"empty_chunks\":2,\"generation_max_ms\":25.894,\"navigation_ms\":862.541,\"resources\":256,\"seed\":1671081329,\"spawn_visible\":2}]"
+    ],
+    "reports": [],
+    "status": "fail",
+    "evidence": "evidence\\0039"
+  },
+  {
+    "label": "test_movement_regression",
+    "category": "native",
+    "exit": 1,
+    "seconds": 15.45,
+    "log": "logs\\test_movement_regression-attempt2.log",
+    "errors": [
+      "ERROR: pickup still starts",
+      "ERROR: pickup completes once"
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\movement-jitter\\regression.json",
+        "checks": 20,
+        "failures": [
+          "pickup still starts",
+          "pickup completes once"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0040"
+  },
+  {
+    "label": "test_grounding_interactions",
+    "category": "native",
+    "exit": 1,
+    "seconds": 16.65,
+    "log": "logs\\test_grounding_interactions-attempt2.log",
+    "errors": [
+      "ERROR: pickup still starts",
+      "ERROR: pickup completes once"
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\grounding-integration\\interactions.json",
+        "checks": 22,
+        "failures": [
+          "pickup still starts",
+          "pickup completes once"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0041"
+  },
+  {
+    "label": "test_ore_runtime_v06",
+    "category": "native",
+    "exit": 0,
+    "seconds": 77.02,
+    "log": "logs\\test_ore_runtime_v06-attempt3.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "ORE_RUNTIME 50 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ores-v06\\runtime.json",
+        "checks": 50,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0042"
+  },
+  {
+    "label": "test_inventory_chest_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 16.65,
+    "log": "logs\\test_inventory_chest_v1-attempt4.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "INVENTORY CHEST 66 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\inventory-chest-v1\\checks.json",
+        "checks": 66,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0043"
+  },
+  {
+    "label": "test_cooking_build_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 11.44,
+    "log": "logs\\test_cooking_build_v2-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "CAMPFIRE V1: 90 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\cooking-build-v2\\headless.json",
+        "checks": 90,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0044"
+  },
+  {
+    "label": "test_body_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 35.3,
+    "log": "logs\\test_body_v2-attempt3.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "BODY V2 window: 182 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\body-v2\\window.json",
+        "checks": 182,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0045"
+  },
+  {
+    "label": "test_equipment_v04",
+    "category": "native",
+    "exit": 1,
+    "seconds": 25.7,
+    "log": "logs\\test_equipment_v04-attempt4.log",
+    "errors": [
+      "ERROR: ore consumes after configured hits and creates one exact reward batch",
+      "ERROR: mined material remains a world pickup"
+    ],
+    "error_count": 2,
+    "summaries": [
+      "EQUIPMENT_V04 74 checks; 2 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\equipment-v04\\tests.json",
+        "checks": 74,
+        "failures": [
+          "ore consumes after configured hits and creates one exact reward batch",
+          "mined material remains a world pickup"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0046"
+  },
+  {
+    "label": "test_fishing_formal_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 20.25,
+    "log": "logs\\test_fishing_formal_v1-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\fishing-formal-v1\\headless-results.json",
+        "checks": 107,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0047"
+  },
+  {
+    "label": "test_campfire_drag_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 12.85,
+    "log": "logs\\test_campfire_drag_v1-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "CAMPFIRE DRAG: 53 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\campfire-v1\\drag-headless.json",
+        "checks": 53,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0048"
+  },
+  {
+    "label": "test_audio_selected_v6",
+    "category": "native",
+    "exit": 0,
+    "seconds": 11.45,
+    "log": "logs\\test_audio_selected_v6-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "AUDIO SELECTED V6: 170 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\audio-selected-v6\\window.json",
+        "checks": 170,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0049"
+  },
+  {
+    "label": "test_player",
+    "category": "native",
+    "exit": "script_error_stall",
+    "seconds": 23.8,
+    "log": "logs\\test_player.log",
+    "errors": [
+      "ERROR: Node not found: \"CollisionShape2D\" (relative to \"/root/@Node2D@5/YSortedNatureAndActor/Wanderer\").",
+      "SCRIPT ERROR: Invalid access to property or key 'shape' on a base object of type 'null instance'."
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [],
+    "status": "fail",
+    "evidence": "evidence\\0050"
+  },
+  {
+    "label": "test_campfire_flame_v2",
+    "category": "native",
+    "exit": 1,
+    "seconds": 9.64,
+    "log": "logs\\test_campfire_flame_v2.log",
+    "errors": [
+      "ERROR: actual environment adapter supplies small rain exposure",
+      "ERROR: actual environment adapter supplies storm exposure"
+    ],
+    "error_count": 2,
+    "summaries": [
+      "CAMPFIRE TUNING: 32 checks; 2 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\campfire-flame-v2\\headless.json",
+        "checks": 32,
+        "failures": [
+          "actual environment adapter supplies small rain exposure",
+          "actual environment adapter supplies storm exposure"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0051"
+  },
+  {
+    "label": "test_scissors_exploration_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.07,
+    "log": "logs\\test_scissors_exploration_v1.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "SCISSORS EXPLORATION: 34 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\scissors-exploration-v1\\checks.json",
+        "checks": 34,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0052"
+  },
+  {
+    "label": "test_shear_sign_map_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.85,
+    "log": "logs\\test_shear_sign_map_v1.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "SHEAR SIGN MAP: 33 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\shear-sign-map-v1\\checks.json",
+        "checks": 33,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0053"
+  },
+  {
+    "label": "test_animals_edges_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 10.64,
+    "log": "logs\\test_animals_edges_v1.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "ANIMALS RESTART/EDGES: 33 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\animals-v1\\restart-edges.json",
+        "checks": 33,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0054"
+  },
+  {
+    "label": "test_ecology_signpost_revision_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 19.86,
+    "log": "logs\\test_ecology_signpost_revision_v1.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "ECOLOGY SIGNPOST revision-final-window: 16 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ecology-signpost-v1\\revision-final-window.json",
+        "checks": 16,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0055"
+  },
+  {
+    "label": "test_ecology_signpost_revision_ui_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 10.24,
+    "log": "logs\\test_ecology_signpost_revision_ui_v1.log",
+    "errors": [
+      "ERROR: 1 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "ECOLOGY SIGNPOST revision-ui-compat-window: 7 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ecology-signpost-v1\\revision-ui-compat-window.json",
+        "checks": 7,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0056"
+  },
+  {
+    "label": "test_player",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.04,
+    "log": "logs\\test_player-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "PLAYER_CURRENT 539 checks; 0 failures"
+    ],
+    "reports": [],
+    "status": "pass",
+    "evidence": "evidence\\0057"
+  },
+  {
+    "label": "test_equipment_v04",
+    "category": "native",
+    "exit": 0,
+    "seconds": 27.08,
+    "log": "logs\\test_equipment_v04-attempt5.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "EQUIPMENT_V04 75 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\equipment-v04\\tests.json",
+        "checks": 75,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0058"
+  },
+  {
+    "label": "test_campfire_flame_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.63,
+    "log": "logs\\test_campfire_flame_v2-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "CAMPFIRE TUNING: 32 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\campfire-flame-v2\\headless.json",
+        "checks": 32,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0059"
+  },
+  {
+    "label": "test_cooking_discovery_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 10.03,
+    "log": "logs\\test_cooking_discovery_v1.log",
+    "errors": [
+      "ERROR: 1 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "COOKING DISCOVERY: 117 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\cooking-discovery-v1\\tests.json",
+        "checks": 117,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0060"
+  },
+  {
+    "label": "test_cooking_discovery_v1-restart",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.44,
+    "log": "logs\\test_cooking_discovery_v1-restart.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "RESTART: 7 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\cooking-discovery-v1\\restart-tests.json",
+        "checks": 7,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0061"
+  },
+  {
+    "label": "test_industry_v1",
+    "category": "native",
+    "exit": 1,
+    "seconds": 10.04,
+    "log": "logs\\test_industry_v1.log",
+    "errors": [
+      "ERROR: atomic current metal crafting output metal_copper_parts",
+      "ERROR: atomic current metal crafting output metal_metal_connector",
+      "ERROR: 1 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 3,
+    "summaries": [
+      "INDUSTRY V1: 248 checks; 2 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\industry-formal-v1\\headless.json",
+        "checks": 248,
+        "failures": [
+          "atomic current metal crafting output metal_copper_parts",
+          "atomic current metal crafting output metal_metal_connector"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0062"
+  },
+  {
+    "label": "test_industry_v1-restart",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.63,
+    "log": "logs\\test_industry_v1-restart.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "INDUSTRY V1: 7 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\industry-formal-v1\\restart.json",
+        "checks": 7,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0063"
+  },
+  {
+    "label": "test_camp_build_v4",
+    "category": "native",
+    "exit": 0,
+    "seconds": 41.73,
+    "log": "logs\\test_camp_build_v4.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CAMP BUILD V1: 339 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-build-v4\\formal-tests.json",
+        "checks": 339,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0064"
+  },
+  {
+    "label": "test_camp_effects_v11",
+    "category": "native",
+    "exit": 0,
+    "seconds": 12.85,
+    "log": "logs\\test_camp_effects_v11.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CAMP EFFECTS V11: 59 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-effects-v11\\checks.json",
+        "checks": 59,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0065"
+  },
+  {
+    "label": "test_movement_regression",
+    "category": "native",
+    "exit": 1,
+    "seconds": 15.47,
+    "log": "logs\\test_movement_regression-attempt3.log",
+    "errors": [
+      "ERROR: pickup still starts",
+      "ERROR: pickup completes once"
+    ],
+    "error_count": 2,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\movement-jitter\\regression.json",
+        "checks": 20,
+        "failures": [
+          "pickup still starts",
+          "pickup completes once"
+        ]
+      }
+    ],
+    "status": "fail",
+    "evidence": "evidence\\0066"
+  },
+  {
+    "label": "test_ecology_signpost_revision_ui_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 10.24,
+    "log": "logs\\test_ecology_signpost_revision_ui_v1-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "ECOLOGY SIGNPOST revision-ui-compat-window: 7 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ecology-signpost-v1\\revision-ui-compat-window.json",
+        "checks": 7,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0067"
+  },
+  {
+    "label": "test_movement_regression",
+    "category": "native",
+    "exit": 0,
+    "seconds": 15.06,
+    "log": "logs\\test_movement_regression-attempt4.log",
+    "errors": [
+      "ERROR: 1 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\movement-jitter\\regression.json",
+        "checks": 21,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0068"
+  },
+  {
+    "label": "test_grounding_interactions",
+    "category": "native",
+    "exit": 0,
+    "seconds": 16.46,
+    "log": "logs\\test_grounding_interactions-attempt3.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\grounding-integration\\interactions.json",
+        "checks": 23,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0069"
+  },
+  {
+    "label": "test_resources_v031",
+    "category": "native",
+    "exit": 0,
+    "seconds": 30.49,
+    "log": "logs\\test_resources_v031-attempt3.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "RESOURCES_TEST 4252 checks / 0 failures; [{\"by_ecology\":{\"forest\":{\"branch\":11,\"broad_leaf\":11,\"brown_mushroom\":8,\"flint\":1,\"wild_berry\":2},\"meadow\":{\"branch\":12,\"broad_leaf\":11,\"plant_fiber\":37,\"wild_berry\":5,\"wild_carrot\":25,\"wildflower\":25},\"mountain\":{\"branch\":6,\"flint\":2,\"plant_fiber\":18,\"wild_carrot\":11,\"wildflower\":1},\"rocky\":{\"flint\":16,\"plant_fiber\":1,\"wild_carrot\":1}},\"chunks\":51,\"empty_chunks\":3,\"generation_max_ms\":29.601,\"navigation_ms\":1696.308,\"resources\":204,\"seed\":271828,\"spawn_visible\":2},{\"by_ecology\":{\"forest\":{\"branch\":28,\"broad_leaf\":17,\"brown_mushroom\":21,\"flint\":1,\"wild_apple\":1,\"wild_berry\":6},\"meadow\":{\"branch\":7,\"broad_leaf\":10,\"flint\":5,\"plant_fiber\":19,\"wild_berry\":4,\"wild_carrot\":20,\"wildflower\":26},\"mountain\":{\"branch\":9,\"flint\":3,\"plant_fiber\":17,\"wild_carrot\":14},\"rocky\":{\"branch\":1,\"flint\":6,\"plant_fiber\":1},\"shore\":{\"plant_fiber\":1}},\"chunks\":45,\"empty_chunks\":3,\"generation_max_ms\":34.086,\"navigation_ms\":1459.754,\"resources\":217,\"seed\":447349832,\"spawn_visible\":0},{\"by_ecology\":{\"forest\":{\"branch\":30,\"broad_leaf\":11,\"brown_mushroom\":21,\"flint\":2,\"wild_apple\":1,\"wild_berry\":9,\"wild_carrot\":1},\"meadow\":{\"branch\":13,\"broad_leaf\":10,\"flint\":8,\"plant_fiber\":19,\"wild_berry\":10,\"wild_carrot\":25,\"wildflower\":19},\"mountain\":{\"branch\":12,\"brown_mushroom\":1,\"flint\":4,\"plant_fiber\":23,\"wild_carrot\":20,\"wildflower\":1},\"rocky\":{\"branch\":2,\"flint\":11,\"plant_fiber\":1,\"wild_carrot\":1},\"shore\":{\"plant_fiber\":1}},\"chunks\":54,\"empty_chunks\":2,\"generation_max_ms\":26.867,\"navigation_ms\":866.671,\"resources\":256,\"seed\":1671081329,\"spawn_visible\":2}]"
+    ],
+    "reports": [],
+    "status": "pass",
+    "evidence": "evidence\\0070"
+  },
+  {
+    "label": "test_harvest_v05",
+    "category": "native",
+    "exit": 0,
+    "seconds": 112.34,
+    "log": "logs\\test_harvest_v05-attempt3.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "HARVEST_V05 205 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\harvest-v05\\tests.json",
+        "checks": 205,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0071"
+  },
+  {
+    "label": "test_industry_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 10.04,
+    "log": "logs\\test_industry_v1-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "INDUSTRY V1: 248 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\industry-formal-v1\\headless.json",
+        "checks": 248,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0072"
+  },
+  {
+    "label": "test_camp_effects_v11",
+    "category": "native",
+    "exit": 0,
+    "seconds": 12.84,
+    "log": "logs\\test_camp_effects_v11-attempt2.log",
+    "errors": [
+      "ERROR: 2 resources still in use at exit (run with --verbose for details)."
+    ],
+    "error_count": 1,
+    "summaries": [
+      "CAMP EFFECTS V11: 59 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-effects-v11\\checks.json",
+        "checks": 59,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0073"
+  },
+  {
+    "label": "test_ore_distribution_v06",
+    "category": "native",
+    "exit": 0,
+    "seconds": 15.45,
+    "log": "logs\\test_ore_distribution_v06.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "ORE_DISTRIBUTION 162 checks; 0 failures; counts={ \"copper_outcrop\": 7, \"flint_outcrop\": 14, \"stone_outcrop\": 37, \"gold_outcrop\": 4, \"silver_outcrop\": 4 }"
+    ],
+    "reports": [
+      {
+        "source": "reports\\ores-v06\\distribution.json",
+        "checks": 162,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0074"
+  },
+  {
+    "label": "test_world_map_v3_logic",
+    "category": "native",
+    "exit": 0,
+    "seconds": 27.08,
+    "log": "logs\\test_world_map_v3_logic.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "MAP V3 LOGIC 35 checks 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\world-map-v3\\logic.json",
+        "checks": 35,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0075"
+  },
+  {
+    "label": "test_fishing_population_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 16.86,
+    "log": "logs\\test_fishing_population_v2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [
+      {
+        "source": "reports\\fishing-population-v2\\window-results.json",
+        "checks": 66,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0076"
+  },
+  {
+    "label": "test_camp_effects_v11",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.24,
+    "log": "logs\\test_camp_effects_v11-attempt3.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "CAMP EFFECTS V11: 59 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-effects-v11\\checks.json",
+        "checks": 59,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0077"
+  },
+  {
+    "label": "test_camp_effects_v11",
+    "category": "native",
+    "exit": 0,
+    "seconds": 12.84,
+    "log": "logs\\test_camp_effects_v11-attempt4.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "CAMP EFFECTS V11: 59 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-effects-v11\\checks.json",
+        "checks": 59,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0078"
+  },
+  {
+    "label": "test_world_map_v3_distribution",
+    "category": "native",
+    "exit": 0,
+    "seconds": 37.69,
+    "log": "logs\\test_world_map_v3_distribution.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [],
+    "reports": [],
+    "status": "incomplete",
+    "evidence": "evidence\\0079",
+    "status_at_execution": "pass",
+    "review": "Missing final completion marker; partial sample records are not a full pass."
+  },
+  {
+    "label": "game-rules-final-repairs",
+    "category": "service",
+    "exit": 0,
+    "seconds": 24.46,
+    "log": "logs\\game-rules-final-repairs.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "Ran 29 tests in 22.982s",
+      "OK"
+    ],
+    "reports": [],
+    "status": "pass",
+    "evidence": "evidence\\0080"
+  },
+  {
+    "label": "test_camp_build_v4",
+    "category": "native",
+    "exit": 0,
+    "seconds": 41.53,
+    "log": "logs\\test_camp_build_v4-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "CAMP BUILD V1: 339 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-build-v4\\formal-tests.json",
+        "checks": 339,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0081"
+  },
+  {
+    "label": "test_harvest_edges_v05",
+    "category": "native",
+    "exit": 0,
+    "seconds": 8.83,
+    "log": "logs\\test_harvest_edges_v05-attempt3.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "HARVEST_EDGE 17 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\harvest-v05\\edge-tests.json",
+        "checks": 17,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0082"
+  },
+  {
+    "label": "test_body_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 31.88,
+    "log": "logs\\test_body_v2-attempt4.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "BODY V2 window: 182 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\body-v2\\window.json",
+        "checks": 182,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0083"
+  },
+  {
+    "label": "test_world_map_v3_distribution",
+    "category": "native",
+    "exit": 0,
+    "seconds": 57.37,
+    "log": "logs\\test_world_map_v3_distribution-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "DISTRIBUTION 36 checks 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\world-map-v3\\distribution.json",
+        "checks": 36,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0084"
+  },
+  {
+    "label": "test_crafting_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 17.27,
+    "log": "logs\\test_crafting_v1-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "CRAFTING V1 window: 212 checks, 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\crafting-v1\\window-tests.json",
+        "checks": 212,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0085"
+  },
+  {
+    "label": "test_food_v2",
+    "category": "native",
+    "exit": 0,
+    "seconds": 10.03,
+    "log": "logs\\test_food_v2-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "FOOD V2 window: 191 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\food-v2\\window.json",
+        "checks": 191,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0086"
+  },
+  {
+    "label": "test_broadleaf_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 22.92,
+    "log": "logs\\test_broadleaf_v1-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "BROADLEAF window: 127 checks; 0 failures; [{ \"seed\": 271828, \"sample_chunks\": 175, \"clumps_before_existing_harvest_exclusion\": 46 }, { \"seed\": 447349832, \"sample_chunks\": 141, \"clumps_before_existing_harvest_exclusion\": 35 }]"
+    ],
+    "reports": [
+      {
+        "source": "reports\\broadleaf-v1\\window.json",
+        "checks": 127,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0087"
+  },
+  {
+    "label": "test_audio_ui_open_v7",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.44,
+    "log": "logs\\test_audio_ui_open_v7-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "UI OPEN V7: 9 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\audio-ui-open-v7\\window.json",
+        "checks": 9,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0088"
+  },
+  {
+    "label": "test_audio_ui_single_v8",
+    "category": "native",
+    "exit": 0,
+    "seconds": 8.84,
+    "log": "logs\\test_audio_ui_single_v8-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "UI SINGLE V8: 62 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\audio-ui-single-v8\\window.json",
+        "checks": 62,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0089"
+  },
+  {
+    "label": "test_floor_formal_v3",
+    "category": "native",
+    "exit": 0,
+    "seconds": 11.67,
+    "log": "logs\\test_floor_formal_v3-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "FORMAL FLOOR: 20 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\floor-formal-v3\\square-floor-tests.json",
+        "checks": 20,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0090"
+  },
+  {
+    "label": "test_camp_h_damage_window_v4",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.63,
+    "log": "logs\\test_camp_h_damage_window_v4-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "H/DAMAGE WINDOW: 36 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-build-v4\\h-damage-window-tests.json",
+        "checks": 36,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0091"
+  },
+  {
+    "label": "test_camp_door_hinge_transaction_v3",
+    "category": "native",
+    "exit": 0,
+    "seconds": 9.04,
+    "log": "logs\\test_camp_door_hinge_transaction_v3-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "HINGE TRANSACTION: 10 checks, 0 failed"
+    ],
+    "reports": [
+      {
+        "source": "reports\\camp-door-v3\\hinge-transaction-tests.json",
+        "checks": 10,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0092"
+  },
+  {
+    "label": "test_sleep_fit_v10",
+    "category": "native",
+    "exit": 0,
+    "seconds": 13.25,
+    "log": "logs\\test_sleep_fit_v10-attempt2.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "SLEEP FIT V10 185 checks; 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\sleep-fit-v10\\checks.json",
+        "checks": 185,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0093"
+  },
+  {
+    "label": "test_crafting_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 17.06,
+    "log": "logs\\test_crafting_v1-attempt3.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "CRAFTING V1 window: 210 checks, 0 failures"
+    ],
+    "reports": [
+      {
+        "source": "reports\\cooking-discovery-v1\\tests.json",
+        "checks": 117,
+        "failures": []
+      },
+      {
+        "source": "reports\\crafting-v1\\window-tests.json",
+        "checks": 210,
+        "failures": []
+      },
+      {
+        "source": "reports\\movement-jitter\\regression.json",
+        "checks": 21,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0094"
+  },
+  {
+    "label": "test_broadleaf_v1",
+    "category": "native",
+    "exit": 0,
+    "seconds": 22.07,
+    "log": "logs\\test_broadleaf_v1-attempt3.log",
+    "errors": [],
+    "error_count": 0,
+    "summaries": [
+      "BROADLEAF window: 119 checks; 0 failures; [{ \"seed\": 271828, \"sample_chunks\": 175, \"clumps_before_existing_harvest_exclusion\": 46 }, { \"seed\": 447349832, \"sample_chunks\": 141, \"clumps_before_existing_harvest_exclusion\": 35 }]"
+    ],
+    "reports": [
+      {
+        "source": "reports\\broadleaf-v1\\window.json",
+        "checks": 119,
+        "failures": []
+      }
+    ],
+    "status": "pass",
+    "evidence": "evidence\\0095"
+  }
+]

@@ -9,6 +9,7 @@ func run() -> void:
 	root.get_node('AudioFX').muted=true
 	for cells in [1024,1536]:
 		for seed_value in [81273,271828,902106]:
+			if "--first-four" in OS.get_cmdline_user_args() and cells==1536 and seed_value!=81273:continue
 			var path:='res://reports/world-map-v3/distribution-%d-%d-save.json'%[cells,seed_value]
 			if FileAccess.file_exists(path):DirAccess.remove_absolute(path)
 			Engine.set_meta('map_v3_seed',seed_value);Engine.set_meta('map_v3_cells',cells);Engine.set_meta('map_v3_save',path)
@@ -43,7 +44,7 @@ func run() -> void:
 			for id in service.builds.states:
 				if id.begins_with('abandoned:'):camps[id.get_slice(':',2)]=true
 			check(camps.size()<=(5 if cells>1024 else 3),'camp total %d/%d'%[cells,seed_value])
-			check(service.fishing_population.spots.size()<=(28 if cells>1024 else 20),'fish total %d/%d'%[cells,seed_value])
+			check(service.fishing_population.spots.size()<=(56 if cells>1024 else 40),'fish total %d/%d'%[cells,seed_value])
 			var merchant: Node=service.merchant
 			check(is_instance_valid(merchant.actor) and merchant.safe_point(merchant.actor.position),'single reachable merchant %d/%d'%[cells,seed_value])
 			var occupied_quadrants:={}

@@ -22,7 +22,7 @@ func run() -> void:
 	var service: Node=world.item_service
 	var camps: RefCounted=service.camps
 	for id in {"wild_carrot":4,"wild_apple":4,"wild_berry":3,"brown_mushroom":3,"wildflower":1,"roasted_carrot":12,"roasted_mushroom":10}:
-		var expected: int={"wild_carrot":4,"wild_apple":4,"wild_berry":3,"brown_mushroom":3,"wildflower":1,"roasted_carrot":12,"roasted_mushroom":10}[id]
+		var expected: int=int(service.database.item(id).effects.hunger)
 		for i in 40:service.inventory.slots[i]={}
 		service.body.hunger=20;service.body.health=100;service.inventory.add(id,1)
 		check(service.inventory.use_slot(8) and service.body.hunger==20+expected and service.inventory.count_item(id)==0,"actual food benefit "+id+" +"+str(expected))
@@ -44,11 +44,11 @@ func run() -> void:
 	reset(camps);camps.advance(0,1,1);check(camps.states.tuning.fuel==100,"zero time cannot consume rainy fuel")
 	var environment: Node=world.environment_view
 	var simulation: Node=environment.simulation
-	reset(camps);simulation.blend=Vector3(0,0,1);simulation.paused=false;simulation.time_scale=1
+	reset(camps);simulation.force_weather(2);simulation.transition_from=simulation.weather_blend(2);simulation.blend=simulation.transition_from;simulation.transition_elapsed=simulation.transition_seconds;simulation.paused=false;simulation.time_scale=1
 	environment._process(2)
-	check(camps.states.tuning.fuel==97 and camps.states.tuning.elapsed==2,"actual environment adapter supplies small rain exposure")
-	reset(camps);simulation.blend=Vector3(0,1,0);environment._process(2)
-	check(camps.states.tuning.fuel==96 and camps.states.tuning.elapsed==2,"actual environment adapter supplies storm exposure")
+	check(is_equal_approx(camps.states.tuning.fuel,97) and is_equal_approx(camps.states.tuning.elapsed,2),"actual environment adapter supplies small rain exposure")
+	reset(camps);simulation.force_weather(3);simulation.transition_from=simulation.weather_blend(3);simulation.blend=simulation.transition_from;simulation.transition_elapsed=simulation.transition_seconds;environment._process(2)
+	check(is_equal_approx(camps.states.tuning.fuel,96) and is_equal_approx(camps.states.tuning.elapsed,2),"actual environment adapter supplies storm exposure")
 	reset(camps);simulation.paused=true;environment._process(5)
 	check(camps.states.tuning.fuel==100,"pause still excludes rainy fuel consumption")
 	simulation.paused=false;environment.preview=true;environment._process(5)

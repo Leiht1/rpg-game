@@ -104,7 +104,8 @@ func window_changed(window: Window) -> void:
 	entry["revision"]=int(entry.get("revision",0))+1
 	call_deferred("animate_window",window,opening,entry.revision)
 
-func animate_window(window: Window,opening: bool,revision: int) -> void:
+# A deferred reference may already be freed; validate it before typed conversion.
+func animate_window(window,opening: bool,revision: int) -> void:
 	if not is_instance_valid(window) or not entries.has(window.get_instance_id()):return
 	var entry: Dictionary=entries[window.get_instance_id()]
 	if entry.revision!=revision:return

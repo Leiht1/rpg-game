@@ -9,6 +9,7 @@ func check(ok: bool,label: String):
 	checks.append({"name":label,"pass":ok})
 	if not ok: push_error(label)
 func run():
+	var render_service=preload("res://tests/render_service_fixture.gd").new();root.add_child(render_service)
 	DirAccess.make_dir_recursive_absolute(OUT)
 	# GPU seam tests use both materials and fractional display scale, matching camera zoom.
 	for zoom in [1.0,.75,1.25]:
@@ -17,6 +18,7 @@ func run():
 			var bg := ColorRect.new();bg.size=Vector2(600,440);bg.color=Color(0,1,0);view.add_child(bg)
 			var layer := Node2D.new();layer.position=Vector2(24.3,24.7);layer.scale=Vector2.ONE*zoom;view.add_child(layer)
 			var manager=preload("res://scripts/camp_buildings.gd").new()
+			manager.service=render_service
 			for y in 4:
 				for x in 4:
 					var id := "%d:%d"%[x,y];var at := Vector2(48+x*96,32+y*64)
@@ -30,7 +32,8 @@ func run():
 					var c := im.get_pixel(x,y)
 					if c.g>.95 and c.r<.05 and c.b<.05: green+=1
 			check(green==0,"candidate internal green pixels0 "+material+" zoom"+str(zoom))
-			im.save_png(OUT+"square-grid-"+material+"-"+str(zoom)+".png");view.free();await process_frame
+			im.save_png(OUT+"square-grid-"+material+"-"+str(zoom)+".png");view.free();await frames(6)
+	render_service.free()
 	await world_scene()
 	var failed: Array=checks.filter(func(v): return not v.pass)
 	FileAccess.open(OUT+"square-floor-tests.json",FileAccess.WRITE).store_string(JSON.stringify({"checks":checks,"failed":failed.size(),"art_status":"approved_user"},"  "))
@@ -56,7 +59,7 @@ func world_scene():
 	manager.refresh_all();await frames(5)
 	root.size=Vector2i(1280,720);await frames(6);await RenderingServer.frame_post_draw
 	root.get_texture().get_image().save_png(OUT+"floor-current-world.png")
-	for size_value in [Vector2i(960,540),Vector2i(1280,720),Vector2i(1600,900)]:
+	for size_value in [preload("res://tests/current_test_contract.gd").viewport_size()]:
 		root.size=size_value;await frames(6);await RenderingServer.frame_post_draw
 		root.get_texture().get_image().save_png(OUT+"square-floor-world-"+str(size_value.x)+".png")
 		check(manager.visuals.size()==manager.states.size(),"candidate same logical occupancy "+str(size_value.x))
@@ -81,4 +84,4 @@ func world_scene():
 	manager.states.clear();service.load_state();await frames()
 	check(manager.states==expected and service.writable,"same-process load retains floor positions orientations occupancy")
 	check(manager.visuals["floor:0:0"].floor_has_south(),"load reconstructs contiguous surface and exposed lip rules")
-	world.persistent_world=false;world.free();await process_frame
+	world.persistent_world=false;world.free();await frames(6)

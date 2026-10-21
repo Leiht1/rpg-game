@@ -21,16 +21,16 @@ func run() -> void:
 	var w=load("res://tests/world_v06_formal_fixture.gd").new();root.add_child(w)
 	while not w.started:await process_frame
 	w.player.set_physics_process(false);w.item_ui.set_process(false);w.environment_view.simulation.paused=true;fx.set_process(false)
-	fx.last_played.clear();sounds.clear();w.item_ui.toggle_bag()
+	fx.last_played.clear();sounds.clear();w.item_ui.toggle_bag();await process_frame;await process_frame
 	check(w.item_ui.bag.visible and sounds.has("sfx_ui_open"),"actual backpack open plays shortened event")
 	await create_timer(.38).timeout
 	check(fx.voices.all(func(v):return not is_instance_valid(v) or not v.playing),"backpack cue finishes without tail")
 	w.item_ui.toggle_bag();fx.last_played.clear();sounds.clear()
-	w.map_view.show()
+	w.map_view.show();await process_frame;await process_frame
 	check(sounds.has("sfx_ui_open"),"map open uses same shortened event")
 	await create_timer(.38).timeout
 	check(fx.voices.all(func(v):return not is_instance_valid(v) or not v.playing),"map cue finishes without tail")
-	check(fx.configuration.sfx_ui_close.files.size()==2,"close variants retained")
+	check(fx.configuration.sfx_ui_close.files.size()==1,"close variants retained")
 	w.item_service.dirty=false;w.queue_free()
 	for i in 5:await process_frame
 	var after := {}

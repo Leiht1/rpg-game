@@ -1,13 +1,16 @@
 extends "res://tests/test_ecology_signpost_v1.gd"
 func run()->void:
  Engine.set_meta("integration_seed",271828)
- w=load("res://tests/world_v06_formal_fixture.gd").new();root.add_child(w)
+ w=load("res://tests/world_clean_camp_fixture.gd").new();root.add_child(w)
  while not w.started:await process_frame
  w.environment_view.set_process(false);w.player.set_physics_process(false);w.set_process(false)
  s=w.item_service;s.set_process(false);b=s.builds;p=w.player;ui=w.camp_ui
  s.save_path=OUT+"revision-ui-isolated.json";w.persistent_world=true
  s.inventory.add("wood",30);s.inventory.add("plant_fiber",20)
- var row=find_row();ui.begin_build("build_signpost");ui.paint_at(Vector2(row.x,row.y));await frames()
+ while not w.stream.viewport_ready(p.position,Vector2(640,360)):await process_frame
+ var row=find_row();check(not row.is_empty(),"loaded clear site exists for signpost")
+ if row.is_empty():await finish("revision-ui");return
+ ui.begin_build("build_signpost");ui.paint_at(Vector2(row.x,row.y));await frames()
  ui.sign_input.text="北方岩石区";await frames()
  var title:Control=ui.sign_input.get_parent().get_child(0)
  check(title.get_global_rect().end.y<ui.sign_input.get_global_rect().position.y,"paper title and input do not overlap")
