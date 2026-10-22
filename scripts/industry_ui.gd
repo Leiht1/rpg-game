@@ -153,7 +153,7 @@ func refresh_choices() -> void:
 	var previous_ids: Array=ingredient_ids.duplicate()
 	ingredient_ids=[]
 	for id in service.database.ids():
-		if service.database.item(id).get("food_kind","")=="raw" and service.inventory.count_item(id)>0:ingredient_ids.append(id)
+		if service.database.item(id).get("food_kind","") in ["raw","raw_meat"] and service.inventory.count_item(id)>0:ingredient_ids.append(id)
 	for choice in ingredient_choices:
 		var old_id: String=choice.get_meta("selected_id","")
 		if choice.selected>0 and choice.selected-1<previous_ids.size():old_id=previous_ids[choice.selected-1]

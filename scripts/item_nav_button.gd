@@ -4,14 +4,15 @@ const ItemSkin = preload("res://scripts/item_ui_style.gd")
 var symbol := "bag"
 
 func _ready() -> void:
-	custom_minimum_size=Vector2(52,52)
+	custom_minimum_size=Vector2(76,52)
 	size_flags_vertical=Control.SIZE_SHRINK_CENTER
 	for state in ["normal","hover","pressed","hover_pressed","focus"]:
 		var style := ItemSkin.button_style("pressed" if state in ["pressed","hover_pressed"] else state,true)
 		add_theme_stylebox_override(state,style)
 
 func _draw() -> void:
-	var c := size*.5
+	var c := size*.5-Vector2(12,0)
+	draw_string(get_theme_default_font(),Vector2(size.x-24,size.y*.5+6),"B" if symbol=="bag" else "M",HORIZONTAL_ALIGNMENT_LEFT,-1,18,Color("65563b"))
 	var ink := Color("65563b")
 	if symbol=="bag":
 		var body := ItemSkin.slot(false,false)

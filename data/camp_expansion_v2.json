@@ -59,5 +59,10 @@
       "copper_parts": 1
     }
   },
-  "fertilizer_speed": 1.25
+  "fertilizer_speed": 1.25,
+  "smoking_recipes": {
+    "roasted_fish": "smoked_fish",
+    "boar_meat": "cured_pork",
+    "meatballs": "smoked_meatballs"
+  }
 }

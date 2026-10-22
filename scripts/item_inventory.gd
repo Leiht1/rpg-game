@@ -153,7 +153,7 @@ func craft_exchange(materials: Dictionary, output_id: String, output_count: int,
 	if materials.is_empty(): return "材料定义无效"
 	for id in materials:
 		if not materials[id] is int or materials[id]<1 or materials[id]>989901: return "材料数量无效"
-		if database.item(str(id)).is_empty() or database.item(str(id)).get("equippable",false): return "材料定义无效"
+		if database.item(str(id)).is_empty() or (database.item(str(id)).get("equippable",false) and not database.item(str(id)).has("combat_weapon")): return "材料定义无效"
 		if count_item(str(id))<int(materials[id]): return "材料不足："+str(database.item(str(id)).name)
 	# Entire operation is staged. No live signal/save can observe partial consumption.
 	var staged := ItemInventory.new(database)
@@ -279,12 +279,15 @@ func _move_slot(from: int, to: int) -> bool:
 	return true
 
 func use_slot(index: int) -> bool:
+	if body!=null and (body.down or body.health<=0):return false
 	if body!=null and body.sleep_active(): return false
 	if index < 0 or index >= SLOT_COUNT+equipment_slots.size() or get_slot(index).is_empty(): return false
 	var id := str(get_slot(index).item_id)
 	if index<8 and database.item(id).get("equippable",false) and not slots[index].is_empty(): return equip(index)
 	var definition := database.item(id)
 	if not definition.usable: return false
+	if definition.use_action=="read_guide":
+		used.emit(id,{"slot":index});return true
 	if definition.use_action not in ["place_campfire","place_sleeping_bag"] and preload("res://scripts/network_game_route.gd").send(self,"inventory",["use_slot",index]):return true
 	if definition.use_action in ["light","solar_light","place_campfire","place_sleeping_bag"]:
 		used.emit(id,{"slot":index})
@@ -300,14 +303,28 @@ func use_slot(index: int) -> bool:
 		slots=staged.slots
 		changed.emit();used.emit(id,{})
 		return true
+	if definition.use_action=="heal":
+		if body==null or body.down or body.health<=0 or body.health>=100:return false
+		var old:=slots.duplicate(true);var old_body: Dictionary=body.serialize()
+		body.health=minf(100,body.health+float(preload("res://scripts/combat_rules.gd").load_rules().medical.get(id,0)))
+		slots[index].count-=1
+		if slots[index].count==0:slots[index]={}
+		if commit_equipment.is_valid() and not commit_equipment.call():slots=old;body.restore(old_body);return false
+		changed.emit();body.changed.emit();used.emit(id,{"health":body.health-float(old_body.health)});return true
 	if definition.use_action != "eat": return false
 	# One extensible effect contract, without hunger/health pressure.
 	var effect: Dictionary = Fresh.effects(database,get_slot(index))
 	if body!=null and not body.can_eat(effect): return false
+	var previous_slots:=slots.duplicate(true)
+	var previous_body: Dictionary=body.serialize() if body!=null else {}
 	if body!=null: body.eat(effect)
 	if definition.consumable:
 		slots[index].count -= 1
 		if int(slots[index].count) == 0: slots[index] = {}
+	if commit_equipment.is_valid() and not commit_equipment.call():
+		slots=previous_slots
+		if body!=null:body.restore(previous_body)
+		return false
 	changed.emit()
 	used.emit(id,effect)
 	return true
@@ -329,6 +346,7 @@ func split_slot(index: int, count: int) -> int:
 func destroy_slot(index: int) -> bool:
 	if preload("res://scripts/network_game_route.gd").send(self,"inventory",["destroy_slot",index]):return true
 	if index<0 or index>=slots.size() or slots[index].is_empty(): return false
+	if database.item(str(slots[index].item_id)).get("indestructible",false): return false
 	# Destruction intentionally creates no world drop.
 	slots[index]={}
 	changed.emit()

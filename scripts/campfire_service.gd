@@ -54,6 +54,7 @@ func placement_reason(at: Vector2) -> String:
 	if world.player.position.distance_to(at)>float(rules.place_range): return "请放在身边的地面"
 	if world.player.position.distance_to(at)<float(rules.player_clearance): return "离角色太近"
 	if at.distance_to(gen.spawn)<float(rules.spawn_clearance): return "请避开出生点"
+	if at.distance_to(service.combat.spawn_point())<float(rules.spawn_clearance):return "请避开出生传送门"
 	if at.x<96 or at.y<96 or at.x>gen.extent-96 or at.y>gen.extent-96: return "请远离地图边界"
 	if not world.stream.has_ground(at): return "请等待附近地面加载"
 	if gen.corridor_distance(at)<float(rules.path_clearance): return "请保留主要通行路径"
@@ -77,7 +78,7 @@ func placement_reason(at: Vector2) -> String:
 		if not gen.can_walk(p,12): return "周围需要留出通行空间"
 	return ""
 
-func consume(materials: Dictionary) -> ItemInventory:
+func consume(materials: Dictionary, fresh_food: bool=false) -> ItemInventory:
 	var staged := ItemInventory.new(service.database)
 	staged.slots=service.inventory.slots.duplicate(true)
 	for id in materials:
@@ -85,10 +86,12 @@ func consume(materials: Dictionary) -> ItemInventory:
 		if staged.count_item(id)<left: return null
 		for i in staged.SLOT_COUNT:
 			if staged.slots[i].get("item_id","")!=id: continue
+			if fresh_food and preload("res://scripts/food_freshness.gd").rotten(staged.slots[i]):continue
 			var take: int=mini(left,int(staged.slots[i].count))
 			staged.slots[i].count-=take;left-=take
 			if staged.slots[i].count==0: staged.slots[i]={}
 			if left==0: break
+		if left>0:return null
 	return staged
 
 func commit(staged: ItemInventory = null) -> void:
@@ -152,7 +155,7 @@ func act(id: String, action: String, recipe: String = "", materials: Dictionary 
 			elif action=="cook" and not known(recipe): reason="尚未发现"
 			elif not row.lit or row.fuel<=0: reason="将背包或快捷栏的可燃物拖到篝火上点燃"
 			else:
-				staged=consume(rules.recipes[recipe].materials)
+				staged=consume(rules.recipes[recipe].materials,true)
 				if staged==null: reason="食材不足"
 				else: row.erase("output");row.recipe=recipe;row.elapsed=0.0;row.ready=false
 		"claim":

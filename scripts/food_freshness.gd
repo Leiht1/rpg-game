@@ -1,7 +1,7 @@
 extends RefCounted
 ## Fractional spoilage travels with each stack; storage changes only its rate.
 static func cooked(db: ItemDatabase, id: String) -> bool:
-	return db.item(id).get("food_kind","") in ["cooked","raw_fish"]
+	return db.item(id).get("food_kind","") in ["cooked","raw_fish","raw_meat"]
 
 static func normalize(db: ItemDatabase, value: Dictionary) -> bool:
 	if value.is_empty() or not cooked(db,str(value.get("item_id",""))): return not value.has("spoilage")

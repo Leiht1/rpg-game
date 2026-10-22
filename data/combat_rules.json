@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "portal_entry_rect": [-30, -32, 60, 76],
+  "weapons": {
+    "unarmed": {
+      "damage": 4,
+      "range": 48,
+      "windup": 0.18,
+      "active": 0.08,
+      "recovery": 0.3,
+      "stamina": 3,
+      "animation": "punch"
+    },
+    "wood_club": {
+      "damage": 9,
+      "range": 66,
+      "windup": 0.24,
+      "active": 0.1,
+      "recovery": 0.4,
+      "stamina": 5,
+      "animation": "club"
+    },
+    "tusk_club": {
+      "damage": 15,
+      "range": 72,
+      "windup": 0.24,
+      "active": 0.1,
+      "recovery": 0.4,
+      "stamina": 6,
+      "animation": "club"
+    },
+    "boar": {
+      "damage": 12,
+      "range": 52,
+      "windup": 0.38,
+      "active": 0.1,
+      "recovery": 0.7,
+      "stamina": 0,
+      "animation": "charge"
+    }
+  },
+  "medical": {
+    "plaster": 15,
+    "medical_kit": 55
+  },
+  "duel_health_floor": 1,
+  "death_seconds": 3.0,
+  "entry_seconds": 1.0,
+  "boar": {
+    "health": 45,
+    "population": 8,
+    "safe_radius": 1000,
+    "notice_range": 260,
+    "leash": 420,
+    "speed": 115,
+    "respawn_seconds": 3600,
+    "drops": {
+      "boar_tusk": 1,
+      "boar_meat": 2
+    },
+    "hit_stun": 0.18,
+    "camp_clearance": 240
+  },
+  "knockback": 12
+}

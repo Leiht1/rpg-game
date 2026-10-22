@@ -76,17 +76,9 @@ func _tick(seconds: float, minutes: float, sprinting: bool, working: bool) -> vo
 			damage_clock-=float(rules.disease_damage_interval_minutes)
 			health=maxf(0.0,health-float(rules.disease_damage))
 	else: damage_clock=0.0
-	if health<=float(rules.down_health): down=true
-	if down:
-		rescue_clock+=minutes
-		if rescue_clock>=float(rules.rescue_game_minutes):
-			# Safe solo care, without granting items or losing inventory.
-			health=minf(float(rules.revive_health),health+minutes*1.0)
-			stamina=minf(40.0,stamina+minutes*2.0)
-			illness=maxf(0.0,illness-days*3.0)
-			if health>=float(rules.revive_health):
-				down=false;rescue_clock=0.0;deprivation=minf(deprivation,.5);illness=0.0;exhausted=false
-	elif sprinting and not exhausted:
+	if health<=0.0: down=true
+	if down: return
+	if sprinting and not exhausted:
 		stamina=maxf(0.0,stamina-seconds*float(rules.run_per_second))
 		rest_clock=0.0
 		if stamina<=0: exhausted=true
@@ -121,7 +113,7 @@ func eat(effect: Dictionary) -> void:
 
 func status() -> String:
 	if sleeping: return "强制睡眠" if sleep_forced else "睡眠中"
-	if down: return "严重虚弱 · 正在休养"
+	if down: return "倒地"
 	if hallucination_remaining>0.0: return "致幻中"
 	if illness>=float(rules.illness_threshold): return "生病中" if hunger<float(rules.hunger_recovery) else "生病中 · 正在恢复"
 	if illness>0: return "身体不适" if hunger<float(rules.hunger_recovery) else "身体不适 · 正在改善"
@@ -137,7 +129,7 @@ func advice() -> String:
 	if hallucination_remaining>0.0: return "生蘑菇致幻期间生命逐渐下降；熟食安全，但不会解除已经发生的致幻。"
 	if sleeping: return "正在睡眠，时间与营地燃料会同步推进。"
 	if energy<float(rules.energy_drowsy): return "需要睡眠补充精力；进食和站立休息无法替代睡眠。"
-	if down: return "安心休养，稍后会逐渐恢复行动。物品与装备都在。"
+	if down: return "正在返回出生传送门。"
 	if hunger<float(rules.hunger_recovery) or deprivation>=.25: return "补充食物并保持正常饮食，营养改善会先停止疾病恶化。"
 	if illness>0: return "身体正在改善，继续保持正常饮食与适当休息。"
 	if stamina<40: return "停止奔跑与劳动片刻，有助于恢复体力。"
@@ -178,7 +170,7 @@ func restore(value: Variant) -> bool:
 	sleeping=bool(value.get("sleeping",false));sleep_forced=bool(value.get("sleep_forced",false))
 	sleep_elapsed=float(value.get("sleep_elapsed",0));sleep_duration=float(value.get("sleep_duration",0))
 	sleep_session=value.get("sleep_session",{}).duplicate(true)
-	down=bool(value.down) or health<=float(rules.down_health)
+	down=health<=0.0
 	exhausted=bool(value.exhausted) or stamina<=0
 	return true
 

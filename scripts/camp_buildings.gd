@@ -159,6 +159,16 @@ func reason(row: Dictionary) -> String:
 		if not service.body.can_labor("mine"): return "精力或体力不足，不能开垦"
 	var at := Vector2(row.x,row.y)
 	var world: Node=service.world
+	if row.layer not in ["ground","overlay"]:
+		var portal: Vector2=service.combat.spawn_point()
+		var entry_bounds: Array=service.combat.rules.portal_entry_rect
+		var entry:=Rect2(portal+Vector2(entry_bounds[0],entry_bounds[1]),Vector2(entry_bounds[2],entry_bounds[3]))
+		var occupied_bounds:=footprint_rect(row)
+		if row.layer=="edge":
+			var edge_size:=Vector2(8,64) if row.vertical else Vector2(96,8)
+			occupied_bounds=Rect2(-edge_size*.5,edge_size)
+		occupied_bounds.position+=at
+		if entry.intersects(occupied_bounds):return "请保留传送门入口"
 	if world.player.position.distance_to(at)>220: return "请靠近建造位置"
 	if at.x<96 or at.y<96 or at.x>world.generator.extent-96 or at.y>world.generator.extent-96: return "请远离地图边界"
 	if not world.stream.has_ground(at): return "请等待地面加载"
@@ -445,10 +455,11 @@ func transfer(id: String, chest_index: int, player_index: int, expected_chest: D
 	var contents: Array=states[id].contents
 	if not preload("res://scripts/food_freshness.gd").matches(contents[chest_index],expected_chest) or not preload("res://scripts/food_freshness.gd").matches(inv.get_slot(player_index),expected_player): return "物品已变化，请重新拖动"
 	if states[id].kind=="wood_chest" and chest_index>=9 and not expected_player.is_empty(): return "旧箱附加格仅供取回物品"
+	if expected_player.get("item_id","")=="survival_guide":return "生存指南需要随身保留"
 	if player_index<40 and inv.hotbar_equipment.has(str(player_index)):
 		for i in range(40,43):
 			if inv.get_slot(i).get("instance_id","")==expected_player.get("instance_id",""): player_index=i;break
-	if states[id].kind=="refrigerator" and not expected_player.is_empty() and service.database.item(str(expected_player.item_id)).get("food_kind","") not in ["raw","raw_fish","cooked"]:return "冰箱只能存放食物"
+	if states[id].kind=="refrigerator" and not expected_player.is_empty() and service.database.item(str(expected_player.item_id)).get("food_kind","") not in ["raw","raw_fish","raw_meat","cooked"]:return "冰箱只能存放食物"
 	if not inv.accepts(player_index,expected_chest): return "这个装备槽不能放入箱内物品"
 	busy=true
 	var a: Dictionary=contents[chest_index].duplicate(true)

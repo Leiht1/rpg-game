@@ -93,6 +93,8 @@ static func caption(target: Node2D, inventory: ItemInventory) -> String:
 
 static func execute(stream: Node, player: Node2D, target: Node2D) -> bool:
 	if not in_reach(stream,player.position,target): return false
+	if target.has_meta("relic_id"):
+		target.interact();return true
 	var action := action_for(target)
 	if action in ["chop","mine","dig","demolish","pickup","shear","animal","fertilize"] and preload("res://scripts/network_game_route.gd").send(stream.items,"interact",[target]):return true
 	if player.action=="fertilize" and action!="fertilize":return false

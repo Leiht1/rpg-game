@@ -1,0 +1,18 @@
+extends SceneTree
+const RULES=preload("res://scripts/combat_rules.gd")
+func _initialize() -> void:
+	assert(RULES.damage_result(10,12).lethal)
+	assert(RULES.damage_result(10,12,true).health==1)
+	assert(not RULES.damage_result(0,12).accepted)
+	assert(not RULES.damage_result(10,-1).accepted)
+	assert(not RULES.damage_result(10,NAN).accepted)
+	assert(RULES.can_hit(Vector2.ZERO,Vector2.RIGHT,Vector2(40,0),48))
+	assert(not RULES.can_hit(Vector2.ZERO,Vector2.RIGHT,Vector2(-40,0),48))
+	assert(not RULES.can_hit(Vector2.ZERO,Vector2.RIGHT,Vector2(60,0),48))
+	assert(not RULES.transfers_on_death({}))
+	assert(RULES.transfers_on_death({"death_retention":"relic"}))
+	var config=RULES.load_rules()
+	assert(config.weapons.tusk_club.damage>config.weapons.wood_club.damage)
+	assert(config.weapons.wood_club.animation==config.weapons.tusk_club.animation)
+	print("combat_rules_v1: 12 assertions passed")
+	quit()

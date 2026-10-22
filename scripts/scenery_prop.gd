@@ -14,7 +14,7 @@ var state:="idle"
 var foot:=Vector2(0,7)
 static var occlusion_images:Dictionary={}
 var required_hits:int:
-	get:return 12 if variant_id=="tree_03" else 6
+	get:return 8 if variant_id=="tree_03" else 4
 
 func prepare()->void:
 	var ratio:=display_size/texture.get_size()

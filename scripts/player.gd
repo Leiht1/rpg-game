@@ -42,6 +42,9 @@ var camera := Camera2D.new()
 var input_override := Vector2.ZERO
 var automated := false
 var blocked_by_loading := false
+var remote_combat: Dictionary={}
+var remote_presentation:=false
+var combat_render_state: Dictionary={}
 var last_displacement := Vector2.ZERO
 
 func _ready() -> void:
@@ -66,6 +69,7 @@ func _ready() -> void:
 	character.get_node("Visual/Pelvis/ArmR/Grip").add_child(carried_wood)
 	animation_player=character.get_node("AnimationPlayer")
 	animation_player.add_animation_library("harvest",load("res://assets/hero/cartoon/harvest_actions.tres"))
+	animation_player.add_animation_library("combat",load("res://assets/hero/cartoon/combat_actions.tres"))
 	animation_player.add_animation_library("camp",load("res://assets/hero/cartoon/campfire_throw.tres"))
 	animation_player.callback_mode_process=AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
 	camera.process_callback=Camera2D.CAMERA2D_PROCESS_PHYSICS
@@ -76,6 +80,10 @@ func _ready() -> void:
 	camera.limit_right=roundi(generator.extent)
 	camera.limit_bottom=roundi(generator.extent)
 	add_child(camera)
+	if not remote_presentation and not get_parent().get_parent().get_meta("network_rules_host", false) and not DisplayServer.get_name() == "headless":
+		var hit_overlay = preload("res://scripts/combat_hit_overlay.gd").new()
+		hit_overlay.player = self
+		add_child(hit_overlay)
 	update_animation()
 
 func set_equipment(inventory: ItemInventory) -> void:
@@ -168,6 +176,9 @@ func _physics_process(delta: float) -> void:
 	if direction.length_squared()>.1:
 		if absf(direction.x)>=absf(direction.y): facing="right" if direction.x>0 else "left"
 		else: facing="front" if direction.y>0 else "back"
+	if stream.items!=null and not stream.items.combat.personal.attack.is_empty():
+		var a: Dictionary=stream.items.combat.personal.attack.direction
+		facing=("right" if a.x>0 else "left") if absf(a.x)>=absf(a.y) else ("front" if a.y>0 else "back")
 	if moving:
 		gait_distance+=last_displacement.length()
 		idle_clock=0
@@ -201,9 +212,15 @@ func update_animation() -> void:
 	if action=="shear": animation=StringName("camp/%s_throw_right"%view)
 	if action=="feed": animation=StringName("camp/%s_throw_%s"%[view,animal_feed.hand])
 	if action=="throw": animation=StringName("camp/%s_throw_%s"%[view,camp_throw.hand])
+	var combat: Dictionary=remote_combat if remote_presentation else combat_render_state if not combat_render_state.is_empty() else stream.items.combat.personal if stream.items!=null else {}
+	var combat_attack: Dictionary=combat.get("attack",{})
+	if combat.get("phase","")=="dying":animation=StringName("combat/%s_death"%view)
+	elif not combat_attack.is_empty():animation=StringName("combat/%s_%s"%[view,combat_attack.weapon.animation])
 	var clip := animation_player.get_animation(animation)
 	var stride := float(actor.stride_world_units)
 	var clock := action_clock if not action.is_empty() else (fposmod(gait_distance/stride,1.0)*clip.length if moving else fposmod(idle_clock,clip.length))
+	if combat.get("phase","")=="dying":clock=float(combat.clock)
+	elif not combat_attack.is_empty():clock=float(combat_attack.elapsed)
 	if view=="back" and action in ["chop","dig"]:
 		# Share the hammer's native pose, preserving each original action's hit and end time.
 		var logical: Animation=animation_player.get_animation("back_chop" if action=="chop" else "harvest/back_dig")
@@ -214,7 +231,9 @@ func update_animation() -> void:
 	animation_player.seek(clock,true)
 	appearance.apply(character,equipment_inventory,facing)
 	look_renderer.apply(character,character_look,equipment_inventory,facing)
-	held_tool.apply(character,equipment_inventory,facing,"" if action in ["throw","feed","fertilize"] else action)
+	var pose_action: String="attack" if not combat_attack.is_empty() else "" if action in ["throw","feed","fertilize"] else action
+	held_tool.apply(character,null if combat.get("phase","")=="dying" else equipment_inventory,facing,pose_action)
+	if facing=="front" and not combat_attack.is_empty():held_tool.front_attack_pose(character)
 	if body!=null: preload("res://scripts/body_shape.gd").apply(character,body.build)
 	carried_wood.visible=action=="pickup" and action_succeeded and not harvesting and carried_wood.texture!=null and action_clock<.63
 	carried_wood.modulate.a=clampf((.69-action_clock)/.10,0,1)
@@ -252,6 +271,7 @@ func cancel_action() -> void:
 	chop_buffer=0.0
 
 func try_interact() -> void:
+	if stream.items!=null and (stream.items.combat.personal.phase!="alive" or not stream.items.combat.personal.attack.is_empty()):return
 	if input_blocked or (body!=null and (body.down or body.sleep_active() or body.energy<=0)): return
 	if action=="chop":
 		return
@@ -291,6 +311,12 @@ func try_interact() -> void:
 	update_animation()
 
 func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode==KEY_F:
+		if not input_blocked and action.is_empty() and stream.items!=null:
+			var direction: Vector2={"front":Vector2.DOWN,"back":Vector2.UP,"left":Vector2.LEFT,"right":Vector2.RIGHT}[facing]
+			var reason: String=stream.items.combat.attack(direction)
+			if not reason.is_empty():stream.items.notice.emit(reason)
+		return
 	if input_blocked or (body!=null and (body.down or body.sleep_active() or body.energy<=0)): return
 	if event.is_action_pressed("interact") and not event.is_echo():
 		try_interact()

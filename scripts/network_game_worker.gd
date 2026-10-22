@@ -86,6 +86,10 @@ func execute(request: Dictionary) -> void:
 		world.player.character_look=character.appearance
 		service.inventory.changed.emit()
 	world.stream.update_target(world.player.position)
+	# Restore may replace a facility at the same ID. Let deferred deletion and
+	# physics registration finish before a ray can hit the superseded collider.
+	await get_tree().process_frame
+	await get_tree().physics_frame
 	for frame in 300:
 		if world.stream.viewport_ready(world.player.position,Vector2(640,360)):break
 		await get_tree().process_frame
@@ -99,9 +103,14 @@ func execute(request: Dictionary) -> void:
 	var requested_station=request.get("station")
 	if requested_station is String and (requested_station.is_empty() or service.workbench_valid(requested_station)):service.craft_station_id=requested_station
 	var elapsed:=clampf(float(request.get("elapsed",0)),0,5)
+	service.combat.peers=request.get("combat_peers",[])
+	service.combat.damage_events=[]
+	for incoming in request.get("combat_damage",[]):
+		service.combat.damage(float(incoming.amount),point(incoming.source),bool(incoming.duel))
 	if elapsed>0:
 		if service.body.energy<=0 and not service.body.sleep_active():world.environment_view.try_start_sleep(true)
 		world.environment_view.advance_gameplay(elapsed,bool(request.get("shared",true)))
+		service.combat.advance(elapsed,bool(request.get("shared",true)))
 		service.advance_craft(elapsed)
 		fishing.advance(elapsed)
 		world.player.set_physics_process(false)
@@ -116,11 +125,16 @@ func execute(request: Dictionary) -> void:
 	var message := ""
 	var operation:=str(request.get("operation","snapshot"))
 	var args: Array=integral_arguments(request.get("args",[]))
+	if service.combat.personal.phase!="alive" and operation!="snapshot":
+		write_result({"ok":false,"error":"正在返回传送门，请稍候","snapshot":service.snapshot()});busy=false;return
 	for index in request.get("expected",{}):
 		if not preload("res://scripts/food_freshness.gd").matches(service.inventory.get_slot(int(index)),request.expected[index]):
 			write_result({"ok":false,"error":"背包已变化，请重新操作","snapshot":service.snapshot()});busy=false;return
 	# Explicit allowlist. Placement rows are rebuilt from kind and geometry below.
 	match operation:
+		"combat_duel":message=service.combat.duel(str(args[0]),bool(args[1]))
+		"combat_attack":message=service.combat.attack(point(args[0]))
+		"relic_claim":message=service.combat.claim(str(args[0]),int(args[1]),args[2])
 		"snapshot":pass
 		"organize":message=service.organize_bag()
 		"craft":message=service.start_craft(str(args[0]),int(args[1]))
@@ -193,7 +207,7 @@ func execute(request: Dictionary) -> void:
 	snapshot.network_lamp_on=is_instance_valid(service.lantern) and service.lantern.visible
 	snapshot.network_fishing=fishing.network_snapshot()
 	snapshot.network_light_clock=service.merchant.state.get("last_time",0.0)
-	write_result({"ok":message.is_empty(),"error":message,"snapshot":snapshot,"events":Engine.get_meta("network_rules_events")})
+	write_result({"ok":message.is_empty(),"error":message,"snapshot":snapshot,"events":Engine.get_meta("network_rules_events"),"combat_damage":service.combat.damage_events})
 	busy=false
 func point(value: Dictionary) -> Vector2:
 	return Vector2(float(value.x),float(value.y))
@@ -214,7 +228,7 @@ func movement(request: Dictionary) -> void:
 	var body=preload("res://scripts/body_state.gd").new()
 	body.restore(character.gameplay.body)
 	var fishing: Dictionary=character.gameplay.get("network_fishing",{})
-	if body.sleep_active() or body.down or fishing.get("state","idle")!="idle":
+	if body.sleep_active() or body.down or character.gameplay.get("combat_personal",{}).get("phase","alive")!="alive" or fishing.get("state","idle")!="idle":
 		write_result({"x":at.x,"y":at.y});return
 	for item in request.inputs:
 		# The client sends actual displacement, including its original shore slide.
@@ -231,6 +245,13 @@ func movement(request: Dictionary) -> void:
 
 func movement_clear(at: Vector2, request: Dictionary) -> bool:
 	if not world.generator.can_walk(at):return false
+	var combat_world: Dictionary=request.get("combat_world",{})
+	var portal: Dictionary=combat_world.get("spawn",{})
+	if not portal.is_empty():
+		for side in [-1,1]:
+			if at.distance_to(Vector2(portal.x+side*70,portal.y-16))<26:return false
+	for boar in combat_world.get("boars",{}).values():
+		if boar.health>0 and at.distance_to(Vector2(boar.x,boar.y))<24:return false
 	for row in request.buildings.values():
 		if row.layer in ["ground","overlay"]:continue
 		var polygon: PackedVector2Array=world.item_service.animals.barrier_polygon(row)

@@ -267,5 +267,67 @@
   "default_unlocked": true,
   "description": "在金属加工台制作。",
   "craft_time": 1.5
-}
+},
+  {
+    "recipe_id": "combat_plaster",
+    "output_id": "plaster",
+    "output_count": 1,
+    "materials": {
+      "plant_fiber": 3,
+      "wild_berry": 2
+    },
+    "category": "医疗",
+    "conditions": [],
+    "default_unlocked": true,
+    "description": "膏药",
+    "craft_time": 2.0
+  },
+  {
+    "recipe_id": "combat_medical_kit",
+    "output_id": "medical_kit",
+    "output_count": 1,
+    "materials": {
+      "plaster": 3,
+      "wool": 2
+    },
+    "category": "医疗",
+    "conditions": [
+      "workbench"
+    ],
+    "default_unlocked": true,
+    "description": "医药包",
+    "craft_time": 2.0
+  },
+  {
+    "recipe_id": "combat_wood_club",
+    "output_id": "wood_club",
+    "output_count": 1,
+    "materials": {
+      "wood": 4,
+      "plant_fiber": 2
+    },
+    "category": "武器",
+    "conditions": [
+      "workbench"
+    ],
+    "default_unlocked": true,
+    "description": "木棍",
+    "craft_time": 2.0
+  },
+  {
+    "recipe_id": "combat_tusk_club",
+    "output_id": "tusk_club",
+    "output_count": 1,
+    "materials": {
+      "wood_club": 1,
+      "boar_tusk": 2
+    },
+    "category": "武器",
+    "conditions": [
+      "workbench"
+    ],
+    "default_unlocked": true,
+    "description": "猪牙棒",
+    "craft_time": 2.0
+  }
 ]

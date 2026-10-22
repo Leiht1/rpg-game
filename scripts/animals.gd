@@ -331,11 +331,23 @@ func action(id: String) -> String:
 
 func caption(id: String) -> String:
  if not states.has(id):return ""
- return "E 剪毛" if action(id)=="shear" else ""
+ if action(id)=="shear":return "E 剪毛"
+ return "E 投喂" if not food_slots(id).is_empty() else ""
+
+func food_slots(id: String) -> Array[int]:
+ var found: Array[int]=[]
+ if not states.has(id) or states[id].departed:return found
+ var seen: Dictionary={}
+ for i in range(40):
+  var item: String=service.inventory.slots[i].get("item_id","")
+  if item in rules[states[id].species].foods and not seen.has(item):found.append(i);seen[item]=true
+ return found
 
 func interact(id: String, target: Node2D) -> bool:
  if busy or not service.writable or service.body.sleep_active() or service.body.down or not states.has(id):return false
  if not preload("res://scripts/world_interaction.gd").in_reach(service.world.stream,service.world.player.position,target):return false
+ if action(id)!="shear" and not food_slots(id).is_empty() and is_instance_valid(service.world.item_ui):
+  return service.world.item_ui.feed_ui.open(id)
  var r: Dictionary=states[id];var before=r.duplicate(true)
  var inv: ItemInventory=service.inventory
  var slots=inv.slots.duplicate(true);var equip=inv.equipment.duplicate(true);var links=inv.hotbar_equipment.duplicate(true)

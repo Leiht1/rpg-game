@@ -32,7 +32,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "food_kind": "raw"
+    "food_kind": "raw",
+    "death_retention": "relic"
   },
   {
     "item_id": "brown_mushroom",
@@ -68,7 +69,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "food_kind": "raw"
+    "food_kind": "raw",
+    "death_retention": "relic"
   },
   {
     "item_id": "wild_carrot",
@@ -103,7 +105,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "food_kind": "raw"
+    "food_kind": "raw",
+    "death_retention": "relic"
   },
   {
     "item_id": "wild_apple",
@@ -138,7 +141,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "food_kind": "raw"
+    "food_kind": "raw",
+    "death_retention": "relic"
   },
   {
     "item_id": "wood",
@@ -170,7 +174,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "relic"
   },
   {
     "item_id": "branch",
@@ -202,7 +207,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "relic"
   },
   {
     "item_id": "stone",
@@ -232,7 +238,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "relic"
   },
   {
     "item_id": "plant_fiber",
@@ -264,7 +271,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "relic"
   },
   {
     "item_id": "flint",
@@ -294,7 +302,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "relic"
   },
   {
     "item_id": "broad_leaf",
@@ -326,7 +335,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "relic"
   },
   {
     "item_id": "pine_cone",
@@ -358,7 +368,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "relic"
   },
   {
     "item_id": "wildflower",
@@ -393,7 +404,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "food_kind": "raw"
+    "food_kind": "raw",
+    "death_retention": "relic"
   },
   {
     "item_id": "stone_axe",
@@ -424,7 +436,8 @@
     "action_id": "chop",
     "visual_id": "tool:stone_axe",
     "stats": {},
-    "durability": 100
+    "durability": 100,
+    "death_retention": "retain"
   },
   {
     "item_id": "stone_pickaxe",
@@ -455,7 +468,8 @@
     "action_id": "mine",
     "visual_id": "tool:stone_pickaxe",
     "stats": {},
-    "durability": 100
+    "durability": 100,
+    "death_retention": "retain"
   },
   {
     "item_id": "simple_shovel",
@@ -486,7 +500,8 @@
     "action_id": "dig",
     "visual_id": "tool:simple_shovel",
     "stats": {},
-    "durability": 100
+    "durability": 100,
+    "death_retention": "retain"
   },
   {
     "item_id": "bone_fragment",
@@ -514,7 +529,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "relic_fragment",
@@ -542,7 +558,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "supply_pouch",
@@ -575,7 +592,8 @@
       "wild_carrot": 2,
       "flint": 1,
       "relic_fragment": 2
-    }
+    },
+    "death_retention": "retain"
   },
   {
     "item_id": "copper_ore",
@@ -605,7 +623,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "silver_ore",
@@ -635,7 +654,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "gold_ore",
@@ -665,7 +685,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "field_lantern",
@@ -695,7 +716,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "simple_campfire",
@@ -724,7 +746,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "roasted_carrot",
@@ -758,7 +781,8 @@
     "stats": {},
     "durability": null,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "roasted_mushroom",
@@ -792,7 +816,8 @@
     "stats": {},
     "durability": null,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "herb_roasted_mushroom",
@@ -826,7 +851,8 @@
     "stats": {},
     "durability": null,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "roasted_fruit_platter",
@@ -860,7 +886,8 @@
     "stats": {},
     "durability": null,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "field_harvest_platter",
@@ -894,7 +921,8 @@
     "stats": {},
     "durability": null,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "stone_wall",
@@ -925,7 +953,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "stone_gate",
@@ -956,7 +985,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "wood_fence",
@@ -987,7 +1017,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "fence_gate",
@@ -1018,7 +1049,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "wood_floor",
@@ -1049,7 +1081,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "stone_path",
@@ -1080,7 +1113,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "wood_chest",
@@ -1111,7 +1145,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "workbench",
@@ -1142,7 +1177,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "camp_torch",
@@ -1173,7 +1209,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "stone_hammer",
@@ -1204,7 +1241,8 @@
     "action_id": "demolish",
     "visual_id": "tool:stone_hammer",
     "stats": {},
-    "durability": 100
+    "durability": 100,
+    "death_retention": "retain"
   },
   {
     "item_id": "sleeping_bag",
@@ -1236,7 +1274,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "straw_mat",
@@ -1268,7 +1307,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "wood_bed",
@@ -1300,7 +1340,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "carrot_seed",
@@ -1330,7 +1371,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "potato_seed",
@@ -1360,7 +1402,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "cabbage_seed",
@@ -1390,7 +1433,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "potato",
@@ -1422,7 +1466,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "food_kind": "raw"
+    "food_kind": "raw",
+    "death_retention": "retain"
   },
   {
     "item_id": "cabbage",
@@ -1454,7 +1499,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "food_kind": "raw"
+    "food_kind": "raw",
+    "death_retention": "retain"
   },
   {
     "item_id": "tilled_soil",
@@ -1483,7 +1529,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "roasted_potato",
@@ -1517,7 +1564,8 @@
     "stats": {},
     "durability": null,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "roasted_cabbage",
@@ -1551,7 +1599,8 @@
     "stats": {},
     "durability": null,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "vegetable_soup",
@@ -1585,7 +1634,8 @@
     "stats": {},
     "durability": null,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "stewed_vegetables",
@@ -1619,7 +1669,8 @@
     "stats": {},
     "durability": null,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "signpost",
@@ -1650,7 +1701,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "chicken_egg",
@@ -1670,7 +1722,8 @@
     "rarity": "common",
     "drop_rules": {
       "source": "动物养殖"
-    }
+    },
+    "death_retention": "retain"
   },
   {
     "item_id": "wool",
@@ -1690,7 +1743,8 @@
     "rarity": "common",
     "drop_rules": {
       "source": "动物养殖"
-    }
+    },
+    "death_retention": "retain"
   },
   {
     "item_id": "shears",
@@ -1721,7 +1775,8 @@
     "action_id": "shear",
     "visual_id": "tool:shears",
     "stats": {},
-    "durability": 100
+    "durability": 100,
+    "death_retention": "retain"
   },
   {
     "item_id": "stone_furnace",
@@ -1753,7 +1808,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "metal_workbench",
@@ -1785,7 +1841,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "copper_oven",
@@ -1817,7 +1874,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "copper_lamp",
@@ -1849,7 +1907,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "reinforced_cabinet",
@@ -1881,7 +1940,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "feed_trough",
@@ -1913,7 +1973,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "refrigerator",
@@ -1945,7 +2006,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "wool_carpet",
@@ -1977,7 +2039,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "copper_ingot",
@@ -2007,7 +2070,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "silver_ingot",
@@ -2037,7 +2101,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "gold_ingot",
@@ -2067,7 +2132,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "copper_plate",
@@ -2097,7 +2163,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "copper_parts",
@@ -2127,7 +2194,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "metal_connector",
@@ -2157,7 +2225,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "copper_axe",
@@ -2191,7 +2260,8 @@
       "labor_speed": 1.35
     },
     "durability": 250,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "copper_pickaxe",
@@ -2225,7 +2295,8 @@
       "labor_speed": 1.35
     },
     "durability": 250,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "copper_shovel",
@@ -2259,7 +2330,8 @@
       "labor_speed": 1.35
     },
     "durability": 250,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "copper_hammer",
@@ -2293,7 +2365,8 @@
       "labor_speed": 1.35
     },
     "durability": 250,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "silver_lantern",
@@ -2327,7 +2400,8 @@
     "industry": true,
     "lamp_lifetime": 3600.0,
     "light_radius": 390.0,
-    "expire_remove": true
+    "expire_remove": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "fishing_rod",
@@ -2359,7 +2433,8 @@
     "visual_id": "tool:fishing_rod",
     "stats": {},
     "durability": 150,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "egg_vegetable_bake",
@@ -2394,7 +2469,8 @@
     "durability": null,
     "industry": true,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "small_hodgepodge",
@@ -2429,7 +2505,8 @@
     "durability": null,
     "industry": true,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "large_hodgepodge",
@@ -2464,7 +2541,8 @@
     "durability": null,
     "industry": true,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "lake_fish",
@@ -2497,7 +2575,8 @@
     "stats": {},
     "durability": null,
     "food_kind": "raw_fish",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "gold_coin",
@@ -2526,7 +2605,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "locked_chest",
@@ -2555,7 +2635,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "roasted_fish",
@@ -2589,7 +2670,8 @@
     "stats": {},
     "durability": null,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "vegetable_fish_soup",
@@ -2623,7 +2705,8 @@
     "stats": {},
     "durability": null,
     "food_kind": "cooked",
-    "shelf_days": 2.5
+    "shelf_days": 2.5,
+    "death_retention": "retain"
   },
   {
     "item_id": "precision_repair_bench",
@@ -2655,7 +2738,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "fuel_supply_box",
@@ -2687,7 +2771,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "compost_bin",
@@ -2719,7 +2804,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "advanced_smokehouse",
@@ -2751,7 +2837,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "industry": true
+    "industry": true,
+    "death_retention": "retain"
   },
   {
     "item_id": "compost_fertilizer",
@@ -2783,7 +2870,8 @@
     "action_id": "",
     "visual_id": "",
     "stats": {},
-    "durability": null
+    "durability": null,
+    "death_retention": "retain"
   },
   {
     "item_id": "smoked_fish",
@@ -2818,6 +2906,332 @@
     "durability": null,
     "food_kind": "cooked",
     "shelf_days": 30.0,
-    "chilled_shelf_days": 30.0
+    "chilled_shelf_days": 30.0,
+    "death_retention": "retain"
+  },
+  {
+    "item_id": "survival_guide",
+    "name": "生存指南",
+    "category": "utility",
+    "description": "一封写给原野旅人的信，记着最基本的操作。",
+    "icon": "res://assets/ui/survival_guide_v1/letter_icon.png",
+    "world_visual": "res://assets/ui/survival_guide_v1/letter_icon.png",
+    "max_stack": 1,
+    "usable": true,
+    "use_action": "read_guide",
+    "consumable": false,
+    "indestructible": true,
+    "tags": [
+      "guide"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "初次进入世界"
+    },
+    "death_retention": "retain"
+  },
+  {
+    "item_id": "wood_club",
+    "name": "木棍",
+    "category": "weapon",
+    "description": "木棍",
+    "icon": "res://assets/combat/v1/wood_club.png",
+    "world_visual": "res://assets/combat/v1/wood_club.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "制作、料理或卷牙野猪"
+    },
+    "world_size": 30,
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "weapon",
+    "capabilities": [],
+    "action_id": "club",
+    "visual_id": "weapon:wood_club",
+    "stats": {},
+    "durability": null,
+    "death_retention": "retain",
+    "combat_weapon": "wood_club"
+  },
+  {
+    "item_id": "tusk_club",
+    "name": "猪牙棒",
+    "category": "weapon",
+    "description": "猪牙棒",
+    "icon": "res://assets/combat/v1/tusk_club.png",
+    "world_visual": "res://assets/combat/v1/tusk_club.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "制作、料理或卷牙野猪"
+    },
+    "world_size": 30,
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "weapon",
+    "capabilities": [],
+    "action_id": "club",
+    "visual_id": "weapon:tusk_club",
+    "stats": {},
+    "durability": null,
+    "death_retention": "retain",
+    "combat_weapon": "tusk_club"
+  },
+  {
+    "item_id": "boar_tusk",
+    "name": "野猪牙",
+    "category": "material",
+    "description": "野猪牙",
+    "icon": "res://assets/combat/v1/boar_tusk.png",
+    "world_visual": "res://assets/combat/v1/boar_tusk.png",
+    "max_stack": 30,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "制作、料理或卷牙野猪"
+    },
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "death_retention": "retain"
+  },
+  {
+    "item_id": "boar_meat",
+    "name": "野猪肉",
+    "category": "food",
+    "description": "野猪肉",
+    "icon": "res://assets/combat/v1/boar_meat.png",
+    "world_visual": "res://assets/combat/v1/boar_meat.png",
+    "max_stack": 30,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "制作、料理或卷牙野猪"
+    },
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "death_retention": "retain",
+    "food_kind": "raw_meat",
+    "shelf_days": 1,
+    "chilled_shelf_days": 7,
+    "rotten_icon": "res://assets/combat/v1/boar_meat_rotten.png"
+  },
+  {
+    "item_id": "cured_pork",
+    "name": "腊肉",
+    "category": "food",
+    "description": "腊肉",
+    "icon": "res://assets/combat/v1/cured_pork.png",
+    "world_visual": "res://assets/combat/v1/cured_pork.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "制作、料理或卷牙野猪"
+    },
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "death_retention": "retain",
+    "food_kind": "cooked",
+    "shelf_days": 30,
+    "chilled_shelf_days": 30,
+    "rotten_icon": "res://assets/combat/v1/cured_pork_rotten.png",
+    "effects": {
+      "hunger": 24
+    }
+  },
+  {
+    "item_id": "meatballs",
+    "name": "肉丸",
+    "category": "food",
+    "description": "肉丸",
+    "icon": "res://assets/combat/v1/meatballs.png",
+    "world_visual": "res://assets/combat/v1/meatballs.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "制作、料理或卷牙野猪"
+    },
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "death_retention": "retain",
+    "food_kind": "cooked",
+    "shelf_days": 2.5,
+    "chilled_shelf_days": 7,
+    "rotten_icon": "res://assets/combat/v1/meatballs_rotten.png",
+    "effects": {
+      "hunger": 28
+    }
+  },
+  {
+    "item_id": "smoked_meatballs",
+    "name": "熏肉丸",
+    "category": "food",
+    "description": "熏肉丸",
+    "icon": "res://assets/combat/v1/smoked_meatballs.png",
+    "world_visual": "res://assets/combat/v1/smoked_meatballs.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "制作、料理或卷牙野猪"
+    },
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "death_retention": "retain",
+    "food_kind": "cooked",
+    "shelf_days": 30,
+    "chilled_shelf_days": 30,
+    "rotten_icon": "res://assets/combat/v1/smoked_meatballs_rotten.png",
+    "effects": {
+      "hunger": 28
+    }
+  },
+  {
+    "item_id": "carrot_pork",
+    "name": "胡萝卜炒肉",
+    "category": "food",
+    "description": "胡萝卜炒肉",
+    "icon": "res://assets/combat/v1/carrot_pork.png",
+    "world_visual": "res://assets/combat/v1/carrot_pork.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "eat",
+    "consumable": true,
+    "tags": [],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "制作、料理或卷牙野猪"
+    },
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "death_retention": "retain",
+    "food_kind": "cooked",
+    "shelf_days": 2.5,
+    "chilled_shelf_days": 7,
+    "rotten_icon": "res://assets/combat/v1/carrot_pork_rotten.png",
+    "effects": {
+      "hunger": 38
+    }
+  },
+  {
+    "item_id": "plaster",
+    "name": "膏药",
+    "category": "utility",
+    "description": "膏药",
+    "icon": "res://assets/combat/v1/plaster.png",
+    "world_visual": "res://assets/combat/v1/plaster.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "heal",
+    "consumable": true,
+    "tags": [],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "制作、料理或卷牙野猪"
+    },
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "death_retention": "retain"
+  },
+  {
+    "item_id": "medical_kit",
+    "name": "医药包",
+    "category": "utility",
+    "description": "医药包",
+    "icon": "res://assets/combat/v1/medical_kit.png",
+    "world_visual": "res://assets/combat/v1/medical_kit.png",
+    "max_stack": 30,
+    "usable": true,
+    "use_action": "heal",
+    "consumable": true,
+    "tags": [],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "制作、料理或卷牙野猪"
+    },
+    "world_size": 30,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "death_retention": "retain"
   }
 ]

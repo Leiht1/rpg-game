@@ -72,10 +72,11 @@ func oven_recipe(materials: Dictionary) -> String:
 	var normalized := {}
 	for id in materials:
 		var amount = materials[id]
-		if not number(amount,1,99) or amount!=floor(amount) or service.database.item(str(id)).get("food_kind","")!="raw":return ""
+		if not number(amount,1,99) or amount!=floor(amount) or service.database.item(str(id)).get("food_kind","") not in ["raw","raw_meat"]:return ""
 		total+=int(amount)
 		normalized[id]=int(amount)
 	var exact: String=service.camps.match_materials(normalized)
+	if exact.is_empty() and normalized.keys().any(func(id):return service.database.item(str(id)).get("food_kind","")=="raw_meat"):return ""
 	return exact if not exact.is_empty() else "oven_small_hodgepodge" if total<=2 else "oven_large_hodgepodge"
 
 func feed_allowed(id: String) -> bool:
@@ -132,7 +133,7 @@ func act(id: String, action: String, index: int=0, key: String="", count: int=1,
 			elif index<0 or index>=m.jobs.size():reason="加工位置无效"
 			elif m.queue.size()>=int(rules.queue_limit) or not m.legacy_queue.is_empty():reason="加工队列已满"
 			else:
-				var staged: ItemInventory=service.camps.consume(materials if row.kind=="copper_oven" else r.materials)
+				var staged: ItemInventory=service.camps.consume(materials if row.kind=="copper_oven" else r.materials,row.kind=="copper_oven")
 				if staged==null:reason="材料不足"
 				else:
 					var output := {"item_id":r.output,"count":int(r.get("count",1))}
@@ -216,6 +217,8 @@ func advance(seconds: float, minutes: float, shared: bool=true) -> void:
 	if not shared:
 		if visual_changed:service.inventory.changed.emit()
 		service.dirty=true;return
+	for relic in service.combat.state.relics.values():
+		for value in relic.contents:Fresh.advance(service.database,value,minutes)
 	for id in service.loose:
 		var v: Dictionary=service.loose[id]
 		if v.has("instance"):

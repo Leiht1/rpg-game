@@ -1,3 +1,7 @@
+## 2026-10-22 · 本地散燧石与小树枝翻倍
+
+当前配置data/natural_resources.json的starter_resource_double启用后，对原分布合格点补充一个独立starter-double-v1编号近邻点；旧点身份、坐标、权重、已采记录保留。新增点经过干地、净空、接近及间距检查，极端找不到空地不强塞。3Seed×49块抽样两类均恰好翻倍，详细数据与覆盖边界见[报告](reports/survival-local-v1/REPORT.md)。只交付本地，不含联机部署。
+
 ## 2026-10-22 · 开局地面燧石小幅增加
 
 提高草地、森林、泥地的地面燧石权重，唯一参数来源为 data/natural_resources.json；总密度、岩石区/水岸、矿点、候选ID/坐标、单点数量及 consumed 保护不改。未采候选种类可随权重改变，不复生已采点。三Seed正常世界采样及边界见 [报告](reports/flint-party-map-20261022/REPORT.md)。

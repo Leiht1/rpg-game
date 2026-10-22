@@ -1,0 +1,434 @@
+{
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "source": "art\\combat-v1\\generated\\generated.png",
+  "prompt": "art/combat-v1/prompt.txt",
+  "source_sha256": "95416d67de1213cbe5a4fab8b8cd684d828a10c0613d11e9aa5d5243ff9a5992",
+  "reference": "art/animals-style-v2/scene-reference.png",
+  "reference_sha256": "8c4708b7e0577d35da5d592e2ed5f33d850c139d46d626a0085d61d34716b15a",
+  "repair": {
+    "source": "art/combat-v1/repair/generated.png",
+    "prompt": "art/combat-v1/repair-prompt.txt",
+    "sha256": "e36f2bd0458c66bc26a9be17912bfd7b79e051e6d1d75f40c0079ce7da44ba66",
+    "adopted_only": "boar_torso"
+  },
+  "authorization": "User requested production integration of all assets for combat V1; visual feedback pending, not a claim of user aesthetic approval.",
+  "processing": "Explicit ownership crops, including row-four boundaries 0/350/700/940/1254 scaled to source width to preserve overhanging boar drawings; magenta soft alpha/despill; proportional LANCZOS to 256 cells. Rotten variants use their own original asset.",
+  "assets": [
+    {
+      "id": "wood_club",
+      "source_box": [
+        0,
+        0,
+        314,
+        314
+      ],
+      "source_alpha_bbox": [
+        121,
+        58,
+        207,
+        293
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "1a1c64a42a7bf09129ce11b547143617a89efb0cf73e4967d7fb829d89b353e2"
+    },
+    {
+      "id": "tusk_club",
+      "source_box": [
+        314,
+        0,
+        627,
+        314
+      ],
+      "source_alpha_bbox": [
+        83,
+        45,
+        206,
+        308
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "67730259f7067228c1fa331dce393315f8a176a379c7364537c2ce6f4f571d2a"
+    },
+    {
+      "id": "boar_tusk",
+      "source_box": [
+        627,
+        0,
+        940,
+        314
+      ],
+      "source_alpha_bbox": [
+        45,
+        106,
+        266,
+        263
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "a5a81078d743ca911e25301603d0fd14beac5111c647ce557a4b34205767983a"
+    },
+    {
+      "id": "boar_meat",
+      "source_box": [
+        940,
+        0,
+        1254,
+        314
+      ],
+      "source_alpha_bbox": [
+        46,
+        87,
+        261,
+        272
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "57e4093823dbe8fa9a7acbfd37796fe720493b583db6ba5bb601ef0081697f5d"
+    },
+    {
+      "id": "cured_pork",
+      "source_box": [
+        0,
+        314,
+        314,
+        627
+      ],
+      "source_alpha_bbox": [
+        52,
+        79,
+        273,
+        254
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "9ba9c1e1b6373bee110a3d052dd41e0429323defb1a29639776daf6c380cdb8c"
+    },
+    {
+      "id": "meatballs",
+      "source_box": [
+        314,
+        314,
+        627,
+        627
+      ],
+      "source_alpha_bbox": [
+        45,
+        66,
+        272,
+        264
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "641ae3c6f8a57675854301646d79740f195de54f3f48aeebb2cc3efbf127682e"
+    },
+    {
+      "id": "smoked_meatballs",
+      "source_box": [
+        627,
+        314,
+        940,
+        627
+      ],
+      "source_alpha_bbox": [
+        42,
+        64,
+        269,
+        265
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "cd030f5b2aa5dd7074d23f6f1ab32c1cc7fd692e72037fd305e4aef1775adc6a"
+    },
+    {
+      "id": "carrot_pork",
+      "source_box": [
+        940,
+        314,
+        1254,
+        627
+      ],
+      "source_alpha_bbox": [
+        33,
+        50,
+        270,
+        268
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "997802588ce6c4d2ab3a45ab2eea0197bceff50e8c570b156a86ec25f2b22966"
+    },
+    {
+      "id": "plaster",
+      "source_box": [
+        0,
+        627,
+        314,
+        940
+      ],
+      "source_alpha_bbox": [
+        46,
+        57,
+        272,
+        244
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "bb0114b71055c4892004a41d249a04d5036753aa1b600c63e9fa8ece3597df06"
+    },
+    {
+      "id": "medical_kit",
+      "source_box": [
+        314,
+        627,
+        627,
+        940
+      ],
+      "source_alpha_bbox": [
+        61,
+        39,
+        264,
+        262
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "e862b8a9936d323d5320b883634cc1bd5edf76fff15c07d281e78f1d43faffb9"
+    },
+    {
+      "id": "relic",
+      "source_box": [
+        627,
+        627,
+        940,
+        940
+      ],
+      "source_alpha_bbox": [
+        25,
+        48,
+        291,
+        255
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "f256d50dd1e69b2aa10bf708a1f241e52bba12e85e1b287391082bc518e04c01"
+    },
+    {
+      "id": "portal",
+      "source_box": [
+        940,
+        627,
+        1254,
+        940
+      ],
+      "source_alpha_bbox": [
+        33,
+        13,
+        272,
+        277
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "4276406ca19d2ae5514dc87ac9e24caee39b1e843be1daabcaca12bc4ef24e78"
+    },
+    {
+      "id": "boar_torso",
+      "source_box": [
+        0,
+        940,
+        350,
+        1254
+      ],
+      "source_alpha_bbox": [
+        45,
+        24,
+        332,
+        254
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "3488a749cdcd61afb5fb92691e2303677a12978430a7757cf1f18af5b09e37f9"
+    },
+    {
+      "id": "boar_head",
+      "source_box": [
+        350,
+        940,
+        700,
+        1254
+      ],
+      "source_alpha_bbox": [
+        23,
+        18,
+        297,
+        256
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "6274d75514ade47a18198124e78f8524ff1b4c79d004c7580f70ec808e0e94db"
+    },
+    {
+      "id": "boar_leg",
+      "source_box": [
+        700,
+        940,
+        940,
+        1254
+      ],
+      "source_alpha_bbox": [
+        48,
+        31,
+        168,
+        264
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "16e6b791d916fe730e6b68b8a05f6dbd3d748d7c349600fd954d91f5b6ac5455"
+    },
+    {
+      "id": "boar_tail",
+      "source_box": [
+        940,
+        940,
+        1254,
+        1254
+      ],
+      "source_alpha_bbox": [
+        65,
+        60,
+        229,
+        243
+      ],
+      "runtime_size": [
+        256,
+        256
+      ],
+      "sha256": "26801f81524bc64e81c471515ce7b88acbd2e5bf80400364b160dd4812b5dd7b"
+    }
+  ],
+  "qa_limits": [
+    "Nominal-grid source QA fails: two boar parts cross quarter-cell lines; explicit ownership gaps preserve them in runtime extraction.",
+    "Raw safe_frame/boundary_band warnings and runtime faint_specks warning are retained; see REPORT.md for exact envelopes.",
+    "User requested integration and specific proportion changes; not a claim of final aesthetic approval."
+  ],
+  "derived_assets": [
+    {
+      "id": "boar_meat_rotten",
+      "source_id": "boar_meat",
+      "processing": "Grayscale colorized #343a2c to #939765; original alpha retained.",
+      "sha256": "322864d9b29b20cf2c923af15c9540b51bb5907f98a6db5f9d64e29e88e7d765"
+    },
+    {
+      "id": "cured_pork_rotten",
+      "source_id": "cured_pork",
+      "processing": "Grayscale colorized #343a2c to #939765; original alpha retained.",
+      "sha256": "3f0f61f23fd10cb4a39618862f3cc79dcf10027324b44f4fe9f3a96dcfc5414b"
+    },
+    {
+      "id": "meatballs_rotten",
+      "source_id": "meatballs",
+      "processing": "Grayscale colorized #343a2c to #939765; original alpha retained.",
+      "sha256": "9dcbb8495b411dde9e5bdeb725cda3d32a2f244e8d0dc18f14afb098005850df"
+    },
+    {
+      "id": "smoked_meatballs_rotten",
+      "source_id": "smoked_meatballs",
+      "processing": "Grayscale colorized #343a2c to #939765; original alpha retained.",
+      "sha256": "c758985877af467ce81884507742336b69a19532da7275e40764545758534fb8"
+    },
+    {
+      "id": "carrot_pork_rotten",
+      "source_id": "carrot_pork",
+      "processing": "Grayscale colorized #343a2c to #939765; original alpha retained.",
+      "sha256": "361ef8f6d9df8c23124ee0422f927be4283d5b143fc0bc5f6caef8953d667af3"
+    }
+  ],
+  "runtime_review": "art/combat-v1/runtime-review.png",
+  "runtime_revision": {
+    "portal_scale": 2.0,
+    "portal_ground_anchor_y": -51,
+    "boar_head_scale": 0.25,
+    "boar_head_joint": [
+      14,
+      -1
+    ],
+    "boar_head_sprite_offset": [
+      4,
+      0
+    ],
+    "torso_scale": [
+      0.24,
+      0.19
+    ],
+    "source_parts_unchanged_by_rig_revision": true
+  },
+  "qa_files": [
+    "art/combat-v1/raw-qc/sheet-qc.json",
+    "art/combat-v1/raw-qc-keyed/sheet-qc.json",
+    "art/combat-v1/repair-qc/sheet-qc.json",
+    "art/combat-v1/runtime-qc/sheet-qc.json"
+  ],
+  "hero_animation": {
+    "art_source": "existing approved hero parts, new native AnimationLibrary tracks",
+    "library": {
+      "path": "assets/hero/cartoon/combat_actions.tres",
+      "sha256": "4d1e165a810934bdf4b0965adbeab63f50a9f8692ac49871d43b126f003b71a8"
+    },
+    "generator": {
+      "path": "tools/build_combat_actions.gd",
+      "sha256": "79d207671409769b1ce80591edec37c5beb3dd196c236d4c03d472404bd97a16"
+    },
+    "source_rig": {
+      "path": "assets/hero/cartoon/character.tscn",
+      "sha256": "ca333699ff9fa7cf9975f322569cffa6ac3013ccc20edfa0a9eba58048d3e1b3"
+    },
+    "actions": [
+      "front/back/side punch",
+      "front/back/side club",
+      "front/back/side death"
+    ],
+    "left_direction": "existing side mirror",
+    "qa": "native four-direction weapon and front-hand checks in tests/combat_integration_v1.gd"
+  },
+  "effects": {
+    "world_animation_source": {
+      "path": "scripts/combat_world_view.gd",
+      "sha256": "23cb2b118bcb330c85815f11bcb221cf233d4b8ea910f57b54ab31cde507bf65"
+    },
+    "hit_shader": {
+      "path": "assets/combat/v1/hit_border.gdshader",
+      "sha256": "fd27066c89d4a485a5a59a4a3d4b2bd451048c9fdefbb8ee20e6f984aa536d39"
+    },
+    "art_source": "generated portal frame plus live procedural vortex, particles, soul motion and UI shader"
+  }
+}

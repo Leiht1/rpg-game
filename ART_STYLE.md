@@ -1,3 +1,7 @@
+## 2026-10-22 · 战斗与死亡 V1
+
+本轮依用户“新增并正式接入”授权接入 assets/combat/v1，来源 art/combat-v1，经 generate2dsprite → route_media → Codex(local CLI)。采用正式场景参考，角色仍用原部件；野猪为分件骨骼，传送门和灵魂为持续运动效果。追加修订：传送门两倍、头部放大与头身内接。来源/裁切边界/原图失败/运行 QA 限制见 provenance 与 [报告](reports/combat-v1/REPORT.md)，不把数值 QA 作为用户审美确认。
+
 ## 2026-10-19 · 本轮岩石地表与路标
 
 本轮用户明确要求基于正式工程开发岩石区与正式路标，按此授权接入两项本轮素材，不将授权扩大为具体画稿视觉确认或未来素材批准。来源 `art/ecology-signpost-v1/provenance.json`，流程 generate2dmap / generate2dsprite → route_media → local:codex-cli（codex-image_gen，实际精确修订未知）。新岩石地表只含平坦岩纹与裂隙，首稿凸起碎石已否决，修订图按SHA原样入正式路径；原草地/林地/泥地/水岸画稿不改。路标为正对镜头木牌与纤维绑绳，统一等比整理、软抠，无人物重绘。实景与质量边界见 [报告](reports/ecology-signpost-v1/REPORT.md)。

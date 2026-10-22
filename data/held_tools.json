@@ -218,5 +218,41 @@
         "texture": "res://assets/merchant/v1/flashlight_back.png"
       }
     }
+  },
+  "weapon:wood_club": {
+    "texture": "res://assets/combat/v1/wood_club.png",
+    "grip_px": [
+      128,
+      210
+    ],
+    "scale": 0.18,
+    "rotation_degrees": 0,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": -20,
+      "back": -20,
+      "side": -30
+    }
+  },
+  "weapon:tusk_club": {
+    "texture": "res://assets/combat/v1/tusk_club.png",
+    "grip_px": [
+      128,
+      210
+    ],
+    "scale": 0.18,
+    "rotation_degrees": 0,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": -20,
+      "back": -20,
+      "side": -30
+    }
   }
 }

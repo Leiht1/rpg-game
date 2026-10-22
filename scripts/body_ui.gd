@@ -133,7 +133,7 @@ func _process(delta: float) -> void:
 func refresh() -> void:
 	var values := [state.health,state.hunger,state.stamina,state.energy]
 	for i in 4: bars[i].value=values[i];numbers[i].text=str(roundi(values[i]))
-	summary.text="身体状态："+("休养中" if state.down else state.status())
+	summary.text="身体状态："+("倒地" if state.down else state.status())
 	style_bar(bars[3],Color("b77768") if state.energy<float(state.rules.energy_severe) else Color("c5a464") if state.energy<float(state.rules.energy_tired) else Color("a293b9"))
 	if state.sleeping: summary.text=state.energy_status()+" · %.1f小时"%(state.sleep_elapsed/60.0)
 	if not overlay.visible: return

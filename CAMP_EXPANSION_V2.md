@@ -1,3 +1,7 @@
+## 2026-10-22 · 战斗与死亡 V1
+
+熏制改用 data/camp_expansion_v2.json.smoking_recipes 明确白名单，保留烤鱼，新增野猪肉和肉丸；胡萝卜炒肉禁止。选择来源、腐烂、扣料、待领与保存失败回滚均复核。下文“仅烤鱼”是历史范围，当前见 [战斗系统](COMBAT_SYSTEM.md)。
+
 # 营地扩展 V2 · 正式接入
 
 2026-10-20 用户明确“接入吧，然后做一些改动”，本批正视建筑、既有尺寸、肥料/熏制烤鱼和完整鱼形腐烂图获批。10张PNG按原SHA迁入 `assets/camp_expansion/v2`，授权范围与来源见该目录 `provenance.json`。普通 `Start-Playtest.cmd` 直接生效；四配方开始即显示，无候选开关依赖。不向玩家存档发放测试材料，独立对比入口仍保留。正式接入与背包拖拽专项见[报告](reports/camp-formal-drag-v2/REPORT.md)。

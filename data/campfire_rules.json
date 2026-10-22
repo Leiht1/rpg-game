@@ -145,6 +145,23 @@
       "output": "vegetable_fish_soup",
       "seconds": 18,
       "default_unlocked": false
+    },
+    "boar_meatballs": {
+      "name": "肉丸",
+      "materials": {
+        "boar_meat": 2
+      },
+      "output": "meatballs",
+      "seconds": 24
+    },
+    "boar_carrot": {
+      "name": "胡萝卜炒肉",
+      "materials": {
+        "boar_meat": 1,
+        "wild_carrot": 1
+      },
+      "output": "carrot_pork",
+      "seconds": 28
     }
   }
 }

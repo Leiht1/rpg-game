@@ -208,7 +208,7 @@ func props_for_chunk(coord: Vector2i) -> Array[Dictionary]:
 	# Preserve terrain and original tree/decor RNG; retire only legacy scenery rocks.
 	var result: Array[Dictionary]=[]
 	for row in super.props_for_chunk(coord):
-		if row.kind not in [2,3]: result.append(row)
+		if row.kind not in [2,3,6]: result.append(row)
 	return result
 
 static func layout_configuration(cells: int) -> Dictionary:

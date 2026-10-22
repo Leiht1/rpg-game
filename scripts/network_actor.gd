@@ -10,15 +10,21 @@ var sample_time:=-1.0
 var remote_velocity:=Vector2.ZERO
 var remote_age:=0.0
 var remote_motion_time:=-1.0
+var combat_soul: Node2D
+var remote_hit_serial:=-1
+var remote_flash:=0.0
 var sleep_cover=preload("res://scripts/sleep_head_cover.gd").new()
 var sleep_symbols: Label
 func _ready()->void:
+	remote_presentation=true
 	super._ready()
 	# Remote interpolated poses are presentation only. Their local colliders
 	# otherwise push the predicted player without a matching server movement.
 	collision_layer=0
 	collision_mask=0
 func _physics_process(delta:float)->void:
+	if not remote_combat.get("attack",{}).is_empty():remote_combat.attack.elapsed=float(remote_combat.attack.elapsed)+delta
+	if remote_combat.get("phase","alive")!="alive":remote_combat.clock=float(remote_combat.get("clock",0))+delta
 	var previous:=position
 	if own:
 		var world:=objects_world()
@@ -46,6 +52,14 @@ func _physics_process(delta:float)->void:
 	gait_distance+=position.distance_to(previous)
 	idle_clock+=delta
 	update_animation()
+	if remote_combat.get("phase","alive")=="dying":
+		if not is_instance_valid(combat_soul):combat_soul=preload("res://scripts/combat_world_view.gd").Soul.new();add_child(combat_soul)
+		combat_soul.position=Vector2(14,-12-float(remote_combat.get("clock",0))*28);combat_soul.modulate.a=sin(clampf(float(remote_combat.get("clock",0))/3,0,1)*PI)
+		character.modulate=Color.WHITE
+	else:
+		if is_instance_valid(combat_soul):combat_soul.queue_free()
+		remote_flash=maxf(0,remote_flash-delta)
+		character.modulate=Color(1,.55,.55,.5 if int(remote_flash*35)%2 else 1) if remote_flash>0 else Color.WHITE
 	if not own and body!=null and body.sleep_active() and not body.sleep_session.is_empty():
 		var world=objects_world()
 		var anchor: Vector2=sleep_cover.render(self,body.sleep_session,world.item_service.builds)
@@ -57,12 +71,18 @@ func _unhandled_input(event:InputEvent)->void:
 func objects_world()->Node:
 	return get_parent().get_parent()
 func receive(row:Dictionary,reconcile:bool=true,round_trip:float=0.0)->void:
+	var old_phase:=str(remote_combat.get("phase","alive"))
+	remote_combat=row.get("combat",{}).duplicate(true)
+	if remote_hit_serial>=0 and remote_hit_serial!=int(remote_combat.get("hit_serial",0)):remote_flash=.3
+	remote_hit_serial=int(remote_combat.get("hit_serial",0))
 	if not own and row.has("sample_time"):
 		if float(row.sample_time)<sample_time:return
 		sample_time=float(row.sample_time)
 	if reconcile:
 		if not own:
 			var next:=Vector2(row.x,row.y)
+			if old_phase!=str(remote_combat.get("phase","alive")) and remote_combat.get("phase")=="entering":
+				position=next;target_position=next;remote_velocity=Vector2.ZERO;reset_physics_interpolation()
 			var clock:float=float(row.get("sample_time",Time.get_ticks_msec()/1000.0))
 			if not bool(row.moving):remote_velocity=Vector2.ZERO;remote_age=0.0
 			elif next!=target_position:

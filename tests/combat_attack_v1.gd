@@ -1,0 +1,23 @@
+extends SceneTree
+const Attack = preload("res://scripts/combat_attack.gd")
+func _initialize() -> void:
+	var attack = Attack.new()
+	var weapon = {"windup":0.2,"active":0.1,"recovery":0.3}
+	assert(attack.begin(1,weapon,Vector2.RIGHT))
+	assert(not attack.begin(2,weapon,Vector2.RIGHT))
+	assert(not attack.advance(0.1))
+	assert(not attack.claim_target("boar"))
+	assert(attack.advance(0.11))
+	assert(attack.claim_target("boar"))
+	assert(not attack.claim_target("boar"))
+	attack.cancel()
+	assert(not attack.claim_target("other"))
+	assert(not attack.begin(1,weapon,Vector2.RIGHT))
+	assert(attack.begin(2,weapon,Vector2.RIGHT))
+	assert(attack.advance(0.8))
+	assert(attack.claim_target("boar"))
+	assert(not attack.active)
+	assert(not attack.advance(0.1))
+	assert(not attack.claim_target("late_target"))
+	print("combat_attack_v1: passed")
+	quit()

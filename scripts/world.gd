@@ -94,6 +94,13 @@ func _ready() -> void:
 	add_child(item_service)
 	item_service.configure(self,items_preview)
 	restore_player_entry()
+	if not item_service.restored_player_position and not get_meta("network_game",false):
+		player.position=item_service.combat.spawn_point()
+		item_service.combat.personal.phase="entering"
+		item_service.combat.personal.clock=0.0
+	item_service.combat_view=preload("res://scripts/combat_world_view.gd").new()
+	item_service.combat_view.service=item_service
+	add_child(item_service.combat_view)
 	if tools_preview:
 		for id in ["stone_axe","stone_pickaxe","simple_shovel"]: item_service.inventory.add(id,1)
 	if Engine.get_meta("camp_build_preview",false):
@@ -247,6 +254,7 @@ func setup_ui() -> void:
 	make_label(title,"风栖原野 · V0.4"+(" · 工具试用（临时）" if tools_preview else " · 物品预览存档" if items_preview else ""),Vector2(26,20),25)
 	if not migration_notice.is_empty():title.text+="  |  "+migration_notice
 	make_label(hint,"WASD 移动 · 按住 Shift 奔跑 · E 交互 · 滚轮缩放 · B 背包 · 1–8 快捷栏 · M 地图 · N 新世界 · F3 调试 · F4 环境",Vector2(26,58),15)
+	hint.hide()
 	make_label(debug_label,"",Vector2(26,112),16)
 	debug_label.visible=debug_on
 	loading_cover.color=Color("6c8c62")

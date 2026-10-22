@@ -9,8 +9,8 @@ except ImportError:
 
 PERSONAL = frozenset(("slots", "equipment", "equipment_quarantine", "hotbar_equipment",
                       "selected", "body", "player_position", "lantern_remaining",
-                      "network_craft_job", "network_craft_station", "network_active_lamp", "network_lamp_on", "network_fishing", "network_light_clock"))
-ARITY = {"snapshot": 0, "organize": 0, "craft": 2, "craft_cancel": 0, "station": 1,
+                      "combat_personal", "network_craft_job", "network_craft_station", "network_active_lamp", "network_lamp_on", "network_fishing", "network_light_clock"))
+ARITY = {"combat_duel":2,"combat_attack":1,"relic_claim":3,"snapshot": 0, "organize": 0, "craft": 2, "craft_cancel": 0, "station": 1,
          "discard": 2, "inventory": None, "camp_act": 4, "camp_feed": 4,
          "camp_place": 3, "camp_build": 3, "building_place": 2,
          "building_toggle": 1, "building_open": 2, "building_bag": 3,
@@ -40,7 +40,7 @@ def validate(operation, args):
         elif not isinstance(value, (str, int, float, bool, type(None))):
             raise ValueError("Invalid gameplay value")
     visit(args)
-    signatures = {
+    signatures = {"combat_duel":(str,bool),"combat_attack":(dict,),"relic_claim":(str,int,dict),
         "craft": (str, int), "station": (str,), "discard": (int, int),
         "camp_act": (str, str, str, dict), "camp_feed": (str, int, dict, int),
         "camp_place": (dict, int, dict), "camp_build": (dict, str, list),
@@ -55,6 +55,12 @@ def validate(operation, args):
     }
     if operation in signatures and any(type(value) is not kind for value, kind in zip(args, signatures[operation])):
         raise ValueError("Invalid gameplay argument type")
+    if operation == "combat_attack":
+        direction = args[0]
+        if set(direction) != {"x", "y"} or any(type(direction[k]) not in (int, float) or not math.isfinite(direction[k]) or abs(direction[k])>1 for k in ("x", "y")):
+            raise ValueError("Invalid attack direction")
+        if direction["x"]**2+direction["y"]**2 < .001:
+            raise ValueError("Empty attack direction")
     for value in args:
         if type(value) is int and not -1 <= value <= 10000:
             raise ValueError("Gameplay quantity or index is out of range")
@@ -86,6 +92,7 @@ class Gameplay:
         self.config = config
         self.hosts = {}
         self.defaults = {}
+        self.combat_characters = []
 
     def close(self):
         for host in self.hosts.values():
@@ -100,7 +107,7 @@ class Gameplay:
         snapshot["player_position"] = {"x": character["x"], "y": character["y"]}
         return snapshot
 
-    def apply(self, world, character, operation="snapshot", args=None, elapsed=0, shared=True, station=None, expected=None):
+    def apply(self, world, character, operation="snapshot", args=None, elapsed=0, shared=True, station=None, expected=None, combat_damage=None):
         args = args or []
         validate(operation, args)
         if expected is not None and (not isinstance(expected, dict) or len(expected)>2 or any(not isinstance(key, str) or not key.isdigit() or not 0<=int(key)<48 or not isinstance(value, dict) for key,value in expected.items())):
@@ -124,6 +131,10 @@ class Gameplay:
             personal = {key: copy.deepcopy(initial[key]) for key in PERSONAL if key in initial}
             for key in ("slots", "equipment", "hotbar_equipment"):
                 personal[key] = copy.deepcopy(character[key])
+            personal["combat_personal"]["phase"] = "entering"
+            personal["combat_personal"]["clock"] = 0.0
+            spawn = baseline.get("combat_world", {}).get("spawn", initial["player_position"])
+            character["x"],character["y"] = spawn["x"],spawn["y"]
         baseline.update(copy.deepcopy(personal))
         # Preserve contents from the earlier minimal online scene as ordinary
         # ground items. Stable identities make the migration idempotent.
@@ -145,7 +156,9 @@ class Gameplay:
         motion = {key: character[key] for key in ("slots", "equipment", "hotbar_equipment", "x", "y")}
         motion.update({"appearance": character.get("appearance", {}), "moving": character.get("moving", False), "running": character.get("running", False), "selected": baseline.get("selected", 0)})
         result = host.execute(baseline, character=motion, operation=operation, args=args, elapsed=elapsed,
-                              shared=shared, player_id=character.get("id", "isolated"), station=station, expected=expected)
+                              shared=shared, player_id=character.get("id", "isolated"), station=station, expected=expected,
+                              combat_peers=[{"id":p["id"],"x":p["x"],"y":p["y"],"phase":p.get("gameplay",{}).get("combat_personal",{}).get("phase","alive")}
+                                            for p in self.combat_characters if p["id"]!=character["id"] and p["world_id"]==world["id"]], combat_damage=combat_damage)
         if "snapshot" not in result:
             raise RuntimeError(result.get("error", "Invalid gameplay rules response"))
         if not result["ok"]:
@@ -157,4 +170,10 @@ class Gameplay:
             character[key] = copy.deepcopy(snapshot[key])
         character["x"], character["y"] = snapshot["player_position"]["x"], snapshot["player_position"]["y"]
         for kind, identity in migrated:world[kind].pop(identity, None)
+        for event in result.get("combat_damage", []):
+            target = next((p for p in self.combat_characters if p["id"]==event["target"] and p["world_id"]==world["id"]), None)
+            if target is not None:
+                received = self.apply(world,target,combat_damage=[event],shared=False)
+                if not received.get("ok"):raise RuntimeError("Combat target transaction failed")
+        result["snapshot"] = self.snapshot(world,character)
         return result

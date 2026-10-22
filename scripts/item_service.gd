@@ -11,6 +11,8 @@ var sleep: RefCounted=preload("res://scripts/sleep_controller.gd").new()
 var sleep_ui: Control
 var planting: RefCounted=preload("res://scripts/planting.gd").new()
 var planting_ui: Control
+var combat:=preload("res://scripts/combat_service.gd").new()
+var combat_view: Node
 var animals: Node
 var builds: RefCounted=preload("res://scripts/camp_buildings.gd").new()
 var industry: RefCounted=preload("res://scripts/industry_service.gd").new()
@@ -44,6 +46,7 @@ const HARVEST_VERSION := "harvest-resources-2.2.0"
 const ECOLOGY_PREVIOUS_HARVEST_VERSION := "harvest-resources-2.1.0"
 const PREVIOUS_HARVEST_VERSION := "harvest-resources-2.0.0"
 const LEGACY_HARVEST_VERSION := "harvest-resources-1.0.0"
+var guide_stage := 2 # 0: open bag, 1: read guide, 2: complete; old characters stay complete.
 var resource_hits: Dictionary = {}
 var ore_nodes: Dictionary = {}
 var consumed: Dictionary = {}
@@ -80,6 +83,7 @@ func notify_build_cost(materials: Dictionary) -> void:
 
 func configure(owner_world: Node, art_preview: bool) -> void:
 	world = owner_world
+	combat.service=self
 	var identity: String=world.world_id if not world.world_id.is_empty() else "%s:%d:%d"%[world.Gen.VERSION,world.world_seed,world.map_cells]
 	if world.get("record") is Dictionary: identity=str(world.record.get("world_id",identity))
 	exploration.configure(identity,world.generator.extent)
@@ -116,6 +120,10 @@ func configure(owner_world: Node, art_preview: bool) -> void:
 				load_state(legacy,true)
 				break
 	else: load_state()
+	if not existing_world_items and writable and not world.get_meta("network_game",false) and not world.get_meta("network_rules_host",false):
+		inventory.add("survival_guide",1)
+		guide_stage=0
+		dirty=true
 	if not existing_world_items and writable:
 		preload("res://scripts/abandoned_camps.gd").generate(self)
 	camps.rebuild()
@@ -123,15 +131,17 @@ func configure(owner_world: Node, art_preview: bool) -> void:
 	world.stream.items = self
 	world.player.body=body
 	inventory.body=body
-	if world.get_meta("character_preview",false):inventory.commit_equipment=save_state
+	inventory.commit_equipment=save_state
 	body.changed.connect(func(): dirty=true)
 	inventory.changed.connect(func(): dirty = true; call_deferred("save_state"))
 	inventory.used.connect(func(id,effect):
 		if database.item(id).use_action=="unpack": notice.emit("打开补给包 · 野胡萝卜×2、燧石×1、遗物碎片×2")
+		elif database.item(id).use_action=="read_guide": world.item_ui.guide.open_letter()
 		elif database.item(id).use_action=="place_sleeping_bag": world.camp_ui.begin_sleeping_bag(int(effect.slot))
 		elif database.item(id).use_action=="place_campfire": world.camp_ui.begin_placement(int(effect.slot))
 		elif database.item(id).use_action=="solar_light": merchant.lights.toggle(int(effect.get("slot",-1)))
 		elif database.item(id).use_action=="light": toggle_lantern(int(effect.get("slot",-1)))
+		elif database.item(id).use_action=="heal":notice.emit("使用了%s"%database.item(id).name)
 		else: notice.emit("吃下了%s" % database.item(id).name); food_effect.emit(id,effect))
 
 signal food_effect(item_id: String, effect: Dictionary)
@@ -141,6 +151,7 @@ func new_craft_request() -> int:
 	return craft_sequence
 
 func craft_check(recipe_id: String, batches: int) -> String:
+	if body.down or body.health<=0 or combat.personal.phase!="alive":return "当前无法制作"
 	if body.sleep_active(): return "睡眠中不能制作"
 	if not writable: return "存档受保护，暂不能制作"
 	if not craft_job.is_empty(): return "正在制作，请等待进度完成"
@@ -280,6 +291,8 @@ func stack_name(value: Dictionary) -> String:
 
 func stack_texture(value: Dictionary, kind: String) -> Texture2D:
 	if preload("res://scripts/food_freshness.gd").rotten(value):
+		var explicit: String=str(database.item(str(value.get("item_id",""))).get("rotten_icon",""))
+		if not explicit.is_empty() and ResourceLoader.exists(explicit):return load(explicit)
 		if value.get("item_id","") in ["lake_fish","roasted_fish","smoked_fish"]:
 			return load("res://assets/camp_expansion/v2/rotten_"+str(value.item_id)+".png")
 		var reused := {"vegetable_fish_soup":"vegetable_soup"}
@@ -315,6 +328,7 @@ func _process(delta: float) -> void:
 	if world.get_meta("network_game",false):return
 	exploration.reveal(world.player.position)
 	if exploration.revision!=saved_exploration_revision:dirty=true
+	combat.advance(delta)
 	advance_craft(delta)
 	clock += delta
 	if clock > 15:
@@ -325,6 +339,10 @@ func snapshot() -> Dictionary:
 	exploration.reveal(world.player.position,true)
 	var result: Dictionary = {"merchant":merchant.serialize(),"fishing":fishing_population.serialize(),"player_position":{"x":world.player.position.x,"y":world.player.position.y},"animals":animals.serialize(),"ecology_layout_version":2,"planting_cycle_version":2,"body_environment":world.environment_view.body_environment_snapshot(),"buildings":builds.serialize(),"campfires":camps.serialize(),"body":body.serialize(),"lantern_remaining":lantern_remaining,"version":1,"harvest_version":HARVEST_VERSION,"props_version":world.Gen.PROP_VERSION,"resource_hits":resource_hits,"resource_version":RESOURCE_VERSION,"seed":world.world_seed,"map_cells":world.map_cells,"generator":world.Gen.VERSION,"slots":inventory.slots,"selected":inventory.selected,"hotbar_equipment":inventory.hotbar_equipment,"equipment":inventory.equipment,"ore_nodes":ore_nodes,"equipment_quarantine":inventory.quarantined_equipment,"consumed":consumed,"loose":loose,"harvested":world.stream.harvested,"tree_hits":world.stream.tree_hits}
 
+	result["combat_world"]=combat.serialize()
+	result["combat_personal"]=combat.personal.duplicate(true)
+	result["guide_stage"]=guide_stage
+	result["tree_balance_version"]=2
 	result["world_generation"]=world.Gen.layout_configuration(world.map_cells)
 	result["world_id"]=exploration.world_id
 	result["world_exploration"]=exploration.serialize()
@@ -384,6 +402,11 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 			if not (point.get(axis) is float or point.get(axis) is int) or not is_finite(float(point[axis])) or point[axis]<0 or point[axis]>world.generator.extent: writable=false;return
 	for key in ["consumed","loose","harvested","tree_hits"]:
 		if not value.get(key) is Dictionary: writable = false; return
+	for key in ["guide_stage","tree_balance_version"]:
+		var revision=value.get(key,2 if key=="guide_stage" else 1)
+		if not (revision is int or revision is float) or not is_finite(float(revision)) or revision!=floor(revision) or int(revision) not in ([0,1,2] if key=="guide_stage" else [1,2]):writable=false;return
+	for hit_count in value.tree_hits.values():
+		if not (hit_count is int or hit_count is float) or not is_finite(float(hit_count)) or hit_count<0 or hit_count!=floor(hit_count):writable=false;return
 	for id in value.loose:
 		var row = value.loose[id]
 		if not row is Dictionary or database.item(str(row.get("item_id",""))).is_empty() or int(row.get("count",0)) < 1 or not (row.get("x") is float or row.get("x") is int) or not (row.get("y") is float or row.get("y") is int):
@@ -402,6 +425,7 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 	if value.has("animals") and not animals.valid(value.animals): writable=false;return
 	if value.has("campfires") and not camps.validate(value.campfires): writable=false;return
 	if value.has("body_environment") and not valid_body_environment(value.body_environment): writable=false;return
+	if value.has("combat_world") and not combat.valid(value.combat_world,value.get("combat_personal",combat.personal)):writable=false;return
 	var staged_body := preload("res://scripts/body_state.gd").new()
 	if value.has("body") and not staged_body.restore(value.body): writable=false; return
 	var fuel = value.get("lantern_remaining",1800.0)
@@ -468,6 +492,8 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 		for id in camps.visuals.keys():
 			if not camps.states.has(id):camps.visuals[id].queue_free();camps.visuals.erase(id)
 	for coord in world.stream.loaded: camps.install(coord)
+	combat.state=value.get("combat_world",combat.initial_world()).duplicate(true)
+	combat.personal=value.get("combat_personal",combat.initial_personal()).duplicate(true)
 	body.restore(staged_body.serialize())
 	restored_player_position=value.has("player_position")
 	if value.has("player_position"):
@@ -489,7 +515,11 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 	consumed = value.consumed
 	loose = value.loose
 	world.stream.harvested = value.harvested
-	world.stream.tree_hits = value.tree_hits
+	world.stream.tree_hits = value.tree_hits.duplicate(true)
+	if int(value.get("tree_balance_version",1))<2:
+		for tree_id in world.stream.tree_hits:
+			world.stream.tree_hits[tree_id]=floori(float(world.stream.tree_hits[tree_id])*2.0/3.0)
+	guide_stage=clampi(int(value.get("guide_stage",2)),0,2)
 	if value.resource_version!=RESOURCE_VERSION or int(value.get("ecology_layout_version",1))<2:
 		preload("res://scripts/harvest_distribution.gd").preserve_worked(self,value.resource_version==RESOURCE_VERSION)
 		dirty=true
@@ -690,6 +720,24 @@ func chunk_distribution(coord: Vector2i) -> Dictionary:
 					row.reason="resource_spacing"; break
 		if str(row.reason).is_empty(): accepted.append(row)
 		else: rejected.append(row)
+	if bool(rules.get("starter_resource_double",true)):
+		var extras: Array[Dictionary]=[]
+		for original in accepted:
+			if original.item_id not in ["flint","branch"]:continue
+			for attempt in 96:
+				var angle: float=world.generator.random_at(str(original.id).hash(),attempt,19631)*TAU
+				var point:=Vector2(original.x,original.y)+Vector2.from_angle(angle)*(52.0+float(attempt%8)*16.0)
+				if not rect.grow(-14).has_point(point) or not world.generator.can_walk(point,24) or world.generator.sample(point).z>.32:continue
+				var props:=nearby_props(point)
+				if not ground_clear(point,float(rules.resources[original.item_id].ground_radius),props) or not has_approach(point,props):continue
+				var clear:=true
+				for other in accepted+extras:
+					if point.distance_to(Vector2(other.x,other.y))<48:clear=false;break
+				if not clear:continue
+				var extra: Dictionary=original.duplicate(true)
+				extra.id=str(original.id)+":starter-double-v1";extra.x=point.x;extra.y=point.y
+				extras.append(extra);break
+		accepted.append_array(extras)
 	generation_ms = (Time.get_ticks_usec()-start)/1000.0
 	var packet := {"accepted":accepted,"rejected":rejected,"ms":generation_ms}
 	chunk_cache[coord] = packet
@@ -794,6 +842,7 @@ func pickup(drop: Node2D) -> bool:
 func discard(index: int, count: int = 1) -> bool:
 	if preload("res://scripts/network_game_route.gd").send(self,"discard",[index,count]):return true
 	if index<0 or index>=inventory.slots.size() or inventory.slots[index].is_empty() or count<1: return false
+	if database.item(str(inventory.slots[index].item_id)).get("indestructible",false): notice.emit("生存指南需要随身保留");return false
 	var p: Vector2 = world.player.position
 	var place := Vector2.INF
 	for offset in [Vector2(28,18),Vector2(-28,18),Vector2(0,32),Vector2(28,-18),Vector2(-28,-18),Vector2.ZERO]:

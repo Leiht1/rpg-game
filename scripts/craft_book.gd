@@ -29,7 +29,7 @@ func validate(row: Variant) -> String:
 	if not row.materials is Dictionary or (row.materials.is_empty() and not building_book): return "材料无效"
 	for id in row.materials:
 		if database.item(str(id)).is_empty() or not positive_integer(row.materials[id]): return "材料定义或数量无效"
-		if database.item(str(id)).get("equippable",false): return "不支持消耗装备实例"
+		if database.item(str(id)).get("equippable",false) and not database.item(str(id)).has("combat_weapon"): return "不支持消耗装备实例"
 	if not row.category is String or row.category.is_empty() or not row.description is String: return "配方分类或描述无效"
 	if not row.conditions is Array or not row.default_unlocked is bool: return "制作条件无效"
 	if row.conditions.any(func(c):return c not in ["workbench","metal_workbench"]): return "未知制作设施条件"

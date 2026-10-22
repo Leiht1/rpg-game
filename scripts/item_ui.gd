@@ -2,6 +2,9 @@ extends Control
 const Slot = preload("res://scripts/item_slot.gd")
 const ItemSkin = preload("res://scripts/item_ui_style.gd")
 const NavButton = preload("res://scripts/item_nav_button.gd")
+var guide: Control
+var feed_ui: Control
+var hotbar_note := Label.new()
 var service: Node
 var world: Node
 var bag := PanelContainer.new()
@@ -79,6 +82,11 @@ func configure(owner_world: Node, items: Node) -> void:
 	bar.add_theme_constant_override("separation",6)
 	base.add_child(bar)
 	for i in 8: add_slot(bar,i)
+	hotbar_note.text="·快捷栏· 放入物品，按对应数字键可快捷使用物品"
+	hotbar_note.add_theme_color_override("font_color",Color("65543f"))
+	hotbar_note.add_theme_font_size_override("font_size",14)
+	hotbar_note.mouse_filter=Control.MOUSE_FILTER_IGNORE
+	add_child(hotbar_note)
 	bag_button.tooltip_text="背包 · B"
 	bag_button.pressed.connect(toggle_bag)
 	dock.add_child(bag_button)
@@ -274,6 +282,10 @@ Ctrl+左键拆分 · B 关闭"
 	dock.resized.connect(fit_core_ui)
 	call_deferred("fit_core_ui")
 	if not service.writable: show_notice("物品存档格式异常，原文件已保留；本次不覆盖")
+	guide=preload("res://scripts/survival_guide_ui.gd").new()
+	add_child(guide);guide.configure(self)
+	feed_ui=preload("res://scripts/animal_feed_ui.gd").new()
+	add_child(feed_ui);feed_ui.configure(self)
 
 func category_name(id: String) -> String:
 	return {"food":"食物","material":"基础材料","natural":"自然收集物","tool":"工具","utility":"探索用品","weapon":"武器","headwear":"头饰","outfit":"服装套装"}.get(id,id)
@@ -397,6 +409,7 @@ func _process(delta: float) -> void:
 		hover_card.position=at.clamp(Vector2(12,12),get_viewport_rect().size-hover_card.size-Vector2(12,12))
 
 func update_target_tip(target: Node2D, delta: float) -> void:
+	if service.combat.personal.phase!="alive":target_tip.hide();return
 	if service.body.sleep_active(): target_tip.hide();return
 	var current_id := target.get_instance_id() if is_instance_valid(target) else 0
 	if current_id!=0 and target.has_meta("animal_id") and target.manager.caption(target.animal_id).is_empty(): current_id=0
@@ -405,6 +418,7 @@ func update_target_tip(target: Node2D, delta: float) -> void:
 		target_tip_time = TARGET_TIP_SECONDS if current_id != 0 else 0.0
 	else:
 		target_tip_time = maxf(0.0,target_tip_time-delta)
+	if current_id!=0 and target.has_meta("animal_id") and target.manager.caption(target.animal_id)=="E 投喂":target_tip_time=TARGET_TIP_SECONDS
 	# Progress/caption changes and opening panels do not restart this encounter.
 	target_tip.visible = not (is_instance_valid(world.camp_ui) and (world.camp_ui.panel.visible or world.camp_ui.placing)) and current_id != 0 and target_tip_time > 0.0 and not bag.visible and not catalog.visible and not craft_panel.visible and not item_modal_open() and not world.map_view.visible
 	if target_tip.visible:
@@ -446,6 +460,8 @@ func rebuild_catalog() -> void:
 			row.add_child(grant)
 
 func close_panels() -> void:
+	if is_instance_valid(feed_ui):feed_ui.close_panel()
+	if is_instance_valid(guide):guide.close_letter()
 	if is_instance_valid(service.expansion_ui): service.expansion_ui.close_panel()
 	if is_instance_valid(service.planting_ui): service.planting_ui.close_panel()
 	service.craft_station_id=""
@@ -518,6 +534,8 @@ func fit_core_ui() -> void:
 	var dock_factor := minf(1.0,(area.x-dock_left-16)/maxf(680,dock.size.x))
 	dock.scale=Vector2.ONE*dock_factor
 	dock.position=Vector2(maxf(dock_left,(area.x-dock.size.x*dock_factor)*.5),area.y-86*dock_factor)
+	hotbar_note.scale=Vector2.ONE*dock_factor
+	hotbar_note.position=Vector2(dock.position.x,area.y-24*dock_factor)
 	hud_accent.size=Vector2(30,28)*dock_factor
 	hud_accent.position=dock.position+Vector2(-34,18)*dock_factor
 	hud_accent.visible=false
@@ -584,9 +602,10 @@ func setup_item_actions() -> void:
 	split_panel.hide()
 
 func item_modal_open() -> bool:
-	return service.body.sleep_active() or (is_instance_valid(world.camp_ui) and world.camp_ui.sign_dialog.visible) or (is_instance_valid(modal) and modal.visible)
+	return (is_instance_valid(feed_ui) and feed_ui.visible) or (is_instance_valid(guide) and guide.letter.visible) or service.body.sleep_active() or (is_instance_valid(world.camp_ui) and world.camp_ui.sign_dialog.visible) or (is_instance_valid(modal) and modal.visible)
 
 func update_input_block() -> void:
+	if service.combat.personal.phase!="alive":world.player.input_blocked=true;return
 	if world.get_meta("world_menu_open",false):world.player.input_blocked=true;return
 	if service.merchant.interacting:world.player.input_blocked=true;return
 	if is_instance_valid(service.expansion_ui) and service.expansion_ui.visible:world.player.input_blocked=true;return
@@ -625,9 +644,10 @@ func open_item_menu(index: int, at: Vector2) -> void:
 	equip_button.set_meta("equipment_index",equipped_action_index(index))
 	equip_button.text="卸下" if equipped_action_index(index)>=40 else "装备"
 	use_button.text=("关闭" if is_instance_valid(service.lantern) and service.lantern.visible and modal_stack.get("lamp_id","")==service.active_lamp else "打开") if service.database.item(modal_stack.item_id).get("use_action","")=="light" else "使用"
+	if modal_stack.item_id=="survival_guide":use_button.text="查看"
 	if modal_stack.item_id=="solar_flashlight":use_button.text="关闭" if modal_stack.state.on else "打开"
 	use_button.visible=index<40 or modal_stack.item_id=="solar_flashlight"
-	destroy_button.visible=index<40 and not (index<8 and service.inventory.slots[index].is_empty())
+	destroy_button.visible=index<40 and not (index<8 and service.inventory.slots[index].is_empty()) and not service.database.item(modal_stack.item_id).get("indestructible",false)
 	use_button.disabled=not service.database.item(modal_stack.item_id).usable
 	item_menu.reset_size()
 	item_menu.position=at.clamp(Vector2(8,8),get_viewport_rect().size-Vector2(150,160))
@@ -767,6 +787,8 @@ func _notification(what: int) -> void:
 		call_deferred("update_input_block")
 
 func _input(event: InputEvent) -> void:
+	if service.combat.personal.phase!="alive":get_viewport().set_input_as_handled();return
+	if is_instance_valid(feed_ui) and feed_ui.handle_input(event):get_viewport().set_input_as_handled();return
 	if service.merchant.interacting:
 		if service.merchant.ui.handle_input(event):get_viewport().set_input_as_handled()
 		return
@@ -804,6 +826,9 @@ func _input(event: InputEvent) -> void:
 		elif get_viewport().gui_get_focus_owner()==craft_panel.quantity.get_line_edit() and (event.physical_keycode in [KEY_BACKSPACE,KEY_DELETE,KEY_LEFT,KEY_RIGHT,KEY_ENTER,KEY_KP_ENTER,KEY_HOME,KEY_END] or (event.physical_keycode>=KEY_0 and event.physical_keycode<=KEY_9)): return
 		get_viewport().set_input_as_handled()
 		return
+	if is_instance_valid(guide) and guide.letter.visible:
+		if event.physical_keycode==KEY_ESCAPE:guide.close_letter()
+		get_viewport().set_input_as_handled();return
 	if item_modal_open():
 		if event.physical_keycode==KEY_ESCAPE:
 			close_item_actions()

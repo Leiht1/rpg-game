@@ -1,0 +1,106 @@
+{
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "estimateUsd": 0,
+  "visual_approval": "pending_user_visual_review",
+  "request": "2026-10-22 user requests letter paper, arrow, ring and local first-entry survival guide",
+  "source": "art\\survival-guide-v1\\generated\\generated.png",
+  "source_sha256": "17f8f75451500acc8a5c8b2fb4cf245dc32cc4e81b7ac07d03cf3cf724f4530f",
+  "regions": {
+    "letter": [
+      0,
+      70,
+      1050,
+      930
+    ],
+    "letter_icon": [
+      1080,
+      50,
+      1490,
+      465
+    ],
+    "arrow": [
+      1120,
+      460,
+      1450,
+      720
+    ],
+    "ring": [
+      1030,
+      715,
+      1536,
+      990
+    ]
+  },
+  "files": {
+    "letter": {
+      "path": "assets\\ui\\survival_guide_v1\\letter.png",
+      "sha256": "1602ebcd7c28c76faf84cce875ba5e3ebdfe66181b8044972ba1479408078558",
+      "size": [
+        962,
+        739
+      ],
+      "ownership": [
+        0,
+        70,
+        1050,
+        930
+      ],
+      "qa": "art\\survival-guide-v1\\letter-processed\\pipeline-meta.json"
+    },
+    "letter_icon": {
+      "path": "assets\\ui\\survival_guide_v1\\letter_icon.png",
+      "sha256": "e5d799740fca008af73e4e0a8f279dbaf6f73d5264a430b081a649b27076ed6f",
+      "size": [
+        460,
+        512
+      ],
+      "ownership": [
+        1080,
+        50,
+        1490,
+        465
+      ],
+      "qa": "art\\survival-guide-v1\\letter_icon-processed\\pipeline-meta.json"
+    },
+    "arrow": {
+      "path": "assets\\ui\\survival_guide_v1\\arrow.png",
+      "sha256": "5b4ed93473825c755aba4ffcf8958bd64e0c2e61b59249e8a8807c75c44e55f9",
+      "size": [
+        512,
+        477
+      ],
+      "ownership": [
+        1120,
+        460,
+        1450,
+        720
+      ],
+      "qa": "art\\survival-guide-v1\\arrow-processed\\pipeline-meta.json"
+    },
+    "ring": {
+      "path": "assets\\ui\\survival_guide_v1\\ring.png",
+      "sha256": "b72bbaa2cd587c0fd70056d0a9fa1973b2806f3fd78f1e915457f674a4c52800",
+      "size": [
+        512,
+        257
+      ],
+      "ownership": [
+        1030,
+        715,
+        1536,
+        990
+      ],
+      "qa": "art\\survival-guide-v1\\ring-processed\\pipeline-meta.json"
+    }
+  },
+  "font": {
+    "family": "LXGW WenKai",
+    "source": "https://github.com/lxgw/LxgwWenKai",
+    "download": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/main/fonts/TTF/LXGWWenKai-Regular.ttf",
+    "license": "OFL.txt",
+    "sha256": "2d73eea94ad808999d90c0000c239a84a33b09d4bc6ab6c5b8bbf1eda8a7fc8b",
+    "modification": "none; complete original font, no subset"
+  }
+}

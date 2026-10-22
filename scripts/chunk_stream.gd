@@ -275,8 +275,8 @@ func chop_tree(tree: Node2D) -> void:
 	if items: items.dirty=true
 	var required:int=tree.required_hits
 	var hits := int(tree_hits[id])
-	if hits%6==0:
-		spawn_drop(tree.position+Vector2(-28 if hits==6 else 28,18),id+":hit%d"%hits)
+	if hits%4==0:
+		spawn_drop(tree.position+Vector2(-28 if hits==4 else 28,18),id+":hit%d"%hits)
 	if hits<required: return
 	harvested[id]=true
 	call_deferred("refresh_grounding",tree.position)

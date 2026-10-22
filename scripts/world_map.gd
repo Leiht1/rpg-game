@@ -210,7 +210,7 @@ func _draw() -> void:
 	if detailed:draw_landmarks()
 	draw_rect(map_rect,Color('ccd5b6'),false,2)
 	# Children draw fog over geography; markers use an independent foreground child.
-	draw_string(font,Vector2(40,38),'风栖原野 · 地图     北 ↑',HORIZONTAL_ALIGNMENT_LEFT,-1,24,Color('e6ecd8'))
+	draw_string(font,Vector2(76,38),'风栖原野 · 地图     北 ↑',HORIZONTAL_ALIGNMENT_LEFT,-1,24,Color('e6ecd8'))
 	draw_string(font,Vector2(40,size.y-42),'草原 · 森林 · 泥地 · 岩石区 · 水域',HORIZONTAL_ALIGNMENT_LEFT,-1,17,Color('cbd8bd'))
 	draw_string(font,Vector2(40,size.y-18),('滚轮缩放 · 拖动查看 · M / Esc 关闭    %.1f×'%zoom)+('    地形绘制中…' if view_loading else ''),HORIZONTAL_ALIGNMENT_LEFT,-1,15,Color('cbd8bd'))
 	if not has_node('Markers'):
@@ -289,6 +289,9 @@ func _input(event: InputEvent) -> void:
 		if visible and event.physical_keycode==KEY_ESCAPE:
 			close_map();get_viewport().set_input_as_handled();return
 	if not visible:return
+	if event is InputEventMouseButton or event is InputEventMouseMotion:
+		for trigger in get_tree().get_nodes_in_group("world_menu_trigger"):
+			if trigger.is_visible_in_tree() and trigger.get_global_rect().has_point(event.position):return
 	if event is InputEventMouseButton:
 		if recenter.get_global_rect().has_point(event.position) and event.button_index==MOUSE_BUTTON_LEFT:
 			if event.pressed:recenter.pressed.emit()

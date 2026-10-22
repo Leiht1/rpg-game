@@ -27,7 +27,8 @@ func valid(row: Dictionary) -> bool:
 	var spec: Dictionary=rules.processes[row.kind]
 	var j: Dictionary=e.job
 	if not service.industry.number(j.get("minutes"),0,spec.minutes) or not j.get("ready") is bool or j.ready!=(float(j.minutes)>=float(spec.minutes)):return false
-	if not j.get("output") is Dictionary or j.output.get("item_id")!=spec.output or j.output.get("count")!=1:return false
+	var allowed: Array=rules.smoking_recipes.values() if row.kind=="advanced_smokehouse" else [spec.output]
+	if not j.get("output") is Dictionary or j.output.get("item_id") not in allowed or j.output.get("count")!=1:return false
 	return Fresh.normalize(service.database,j.output)
 
 func check(id: String) -> String:
@@ -92,11 +93,14 @@ func act(id: String, action: String, index: int=-1, expected: Dictionary={}, key
 				else:
 					# First version accepts only non-rotten roasted meat (currently roasted fish).
 					var fish := -1
-					for i in 40:
-						if staged.slots[i].get("item_id","")==str(spec.input) and not Fresh.rotten(staged.slots[i]):fish=i;break
-					if fish<0:reason="需要新鲜烤鱼"
+					if index>=0 and index<40 and Fresh.matches(staged.slots[index],expected) and rules.smoking_recipes.has(str(staged.slots[index].get("item_id",""))) and not Fresh.rotten(staged.slots[index]):fish=index
+					elif index==-1:
+						for i in 40:
+							if staged.slots[i].get("item_id","")=="roasted_fish" and not Fresh.rotten(staged.slots[i]):fish=i;break
+					if fish<0:reason="需要可熏制的新鲜肉食"
 					elif inv.count_item("wood")<1:reason="需要木材"
 					else:
+						spec=spec.duplicate(true);spec.output=rules.smoking_recipes[staged.slots[fish].item_id]
 						staged=service.camps.consume({"wood":1});staged.slots[fish].count-=1
 						if staged.slots[fish].count==0:staged.slots[fish]={}
 				if reason.is_empty():

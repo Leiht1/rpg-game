@@ -11,6 +11,7 @@ var returning := false
 var escape_had_page := false
 func _ready() -> void:
 	layer=40
+	trigger.add_to_group("world_menu_trigger")
 	trigger.text="Esc";trigger.position=Vector2(8,4);trigger.custom_minimum_size=Vector2(44,24)
 	trigger.theme=preload("res://scripts/item_ui_style.gd").theme()
 	for state in ["normal","hover","pressed","focus"]:
@@ -69,6 +70,8 @@ func toggle() -> void:
 	if not is_instance_valid(world) or returning:return
 	# Sleep retains its exclusive E-to-wake input contract.
 	if world.get("item_ui") != null and world.item_service.body.sleep_active():return
+	if world.get("map_view") != null and world.map_view.visible:
+		world.map_view.close_map();return
 	if confirmation.visible:set_confirmation(false);return
 	overlay.visible=not overlay.visible
 	world.set_meta("world_menu_open",overlay.visible)

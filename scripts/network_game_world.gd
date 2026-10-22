@@ -29,7 +29,7 @@ func _ready() -> void:
 	player.confirmed_at=Time.get_ticks_msec()
 	player.position=Vector2(session_data.character.x,session_data.character.y)
 	var nickname:=Label.new();nickname.text=str(session_data.profile.nickname);nickname.position=Vector2(-70,-105);nickname.size.x=140;nickname.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;player.add_child(nickname)
-	for owner in [item_service,item_service.inventory,item_service.camps,item_service.builds,item_service.industry,item_service.expansion,item_service.planting,item_service.animals,item_service.sleep,item_service.merchant]:routes[owner.get_instance_id()]=true
+	for owner in [item_service,item_service.inventory,item_service.camps,item_service.builds,item_service.industry,item_service.expansion,item_service.planting,item_service.animals,item_service.combat,item_service.sleep,item_service.merchant]:routes[owner.get_instance_id()]=true
 	routes[get_node("Fishing").get_instance_id()]=true
 	Engine.set_meta("network_game_controller",self)
 	if session_data.has("initial_snapshot"):apply_snapshot(session_data.initial_snapshot)
@@ -110,6 +110,7 @@ func update_players(players: Array) -> void:
 		if not actors.has(row.player_id):
 			var actor=preload("res://scripts/network_actor.gd").new();actor.generator=generator;actor.stream=stream;actor.position=Vector2(row.x,row.y);actor.input_blocked=true;object_root.add_child(actor);actor.camera.enabled=false;actors[row.player_id]=actor
 			var label:=Label.new();label.name="Nickname";label.position=Vector2(-70,-105);label.size.x=140;label.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;actor.add_child(label)
+		actors[row.player_id].set_meta("combat_id",str(row.id))
 		actors[row.player_id].get_node("Nickname").text=row.nickname;actors[row.player_id].receive(row)
 	for id in actors.keys():
 		if not present.has(id):actors[id].queue_free();actors.erase(id)
@@ -122,11 +123,17 @@ func map_players() -> Array[Dictionary]:
 func apply_snapshot(source: Dictionary) -> void:
 	applying=true
 	var snapshot:=source.duplicate(true)
-	snapshot.player_position={"x":player.position.x,"y":player.position.y}
+	var changed_life: bool=snapshot.get("combat_personal",{}).get("phase","alive")!=item_service.combat.personal.phase
+	changed_life=changed_life or snapshot.get("combat_personal",{}).get("hit_serial",0)!=item_service.combat.personal.get("hit_serial",0)
+	if changed_life:
+		player.pending_inputs.clear();player.correction=Vector2.ZERO
+	else:snapshot.player_position={"x":player.position.x,"y":player.position.y}
 	var selected: int=item_service.inventory.selected
 	var previous_hits: Dictionary=stream.tree_hits.duplicate()
 	var previous_job: Dictionary=item_service.craft_job.duplicate(true)
 	item_service.writable=true;item_service.load_state("",false,snapshot)
+	if changed_life:
+		player.reset_physics_interpolation();player.camera.reset_smoothing();stream.update_target(player.position)
 	item_service.inventory.selected=selected
 	item_service.restore_network_lamp(snapshot)
 	item_service.merchant.sync_actor()

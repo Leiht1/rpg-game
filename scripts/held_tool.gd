@@ -169,3 +169,10 @@ func align_front_shoulders(character: Node2D, arm: Node2D) -> void:
 		front_free_source=source;front_free_was_visible=source.visible
 	source.hide()
 
+func front_attack_pose(character: Node2D) -> void:
+	var arm: Node2D=character.get_node("Visual/Pelvis/ArmR")
+	if front_arm!=arm:
+		front_arm=arm;front_arm_was_behind=arm.show_behind_parent;front_arm_position=arm.position
+	arm.show_behind_parent=false
+	align_front_shoulders(character,arm)
+

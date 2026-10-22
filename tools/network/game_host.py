@@ -88,12 +88,12 @@ class GameHost:
         self.close()
         raise TimeoutError("Gameplay rules host timed out; committed data was preserved")
 
-    def execute(self, snapshot=None, character=None, operation="snapshot", args=None, elapsed=0, shared=True, player_id="", station=None, expected=None):
+    def execute(self, snapshot=None, character=None, operation="snapshot", args=None, elapsed=0, shared=True, player_id="", station=None, expected=None, combat_peers=None, combat_damage=None):
         if self.process is None or self.process.poll() is not None:
             raise RuntimeError("Gameplay rules host is unavailable")
         request = {"snapshot": snapshot or {}, "character": character or {},
                    "operation": operation, "args": args or [], "elapsed": elapsed,
-                   "shared": shared, "player_id": player_id, "station": station, "expected": expected or {}}
+                   "shared": shared, "player_id": player_id, "station": station, "expected": expected or {}, "combat_peers":combat_peers or [], "combat_damage":combat_damage or []}
         temporary = self.folder/"request.tmp"
         temporary.write_text(json.dumps(request, ensure_ascii=False, allow_nan=False), encoding="utf-8")
         os.replace(temporary, self.folder/"request.json")
@@ -118,6 +118,7 @@ class GameHost:
     def movement(self, world, character, inputs):
         request = {"operation": "movement", "character": character, "inputs": inputs,
                    "buildings": world["gameplay"]["buildings"]["objects"],
+                   "combat_world": world["gameplay"].get("combat_world", {}),
                    "harvested": world["gameplay"]["harvested"]}
         temporary = self.folder/"request.tmp"
         temporary.write_text(json.dumps(request, ensure_ascii=False, allow_nan=False), encoding="utf-8")

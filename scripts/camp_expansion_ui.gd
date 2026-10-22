@@ -149,7 +149,11 @@ func refresh() -> void:
 				if job.ready:
 					add_choice("领取 "+service.stack_name(job.output),job.output.item_id,command.bind("claim"))
 					choices.get_child(choices.get_child_count()-1).icon=service.stack_texture(job.output,"icon")
-			elif row.kind=="advanced_smokehouse":add_choice("开始熏制：烤鱼 ×1、木材 ×1","smoked_fish",command.bind("process"))
+			elif row.kind=="advanced_smokehouse":
+				for i in 40:
+					var value: Dictionary=service.inventory.slots[i]
+					if service.expansion.rules.smoking_recipes.has(str(value.get("item_id",""))) and not preload("res://scripts/food_freshness.gd").rotten(value):
+						add_choice("熏制 %s ×1、木材 ×1"%service.stack_name(value),value.item_id,command.bind("process",i,value.duplicate(true)))
 			else:
 				for i in 40:
 					var value: Dictionary=service.inventory.slots[i]

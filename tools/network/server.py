@@ -212,6 +212,11 @@ class Service:
     def release_game_character(self, world, character):
         if not self.config.get("gameplay_preview") or "gameplay" not in character or self.gameplay is None:return
         personal = character["gameplay"]
+        combat = personal.get("combat_personal", {})
+        combat["attack"] = {}
+        duels = world.get("gameplay", {}).get("combat_world", {}).get("duels", {})
+        for key in list(duels):
+            if character["id"] in key.split(":"):duels.pop(key)
         if personal.get("network_fishing", {}).get("state", "idle") != "idle":
             result = self.gameplay.apply(world, character, "fish_cancel")
             require(result.get("ok"), "钓鱼状态未能结束")
@@ -224,6 +229,7 @@ class Service:
         if "gameplay" in c:
             body = c["gameplay"]["body"]
             result["visual_body"] = {key: body.get(key) for key in ("build", "sleeping", "sleep_session")}
+            result["combat"] = c["gameplay"].get("combat_personal", {})
             result["pose"] = c.get("pose", {})
         return result
 
@@ -454,7 +460,10 @@ class Service:
             elapsed = min(5.0, max(0.0, now-last))
             # Several clients may ask for the same world update together. Reuse
             # committed state between ticks instead of simulating everyone again.
-            if op == "game_snapshot" and w["id"] in self.gameplay.clocks and elapsed < .4 and "gameplay" in w and "gameplay" in c:
+            combat_pending = any(p.get("gameplay", {}).get("combat_personal", {}).get("attack") or p.get("gameplay", {}).get("combat_personal", {}).get("phase", "alive") != "alive"
+                                 for p in self.state["characters"].values() if p["world_id"] == w["id"])
+            combat_pending = combat_pending or any(b.get("mode") in ("alert", "attack", "chase") for b in w.get("gameplay", {}).get("combat_world", {}).get("boars", {}).values())
+            if op == "game_snapshot" and not combat_pending and w["id"] in self.gameplay.clocks and elapsed < .4 and "gameplay" in w and "gameplay" in c:
                 selected = d.get("selected", c.get("selected", 0))
                 require(type(selected) is int and 0 <= selected < 8, "快捷栏无效")
                 c["selected"] = c["gameplay"]["selected"] = selected
@@ -463,6 +472,7 @@ class Service:
             present = [self.state["characters"][self.state["accounts"][aid]["player_id"]]
                        for aid in self.online(w["id"]) if self.state["accounts"][aid]["player_id"] in self.state["characters"]]
             present_ids = {person["id"] for person in present}
+            self.gameplay.combat_characters = present
             tick_events = []
             for person in self.state["characters"].values():
                 if person["world_id"] == w["id"] and person["id"] not in present_ids:self.release_game_character(w, person)

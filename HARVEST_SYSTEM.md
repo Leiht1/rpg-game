@@ -1,3 +1,7 @@
+## 2026-10-22 · 本地树矿次数调整
+
+覆盖历史对应次数：小树4下掉6木，大树第4/8下各掉6木；原总产量不变。旧树次数按floor(old_hits×2/3)一次折算，原items快照tree_balance_version=2防重复折算，已采/已掉落保持。五矿次数见data/harvest_resources.json当前配置，掉落不改。只做本地交付，验证与兼容边界见[报告](reports/survival-local-v1/REPORT.md)。
+
 # 石镐开采与铲子挖掘 · 本轮交付
 
 ## 2026-10-18 · 种植复用能力与采集留种
