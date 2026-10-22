@@ -42,7 +42,7 @@ def main():
     client=out/"Client";server=out/"Server";config=out/"Config"
     for folder in (client,server,config,client/"Config"):
         folder.mkdir(parents=True,exist_ok=True)
-    keep={"character-creation-v1","character-hair-v2","ponytail-side-v3","network-menu-v1"}
+    keep={"character-creation-v1","character-hair-v2","character-face-v3","ponytail-side-v3","network-menu-v1"}
     excludes=["art/*","reports/*","tests/*","tools/*","dist/*","server-data/*",".forge/*"]
     excludes += ["prototypes/"+f.name+"/*" for f in (ROOT/"prototypes").iterdir() if f.is_dir() and f.name not in keep]
     preset='''[preset.0]
@@ -77,7 +77,7 @@ binary_format/embed_pck=false
         shutil.copy2(runtime,server/"WorldWorker.exe")
         shutil.copy2(client/"Windrest.pck",server/"WorldWorker.pck")
     # prototypes/.gdignore intentionally prevents editor-wide candidate imports.
-    # Pack only the four runtime candidate directories as a separate raw pack.
+    # Pack only the runtime candidate directories as a separate raw pack.
     manifest=out/"candidate-manifest.json"
     files=[str(f.relative_to(ROOT)).replace("\\","/") for name in keep for f in (ROOT/"prototypes"/name).rglob("*") if f.is_file() and f.suffix.lower() in (".png",".json")]
     manifest.write_text(json.dumps(files),encoding="utf-8")

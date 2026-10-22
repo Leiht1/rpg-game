@@ -56,6 +56,7 @@ static func target(stream: Node, at: Vector2, facing: String, pointer: Vector2) 
 	var best_distance := INF
 	var best_id := ""
 	for node in candidates:
+		if not is_instance_valid(node) or node.is_queued_for_deletion():continue
 		if node.get_meta("camp_layer","")=="ground" and not node.get_meta("planting_soil",false) and (stream.items==null or not stream.items.inventory.has_capability("demolish")): continue
 		if not in_reach(stream,at,node): continue
 		var action := action_for(node)

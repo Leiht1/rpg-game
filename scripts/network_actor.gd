@@ -6,6 +6,10 @@ var correction:=Vector2.ZERO
 var confirmed_at:=0
 var pending_inputs:Array=[]
 var input_id:=0
+var sample_time:=-1.0
+var remote_velocity:=Vector2.ZERO
+var remote_age:=0.0
+var remote_motion_time:=-1.0
 var sleep_cover=preload("res://scripts/sleep_head_cover.gd").new()
 var sleep_symbols: Label
 func _ready()->void:
@@ -34,7 +38,11 @@ func _physics_process(delta:float)->void:
 		var adjustment:=correction*(1.0-exp(-16.0*delta))
 		position+=adjustment;correction-=adjustment
 
-	else:position=position.lerp(target_position,minf(1,delta*16))
+	else:
+		remote_age+=delta
+		var destination:=target_position+remote_velocity*minf(remote_age,.2)
+		var adjustment:Vector2=(destination-position)*(1.0-exp(-16.0*delta))
+		position+=adjustment.limit_length((RUN_SPEED if running else WALK_SPEED)*1.5*delta)
 	gait_distance+=position.distance_to(previous)
 	idle_clock+=delta
 	update_animation()
@@ -49,7 +57,18 @@ func _unhandled_input(event:InputEvent)->void:
 func objects_world()->Node:
 	return get_parent().get_parent()
 func receive(row:Dictionary,reconcile:bool=true,round_trip:float=0.0)->void:
+	if not own and row.has("sample_time"):
+		if float(row.sample_time)<sample_time:return
+		sample_time=float(row.sample_time)
 	if reconcile:
+		if not own:
+			var next:=Vector2(row.x,row.y)
+			var clock:float=float(row.get("sample_time",Time.get_ticks_msec()/1000.0))
+			if not bool(row.moving):remote_velocity=Vector2.ZERO;remote_age=0.0
+			elif next!=target_position:
+				remote_velocity=((next-target_position)/maxf(.016,clock-remote_motion_time)).limit_length(RUN_SPEED if bool(row.running) else WALK_SPEED) if remote_motion_time>=0 else Vector2.ZERO
+				remote_age=0.0
+			if next!=target_position or not bool(row.moving):remote_motion_time=clock
 		target_position=Vector2(row.x,row.y);confirmed_at=Time.get_ticks_msec()
 		if own:
 			var predicted:=target_position

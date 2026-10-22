@@ -1,0 +1,86 @@
+[
+  {
+    "view": "front",
+    "source": "prototypes/character-creation-v1/heads/front.png",
+    "source_size": [
+      224,
+      180
+    ],
+    "generated_bbox": [
+      147,
+      392,
+      1104,
+      1060
+    ],
+    "destination_bbox": [
+      14,
+      43,
+      210,
+      180
+    ],
+    "feature_regions": [
+      [
+        49,
+        82,
+        83,
+        130
+      ],
+      [
+        137,
+        81,
+        172,
+        130
+      ],
+      [
+        89,
+        129,
+        134,
+        146
+      ]
+    ],
+    "alpha_identical": true,
+    "outline_9px_identical": true,
+    "upper_65px_identical": true,
+    "changed_pixels": 5290,
+    "runtime_sha256": "8b8bf8bd6361f684bf5660802273d1e6c95231d0e22f4bb9667a83d6c0fe3a11"
+  },
+  {
+    "view": "side",
+    "source": "prototypes/character-hair-v2/heads/side.png",
+    "source_size": [
+      224,
+      180
+    ],
+    "generated_bbox": [
+      159,
+      313,
+      1090,
+      1066
+    ],
+    "destination_bbox": [
+      16,
+      27,
+      207,
+      180
+    ],
+    "feature_regions": [
+      [
+        143,
+        68,
+        183,
+        128
+      ],
+      [
+        167,
+        128,
+        194,
+        145
+      ]
+    ],
+    "alpha_identical": true,
+    "outline_9px_identical": true,
+    "upper_65px_identical": true,
+    "changed_pixels": 3046,
+    "runtime_sha256": "1b8caf79c3f25ac47bfb5b05c141cd7119a7b93dc550aaf07796336ea31b2dbc"
+  }
+]

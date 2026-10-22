@@ -35,7 +35,10 @@ func _ready()->void:
 	objects.y_sort_enabled=true
 	stream=preload("res://scripts/chunk_stream.gd").new();add_child(stream);add_child(objects);stream.configure(generator,objects)
 	add_child(hud);hud.layer=20;hud.add_child(screen);screen.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);screen.mouse_filter=Control.MOUSE_FILTER_IGNORE;screen.theme=preload("res://scripts/item_ui_style.gd").theme()
-	var back:=Button.new();back.text="返回大厅";back.position=Vector2(1120,16);screen.add_child(back);back.pressed.connect(close_world)
+	var game_menu=preload("res://scripts/world_menu.gd").new()
+	game_menu.world_provider=func():return self
+	game_menu.return_action=close_world
+	add_child(game_menu)
 	notice.text=world.name;notice.position=Vector2(20,16);screen.add_child(notice)
 	screen.add_child(chat);chat.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM);chat.offset_left=-340;chat.offset_right=340;chat.offset_top=-310;chat.offset_bottom=-114;chat.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	screen.add_child(entry);entry.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM);entry.offset_left=-340;entry.offset_right=340;entry.offset_top=-112;entry.offset_bottom=-74;entry.max_length=120;entry.hide();entry.text_submitted.connect(send_chat)
@@ -103,7 +106,7 @@ func poll_server()->void:
 		else:sprite.queue_free()
 func move_server()->void:
 	moving_request=true;sequence+=1
-	var direction:=Vector2.ZERO if typing or bag_panel.visible or object_panel.visible or failures>0 else Input.get_vector("move_left","move_right","move_up","move_down")
+	var direction:=Vector2.ZERO if get_meta("world_menu_open",false) or typing or bag_panel.visible or object_panel.visible or failures>0 else Input.get_vector("move_left","move_right","move_up","move_down")
 	var response:Dictionary=await Network.call_api("move",{"seq":sequence,"dx":direction.x,"dy":direction.y,"run":not typing and Input.is_action_pressed("run"),"inputs":actors[Network.profile.player_id].pending_inputs.duplicate(true)})
 	moving_request=false
 	if stopping:return
@@ -114,7 +117,7 @@ func move_server()->void:
 	else:
 		failures+=1;notice.text=response.get("error","移动同步失败")
 func movement_direction()->Vector2:
-	return Vector2.ZERO if stopping or typing or bag_panel.visible or object_panel.visible or failures>0 else Input.get_vector("move_left","move_right","move_up","move_down")
+	return Vector2.ZERO if get_meta("world_menu_open",false) or stopping or typing or bag_panel.visible or object_panel.visible or failures>0 else Input.get_vector("move_left","move_right","move_up","move_down")
 func select_hotbar(index:int)->void:
 	selected_hotbar=index;render_hotbar()
 	if own_character.slots[index].is_empty():object_panel.hide();return

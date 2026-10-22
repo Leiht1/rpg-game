@@ -54,9 +54,18 @@ func valid(value: Variant) -> bool:
 
 func restore(value: Dictionary) -> bool:
 	if not valid(value):return false
-	bits=Marshalls.base64_to_raw(value.bits);revision+=1
+	var incoming:=Marshalls.base64_to_raw(value.bits)
+	# A network reveal usually changes only a few cells. Preserve the image and
+	# update changed bits instead of scanning every map pixel on the main thread.
+	for byte_index in incoming.size():
+		var difference: int=bits[byte_index]^incoming[byte_index]
+		if difference==0:continue
+		for bit in 8:
+			if difference&(1<<bit):
+				var index:=byte_index*8+bit
+				mask_cache.set_pixel(index%width,index/width,Color.WHITE if incoming[byte_index]&(1<<bit) else Color.BLACK)
+	bits=incoming;revision+=1
 	last_position=Vector2(-1e9,-1e9)
-	rebuild_mask()
 	return true
 
 func merge_local(value: Dictionary) -> bool:

@@ -53,7 +53,9 @@ func run():
 				check(stable,"zero transient pixels after direction switch "+id+" "+facing)
 				var head=c.preview.get_node("Visual/Pelvis/Head/Sprite")
 				check(not head.get_node("CharacterHairrear").visible and head.get_node("CharacterHairfront").visible,"complete hair silhouette, no hard split "+id+" "+facing)
-				if facing in ["left","right"]:check(head.texture==c.renderer.tex(c.Catalog.rules().heads.side),"corrected shared side base "+id+" "+facing)
+				if facing in ["left","right"]:
+					var heads=c.Catalog.rules().get("gender_heads",{}).get(c.look.gender,c.Catalog.rules().heads)
+					check(head.texture==c.renderer.tex(heads.side),"correct side base "+id+" "+facing)
 				check(c.preview.get_node("Visual").scale.x==(-1 if facing=="left" else 1),"mirror orientation "+id+" "+facing)
 				check(c.preview.position==Vector2(3,-4),"fixed character root "+id+" "+facing)
 	c.gender.select(0);c.select_gender(0);c.look.hair_id="male_parted";c.hair.select(2);c.preview_facing="right";c.refresh_preview();await snap("spiky-crop-creation")

@@ -31,7 +31,7 @@ func run():
 	check(c.world==null and not FileAccess.file_exists(path),"creation UI before world or save exists")
 	check(c.panel.get_global_rect().end.x<1280 and c.panel.get_global_rect().end.y<720,"compact default 1280x720 UI fits")
 	for sex in [0,1]:
-		c.select_gender(sex);check(c.hair_ids.size()==4,"four hairstyles gender "+str(sex))
+		c.select_gender(sex);check(c.hair_ids.size()==8,"all eight hairstyles gender "+str(sex))
 		for id in c.hair_ids:
 			c.look.hair_id=id
 			for facing in ["front","back","right","left"]:
@@ -41,7 +41,8 @@ func run():
 		c.look.skin_id=id;c.refresh_preview()
 		check(c.renderer.materials.head.get_shader_parameter("skin_color")==Color(c.Catalog.rules().skin[id].color),"skin shader choice "+id)
 	c.select_gender(1);c.look.hair_id="female_twintail";c.look.skin_id="skin_5";c.preview_facing="front";c.refresh_preview();await snap("creation-ui")
-	var invalid=c.look.duplicate();invalid.hair_id="male_curly";check(not c.Catalog.valid(invalid),"cross gender invalid appearance rejected")
+	var invalid=c.look.duplicate();invalid.hair_id="male_curly";check(c.Catalog.valid(invalid),"cross gender hairstyle accepted")
+	invalid.hair_id="unknown_hair";check(not c.Catalog.valid(invalid),"unknown hairstyle rejected")
 	# Exercise initial-save rollback using a file as the would-be parent directory.
 	var blocker=FileAccess.open(OUT+"blocker",FileAccess.WRITE);blocker.store_string("test");blocker.close()
 	c.save_path=OUT+"blocker/state.json"

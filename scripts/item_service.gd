@@ -388,6 +388,7 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 		var row = value.loose[id]
 		if not row is Dictionary or database.item(str(row.get("item_id",""))).is_empty() or int(row.get("count",0)) < 1 or not (row.get("x") is float or row.get("x") is int) or not (row.get("y") is float or row.get("y") is int):
 			writable = false; return
+		row.id=str(id)
 	if value.get("harvest_version",LEGACY_HARVEST_VERSION) not in [HARVEST_VERSION,ECOLOGY_PREVIOUS_HARVEST_VERSION,PREVIOUS_HARVEST_VERSION,LEGACY_HARVEST_VERSION] or not value.get("resource_hits",{}) is Dictionary:
 		writable=false; return
 	for hit_count in value.get("resource_hits",{}).values():

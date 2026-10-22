@@ -168,12 +168,16 @@ func lobby()->void:
 	var box:=panel("在线世界",620)
 	var response:=await send("worlds",{})
 	if not response.get("ok",false):button(box,"返回",menu);return
+	if Network.profile.get("role","")=="admin":button(box,"世界管理",world_management)
 	if not Network.profile.world_id.is_empty():
 		button(box,"继续所属世界",resume_online)
 		button(box,"永久退出当前世界",confirm_leave)
 	else:
 		input(box,"name","新世界名称")
 		button(box,"创建世界",func():
+			var name_text:String=fields.name.text.strip_edges()
+			if name_text.is_empty() or name_text.length()>20:
+				status.text="请输入1至20个字的世界名称";return
 			var result:=await send("create_world",{"name":fields.name.text})
 			if result.get("ok",false):resume_online())
 		var scroll:=ScrollContainer.new();scroll.custom_minimum_size.y=200;box.add_child(scroll)
@@ -190,6 +194,27 @@ func confirm_leave()->void:
 		var response:=await send("permanent_leave",{"confirm":Network.profile.world_id})
 		if response.get("ok",false):lobby())
 	button(box,"取消",lobby)
+func world_management()->void:
+	var box:=panel("世界管理",680)
+	var response:=await send("admin_list",{})
+	if not response.get("ok",false):button(box,"返回在线世界",lobby);return
+	var scroll:=ScrollContainer.new();scroll.custom_minimum_size=Vector2(620,300);box.add_child(scroll)
+	var list:=VBoxContainer.new();list.size_flags_horizontal=Control.SIZE_EXPAND_FILL;scroll.add_child(list)
+	if response.worlds.is_empty():status.text="暂无世界"
+	for w in response.worlds:
+		var row:=HBoxContainer.new();list.add_child(row)
+		var label:=Label.new();label.text=w.name+" · "+w.id;label.size_flags_horizontal=Control.SIZE_EXPAND_FILL;row.add_child(label)
+		button(row,"删除世界",func():confirm_delete_world(w,world_management))
+	button(box,"返回在线世界",lobby)
+func confirm_delete_world(world:Dictionary,back:Callable)->void:
+	var box:=panel("删除世界",540)
+	status.text="删除「%s」将移除世界及其中所有角色，无法在游戏内撤销。仅允许无人在线时删除；服务器会先备份。"%world.name
+	button(box,"确认删除 "+str(world.name),func():
+		var result:=await send("admin_delete_world",{"world_id":world.id,"confirm":world.id})
+		if result.get("ok",false):
+			if Network.profile.get("world_id","")==world.id:Network.profile.world_id=""
+			back.call())
+	button(box,"取消",back)
 func resume_online()->void:
 	var response:=await send("resume",{})
 	if not response.get("ok",false):return
@@ -225,7 +250,7 @@ func open_online(response:Dictionary)->void:
 	active_world.returned.connect(func():
 		active_world=null;root.show()
 		if Network.token.is_empty():login();status.text="请重新登录"
-		else:lobby())
+		else:menu())
 	add_child(active_world)
 	active_world.typing=true
 	var deadline:=Time.get_ticks_msec()+30000
@@ -247,15 +272,17 @@ func local_mode()->void:
 		else:create_character();add_local_return())
 	button(box,"返回主菜单",menu)
 func add_local_return()->void:
-	var button_layer:=CanvasLayer.new();button_layer.name="LocalReturn";button_layer.layer=35;add_child(button_layer)
-	var back:=Button.new();back.theme=MenuSkin.theme();back.text="返回主菜单";back.custom_minimum_size=Vector2(164,40);back.position=Vector2(1060,12);button_layer.add_child(back)
-	back.pressed.connect(func():
+	var game_menu=preload("res://scripts/world_menu.gd").new()
+	game_menu.world_provider=func():return active_world if is_instance_valid(active_world) else creation.get("world") if is_instance_valid(creation) else null
+	game_menu.return_action=func():
 		var w:Node=active_world if is_instance_valid(active_world) else creation.get("world") if is_instance_valid(creation) else null
 		if w and not w.item_service.save_state():w.item_ui.show_notice("保存失败，请重试");return
 		if w:w.persistent_world=false;w.item_service.writable=false
 		if is_instance_valid(active_world):remove_child(active_world);active_world.queue_free();active_world=null
 		if is_instance_valid(creation):remove_child(creation);creation.queue_free();creation=null
-		button_layer.queue_free();menu())
+		game_menu.queue_free();menu()
+	add_child(game_menu)
+
 func admin()->void:
 	var box:=panel("服务器管理",680)
 	var response:=await send("admin_list",{})
@@ -274,11 +301,7 @@ func admin()->void:
 	for w in response.worlds:
 		var row:=HBoxContainer.new();list.add_child(row)
 		var label:=Label.new();label.text=w.name+" · "+w.id;row.add_child(label)
-		button(row,"删除世界",func():
-			var confirm:=panel("删除世界")
-			status.text="仅允许删除无人在线的世界；服务器会先备份。"
-			button(confirm,"确认删除 "+w.name,func():await send("admin_delete_world",{"world_id":w.id,"confirm":w.id});admin())
-			button(confirm,"取消",admin))
+		button(row,"删除世界",func():confirm_delete_world(w,admin))
 	button(box,"创建普通测试账号",func():show_credential(await send("admin_create",{})))
 	button(box,"返回个人资料",profile)
 func show_credential(response:Dictionary)->void:

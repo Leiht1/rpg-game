@@ -15,14 +15,16 @@ func apply(rig: Node2D, look: Dictionary, inventory: ItemInventory, facing: Stri
 	var outfit_id: String=inventory.equipment.get("outfit",{}).get("item_id","") if inventory!=null else ""
 	var outfit: Dictionary=rules.outfits.get(outfit_id,{})
 	var modern: bool=not outfit.is_empty()
+	var heads: Dictionary=rules.get("gender_heads",{}).get(look.gender,rules.get("heads",{}))
 	for part in PARTS:
 		var sprite: Sprite2D=rig.get_node(PARTS[part])
-		if part=="head": sprite.texture=tex(rules.get("heads",{}).get(view,"heads/"+view+".png"))
+		if part=="head": sprite.texture=tex(heads.get(view,"heads/"+view+".png"))
 		elif modern: sprite.texture=tex(outfit.parts[view][part])
 		if part=="torso" and not modern: sprite.material=null;continue
 		if not materials.has(part):
 			var material_value=ShaderMaterial.new();material_value.shader=preload("res://scripts/character_skin.gdshader");materials[part]=material_value
 		var mat: ShaderMaterial=materials[part]
+		mat.set_shader_parameter("blue_outfit",outfit_id=="modern_outfit" and part in ["torso","arm_l","arm_r"])
 		mat.set_shader_parameter("skin_color",Color(rules.skin[look.skin_id].color))
 		var skin_region: Array=outfit.get("skin_regions",{}).get(part,[0,1]) if modern else [0,1]
 		mat.set_shader_parameter("skin_enabled",not modern or part=="head" or outfit.skin_regions.has(part))

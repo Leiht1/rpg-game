@@ -587,6 +587,7 @@ func item_modal_open() -> bool:
 	return service.body.sleep_active() or (is_instance_valid(world.camp_ui) and world.camp_ui.sign_dialog.visible) or (is_instance_valid(modal) and modal.visible)
 
 func update_input_block() -> void:
+	if world.get_meta("world_menu_open",false):world.player.input_blocked=true;return
 	if service.merchant.interacting:world.player.input_blocked=true;return
 	if is_instance_valid(service.expansion_ui) and service.expansion_ui.visible:world.player.input_blocked=true;return
 	if is_instance_valid(service.industry_ui) and service.industry_ui.visible:world.player.input_blocked=true;return

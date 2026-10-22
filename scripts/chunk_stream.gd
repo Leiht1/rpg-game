@@ -275,8 +275,8 @@ func chop_tree(tree: Node2D) -> void:
 	if items: items.dirty=true
 	var required:int=tree.required_hits
 	var hits := int(tree_hits[id])
-	if hits%2==0:
-		spawn_drop(tree.position+Vector2(-28 if hits==2 else 28,18),id+":hit%d"%hits)
+	if hits%6==0:
+		spawn_drop(tree.position+Vector2(-28 if hits==6 else 28,18),id+":hit%d"%hits)
 	if hits<required: return
 	harvested[id]=true
 	call_deferred("refresh_grounding",tree.position)
@@ -301,10 +301,10 @@ func refresh_grounding(at:Vector2)->void:
 func spawn_drop(at: Vector2,id: String) -> Node2D:
 	if items:
 		if items.consumed.has(id): return null
-		var entry := {"id":id,"item_id":"wood","count":4+int(abs(id.hash())%3),"x":at.x,"y":at.y}
+		var entry := {"id":id,"item_id":"wood","count":6,"x":at.x,"y":at.y}
 		items.loose[id]=entry
 		return create_item_drop(entry)
-	var entry := {"id":id,"item_id":"wood","count":1,"x":at.x,"y":at.y}
+	var entry := {"id":id,"item_id":"wood","count":6,"x":at.x,"y":at.y}
 	return create_item_drop(entry)
 
 func create_item_drop(entry: Dictionary) -> Node2D:

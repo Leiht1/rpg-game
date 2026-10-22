@@ -51,6 +51,8 @@ func validate(data: Variant, seen: Dictionary) -> bool:
 	var version = data.get("abandoned_version",0)
 	if not (version is int or version is float) or not is_finite(float(version)) or (version!=0 and version!=1): return false
 	var occupied := {}
+	# Validation restores all slots each time; reuse its scratch inventory across buildings.
+	var inv: ItemInventory
 	for id in data.objects:
 		var row = data.objects[id]
 		if not id is String or id.is_empty() or not row is Dictionary or not definitions.has(row.get("kind","")): return false
@@ -90,15 +92,16 @@ func validate(data: Variant, seen: Dictionary) -> bool:
 				if seen.has(instance_id):return false
 				seen[instance_id]=true
 		if row.open and row.kind!="wood_chest" and not d.has("storage_slots") and not d.get("door",false): return false
-		var inv := ItemInventory.new(service.database)
-		var slots: Array=[]
-		for i in 40: slots.append(row.contents[i] if i<row.contents.size() else {})
-		if not inv.restore(slots): return false
-		for v in inv.slots:
-			if v.has("instance_id"):
-				if seen.has(str(v.instance_id)): return false
-				seen[str(v.instance_id)]=true
-		for i in row.contents.size(): row.contents[i]=inv.slots[i]
+		if row.contents.any(func(v): return not v is Dictionary or not v.is_empty()):
+			if inv==null:inv=ItemInventory.new(service.database)
+			var slots: Array=[]
+			for i in 40: slots.append(row.contents[i] if i<row.contents.size() else {})
+			if not inv.restore(slots): return false
+			for v in inv.slots:
+				if v.has("instance_id"):
+					if seen.has(str(v.instance_id)): return false
+					seen[str(v.instance_id)]=true
+			for i in row.contents.size(): row.contents[i]=inv.slots[i]
 		for key in ["gx","gy","hits","facing"]: row[key]=int(row[key])
 	return true
 

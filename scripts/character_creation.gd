@@ -65,8 +65,10 @@ func _ready() -> void:
 func select_gender(index: int) -> void:
 	look.gender="male" if index==0 else "female";hair.clear();hair_ids.clear()
 	for id in Catalog.rules().hair:
-		if Catalog.rules().hair[id].gender==look.gender:hair.add_item(Catalog.rules().hair[id].name);hair_ids.append(id)
-	look.hair_id=hair_ids[0];refresh_preview()
+		hair.add_item(Catalog.rules().hair[id].name);hair_ids.append(id)
+	var selected:=hair_ids.find(str(look.hair_id))
+	if selected<0:selected=0
+	hair.select(selected);look.hair_id=hair_ids[selected];refresh_preview()
 func refresh_preview() -> void:
 	if preview==null:return
 	var direction: String="side" if preview_facing in ["left","right"] else preview_facing
@@ -107,8 +109,7 @@ func open_world(record: Dictionary, creating: bool) -> bool:
 	if not service.writable:return fail("试玩存档数据不完整，原文件已保留。",not creating)
 	if creating:
 		if not world.safe_entry():return fail("未找到安全出生点，请重试。",false)
-		# Grant through the original item instance/inventory path, still in memory.
-		if service.inventory.add("modern_outfit",1)!=0:return fail("背包初始化失败，请重试。",false)
+		# Legacy marker records completed initialization; no starter outfit grant.
 		world.record.characters[record.active_character_id].test_outfit_granted=true
 		DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(save_path.get_base_dir()))
 		world.persistent_world=true

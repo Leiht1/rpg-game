@@ -31,6 +31,7 @@ def main():
         if options.runtime:config.update(godot=str(options.runtime.resolve()/"Server/WorldWorker.exe"),project=str(options.runtime.resolve()/"Server"))
         service = server.Service(config)
         keys = json.loads(service.initialize().read_text())
+        service.terrain_factory=lambda world: (world.update(seed=271828) or service.make_terrain(world))
         fixtures = []
         tokens = []
         for i in range(2):
@@ -47,6 +48,8 @@ def main():
             character = service.character(service.state["accounts"][service.sessions[token]["account"]])
             for index, item in enumerate(("branch", "flint", "plant_fiber", "wood", "stone", "wild_berry")):
                 character["slots"][index+8] = {"item_id": item, "count": 20}
+        for label in ('sync-first','sync-second'):
+            world['drops'][label]={'x':world['spawn'][0]+12,'y':world['spawn'][1], 'contents':[{'item_id':'wood','count':2}]}
         service.save()
         cert, unused = server.certificate(service.root)
         service.db.close()

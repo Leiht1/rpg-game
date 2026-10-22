@@ -62,7 +62,6 @@ func panel_changed(panel: CanvasItem) -> void:
 
 func clear_world() -> void:
 	world=null
-	ui_epoch+=1;pending_ui="";ui_flush_queued=false;ui_voice.stop()
 	rain.stop();light_rain.stop();rain_gain=0.0;light_rain_gain=0.0;last_gait=0.0;animal_wait=8.0
 	for voice in voices:
 		if is_instance_valid(voice):voice.queue_free()
@@ -77,14 +76,16 @@ func play_sfx(key: String, at: Vector2=Vector2.INF) -> bool:
 		var events: Array=Engine.get_meta("network_rules_events")
 		if events.size()<48:events.append({"kind":"sound","key":key,"at":{"x":at.x,"y":at.y} if at.is_finite() else {}})
 		return true
-	if not is_instance_valid(world) or not configuration.has(key):return false
+	if not configuration.has(key):return false
+	var ui_sound: bool=key.begins_with("sfx_ui_") or (at==Vector2.INF and key in ["sfx_item_move","sfx_equip","sfx_bag_organize"])
+	if not ui_sound and not is_instance_valid(world):return false
 	if get_tree().paused:return false
 	var entry: Dictionary=configuration[key]
 	if not bool(entry.get("enabled",true)):return false
 	var now := Time.get_ticks_msec()/1000.0
 	if now-float(last_played.get(key,-100.0))<float(entry.get("cooldown",0.1)):return false
-	if at!=Vector2.INF and world.player.position.distance_to(at)>700.0:return false
-	if key.begins_with("sfx_ui_") or (at==Vector2.INF and key in ["sfx_item_move","sfx_equip","sfx_bag_organize"]):
+	if at!=Vector2.INF and (not is_instance_valid(world) or world.player.position.distance_to(at)>700.0):return false
+	if ui_sound:
 		# Resolve all callbacks for one input before playing: a close/open or
 		# successful inventory operation wins over its generic button click.
 		if pending_ui.is_empty() or ui_priority(key)>=ui_priority(pending_ui):pending_ui=key
@@ -132,7 +133,7 @@ func flush_ui(epoch: int) -> void:
 	if epoch!=ui_epoch:return
 	var key := pending_ui
 	pending_ui="";ui_flush_queued=false
-	if key.is_empty() or not is_instance_valid(world) or get_tree().paused:return
+	if key.is_empty() or get_tree().paused:return
 	var entry: Dictionary=configuration.get(key,{})
 	if entry.is_empty() or not bool(entry.get("enabled",true)):return
 	var now := Time.get_ticks_msec()/1000.0

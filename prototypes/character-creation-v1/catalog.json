@@ -205,5 +205,12 @@
   "sleep_side_eye_center": [
     0.7300998789346247,
     0.6064164648910412
-  ]
+  ],
+  "gender_heads": {
+    "female": {
+      "front": "res://prototypes/character-face-v3/front.png",
+      "back": "heads/back.png",
+      "side": "res://prototypes/character-face-v3/side.png"
+    }
+  }
 }

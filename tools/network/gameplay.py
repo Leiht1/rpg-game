@@ -136,7 +136,7 @@ class Gameplay:
                     if not value:continue
                     key = "online-v1:"+kind+":"+identity+":"+str(index)
                     if key not in baseline["loose"] and key not in baseline["consumed"]:
-                        baseline["loose"][key] = {"item_id": value["item_id"], "count": value["count"],
+                        baseline["loose"][key] = {"id":key,"item_id": value["item_id"], "count": value["count"],
                                                    "x": container["x"]+(index%3-1)*18,
                                                    "y": container["y"]+(index//3)*12,
                                                    "instance": copy.deepcopy(value), "mode": "pickup"}

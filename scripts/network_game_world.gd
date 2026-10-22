@@ -15,7 +15,6 @@ var sync_clock:=0.0
 var actors: Dictionary={}
 var entry:=LineEdit.new()
 var chat:=VBoxContainer.new()
-var return_dialog:=ConfirmationDialog.new()
 func load_world_identity(_path: String=WORLD_ID_PATH) -> void:
 	world_seed=int(session_data.world.seed);map_cells=int(session_data.world.map_cells)
 	world_id=str(session_data.world.id);persistent_world=false
@@ -34,9 +33,10 @@ func _ready() -> void:
 	routes[get_node("Fishing").get_instance_id()]=true
 	Engine.set_meta("network_game_controller",self)
 	if session_data.has("initial_snapshot"):apply_snapshot(session_data.initial_snapshot)
-	var back:=Button.new();back.text="返回大厅";back.theme=preload("res://scripts/item_ui_style.gd").theme();back.position=Vector2(1120,16);back.custom_minimum_size=Vector2(140,40);ui.add_child(back);back.pressed.connect(confirm_return)
-	return_dialog.theme=back.theme;return_dialog.title="返回大厅";return_dialog.dialog_text="确定返回大厅吗？角色和随身物品会保留。";return_dialog.ok_button_text="返回大厅";return_dialog.cancel_button_text="继续游戏";ui.add_child(return_dialog);return_dialog.confirmed.connect(close_world)
-	return_dialog.canceled.connect(func():item_ui.update_input_block())
+	var game_menu=preload("res://scripts/world_menu.gd").new()
+	game_menu.world_provider=func():return self
+	game_menu.return_action=close_world
+	add_child(game_menu)
 	ui.add_child(chat);chat.position=Vector2(20,470);chat.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	ui.add_child(entry);entry.position=Vector2(20,640);entry.size=Vector2(620,36);entry.max_length=120;entry.hide();entry.text_submitted.connect(send_chat)
 	call_deferred("sync_server")
@@ -64,7 +64,9 @@ func move_server() -> void:
 	var response: Dictionary=await Network.call_api("move",{"seq":sequence,"dx":0,"dy":0,"inputs":player.pending_inputs.duplicate(true),"pose":{"action":player.action,"clock":player.action_clock,"facing":player.facing}})
 	moving_request=false
 	if stopping:return
-	if response.get("ok",false):player.acknowledge(response.character,int(response.input_ack))
+	if response.get("ok",false):
+		player.acknowledge(response.character,int(response.input_ack))
+		if response.has("players"):update_players(response.players)
 	else:item_ui.show_notice(response.get("error","移动同步失败"))
 func sync_server() -> void:
 	if requesting or stopping:return
@@ -98,17 +100,25 @@ func sync_server() -> void:
 		return
 	if poll.get("ok",false):
 		Network.cursor=int(poll.cursor)
-		var present: Dictionary={}
-		for row in poll.players:
-			if row.player_id==Network.profile.player_id:continue
-			present[row.player_id]=true
-			if not actors.has(row.player_id):
-				var actor=preload("res://scripts/network_actor.gd").new();actor.generator=generator;actor.stream=stream;actor.position=Vector2(row.x,row.y);actor.input_blocked=true;object_root.add_child(actor);actor.camera.enabled=false;actors[row.player_id]=actor
-				var label:=Label.new();label.name="Nickname";label.position=Vector2(-70,-105);label.size.x=140;label.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;actor.add_child(label)
-			actors[row.player_id].get_node("Nickname").text=row.nickname;actors[row.player_id].receive(row)
-		for id in actors.keys():
-			if not present.has(id):actors[id].queue_free();actors.erase(id)
+		update_players(poll.players)
 		for message in poll.messages:show_chat(message)
+func update_players(players: Array) -> void:
+	var present: Dictionary={}
+	for row in players:
+		if row.player_id==Network.profile.player_id:continue
+		present[row.player_id]=true
+		if not actors.has(row.player_id):
+			var actor=preload("res://scripts/network_actor.gd").new();actor.generator=generator;actor.stream=stream;actor.position=Vector2(row.x,row.y);actor.input_blocked=true;object_root.add_child(actor);actor.camera.enabled=false;actors[row.player_id]=actor
+			var label:=Label.new();label.name="Nickname";label.position=Vector2(-70,-105);label.size.x=140;label.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;actor.add_child(label)
+		actors[row.player_id].get_node("Nickname").text=row.nickname;actors[row.player_id].receive(row)
+	for id in actors.keys():
+		if not present.has(id):actors[id].queue_free();actors.erase(id)
+func map_players() -> Array[Dictionary]:
+	var result: Array[Dictionary]=[{"position":player.position,"name":str(session_data.profile.nickname),"self":true}]
+	for actor in actors.values():
+		if not is_instance_valid(actor):continue
+		result.append({"position":actor.position,"name":actor.get_node("Nickname").text,"self":false})
+	return result
 func apply_snapshot(source: Dictionary) -> void:
 	applying=true
 	var snapshot:=source.duplicate(true)
@@ -129,7 +139,7 @@ func apply_snapshot(source: Dictionary) -> void:
 		if is_instance_valid(item_service.sleep.symbols):item_service.sleep.symbols.hide()
 		if is_instance_valid(item_service.sleep_ui):item_service.sleep_ui.wake.hide()
 	item_ui.update_input_block()
-	if typing or return_dialog.visible:player.input_blocked=true
+	if typing or get_meta("world_menu_open",false):player.input_blocked=true
 	for node in object_root.get_children():
 		var prop_id:=str(node.get_meta("prop_id",""))
 		if node.is_in_group("trees") and snapshot.harvested.has(prop_id):
@@ -139,6 +149,7 @@ func apply_snapshot(source: Dictionary) -> void:
 		for key in ["prop_id","ore_id","drop_id"]:
 			var id:=str(node.get_meta(key,""))
 			if not id.is_empty() and (snapshot.harvested.has(id) or snapshot.consumed.has(id)):
+				stream.drops.erase(node)
 				node.set_meta("collected",true);node.hide();node.queue_free()
 	var visible_drops: Dictionary={}
 	for node in stream.drops:
@@ -166,9 +177,6 @@ func show_chat(message: Dictionary) -> void:
 		var oldest=chat.get_child(0);chat.remove_child(oldest);oldest.queue_free()
 	var label:=Label.new();label.text=str(message.nickname)+"："+str(message.text);chat.add_child(label)
 	var tween:=label.create_tween();tween.tween_interval(5);tween.tween_callback(label.queue_free)
-func confirm_return() -> void:
-	player.input_blocked=true
-	return_dialog.popup_centered(Vector2i(420,160))
 func close_world() -> void:
 	if stopping:return
 	stopping=true;player.input_blocked=true

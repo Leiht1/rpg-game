@@ -220,7 +220,7 @@ class Service:
             require(result.get("ok"), "睡眠状态未能结束")
 
     def view_character(self, a, c):
-        result = {"player_id": a["player_id"], "nickname": a["nickname"], "avatar": a["avatar"], **{k:c[k] for k in ("id", "x", "y", "facing", "moving", "running", "appearance", "equipment")}}
+        result = {"sample_time":time.monotonic(),"player_id": a["player_id"], "nickname": a["nickname"], "avatar": a["avatar"], **{k:c[k] for k in ("id", "x", "y", "facing", "moving", "running", "appearance", "equipment")}}
         if "gameplay" in c:
             body = c["gameplay"]["body"]
             result["visual_body"] = {key: body.get(key) for key in ("build", "sleeping", "sleep_session")}
@@ -387,10 +387,10 @@ class Service:
             return {"worlds": [{k:w[k] for k in ("id","name","seed","map_cells","generator")} | {"online":len(self.online(w["id"]))} for w in self.state["worlds"].values()], "profile":self.profile(a)}
         if op in ("create_world", "join_world"):
             require(not a["world_id"], "已有所属世界，请继续进入或永久退出后再加入")
-            self.rate(("world",a["id"]), 5, 60)
             if op == "create_world":
                 name = d.get("name", "原野")
                 require(isinstance(name,str) and 1 <= len(name.strip()) <= 20 and not any(unicodedata.category(c).startswith("C") for c in name), "世界名称不合法")
+                self.rate(("world",a["id"]), 5, 60)
                 wid = identifier()
                 w = {"id":wid,"name":name.strip(),"seed":secrets.randbelow(2147483646)+1,"map_cells":self.config.get("world_cells",1536),"generator":"windrest-continent-0.6.0","format":1,"clock":0.0,"weather":"clear","storage":{},"drops":{},"legacies":{},"exploration":[],"systems": {"buildings":{},"resources":{},"animals":{},"crops":{},"fish":{},"merchant":{}}}
                 nav = self.terrain_factory(w)
@@ -400,6 +400,7 @@ class Service:
             else:
                 wid = d.get("world_id")
                 require(wid in self.state["worlds"], "世界不存在")
+                self.rate(("world",a["id"]), 5, 60)
             a["world_id"] = wid
             return {"profile":self.profile(a), "world":self.state["worlds"][wid]}
         if op == "character":
@@ -413,7 +414,8 @@ class Service:
                 hairs = {"male":["male_short","male_parted","male_messy","male_cropped"],"female":["female_bob","female_long","female_ponytail","female_bun"]}
                 # Catalog IDs are supplied in config from the existing catalog.
                 hairs = self.config.get("hair_ids",hairs)
-                require(gender in hairs and appearance.get("hair_id") in hairs[gender] and appearance.get("skin_id") in [f"skin_{i}" for i in range(1,7)], "人物外观选项无效")
+                available_hair = {hair for group in hairs.values() for hair in group}
+                require(gender in ["male","female"] and appearance.get("hair_id") in available_hair and appearance.get("skin_id") in [f"skin_{i}" for i in range(1,7)], "人物外观选项无效")
                 initial = self.inventory(None,"create")
                 c = {"id":identifier(),"world_id":w["id"],"x":w["spawn"][0],"y":w["spawn"][1],"facing":"front","moving":False,"running":False,"appearance":{k:appearance[k] for k in ("gender","hair_id","skin_id")},"slots":initial["slots"],"equipment":initial["equipment"],"hotbar_equipment":initial["hotbar_equipment"],"body":{"health":100,"hunger":100,"energy":100},"outfit_granted":True}
                 self.state["characters"][a["player_id"]] = c
@@ -450,6 +452,13 @@ class Service:
             last = getattr(self.gameplay, "clocks", {}).get(w["id"], now)
             if not hasattr(self.gameplay, "clocks"):self.gameplay.clocks = {}
             elapsed = min(5.0, max(0.0, now-last))
+            # Several clients may ask for the same world update together. Reuse
+            # committed state between ticks instead of simulating everyone again.
+            if op == "game_snapshot" and w["id"] in self.gameplay.clocks and elapsed < .4 and "gameplay" in w and "gameplay" in c:
+                selected = d.get("selected", c.get("selected", 0))
+                require(type(selected) is int and 0 <= selected < 8, "快捷栏无效")
+                c["selected"] = c["gameplay"]["selected"] = selected
+                return {"gameplay_revision":1,"snapshot":self.gameplay.snapshot(w,c),"events":[]}
             self.gameplay.clocks[w["id"]] = now
             present = [self.state["characters"][self.state["accounts"][aid]["player_id"]]
                        for aid in self.online(w["id"]) if self.state["accounts"][aid]["player_id"] in self.state["characters"]]
@@ -457,25 +466,26 @@ class Service:
             tick_events = []
             for person in self.state["characters"].values():
                 if person["world_id"] == w["id"] and person["id"] not in present_ids:self.release_game_character(w, person)
-            if elapsed > .01 and "gameplay" in w:
-                for index, person in enumerate(present):
+            others = [person for person in present if person["id"] != c["id"]]
+            if elapsed > 0 and "gameplay" in w:
+                for index, person in enumerate(others):
                     tick = self.gameplay.apply(w, person, elapsed=elapsed, shared=index==0)
                     require(tick.get("ok"), tick.get("error", "世界计时失败"))
-                    if person["id"] == c["id"]:tick_events.extend(tick.get("events", []))
             rid = d.get("request_id", "")
+            replayed = False
             if op == "game_command":
                 require(isinstance(rid, str) and re.fullmatch(r"[a-f0-9]{32}", rid), "操作编号无效")
                 key = "game:"+c["id"]+":"+rid
                 if key in self.state["receipts"]:
-                    return {"gameplay_revision": 1, "snapshot": self.gameplay.snapshot(w, c)}
-                self.rate(("gameplay", a["id"]), 30, 5)
+                    replayed = True
+                else:self.rate(("gameplay", a["id"]), 30, 5)
             selected = d.get("selected", c.get("selected", 0))
             require(type(selected) is int and 0 <= selected < 8, "快捷栏无效")
             c["selected"] = selected
             if "gameplay" in c:
                 c["gameplay"]["selected"] = selected
             try:
-                result = self.gameplay.apply(w, c, d.get("operation", "snapshot") if op == "game_command" else "snapshot", d.get("args", []) if op == "game_command" else [], station=d.get("station"), expected=d.get("expected"))
+                result = self.gameplay.apply(w, c, d.get("operation", "snapshot") if op == "game_command" and not replayed else "snapshot", d.get("args", []) if op == "game_command" and not replayed else [], elapsed=elapsed, shared=not others, station=d.get("station"), expected=d.get("expected"))
             except ValueError as error:
                 raise Rejected(str(error)) from error
             require(result.get("ok"), result.get("error", "玩法操作失败"))
@@ -600,7 +610,12 @@ class Service:
             cell = int(c["y"]/48)*w["map_cells"]+int(c["x"]/48)
             if cell not in w["exploration"]:
                 w["exploration"].append(cell)
-            return {"character":c,"input_ack":session.get("input_ack",0),"movement_revision":2}
+            players = []
+            for aid in self.online(w["id"]):
+                person = self.state["accounts"][aid]
+                other = self.state["characters"].get(person["player_id"])
+                if other:players.append(self.view_character(person,other))
+            return {"character":c,"input_ack":session.get("input_ack",0),"movement_revision":2,"players":players}
         if op in ("pickup", "storage", "inventory", "bag"):
             require(session["entered"], "请先进入世界")
             c = self.character(a)
@@ -664,6 +679,26 @@ class Service:
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, *args):
         pass
+
+    def do_GET(self):
+        # Public releases only. Never expose Data, configuration or private keys.
+        name = self.path.removeprefix("/updates/")
+        if not self.path.startswith("/updates/") or not (name == "latest.json" or re.fullmatch(r"client-[a-f0-9]{64}\.zip", name)):
+            self.send_error(404); return
+        path = self.server.service.root.parent/"Updates"/name
+        try:
+            with path.open("rb") as source:
+                self.connection.settimeout(60)
+                self.send_response(200)
+                self.send_header("Content-Type", "application/json" if name == "latest.json" else "application/zip")
+                self.send_header("Content-Length", str(os.fstat(source.fileno()).st_size))
+                self.send_header("Cache-Control", "no-store" if name == "latest.json" else "public, max-age=31536000, immutable")
+                self.end_headers()
+                shutil.copyfileobj(source, self.wfile, 1024*1024)
+        except FileNotFoundError:
+            self.send_error(404)
+        except (ConnectionError, OSError):
+            pass
 
     def do_POST(self):
         try:

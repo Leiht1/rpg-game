@@ -1,0 +1,19 @@
+{
+  "status": "user_requested_revision",
+  "latest_constraint": "保持原脸型、轮廓、耳朵、头发拼接，仅调整五官；用户认可生成正面稿的五官方向",
+  "route": "local:codex-cli",
+  "art_source": "host_image",
+  "model": "codex-image_gen",
+  "exact_revision": "unknown",
+  "estimateUsd": 0,
+  "source_jobs": [
+    "art\\character-face-v3\\front-generated\\job.json",
+    "art\\character-face-v3\\side-generated\\job.json"
+  ],
+  "processing": "Only registered feature patches; original full alpha and 9px outline band retained exactly. Generated silhouette discarded. No new character animation.",
+  "qa": "registration-qa.json",
+  "runtime_sha256": {
+    "prototypes\\character-face-v3\\front.png": "8b8bf8bd6361f684bf5660802273d1e6c95231d0e22f4bb9667a83d6c0fe3a11",
+    "prototypes\\character-face-v3\\side.png": "1b8caf79c3f25ac47bfb5b05c141cd7119a7b93dc550aaf07796336ea31b2dbc"
+  }
+}

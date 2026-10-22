@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-22",
+  "source_commit": "5fe7ec15e27afa2cd5a059940d294d9d77dec5d2",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "renderer": "Compatibility",
+  "gpu": "RTX 3060",
+  "viewport": [
+    1280,
+    720
+  ],
+  "deployment": "dist/network-v0.1.0",
+  "server_url": "https://10.215.26.56:24870",
+  "backup": "dist/deployment-backups/20261022-090534",
+  "database_before": {
+    "logical_sha256": "2d59d7ab53b6f142ee7466ab317accdc7e34f3dad3d89fe2b8e0499f807fc9d2",
+    "counts": {
+      "accounts": 9,
+      "worlds": 2,
+      "characters": 2,
+      "receipts": 3
+    }
+  },
+  "database_after_sha256": "2d59d7ab53b6f142ee7466ab317accdc7e34f3dad3d89fe2b8e0499f807fc9d2",
+  "accounts_worlds_identity_configuration_unchanged": true,
+  "local_player_files_unchanged": 22,
+  "packaged_launcher_checks": 4,
+  "packaged_native": {
+    "checks": 58,
+    "client_summaries": [
+      "UNCHANGED_SNAPSHOT_MS 36.678",
+      "FULL_GAME_MOVEMENT distance=236.57421875 backwards=0",
+      "FULL_GAME_STOP drift=0.0 pending=22 correction=(0.0, 0.0)",
+      "FULL_GAME_NATIVE_PASS 29",
+      "UNCHANGED_SNAPSHOT_MS 41.134",
+      "FULL_GAME_MOVEMENT distance=236.57421875 backwards=0",
+      "FULL_GAME_STOP drift=0.0 pending=68 correction=(0.0, 0.0)",
+      "FULL_GAME_NATIVE_PASS 29"
+    ],
+    "errors": 0
+  },
+  "existing_data_clone": {
+    "existing_characters_loaded": 2,
+    "errors": 0,
+    "cloned_data_only": true,
+    "real_credentials_used": false
+  },
+  "deployed_tls_loopback_verified": true,
+  "deployed_tls_company_ipv4_from_same_host_verified": true,
+  "deployed_client_login_response_verified": true,
+  "deployed_client_timeout_recovery_ms": 6341,
+  "cold_start_concurrent_login": "First attempt failed; ordered-login retry passed. Root cause unresolved, no production code fix.",
+  "cross_machine_lan_verified": false,
+  "archives": {
+    "Client": {
+      "bytes": 117169820,
+      "sha256": "4a20124bdc9f95c3a3739e5d1eb106a264840a576b59a0c5b0b3b91e1b3f7dbe",
+      "entries": 7
+    },
+    "Server": {
+      "bytes": 150508822,
+      "sha256": "2f475005a374fd1e19966190917b6abd025022761eebec9711154412c318e8e8",
+      "entries": 10
+    }
+  }
+}

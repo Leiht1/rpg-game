@@ -121,3 +121,8 @@ dist/
 
 # Isolated multiplayer gameplay rules fixtures, never production/player data.
 /reports/network-gameplay-v5/private/
+
+# Deployment fingerprints and temporary runner/output logs stay local.
+/reports/tree-balance-20261022/deploy-baseline.json
+/reports/tree-balance-20261022/packed_check.gd
+/reports/network-sync-fixes-20261022/*.txt

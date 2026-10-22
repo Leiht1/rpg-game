@@ -261,10 +261,22 @@ func draw_markers(layer: Control) -> void:
 			var label_size:=font.get_string_size(label,HORIZONTAL_ALIGNMENT_LEFT,-1,15)
 			var origin:=Vector2(clampf(point.x+8,map_rect.position.x+3,maxf(map_rect.position.x+3,map_rect.end.x-label_size.x-3)),clampf(point.y-6,map_rect.position.y+18,map_rect.end.y-3))
 			layer.draw_string(font,origin,label,HORIZONTAL_ALIGNMENT_LEFT,-1,15,Color('fff0c8'))
-	var point:=world_to_screen(player.position)
-	if map_rect.grow(-8).has_point(point):
-		layer.draw_circle(point,8,Color('253c3b'));layer.draw_circle(point,5,Color('ffdf74'))
-		layer.draw_line(point,point+Vector2(0,-13),Color('fff9db'),2,true)
+	for marker in player_markers():
+		var point:=world_to_screen(marker.position)
+		if not map_rect.grow(-8).has_point(point):continue
+		var color:=Color('ffdf74') if marker.self else Color('83e5ef')
+		layer.draw_circle(point,8,Color('253c3b'));layer.draw_circle(point,5,color)
+		if marker.self:layer.draw_line(point,point+Vector2(0,-13),Color('fff9db'),2,true)
+		var label:=str(marker.name)
+		var width:=font.get_string_size(label,HORIZONTAL_ALIGNMENT_LEFT,-1,15).x
+		var origin:=Vector2(clampf(point.x+12,map_rect.position.x+3,maxf(map_rect.position.x+3,map_rect.end.x-width-3)),clampf(point.y-10,map_rect.position.y+18,map_rect.end.y-3))
+		layer.draw_string_outline(font,origin,label,HORIZONTAL_ALIGNMENT_LEFT,-1,15,3,Color('253c3b'))
+		layer.draw_string(font,origin,label,HORIZONTAL_ALIGNMENT_LEFT,-1,15,color)
+
+func player_markers() -> Array[Dictionary]:
+	var world=player.get_parent().get_parent()
+	if world and world.has_method("map_players"):return world.map_players()
+	return [{"position":player.position,"name":"自己","self":true}]
 
 func _input(event: InputEvent) -> void:
 	if item_screen and item_screen.service.body.sleep_active():return

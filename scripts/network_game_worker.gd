@@ -87,8 +87,8 @@ func execute(request: Dictionary) -> void:
 		service.inventory.changed.emit()
 	world.stream.update_target(world.player.position)
 	for frame in 300:
-		await get_tree().process_frame
 		if world.stream.viewport_ready(world.player.position,Vector2(640,360)):break
+		await get_tree().process_frame
 	service.animals.sync_visuals()
 	freeze_actors()
 	world.player.input_blocked=service.body.sleep_active()

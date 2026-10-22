@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 SPEC=importlib.util.spec_from_file_location("windrest_server",Path(__file__).parents[1]/"tools/network/server.py")
 server=importlib.util.module_from_spec(SPEC)
@@ -49,6 +50,13 @@ class ServerTests(unittest.TestCase):
         with self.assertRaises(server.Rejected):self.api("login",{"username":"playerone","password":"Test-password-123"})
         self.assertTrue(self.api("login",{"username":"playerone","password":"New-password-123"})["ok"])
         self.assertNotIn("New-password-123",json.dumps(self.s.state))
+    def test_cross_gender_hair_selection(self):
+        w=self.world();self.api("join_world",{"world_id":w["id"]},self.t2)
+        for token,gender,hair in [(self.t1,"male","female_bob"),(self.t2,"female","male_natural")]:
+            self.api("character",{"appearance":{"gender":gender,"hair_id":hair,"skin_id":"skin_2"}},token)
+        appearances=[row["appearance"] for row in self.s.state["characters"].values()]
+        self.assertIn({"gender":"male","hair_id":"female_bob","skin_id":"skin_2"},appearances)
+        self.assertIn({"gender":"female","hair_id":"male_natural","skin_id":"skin_2"},appearances)
     def test_reenter_resets_movement_sequence(self):
         self.world();self.enter(self.t1)
         self.api("move",{"seq":20,"dx":0,"dy":0},self.t1)
@@ -159,6 +167,7 @@ class ServerTests(unittest.TestCase):
         self.assertEqual(sum(s.get("count",0) for s in c["slots"] if s.get("item_id")=="stone"),1)
     def test_save_failure_rolls_back(self):
         self.both()
+        self.s.character(self.s.account(self.t1)[0])["slots"][8]={"item_id":"wood","count":1}
         before=json.dumps(self.s.state,sort_keys=True)
         original=self.s.save
         self.s.save=lambda:(_ for _ in ()).throw(OSError("simulated disk failure"))
@@ -169,6 +178,40 @@ class ServerTests(unittest.TestCase):
         self.s.save=original
         self.assertEqual(json.dumps(self.s.state,sort_keys=True),before)
         self.assertEqual(self.api("profile",{},self.t1)["profile"]["nickname"],"原野一号")
+    def test_invalid_world_names_do_not_exhaust_create_limit(self):
+        for name in ["", "   ", "\n", "x"*21, "a\x00", ""]:
+            with self.assertRaises(server.Rejected):self.api("create_world",{"name":name},self.t1)
+        self.assertFalse(self.s.limits[("world",self.s.account(self.t1)[0]["id"])])
+        self.assertEqual(self.world()["name"],"测试原野")
+    def test_new_character_no_starter_outfit(self):
+        self.world();character=self.enter(self.t1)["character"]
+        self.assertTrue(all(not slot for slot in character["slots"]))
+        self.assertFalse(any(character["equipment"].values()))
+        character["slots"][8]={"item_id":"wood","count":3}
+        self.assertEqual(self.enter(self.t1)["character"]["slots"][8],{"item_id":"wood","count":3})
+    def test_world_tick_coalesces_and_retry_never_repeats_command(self):
+        self.both();self.s.config["gameplay_preview"]=True
+        w=self.s.state["worlds"][self.s.account(self.t1)[0]["world_id"]]
+        w["gameplay"]={}
+        for person in self.s.state["characters"].values():person["gameplay"]={}
+        calls=[]
+        class Rules:
+            clocks={w["id"]:99.5}
+            def snapshot(inner,world,character):return {"player_position":{"x":character["x"],"y":character["y"]}}
+            def apply(inner,world,character,operation="snapshot",args=None,**options):
+                calls.append((character["id"],operation,options))
+                return {"ok":True,"snapshot":inner.snapshot(world,character),"events":[]}
+        self.s.gameplay=Rules()
+        with patch.object(server.time,"monotonic",return_value=100):self.api("game_snapshot",{},self.t1)
+        self.assertEqual(len(calls),2)
+        self.assertEqual(sum(row[2]["shared"] for row in calls),1)
+        with patch.object(server.time,"monotonic",return_value=100.1):self.api("game_snapshot",{},self.t2)
+        self.assertEqual(len(calls),2)
+        command={"operation":"organize","args":[],"request_id":"a"*32}
+        with patch.object(server.time,"monotonic",return_value=100.2):self.api("game_command",command,self.t1)
+        with patch.object(server.time,"monotonic",return_value=100.3):self.api("game_command",command,self.t1)
+        self.assertEqual(sum(row[1]=="organize" for row in calls),1)
+        self.assertEqual(calls[-1][1],"snapshot")
     def test_terrain_cache_never_regenerates_existing_world(self):
         w={"id":server.identifier(),"generator":"windrest-continent-0.6.0","map_cells":128}
         target=Path(self.temp.name)/"Worlds"/(w["id"]+".terrain.json")

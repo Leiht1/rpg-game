@@ -10,7 +10,7 @@ static func valid(value: Variant) -> bool:
 	if not value is Dictionary: return false
 	if value.get("gender") not in ["male","female"]: return false
 	var hair: Dictionary=rules().hair.get(value.get("hair_id",""),{})
-	return not hair.is_empty() and hair.gender==value.gender and rules().skin.has(value.get("skin_id",""))
+	return not hair.is_empty() and rules().skin.has(value.get("skin_id",""))
 static func enable_candidate(database: ItemDatabase) -> void:
 	# Only the independent creation entry calls this, before inventory restore.
 	var row: Dictionary=database.definitions.modern_outfit

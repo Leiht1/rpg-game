@@ -232,7 +232,7 @@ func run() -> void:
 		world.stream.chop_tree(tree)
 		check(world.stream.harvested.has(tree_id) and s.inventory.equipment.is_empty(),"native final chop yields before axe break")
 		var drop: Dictionary=s.loose.get(tree_id+":hit%d"%tree.required_hits,{})
-		check(int(drop.get("count",0))>=4 and int(drop.get("count",0))<=6,"native tree batch yields4 to6 wood")
+		check(int(drop.get("count",0))==6,"native tree batch yields6 wood")
 	var successes := 0
 	for i in 10000:
 		if abs((str(i)+":flint").hash())%10<3: successes+=1
