@@ -22,8 +22,13 @@ func run()->void:
 	var invalid:Dictionary=server.serialize();invalid.sha256="invalid"
 	var revision:int=client.revision
 	assert(not client.restore(invalid) and client.revision==revision)
+	for byte in [1023,1024,server.bits.size()-1]:server.bits[byte]=129
+	server.rebuild_mask()
+	assert(client.restore(server.serialize()) and client.mask_cache.get_data()==server.mask_cache.get_data())
+	server.bits[1023]=0;server.bits[1024]=2;server.rebuild_mask()
+	assert(client.restore(server.serialize()) and client.mask_cache.get_data()==server.mask_cache.get_data())
 	server.configure("edge",13*96.0);client.configure("edge",13*96.0)
 	server.reveal(Vector2(1200,1200),true)
 	assert(client.restore(server.serialize()) and client.mask_cache.get_data()==server.mask_cache.get_data())
-	print("EXPLORATION_SYNC_PASS addition, clearing, image identity, checksum, partial byte")
+	print("EXPLORATION_SYNC_PASS addition, clearing, image identity, checksum, page boundary, partial byte")
 	quit()

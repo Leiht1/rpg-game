@@ -1,6 +1,11 @@
 {
   "version": 1,
-  "portal_entry_rect": [-30, -32, 60, 76],
+  "portal_entry_rect": [
+    -30,
+    -32,
+    60,
+    76
+  ],
   "weapons": {
     "unarmed": {
       "damage": 4,
@@ -48,10 +53,11 @@
   "entry_seconds": 1.0,
   "boar": {
     "health": 45,
-    "population": 8,
+    "population": 16,
     "safe_radius": 1000,
     "notice_range": 260,
-    "leash": 420,
+    "leash": 900,
+    "chase_range": 600,
     "speed": 115,
     "respawn_seconds": 3600,
     "drops": {
@@ -59,7 +65,13 @@
       "boar_meat": 2
     },
     "hit_stun": 0.18,
-    "camp_clearance": 240
+    "camp_clearance": 240,
+    "min_spacing": 1600,
+    "night_speed_multiplier": 1.2,
+    "night_start_minute": 1200,
+    "night_end_minute": 360,
+    "night_roam_radius": 650,
+    "population_revision": 2
   },
   "knockback": 12
 }

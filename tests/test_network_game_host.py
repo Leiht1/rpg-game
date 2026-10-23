@@ -30,73 +30,57 @@ class RulesHostTests(unittest.TestCase):
         cls.host.close()
         cls.temporary.cleanup()
 
+    def test_new_drop_in_already_loaded_chunk_is_interactable(self):
+        state=copy.deepcopy(self.baseline)
+        state['combat_personal']['phase']='alive'
+        at=state['player_position']
+        identity='v7:late-authoritative-drop'
+        state['loose'][identity]={'id':identity,'item_id':'wood','count':2,'x':at['x']+6,'y':at['y']+20,'mode':'pickup'}
+        result=self.host.execute(state,operation='interact',args=[{'drop_id':identity}])
+        self.assertTrue(result['ok'],result.get('error'))
+        self.assertIn(identity,result['snapshot']['consumed'])
+        self.assertNotIn(identity,result['snapshot']['loose'])
+
     def test_roundtrip_original_snapshot(self):
         result = self.host.execute(copy.deepcopy(self.baseline))
         self.assertTrue(result["ok"], result.get("error"))
         for key in ("world_id", "seed", "slots", "body", "buildings", "campfires"):
             self.assertEqual(self.baseline[key], result["snapshot"][key])
 
-    @unittest.skipUnless(os.name == "nt", "Windows mailbox sharing regression")
-    def test_busy_request_is_retried_without_losing_command(self):
-        import ctypes
-        import threading
-        from ctypes import wintypes
-        kernel = ctypes.WinDLL("kernel32", use_last_error=True)
-        kernel.CreateFileW.argtypes = [wintypes.LPCWSTR, wintypes.DWORD, wintypes.DWORD,
-                                      ctypes.c_void_p, wintypes.DWORD, wintypes.DWORD, wintypes.HANDLE]
-        kernel.CreateFileW.restype = wintypes.HANDLE
-        kernel.CloseHandle.argtypes = [wintypes.HANDLE]
-        replace = os.replace
-        held = []
-        timers = []
-        def publish_locked(source, target):
-            # Allow atomic rename but deny Godot's read until the timer releases it.
-            handle = kernel.CreateFileW(str(source), 0x80000000, 4, None, 3, 0, None)
-            self.assertNotEqual(handle, ctypes.c_void_p(-1).value)
-            held.append(handle)
-            try:
-                replace(source, target)
-            finally:
-                timer = threading.Timer(.3, lambda: kernel.CloseHandle(handle))
-                timers.append(timer);timer.start()
-        try:
-            with patch('game_host.os.replace', publish_locked):
-                reply = self.host.execute(copy.deepcopy(self.baseline))
-            self.assertTrue(reply['ok'], reply.get('error'))
-            self.assertEqual(reply['snapshot']['slots'], self.baseline['slots'])
-            self.assertTrue(held)
-            self.assertTrue(self.host.execute(copy.deepcopy(self.baseline))['ok'])
-        finally:
-            for timer in timers:timer.join()
+    def test_fragmented_private_request_is_reassembled(self):
+        import struct
+        data=json.dumps({"operation":"snapshot","snapshot":self.baseline}).encode("utf-8")
+        packet=struct.pack("<I",len(data))+data
+        for start in range(0,len(packet),113):
+            self.host.channel.sendall(packet[start:start+113])
+        result=self.host._receive(5)
+        self.assertTrue(result["ok"],result.get("error"))
+        self.assertEqual(result["snapshot"]["slots"],self.baseline["slots"])
 
-    def test_malformed_mailbox_does_not_stall_next_request(self):
-        temporary = self.host.folder / 'request.tmp'
-        temporary.write_text('{incomplete', encoding='utf-8')
-        os.replace(temporary, self.host.folder / 'request.json')
-        rejected = self.host._receive(5)
-        self.assertFalse(rejected['ok'])
-        self.assertTrue(rejected['error'])
-        restored = self.host.execute(copy.deepcopy(self.baseline))
-        self.assertTrue(restored['ok'], restored.get('error'))
-        self.assertEqual(restored['snapshot']['slots'], self.baseline['slots'])
-
-    def test_windows_busy_result_file_does_not_mix_replies(self):
-        original=Path.read_text
-        attempts=[]
-        def busy_once(path,*args,**kwargs):
-            if path.name=="result.json" and not attempts:
-                attempts.append(True)
-                raise PermissionError("isolated Windows file hold")
-            return original(path,*args,**kwargs)
-        with patch.object(Path,"read_text",busy_once):
-            result=self.host.execute(self.baseline)
-        self.assertTrue(attempts)
-        self.assertTrue(result["ok"])
-        state=self.baseline
-        character={"x":state["player_position"]["x"],"y":state["player_position"]["y"],"gameplay":{"body":state["body"]}}
-        moved=self.host.movement({"gameplay":state},character,[])
-        self.assertEqual(set(moved),{"x","y"})
+    def test_malformed_private_request_does_not_stall_next_request(self):
+        import struct
+        data=b"{incomplete"
+        self.host.channel.sendall(struct.pack("<I",len(data))+data)
+        rejected=self.host._receive(5)
+        self.assertFalse(rejected["ok"])
         self.assertTrue(self.host.execute(self.baseline)["ok"])
+
+    def test_partial_response_closes_channel_without_reusing_reply(self):
+        import socket
+        import struct
+        listener=socket.socket();listener.bind(("127.0.0.1",0));listener.listen(1)
+        sender=socket.create_connection(listener.getsockname())
+        receiver,_=listener.accept()
+        host=GameHost.__new__(GameHost)
+        host.channel=receiver
+        closed=[]
+        host.close=lambda: (closed.append(True),receiver.close())
+        sender.sendall(struct.pack("<I",10)+b"{}")
+        try:
+            with self.assertRaises(TimeoutError):host._receive(.05)
+            self.assertEqual(closed,[True])
+        finally:
+            sender.close();listener.close()
 
     def test_invalid_snapshot_is_rejected(self):
         state = copy.deepcopy(self.baseline)
@@ -179,6 +163,38 @@ class RulesHostTests(unittest.TestCase):
         if extra:row.update(extra)
         state["buildings"]["objects"] = {"fixture": row}
         return state
+
+    def test_network_torch_fuel_and_field_weapon(self):
+        state = self.fixture_building("camp_torch", {"fuel":0, "lit":False})
+        state["combat_personal"]["phase"] = "alive"
+        state["slots"][8] = {"item_id":"wood", "count":20}
+        state["slots"][9] = {"item_id":"plant_fiber", "count":5}
+        result = self.host.execute(state, operation="camp_feed", args=["fixture",8,{"item_id":"wood","count":20},2])
+        self.assertTrue(result["ok"], result.get("error"))
+        fed = result["snapshot"]
+        torch = fed["buildings"]["objects"]["fixture"]
+        self.assertTrue(torch["lit"])
+        self.assertGreater(torch["fuel"], 0)
+        self.assertEqual(fed["slots"][8]["count"],18)
+        tick = self.host.execute(fed, elapsed=1)["snapshot"]
+        self.assertLess(tick["buildings"]["objects"]["fixture"]["fuel"],torch["fuel"])
+        result = self.host.execute(tick, operation="craft", args=["combat_wood_club",1])
+        self.assertTrue(result["ok"],result.get("error"))
+        made = self.host.execute(result["snapshot"], elapsed=2)["snapshot"]
+        self.assertEqual(sum(s.get("count",0) for s in made["slots"] if s.get("item_id")=="wood_club"),1)
+        self.assertEqual(sum(s.get("count",0) for s in made["slots"] if s.get("item_id")=="wood"),8)
+
+    def test_guide_progress_is_personal_and_survives_restore(self):
+        from gameplay import PERSONAL
+        self.assertIn("guide_stage", PERSONAL)
+        state = copy.deepcopy(self.baseline)
+        state["guide_stage"] = 0
+        first = self.host.execute(state,operation="guide",args=[1])
+        self.assertTrue(first["ok"],first.get("error"))
+        self.assertEqual(first["snapshot"]["guide_stage"],1)
+        second = self.host.execute(first["snapshot"],operation="guide",args=[2])
+        self.assertEqual(self.host.execute(second["snapshot"])["snapshot"]["guide_stage"],2)
+        self.assertFalse(self.host.execute(second["snapshot"],operation="guide",args=[0])["ok"])
 
     def test_shared_chest_transfer_rejects_stale_take(self):
         state = self.fixture_building("wood_chest")
@@ -449,6 +465,7 @@ class RulesHostTests(unittest.TestCase):
                 service.gameplay.hosts[wid] = self.host
                 service.gameplay.defaults[wid] = copy.deepcopy(self.baseline)
                 self.assertTrue(api("game_snapshot")["ok"])
+                service.state["characters"]["player"]["gameplay"]["combat_personal"]["phase"]="alive"
                 previous = copy.deepcopy(service.state)
                 save = service.save
                 def fail():

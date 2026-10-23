@@ -16,6 +16,7 @@ var front_arm_position := Vector2.ZERO
 var front_free_arm: Node2D
 var front_free_arm_position := Vector2.ZERO
 var front_free_arm_rotation := 0.0
+var front_free_arm_scale := Vector2.ONE
 var front_free_source: Sprite2D
 var front_free_was_visible := true
 var front_free_hand: Sprite2D
@@ -29,6 +30,7 @@ func release_pose() -> void:
 	if is_instance_valid(front_free_arm):
 		front_free_arm.position=front_free_arm_position
 		front_free_arm.rotation=front_free_arm_rotation
+		front_free_arm.scale=front_free_arm_scale
 	if is_instance_valid(front_free_source): front_free_source.visible=front_free_was_visible
 	if is_instance_valid(front_free_hand): front_free_hand.hide()
 	front_free_arm=null;front_free_source=null
@@ -134,7 +136,7 @@ func show_strike_in_front(character: Node2D, sorted_root: Node2D, target: Node2D
 		var source: Sprite2D=pair[0];var copy: Sprite2D=pair[1]
 		copy.texture=source.texture;copy.centered=source.centered;copy.offset=source.offset
 		copy.flip_h=source.flip_h;copy.flip_v=source.flip_v
-		copy.texture_filter=source.texture_filter;copy.modulate=source.modulate
+		copy.texture_filter=source.texture_filter;copy.modulate=source.modulate;copy.material=source.material
 		copy.global_transform=source.global_transform
 		copy.visible=source.visible
 	native_hand=hand;hand_was_visible=hand.visible
@@ -152,7 +154,7 @@ func align_front_shoulders(character: Node2D, arm: Node2D) -> void:
 	arm.position=pelvis.to_local(torso.to_global(Vector2(28,-28)))
 	var free_arm: Node2D=pelvis.get_node("ArmL")
 	if front_free_arm!=free_arm:
-		front_free_arm=free_arm;front_free_arm_position=free_arm.position;front_free_arm_rotation=free_arm.rotation
+		front_free_arm=free_arm;front_free_arm_position=free_arm.position;front_free_arm_rotation=free_arm.rotation;front_free_arm_scale=free_arm.scale
 	free_arm.position=pelvis.to_local(torso.to_global(Vector2(-28,-28)))
 	# The empty hand rests outward instead of crossing into the working palm/handle.
 	free_arm.rotation=clampf(free_arm.rotation,.08,.24)
@@ -162,7 +164,7 @@ func align_front_shoulders(character: Node2D, arm: Node2D) -> void:
 		pelvis.add_child(front_free_hand);pelvis.move_child(front_free_hand,arm.get_index())
 	front_free_hand.texture=source.texture;front_free_hand.centered=source.centered;front_free_hand.offset=source.offset
 	front_free_hand.flip_h=source.flip_h;front_free_hand.flip_v=source.flip_v
-	front_free_hand.texture_filter=source.texture_filter;front_free_hand.modulate=source.modulate
+	front_free_hand.texture_filter=source.texture_filter;front_free_hand.modulate=source.modulate;front_free_hand.material=source.material
 	front_free_hand.global_transform=free_arm.get_node("RearVisualDrive").global_transform
 	front_free_hand.show()
 	if front_free_source!=source:
@@ -176,3 +178,21 @@ func front_attack_pose(character: Node2D) -> void:
 	arm.show_behind_parent=false
 	align_front_shoulders(character,arm)
 
+
+func front_club_pose(character: Node2D, elapsed: float, weapon: Dictionary) -> void:
+	var arm: Node2D=character.get_node("Visual/Pelvis/ArmR")
+	var tool: Sprite2D=arm.get_node("HeldTool")
+	var duration: float=weapon.windup+weapon.active+weapon.recovery
+	var lift: float=clampf(elapsed/(float(weapon.windup)*.7),0,1)
+	var strike: float=clampf((elapsed-float(weapon.windup)*.7)/(float(weapon.windup)*.3),0,1)
+	var recover: float=clampf((elapsed-float(weapon.windup)-float(weapon.active))/(duration-float(weapon.windup)-float(weapon.active)),0,1)
+	arm.rotation=lerpf(lerpf(0,2.2,lift),.35,strike)*(1-recover)
+	tool.rotation=lerpf(lerpf(0,-.5,lift),PI,strike)*(1-recover)-arm.rotation
+	tool.scale.y*=lerpf(1,.62,strike*(1-recover))
+	# The support palm follows the same shaft, using the original arm art.
+	var free_arm: Node2D=character.get_node("Visual/Pelvis/ArmL")
+	var palm: Vector2=arm.to_global(arm.get_node("Grip").position)+tool.global_transform.y.normalized()*-3
+	var reach: Vector2=free_arm.get_parent().to_local(palm)-free_arm.position
+	free_arm.rotation=reach.angle()-PI*.5
+	free_arm.scale=Vector2(1,reach.length()/21.0)
+	front_free_hand.global_transform=free_arm.get_node("RearVisualDrive").global_transform

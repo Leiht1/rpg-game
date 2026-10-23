@@ -1,0 +1,53 @@
+{
+  "1": {
+    "move": {
+      "count": 60,
+      "median_ms": 16.0,
+      "p95_ms": 32.0,
+      "max_ms": 32.0,
+      "median_bytes": 2409
+    },
+    "snapshot": {
+      "count": 14,
+      "median_ms": 62.5,
+      "p95_ms": 94.0,
+      "max_ms": 94.0,
+      "median_bytes": 121743
+    },
+    "errors": []
+  },
+  "2": {
+    "move": {
+      "count": 111,
+      "median_ms": 31.0,
+      "p95_ms": 78.0,
+      "max_ms": 125.0,
+      "median_bytes": 2902
+    },
+    "snapshot": {
+      "count": 28,
+      "median_ms": 109.0,
+      "p95_ms": 141.0,
+      "max_ms": 157.0,
+      "median_bytes": 121742
+    },
+    "errors": []
+  },
+  "4": {
+    "move": {
+      "count": 143,
+      "median_ms": 62.0,
+      "p95_ms": 250.0,
+      "max_ms": 282.0,
+      "median_bytes": 3889
+    },
+    "snapshot": {
+      "count": 54,
+      "median_ms": 71.0,
+      "p95_ms": 281.0,
+      "max_ms": 297.0,
+      "median_bytes": 121740
+    },
+    "errors": []
+  }
+}

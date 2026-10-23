@@ -1,0 +1,27 @@
+[
+  {
+    "client": 0,
+    "exit_code": 0,
+    "performance": "PERFORMANCE players=1.0 frames=993 median=16.67 p95=54.554 max=133.859 pending=19 ack_age=255 blocked=0 travel=403.412109375",
+    "requests": {
+      "move": {
+        "samples": 142,
+        "median_ms": 51.5,
+        "p95_ms": 198,
+        "max_ms": 300
+      },
+      "game_snapshot": {
+        "samples": 61,
+        "median_ms": 150,
+        "p95_ms": 238,
+        "max_ms": 25550
+      },
+      "poll": {
+        "samples": 60,
+        "median_ms": 27.0,
+        "p95_ms": 43,
+        "max_ms": 86
+      }
+    }
+  }
+]

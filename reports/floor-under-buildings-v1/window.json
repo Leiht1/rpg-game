@@ -261,6 +261,70 @@
       "pass": true
     },
     {
+      "name": "preview allows wood_floor under precision_repair_benchfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under precision_repair_benchfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under precision_repair_benchfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under precision_repair_benchfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under fuel_supply_boxfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under fuel_supply_boxfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under fuel_supply_boxfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under fuel_supply_boxfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under compost_binfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under compost_binfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under compost_binfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under compost_binfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows wood_floor under advanced_smokehousefalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows wood_floor under advanced_smokehousefalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged wood_floor under advanced_smokehousefalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected wood_floor under advanced_smokehousefalse",
+      "pass": true
+    },
+    {
       "name": "off-center collider permits wood_floor",
       "pass": true
     },
@@ -577,6 +641,70 @@
       "pass": true
     },
     {
+      "name": "preview allows stone_path under precision_repair_benchfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under precision_repair_benchfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under precision_repair_benchfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under precision_repair_benchfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under fuel_supply_boxfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under fuel_supply_boxfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under fuel_supply_boxfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under fuel_supply_boxfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under compost_binfalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under compost_binfalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under compost_binfalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under compost_binfalse",
+      "pass": true
+    },
+    {
+      "name": "preview allows stone_path under advanced_smokehousefalse",
+      "pass": true
+    },
+    {
+      "name": "placement allows stone_path under advanced_smokehousefalse",
+      "pass": true
+    },
+    {
+      "name": "existing facility unchanged stone_path under advanced_smokehousefalse",
+      "pass": true
+    },
+    {
+      "name": "duplicate paving rejected stone_path under advanced_smokehousefalse",
+      "pass": true
+    },
+    {
       "name": "off-center collider permits stone_path",
       "pass": true
     },
@@ -665,6 +793,6 @@
       "pass": true
     }
   ],
-  "count": 166,
+  "count": 198,
   "failed": 0
 }

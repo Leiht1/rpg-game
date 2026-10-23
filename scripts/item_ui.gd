@@ -87,11 +87,11 @@ func configure(owner_world: Node, items: Node) -> void:
 	hotbar_note.add_theme_font_size_override("font_size",14)
 	hotbar_note.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	add_child(hotbar_note)
-	bag_button.tooltip_text="背包 · B"
+	bag_button.tooltip_text=""
 	bag_button.pressed.connect(toggle_bag)
 	dock.add_child(bag_button)
 	map_button.symbol="map"
-	map_button.tooltip_text="地图 · M"
+	map_button.tooltip_text=""
 	map_button.pressed.connect(toggle_map)
 	dock.add_child(map_button)
 	craft_button.text="C  制作"
@@ -250,6 +250,11 @@ Ctrl+左键拆分 · B 关闭"
 		animal_button.text="附近生成动物 +1"
 		animal_button.pressed.connect(func(): service.animals.debug_spawn_near())
 		debug_actions.add_child(animal_button)
+		var boar_button := Button.new()
+		boar_button.name="SpawnBoar"
+		boar_button.text="附近生成野猪 +1"
+		boar_button.pressed.connect(func(): service.combat.debug_spawn_near())
+		debug_actions.add_child(boar_button)
 	filter.placeholder_text = "搜索名称、ID 或分类（food / material / natural）"
 	cat_layout.add_child(filter)
 	filter.text_changed.connect(func(_text): rebuild_catalog())
@@ -367,7 +372,7 @@ func refresh() -> void:
 var hover_anchor: Control
 func show_item_hover(index: int, anchor: Control = null) -> void:
 	hide_item_hover()
-	if item_modal_open() or get_viewport().gui_is_dragging() or bag_dragging: return
+	if item_modal_open(false) or get_viewport().gui_is_dragging() or bag_dragging: return
 	hover_anchor=anchor if anchor!=null else cells[index]
 	hover_index=index
 	hover_wait=0.15
@@ -453,9 +458,9 @@ func rebuild_catalog() -> void:
 		row.add_child(text)
 		if OS.has_feature("debug"):
 			var grant := Button.new()
-			grant.text = "+99"
+			grant.text = "+%d" % int(definition.max_stack)
 			grant.pressed.connect(func():
-				var left: int = service.inventory.add(id,99)
+				var left: int = service.inventory.add(id,int(definition.max_stack))
 				show_notice("背包已满" if left > 0 else "调试添加："+str(definition.name)))
 			row.add_child(grant)
 
@@ -601,8 +606,8 @@ func setup_item_actions() -> void:
 	item_menu.hide()
 	split_panel.hide()
 
-func item_modal_open() -> bool:
-	return (is_instance_valid(feed_ui) and feed_ui.visible) or (is_instance_valid(guide) and guide.letter.visible) or service.body.sleep_active() or (is_instance_valid(world.camp_ui) and world.camp_ui.sign_dialog.visible) or (is_instance_valid(modal) and modal.visible)
+func item_modal_open(include_sleep: bool = true) -> bool:
+	return (is_instance_valid(feed_ui) and feed_ui.visible) or (is_instance_valid(guide) and guide.letter.visible) or (include_sleep and service.body.sleep_active()) or (is_instance_valid(world.camp_ui) and world.camp_ui.sign_dialog.visible) or (is_instance_valid(modal) and modal.visible)
 
 func update_input_block() -> void:
 	if service.combat.personal.phase!="alive":world.player.input_blocked=true;return
@@ -630,7 +635,9 @@ func choose_stack(index: int) -> bool:
 	if index<0 or index>=cells.size() or service.inventory.get_slot(index).is_empty(): return false
 	modal_index=index
 	modal_stack=service.inventory.get_slot(index).duplicate(true)
-	world.player.cancel_action()
+	if not world.player.action.is_empty():
+		world.player.cancel_action()
+		world.player.update_animation()
 	return true
 
 func stack_unchanged() -> bool:
@@ -700,7 +707,7 @@ func quantity_limit() -> int:
 	if modal_stack.is_empty(): return 0
 	if quantity_action=="split": return int(modal_stack.count)-1
 	if quantity_action=="fuel":
-		if not service.camps.states.has(quantity_camp): return 0
+		if service.camps.fuel_state(quantity_camp).is_empty(): return 0
 		return service.camps.feed_amount(quantity_camp,modal_stack)
 	return int(modal_stack.count)
 
@@ -802,9 +809,18 @@ func _input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled();return
 
 	if service.body.sleep_active():
-		# Camera framing remains available while actor actions stay locked.
-		world.player.zoom_from_wheel(event)
-		get_viewport().set_input_as_handled()
+		if event is InputEventKey and event.pressed and not event.echo:
+			match event.physical_keycode:
+				KEY_B: toggle_bag()
+				KEY_V: toggle_build()
+				KEY_C: toggle_craft()
+				KEY_M: toggle_map()
+				KEY_ESCAPE:
+					close_panels()
+					world.map_view.close_map()
+			get_viewport().set_input_as_handled()
+		elif event is InputEventMouseButton and not world.map_view.visible:
+			world.player.zoom_from_wheel(event)
 		return
 	if event is InputEventMouseMotion or event is InputEventMouseButton: drag_pointer=event.position
 	if is_instance_valid(world.camp_ui) and world.camp_ui.sign_dialog.visible:

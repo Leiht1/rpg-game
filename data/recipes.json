@@ -52,8 +52,7 @@
     "materials": {
       "branch": 3,
       "plant_fiber": 4,
-      "flint": 1,
-      "relic_fragment": 2
+      "flint": 1
     },
     "category": "野外用品",
     "conditions": [],
@@ -303,13 +302,11 @@
     "output_id": "wood_club",
     "output_count": 1,
     "materials": {
-      "wood": 4,
-      "plant_fiber": 2
+      "wood": 10,
+      "plant_fiber": 5
     },
     "category": "武器",
-    "conditions": [
-      "workbench"
-    ],
+    "conditions": [],
     "default_unlocked": true,
     "description": "木棍",
     "craft_time": 2.0

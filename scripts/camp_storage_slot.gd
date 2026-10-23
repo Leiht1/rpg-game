@@ -10,7 +10,7 @@ func _ready() -> void:
 	image.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);image.offset_left=6;image.offset_top=5;image.offset_right=-6;image.offset_bottom=-6
 	image.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;image.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;image.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(image)
 	amount.add_theme_font_size_override("font_size",12);amount.position=Vector2(18,20);amount.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(amount)
-	bar.position=Vector2(4,35);bar.size=Vector2(32,3);bar.scale=Vector2(1,.18);bar.show_percentage=false;bar.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(bar)
+	bar.position=Vector2(4,35);bar.size=Vector2(32,3);bar.scale=Vector2(1,.36);bar.show_percentage=false;bar.mouse_filter=Control.MOUSE_FILTER_IGNORE;canvas.add_child(bar)
 	gui_input.connect(func(e):
 		if e is InputEventMouseButton and e.pressed:
 			if e.button_index==MOUSE_BUTTON_RIGHT: owner_ui.menu(index,get_global_mouse_position())

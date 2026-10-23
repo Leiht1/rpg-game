@@ -56,7 +56,7 @@ func _ready() -> void:
 	durability_bar.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
 	durability_bar.offset_left=5;durability_bar.offset_right=-5
 	durability_bar.offset_top=-5;durability_bar.offset_bottom=-2
-	durability_bar.scale=Vector2(1,.18)
+	durability_bar.scale=Vector2(1,.36)
 	durability_bar.show_percentage=false;durability_bar.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	var track := StyleBoxFlat.new();track.bg_color=Color("c6baa4")
 	durability_bar.add_theme_stylebox_override("background",track)

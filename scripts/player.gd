@@ -124,6 +124,9 @@ func _physics_process(delta: float) -> void:
 	direction=direction.limit_length(1.0)
 	running=run_override if automated else Input.is_action_pressed("run")
 	if body!=null and body.exhausted: running=false
+	var active_attack: Dictionary=stream.items.combat.attack_state() if stream.items!=null else {}
+	if not active_attack.is_empty():
+		direction=Vector2.ZERO;running=false
 	if action in ["chop","mine","dig","demolish"]:
 		if not Input.is_action_pressed("interact"): hold_chop=false
 		if action=="chop" and not stream.tree_in_reach(position,action_target):
@@ -176,8 +179,8 @@ func _physics_process(delta: float) -> void:
 	if direction.length_squared()>.1:
 		if absf(direction.x)>=absf(direction.y): facing="right" if direction.x>0 else "left"
 		else: facing="front" if direction.y>0 else "back"
-	if stream.items!=null and not stream.items.combat.personal.attack.is_empty():
-		var a: Dictionary=stream.items.combat.personal.attack.direction
+	if not active_attack.is_empty():
+		var a: Dictionary=active_attack.direction
 		facing=("right" if a.x>0 else "left") if absf(a.x)>=absf(a.y) else ("front" if a.y>0 else "back")
 	if moving:
 		gait_distance+=last_displacement.length()
@@ -215,12 +218,17 @@ func update_animation() -> void:
 	var combat: Dictionary=remote_combat if remote_presentation else combat_render_state if not combat_render_state.is_empty() else stream.items.combat.personal if stream.items!=null else {}
 	var combat_attack: Dictionary=combat.get("attack",{})
 	if combat.get("phase","")=="dying":animation=StringName("combat/%s_death"%view)
-	elif not combat_attack.is_empty():animation=StringName("combat/%s_%s"%[view,combat_attack.weapon.animation])
+	elif not combat_attack.is_empty():animation=StringName("harvest/%s_mine"%view) if combat_attack.weapon.animation=="club" else StringName("combat/%s_%s"%[view,combat_attack.weapon.animation])
 	var clip := animation_player.get_animation(animation)
 	var stride := float(actor.stride_world_units)
 	var clock := action_clock if not action.is_empty() else (fposmod(gait_distance/stride,1.0)*clip.length if moving else fposmod(idle_clock,clip.length))
 	if combat.get("phase","")=="dying":clock=float(combat.clock)
-	elif not combat_attack.is_empty():clock=float(combat_attack.elapsed)
+	elif not combat_attack.is_empty():
+		clock=float(combat_attack.elapsed)
+		if combat_attack.weapon.animation=="club":
+			var hit: float=combat_attack.weapon.windup
+			var duration: float=hit+combat_attack.weapon.active+combat_attack.weapon.recovery
+			clock=clock*.55/hit if clock<=hit else .55+(clock-hit)*(clip.length-.55)/(duration-hit)
 	if view=="back" and action in ["chop","dig"]:
 		# Share the hammer's native pose, preserving each original action's hit and end time.
 		var logical: Animation=animation_player.get_animation("back_chop" if action=="chop" else "harvest/back_dig")
@@ -228,12 +236,16 @@ func update_animation() -> void:
 		clock=action_clock*.55/contact if action_clock<=contact else .55+(action_clock-contact)*(clip.length-.55)/(logical.length-contact)
 	# Preserve gait through turns; only post-collision travel advances walking.
 	if animation_player.current_animation!=animation: animation_player.play(animation)
+	character.get_node("Visual/Pelvis/ArmR").scale=Vector2.ONE
+	character.get_node("Visual/Pelvis/Torso").rotation=0.0
 	animation_player.seek(clock,true)
 	appearance.apply(character,equipment_inventory,facing)
 	look_renderer.apply(character,character_look,equipment_inventory,facing)
-	var pose_action: String="attack" if not combat_attack.is_empty() else "" if action in ["throw","feed","fertilize"] else action
+	var pose_action: String=("mine" if combat_attack.weapon.animation=="club" else "attack") if not combat_attack.is_empty() else "" if action in ["throw","feed","fertilize"] else action
 	held_tool.apply(character,null if combat.get("phase","")=="dying" else equipment_inventory,facing,pose_action)
-	if facing=="front" and not combat_attack.is_empty():held_tool.front_attack_pose(character)
+	if facing=="front" and not combat_attack.is_empty():
+		held_tool.front_attack_pose(character)
+		if combat_attack.weapon.animation=="club":held_tool.front_club_pose(character,float(combat_attack.elapsed),combat_attack.weapon)
 	if body!=null: preload("res://scripts/body_shape.gd").apply(character,body.build)
 	carried_wood.visible=action=="pickup" and action_succeeded and not harvesting and carried_wood.texture!=null and action_clock<.63
 	carried_wood.modulate.a=clampf((.69-action_clock)/.10,0,1)
@@ -271,7 +283,7 @@ func cancel_action() -> void:
 	chop_buffer=0.0
 
 func try_interact() -> void:
-	if stream.items!=null and (stream.items.combat.personal.phase!="alive" or not stream.items.combat.personal.attack.is_empty()):return
+	if stream.items!=null and (stream.items.combat.personal.phase!="alive" or not stream.items.combat.attack_state().is_empty()):return
 	if input_blocked or (body!=null and (body.down or body.sleep_active() or body.energy<=0)): return
 	if action=="chop":
 		return

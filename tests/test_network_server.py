@@ -1,5 +1,6 @@
 """Isolated authority/transaction tests; never read the player's local Godot data."""
 import base64
+import copy
 import concurrent.futures
 import importlib.util
 import io
@@ -98,6 +99,8 @@ class ServerTests(unittest.TestCase):
         w=self.both();c=self.s.state["characters"][self.s.state["accounts"]["TEST-001"]["player_id"]]
         self.s.sessions[self.t1]["move_at"]-=.1
         self.api("move",{"dx":1,"dy":0,"seq":1,"run":True},self.t1)
+        # Responses are detached from mutable service rows.
+        c=self.s.state["characters"][self.s.state["accounts"]["TEST-001"]["player_id"]]
         self.assertGreater(c["x"],240)
         with self.assertRaises(server.Rejected):self.api("move",{"dx":1,"dy":0,"seq":1},self.t1)
         with self.assertRaises(server.Rejected):self.api("move",{"dx":100,"dy":0,"seq":2},self.t1)
@@ -118,12 +121,16 @@ class ServerTests(unittest.TestCase):
         retry=self.api("move",{"seq":2,"inputs":batch},self.t1)
         self.assertEqual(retry["character"]["x"],before)
         excessive=[{**row,"id":row["id"]+36} for row in batch]
-        with self.assertRaises(server.Rejected):self.api("move",{"seq":3,"inputs":excessive},self.t1)
+        session["move_credit"]=0
+        session["move_at"]=server.time.monotonic()
+        deferred=self.api("move",{"seq":3,"inputs":excessive},self.t1)
+        self.assertEqual(deferred["input_ack"],36)
         self.assertEqual(self.s.sessions[self.t1]["input_ack"],36)
         self.assertEqual(self.s.character(self.s.state["accounts"]["TEST-001"])["x"],before)
         session=self.s.sessions[self.t1];session["move_at"]-=.6
+        self.s.movement_checkpoint=0
         self.s.save=lambda:(_ for _ in ()).throw(OSError("isolated save failure"))
-        with self.assertRaises(OSError):self.api("move",{"seq":3,"inputs":excessive},self.t1)
+        with self.assertRaises(OSError):self.api("move",{"seq":4,"inputs":excessive},self.t1)
         self.assertEqual(self.s.sessions[self.t1]["input_ack"],36)
 
     def test_movement_batch_terrain_and_invalid_numbers(self):
@@ -185,10 +192,39 @@ class ServerTests(unittest.TestCase):
         self.assertEqual(self.world()["name"],"测试原野")
     def test_new_character_no_starter_outfit(self):
         self.world();character=self.enter(self.t1)["character"]
-        self.assertTrue(all(not slot for slot in character["slots"]))
+        self.assertEqual([slot for slot in character["slots"] if slot],[{"item_id":"survival_guide","count":1}])
         self.assertFalse(any(character["equipment"].values()))
-        character["slots"][8]={"item_id":"wood","count":3}
+        self.s.state["characters"][self.s.state["accounts"]["TEST-001"]["player_id"]]["slots"][8]={"item_id":"wood","count":3}
         self.assertEqual(self.enter(self.t1)["character"]["slots"][8],{"item_id":"wood","count":3})
+    def test_failed_move_save_restores_character_exploration_and_input_ack(self):
+        self.both()
+        before=copy.deepcopy(self.s.state)
+        self.s.sessions[self.t1]["move_at"]-=.1
+        session=copy.deepcopy(self.s.sessions[self.t1])
+        save=self.s.save
+        def fail():raise OSError("isolated disk failure")
+        self.s.save=fail
+        self.s.movement_checkpoint=0
+        with self.assertRaises(OSError):self.api("move",{"dx":1,"dy":0,"seq":1},self.t1)
+        self.assertEqual(self.s.state,before)
+        self.assertEqual(self.s.sessions[self.t1],session)
+        self.s.save=save
+        self.assertTrue(self.api("move",{"dx":1,"dy":0,"seq":1},self.t1)["ok"])
+
+    def test_movement_checkpoints_coalesce_but_keep_latest_position(self):
+        self.both()
+        now=server.time.monotonic()
+        self.s.movement_checkpoint=now
+        self.s.sessions[self.t1]["move_at"]=now
+        save=self.s.save
+        with patch.object(self.s,"save",wraps=save) as writes:
+            for seq,offset in enumerate((.1,.2,.6),1):
+                with patch.object(server.time,"monotonic",return_value=now+offset):self.api("move",{"dx":1,"dy":0,"seq":seq},self.t1)
+                self.assertEqual(writes.call_count,1 if seq==3 else 0)
+        stored=json.loads(self.s.db.execute("SELECT payload FROM state WHERE id=1").fetchone()[0])
+        self.assertEqual(stored["characters"],self.s.state["characters"])
+        self.assertEqual(self.s.pending_moves,0)
+
     def test_world_tick_coalesces_and_retry_never_repeats_command(self):
         self.both();self.s.config["gameplay_preview"]=True
         w=self.s.state["worlds"][self.s.account(self.t1)[0]["world_id"]]
@@ -196,7 +232,7 @@ class ServerTests(unittest.TestCase):
         for person in self.s.state["characters"].values():person["gameplay"]={}
         calls=[]
         class Rules:
-            clocks={w["id"]:99.5}
+            clocks={w["id"]:99.0}
             def snapshot(inner,world,character):return {"player_position":{"x":character["x"],"y":character["y"]}}
             def apply(inner,world,character,operation="snapshot",args=None,**options):
                 calls.append((character["id"],operation,options))
@@ -209,9 +245,16 @@ class ServerTests(unittest.TestCase):
         self.assertEqual(len(calls),2)
         command={"operation":"organize","args":[],"request_id":"a"*32}
         with patch.object(server.time,"monotonic",return_value=100.2):self.api("game_command",command,self.t1)
+        self.assertEqual(len(calls),3)
+        self.assertEqual(calls[-1][2]["elapsed"],0)
         with patch.object(server.time,"monotonic",return_value=100.3):self.api("game_command",command,self.t1)
         self.assertEqual(sum(row[1]=="organize" for row in calls),1)
         self.assertEqual(calls[-1][1],"snapshot")
+        for person in self.s.state["characters"].values():person["gameplay"]["combat_personal"]={"phase":"entering"}
+        with patch.object(server.time,"monotonic",return_value=100.41):self.api("game_snapshot",{},self.t1)
+        advanced=len(calls)
+        with patch.object(server.time,"monotonic",return_value=100.5):self.api("game_snapshot",{},self.t2)
+        self.assertEqual(len(calls),advanced)
     def test_terrain_cache_never_regenerates_existing_world(self):
         w={"id":server.identifier(),"generator":"windrest-continent-0.6.0","map_cells":128}
         target=Path(self.temp.name)/"Worlds"/(w["id"]+".terrain.json")

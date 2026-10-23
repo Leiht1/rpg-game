@@ -12,7 +12,7 @@ static func action_for(target: Node2D) -> String:
 		if manager.service.inventory.has_capability("demolish"): return "demolish"
 		if target.get_meta("building_id","")!="":
 			var row: Dictionary=manager.states.get(target.building_id,{})
-			if row.get("abandoned",false): return ""
+			if row.get("abandoned",false): return "demolish"
 			if row.get("kind","")=="tilled_soil": return manager.service.planting.action(target.building_id)
 			if not row.is_empty() and (row.layer in ["ground","overlay"] or row.kind in ["stone_wall","wood_fence","camp_torch"]): return ""
 	if target.is_in_group("drops"): return "pickup"
@@ -57,7 +57,7 @@ static func target(stream: Node, at: Vector2, facing: String, pointer: Vector2) 
 	var best_id := ""
 	for node in candidates:
 		if not is_instance_valid(node) or node.is_queued_for_deletion():continue
-		if node.get_meta("camp_layer","")=="ground" and not node.get_meta("planting_soil",false) and (stream.items==null or not stream.items.inventory.has_capability("demolish")): continue
+		if node.get_meta("camp_layer","")=="ground" and not node.get_meta("planting_soil",false) and not (node.get_meta("building_id","")!="" and node.manager.states.get(node.building_id,{}).get("abandoned",false)) and (stream.items==null or not stream.items.inventory.has_capability("demolish")): continue
 		if not in_reach(stream,at,node): continue
 		var action := action_for(node)
 		var region := Rect2(node.position-Vector2(18,28),Vector2(36,36))
@@ -76,6 +76,8 @@ static func target(stream: Node, at: Vector2, facing: String, pointer: Vector2) 
 static func caption(target: Node2D, inventory: ItemInventory) -> String:
 	if target.has_meta("animal_id"):return target.manager.caption(target.animal_id)
 	var action := action_for(target)
+	if target.get_meta("building_id","")!="" and target.manager.states.get(target.building_id,{}).get("abandoned",false):
+		return "前人废弃的营地，按E拆除" if inventory.has_capability("demolish") else "前人废弃的营地，需要石锤"
 	if action.is_empty(): return ""
 	if not allowed(inventory,action): return "需要"+str(NEEDS.get(action,action))
 	if action=="demolish": return "E 敲击拆除"

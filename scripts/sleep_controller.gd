@@ -17,7 +17,7 @@ static func valid_session(value: Variant, body: Dictionary) -> bool:
 		if not (n is int or n is float) or not is_finite(float(n)) or float(n)<0 or float(n)>10000000: return false
 	if value.clock>float(Rules.data().legacy_phase_seconds.get(value.phase,100000)) or value.target>100 or value.target<=0: return false
 	var config := Rules.facility(value.source)
-	if not is_equal_approx(value.rate,config.rate) or value.max_minutes<=0 or value.max_minutes>config.max_minutes: return false
+	if (not is_equal_approx(value.rate,config.rate) and not config.get("legacy_rates",[]).any(func(rate):return is_equal_approx(value.rate,float(rate)))) or value.max_minutes<=0 or value.max_minutes>config.max_minutes: return false
 	if bool(body.get("sleeping",false))!=(value.phase=="sleep"): return false
 	if bool(body.get("sleep_forced",false))!=(value.source=="forced"): return false
 	if value.source=="forced" and (not value.id.is_empty() or value.get("vertical",false)): return false

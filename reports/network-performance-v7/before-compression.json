@@ -1,0 +1,102 @@
+[
+  {
+    "client": 0,
+    "exit_code": 0,
+    "performance": "PERFORMANCE players=2.0 frames=1270 median=16.657 p95=17.673 max=39.288 pending=11 ack_age=314 blocked=0 travel=415.365234375",
+    "remote": "REMOTE_CHECK missing_frames=0 attack_frames=75",
+    "requests": {
+      "login": {
+        "max_ms": 126,
+        "median_ms": 126,
+        "p95_ms": 126,
+        "samples": 1
+      },
+      "resume": {
+        "max_ms": 33,
+        "median_ms": 33,
+        "p95_ms": 33,
+        "samples": 1
+      },
+      "character": {
+        "max_ms": 33,
+        "median_ms": 33,
+        "p95_ms": 33,
+        "samples": 1
+      },
+      "game_snapshot": {
+        "max_ms": 25548,
+        "median_ms": 167,
+        "p95_ms": 355,
+        "samples": 61
+      },
+      "move": {
+        "max_ms": 347,
+        "median_ms": 44,
+        "p95_ms": 200,
+        "samples": 239
+      },
+      "poll": {
+        "max_ms": 438,
+        "median_ms": 34,
+        "p95_ms": 88,
+        "samples": 63
+      },
+      "game_command": {
+        "max_ms": 348,
+        "median_ms": 314,
+        "p95_ms": 314,
+        "samples": 3
+      }
+    }
+  },
+  {
+    "client": 1,
+    "exit_code": 0,
+    "performance": "PERFORMANCE players=2.0 frames=1270 median=16.663 p95=17.747 max=39.254 pending=13 ack_age=350 blocked=0 travel=405.359375",
+    "remote": "REMOTE_CHECK missing_frames=0 attack_frames=92",
+    "requests": {
+      "login": {
+        "max_ms": 210,
+        "median_ms": 210,
+        "p95_ms": 210,
+        "samples": 1
+      },
+      "resume": {
+        "max_ms": 32,
+        "median_ms": 32,
+        "p95_ms": 32,
+        "samples": 1
+      },
+      "character": {
+        "max_ms": 33,
+        "median_ms": 33,
+        "p95_ms": 33,
+        "samples": 1
+      },
+      "game_snapshot": {
+        "max_ms": 25584,
+        "median_ms": 50,
+        "p95_ms": 434,
+        "samples": 60
+      },
+      "move": {
+        "max_ms": 342,
+        "median_ms": 45,
+        "p95_ms": 199,
+        "samples": 234
+      },
+      "poll": {
+        "max_ms": 335,
+        "median_ms": 32,
+        "p95_ms": 180,
+        "samples": 61
+      },
+      "game_command": {
+        "max_ms": 336,
+        "median_ms": 169,
+        "p95_ms": 169,
+        "samples": 3
+      }
+    }
+  }
+]

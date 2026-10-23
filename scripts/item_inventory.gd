@@ -148,16 +148,25 @@ func count_item(id: String) -> int:
 		if value.get("item_id","")==id: total+=int(value.count)
 	return total
 
+func craft_count_item(id: String) -> int:
+	var total := count_item(id)
+	if database.item(id).has("combat_weapon"):
+		for value in equipment.values():
+			if value.get("item_id","")==id: total+=int(value.count)
+	return total
+
 func craft_exchange(materials: Dictionary, output_id: String, output_count: int, commit: bool = false) -> String:
 	if output_count<1 or output_count>989901 or database.item(output_id).is_empty(): return "成品数量或定义无效"
 	if materials.is_empty(): return "材料定义无效"
 	for id in materials:
 		if not materials[id] is int or materials[id]<1 or materials[id]>989901: return "材料数量无效"
 		if database.item(str(id)).is_empty() or (database.item(str(id)).get("equippable",false) and not database.item(str(id)).has("combat_weapon")): return "材料定义无效"
-		if count_item(str(id))<int(materials[id]): return "材料不足："+str(database.item(str(id)).name)
+		if craft_count_item(str(id))<int(materials[id]): return "材料不足："+str(database.item(str(id)).name)
 	# Entire operation is staged. No live signal/save can observe partial consumption.
 	var staged := ItemInventory.new(database)
 	staged.slots=slots.duplicate(true)
+	staged.equipment=equipment.duplicate(true)
+	staged.hotbar_equipment=hotbar_equipment.duplicate(true)
 	for id in materials:
 		var left := int(materials[id])
 		for i in SLOT_COUNT:
@@ -167,9 +176,19 @@ func craft_exchange(materials: Dictionary, output_id: String, output_count: int,
 			left-=take
 			if int(staged.slots[i].count)==0: staged.slots[i]={}
 			if left==0: break
+		for key in staged.equipment.keys():
+			if left==0: break
+			var value: Dictionary=staged.equipment[key]
+			if value.get("item_id","")!=id: continue
+			left-=int(value.count)
+			staged.equipment.erase(key)
+			for link in staged.hotbar_equipment.keys():
+				if staged.hotbar_equipment[link]==value.get("instance_id",""): staged.hotbar_equipment.erase(link)
 	if staged.add(output_id,output_count)!=0: return "背包空间不足，无法放入全部成品"
 	if commit:
 		slots=staged.slots
+		equipment=staged.equipment
+		hotbar_equipment=staged.hotbar_equipment
 		changed.emit()
 	return ""
 
@@ -268,6 +287,7 @@ func _move_slot(from: int, to: int) -> bool:
 	if not target.is_empty() and source.item_id==target.item_id and Fresh.same(source,target):
 		var amount := mini(int(source.count),int(database.item(source.item_id).max_stack)-int(target.count))
 		if amount<=0: return false
+		Fresh.merge_freshness(target,source)
 		target.count+=amount
 		source.count-=amount
 		if int(source.count)==0: set_slot(from,{})
@@ -283,7 +303,11 @@ func use_slot(index: int) -> bool:
 	if body!=null and body.sleep_active(): return false
 	if index < 0 or index >= SLOT_COUNT+equipment_slots.size() or get_slot(index).is_empty(): return false
 	var id := str(get_slot(index).item_id)
-	if index<8 and database.item(id).get("equippable",false) and not slots[index].is_empty(): return equip(index)
+	if index<8 and database.item(id).get("equippable",false):
+		if not slots[index].is_empty():return equip(index)
+		for i in equipment_slots.size():
+			if get_slot(SLOT_COUNT+i).get("instance_id","")==hotbar_equipment.get(str(index),""):return unequip(SLOT_COUNT+i)
+		return false
 	var definition := database.item(id)
 	if not definition.usable: return false
 	if definition.use_action=="read_guide":
@@ -362,11 +386,10 @@ func organized_bag_slots() -> Array[Dictionary]:
 		var definition := database.item(str(incoming.item_id))
 		var limit := int(definition.get("max_stack",1))
 		if limit>1 and not definition.get("equippable",false) and not incoming.has("instance_id") and not incoming.has("lamp_id"):
-			var identity: Dictionary=incoming.duplicate(true);identity.erase("count")
 			for existing in packed:
-				var other: Dictionary=existing.duplicate(true);other.erase("count")
-				if other!=identity: continue
+				if not Fresh.same(existing,incoming): continue
 				var moved := mini(int(incoming.count),limit-int(existing.count))
+				if moved>0:Fresh.merge_freshness(existing,incoming)
 				existing.count+=moved;incoming.count-=moved
 				if int(incoming.count)==0: break
 		if int(incoming.count)>0: packed.append(incoming)
@@ -427,7 +450,9 @@ func add_value(value: Dictionary) -> int:
 				var amount := mini(left,limit-int(target.get("count",0)))
 				if amount<=0:continue
 				if target.is_empty():slots[i]=incoming.duplicate(true);slots[i].count=amount
-				else:slots[i].count+=amount
+				else:
+					Fresh.merge_freshness(slots[i],incoming)
+					slots[i].count+=amount
 				left-=amount
 				if left==0:return 0
 	return left

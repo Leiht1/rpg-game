@@ -150,7 +150,7 @@ func _process(delta: float) -> void:
 				radii.append(float(world.item_service.camps.rules.light_radius)*get_viewport().get_canvas_transform().get_scale().x)
 				strengths.append(1.0)
 	for id in world.item_service.builds.visuals:
-		if world.item_service.builds.states[id].kind!="camp_torch" and not (world.item_service.builds.states[id].kind=="copper_lamp" and world.item_service.builds.states[id].machine.enabled): continue
+		if (world.item_service.builds.states[id].kind!="camp_torch" or not world.item_service.camps.fuel_lit(id)) and not (world.item_service.builds.states[id].kind=="copper_lamp" and world.item_service.builds.states[id].machine.enabled): continue
 		var node: Node2D=world.item_service.builds.visuals[id]
 		var screen: Vector2=get_viewport().get_canvas_transform()*node.position
 		var radius: float=float(world.item_service.industry.rules.copper_lamp_radius) if world.item_service.builds.states[id].kind=="copper_lamp" else 210.0

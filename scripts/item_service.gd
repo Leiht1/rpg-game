@@ -152,7 +152,7 @@ func new_craft_request() -> int:
 
 func craft_check(recipe_id: String, batches: int) -> String:
 	if body.down or body.health<=0 or combat.personal.phase!="alive":return "当前无法制作"
-	if body.sleep_active(): return "睡眠中不能制作"
+	if body.sleep_active(): return "睡醒了再试试"
 	if not writable: return "存档受保护，暂不能制作"
 	if not craft_job.is_empty(): return "正在制作，请等待进度完成"
 	if craft_busy: return "正在提交制作，请稍候"
@@ -212,12 +212,14 @@ func craft(recipe_id: String, batches: int, request: int) -> String:
 	var materials := {}
 	for id in row.materials: materials[id]=int(row.materials[id])*batches
 	var before_slots: Array=inventory.slots.duplicate(true)
+	var before_equipment := inventory.equipment.duplicate(true)
+	var before_links := inventory.hotbar_equipment.duplicate(true)
 	reason=inventory.craft_exchange(materials,str(row.output_id),int(row.output_count)*batches,true)
 	craft_busy=false
 	if reason.is_empty():
 		dirty=true
 		if world!=null and not save_state():
-			inventory.slots=before_slots;inventory.changed.emit();return "保存失败，制作已回滚"
+			inventory.slots=before_slots;inventory.equipment=before_equipment;inventory.hotbar_equipment=before_links;inventory.changed.emit();return "保存失败，制作已回滚"
 		item_obtained.emit(str(row.output_id),int(row.output_count)*batches)
 	return reason
 
@@ -381,8 +383,20 @@ func save_state() -> bool:
 	else: notice.emit("物品存档保存失败，暂存文件已保留")
 	return error == OK
 
+func advance_guide(stage: int) -> bool:
+	if stage<0 or stage>2 or stage<guide_stage:return false
+	if stage==guide_stage:return true
+	if preload("res://scripts/network_game_route.gd").send(self,"guide",[stage]):
+		guide_stage=stage
+		return true
+	var before:=guide_stage
+	guide_stage=stage
+	if save_state():return true
+	guide_stage=before
+	return false
+
 func load_state(source_path: String = "", migrate: bool = false, authoritative: Dictionary = {}) -> void:
-	var online: bool=world.get_meta("network_game",false)
+	var online: bool=world.get_meta("network_game",false) or world.get_meta("network_rules_host",false)
 	var previous_inventory: Array=[inventory.slots.duplicate(true),inventory.equipment.duplicate(true),inventory.hotbar_equipment.duplicate(true),inventory.quarantined_equipment.duplicate(true)] if online else []
 	var previous_buildings: Dictionary=builds.states.duplicate(true) if online else {}
 	var previous_camps: Dictionary=camps.states.duplicate(true) if online else {}
@@ -530,7 +544,7 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 		for id in previous_buildings:
 			if not builds.states.has(id):builds.refresh_around(previous_buildings[id])
 		for id in builds.states:
-			if previous_buildings.get(id,{})!=builds.states[id]:builds.refresh_around(builds.states[id])
+			if not same_network_value(previous_buildings.get(id,{}),builds.states[id]):builds.refresh_around(builds.states[id])
 	else:builds.refresh_all()
 	if migrate:
 		# Keep stable candidate IDs and consumed edits, preventing collected resources from respawning.
@@ -974,3 +988,18 @@ func valid_body_environment(value: Variant) -> bool:
 			if not (number is float or number is int) or not is_finite(float(number)) or number<0 or number>(1000 if key=="weights" else 1): return false
 	return value.get("rng_state") is String and value.rng_state.is_valid_int()
 
+
+# JSON decodes whole numbers as floats; unchanged facilities must retain their nodes.
+static func same_network_value(a: Variant, b: Variant) -> bool:
+	if (a is int or a is float) and (b is int or b is float):return float(a)==float(b)
+	if a is Dictionary and b is Dictionary:
+		if a.size()!=b.size():return false
+		for key in a:
+			if not b.has(key) or not same_network_value(a[key],b[key]):return false
+		return true
+	if a is Array and b is Array:
+		if a.size()!=b.size():return false
+		for i in a.size():
+			if not same_network_value(a[i],b[i]):return false
+		return true
+	return a==b

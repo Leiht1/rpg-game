@@ -54,7 +54,7 @@ func run() -> void:
 			combat.personal.attack={"weapon":combat.rules.weapons[item],"elapsed":combat.rules.weapons[item].windup,"direction":{"x":1,"y":0},"targets":{}}
 			world.player.facing=direction;world.player.combat_render_state={};world.player.update_animation()
 			var view: String="side" if direction in ["left","right"] else direction
-			check(str(world.player.animation_player.current_animation)=="combat/"+view+"_"+str(combat.rules.weapons[item].animation),"native attack rig "+direction+" "+item)
+			check(str(world.player.animation_player.current_animation)==("harvest/"+view+"_mine" if item!="unarmed" else "combat/"+view+"_punch"),"native attack rig "+direction+" "+item)
 			if direction=="front":check(not world.player.character.get_node("Visual/Pelvis/ArmR").show_behind_parent and world.player.held_tool.front_free_hand.visible,"front hands connected and visible "+item)
 	combat.personal.attack={};inv.equipment={};world.player.facing="right";world.player.combat_render_state={}
 	var at: Vector2=world.player.position+Vector2(38,0)
@@ -75,7 +75,7 @@ func run() -> void:
 	inv.add("wood",9);inv.add("plaster",2);inv.add("boar_tusk",2)
 	var held: Dictionary=inv.instance("wood_club");inv.equipment.main_hand=held
 	check(combat.attack(Vector2.RIGHT).is_empty(),"weapon attack starts")
-	check(not combat.attack(Vector2.RIGHT).is_empty(),"repeat attack rejected")
+	check(combat.attack(Vector2.RIGHT).is_empty(),"repeat attack silently ignored")
 	combat.advance(.8,false);check(combat.personal.attack.is_empty(),"recovery finishes")
 	inv.equipment.main_hand=inv.instance("stone_axe")
 	check(not combat.attack(Vector2.RIGHT).is_empty(),"tool attack rejected")

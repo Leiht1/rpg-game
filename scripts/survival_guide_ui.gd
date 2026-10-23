@@ -56,7 +56,7 @@ func configure(owner_screen: Control) -> void:
 	title.add_theme_color_override("font_color",Color("5d4933"))
 	page.add_child(title)
 	var words:=Label.new()
-	words.text="W A S D  移动             E  交互\n\nB  打开背包               M  打开地图\n\nC  打开工具制作           V  打开建造\n\n鼠标拖动物品，可移动、调整位置，也可投放\n鼠标右键可使用物品，装备道具\n\n将物品放入快捷栏，按对应数字键快捷使用\n\n收集资源，建造营地，努力活下去。"
+	words.text="W A S D  移动             E  交互    F  攻击\n\nB  打开背包               M  打开地图\n\nC  打开工具制作           V  打开建造\n\n鼠标拖动物品，可移动、调整位置，也可投放\n鼠标右键可使用物品，装备道具\n\n将物品放入快捷栏，按对应数字键快捷使用\n\n收集资源，建造营地，努力活下去。"
 	words.position=Vector2(80,128);words.size=Vector2(640,400)
 	words.add_theme_font_override("font",handwriting)
 	words.add_theme_font_size_override("font_size",25)
@@ -75,9 +75,7 @@ func open_letter() -> void:
 	screen.hide_item_hover()
 	letter.show()
 	if screen.service.guide_stage<2:
-		var before: int=screen.service.guide_stage
-		screen.service.guide_stage=2
-		if not screen.service.save_state():screen.service.guide_stage=before
+		screen.service.advance_guide(2)
 	screen.world.player.cancel_action()
 	screen.update_input_block()
 
@@ -91,8 +89,7 @@ func _process(_delta: float) -> void:
 	page.position=(area-page.size)*.5
 	var stage: int=screen.service.guide_stage
 	if stage==0 and screen.bag.visible:
-		screen.service.guide_stage=1
-		if not screen.service.save_state():screen.service.guide_stage=0
+		screen.service.advance_guide(1)
 		stage=screen.service.guide_stage
 	var active: bool=stage<2 and not letter.visible and not screen.service.body.sleep_active()
 	ring.visible=active;arrow.visible=active;caption.visible=active

@@ -28,20 +28,20 @@ func start(owner_player: Node2D, id: String, index: int, data: Dictionary, reque
 		if requested_count<1 or requested_count>count: return "投放数量或篝火容量已变化，请重新选择"
 		count=requested_count
 	equipped=equipment_id();hand="left" if not equipped.is_empty() else "right"
-	var offset: Vector2=Vector2(manager.states[id].x,manager.states[id].y)-player.position
+	var offset: Vector2=Vector2(manager.fuel_state(id).x,manager.fuel_state(id).y)-player.position
 	player.facing=("right" if offset.x>0 else "left") if absf(offset.x)>=absf(offset.y) else ("front" if offset.y>0 else "back")
 	attempted=false;committed=false;player.action="throw";player.action_clock=0.0
-	player.action_target=manager.visuals[id];player.moving=false;player.running=false
+	player.action_target=manager.fuel_visual(id);player.moving=false;player.running=false
 	projectile=Sprite2D.new();projectile.name="ThrownCampFuel"
 	projectile.texture=manager.service.texture(str(snapshot.item_id),"icon")
 	if projectile.texture: projectile.scale=Vector2.ONE*18.0/maxf(1,projectile.texture.get_width())
 	flight_layer=Node2D.new();flight_layer.name="CampFuelFlightLayer"
-	flight_layer.position=Vector2(0,maxf(player.position.y,float(manager.states[id].y))+.5)
+	flight_layer.position=Vector2(0,maxf(player.position.y,float(manager.fuel_state(id).y))+.5)
 	player.get_parent().add_child(flight_layer);flight_layer.add_child(projectile);player.update_animation()
 	return ""
 
 func advance(delta: float) -> void:
-	if equipment_id()!=equipped or not manager.states.has(camp_id) or not manager.visuals.has(camp_id) or (player.body!=null and player.body.down): player.cancel_action();return
+	if equipment_id()!=equipped or manager.fuel_state(camp_id).is_empty() or not is_instance_valid(manager.fuel_visual(camp_id)) or (player.body!=null and player.body.down): player.cancel_action();return
 	player.action_clock+=delta
 	if player.action_clock>=.70 and not attempted:
 		attempted=true
@@ -59,7 +59,7 @@ func render() -> void:
 		projectile.global_position=palm;release_at=palm
 	else:
 		var t: float=clampf((player.action_clock-.42)/.28,0,1)
-		var target := Vector2(float(manager.states[camp_id].x),float(manager.states[camp_id].y))-Vector2(0,24)
+		var target := Vector2(float(manager.fuel_state(camp_id).x),float(manager.fuel_state(camp_id).y))-Vector2(0,24)
 		projectile.global_position=release_at.lerp(target,t)+Vector2(0,-sin(PI*t)*26)
 		projectile.rotation=t*1.5
 

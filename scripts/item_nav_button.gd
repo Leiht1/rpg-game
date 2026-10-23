@@ -31,11 +31,5 @@ func _draw() -> void:
 		draw_line(points[2],points[5],ink,1.5,true)
 		draw_polyline(PackedVector2Array([c+Vector2(-11,7),c+Vector2(-3,0),c+Vector2(7,3),c+Vector2(11,-5)]),Color("fff5d5"),2,true)
 
-func _make_custom_tooltip(text_value: String) -> Object:
-	var panel := PanelContainer.new()
-	panel.theme=ItemSkin.theme()
-	panel.add_theme_stylebox_override("panel",ItemSkin.tooltip(18))
-	var label := Label.new()
-	label.text=text_value
-	panel.add_child(label)
-	return panel
+func _get_tooltip(_at: Vector2) -> String:
+	return ""

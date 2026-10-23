@@ -1,0 +1,102 @@
+[
+  {
+    "client": 0,
+    "exit_code": 1,
+    "performance": "PERFORMANCE players=4.0 frames=976 median=16.662 p95=67.207 max=139.594666666667 pending=85 ack_age=536 blocked=9 travel=376.740234375",
+    "requests": {
+      "move": {
+        "samples": 62,
+        "median_ms": 363.0,
+        "p95_ms": 519,
+        "max_ms": 1159
+      },
+      "game_snapshot": {
+        "samples": 33,
+        "median_ms": 444,
+        "p95_ms": 1050,
+        "max_ms": 25900
+      },
+      "poll": {
+        "samples": 31,
+        "median_ms": 98,
+        "p95_ms": 482,
+        "max_ms": 952
+      }
+    }
+  },
+  {
+    "client": 1,
+    "exit_code": 1,
+    "performance": "PERFORMANCE players=4.0 frames=942 median=16.664 p95=93.672 max=147.813666666667 pending=85 ack_age=612 blocked=9 travel=396.744140625",
+    "requests": {
+      "move": {
+        "samples": 65,
+        "median_ms": 331,
+        "p95_ms": 496,
+        "max_ms": 1086
+      },
+      "game_snapshot": {
+        "samples": 34,
+        "median_ms": 416.0,
+        "p95_ms": 829,
+        "max_ms": 25333
+      },
+      "poll": {
+        "samples": 32,
+        "median_ms": 64.0,
+        "p95_ms": 605,
+        "max_ms": 976
+      }
+    }
+  },
+  {
+    "client": 2,
+    "exit_code": 0,
+    "performance": "PERFORMANCE players=4.0 frames=968 median=16.664 p95=59.676 max=146.134666666667 pending=78 ack_age=638 blocked=0 travel=403.412109375",
+    "requests": {
+      "move": {
+        "samples": 61,
+        "median_ms": 376,
+        "p95_ms": 689,
+        "max_ms": 1052
+      },
+      "game_snapshot": {
+        "samples": 32,
+        "median_ms": 465.0,
+        "p95_ms": 1093,
+        "max_ms": 25782
+      },
+      "poll": {
+        "samples": 30,
+        "median_ms": 101.0,
+        "p95_ms": 500,
+        "max_ms": 1114
+      }
+    }
+  },
+  {
+    "client": 3,
+    "exit_code": 1,
+    "performance": "PERFORMANCE players=4.0 frames=966 median=16.663 p95=64.068 max=146.945333333333 pending=85 ack_age=1000 blocked=2 travel=416.748046875",
+    "requests": {
+      "move": {
+        "samples": 64,
+        "median_ms": 361.0,
+        "p95_ms": 670,
+        "max_ms": 1042
+      },
+      "game_snapshot": {
+        "samples": 34,
+        "median_ms": 435.0,
+        "p95_ms": 1050,
+        "max_ms": 25203
+      },
+      "poll": {
+        "samples": 33,
+        "median_ms": 67,
+        "p95_ms": 438,
+        "max_ms": 1031
+      }
+    }
+  }
+]

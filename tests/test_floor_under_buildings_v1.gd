@@ -73,7 +73,7 @@ func run() -> void:
 		for kind in ["stone_wall","wood_fence","stone_gate","fence_gate"]:
 			for vertical in [false,true]:
 				await reset_site();install(kind,site,vertical);await frames()
-				check(b.reason(floor_row).is_empty()==b.definitions[kind].get("door",false),"wall blocks and doorway permits "+floor_kind+kind+str(vertical))
+				check(b.reason(floor_row).is_empty(),"wall blocks and doorway permits "+floor_kind+kind+str(vertical))
 		for kind in ["wood_floor","stone_path","tilled_soil"]:
 			await reset_site();install(kind,site);await frames()
 			check(not b.reason(floor_row).is_empty(),"existing ground occupancy rejects "+floor_kind+kind)

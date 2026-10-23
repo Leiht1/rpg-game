@@ -13,7 +13,12 @@ static func normalize(db: ItemDatabase, value: Dictionary) -> bool:
 static func same(a: Dictionary, b: Dictionary) -> bool:
 	var x := a.duplicate(true);var y := b.duplicate(true)
 	x.erase("count");y.erase("count")
+	x.erase("spoilage");y.erase("spoilage")
 	return x==y and not a.has("instance_id") and not a.has("lamp_id")
+
+static func merge_freshness(target: Dictionary, incoming: Dictionary) -> void:
+	if target.has("spoilage") or incoming.has("spoilage"):
+		target.spoilage=maxf(float(target.get("spoilage",0)),float(incoming.get("spoilage",0)))
 
 static func matches(a: Dictionary, b: Dictionary) -> bool:
 	var x := a.duplicate(true);var y := b.duplicate(true)
@@ -24,6 +29,11 @@ static func matches(a: Dictionary, b: Dictionary) -> bool:
 		for key in ["energy","facing"]:
 			if x.get("state") is Dictionary:x.state.erase(key)
 			if y.get("state") is Dictionary:y.state.erase(key)
+	# Burning a stable lantern instance is passive, like food aging.
+	if not str(x.get("lamp_id","")).is_empty() and x.get("lamp_id")==y.get("lamp_id") and x.get("item_id")==y.get("item_id"):
+		var current=x.get("fuel");var expected=y.get("fuel")
+		if (current is int or current is float) and (expected is int or expected is float) and is_finite(float(current)) and is_finite(float(expected)) and current>=0 and current<=expected:
+			x.erase("fuel");y.erase("fuel")
 	# JSON transports numbers as floats; compare the same wire representation.
 	return JSON.parse_string(JSON.stringify(x))==JSON.parse_string(JSON.stringify(y))
 

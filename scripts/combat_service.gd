@@ -10,19 +10,33 @@ var personal: Dictionary=initial_personal()
 var busy:=false
 var peers: Array=[] # Authenticated server projection, never populated by client arguments.
 var damage_events: Array=[]
+var attack_preview: Dictionary={}
+var attack_preview_started:=0
+var attack_preview_confirmed:=false
 
-func duel(target: String, accept: bool) -> String:
-	if preload("res://scripts/network_game_route.gd").send(self,"combat_duel",[target,accept]):return ""
-	var owner:=str(service.world.get_meta("network_player_id","local"))
-	if owner=="local" or target==owner or not peers.any(func(p):return str(p.id)==target):return "玩家不在线"
-	if not state.has("duels"):state.duels={}
-	var previous_duels: Dictionary=state.duels.duplicate(true)
-	var pair: Array=[owner,target];pair.sort();var key: String=":".join(pair)
-	if not accept:state.duels.erase(key)
-	elif state.duels.has(key) and state.duels[key].from!=owner:state.duels[key].accepted=true
-	else:state.duels[key]={"from":owner,"to":target,"accepted":false}
-	if not service.save_state():state.duels=previous_duels;return "切磋状态保存失败"
-	return ""
+# Immediate local pose only. Damage, stamina and inventory remain authoritative.
+func attack_state() -> Dictionary:
+	if attack_preview.is_empty():return personal.attack
+	if personal.phase!="alive" or service.body.down or service.body.sleep_active() or int(personal.get("hit_serial",0))!=int(attack_preview.hit_serial) or (attack_preview_confirmed and personal.attack.is_empty()):
+		attack_preview={};return personal.attack
+	var elapsed:=maxf(0,(Time.get_ticks_msec()-attack_preview_started)/1000.0)
+	var spec: Dictionary=attack_preview.weapon
+	var duration: float=spec.windup+spec.active+spec.recovery
+	if elapsed>=duration and not attack_preview_confirmed:return {}
+	var result: Dictionary=(personal.attack if not personal.attack.is_empty() else attack_preview).duplicate(true)
+	result.elapsed=minf(duration,maxf(elapsed,float(result.get("elapsed",0))))
+	return result
+
+func confirm_attack_preview(accepted: bool) -> void:
+	if not accepted:attack_preview={}
+	attack_preview_confirmed=accepted
+
+func begin_attack_preview(direction: Vector2) -> void:
+	attack_preview={"elapsed":0.0,"direction":{"x":direction.normalized().x,"y":direction.normalized().y},"weapon":weapon().duplicate(true),"targets":{},"hit_serial":int(personal.get("hit_serial",0))}
+	attack_preview_started=Time.get_ticks_msec();attack_preview_confirmed=false
+
+func duel(_target: String, _accept: bool) -> String:
+	return "切磋功能已移除"
 
 func duel_allowed(target: String) -> bool:
 	var pair: Array=[str(service.world.get_meta("network_player_id","local")),target];pair.sort()
@@ -78,12 +92,14 @@ func weapon() -> Dictionary:
 	return rules.weapons.get(service.database.item(str(held.item_id)).get("combat_weapon",""),{})
 
 func attack(direction: Vector2) -> String:
-	if preload("res://scripts/network_game_route.gd").send(self,"combat_attack",[direction]):return ""
+	if not personal.attack.is_empty() or not attack_preview.is_empty():return ""
 	if busy or personal.phase!="alive" or not personal.attack.is_empty() or service.body.down or service.body.health<=0 or service.body.sleep_active() or service.body.energy<=0 or not service.craft_job.is_empty():return "当前无法攻击"
 	if not direction.is_finite() or direction.length_squared()<.01:return "方向无效"
 	var spec:=weapon()
 	if spec.is_empty():return "采集工具不能攻击"
 	if service.body.stamina<float(spec.stamina):return "体力不足"
+	if preload("res://scripts/network_game_route.gd").send(self,"combat_attack",[direction]):
+		return ""
 	var old:=personal.duplicate(true);var stamina: float=service.body.stamina
 	personal.attack={"elapsed":0.0,"direction":{"x":direction.normalized().x,"y":direction.normalized().y},"weapon":spec.duplicate(true),"targets":{}}
 	personal.attack.held=service.inventory.equipment.get("main_hand",{}).get("instance_id","")
@@ -147,7 +163,6 @@ func claim(id: String, index: int, expected: Dictionary) -> String:
 	if preload("res://scripts/network_game_route.gd").send(self,"relic_claim",[id,index,expected]):return ""
 	if busy or personal.phase!="alive" or not state.relics.has(id):return "遗物无法领取"
 	var row: Dictionary=state.relics[id]
-	if str(row.owner)!=str(service.world.get_meta("network_player_id","local")):return "这是其他人的遗物"
 	if service.world.player.position.distance_to(Vector2(row.x,row.y))>78:return "请靠近遗物"
 	if not service.world.stream.clear_reach(service.world.player.position,Vector2(row.x,row.y),null):return "遗物被挡住了"
 	if index<0 or index>=row.contents.size() or not preload("res://scripts/food_freshness.gd").matches(row.contents[index],expected):return "遗物内容已变化"
@@ -200,12 +215,20 @@ func resolve_hits(a: Dictionary) -> void:
 	var direction:=Vector2(a.direction.x,a.direction.y)
 	var old_world:=state.duplicate(true);var old_loose: Dictionary=service.loose.duplicate(true)
 	var changed:=false
+	for id in service.animals.states:
+		var animal: Dictionary=service.animals.states[id]
+		if animal.get("departed",false) or a.targets.has("animal:"+str(id)):continue
+		var at:=Vector2(animal.x,animal.y)
+		var target: Node2D=service.animals.visuals.get(id)
+		if Rules.can_hit(origin,direction,at,float(a.weapon.range),10) and service.world.stream.clear_reach(origin,at,target):
+			a.targets["animal:"+str(id)]=true
+			service.notice.emit("小鸡这么可爱，怎么能打它呢？" if animal.species=="chicken" else "小羊这么可爱，怎么能打它呢？")
 	for peer in peers:
 		var id:=str(peer.id)
-		if a.targets.has(id) or not duel_allowed(id) or peer.get("phase","alive")!="alive":continue
+		if a.targets.has(id) or peer.get("phase","alive")!="alive":continue
 		var at:=Vector2(peer.x,peer.y)
 		if Rules.can_hit(origin,direction,at,float(a.weapon.range),10) and service.world.stream.clear_reach(origin,at,null):
-			a.targets[id]=true;damage_events.append({"target":id,"amount":a.weapon.damage,"source":{"x":origin.x,"y":origin.y},"duel":true})
+			a.targets[id]=true;damage_events.append({"target":id,"amount":a.weapon.damage,"source":{"x":origin.x,"y":origin.y},"duel":false})
 	for id in state.boars:
 		var row: Dictionary=state.boars[id]
 		if row.health<=0 or a.targets.has(id):continue
@@ -229,19 +252,23 @@ func boar_drop(id: String, row: Dictionary) -> void:
 	service.dirty=true
 
 func advance_boars(delta: float) -> void:
-	if not state.population_initialized:
+	if not state.population_initialized or int(state.get("population_revision",0))<int(rules.boar.population_revision):
+		state.population_revision=int(rules.boar.population_revision)
 		state.population_initialized=true
 		var rng:=RandomNumberGenerator.new();rng.seed=service.world.world_seed^811927
-		for n in 400:
+		for n in 2400:
 			if state.boars.size()>=int(rules.boar.population):break
 			var at:=Vector2(rng.randf_range(100,service.world.generator.extent-100),rng.randf_range(100,service.world.generator.extent-100))
 			if at.distance_to(spawn_point())<float(rules.boar.safe_radius) or not service.world.generator.can_walk(at):continue
+			if state.boars.values().any(func(b):return Vector2(b.home_x,b.home_y).distance_to(at)<float(rules.boar.min_spacing)):continue
 			var ecology: Dictionary=service.ecology(at)
 			if maxf(float(ecology.forest),float(ecology.rocky))<.5:continue
 			if not service.ground_clear(at,25,service.nearby_props(at)):continue
 			if service.builds.states.values().any(func(b):return Vector2(b.x,b.y).distance_to(at)<float(rules.boar.get("camp_clearance",240))):continue
 			var id: String="boar:%d:%d"%[service.world.world_seed,n]
 			state.boars[id]={"x":at.x,"y":at.y,"home_x":at.x,"home_y":at.y,"health":float(rules.boar.health),"mode":"patrol","clock":0.0,"hit":0.0,"generation":0}
+	var minute: float=service.world.environment_view.simulation.minute
+	var night: bool=minute>=float(rules.boar.night_start_minute) or minute<float(rules.boar.night_end_minute)
 	for id in state.boars:
 		var row: Dictionary=state.boars[id]
 		row.hit=maxf(0,float(row.get("hit",0))-delta)
@@ -262,26 +289,59 @@ func advance_boars(delta: float) -> void:
 		if row.mode=="hurt":
 			if row.clock<float(rules.boar.get("hit_stun",.18)):continue
 			row.mode="chase"
+		var weapon: Dictionary=rules.weapons.boar
+		var duration: float=weapon.windup+weapon.active+weapon.recovery
+		# Once committed, finish this attack independently of detection/leash checks.
+		if row.mode=="attack":
+			var victim: String=str(row.get("attack_target",""))
+			var victim_alive: bool=personal.phase=="alive" if victim.is_empty() else false
+			var victim_at: Vector2=service.world.player.position
+			for peer in peers:
+				if str(peer.id)==victim:
+					victim_alive=peer.get("phase","alive")=="alive";victim_at=Vector2(peer.x,peer.y);break
+			if row.clock>=float(weapon.windup) and row.clock<=duration and not row.get("struck",false) and victim_alive and at.distance_to(victim_at)<float(weapon.range) and attack_path_clear(at,victim_at,id):
+				row.struck=true
+				if victim.is_empty():damage(float(weapon.damage),at)
+				else:damage_events.append({"target":victim,"amount":weapon.damage,"source":{"x":at.x,"y":at.y},"duel":false})
+			if row.clock>=duration:row.mode="chase";row.clock=0.0
+			continue
 		var target:=home
-		if nearest<INF and distance<float(rules.boar.notice_range) and player.distance_to(home)<float(rules.boar.leash):
+		var following: bool=row.mode in ["alert","chase","hurt"]
+		var detection: float=rules.boar.get("chase_range",600) if following else rules.boar.notice_range
+		if nearest<INF and distance<detection and player.distance_to(home)<float(rules.boar.leash):
 			if row.mode in ["patrol","return"]:row.mode="alert";row.clock=0.0
 			if row.mode=="alert" and row.clock<.7:continue
-			if distance<float(rules.weapons.boar.range):
-				if row.mode!="attack":row.mode="attack";row.clock=0.0;row.struck=false
-				if row.clock>=float(rules.weapons.boar.windup) and not row.struck:
-					row.struck=true
-					if distance<float(rules.weapons.boar.range) and attack_path_clear(at,player,id):
-						if target_id.is_empty():damage(float(rules.weapons.boar.damage),at)
-						else:damage_events.append({"target":target_id,"amount":rules.weapons.boar.damage,"source":{"x":at.x,"y":at.y},"duel":false})
-				if row.clock>=float(rules.weapons.boar.windup)+float(rules.weapons.boar.active)+float(rules.weapons.boar.recovery):row.mode="chase"
+			if distance<float(weapon.range):
+				row.mode="attack";row.clock=0.0;row.struck=false;row.attack_target=target_id
+				if absf(player.x-at.x)>8:row.facing_x=1.0 if player.x>at.x else -1.0
 				continue
 			row.mode="chase";target=player
 		else:
 			row.mode="return" if at.distance_to(home)>30 else "patrol"
-			if row.mode=="patrol":target=home+Vector2(cos(row.clock*.2),sin(row.clock*.17))*45
-		var next:=at.move_toward(target,float(rules.boar.speed)*delta*(1.0 if row.mode=="chase" else .4))
+			if night:
+				row.mode="patrol"
+				var phase: float=float(str(id).hash()%628)/100.0
+				target=home+Vector2(cos(row.clock*.025+phase),sin(row.clock*.019+phase))*float(rules.boar.night_roam_radius)
+			elif row.mode=="patrol":target=home+Vector2(cos(row.clock*.2),sin(row.clock*.17))*45
+		var travel: Vector2=target-at
+		# Ignore tiny sideways corrections; knockback never changes this heading.
+		if absf(travel.x)>maxf(12,absf(travel.y)*.2):row.facing_x=1.0 if travel.x>0 else -1.0
+		var next:=at.move_toward(target,float(rules.boar.speed)*(float(rules.boar.night_speed_multiplier) if night else 1.0)*delta*(1.0 if row.mode=="chase" else .4))
 		var target_node: Node2D=service.combat_view.boars.get(id) if is_instance_valid(service.combat_view) else null
-		if boar_clear(at,next,target_node):row.x=next.x;row.y=next.y
+		if boar_clear(at,next,target_node):
+			row.x=next.x;row.y=next.y
+			trample_crops(Vector2(row.x,row.y),target_node)
+
+func trample_crops(at: Vector2, node: CollisionObject2D=null) -> void:
+	for id in service.builds.states:
+		var plot: Dictionary=service.builds.states[id]
+		if plot.kind!="tilled_soil" or str(plot.get("crop","")).is_empty():continue
+		var center:=Vector2(plot.x,plot.y)
+		if not preload("res://scripts/planting.gd").soil_rect().has_point(at-center):continue
+		if not boar_clear(at,center,node):continue
+		plot.crop="";plot.growth_minutes=0.0;plot.roots=true;plot.erase("fertilized")
+		service.dirty=true
+		if service.builds.visuals.has(id):service.builds.visuals[id].queue_redraw()
 
 func attack_path_clear(at: Vector2, target: Vector2, id: String) -> bool:
 	var node: CollisionObject2D=service.combat_view.boars.get(id) if is_instance_valid(service.combat_view) else null
@@ -293,13 +353,27 @@ func attack_path_clear(at: Vector2, target: Vector2, id: String) -> bool:
 func boar_clear(at: Vector2, next: Vector2, node: CollisionObject2D=null) -> bool:
 	if not service.world.generator.can_walk(next):return false
 	for row in service.builds.states.values():
-		if row.layer in ["ground","overlay"] or next.distance_to(Vector2(row.x,row.y))>160:continue
+		if row.layer in ["ground","overlay"] or Geometry2D.get_closest_point_to_segment(Vector2(row.x,row.y),at,next).distance_to(Vector2(row.x,row.y))>160:continue
 		var polygon: PackedVector2Array=service.animals.barrier_polygon(row)
 		if Geometry2D.is_point_in_polygon(next,polygon):return false
 		for n in polygon.size():
+			if Geometry2D.segment_intersects_segment(at,next,polygon[n],polygon[(n+1)%polygon.size()])!=null:return false
 			if next.distance_to(Geometry2D.get_closest_point_to_segment(next,polygon[n],polygon[(n+1)%polygon.size()]))<14:return false
 	var query:=PhysicsRayQueryParameters2D.create(at,next)
 	query.exclude=[service.world.player.get_rid()]
 	if node!=null:query.exclude.append(node.get_rid())
 	return service.world.stream.get_world_2d().direct_space_state.intersect_ray(query).is_empty()
 
+
+func debug_spawn_near() -> bool:
+	if not OS.has_feature("debug") or not service.writable or busy or Engine.has_meta("network_game_controller"):return false
+	var origin: Vector2=service.world.player.position
+	for i in 24:
+		var at:=origin+Vector2.RIGHT.rotated(i*TAU/24)*120
+		if not service.world.stream.has_ground(at) or not boar_clear(origin,at) or at.distance_to(spawn_point())<85:continue
+		var id: String="debug_"+str(Time.get_ticks_usec())
+		state.boars[id]={"x":at.x,"y":at.y,"home_x":at.x,"home_y":at.y,"health":float(rules.boar.health),"mode":"patrol","clock":0.0,"hit":0.0,"generation":0}
+		if not service.save_state():state.boars.erase(id);return false
+		return true
+	service.notice.emit("附近没有合适的野猪位置")
+	return false

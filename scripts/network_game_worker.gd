@@ -1,17 +1,27 @@
 extends Node
 ## Private, persistent Godot rules host. Only the authenticated Python service
-## writes this mailbox; no client-provided method names are executed.
+## owns this loopback channel; no client-provided method names are executed.
 var folder: String
 var world: Node
 var busy := false
 var startup := true
+var channel := StreamPeerTCP.new()
+var incoming := PackedByteArray()
+var packet_size := 0
 func _ready() -> void:
+	Engine.max_fps=240
 	var args:=OS.get_cmdline_user_args()
 	if args.size()!=1:get_tree().quit(2);return
 	folder=args[0]
 	call_deferred("boot")
 func boot() -> void:
 	var config=JSON.parse_string(FileAccess.get_file_as_string(folder.path_join("bootstrap.json")))
+	channel.connect_to_host("127.0.0.1",int(config.ipc_port))
+	while channel.get_status()==StreamPeerTCP.STATUS_CONNECTING:
+		channel.poll()
+		await get_tree().process_frame
+	if channel.get_status()!=StreamPeerTCP.STATUS_CONNECTED:get_tree().quit(2);return
+	channel.set_no_delay(true)
 	world=preload("res://scripts/network_game_host_world.gd").new()
 	world.bootstrap=config
 	get_tree().root.add_child(world)
@@ -23,10 +33,16 @@ func boot() -> void:
 	world.environment_view.set_process(false)
 	world.item_service.set_process(false)
 	world.item_service.animals.set_physics_process(false)
+	world.item_service.combat_view.set_process(false)
+	world.stream.set_process(true)
+	# Headless authority has no pointer, HUD or map to refresh each frame.
+	for node in world.find_children("*","",true,false):
+		if node is Control or node is CanvasLayer:
+			node.set_process(false);node.set_process_input(false);node.set_process_unhandled_input(false)
 	freeze_actors()
 	for child in world.get_children():
 		if child.name=="Fishing":child.set_process(false);child.set_process_input(false)
-	write_result({"ok":true,"ready":true})
+	write_result({"ok":true,"ready":true,"ipc_nonce":config.ipc_nonce})
 	Engine.set_meta("network_rules_events",[])
 	world.item_service.notice.connect(func(message: String):
 		var events: Array=Engine.get_meta("network_rules_events")
@@ -37,33 +53,41 @@ func boot() -> void:
 	startup=false
 func _process(_delta: float) -> void:
 	if startup or busy:return
-	var path:=folder.path_join("request.json")
-	if not FileAccess.file_exists(path):return
-	# Windows scanners can briefly hold an atomically published request. Leave it
-	# pending until it can be opened, instead of consuming an empty failed read.
-	var file:=FileAccess.open(path,FileAccess.READ)
-	if file==null:return
-	var text:=file.get_as_text();file.close()
+	channel.poll()
+	if channel.get_status()!=StreamPeerTCP.STATUS_CONNECTED:get_tree().quit(2);return
+	var available:=channel.get_available_bytes()
+	if available>0:
+		var received:=channel.get_data(available)
+		if received[0]!=OK:get_tree().quit(2);return
+		incoming.append_array(received[1])
+	if packet_size==0:
+		if incoming.size()<4:return
+		packet_size=incoming.decode_u32(0)
+		incoming=incoming.slice(4)
+		if packet_size<=0 or packet_size>8*1024*1024:get_tree().quit(2);return
+	if incoming.size()<packet_size:return
+	var text:=incoming.slice(0,packet_size).get_string_from_utf8()
+	incoming=incoming.slice(packet_size);packet_size=0
 	var parser:=JSON.new()
-	var parsed:=parser.parse(text)
-	if DirAccess.remove_absolute(path)!=OK:return
 	busy=true
-	if parsed!=OK or not parser.data is Dictionary:
-		write_result({"ok":false,"error":"服务端请求文件格式错误，原档已保留"});busy=false;return
-	call_deferred("execute",parser.data)
-	return
+	if parser.parse(text)!=OK or not parser.data is Dictionary:
+		write_result({"ok":false,"error":"服务端请求格式错误，原档已保留"});busy=false;return
+	execute(parser.data)
 func write_result(value: Dictionary) -> void:
-	var temporary:=folder.path_join("result.tmp")
-	var file:=FileAccess.open(temporary,FileAccess.WRITE)
-	file.store_string(JSON.stringify(value));file.close()
-	DirAccess.rename_absolute(temporary,folder.path_join("result.json"))
+	var body:=JSON.stringify(value).to_utf8_buffer()
+	var header:=PackedByteArray();header.resize(4);header.encode_u32(0,body.size())
+	if channel.put_data(header+body)!=OK:get_tree().quit(2)
 func execute(request: Dictionary) -> void:
+	var timing: Array=[Time.get_ticks_usec()]
 	Engine.set_meta("network_rules_events",[])
 	var service=world.item_service
 	if request.get("operation")=="movement":
 		movement(request);busy=false;return
 	world.set_meta("network_player_id",str(request.get("player_id","")))
 	var state: Dictionary=request.get("snapshot",{})
+	# JSON numbers arrive as floats; inventory validation normalizes counts to
+	# integers. Compare normalized values so identical facilities stay identical.
+	var geometry_changed: bool=integral_arguments(service.builds.states)!=integral_arguments(state.get("buildings",{}).get("objects",{})) or integral_arguments(service.camps.states)!=integral_arguments(state.get("campfires",{}).get("objects",{}))
 	if not state.is_empty():
 		if service.consumed!=state.get("consumed",{}) or world.stream.harvested!=state.get("harvested",{}):
 			for coord in world.stream.loaded.keys():world.stream.unload_chunk(coord)
@@ -86,14 +110,20 @@ func execute(request: Dictionary) -> void:
 		world.player.character_look=character.appearance
 		service.inventory.changed.emit()
 	world.stream.update_target(world.player.position)
+	var personal: Dictionary=state.get("combat_personal",{})
+	var needs_scene: bool=request.get("operation","snapshot")!="snapshot" or personal.get("phase","alive")!="alive" or not personal.get("attack",{}).is_empty() or state.get("network_fishing",{}).get("state","idle")!="idle"
+	timing.append(Time.get_ticks_usec())
 	# Restore may replace a facility at the same ID. Let deferred deletion and
 	# physics registration finish before a ray can hit the superseded collider.
-	await get_tree().process_frame
-	await get_tree().physics_frame
-	for frame in 300:
-		if world.stream.viewport_ready(world.player.position,Vector2(640,360)):break
+	if needs_scene and (geometry_changed or request.get("operation","snapshot")!="snapshot"):
 		await get_tree().process_frame
+		await get_tree().physics_frame
+	if needs_scene:
+		for frame in 300:
+			if world.stream.viewport_ready(world.player.position,Vector2(640,360)):break
+			await get_tree().process_frame
 	service.animals.sync_visuals()
+	timing.append(Time.get_ticks_usec())
 	freeze_actors()
 	world.player.input_blocked=service.body.sleep_active()
 	world.player.set_physics_process(false)
@@ -123,6 +153,7 @@ func execute(request: Dictionary) -> void:
 				while remaining>0.00001:
 					actor._physics_process(minf(.05,remaining));remaining-=minf(.05,remaining)
 	var message := ""
+	timing.append(Time.get_ticks_usec())
 	var operation:=str(request.get("operation","snapshot"))
 	var args: Array=integral_arguments(request.get("args",[]))
 	if service.combat.personal.phase!="alive" and operation!="snapshot":
@@ -132,6 +163,8 @@ func execute(request: Dictionary) -> void:
 			write_result({"ok":false,"error":"背包已变化，请重新操作","snapshot":service.snapshot()});busy=false;return
 	# Explicit allowlist. Placement rows are rebuilt from kind and geometry below.
 	match operation:
+		"guide":
+			if not service.advance_guide(int(args[0])):message="指引进度无效"
 		"combat_duel":message=service.combat.duel(str(args[0]),bool(args[1]))
 		"combat_attack":message=service.combat.attack(point(args[0]))
 		"relic_claim":message=service.combat.claim(str(args[0]),int(args[1]),args[2])
@@ -201,6 +234,7 @@ func execute(request: Dictionary) -> void:
 		if row.get("sleep_state","PLACED")=="PLACED":row.erase("network_sleep_owner")
 	world.player.set_physics_process(false)
 	var snapshot: Dictionary=service.snapshot().duplicate(true)
+	if OS.get_environment("WINDREST_PROFILE_NETWORK")=="1":print("RULES_US ",request.get("operation")," restore=",timing[1]-timing[0]," wait=",timing[2]-timing[1]," advance=",timing[3]-timing[2]," snapshot=",Time.get_ticks_usec()-timing[3])
 	snapshot.network_craft_job=service.craft_job.duplicate(true)
 	snapshot.network_craft_station=service.craft_station_id
 	snapshot.network_active_lamp=service.active_lamp
@@ -215,6 +249,14 @@ func find_target(identity: Dictionary) -> Node2D:
 	for child in world.object_root.get_children():
 		for key in identity:
 			if child.has_meta(key) and str(child.get_meta(key))==str(identity[key]):return child
+	# A restored drop can arrive after this chunk was installed. Materialize
+	# only the authoritative row; normal distance/obstruction checks still apply.
+	var id:=str(identity.get("drop_id",""))
+	if world.item_service.loose.has(id):
+		var row: Dictionary=world.item_service.loose[id].duplicate(true)
+		if world.stream.loaded.has(world.stream.chunk_at(Vector2(row.x,row.y))):
+			row.id=id
+			return world.stream.create_item_drop(row)
 	return null
 func freeze_actors() -> void:
 	# Visual animals normally update their persistent coordinates from physics.
@@ -228,7 +270,7 @@ func movement(request: Dictionary) -> void:
 	var body=preload("res://scripts/body_state.gd").new()
 	body.restore(character.gameplay.body)
 	var fishing: Dictionary=character.gameplay.get("network_fishing",{})
-	if body.sleep_active() or body.down or character.gameplay.get("combat_personal",{}).get("phase","alive")!="alive" or fishing.get("state","idle")!="idle":
+	if body.sleep_active() or body.down or character.gameplay.get("combat_personal",{}).get("phase","alive")!="alive" or not character.gameplay.get("combat_personal",{}).get("attack",{}).is_empty() or fishing.get("state","idle")!="idle":
 		write_result({"x":at.x,"y":at.y});return
 	for item in request.inputs:
 		# The client sends actual displacement, including its original shore slide.

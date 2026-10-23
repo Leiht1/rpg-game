@@ -1,0 +1,52 @@
+[
+  {
+    "client": 0,
+    "exit_code": 0,
+    "performance": "PERFORMANCE players=2.0 frames=682 median=16.657 p95=128.036 max=138.159 pending=10 ack_age=361 blocked=0 travel=406.67578125",
+    "requests": {
+      "move": {
+        "samples": 164,
+        "median_ms": 59.5,
+        "p95_ms": 293,
+        "max_ms": 407
+      },
+      "game_snapshot": {
+        "samples": 60,
+        "median_ms": 152.5,
+        "p95_ms": 259,
+        "max_ms": 18983
+      },
+      "poll": {
+        "samples": 61,
+        "median_ms": 32,
+        "p95_ms": 160,
+        "max_ms": 303
+      }
+    }
+  },
+  {
+    "client": 1,
+    "exit_code": 0,
+    "performance": "PERFORMANCE players=2.0 frames=664 median=16.66 p95=133.484333333333 max=143.741666666667 pending=13 ack_age=481 blocked=0 travel=430.6796875",
+    "requests": {
+      "move": {
+        "samples": 151,
+        "median_ms": 73,
+        "p95_ms": 223,
+        "max_ms": 589
+      },
+      "game_snapshot": {
+        "samples": 59,
+        "median_ms": 127,
+        "p95_ms": 271,
+        "max_ms": 19033
+      },
+      "poll": {
+        "samples": 61,
+        "median_ms": 29,
+        "p95_ms": 181,
+        "max_ms": 345
+      }
+    }
+  }
+]

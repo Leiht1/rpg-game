@@ -59,6 +59,10 @@ func validate(data: Variant, seen: Dictionary) -> bool:
 		var d: Dictionary=definitions[row.kind]
 		if row.has("abandoned") and not row.abandoned is bool: return false
 		if row.get("abandoned",false) and (row.kind not in ["wood_fence","wood_floor","stone_path","wood_chest","workbench","straw_mat","wood_bed"] or row.open): return false
+		if row.kind=="camp_torch":
+			var fuel = row.get("fuel",0.0)
+			if not (fuel is float or fuel is int) or not is_finite(float(fuel)) or fuel<0 or fuel>float(service.camps.rules.max_fuel):return false
+			if not row.get("lit",false) is bool or (row.get("lit",false) and fuel<=0):return false
 		if row.kind=="signpost" and not valid_sign_text(row.get("text")):return false
 		if row.kind=="tilled_soil" and not service.planting.valid(row): return false
 		if d.get("sleep",false):
@@ -111,6 +115,7 @@ func candidate(kind: String, at: Vector2, vertical: bool, inward: bool, facing: 
 	if d.layer=="free": row.x=at.x;row.y=at.y
 	row.merge({"kind":kind,"layer":d.layer,"open":false,"inward":inward,"facing":facing,"hits":0,"contents":[]})
 	if d.get("sleep",false): row.facing=0;row.vertical=vertical if kind!="sleeping_bag" else false;row.sleep_state="PLACED"
+	if kind=="camp_torch":row.fuel=0.0;row.lit=false
 	if kind=="tilled_soil": row.merge({"crop":"","growth_minutes":0.0,"roots":false});row.vertical=false
 	for i in int(d.get("storage_slots",12)): row.contents.append({})
 	if service.industry.machine(kind):row.machine=service.industry.initial(kind)
@@ -143,7 +148,7 @@ func paving_can_cover(node: Node) -> bool:
 	var id := str(node.get_meta("building_id",""))
 	if states.has(id):
 		var existing: Dictionary=states[id]
-		return existing.layer not in ["ground","edge"] or definitions[existing.kind].get("door",false)
+		return existing.layer!="ground"
 	return service.camps.visuals.get(str(node.get_meta("prop_id","")))==node
 
 func reason(row: Dictionary) -> String:
@@ -226,10 +231,12 @@ func reason(row: Dictionary) -> String:
 
 func place(row: Dictionary, expected: Array) -> String:
 	if preload("res://scripts/network_game_route.gd").send(self,"building_place",[row,expected]):return ""
-	if busy or service.body.sleep_active(): return "正在处理"
+	if service.body.sleep_active(): return "睡醒了再试试"
+	if busy: return "正在处理"
 	if not preload("res://scripts/food_freshness.gd").matches_slots(service.inventory.slots,expected): return "背包已变化，请重新建造"
 	var error := reason(row)
 	if not error.is_empty(): return error
+	if row.kind=="camp_torch":row.fuel=0.0;row.lit=false
 	if row.kind=="signpost" and not valid_sign_text(row.get("text")):return "请填写1至6个字的路标文字"
 	busy=true
 	var before := states.duplicate(true)
@@ -256,7 +263,8 @@ func place(row: Dictionary, expected: Array) -> String:
 
 func place_bag(row: Dictionary, index: int, expected: Dictionary) -> String:
 	if preload("res://scripts/network_game_route.gd").send(self,"building_bag",[row,index,expected]):return ""
-	if busy or service.body.sleep_active(): return "正在处理"
+	if service.body.sleep_active(): return "睡醒了再试试"
+	if busy: return "正在处理"
 	if row.get("kind","")!="sleeping_bag": return "睡袋放置数据无效"
 	if index<0 or index>=40 or service.inventory.slots[index]!=expected or expected.get("item_id")!="sleeping_bag": return "原物品已变化"
 	var error := reason(row)
@@ -341,6 +349,7 @@ func toggle(id: String) -> String:
 	return ""
 
 func protected_reason(id: String) -> String:
+	if states.get(id,{}).get("kind","")=="camp_torch" and float(states[id].get("fuel",0))>0:return "火把中还有燃料"
 	if states.has(id):
 		if states[id].get("sleep_state","PLACED")!="PLACED": return "设施正在使用"
 		if states[id].kind in ["wood_floor","stone_path"]:

@@ -1,0 +1,98 @@
+[
+  {
+    "client": "client0",
+    "performance": "PERFORMANCE players=4.0 frames=946 median=16.664 p95=60.668 max=149.551 pending=71 ack_age=750 blocked=0 travel=1006.86328125",
+    "requests": {
+      "move": {
+        "samples": 70,
+        "median_ms": 371.5,
+        "p95_ms": 584,
+        "max_ms": 845
+      },
+      "game_snapshot": {
+        "samples": 40,
+        "median_ms": 456.0,
+        "p95_ms": 927,
+        "max_ms": 27223
+      },
+      "poll": {
+        "samples": 38,
+        "median_ms": 87.0,
+        "p95_ms": 407,
+        "max_ms": 487
+      }
+    }
+  },
+  {
+    "client": "client1",
+    "performance": "PERFORMANCE players=4.0 frames=954 median=16.666 p95=59.292 max=147.628333333333 pending=70 ack_age=718 blocked=0 travel=1003.529296875",
+    "requests": {
+      "move": {
+        "samples": 68,
+        "median_ms": 353.5,
+        "p95_ms": 563,
+        "max_ms": 766
+      },
+      "game_snapshot": {
+        "samples": 35,
+        "median_ms": 451,
+        "p95_ms": 783,
+        "max_ms": 27366
+      },
+      "poll": {
+        "samples": 34,
+        "median_ms": 105.5,
+        "p95_ms": 498,
+        "max_ms": 625
+      }
+    }
+  },
+  {
+    "client": "client2",
+    "performance": "PERFORMANCE players=4.0 frames=965 median=16.664 p95=54.227 max=142.841333333333 pending=67 ack_age=766 blocked=0 travel=1006.86328125",
+    "requests": {
+      "move": {
+        "samples": 65,
+        "median_ms": 369,
+        "p95_ms": 709,
+        "max_ms": 867
+      },
+      "game_snapshot": {
+        "samples": 37,
+        "median_ms": 453,
+        "p95_ms": 826,
+        "max_ms": 27933
+      },
+      "poll": {
+        "samples": 35,
+        "median_ms": 94,
+        "p95_ms": 433,
+        "max_ms": 465
+      }
+    }
+  },
+  {
+    "client": "client3",
+    "performance": "PERFORMANCE players=4.0 frames=963 median=16.665 p95=70.881 max=143.223333333333 pending=68 ack_age=805 blocked=0 travel=1006.86328125",
+    "requests": {
+      "move": {
+        "samples": 65,
+        "median_ms": 362,
+        "p95_ms": 500,
+        "max_ms": 868
+      },
+      "game_snapshot": {
+        "samples": 36,
+        "median_ms": 456.0,
+        "p95_ms": 834,
+        "max_ms": 27816
+      },
+      "poll": {
+        "samples": 35,
+        "median_ms": 90,
+        "p95_ms": 489,
+        "max_ms": 634
+      }
+    }
+  }
+]

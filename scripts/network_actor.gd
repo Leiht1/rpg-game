@@ -59,7 +59,7 @@ func _physics_process(delta:float)->void:
 	else:
 		if is_instance_valid(combat_soul):combat_soul.queue_free()
 		remote_flash=maxf(0,remote_flash-delta)
-		character.modulate=Color(1,.55,.55,.5 if int(remote_flash*35)%2 else 1) if remote_flash>0 else Color.WHITE
+		character.modulate=(Color(1,.55,.55) if int(remote_flash*35)%2 else Color.WHITE) if remote_flash>0 else Color.WHITE
 	if not own and body!=null and body.sleep_active() and not body.sleep_session.is_empty():
 		var world=objects_world()
 		var anchor: Vector2=sleep_cover.render(self,body.sleep_session,world.item_service.builds)
@@ -71,13 +71,13 @@ func _unhandled_input(event:InputEvent)->void:
 func objects_world()->Node:
 	return get_parent().get_parent()
 func receive(row:Dictionary,reconcile:bool=true,round_trip:float=0.0)->void:
+	if not own and row.has("sample_time"):
+		if float(row.sample_time)<sample_time:return
+		sample_time=float(row.sample_time)
 	var old_phase:=str(remote_combat.get("phase","alive"))
 	remote_combat=row.get("combat",{}).duplicate(true)
 	if remote_hit_serial>=0 and remote_hit_serial!=int(remote_combat.get("hit_serial",0)):remote_flash=.3
 	remote_hit_serial=int(remote_combat.get("hit_serial",0))
-	if not own and row.has("sample_time"):
-		if float(row.sample_time)<sample_time:return
-		sample_time=float(row.sample_time)
 	if reconcile:
 		if not own:
 			var next:=Vector2(row.x,row.y)

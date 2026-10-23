@@ -9,6 +9,19 @@ var busy := false
 var discovered: Dictionary = {}
 var rules: Dictionary = JSON.parse_string(FileAccess.get_file_as_string("res://data/campfire_rules.json"))
 
+# Torches keep their fuel in the original building snapshot, sharing fuel transactions.
+func fuel_state(id: String) -> Dictionary:
+	if states.has(id): return states[id]
+	var row: Dictionary=service.builds.states.get(id,{})
+	return row if row.get("kind","")=="camp_torch" else {}
+
+func fuel_visual(id: String) -> Node2D:
+	return visuals.get(id,service.builds.visuals.get(id))
+
+func fuel_lit(id: String) -> bool:
+	var row := fuel_state(id)
+	return bool(row.get("lit",false)) and float(row.get("fuel",0))>0
+
 func rebuild() -> void:
 	bins.clear(); burning.clear()
 	for id in states:
@@ -135,6 +148,7 @@ func match_materials(materials: Dictionary) -> String:
 	return ""
 
 func act(id: String, action: String, recipe: String = "", materials: Dictionary = {}) -> String:
+	if service.body.sleep_active(): return "睡醒了再试试"
 	if preload("res://scripts/network_game_route.gd").send(self,"camp_act",[id,action,recipe,materials]):return ""
 	if busy: return "正在处理"
 	if not service.writable: return "存档受保护，不能操作"
@@ -180,18 +194,18 @@ func act(id: String, action: String, recipe: String = "", materials: Dictionary 
 func feed_check(id: String, slot: int, expected: Dictionary) -> String:
 	if busy: return "正在处理"
 	if not service.writable: return "存档受保护，不能投入物品"
-	if not states.has(id) or not visuals.has(id) or not is_instance_valid(visuals[id]): return "篝火尚未加载"
+	if fuel_state(id).is_empty() or not is_instance_valid(fuel_visual(id)): return "火源尚未加载"
 	if slot<0 or slot>=40 or service.inventory.slots[slot]!=expected or expected.is_empty(): return "原物品已移动，请重新拖动"
 	if not rules.fuel_items.has(str(expected.get("item_id",""))): return "这种物品不能燃烧，物品已保留"
-	var row: Dictionary=states[id]
+	var row: Dictionary=fuel_state(id)
 	var player: Node2D=service.world.player
 	if player.position.distance_to(Vector2(row.x,row.y))>float(rules.interaction_range): return "请靠近篝火再投入"
-	if not service.world.stream.clear_reach(player.position,Vector2(row.x,row.y),visuals[id]): return "与篝火之间有障碍"
-	if row.fuel+float(rules.fuel_items[expected.item_id])>float(rules.max_fuel): return "篝火燃时已足够，物品已保留"
+	if not service.world.stream.clear_reach(player.position,Vector2(row.x,row.y),fuel_visual(id)): return "与火源之间有障碍"
+	if float(row.get("fuel",0))+float(rules.fuel_items[expected.item_id])>float(rules.max_fuel): return "燃时已足够，物品已保留"
 	return ""
 
 func feed_amount(id: String, expected: Dictionary) -> int:
-	return mini(int(expected.count),int(floor((float(rules.max_fuel)-float(states[id].fuel))/float(rules.fuel_items[expected.item_id]))))
+	return mini(int(expected.count),int(floor((float(rules.max_fuel)-float(fuel_state(id).get("fuel",0)))/float(rules.fuel_items[expected.item_id]))))
 
 func feed(id: String, slot: int, expected: Dictionary, count: int) -> String:
 	if preload("res://scripts/network_game_route.gd").send(self,"camp_feed",[id,slot,expected,count]):return ""
@@ -199,18 +213,20 @@ func feed(id: String, slot: int, expected: Dictionary, count: int) -> String:
 	if not reason.is_empty(): return reason
 	if count<1 or count>feed_amount(id,expected): return "燃时或物品数量已变化，请重新投入"
 	busy=true
-	var before: Dictionary=states[id].duplicate(true)
+	var row: Dictionary=fuel_state(id)
+	var before: Dictionary=row.duplicate(true)
 	var before_slots: Array=service.inventory.slots.duplicate(true)
 	var before_burning := burning.duplicate(true)
-	var was_lit: bool=bool(before.lit) and float(before.fuel)>0.0
+	var was_lit: bool=fuel_lit(id)
 	var staged := ItemInventory.new(service.database);staged.slots=service.inventory.slots.duplicate(true)
 	staged.slots[slot].count-=count
 	if staged.slots[slot].count==0: staged.slots[slot]={}
-	states[id].fuel+=float(rules.fuel_items[expected.item_id])*count
-	states[id].lit=true;burning[id]=true
+	row.fuel=float(row.get("fuel",0))+float(rules.fuel_items[expected.item_id])*count
+	row.lit=true
+	if states.has(id): burning[id]=true
 	service.inventory.slots=staged.slots;service.dirty=true
 	if not service.save_state():
-		states[id]=before;service.inventory.slots=before_slots;burning=before_burning;busy=false
+		row.clear();row.merge(before);service.inventory.slots=before_slots;burning=before_burning;busy=false
 		return "保存失败，燃料投放已回滚"
 	service.inventory.changed.emit()
 	if not was_lit:AudioFX.play_sfx("sfx_fire_ignite",Vector2(before.x,before.y))
@@ -218,6 +234,10 @@ func feed(id: String, slot: int, expected: Dictionary, count: int) -> String:
 	return ""
 
 func target_at(at: Vector2) -> String:
+	for id in service.builds.visuals:
+		if service.builds.states[id].kind!="camp_torch":continue
+		var node: Node2D=service.builds.visuals[id]
+		if is_instance_valid(node) and Rect2(node.position+Vector2(-40,-84),Vector2(80,96)).has_point(at):return id
 	for id in visuals:
 		if not is_instance_valid(visuals[id]): continue
 		var node: Node2D=visuals[id]
@@ -232,6 +252,11 @@ func burn_multiplier(rain: float, storm: float) -> float:
 func advance(dt: float, rain: float = 0.0, storm: float = 0.0) -> void:
 	if dt<=0 or not service.writable: return
 	var rate := burn_multiplier(rain,storm)
+	for row in service.builds.states.values():
+		if row.kind!="camp_torch" or not row.get("lit",false):continue
+		row.fuel=maxf(0,float(row.get("fuel",0))-dt*rate)
+		if row.fuel<=0:row.lit=false
+		service.dirty=true
 	var completed := false
 	for id in burning.keys():
 		var row: Dictionary=states[id]
@@ -265,6 +290,7 @@ func unload(coord: Vector2i) -> void:
 var build_book: RefCounted = preload("res://scripts/craft_book.gd").new(ItemDatabase.new(),"res://data/buildings.json")
 
 func build_check(recipe_id: String) -> String:
+	if service.body.sleep_active(): return "睡醒了再试试"
 	if busy: return "正在处理"
 	if not service.writable: return "存档受保护，不能建造"
 	var recipe: Dictionary=build_book.recipe(recipe_id)

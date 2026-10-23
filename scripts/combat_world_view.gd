@@ -18,8 +18,6 @@ var recoil:=Vector2.ZERO
 var hit_clock:=0.0
 var drop_count:=-1
 var soul: Node2D
-var duel_panel:=VBoxContainer.new()
-var duel_toggle: Button
 
 func _ready() -> void:
 	portal=Portal.new();portal.scale=Vector2.ONE*2.0;service.world.object_root.add_child(portal)
@@ -38,27 +36,7 @@ func _ready() -> void:
 	relic_list=VBoxContainer.new();relic_list.size_flags_horizontal=Control.SIZE_EXPAND_FILL;scroll.add_child(relic_list)
 	var close:=Button.new();close.text="关闭";close.set_meta("audio_window_close",true);close.pressed.connect(func():relic_panel.hide());contents.add_child(close)
 	relic_panel.hide()
-	duel_panel.position=Vector2(1010,82);layer.add_child(duel_panel)
-	if service.world.get_meta("network_game",false):
-		duel_toggle=Button.new();duel_toggle.text="切磋";duel_toggle.position=Vector2(1160,45);duel_toggle.size=Vector2(70,30);layer.add_child(duel_toggle)
-		duel_toggle.pressed.connect(show_duels)
-	duel_panel.hide()
 
-func show_duels() -> void:
-	for node in duel_panel.get_children():duel_panel.remove_child(node);node.queue_free()
-	var owner:=str(service.world.get_meta("network_player_id","local"))
-	for id in service.world.actors:
-		var actor: Node=service.world.actors[id]
-		var character_id:=str(actor.get_meta("combat_id",""))
-		var pair: Array=[owner,character_id];pair.sort()
-		var offer: Dictionary=service.combat.state.get("duels",{}).get(":".join(pair),{})
-		var button:=Button.new();button.text=("结束 " if offer.get("accepted",false) else "接受 " if offer.get("to")==owner else "等待 " if offer.get("from")==owner else "挑战 ")+actor.get_node("Nickname").text
-		button.pressed.connect(func():
-			service.combat.duel(character_id,not bool(offer.get("accepted",false)));duel_panel.hide())
-		duel_panel.add_child(button)
-		if not offer.is_empty() and not offer.get("accepted",false):
-			var cancel:=Button.new();cancel.text="拒绝 / 撤回";cancel.pressed.connect(func():service.combat.duel(character_id,false);duel_panel.hide());duel_panel.add_child(cancel)
-	duel_panel.visible=not duel_panel.visible
 
 func open_relic(id: String) -> void:
 	current=id;refresh_relic();relic_panel.show()
@@ -89,9 +67,6 @@ func _unhandled_input(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 	clock+=delta
 	var world: Node=service.world;var player: Node2D=world.player
-	if is_instance_valid(duel_toggle) and is_instance_valid(world.item_ui):
-		duel_toggle.visible=service.combat.personal.phase=="alive" and not world.item_ui.bag.visible and not world.item_ui.catalog.visible and not world.item_ui.craft_panel.visible and not world.map_view.visible
-		if not duel_toggle.visible:duel_panel.hide()
 	if drop_count!=service.loose.size():
 		drop_count=service.loose.size()
 		var present: Dictionary={}
@@ -123,7 +98,8 @@ func _process(delta: float) -> void:
 		var row: Dictionary=service.combat.state.relics.get(current,{})
 		if row.is_empty() or player.position.distance_to(Vector2(row.x,row.y))>100 or service.combat.personal.phase!="alive":relic_panel.hide()
 		elif relic_stamp(row.contents)!=relic_fingerprint:refresh_relic()
-	var p: Dictionary=service.combat.personal
+	var p: Dictionary=service.combat.personal.duplicate(true)
+	p.attack=service.combat.attack_state()
 	if p.phase!=last_phase:render_clock=float(p.clock)
 	elif world.get_meta("network_game",false):render_clock=minf(float(p.clock)+.45,maxf(render_clock,float(p.clock))+delta)
 	else:render_clock=float(p.clock)
@@ -144,7 +120,7 @@ func _process(delta: float) -> void:
 		hit_serial=int(p.get("hit_serial",0))
 	hit_clock=maxf(0,hit_clock-delta)
 	if hit_clock>0:
-		player.character.modulate=Color(1,.55,.55,.5 if int(hit_clock*35)%2 else 1)
+		player.character.modulate=Color(1,.55,.55) if int(hit_clock*35)%2 else Color.WHITE
 		recoil=recoil.move_toward(Vector2.ZERO,delta*350)
 	else:player.character.modulate=Color.WHITE
 	if p.phase!="alive":
@@ -177,7 +153,7 @@ class Relic extends Node2D:
 class Portal extends Node2D:
 	var clock:=0.0
 	func _ready() -> void:
-		var sprite:=Sprite2D.new();sprite.texture=load("res://assets/combat/v1/portal.png");sprite.scale=Vector2.ONE*.47;sprite.position=Vector2(0,-51);add_child(sprite)
+		var sprite:=Sprite2D.new();sprite.texture=load("res://assets/combat/v2/portal.png");sprite.scale=Vector2.ONE*.47;sprite.position=Vector2(0,-51);add_child(sprite)
 		for side in [-1,1]:
 			var pillar:=StaticBody2D.new();pillar.position=Vector2(side*35,-8);add_child(pillar)
 			var collision:=CollisionShape2D.new();var circle:=CircleShape2D.new();circle.radius=8;collision.shape=circle;pillar.add_child(collision)
@@ -210,6 +186,7 @@ class Boar extends StaticBody2D:
 	var legs: Array[Bone2D]=[]
 	var clock:=0.0
 	var previous:=Vector2.ZERO
+	var weapon: Dictionary=preload("res://scripts/combat_rules.gd").load_rules().weapons.boar
 	func part(bone: Bone2D, file: String, at: Vector2, scale_value: Vector2) -> void:
 		var sprite:=Sprite2D.new();sprite.texture=load("res://assets/combat/v1/"+file+".png");sprite.position=at;sprite.scale=scale_value;bone.add_child(sprite)
 	func _ready() -> void:
@@ -226,17 +203,31 @@ class Boar extends StaticBody2D:
 		head.rest=head.transform
 		previous=position
 	func _process(delta: float) -> void:
-		clock+=delta
 		collision_layer=1 if record.health>0 else 0
 		var moving: bool=position.distance_to(previous)>.01
-		if absf(position.x-previous.x)>.01:skeleton.scale.x=1 if position.x>previous.x else -1
+		skeleton.scale.x=float(record.get("facing_x",skeleton.scale.x))
 		previous=position
-		for i in legs.size():legs[i].rotation=sin(clock*12+(i%2)*PI+(i/2)*PI)*.45 if moving else 0
+		# Patrol steps are slower than chase steps; blocked animals stop stepping.
+		if moving and record.mode not in ["hurt","attack","alert","dead"]:clock+=delta*(8.0 if record.mode=="chase" else 3.0)
+		for i in legs.size():legs[i].rotation=sin(clock+(i%2)*PI+(i/2)*PI)*.38 if moving and record.mode not in ["hurt","attack","alert","dead"] else 0
 		head.rotation=sin(clock*2)*.03
-		if record.mode=="attack":head.rotation=-.2+sin(float(record.clock)*8)*.25
+		body.position=Vector2(0,-24);body.rotation=0
+		if record.mode=="attack":
+			var t: float=record.clock
+			var windup: float=weapon.windup
+			var thrust: float=clampf((t-windup)/float(weapon.active),0,1)
+			var recovery: float=clampf((t-windup-float(weapon.active))/float(weapon.recovery),0,1)
+			var prepare: float=clampf(t/windup,0,1)
+			body.position+=Vector2(lerpf(-5*prepare,12,thrust)*(1-recovery),lerpf(2*prepare,-2,thrust)*(1-recovery))
+			body.rotation=lerpf(-.12*prepare,.18,thrust)*(1-recovery)
+			head.rotation=lerpf(-.2*prepare,.3,thrust)*(1-recovery)
+			for i in legs.size():legs[i].rotation=(.35 if i%2==0 else -.35)*sin(minf(t/windup,1)*PI*.5)*(1-recovery)
+
 		if record.health<=0:body.rotation=lerpf(body.rotation,PI*.5,minf(delta*5,1));modulate.a=clampf((float(record.get("respawn",0))-respawn_seconds+2)/2,0,1)
-		else:body.rotation=0;modulate=Color(1,.65,.65) if float(record.get("hit",0))>5.75 else Color.WHITE
+		else:modulate=Color(1,.65,.65) if float(record.get("hit",0))>5.75 else Color.WHITE
 		queue_redraw()
 	func _draw() -> void:
+		if record.health>0 and record.mode=="alert":
+			draw_string(ThemeDB.fallback_font,Vector2(-5,-65),"!",HORIZONTAL_ALIGNMENT_LEFT,-1,30,Color(1,.12,.08))
 		if record.health>0 and float(record.get("hit",0))>0:
 			draw_rect(Rect2(-22,-56,44,4),Color(.2,.18,.16,.8));draw_rect(Rect2(-22,-56,44*float(record.health)/max_health,4),Color(.7,.25,.2))

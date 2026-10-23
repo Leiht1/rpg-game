@@ -1,4 +1,5 @@
 shader_type canvas_item;
+uniform bool lit = true;
 uniform float phase = 0.0;
 const float OVERSCAN = 1.25;
 varying vec4 sprite_tint;
@@ -18,5 +19,6 @@ void fragment() {
 		COLOR = vec4(0.0);
 	} else {
 		COLOR = texture(TEXTURE, sample_uv) * sprite_tint;
+		if (!lit) COLOR.a *= smoothstep(0.20, 0.31, source_uv.y);
 	}
 }

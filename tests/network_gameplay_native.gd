@@ -107,9 +107,10 @@ func run() -> void:
 	world.apply_snapshot(before_snapshot)
 	print("UNCHANGED_SNAPSHOT_MS ",(Time.get_ticks_usec()-started)/1000.0)
 	verify(world.item_ui.hover_wait==0.0,"unchanged inventory snapshot must not restart hover delay")
-	world.confirm_return()
-	verify(world.return_dialog.visible and not world.stopping,"return requires confirmation")
-	world.return_dialog.hide();world.return_dialog.canceled.emit()
+	var menu=get_first_node_in_group("world_menu_trigger").get_parent()
+	menu.toggle();menu.back.pressed.emit()
+	verify(menu.confirmation.visible and not world.stopping,"return requires confirmation")
+	menu.set_confirmation(false);menu.toggle()
 	verify(not world.stopping,"cancel return stays in world")
 	var before: float=service.body.energy
 	for i in 200:
@@ -139,7 +140,7 @@ func run() -> void:
 	var start: Vector2=world.player.position
 	var direction:=Vector2.ZERO
 	var code:=KEY_D
-	for pair in [[Vector2.RIGHT,KEY_D],[Vector2.LEFT,KEY_A],[Vector2.DOWN,KEY_S],[Vector2.UP,KEY_W]]:
+	for pair in [[Vector2.DOWN,KEY_S],[Vector2.UP,KEY_W],[Vector2.RIGHT,KEY_D],[Vector2.LEFT,KEY_A]]:
 		var safe: bool=world.stream.clear_reach(start,start+pair[0]*330)
 		for distance in range(0,331,10):
 			if not world.generator.can_walk(start+pair[0]*distance):safe=false;break

@@ -1,0 +1,12 @@
+{
+  "art_source": "host_image",
+  "route": "image_gen built-in",
+  "reference": "assets/combat/v1/portal.png",
+  "prompt": "art/portal-no-threshold-v2/prompt.txt",
+  "generated": "art/portal-no-threshold-v2/generated.png",
+  "output": "assets/combat/v2/portal.png",
+  "sha256": "9659c925b9abcd884b63e49ff69732a4525fd08faf8682e6cf189b95c0d7cfdb",
+  "processing": "entire visible generated arch (alpha>1 bbox plus 2px antialias margin) resized to prior full sprite registration; no sill mask, no shortened pillars",
+  "user_request": "按照当前的样子重新画一个没有门槛的",
+  "visual_approval": "not claimed"
+}

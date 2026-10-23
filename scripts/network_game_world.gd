@@ -8,11 +8,14 @@ var typing:=false
 var applying:=false
 var moving_request:=false
 var requesting:=false
+var polling:=false
 var last_error:=""
 var sequence:=0
 var move_clock:=0.0
 var sync_clock:=0.0
+var roster_clock:=0.0
 var actors: Dictionary={}
+var players_sample_time:=-1.0
 var entry:=LineEdit.new()
 var chat:=VBoxContainer.new()
 func load_world_identity(_path: String=WORLD_ID_PATH) -> void:
@@ -51,22 +54,26 @@ func enqueue(operation: String, args: Array) -> void:
 	elif operation in ["discard","lamp"] and int(args[0])>=0:indices.append(int(args[0]))
 	for index in indices:command.expected[str(index)]=item_service.inventory.get_slot(index).duplicate(true)
 	commands.append(command)
+	if operation=="combat_attack":item_service.combat.begin_attack_preview(Vector2(args[0].x,args[0].y))
+	if not requesting:sync_server.call_deferred()
 func _process(delta: float) -> void:
 	super._process(delta)
 	hint.text=hint.text.replace(" · N 新世界","").replace(" · F3 调试","").replace(" · F4 环境","").replace(" · F7 资源分布","")
 	if stopping:return
-	move_clock+=delta;sync_clock+=delta
-	if move_clock>=.1 and not moving_request:move_clock=0;move_server()
-	if sync_clock>=.4 and not requesting:sync_clock=0;sync_server()
+	move_clock+=delta;sync_clock+=delta;roster_clock+=delta
+	if roster_clock>=.1 and not polling:roster_clock=0;poll_server()
+	if move_clock>=.08 and not moving_request:move_clock=0;move_server()
+	var sync_interval:=.12 if not item_service.combat.personal.attack.is_empty() else .4
+	if sync_clock>=sync_interval and not requesting:sync_clock=0;sync_server()
 	item_service.sleep.render()
 func move_server() -> void:
 	moving_request=true;sequence+=1
-	var response: Dictionary=await Network.call_api("move",{"seq":sequence,"dx":0,"dy":0,"inputs":player.pending_inputs.duplicate(true),"pose":{"action":player.action,"clock":player.action_clock,"facing":player.facing}})
+	var response: Dictionary=await Network.call_api("move",{"seq":sequence,"dx":0,"dy":0,"inputs":player.movement_batch(),"pose":{"action":player.action,"clock":player.action_clock,"facing":player.facing}})
 	moving_request=false
 	if stopping:return
 	if response.get("ok",false):
 		player.acknowledge(response.character,int(response.input_ack))
-		if response.has("players"):update_players(response.players)
+		if response.has("players"):update_players(response.players,float(response.get("players_sample_time",-1)))
 	else:item_ui.show_notice(response.get("error","移动同步失败"))
 func sync_server() -> void:
 	if requesting or stopping:return
@@ -79,6 +86,7 @@ func sync_server() -> void:
 	if response.get("ok",false):
 		if command.has("request_id"):commands.pop_front()
 		apply_snapshot(response.snapshot)
+		if command.get("operation")=="combat_attack":item_service.combat.confirm_attack_preview(true)
 		for event in response.get("events",[]):
 			match event.kind:
 				"notice":item_service.notice.emit(str(event.text))
@@ -87,10 +95,19 @@ func sync_server() -> void:
 	elif command.has("request_id"):
 		last_error=str(response.get("error","操作同步失败"))
 		# Keep the same ID after transport failure; never retry a rejected command.
-		if not str(response.get("error","")).begins_with("服务器暂时不可用") and not str(response.get("error","")).begins_with("无法连接服务器"):commands.pop_front()
+		if not str(response.get("error","")).begins_with("服务器暂时不可用") and not str(response.get("error","")).begins_with("无法连接服务器"):
+			commands.pop_front()
+			if command.get("operation")=="combat_attack":item_service.combat.confirm_attack_preview(false)
 		item_ui.show_notice(response.get("error","操作同步失败"))
-	var poll: Dictionary=await Network.call_api("poll",{"cursor":Network.cursor})
 	requesting=false
+	if not commands.is_empty():sync_server.call_deferred()
+
+
+func poll_server() -> void:
+	if polling or stopping:return
+	polling=true
+	var poll: Dictionary=await Network.call_api("poll",{"cursor":Network.cursor})
+	polling=false
 	if stopping:return
 	if not poll.get("ok",false):
 		var error:=str(poll.get("error","连接中断"))
@@ -100,9 +117,14 @@ func sync_server() -> void:
 		return
 	if poll.get("ok",false):
 		Network.cursor=int(poll.cursor)
-		update_players(poll.players)
+		# Reject old rosters regardless of which request completes first.
+		update_players(poll.players,float(poll.get("players_sample_time",-1)))
 		for message in poll.messages:show_chat(message)
-func update_players(players: Array) -> void:
+	if not commands.is_empty():sync_server.call_deferred()
+func update_players(players: Array, sampled_at: float=-1.0) -> void:
+	if sampled_at>=0:
+		if sampled_at<players_sample_time:return
+		players_sample_time=sampled_at
 	var present: Dictionary={}
 	for row in players:
 		if row.player_id==Network.profile.player_id:continue
@@ -187,7 +209,7 @@ func show_chat(message: Dictionary) -> void:
 func close_world() -> void:
 	if stopping:return
 	stopping=true;player.input_blocked=true
-	while requesting or moving_request:await get_tree().process_frame
+	while requesting or moving_request or polling:await get_tree().process_frame
 	await Network.call_api("leave_lobby",{})
 	returned.emit();queue_free()
 func network_close() -> void:await close_world()

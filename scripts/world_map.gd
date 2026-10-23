@@ -15,6 +15,7 @@ var pending: Array[Vector3i]=[]
 var working := Vector3i(-1,-1,-1)
 var tile_image: Image
 var tile_row := 0
+var tile_column := 0
 var row := 512 # Legacy instrumentation: no full overview sweep is required.
 var resolution := 512
 var max_build_ms := 0.0
@@ -167,12 +168,14 @@ func _process(delta: float) -> void:
 	while Time.get_ticks_usec()-begin<budget:
 		if working.x<0:
 			if pending.is_empty():break
-			working=pending.pop_front();tile_row=0
+			working=pending.pop_front();tile_row=0;tile_column=0
 			tile_image=Image.create(TILE+2,TILE+2,false,Image.FORMAT_RGB8)
-		for x in TILE+2:
-			var p: Vector2=(Vector2(working.x,working.y)*TILE+Vector2(x-1,tile_row-1)+Vector2.ONE*.5)/float(working.z)*generator.extent
-			tile_image.set_pixel(x,tile_row,preload('res://scripts/map_cartography.gd').color_at(generator,p,detailed))
-		tile_row+=1
+		# Resume within a scanline so background warming obeys the frame budget.
+		var x:=tile_column
+		var p: Vector2=(Vector2(working.x,working.y)*TILE+Vector2(x-1,tile_row-1)+Vector2.ONE*.5)/float(working.z)*generator.extent
+		tile_image.set_pixel(x,tile_row,preload('res://scripts/map_cartography.gd').color_at(generator,p,detailed))
+		tile_column+=1
+		if tile_column==TILE+2:tile_column=0;tile_row+=1
 		if tile_row==TILE+2:
 			cache[working]={"texture":ImageTexture.create_from_image(tile_image),"used":clock};generated_tiles+=1
 			if not visible:hidden_generated_tiles+=1
@@ -251,6 +254,12 @@ func draw_landmarks() -> void:
 func draw_markers(layer: Control) -> void:
 	var ex:=exploration()
 	if item_screen:
+		var spawn:=world_to_screen(item_screen.service.combat.spawn_point())
+		if map_rect.grow(-8).has_point(spawn):
+			layer.draw_circle(spawn,6,Color("b6e8ff"))
+			layer.draw_string_outline(font,spawn+Vector2(10,-8),"出生点",HORIZONTAL_ALIGNMENT_LEFT,-1,15,3,Color("253c3b"))
+			layer.draw_string(font,spawn+Vector2(10,-8),"出生点",HORIZONTAL_ALIGNMENT_LEFT,-1,15,Color("fff0c8"))
+	if item_screen:
 		for sign in item_screen.service.builds.map_signposts():
 			var world_p:=Vector2(sign.x,sign.y)
 			var point:=world_to_screen(world_p)
@@ -279,8 +288,8 @@ func player_markers() -> Array[Dictionary]:
 	return [{"position":player.position,"name":"自己","self":true}]
 
 func _input(event: InputEvent) -> void:
-	if item_screen and item_screen.service.body.sleep_active():return
-	if item_screen and (item_screen.item_modal_open() or get_viewport().gui_is_dragging()):return
+	if item_screen and item_screen.service.body.sleep_active() and event is InputEventKey and event.physical_keycode in [KEY_B,KEY_V,KEY_C]:return
+	if item_screen and (item_screen.item_modal_open(false) or get_viewport().gui_is_dragging()):return
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.physical_keycode==KEY_M:
 			if visible:close_map()

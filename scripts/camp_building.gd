@@ -14,6 +14,7 @@ var gate_parts: Array[Node2D]=[]
 var ground_neighbors: Dictionary={}
 var torch_flame: Sprite2D
 var torch_phase := 0.0
+var fuel_bar: ProgressBar
 
 func _ready() -> void:
 	if manager.states.has(building_id) and manager.states[building_id].kind in ["wood_floor","wood_chest"]:texture_filter=CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
@@ -369,6 +370,10 @@ func setup_torch() -> void:
 	effect.shader=preload("res://scripts/camp_torch_flame.gdshader")
 	torch_flame.material=effect
 	add_child(torch_flame)
+	if not preview:
+		fuel_bar=ProgressBar.new();fuel_bar.position=Vector2(-36,6);fuel_bar.size=Vector2(72,7);fuel_bar.scale.y=1.0/6.0
+		fuel_bar.max_value=float(manager.service.camps.rules.max_fuel);fuel_bar.show_percentage=false;fuel_bar.mouse_filter=Control.MOUSE_FILTER_IGNORE
+		add_child(fuel_bar)
 
 func _process(delta: float) -> void:
 	if damage_seconds>0:
@@ -377,5 +382,10 @@ func _process(delta: float) -> void:
 	if not is_instance_valid(torch_flame):
 		if damage_seconds==0: set_process(false)
 		return
+	var lit: bool=preview or manager.service.camps.fuel_lit(building_id)
+	torch_flame.material.set_shader_parameter("lit",lit)
+	if fuel_bar!=null:
+		fuel_bar.value=float(manager.states.get(building_id,{}).get("fuel",0))
+		preload("res://scripts/item_ui_style.gd").progress_style(fuel_bar,true,lit)
 	torch_phase+=delta
 	torch_flame.material.set_shader_parameter("phase",torch_phase)

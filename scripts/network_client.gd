@@ -18,6 +18,7 @@ func _ready()->void:
 	if value is Dictionary:config=value
 	config["base_dir"]=path.get_base_dir()
 func call_api(operation:String,data:Dictionary={})->Dictionary:
+	var began:=Time.get_ticks_msec()
 	if not str(config.get("server_url","")).begins_with("https://"):return {"ok":false,"error":"服务器地址须使用HTTPS"}
 	var request:=HTTPRequest.new();add_child(request);request.use_threads=true;request.timeout=190 if operation in ["create_world","character","game_snapshot","game_command"] else (8 if operation in ["login","activate"] else 30)
 	request.body_size_limit=8*1024*1024
@@ -38,6 +39,11 @@ func call_api(operation:String,data:Dictionary={})->Dictionary:
 	var error:=request.request(url+"/api/"+operation,headers,HTTPClient.METHOD_POST,JSON.stringify(payload))
 	if error!=OK:request.queue_free();return {"ok":false,"error":"无法发起连接"}
 	var result=await request.request_completed;request.queue_free()
+	if Engine.has_meta("network_timings"):
+		var timings: Dictionary=Engine.get_meta("network_timings")
+		if not timings.has(operation):timings[operation]=[]
+		timings[operation].append(Time.get_ticks_msec()-began)
+	if Engine.get_meta("network_diagnostics",false):print("API_MS ",operation," ",Time.get_ticks_msec()-began," status=",result[1]," ",result[3].get_string_from_utf8().left(100) if result[1]!=200 else "")
 	if result[0]!=HTTPRequest.RESULT_SUCCESS:return {"ok":false,"error":"无法连接服务器（"+str(config.server_url)+"）。请确认独立服务器已启动，且内网地址、端口及证书正确。"}
 	var response=JSON.parse_string(result[3].get_string_from_utf8())
 	if not response is Dictionary:return {"ok":false,"error":"服务器返回数据无效"}

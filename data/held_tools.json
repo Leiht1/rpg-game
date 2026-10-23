@@ -222,8 +222,8 @@
   "weapon:wood_club": {
     "texture": "res://assets/combat/v1/wood_club.png",
     "grip_px": [
-      128,
-      210
+      124,
+      196
     ],
     "scale": 0.18,
     "rotation_degrees": 0,
@@ -235,13 +235,14 @@
       "front": -20,
       "back": -20,
       "side": -30
-    }
+    },
+    "idle_rotation_degrees": 30
   },
   "weapon:tusk_club": {
     "texture": "res://assets/combat/v1/tusk_club.png",
     "grip_px": [
-      128,
-      210
+      124,
+      196
     ],
     "scale": 0.18,
     "rotation_degrees": 0,
@@ -253,6 +254,7 @@
       "front": -20,
       "back": -20,
       "side": -30
-    }
+    },
+    "idle_rotation_degrees": 30
   }
 }

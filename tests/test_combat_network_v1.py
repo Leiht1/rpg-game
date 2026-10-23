@@ -12,7 +12,7 @@ class CombatNetworkTests(unittest.TestCase):
  @classmethod
  def setUpClass(cls):
   cls.tmp=tempfile.TemporaryDirectory(prefix='windrest-combat-')
-  cls.config={'data_dir':cls.tmp.name,'godot':'D:/Godot/Godot_v4.7.2-stable_win64_console.exe','project':str(ROOT)}
+  cls.config={'data_dir':cls.tmp.name,'godot':os.environ.get('WINDREST_GODOT','D:/Godot/Godot_v4.7.2-stable_win64_console.exe'),'project':str(ROOT)}
   cls.host=GameHost(cls.config,{'id':'combat-network-isolated','seed':271828,'map_cells':128})
   cls.base=cls.host.execute()['snapshot']
  @classmethod
@@ -25,16 +25,11 @@ class CombatNetworkTests(unittest.TestCase):
   row={'kind':kind,'layer':d['layer'],'x':x,'y':y,'gx':int(x//96),'gy':int(y//64),'vertical':False,'open':False,'inward':False,'facing':0,'hits':0,'contents':[{} for _ in range(d.get('storage_slots',12))]}
   if kind=='advanced_smokehouse':row['expansion']={'version':1,'fuel_items':{},'job':{}}
   s['buildings']['objects']={'fixture':row};return s
- def test_duel_requires_two_consents_and_one_hit(self):
+ def test_free_pvp_requires_no_consent_and_hits_once(self):
   s=self.fresh();p=s['player_position'];peer={'id':'second','x':p['x']+28,'y':p['y'],'phase':'alive'}
-  r=self.host.execute(s,player_id='first',combat_peers=[peer],operation='combat_duel',args=['second',True]);self.assertTrue(r['ok'],r)
-  r=self.host.execute(r['snapshot'],player_id='first',combat_peers=[peer],operation='combat_attack',args=[{'x':1,'y':0}]);self.assertTrue(r['ok'],r)
-  r=self.host.execute(r['snapshot'],player_id='first',combat_peers=[peer],elapsed=.19);self.assertEqual(r['combat_damage'],[])
-  s=r['snapshot'];s['combat_personal']['attack']={}
-  s=self.host.execute(s,player_id='second',combat_peers=[{'id':'first',**p,'phase':'alive'}],operation='combat_duel',args=['first',True])['snapshot']
   r=self.host.execute(s,player_id='first',combat_peers=[peer],operation='combat_attack',args=[{'x':1,'y':0}]);self.assertTrue(r['ok'],r)
   r=self.host.execute(r['snapshot'],player_id='first',combat_peers=[peer],elapsed=.17);self.assertEqual(r['combat_damage'],[])
-  r=self.host.execute(r['snapshot'],player_id='first',combat_peers=[peer],elapsed=.02);self.assertEqual(len(r['combat_damage']),1);self.assertTrue(r['combat_damage'][0]['duel'])
+  r=self.host.execute(r['snapshot'],player_id='first',combat_peers=[peer],elapsed=.04);self.assertEqual(len(r['combat_damage']),1);self.assertFalse(r['combat_damage'][0]['duel'])
   r=self.host.execute(r['snapshot'],player_id='first',combat_peers=[peer],elapsed=.02);self.assertEqual(r['combat_damage'],[])
  def test_duel_nonlethal_and_formal_death_reconnect(self):
   s=self.fresh();s['body']['health']=3;s['slots'][8]={'item_id':'wood','count':9};s['slots'][9]={'item_id':'boar_tusk','count':2}
@@ -45,11 +40,51 @@ class CombatNetworkTests(unittest.TestCase):
   again=self.host.execute(s,player_id='first',combat_damage=[hit]);self.assertEqual(len(again['snapshot']['combat_world']['relics']),1)
   r=self.host.execute(s,player_id='first',elapsed=3.1);self.assertEqual(r['snapshot']['body']['health'],100);self.assertEqual(r['snapshot']['combat_personal']['phase'],'entering')
   r=self.host.execute(r['snapshot'],player_id='first',elapsed=1.1);self.assertEqual(r['snapshot']['combat_personal']['phase'],'alive')
- def test_relic_owner_and_partial_claim(self):
+ def test_relic_public_and_partial_claim(self):
   s=self.fresh();p=s['player_position'];s['combat_world']['relics']={'r':{**p,'owner':'first','contents':[{'item_id':'wood','count':9}]}}
   s['slots']=[{'item_id':'stone','count':99} for i in range(40)];s['slots'][8]={'item_id':'wood','count':98}
-  r=self.host.execute(s,player_id='second',operation='relic_claim',args=['r',0,{'item_id':'wood','count':9}]);self.assertFalse(r['ok'])
+  r=self.host.execute(s,player_id='second',operation='relic_claim',args=['r',0,{'item_id':'wood','count':9}]);self.assertTrue(r['ok'],r);self.assertEqual(r['snapshot']['combat_world']['relics']['r']['contents'][0]['count'],8)
   r=self.host.execute(s,player_id='first',operation='relic_claim',args=['r',0,{'item_id':'wood','count':9}]);self.assertTrue(r['ok'],r);self.assertEqual(r['snapshot']['slots'][8]['count'],99);self.assertEqual(r['snapshot']['combat_world']['relics']['r']['contents'][0]['count'],8)
+ def boar_fixture(self,night=False):
+  s=self.fresh();p=s['player_position'];x=p['x']+140;y=p['y']
+  s['combat_world'].update(population_initialized=True,population_revision=2,boars={'fixture':{'x':x,'y':y,'home_x':x,'home_y':y,'health':45,'mode':'chase','clock':1.0,'hit':0.0,'generation':0}})
+  s['body_environment']['minute']=1320 if night else 720
+  return s
+ def test_night_boar_speed_and_population_preservation(self):
+  day=self.boar_fixture();night=self.boar_fixture(True)
+  d=self.host.execute(day,elapsed=.1)['snapshot']['combat_world']['boars']['fixture']
+  n=self.host.execute(night,elapsed=.1)['snapshot']['combat_world']['boars']['fixture']
+  origin=day['combat_world']['boars']['fixture']['x']
+  self.assertAlmostEqual((origin-n['x'])/(origin-d['x']),1.2,places=3)
+ def test_boar_tramples_crop_without_rewards(self):
+  s=self.boar_fixture();b=s['combat_world']['boars']['fixture'];defs=json.loads((ROOT/'data/camp_buildings.json').read_text(encoding='utf-8'))
+  s['buildings']['objects']={'plot':{'kind':'tilled_soil','layer':defs['tilled_soil']['layer'],'x':b['x'],'y':b['y'],'gx':int(b['x']//96),'gy':int(b['y']//64),'vertical':False,'open':False,'inward':False,'facing':0,'hits':0,'contents':[{} for _ in range(12)],'crop':'carrot','growth_minutes':0.0,'roots':False,'fertilized':True}}
+  plot=s['buildings']['objects']['plot'];plot['x']=plot['gx']*96+48;plot['y']=plot['gy']*64+32
+  b.update(x=plot['x'],y=plot['y'],home_x=plot['x'],home_y=plot['y'])
+  # Use the configured crop ID rather than a display name.
+  crops=json.loads((ROOT/'data/planting.json').read_text(encoding='utf-8'))['crops']
+  s['buildings']['objects']['plot']['crop']=next(iter(crops))
+  r=self.host.execute(s,elapsed=.1);self.assertTrue(r['ok'],r)
+  plot=r['snapshot']['buildings']['objects']['plot']
+  self.assertEqual(plot['crop'],'');self.assertTrue(plot['roots']);self.assertEqual(plot['growth_minutes'],0)
+  self.assertFalse(plot.get('fertilized',False));self.assertEqual(s['slots'],r['snapshot']['slots'])
+  for kind in ('stone_wall','wood_fence'):
+   fenced=copy.deepcopy(s);plot=fenced['buildings']['objects']['plot'];boar=fenced['combat_world']['boars']['fixture']
+   boar.update(x=plot['x']+72,y=plot['y'],home_x=plot['x']+72,home_y=plot['y'])
+   wall={'kind':kind,'layer':'edge','x':plot['x']+48,'y':plot['y'],'gx':plot['gx']+1,'gy':plot['gy'],'vertical':True,'open':False,'inward':False,'facing':0,'hits':0,'contents':[{} for _ in range(12)]}
+   fenced['buildings']['objects']['wall']=wall
+   r=self.host.execute(fenced,elapsed=1);self.assertTrue(r['ok'],r)
+   self.assertNotEqual(r['snapshot']['buildings']['objects']['plot']['crop'],'')
+   self.assertEqual(r['snapshot']['buildings']['objects']['wall']['hits'],0)
+   self.assertGreater(r['snapshot']['combat_world']['boars']['fixture']['x'],wall['x'])
+ def test_population_revision_preserves_existing_boars(self):
+  s=self.boar_fixture();s['combat_world']['population_revision']=1
+  s['combat_world']['boars']['fixture'].update(health=0,respawn=123,dropped=True,generation=7)
+  r=self.host.execute(s,elapsed=.1);self.assertTrue(r['ok'],r)
+  b=r['snapshot']['combat_world']['boars']['fixture']
+  self.assertEqual(b['health'],0);self.assertEqual(b['generation'],7);self.assertAlmostEqual(b['respawn'],122.9)
+  self.assertEqual(r['snapshot']['combat_world']['population_revision'],2)
+
  def test_invalid_command_never_accepts_damage(self):
   with self.assertRaises(ValueError):validate('combat_damage',[{'amount':999}])
   with self.assertRaises(ValueError):validate('combat_attack',[{'x':float('nan'),'y':0}])
@@ -136,15 +171,15 @@ class CombatNetworkTests(unittest.TestCase):
     for c in chars:c['gameplay']['combat_personal']['phase']='alive';c['gameplay']['body']['health']=100
     chars[1]['x']=chars[0]['x']+28;chars[1]['y']=chars[0]['y'];s.save()
     def command(t,op,args,rid=None):return api('game_command',{'request_id':rid or secrets.token_hex(16),'operation':op,'args':args},t)
-    command(tokens[0],'combat_duel',[chars[1]['id'],True]);command(tokens[1],'combat_duel',[chars[0]['id'],True])
     rid=secrets.token_hex(16);command(tokens[0],'combat_attack',[{'x':1,'y':0}],rid)
-    s.gameplay.clocks[world['id']]=time.monotonic()-.2
+    s.gameplay.clocks[world['id']]=time.monotonic()-.21
+    s.gameplay.tick_ready[world['id']]=0
     api('game_snapshot',{},tokens[0]);self.assertEqual(chars[1]['gameplay']['body']['health'],96)
     command(tokens[0],'combat_attack',[{'x':1,'y':0}],rid);self.assertAlmostEqual(chars[1]['gameplay']['body']['health'],96,places=2)
     c=s.character(s.state['accounts'][s.sessions[tokens[0]]['account']]);c['gameplay']['combat_personal']['attack']={};s.save()
     before=copy.deepcopy(s.state)
     with patch.object(s,'save',side_effect=OSError('injected isolated DB failure')):
-     with self.assertRaises(OSError):command(tokens[0],'combat_duel',[chars[1]['id'],False])
+     with self.assertRaises(OSError):command(tokens[0],'snapshot',[])
     self.assertEqual(s.state,before)
     s.gameplay.close();s.db.close();s=server.Service(config,nav)
     self.assertEqual(s.state,before)

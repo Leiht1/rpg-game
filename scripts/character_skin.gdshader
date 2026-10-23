@@ -12,6 +12,8 @@ vec4 close_eye(vec4 c, vec4 skin, vec2 uv) {
 	float ink=(1.0-smoothstep(.006,.014,abs(uv.y-arc)))*(1.0-smoothstep(.7,.92,abs(d.x)));
 	return mix(c,mix(skin,vec4(.13,.055,.026,skin.a),ink),patch*closure);
 }
+varying vec4 actor_tint;
+void vertex() { actor_tint = COLOR; }
 void fragment() {
 	vec4 c=close_eye(texture(TEXTURE,UV),texture(TEXTURE,vec2(UV.x,side_eye_center.y+.13)),UV);
 	// Recolour only the teal jacket pigment; retain skin, ink and fabric shading.
@@ -25,5 +27,5 @@ void fragment() {
 	mask*=step(skin_region.x,UV.y)*step(UV.y,skin_region.y);
 	float shade=clamp(c.r/.98,.2,1.12);
 	if(skin_enabled) c.rgb=mix(c.rgb,skin_color.rgb*shade,mask);
-	COLOR=c;
+	COLOR=c*actor_tint;
 }

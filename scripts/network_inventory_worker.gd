@@ -16,7 +16,7 @@ func _initialize()->void:
 	var dropped:Dictionary={}
 	if ok:
 		match str(request.operation):
-			"create":pass
+			"create":inv.add("survival_guide",1)
 			"equip":ok=inv.equip(int(request.index))
 			"unequip":ok=inv.unequip(int(request.index))
 			"move":ok=inv.move_slot(int(request.index),int(request.to))

@@ -58,7 +58,7 @@ func _tick(seconds: float, minutes: float, sprinting: bool, working: bool) -> vo
 		sleep_elapsed+=minutes
 		var limit: float=float(sleep_session.get("target",100.0))
 		var elapsed: float=minf(minutes,maxf(0,sleep_duration-(sleep_elapsed-minutes)))
-		energy=minf(limit,energy+elapsed/60.0*float(sleep_session.get("rate",rules.sleep_energy_per_hour)))
+		energy=minf(limit,energy+elapsed/60.0*float(preload("res://scripts/sleep_rules.gd").facility(str(sleep_session.get("source",""))).get("rate",rules.sleep_energy_per_hour)))
 		if sleep_elapsed+0.00001>=sleep_duration or energy+0.00001>=limit:
 			sleep_elapsed=minf(sleep_elapsed,sleep_duration)
 			sleeping=false
@@ -89,7 +89,7 @@ func _tick(seconds: float, minutes: float, sprinting: bool, working: bool) -> vo
 		if rest_clock>=float(rules.recovery_delay_seconds):
 			stamina=minf(100.0,stamina+seconds*float(rules.recovery_per_second)*recovery_factor())
 		if exhausted and stamina>=float(rules.resume_stamina): exhausted=false
-		if hunger>=float(rules.hunger_recovery) and not busy and affected<=0.0: health=minf(100.0,health+minutes/float(rules.health_recovery_game_minutes))
+	health=minf(100.0,health+minutes/float(rules.health_recovery_game_minutes))
 	# Energy reserve integrates diet and activity over days, then body follows slowly.
 	var reserve_input := (hunger-float(rules.reserve_balance_hunger))/(100.0-float(rules.reserve_balance_hunger))-(float(rules.reserve_activity_cost) if sprinting or working else 0.0)
 	reserve=clampf(reserve+(reserve_input-reserve)*days/float(rules.reserve_response_days),-1.0,1.0)

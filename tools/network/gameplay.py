@@ -8,9 +8,9 @@ except ImportError:
     from game_host import GameHost
 
 PERSONAL = frozenset(("slots", "equipment", "equipment_quarantine", "hotbar_equipment",
-                      "selected", "body", "player_position", "lantern_remaining",
+                      "selected", "body", "player_position", "lantern_remaining", "guide_stage",
                       "combat_personal", "network_craft_job", "network_craft_station", "network_active_lamp", "network_lamp_on", "network_fishing", "network_light_clock"))
-ARITY = {"combat_duel":2,"combat_attack":1,"relic_claim":3,"snapshot": 0, "organize": 0, "craft": 2, "craft_cancel": 0, "station": 1,
+ARITY = {"guide":1,"combat_duel":2,"combat_attack":1,"relic_claim":3,"snapshot": 0, "organize": 0, "craft": 2, "craft_cancel": 0, "station": 1,
          "discard": 2, "inventory": None, "camp_act": 4, "camp_feed": 4,
          "camp_place": 3, "camp_build": 3, "building_place": 2,
          "building_toggle": 1, "building_open": 2, "building_bag": 3,
@@ -41,7 +41,7 @@ def validate(operation, args):
             raise ValueError("Invalid gameplay value")
     visit(args)
     signatures = {"combat_duel":(str,bool),"combat_attack":(dict,),"relic_claim":(str,int,dict),
-        "craft": (str, int), "station": (str,), "discard": (int, int),
+        "guide": (int,), "craft": (str, int), "station": (str,), "discard": (int, int),
         "camp_act": (str, str, str, dict), "camp_feed": (str, int, dict, int),
         "camp_place": (dict, int, dict), "camp_build": (dict, str, list),
         "building_place": (dict, list), "building_bag": (dict, int, dict),
@@ -132,6 +132,7 @@ class Gameplay:
             for key in ("slots", "equipment", "hotbar_equipment"):
                 personal[key] = copy.deepcopy(character[key])
             personal["combat_personal"]["phase"] = "entering"
+            personal["guide_stage"] = character.get("guide_stage", 2)
             personal["combat_personal"]["clock"] = 0.0
             spawn = baseline.get("combat_world", {}).get("spawn", initial["player_position"])
             character["x"],character["y"] = spawn["x"],spawn["y"]

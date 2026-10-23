@@ -1,0 +1,28 @@
+[
+  {
+    "client": 0,
+    "exit_code": 0,
+    "markers": [
+      "UNCHANGED_SNAPSHOT_MS 11.502",
+      "MOVEMENT_FRAME_MS median=16.666 p95=16.666 max=16.666 over33=0 samples=179",
+      "REMOTE_SYNC_MS samples=22 p95=217 max_step=5.0",
+      "PREDICTION max_pending=7 ack_age=216 blocked=0 loading=0",
+      "FULL_GAME_MOVEMENT distance=803.357421875 backwards=0",
+      "FULL_GAME_STOP drift=0.0078125 pending=7 correction=(0.0, 0.0)",
+      "FULL_GAME_NATIVE_PASS 48"
+    ]
+  },
+  {
+    "client": 1,
+    "exit_code": 0,
+    "markers": [
+      "UNCHANGED_SNAPSHOT_MS 14.165",
+      "MOVEMENT_FRAME_MS median=16.666 p95=16.666 max=33.332 over33=0 samples=178",
+      "REMOTE_SYNC_MS samples=24 p95=205 max_step=5.0",
+      "PREDICTION max_pending=7 ack_age=233 blocked=0 loading=0",
+      "FULL_GAME_MOVEMENT distance=803.35546875 backwards=0",
+      "FULL_GAME_STOP drift=0.005859375 pending=5 correction=(0.0, -0.001953)",
+      "FULL_GAME_NATIVE_PASS 41"
+    ]
+  }
+]

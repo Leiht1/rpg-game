@@ -259,7 +259,7 @@ func refresh() -> void:
 		var name_label := label(service.database.item(str(id)).name,14)
 		name_label.size_flags_horizontal=Control.SIZE_EXPAND_FILL
 		line.add_child(name_label)
-		var have: int=service.inventory.count_item(str(id))
+		var have: int=service.inventory.count_item(str(id)) if building else service.inventory.craft_count_item(str(id))
 		var need: int=int(row.materials[id])*times
 		var count_label := label("%d / %d"%[have,need],14)
 		count_label.add_theme_color_override("font_color",Color("627642") if have>=need else Color("a44832"))
@@ -267,8 +267,8 @@ func refresh() -> void:
 		detail.add_child(line)
 	var single_reason: String=service.camps.build_check(selected) if building else service.craft_check(selected,1)
 	var reason: String=service.camps.build_check(selected) if building else service.craft_check(selected,times)
-	once.disabled=not single_reason.is_empty()
-	batch.disabled=not reason.is_empty()
+	once.disabled=not single_reason.is_empty() and not service.body.sleep_active()
+	batch.disabled=not reason.is_empty() and not service.body.sleep_active()
 	status.text=reason if not reason.is_empty() else ("材料充足 · 可进入摆放预览" if building else "材料与空间充足 · 可制作 %d 次"%times)
 	if building and reason.is_empty() and service.builds.definitions.get(row.output_id,{}).has("replaces"):
 		status.text="可进入摆放预览 · 替换墙段只补材料差额"
@@ -284,6 +284,8 @@ func submit_selected() -> void:
 	submit(int(quantity.value))
 
 func submit(times: int) -> void:
+	if service.body.sleep_active():
+		service.notice.emit("睡醒了再试试");return
 	if building:
 		screen.world.camp_ui.begin_build(selected)
 		return

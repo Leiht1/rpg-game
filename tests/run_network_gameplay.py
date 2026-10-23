@@ -9,8 +9,10 @@ import subprocess
 import tempfile
 import time
 import socket
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/"tools/network"))
 ENGINE = Path("D:/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64.exe")
 PRIVATE = ROOT/"reports/network-gameplay-v5/private"
 spec = importlib.util.spec_from_file_location("gameplay_native_server", ROOT/"tools/network/server.py")
@@ -48,10 +50,14 @@ def main():
             character = service.character(service.state["accounts"][service.sessions[token]["account"]])
             for index, item in enumerate(("branch", "flint", "plant_fiber", "wood", "stone", "wild_berry")):
                 character["slots"][index+8] = {"item_id": item, "count": 20}
+        service.handle('game_snapshot', {'protocol':1,'version':'0.1.0'}, tokens[0])
+        world = service.state['worlds'][world['id']]
+        actual_spawn = world['gameplay']['combat_world']['spawn']
         for label in ('sync-first','sync-second'):
-            world['drops'][label]={'x':world['spawn'][0]+12,'y':world['spawn'][1], 'contents':[{'item_id':'wood','count':2}]}
+            world['drops'][label]={'x':actual_spawn['x']+12,'y':actual_spawn['y'], 'contents':[{'item_id':'wood','count':2}]}
         service.save()
         cert, unused = server.certificate(service.root)
+        service.gameplay.close()
         service.db.close()
         (folder/"server.json").write_text(json.dumps(config), encoding="utf-8")
         client_config = {"server_url": "https://localhost:24872", "certificate": str(cert), "server_name": "windrest-server", "protocol": 1, "version": "0.1.0"}
@@ -78,6 +84,8 @@ def main():
                 codes = [child.wait(timeout=140) for child, output in children]
                 print("FULL_GAME_NATIVE_EXIT_CODES", codes)
                 if any(codes):raise SystemExit(1)
+                for i in range(2):
+                    if "FULL_GAME_NATIVE_PASS" not in (PRIVATE/("client"+str(i)+".log")).read_text(encoding="utf-8"):raise RuntimeError("Client exited without completing checks")
             finally:
                 for child, output in children:
                     if child.poll() is None:child.terminate();child.wait(timeout=10)

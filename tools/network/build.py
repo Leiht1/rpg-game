@@ -91,6 +91,10 @@ binary_format/embed_pck=false
     subprocess.run(["python","-m","PyInstaller","--noconfirm","--onefile","--name","WindrestServer",
                     "--distpath",str(server),"--workpath",str(out/"build"),"--specpath",str(out/"build"),
                     "--collect-all","PIL","--collect-all","cryptography",str(ROOT/"tools/network/server.py")],check=True)
+    subprocess.run(["python","-m","PyInstaller","--noconfirm","--onefile","--windowed","--name","WindrestMonitor",
+                    "--distpath",str(server),"--workpath",str(out/"monitor-build"),"--specpath",str(out/"monitor-build"),
+                    str(ROOT/"tools/network/monitor.py")],check=True)
+    (out/"View-Server.cmd").write_text('@echo off\r\nstart "" "%~dp0Server\\WindrestMonitor.exe" --config "%~dp0Config\\network-server.json"\r\n',encoding="ascii")
     c=json.loads((ROOT/"config/network-server.json").read_text())
     c["godot"]="../Server/WorldWorker.exe";c["project"]="../Server"
     c["data_dir"]="../Data"
@@ -98,10 +102,10 @@ binary_format/embed_pck=false
     shutil.copy2(ROOT/"config/network-client.json",client/"Config/network-client.json")
     if args.public_certificate:
         shutil.copy2(args.public_certificate,client/"Config/server-public.crt")
-    build_info="Windrest V0.1.0 / full gameplay V5\nGameplay revision: 1\nMovement revision: 2\nClient and server must be updated together.\n"
+    build_info="Windrest V0.1.0 / full gameplay V9\nGameplay revision: 1\nMovement revision: 2\nClient and server must be updated together.\n"
     (client/"BUILD.txt").write_text(build_info,encoding="utf-8")
     (server/"BUILD.txt").write_text(build_info,encoding="utf-8")
-    (out/"Start-Server.cmd").write_text('@echo off\r\n"%~dp0Server\\WindrestServer.exe" --config "%~dp0Config\\network-server.json"\r\npause\r\n',encoding="ascii")
+    (out/"Start-Server.cmd").write_text('@echo off\r\nstart "" "%~dp0Server\\WindrestMonitor.exe" --config "%~dp0Config\\network-server.json"\r\n"%~dp0Server\\WindrestServer.exe" --config "%~dp0Config\\network-server.json"\r\npause\r\n',encoding="ascii")
     (out/"Initialize-Server.cmd").write_text('@echo off\r\n"%~dp0Server\\WindrestServer.exe" --config "%~dp0Config\\network-server.json" --initialize\r\npause\r\n',encoding="ascii")
     for file in (ROOT/"tools/network").glob("*.md"):
         shutil.copy2(file,out/file.name)

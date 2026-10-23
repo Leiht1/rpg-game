@@ -126,3 +126,10 @@ dist/
 /reports/tree-balance-20261022/deploy-baseline.json
 /reports/tree-balance-20261022/packed_check.gd
 /reports/network-sync-fixes-20261022/*.txt
+
+# Isolated multiplayer load fixtures and credentials.
+/reports/network-performance-v7/private/
+
+# Temporary packaged launcher verification copies.
+/reports/network-smoothness-v9/launcher-check/
+/reports/network-smoothness-v9/v10-launcher-check/

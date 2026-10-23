@@ -41,8 +41,10 @@ var tree_hits := {}
 var drops: Array[Node2D]=[]
 var collected_wood := 0
 var items: Node
+var rules_only := false
 
 func configure(gen: WildGenerator, sort_root: Node2D) -> void:
+	rules_only=get_parent().get_meta("network_rules_host",false)
 	generator=gen
 	ground_atlas=load("res://assets/environment/ground_v03/ground_atlas.png")
 	object_root=sort_root
@@ -109,10 +111,15 @@ func _process(_delta: float) -> void:
 func _generate(coord: Vector2i) -> void:
 	# Each worker owns its noises; no RenderingServer or scene nodes here.
 	var local_gen := Gen.new(generator.world_seed,generator.map_cells,generator.plan_snapshot())
-	var packet := local_gen.build_chunk(coord)
+	var packet: Dictionary
+	if rules_only:
+		# The authority needs the same props/resources/colliders, not terrain art.
+		var tiny:=Image.create(1,1,false,Image.FORMAT_RGBA8)
+		packet={"coord":coord,"image":tiny,"environment":tiny,"props":local_gen.props_for_chunk(coord),"build_ms":0.0,"grounding_mask":tiny}
+	else:packet=local_gen.build_chunk(coord)
 	var mask_start:=Time.get_ticks_usec()
 	# Worker uses only immutable generator data. Harvested edits are reconciled on install.
-	packet["grounding_mask"]=GroundingMask.build(local_gen,coord,{})
+	if not rules_only:packet["grounding_mask"]=GroundingMask.build(local_gen,coord,{})
 	packet["build_ms"]+=(Time.get_ticks_usec()-mask_start)/1000.0
 	var empty_stamps:Array[Dictionary]=[] # Approved surface replaces legacy stamps.
 	packet["ground_stamps"]=empty_stamps
@@ -138,7 +145,7 @@ func install_chunk(packet: Dictionary) -> void:
 	material.set_shader_parameter("environment_tex",ImageTexture.create_from_image(packet.environment))
 	material.set_shader_parameter("chunk_origin",Vector2(coord)*Gen.CHUNK_PX)
 	var mask:Image
-	if packet.has("grounding_mask") and harvested.is_empty():mask=packet.grounding_mask
+	if packet.has("grounding_mask") and (rules_only or harvested.is_empty()):mask=packet.grounding_mask
 	else:mask=GroundingMask.build(generator,coord,harvested)
 	material.set_shader_parameter("grounding_mask",ImageTexture.create_from_image(mask))
 	terrain.material=material
@@ -288,6 +295,7 @@ func _refresh_canopy(_alpha:float,coord:Vector2i)->void:
 	if loaded.has(coord):loaded[coord].canopy.queue_redraw()
 
 func refresh_grounding(at:Vector2)->void:
+	if rules_only:return
 	var start:=Time.get_ticks_usec()
 	var center:=chunk_at(at)
 	for y in range(center.y-1,center.y+2):
