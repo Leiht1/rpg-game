@@ -1,0 +1,402 @@
+[
+	{
+		"name": "normal rules with isolated saves",
+		"pass": true
+	},
+	{
+		"name": "formal icon rain_umbrella",
+		"pass": true
+	},
+	{
+		"name": "approved bytes retained rain_umbrella",
+		"pass": true
+	},
+	{
+		"name": "formal icon rain_shelter",
+		"pass": true
+	},
+	{
+		"name": "approved bytes retained rain_shelter",
+		"pass": true
+	},
+	{
+		"name": "normal C crafting list shows umbrella",
+		"pass": true
+	},
+	{
+		"name": "normal V build list shows shelter",
+		"pass": true
+	},
+	{
+		"name": "normal actual umbrella craft",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists front0.0",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm front0.0",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm front0.0",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup front0.0",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists front0.18",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm front0.18",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm front0.18",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup front0.18",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists front0.36",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm front0.36",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm front0.36",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup front0.36",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists front0.52",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm front0.52",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm front0.52",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup front0.52",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists front0.68",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm front0.68",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm front0.68",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup front0.68",
+		"pass": true
+	},
+	{
+		"name": "left arm actually reaches front",
+		"pass": true
+	},
+	{
+		"name": "pickup completes and releases left arm front",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists back0.0",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm back0.0",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm back0.0",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup back0.0",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists back0.18",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm back0.18",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm back0.18",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup back0.18",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists back0.36",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm back0.36",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm back0.36",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup back0.36",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists back0.52",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm back0.52",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm back0.52",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup back0.52",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists back0.68",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm back0.68",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm back0.68",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup back0.68",
+		"pass": true
+	},
+	{
+		"name": "left arm actually reaches back",
+		"pass": true
+	},
+	{
+		"name": "pickup completes and releases left arm back",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists left0.0",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm left0.0",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm left0.0",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup left0.0",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists left0.18",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm left0.18",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm left0.18",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup left0.18",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists left0.36",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm left0.36",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm left0.36",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup left0.36",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists left0.52",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm left0.52",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm left0.52",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup left0.52",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists left0.68",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm left0.68",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm left0.68",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup left0.68",
+		"pass": true
+	},
+	{
+		"name": "left arm actually reaches left",
+		"pass": true
+	},
+	{
+		"name": "pickup completes and releases left arm left",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists right0.0",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm right0.0",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm right0.0",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup right0.0",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists right0.18",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm right0.18",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm right0.18",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup right0.18",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists right0.36",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm right0.36",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm right0.36",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup right0.36",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists right0.52",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm right0.52",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm right0.52",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup right0.52",
+		"pass": true
+	},
+	{
+		"name": "umbrella persists right0.68",
+		"pass": true
+	},
+	{
+		"name": "one visible free pickup arm right0.68",
+		"pass": true
+	},
+	{
+		"name": "item follows left palm right0.68",
+		"pass": true
+	},
+	{
+		"name": "rain protection through pickup right0.68",
+		"pass": true
+	},
+	{
+		"name": "left arm actually reaches right",
+		"pass": true
+	},
+	{
+		"name": "pickup completes and releases left arm right",
+		"pass": true
+	},
+	{
+		"name": "real pickup yields exactly one item",
+		"pass": true
+	},
+	{
+		"name": "real pickup finishes with umbrella equipped",
+		"pass": true
+	},
+	{
+		"name": "ordinary tool pickup unchanged",
+		"pass": true
+	},
+	{
+		"name": "normal actual formal shelter build",
+		"pass": true
+	}
+]

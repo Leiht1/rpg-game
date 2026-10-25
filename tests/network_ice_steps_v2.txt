@@ -1,0 +1,26 @@
+	verify(world.generator.frozen_at(world.player.position),"actual online player starts on the shared frozen lake")
+	for movement_case in [[KEY_D,Vector2.RIGHT],[KEY_S,Vector2.DOWN],[KEY_A,Vector2.LEFT],[KEY_W,Vector2.UP]]:
+		var start: Vector2=world.player.position
+		var event:=InputEventKey.new();event.physical_keycode=movement_case[0];event.keycode=movement_case[0];event.pressed=true;Input.parse_input_event(event)
+		await create_timer(.45).timeout
+		verify((world.player.position-start).dot(movement_case[1])>10,"real online ice acceleration "+str(movement_case[0]))
+		event=event.duplicate();event.pressed=false;Input.parse_input_event(event)
+		await physics_frame
+		verify(world.player.velocity.length()>1,"online ice retains velocity after release "+str(movement_case[0]))
+		var released: Vector2=world.player.position
+		await create_timer(.15).timeout
+		verify(world.player.position.distance_to(released)>.5,"online ice coasting displacement reaches movement queue")
+		for coast in 150:
+			if world.player.velocity.length()<.1:break
+			await create_timer(.025).timeout
+		verify(world.player.velocity.length()<.1,"online ice brakes to finite stop")
+		verify(world.generator.frozen_at(world.player.position),"ice movement remains within the same authoritative lake")
+		await create_timer(.5).timeout
+		for ack_wait in 200:
+			if world.player.pending_inputs.all(func(row):return absf(row.dx)+absf(row.dy)<.0001) and world.player.correction.length()<.1:break
+			await create_timer(.025).timeout
+		var authority: Dictionary=await network.call_api("resume",{})
+		var actual:=Vector2(authority.character.x,authority.character.y)
+		print("ICE_AUTHORITY key=",movement_case[0]," client=",world.player.position," server=",actual," pending=",world.player.pending_inputs.size()," correction=",world.player.correction," cold=",world.item_service.body.cold_level)
+		verify(actual.distance_to(world.player.position)<5,"server accepts actual ice displacement without rollback")
+		verify(world.actors.size()==1 and world.generator.frozen_at(world.actors.values()[0].position),"other client remains visible on the same ice")

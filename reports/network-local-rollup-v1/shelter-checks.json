@@ -1,0 +1,30 @@
+[
+	{
+		"name": "use real roof image alpha to locate actual head overlap",
+		"pass": true
+	},
+	{
+		"name": "unobstructed online roof opaque",
+		"pass": true
+	},
+	{
+		"name": "remote actual head overlap fades roof with local player outside",
+		"pass": true
+	},
+	{
+		"name": "remote occlusion never fades poles or caps",
+		"pass": true
+	},
+	{
+		"name": "remote departure restores roof opacity",
+		"pass": true
+	},
+	{
+		"name": "local occlusion still works with remote outside",
+		"pass": true
+	},
+	{
+		"name": "freed remote actor safely ignored",
+		"pass": true
+	}
+]

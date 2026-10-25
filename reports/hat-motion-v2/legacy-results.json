@@ -1,0 +1,133 @@
+{
+	"checks": [
+		{
+			"name": "legacy original head texture preserved front",
+			"pass": true
+		},
+		{
+			"name": "legacy original head texture preserved back",
+			"pass": true
+		},
+		{
+			"name": "legacy original head texture preserved left",
+			"pass": true
+		},
+		{
+			"name": "legacy original head texture preserved right",
+			"pass": true
+		},
+		{
+			"name": "legacy original head texture preserved front",
+			"pass": true
+		},
+		{
+			"name": "legacy original head texture preserved back",
+			"pass": true
+		},
+		{
+			"name": "legacy original head texture preserved left",
+			"pass": true
+		},
+		{
+			"name": "legacy original head texture preserved right",
+			"pass": true
+		},
+		{
+			"name": "GPU entire upper hair tucked (including far-brim crown) legacy front row0 samples1388 leaks0",
+			"pass": true
+		},
+		{
+			"name": "GPU entire upper hair tucked (including far-brim crown) legacy back row0 samples1502 leaks0",
+			"pass": true
+		},
+		{
+			"name": "GPU entire upper hair tucked (including far-brim crown) legacy left row0 samples1415 leaks0",
+			"pass": true
+		},
+		{
+			"name": "GPU entire upper hair tucked (including far-brim crown) legacy right row0 samples1415 leaks0",
+			"pass": true
+		},
+		{
+			"name": "GPU entire upper hair tucked (including far-brim crown) legacy front row2 samples1430 leaks0",
+			"pass": true
+		},
+		{
+			"name": "GPU entire upper hair tucked (including far-brim crown) legacy back row2 samples1466 leaks0",
+			"pass": true
+		},
+		{
+			"name": "GPU entire upper hair tucked (including far-brim crown) legacy left row2 samples1397 leaks0",
+			"pass": true
+		},
+		{
+			"name": "GPU entire upper hair tucked (including far-brim crown) legacy right row2 samples1397 leaks0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap legacy front row0 columns91 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap legacy back row0 columns91 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap legacy left row0 columns91 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap legacy right row0 columns91 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap legacy front row2 columns91 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap legacy back row2 columns91 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap legacy left row2 columns91 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap legacy right row2 columns91 max0",
+			"pass": true
+		},
+		{
+			"name": "legacy head restored after unequip front",
+			"pass": true
+		},
+		{
+			"name": "legacy head restored after unequip back",
+			"pass": true
+		},
+		{
+			"name": "legacy head restored after unequip left",
+			"pass": true
+		},
+		{
+			"name": "legacy head restored after unequip right",
+			"pass": true
+		},
+		{
+			"name": "legacy head restored after unequip front",
+			"pass": true
+		},
+		{
+			"name": "legacy head restored after unequip back",
+			"pass": true
+		},
+		{
+			"name": "legacy head restored after unequip left",
+			"pass": true
+		},
+		{
+			"name": "legacy head restored after unequip right",
+			"pass": true
+		}
+	],
+	"failed": 0
+}

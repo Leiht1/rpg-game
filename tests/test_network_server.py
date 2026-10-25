@@ -5,6 +5,7 @@ import concurrent.futures
 import importlib.util
 import io
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -19,7 +20,7 @@ class ServerTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory()
         self.config={"data_dir":self.temp.name,"world_cells":128,"max_players":16,
-                     "godot":"D:/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64_console.exe","project":str(Path(__file__).parents[1]),
+                     "godot":os.environ.get("WINDREST_GODOT", "D:/Godot/Godot_v4.7.2-stable_win64.exe"),"project":str(Path(__file__).parents[1]),
                      "hair_ids":{"male":["male_natural"],"female":["female_bob"]}}
         self.nav=lambda w:{"generator":w["generator"],"spawn":[240,240],"step":48,"width":128,"mask":base64.b64encode(bytes([1])*128*128).decode()}
         self.s=server.Service(self.config,self.nav)
@@ -232,6 +233,8 @@ class ServerTests(unittest.TestCase):
         for person in self.s.state["characters"].values():person["gameplay"]={}
         calls=[]
         class Rules:
+            def prepare(self, world):
+                pass
             clocks={w["id"]:99.0}
             def snapshot(inner,world,character):return {"player_position":{"x":character["x"],"y":character["y"]}}
             def apply(inner,world,character,operation="snapshot",args=None,**options):

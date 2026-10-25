@@ -1,0 +1,235 @@
+[
+  {
+    "id": "lamp_magenta_fringe_cleanup",
+    "visible_purple_pixels_before": 1330,
+    "visible_purple_pixels_after": 0,
+    "unchanged_non_fringe_pixels": true
+  },
+  {
+    "id": "lamp_0_off_purple_pixels",
+    "visible_purple_pixels": 0
+  },
+  {
+    "id": "lamp_0_on_purple_pixels",
+    "visible_purple_pixels": 0
+  },
+  {
+    "id": "lamp_body_unchanged_0",
+    "changed_pixels_outside_light_chambers": 0,
+    "state_difference_pixels": 1330,
+    "glyph_center": [
+      161,
+      151
+    ],
+    "glyph_bounds": [
+      136,
+      131,
+      51,
+      41
+    ]
+  },
+  {
+    "id": "lamp_1_off_purple_pixels",
+    "visible_purple_pixels": 0
+  },
+  {
+    "id": "lamp_1_on_purple_pixels",
+    "visible_purple_pixels": 0
+  },
+  {
+    "id": "lamp_body_unchanged_1",
+    "changed_pixels_outside_light_chambers": 0,
+    "state_difference_pixels": 1330,
+    "glyph_center": [
+      161,
+      151
+    ],
+    "glyph_bounds": [
+      136,
+      137,
+      51,
+      28
+    ]
+  },
+  {
+    "id": "lamp_2_off_purple_pixels",
+    "visible_purple_pixels": 0
+  },
+  {
+    "id": "lamp_2_on_purple_pixels",
+    "visible_purple_pixels": 0
+  },
+  {
+    "id": "lamp_body_unchanged_2",
+    "changed_pixels_outside_light_chambers": 0,
+    "state_difference_pixels": 1330,
+    "glyph_center": [
+      161,
+      151
+    ],
+    "glyph_bounds": [
+      136,
+      132,
+      51,
+      39
+    ]
+  },
+  {
+    "id": "lamp_3_off_purple_pixels",
+    "visible_purple_pixels": 0
+  },
+  {
+    "id": "lamp_3_on_purple_pixels",
+    "visible_purple_pixels": 0
+  },
+  {
+    "id": "lamp_body_unchanged_3",
+    "changed_pixels_outside_light_chambers": 0,
+    "state_difference_pixels": 1330,
+    "glyph_center": [
+      161,
+      151
+    ],
+    "glyph_bounds": [
+      136,
+      128,
+      51,
+      46
+    ]
+  },
+  {
+    "id": "whole_rock_0",
+    "source_region": [
+      0,
+      0,
+      490,
+      450
+    ],
+    "source_bounds": [
+      39,
+      129,
+      454,
+      404
+    ],
+    "source_edge_touch": false
+  },
+  {
+    "id": "whole_rock_1",
+    "source_region": [
+      490,
+      0,
+      900,
+      450
+    ],
+    "source_bounds": [
+      44,
+      67,
+      364,
+      407
+    ],
+    "source_edge_touch": false
+  },
+  {
+    "id": "whole_rock_2",
+    "source_region": [
+      900,
+      0,
+      1300,
+      450
+    ],
+    "source_bounds": [
+      44,
+      136,
+      363,
+      408
+    ],
+    "source_edge_touch": false
+  },
+  {
+    "id": "whole_rock_3",
+    "source_region": [
+      1300,
+      0,
+      1774,
+      450
+    ],
+    "source_bounds": [
+      34,
+      195,
+      434,
+      407
+    ],
+    "source_edge_touch": false
+  },
+  {
+    "id": "whole_rock_4",
+    "source_region": [
+      0,
+      450,
+      490,
+      887
+    ],
+    "source_bounds": [
+      85,
+      54,
+      429,
+      346
+    ],
+    "source_edge_touch": false
+  },
+  {
+    "id": "whole_rock_5",
+    "source_region": [
+      490,
+      450,
+      900,
+      887
+    ],
+    "source_bounds": [
+      40,
+      113,
+      383,
+      344
+    ],
+    "source_edge_touch": false
+  },
+  {
+    "id": "whole_rock_6",
+    "source_region": [
+      900,
+      450,
+      1300,
+      887
+    ],
+    "source_bounds": [
+      100,
+      152,
+      333,
+      340
+    ],
+    "source_edge_touch": false
+  },
+  {
+    "id": "whole_rock_7",
+    "source_region": [
+      1300,
+      450,
+      1774,
+      887
+    ],
+    "source_bounds": [
+      111,
+      140,
+      353,
+      345
+    ],
+    "source_edge_touch": false
+  },
+  {
+    "id": "fixed_scale_animation",
+    "scale_keyframes": 0,
+    "instances": 14,
+    "last_stone_end": 2.1559999999999997,
+    "event_seconds": 2.4
+  }
+]

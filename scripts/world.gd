@@ -136,6 +136,9 @@ func _ready() -> void:
 		resource_debug.name="ResourceDebug"
 		add_child(resource_debug)
 		resource_debug.configure(self)
+	item_service.chapter_view=preload("res://scripts/exploration_chapter_view.gd").new()
+	item_service.chapter_view.service=item_service
+	add_child(item_service.chapter_view)
 	AudioFX.bind_world(self)
 	if not Engine.get_meta("fishing_preview_fixture",false):
 		var fishing := preload("res://scripts/fishing.gd").new()

@@ -1,0 +1,46 @@
+[
+  {
+    "name": "old world retains exact date and time",
+    "pass": true
+  },
+  {
+    "name": "old world anchored once at spring day one",
+    "pass": true
+  },
+  {
+    "name": "migration does not alter personal survival",
+    "pass": true
+  },
+  {
+    "name": "shared authority crosses into summer",
+    "pass": true
+  },
+  {
+    "name": "second player never advances shared clock",
+    "pass": true
+  },
+  {
+    "name": "paused host keeps calendar frozen",
+    "pass": true
+  },
+  {
+    "name": "paused health hunger energy and weather remain unchanged",
+    "pass": true
+  },
+  {
+    "name": "new host reload has no offline catchup or repeated seasonal switch",
+    "pass": true
+  },
+  {
+    "name": "new host preserves survival state",
+    "pass": true
+  },
+  {
+    "name": "new host preserves planting and facilities",
+    "pass": true
+  },
+  {
+    "name": "resumed authority continues exactly once",
+    "pass": true
+  }
+]

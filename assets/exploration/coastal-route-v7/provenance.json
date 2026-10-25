@@ -1,0 +1,30 @@
+{
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "estimateUsd": 0,
+  "source": "art\\coastal-route-v7\\generated\\generated.png",
+  "source_sha256": "f42fce132b49a2c1dc10e98c5a4c9a8f7f0c77522894d4f17a570bac39415c06",
+  "processing": "Soft chroma matte; full original paper ratio retained. Text and compass removed by image edit; no patching over annotations with UI rectangles.",
+  "paper_bbox": [
+    14,
+    76,
+    1362,
+    989
+  ],
+  "annotations": [],
+  "compass": false,
+  "symbols": [
+    "two flat stone patches",
+    "winding dotted route",
+    "circled coastal platform",
+    "broken columns",
+    "circular stone seat",
+    "shoreline",
+    "shell drawing"
+  ],
+  "files": {
+    "route-icon.png": "52b1e548ae81c9b8dd8c053debcc4538fa646254aa84792cfd654f8baadb0b17",
+    "route-paper.png": "9910ea92efc8cc42c80335802fd579c1b2bf9158b376fe019ac70f37dc7b9d89"
+  }
+}

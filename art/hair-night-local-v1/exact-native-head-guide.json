@@ -1,0 +1,77 @@
+[
+  {
+    "view": "front",
+    "head_texture": "prototypes/character-creation-v1/heads/front.png",
+    "head_origin": [
+      32,
+      400
+    ],
+    "scale": 2,
+    "original_ear_boxes": [
+      [
+        0,
+        115,
+        38,
+        160
+      ],
+      [
+        186,
+        115,
+        224,
+        160
+      ]
+    ],
+    "target_canvas_origin": [
+      68,
+      130
+    ]
+  },
+  {
+    "view": "back",
+    "head_texture": "prototypes/character-creation-v1/heads/back.png",
+    "head_origin": [
+      544,
+      400
+    ],
+    "scale": 2,
+    "original_ear_boxes": [
+      [
+        0,
+        114,
+        38,
+        160
+      ],
+      [
+        186,
+        114,
+        224,
+        160
+      ]
+    ],
+    "target_canvas_origin": [
+      68,
+      130
+    ]
+  },
+  {
+    "view": "side",
+    "head_texture": "prototypes/character-hair-v2/heads/side.png",
+    "head_origin": [
+      1056,
+      400
+    ],
+    "scale": 2,
+    "original_ear_boxes": [
+      [
+        47,
+        96,
+        105,
+        153
+      ]
+    ],
+    "target_canvas_origin": [
+      68,
+      130
+    ]
+  }
+]

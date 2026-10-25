@@ -1,0 +1,93 @@
+{
+  "date": "2026-10-25",
+  "art_source": "host_image",
+  "route": "generate2dsprite -> generate2dmedia route_media.py -> local:codex-cli",
+  "model": "codex-image_gen; exact backend revision unavailable",
+  "source": "art/mine-blast-v2/registered-source/generated.png",
+  "source_sha256": "d261dd0df32f3bdb346cbd6b4bdfa3f74e17d3795d916bea9f8a80483b071357",
+  "prompt": "art/mine-blast-v2/prompt.txt",
+  "layout_edit_prompt": "art/mine-blast-v2/layout-fix-prompt.txt",
+  "authorization": "User explicitly requested five-second numeric countdown and refined explosion artwork/sequence; not a user aesthetic approval of these exact frames.",
+  "processing": "Raw sheet ownership slicing preserving whole components; recorded ground-contact translation with uniform canvas/padding; interior magenta despill; no per-frame scaling, synthetic smoke circles or cropping of chips.",
+  "canvas": [
+    640,
+    640
+  ],
+  "root": [
+    320,
+    484
+  ],
+  "frames": 16,
+  "duration_ms": 1695,
+  "loop": false,
+  "files": [
+    {
+      "path": "assets/exploration/mine-blast-v2/runtime.json",
+      "sha256": "93e29b38e04fd8ba1fdf41e8463fa6c2957e4b000797737b03c85fd2bb1001d3"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-00.png",
+      "sha256": "993f0c3d1e988d13dae59d3287da9605ca148b9820720f4c5c322c7c28a24b96"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-01.png",
+      "sha256": "2d0bf2df67575302317743f6d507c9fd0c3a84867ed5877911d9e64bfc2427d2"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-02.png",
+      "sha256": "85fd851ab8acbc2d3a03e7031ccba397c30934661d8d344cb3693a86967abb05"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-03.png",
+      "sha256": "42bd2cec3e186690d771b25c1a2f1eab957315315886b238358ec6701b939ad9"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-04.png",
+      "sha256": "80e6c0c4aa72fc2b77cdb4af592655f8acc57dca05b8aa3898335e992180d7f7"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-05.png",
+      "sha256": "e0c16c3cae1d643753a4d23a5eca07f5c1def1a85fe9034b1549606ee91bf87a"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-06.png",
+      "sha256": "16f85dddf4a3fc305749681f78f6db7d043d336862106f55804eb0c4be33cf27"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-07.png",
+      "sha256": "03b4d2d55eb54b6b9f7f319fac6b707b6568c8f86f024f45df0c80461c3f12f1"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-08.png",
+      "sha256": "5fac5bde424ec02c127cc28dff6db9d550fce07cdab5d52208268595c854a721"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-09.png",
+      "sha256": "4a30b079111d282e3debbcf9f6667cc07f4190dd111eada4237e5f78d8d4cf4e"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-10.png",
+      "sha256": "5f775d179cec4db8b11ee22762976a489f924b6aec5e0f2041150c2196d510be"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-11.png",
+      "sha256": "e131131bf5e0a791dbde72a1d83031464f30da199a551edadadd8ecde9035ef1"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-12.png",
+      "sha256": "ad379c4aa601897dfcd346f6a847db3ae6753d6d6b50c153f83e93ae7b9bf3a4"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-13.png",
+      "sha256": "8813bf63585f95639278c6ad28391e97b875c012ff1be808b478ae5dceb731b1"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-14.png",
+      "sha256": "addb8baf114980ed8956261f3cb3a250e2edca126625bf99dec22b22b9bd9ade"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v2/frames/frame-15.png",
+      "sha256": "33d5a9da323882c676b641d15df575055c8fee56ed6265521622d6efd931d07c"
+    }
+  ]
+}

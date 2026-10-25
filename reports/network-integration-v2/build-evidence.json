@@ -1,0 +1,62 @@
+{
+  "godot": "4.7.2.stable.official.ed1daf0bf",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "isolated local uncommitted working tree; no deployment",
+  "files": [
+    {
+      "path": "tools/network/server.py",
+      "sha256": "c290c98c85d0e53db0bc4e35d5b41802396fc29986e3cc6a3dffbb38fdf42e49",
+      "bytes": 60887
+    },
+    {
+      "path": "tools/network/gameplay.py",
+      "sha256": "67936d7a6e1b3c1e21aaa64f127331e4d48a2ed85c66292c0db1d56599073c78",
+      "bytes": 12393
+    },
+    {
+      "path": "tools/network/build.py",
+      "sha256": "e7e31991c0b6e5a781dd815d184e3d1b21e5b0eeb894de60cc068cd0a371abf2",
+      "bytes": 7712
+    },
+    {
+      "path": "data/equipment_visuals.json",
+      "sha256": "59571ede0a9c0dffd8a64f6aedd83355c3771025cd09df0938e3f42b6b502d2e",
+      "bytes": 6573
+    },
+    {
+      "path": "reports/.tmp/network-integration-v2/runtime/Client/Windrest.exe",
+      "sha256": "af0eb49d1c9e65908436ace10c9ada55a1a517a31e838976d035117a337980f3",
+      "bytes": 180901888
+    },
+    {
+      "path": "reports/.tmp/network-integration-v2/runtime/Client/Windrest.pck",
+      "sha256": "f9c47b7f5a5ef2e237f360bbd97900596f77c82b23a65dc8c45f83b42d3ccdfe",
+      "bytes": 49205640
+    },
+    {
+      "path": "reports/.tmp/network-integration-v2/runtime/Server/WindrestServer.exe",
+      "sha256": "ef52e18075f2721c3f4104020eb2e99b84adbe1576b20895c0b43fb69c113b37",
+      "bytes": 34680916
+    },
+    {
+      "path": "reports/.tmp/network-integration-v2/runtime/Server/WorldWorker.pck",
+      "sha256": "f9c47b7f5a5ef2e237f360bbd97900596f77c82b23a65dc8c45f83b42d3ccdfe",
+      "bytes": 49205640
+    },
+    {
+      "path": "assets/season_gear/sleeve-v2/wool_sweater-back-arm.png",
+      "sha256": "b7fcd47ce999bd9b5ac55db5bf421ac840252855dfb4fe9d516b58bf6a6cfb02",
+      "bytes": 10132
+    },
+    {
+      "path": "assets/season_gear/sleeve-v2/wool_sweater-front-arm.png",
+      "sha256": "b7fcd47ce999bd9b5ac55db5bf421ac840252855dfb4fe9d516b58bf6a6cfb02",
+      "bytes": 10132
+    },
+    {
+      "path": "assets/season_gear/sleeve-v2/wool_sweater-side-arm.png",
+      "sha256": "fb46ed20c295f3a698ff377e590108058f214013b4d8fe00c3befa5c03ac0d40",
+      "bytes": 10114
+    }
+  ]
+}

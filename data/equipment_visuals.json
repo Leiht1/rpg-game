@@ -1,1 +1,243 @@
-{}
+{
+  "clothing:wool_hat": {
+    "front": [
+      {
+        "parent": "Visual/Pelvis/Head/Sprite",
+        "texture": "res://assets/season_gear/v1/wool_hat-front.png",
+        "display_width": 236,
+        "position": [
+          0,
+          0
+        ],
+        "band_y": 0,
+        "mask_texture": "res://assets/season_gear/v1/wool_hat-front.png",
+        "join_texture": "res://assets/season_gear/v1/wool_hat-front-join.png",
+        "clip_below": -6
+      }
+    ],
+    "back": [
+      {
+        "parent": "Visual/Pelvis/Head/Sprite",
+        "texture": "res://assets/season_gear/v1/wool_hat-back.png",
+        "display_width": 236,
+        "position": [
+          0,
+          8
+        ],
+        "band_y": 8,
+        "mask_texture": "res://assets/season_gear/v1/wool_hat-back.png",
+        "join_texture": "res://assets/season_gear/v1/wool_hat-back-join.png",
+        "clip_below": 2
+      }
+    ],
+    "side": [
+      {
+        "parent": "Visual/Pelvis/Head/Sprite",
+        "texture": "res://assets/season_gear/v1/wool_hat-side.png",
+        "display_width": 236,
+        "position": [
+          -10,
+          0
+        ],
+        "band_y": 0,
+        "mask_texture": "res://assets/season_gear/v1/wool_hat-side.png",
+        "join_texture": "res://assets/season_gear/v1/wool_hat-side-join.png",
+        "clip_below": -6
+      }
+    ]
+  },
+  "clothing:straw_hat": {
+    "front": [
+      {
+        "parent": "Visual/Pelvis/Head/Sprite",
+        "texture": "res://assets/season_gear/v1/straw_hat-front-rear.png",
+        "display_width": 300,
+        "position": [
+          0,
+          3
+        ],
+        "band_y": 3,
+        "behind": true
+      },
+      {
+        "parent": "Visual/Pelvis/Head/Sprite",
+        "texture": "res://assets/season_gear/v1/straw_hat-front-foreground.png",
+        "display_width": 300,
+        "position": [
+          0,
+          3
+        ],
+        "band_y": 3,
+        "mask_texture": "res://assets/season_gear/v1/straw_hat-front.png",
+        "join_texture": "res://assets/season_gear/v1/straw_hat-front-join.png",
+        "clip_below": -3
+      }
+    ],
+    "back": [
+      {
+        "parent": "Visual/Pelvis/Head/Sprite",
+        "texture": "res://assets/season_gear/v1/straw_hat-back-rear.png",
+        "display_width": 300,
+        "position": [
+          0,
+          8
+        ],
+        "band_y": 8,
+        "behind": true
+      },
+      {
+        "parent": "Visual/Pelvis/Head/Sprite",
+        "texture": "res://assets/season_gear/v1/straw_hat-back-foreground.png",
+        "display_width": 300,
+        "position": [
+          0,
+          8
+        ],
+        "band_y": 8,
+        "mask_texture": "res://assets/season_gear/v1/straw_hat-back.png",
+        "join_texture": "res://assets/season_gear/v1/straw_hat-back-join.png",
+        "clip_below": 2
+      }
+    ],
+    "side": [
+      {
+        "parent": "Visual/Pelvis/Head/Sprite",
+        "texture": "res://assets/season_gear/v1/straw_hat-side-rear.png",
+        "display_width": 300,
+        "position": [
+          -10,
+          0
+        ],
+        "band_y": 0,
+        "behind": true
+      },
+      {
+        "parent": "Visual/Pelvis/Head/Sprite",
+        "texture": "res://assets/season_gear/v1/straw_hat-side-foreground.png",
+        "display_width": 300,
+        "position": [
+          -10,
+          0
+        ],
+        "band_y": 0,
+        "mask_texture": "res://assets/season_gear/v1/straw_hat-side.png",
+        "join_texture": "res://assets/season_gear/v1/straw_hat-side-join.png",
+        "clip_below": -6
+      }
+    ]
+  },
+  "clothing:wool_sweater": {
+    "foreground_arms": true,
+    "front": [
+      {
+        "parent": "Visual/Pelvis/Torso",
+        "texture": "res://assets/season_gear/v1/wool_sweater-front-torso.png",
+        "replace": true
+      },
+      {
+        "parent": "Visual/ArmLBehind",
+        "texture": "res://assets/season_gear/sleeve-v2/wool_sweater-front-arm.png",
+        "replace": true,
+        "skin_region": [
+          0.86,
+          1.0
+        ]
+      },
+      {
+        "parent": "Visual/Pelvis/ArmR/Sprite",
+        "texture": "res://assets/season_gear/sleeve-v2/wool_sweater-front-arm.png",
+        "replace": true,
+        "skin_region": [
+          0.86,
+          1.0
+        ]
+      }
+    ],
+    "back": [
+      {
+        "parent": "Visual/Pelvis/Torso",
+        "texture": "res://assets/season_gear/v1/wool_sweater-back-torso.png",
+        "replace": true
+      },
+      {
+        "parent": "Visual/ArmLBehind",
+        "texture": "res://assets/season_gear/sleeve-v2/wool_sweater-back-arm.png",
+        "replace": true,
+        "skin_region": [
+          0.86,
+          1.0
+        ]
+      },
+      {
+        "parent": "Visual/Pelvis/ArmR/Sprite",
+        "texture": "res://assets/season_gear/sleeve-v2/wool_sweater-back-arm.png",
+        "replace": true,
+        "skin_region": [
+          0.86,
+          1.0
+        ]
+      }
+    ],
+    "side": [
+      {
+        "parent": "Visual/Pelvis/Torso",
+        "texture": "res://assets/season_gear/v1/wool_sweater-side-torso.png",
+        "replace": true
+      },
+      {
+        "parent": "Visual/ArmLBehind",
+        "texture": "res://assets/season_gear/sleeve-v2/wool_sweater-side-arm.png",
+        "replace": true,
+        "skin_region": [
+          0.86,
+          1.0
+        ]
+      },
+      {
+        "parent": "Visual/Pelvis/ArmR/Sprite",
+        "texture": "res://assets/season_gear/sleeve-v2/wool_sweater-side-arm.png",
+        "replace": true,
+        "skin_region": [
+          0.86,
+          1.0
+        ]
+      }
+    ]
+  },
+  "clothing:straw_raincoat": {
+    "foreground_arms": true,
+    "front": [
+      {
+        "parent": "Visual/Pelvis/Torso",
+        "texture": "res://assets/season_gear/v1/straw_raincoat-front-torso.png",
+        "scale": 1.0,
+        "position": [
+          0,
+          0
+        ]
+      }
+    ],
+    "back": [
+      {
+        "parent": "Visual/Pelvis/Torso",
+        "texture": "res://assets/season_gear/v1/straw_raincoat-back-torso.png",
+        "scale": 1.0,
+        "position": [
+          0,
+          0
+        ]
+      }
+    ],
+    "side": [
+      {
+        "parent": "Visual/Pelvis/Torso",
+        "texture": "res://assets/season_gear/v1/straw_raincoat-side-torso.png",
+        "scale": 1.0,
+        "position": [
+          0,
+          0
+        ]
+      }
+    ]
+  }
+}

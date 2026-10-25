@@ -1,0 +1,21 @@
+{
+  "art_source": "host_image",
+  "route": "image_gen",
+  "model": "not disclosed",
+  "source": "source.png",
+  "ownership_split_x": 1000,
+  "processing": "ownership x=1000, then generate2dsprite process/native_alpha/both alpha hygiene, full components, 512px fit with transparent margin",
+  "display_sizes": {
+    "remains_width": 88,
+    "bottle_icon": "existing inventory sizing"
+  },
+  "runtime": {
+    "bottle.png": "a83e4a4c768b0b8592fbe00d351c0b633b715c562f80b6e6946ad035133eb1ba",
+    "remains.png": "42ff5b6b088ea9b113deb4a0a04e87327d687e50799f20876861eeaff8c13412"
+  },
+  "qa": [
+    "raw-qc/sheet-qc.json",
+    "remains-clean/pipeline-meta.json",
+    "bottle-clean/pipeline-meta.json"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-25",
+  "art_source": "existing",
+  "source": "art/mine-blast-v2/assembled/frames",
+  "generation_route": "Original v2 images: generate2dsprite -> route_media -> local:codex-cli; this revision translates existing pixels without new generation",
+  "change": "2D ignition-contact registration, fixed scale and canvas; premultiplied-alpha temporal blending in runtime shader; retain original 1695ms timing",
+  "shared_root": [
+    320,
+    484
+  ],
+  "files": [
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-00.png",
+      "sha256": "c219f1f08ed40329006b903645fef32317cc54202910b23b50ab5483344d3b37"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-01.png",
+      "sha256": "ef791c7f5c0f48a08da3692892e566e9e50f3ab7518a8f88c1c46972fd6a1e2c"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-02.png",
+      "sha256": "76e1a53cc99954ee7c496e6d6bf50d932fe4b9f4761002ff20801584531a3d64"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-03.png",
+      "sha256": "31d6f05c54629a4fc11d00eca035f425f248657aabc7612c3418eeb1a9ca348e"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-04.png",
+      "sha256": "38dd726d50a71eddb97efe22e9e2602ddad3f22c8a2d913848febbcf766a71d0"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-05.png",
+      "sha256": "e856d92d23bdff39006f8fc9ce46fb45372b783d70db2061c5a88c53d36f81f0"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-06.png",
+      "sha256": "43bd4e89640350a1d68ff7db49f914c143afe1147c651578fbc64411bda4a461"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-07.png",
+      "sha256": "22b606ce4ab31dedcbd9416975b41e9e6a3c9af8b752546826bb4c2225640a55"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-08.png",
+      "sha256": "387fd338171053681d4839941d9c92f0353aa2ef3a26a4769631420a92d152f9"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-09.png",
+      "sha256": "1a3fed33c21ee4af016bb5a9818a19d7610d064c28b6141cd6d60a869ccc62b4"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-10.png",
+      "sha256": "d4d8d491437484cb9137b7a389a03013b2e02b4360694219546a2d6ff3784b50"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-11.png",
+      "sha256": "43dc76ac31eadb635add0d68ac0e1af0f44de10d4c8eb8fe553114d885969cdb"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-12.png",
+      "sha256": "d058ea2074a687b2b9df429b6175e5e1a34da407be15b51065c875d74e67cddb"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-13.png",
+      "sha256": "85355b1940d21c129eae9456fc88a06ae383b5c6cc49d6a8d4968a8a597a067e"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-14.png",
+      "sha256": "c51146c136e94c7cb51c0ab5dc8159a5d619f287372f6f168aed34791bdb65c4"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/frames/frame-15.png",
+      "sha256": "ac3c199b9047cb6f0619ad7229d561a3105aa9dce236598884c13ddf6571aead"
+    },
+    {
+      "path": "assets/exploration/mine-blast-v3/runtime.json",
+      "sha256": "93e29b38e04fd8ba1fdf41e8463fa6c2957e4b000797737b03c85fd2bb1001d3"
+    }
+  ]
+}

@@ -12,8 +12,8 @@ func render(player: Node2D, session: Dictionary, manager: RefCounted) -> Vector2
 	group.show()
 	# Resolve the existing appearance pipeline in side view before copying head layers.
 	player.animation_player.play("side_breathe");player.animation_player.seek(0,true)
-	player.appearance.apply(player.character,player.equipment_inventory,"right")
 	player.look_renderer.apply(player.character,player.character_look,player.equipment_inventory,"right")
+	player.appearance.apply(player.character,player.equipment_inventory,"right")
 	preload("res://scripts/body_shape.gd").apply(player.character,player.body.build)
 	var original: Node2D=player.character.get_node("Visual/Pelvis/Head")
 	var signature := fingerprint(original)
@@ -25,7 +25,7 @@ func render(player: Node2D, session: Dictionary, manager: RefCounted) -> Vector2
 		var copy: Node2D=original.duplicate();copy.name="CurrentHead";pivot.add_child(copy)
 		copy.position=-original.get_node("Sprite").position;copy.rotation=0;copy.scale=Vector2.ONE
 		var sprite: Sprite2D=copy.get_node("Sprite")
-		if not player.character_look.is_empty():face=sprite.material.duplicate()
+		if not player.character_look.is_empty() or (sprite.material is ShaderMaterial and sprite.material.shader==preload("res://scripts/hat_hair_clip.gdshader")):face=sprite.material.duplicate()
 		else:
 			face=ShaderMaterial.new();face.shader=preload("res://scripts/sleep_face.gdshader")
 		face.set_shader_parameter("closure",1.0);face.set_shader_parameter("front_view",false)
@@ -68,6 +68,6 @@ func fingerprint(node: Node) -> String:
 	if node is CanvasItem: value+=str(node.modulate)+str(node.visible)
 	if node is Sprite2D:
 		value+=str(node.texture)+str(node.flip_h)+str(node.flip_v)
-		if node.material is ShaderMaterial:value+=str(node.material.get_shader_parameter("skin_color"))
+		if node.material is ShaderMaterial and node.material.shader==preload("res://scripts/character_skin.gdshader"):value+=str(node.material.get_shader_parameter("skin_color"))
 	for child in node.get_children(): value+=fingerprint(child)
 	return value

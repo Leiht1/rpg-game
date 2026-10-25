@@ -1,0 +1,30 @@
+[
+	{
+		"name": "local observer blocks visible relocation",
+		"pass": true
+	},
+	{
+		"name": "distant authenticated peer blocks visible relocation",
+		"pass": true
+	},
+	{
+		"name": "offscreen vertical location remains eligible",
+		"pass": true
+	},
+	{
+		"name": "shared host schedules an offscreen encounter",
+		"pass": true
+	},
+	{
+		"name": "actual relocation hidden from both peers at widest zoom",
+		"pass": true
+	},
+	{
+		"name": "existing boar reused without population growth",
+		"pass": true
+	},
+	{
+		"name": "second request cannot repeat same-night relocation",
+		"pass": true
+	}
+]

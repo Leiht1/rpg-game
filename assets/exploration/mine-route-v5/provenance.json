@@ -1,0 +1,27 @@
+{
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "estimateUsd": 0,
+  "source": "art\\mine-clues-route-v5\\route\\generated.png",
+  "source_sha256": "12335dd2f65e00a2200a4782547d8eaec0ac0d1a822133e74c3b6b5948888e3f",
+  "processing": "Soft magenta matte; complete paper retained at original ratio; separately painted compass extracted and rotated by actual world hint; no program-drawn route",
+  "paper_bbox": [
+    28,
+    26,
+    1400,
+    1028
+  ],
+  "north_source_region": [
+    1364,
+    910,
+    1435,
+    1065
+  ],
+  "files": {
+    "north.png": "3c333e920b9fa3e8c489eca93aff357bb61e95591ba7722f9c7a1e5b6bf3a8ef",
+    "route-icon.png": "ee3d18717fdb39b72b25b9ed97819857fb8f78e08e77503d433b6570fdbfe9e2",
+    "route-paper.png": "e7a36579780b811bf64391dd9803c91abc279f675ed171d07683d5c85ac11e14"
+  },
+  "quality": "Actual game-size visual inspection is separate from structural checks."
+}

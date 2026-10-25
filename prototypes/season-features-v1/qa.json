@@ -1,0 +1,193 @@
+{
+  "status": "candidate_pending_user",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "source_sha256": "439e19e81d6be570628435b59f24520ca6b00bd10700a3ad3d79f7e154a2aa97",
+  "native_window": [
+    1280,
+    720
+  ],
+  "source_alpha_extrema": [
+    0,
+    255
+  ],
+  "frames": [
+    {
+      "file": "prototypes\\season-features-v1\\frame-00.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        119,
+        45,
+        416,
+        483
+      ],
+      "sha_matches": true
+    },
+    {
+      "file": "prototypes\\season-features-v1\\frame-01.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        96,
+        43,
+        416,
+        483
+      ],
+      "sha_matches": true
+    },
+    {
+      "file": "prototypes\\season-features-v1\\frame-02.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        96,
+        91,
+        416,
+        483
+      ],
+      "sha_matches": true
+    },
+    {
+      "file": "prototypes\\season-features-v1\\frame-03.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        96,
+        81,
+        369,
+        483
+      ],
+      "sha_matches": true
+    },
+    {
+      "file": "prototypes\\season-features-v1\\frame-04.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        105,
+        71,
+        416,
+        436
+      ],
+      "sha_matches": true
+    },
+    {
+      "file": "prototypes\\season-features-v1\\frame-05.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        96,
+        71,
+        416,
+        441
+      ],
+      "sha_matches": true
+    },
+    {
+      "file": "prototypes\\season-features-v1\\frame-06.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        96,
+        71,
+        416,
+        386
+      ],
+      "sha_matches": true
+    },
+    {
+      "file": "prototypes\\season-features-v1\\frame-07.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        96,
+        71,
+        366,
+        438
+      ],
+      "sha_matches": true
+    },
+    {
+      "file": "prototypes\\season-features-v1\\frame-08.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        96,
+        28,
+        416,
+        457
+      ],
+      "sha_matches": true
+    },
+    {
+      "file": "prototypes\\season-features-v1\\frame-09.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        96,
+        28,
+        416,
+        457
+      ],
+      "sha_matches": true
+    },
+    {
+      "file": "prototypes\\season-features-v1\\frame-10.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        96,
+        28,
+        416,
+        457
+      ],
+      "sha_matches": true
+    },
+    {
+      "file": "prototypes\\season-features-v1\\frame-11.png",
+      "size": [
+        512,
+        512
+      ],
+      "alpha_bbox": [
+        96,
+        30,
+        384,
+        457
+      ],
+      "sha_matches": true
+    }
+  ],
+  "warnings": [
+    {
+      "id": "SOURCE_SNOW_CROSS_CELL",
+      "file": "art\\season-features-v1\\generated\\generated.png",
+      "message": "Snow art extends across equal column boundaries. Interior grain is used with original-object alpha, not as a complete placed cap sprite."
+    }
+  ]
+}

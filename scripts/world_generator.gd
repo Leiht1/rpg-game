@@ -177,6 +177,7 @@ func ecology_weights(p:Vector2)->Color:
 	return ecology_field.get_pixel(x,y).lerp(ecology_field.get_pixel(x+1,y),uv.x-x).lerp(ecology_field.get_pixel(x,y+1).lerp(ecology_field.get_pixel(x+1,y+1),uv.x-x),uv.y-y)
 
 func sample(p:Vector2,_spawn_clearance:bool=true)->Vector4:
+	if preload("res://scripts/mine_rules.gd").pocket(p,extent):return Vector4(.0,1.0,0.0,0.0)
 	var value:=super.sample(p,false)
 	value.z=maxf(value.z,1.-smoothstep(-48.,64.,coast_distance(p)))
 	var ecology:=ecology_weights(p)

@@ -1,0 +1,522 @@
+[
+	{
+		"name": "isolated default window",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists front0.0",
+		"pass": true
+	},
+	{
+		"name": "no extra arm front0.0",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged front0.0",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent front0.0",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists front0.18",
+		"pass": true
+	},
+	{
+		"name": "no extra arm front0.18",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged front0.18",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent front0.18",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists front0.36",
+		"pass": true
+	},
+	{
+		"name": "no extra arm front0.36",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged front0.36",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent front0.36",
+		"pass": true
+	},
+	{
+		"name": "GPU head/canopy overlap front samples=654 errors=0",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists front0.52",
+		"pass": true
+	},
+	{
+		"name": "no extra arm front0.52",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged front0.52",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent front0.52",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists front0.68",
+		"pass": true
+	},
+	{
+		"name": "no extra arm front0.68",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged front0.68",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent front0.68",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists back0.0",
+		"pass": true
+	},
+	{
+		"name": "no extra arm back0.0",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged back0.0",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent back0.0",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists back0.18",
+		"pass": true
+	},
+	{
+		"name": "no extra arm back0.18",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged back0.18",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent back0.18",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists back0.36",
+		"pass": true
+	},
+	{
+		"name": "no extra arm back0.36",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged back0.36",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent back0.36",
+		"pass": true
+	},
+	{
+		"name": "GPU head/canopy overlap back samples=644 errors=0",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists back0.52",
+		"pass": true
+	},
+	{
+		"name": "no extra arm back0.52",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged back0.52",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent back0.52",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists back0.68",
+		"pass": true
+	},
+	{
+		"name": "no extra arm back0.68",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged back0.68",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent back0.68",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists left0.0",
+		"pass": true
+	},
+	{
+		"name": "no extra arm left0.0",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged left0.0",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent left0.0",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists left0.18",
+		"pass": true
+	},
+	{
+		"name": "no extra arm left0.18",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged left0.18",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent left0.18",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists left0.36",
+		"pass": true
+	},
+	{
+		"name": "no extra arm left0.36",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged left0.36",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent left0.36",
+		"pass": true
+	},
+	{
+		"name": "GPU head/canopy overlap left samples=1136 errors=0",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists left0.52",
+		"pass": true
+	},
+	{
+		"name": "no extra arm left0.52",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged left0.52",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent left0.52",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists left0.68",
+		"pass": true
+	},
+	{
+		"name": "no extra arm left0.68",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged left0.68",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent left0.68",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists right0.0",
+		"pass": true
+	},
+	{
+		"name": "no extra arm right0.0",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged right0.0",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent right0.0",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists right0.18",
+		"pass": true
+	},
+	{
+		"name": "no extra arm right0.18",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged right0.18",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent right0.18",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists right0.36",
+		"pass": true
+	},
+	{
+		"name": "no extra arm right0.36",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged right0.36",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent right0.36",
+		"pass": true
+	},
+	{
+		"name": "GPU head/canopy overlap right samples=1138 errors=0",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists right0.52",
+		"pass": true
+	},
+	{
+		"name": "no extra arm right0.52",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged right0.52",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent right0.52",
+		"pass": true
+	},
+	{
+		"name": "left umbrella persists right0.68",
+		"pass": true
+	},
+	{
+		"name": "no extra arm right0.68",
+		"pass": true
+	},
+	{
+		"name": "native right pickup unchanged right0.68",
+		"pass": true
+	},
+	{
+		"name": "native right carry parent right0.68",
+		"pass": true
+	},
+	{
+		"name": "actual right-hand pickup commits once",
+		"pass": true
+	},
+	{
+		"name": "actual pickup ends still holding left umbrella",
+		"pass": true
+	},
+	{
+		"name": "real drag starts stone_axe",
+		"pass": true
+	},
+	{
+		"name": "drag begin no held pose jump stone_axe",
+		"pass": true
+	},
+	{
+		"name": "held item stable during drag stone_axe",
+		"pass": true
+	},
+	{
+		"name": "real drag commits once stone_axe",
+		"pass": true
+	},
+	{
+		"name": "real drag starts rain_umbrella",
+		"pass": true
+	},
+	{
+		"name": "drag begin no held pose jump rain_umbrella",
+		"pass": true
+	},
+	{
+		"name": "held item stable during drag rain_umbrella",
+		"pass": true
+	},
+	{
+		"name": "canopy stays visible and fixed during real drag",
+		"pass": true
+	},
+	{
+		"name": "real drag commits once rain_umbrella",
+		"pass": true
+	},
+	{
+		"name": "real drag starts stone_axe",
+		"pass": true
+	},
+	{
+		"name": "drag begin no held pose jump stone_axe",
+		"pass": true
+	},
+	{
+		"name": "held item stable during drag stone_axe",
+		"pass": true
+	},
+	{
+		"name": "real drag commits once stone_axe",
+		"pass": true
+	},
+	{
+		"name": "real drag starts rain_umbrella",
+		"pass": true
+	},
+	{
+		"name": "drag begin no held pose jump rain_umbrella",
+		"pass": true
+	},
+	{
+		"name": "held item stable during drag rain_umbrella",
+		"pass": true
+	},
+	{
+		"name": "canopy stays visible and fixed during real drag",
+		"pass": true
+	},
+	{
+		"name": "real drag commits once rain_umbrella",
+		"pass": true
+	},
+	{
+		"name": "real shelter placement site",
+		"pass": true
+	},
+	{
+		"name": "reject shelter pillar on existing tilled soil",
+		"pass": true
+	},
+	{
+		"name": "reject placement without material loss",
+		"pass": true
+	},
+	{
+		"name": "normal shelter still builds",
+		"pass": true
+	},
+	{
+		"name": "new roof opaque and four separately sorted poles",
+		"pass": true
+	},
+	{
+		"name": "reverse order soil cannot cover pole",
+		"pass": true
+	},
+	{
+		"name": "outside shelter keeps roof opaque",
+		"pass": true
+	},
+	{
+		"name": "only canopy fades when blocking player",
+		"pass": true
+	},
+	{
+		"name": "visual eaves occlusion independent of gameplay rain coverage",
+		"pass": true
+	},
+	{
+		"name": "roof recovers opacity after leaving",
+		"pass": true
+	},
+	{
+		"name": "actual wooden pole cap stays opaque (58.0, 18.0)",
+		"pass": true
+	},
+	{
+		"name": "actual wooden pole cap stays opaque (580.0, 18.0)",
+		"pass": true
+	},
+	{
+		"name": "actual wooden pole cap stays opaque (26.0, 190.0)",
+		"pass": true
+	},
+	{
+		"name": "actual wooden pole cap stays opaque (615.0, 190.0)",
+		"pass": true
+	},
+	{
+		"name": "GPU actual fuelled campfire stays below canopy",
+		"pass": true
+	},
+	{
+		"name": "GPU canopy covers objects physically below roof",
+		"pass": true
+	},
+	{
+		"name": "GPU foreground objects draw above roof",
+		"pass": true
+	},
+	{
+		"name": "GPU pole occludes object behind foot 0",
+		"pass": true
+	},
+	{
+		"name": "GPU foreground object occludes pole 0",
+		"pass": true
+	},
+	{
+		"name": "GPU pole occludes object behind foot 1",
+		"pass": true
+	},
+	{
+		"name": "GPU foreground object occludes pole 1",
+		"pass": true
+	},
+	{
+		"name": "GPU pole occludes object behind foot 2",
+		"pass": true
+	},
+	{
+		"name": "GPU foreground object occludes pole 2",
+		"pass": true
+	},
+	{
+		"name": "GPU pole occludes object behind foot 3",
+		"pass": true
+	},
+	{
+		"name": "GPU foreground object occludes pole 3",
+		"pass": true
+	}
+]

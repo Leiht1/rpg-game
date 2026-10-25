@@ -70,7 +70,7 @@ func configure(owner_world: Node) -> void:
 	var list := VBoxContainer.new();list.size_flags_horizontal=Control.SIZE_EXPAND_FILL;scroll.add_child(list)
 	for id in manager.rules.recipes:
 		var recipe: Dictionary=manager.rules.recipes[id]
-		if recipe.get("legacy_only",false): continue
+		if recipe.get("legacy_only",false) or recipe.get("fallback_only",false): continue
 		recipe_keys.append(id)
 		var button := Button.new();button.text=recipe.name+(" · 尚未解锁" if not recipe.get("default_unlocked",true) else "")
 		button.icon=world.item_service.texture(recipe.output,"icon");button.expand_icon=true;button.add_theme_constant_override("icon_max_width",40)
@@ -214,11 +214,18 @@ func refresh() -> void:
 	var inventory: ItemInventory=world.item_service.inventory
 	book_scroll.visible=mode=="book";free_box.visible=mode=="free"
 	var material_selection := selected_materials()
-	var chosen: String=selected if mode=="book" else manager.match_materials(material_selection)
+	var chosen: String=selected if mode=="book" else manager.experiment_recipe(material_selection)
 	var recipe: Dictionary=manager.rules.recipes.get(chosen,{})
 	var revealed: bool=manager.known(chosen)
-	var signature := mode+chosen+str(manager.discovered)+str(inventory.slots)+str(material_selection)
+	var counts := {}
+	for definition in manager.rules.recipes.values():
+		if definition.get("legacy_only",false):continue
+		for id in definition.materials:counts[id]=inventory.count_item(id)
+	var signature := mode+chosen+str(manager.discovered)+str(counts)+str(material_selection)
 	var enough := not recipe.is_empty()
+	if mode=="free":
+		for id in material_selection:
+			if material_selection[id]<1 or inventory.count_item(id)<int(material_selection[id]):enough=false
 	for id in recipe.get("materials",{}):
 		if inventory.count_item(id)<int(recipe.materials[id]): enough=false
 	if last_detail!=signature:
@@ -234,8 +241,8 @@ func refresh() -> void:
 				var caption := text("%s  拥有 %d / 需要 %d%s"%[db.item(id).name,have,need," · 缺少材料" if have<need else ""])
 				line.add_child(caption);details_box.add_child(line)
 		elif mode=="free":
-			details_box.add_child(text("似乎可以组合成一种新料理" if not recipe.is_empty() else "尚无已知料理能使用这组材料",20))
-			details_box.add_child(text("只有真正完成烹饪才会揭晓并记录食谱。"))
+			details_box.add_child(text("这组材料将煮成杂烩" if recipe.get("fallback_only",false) else "似乎可以组合成一种新料理" if not recipe.is_empty() else "请选择食材和数量",20))
+			details_box.add_child(text("只有真正完成烹饪才会揭晓并记录食谱。" if not recipe.get("fallback_only",false) else "没有对应食谱时仍可烹饪成固定杂烩。"))
 		else: details_box.add_child(text("？ 神秘食物 · 尚未揭晓",21))
 		if mode=="free" and not recipe.is_empty() and not enough:
 			details_box.add_child(text("食材不足，请重新选择数量。"))

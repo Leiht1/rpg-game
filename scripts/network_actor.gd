@@ -2,6 +2,7 @@ extends "res://scripts/player.gd"
 var target_position:=Vector2.ZERO
 var own:=false
 var network_equipment:Dictionary={}
+var lamp_item: String=""
 var correction:=Vector2.ZERO
 var confirmed_at:=0
 var pending_inputs:Array=[]
@@ -74,6 +75,7 @@ func receive(row:Dictionary,reconcile:bool=true,round_trip:float=0.0)->void:
 	if not own and row.has("sample_time"):
 		if float(row.sample_time)<sample_time:return
 		sample_time=float(row.sample_time)
+	lamp_item=str(row.get("lamp_item",""))
 	var old_phase:=str(remote_combat.get("phase","alive"))
 	remote_combat=row.get("combat",{}).duplicate(true)
 	if remote_hit_serial>=0 and remote_hit_serial!=int(remote_combat.get("hit_serial",0)):remote_flash=.3

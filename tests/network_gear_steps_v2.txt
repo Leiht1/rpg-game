@@ -1,0 +1,92 @@
+	var service=world.item_service
+	for item in ["wool_sweater","wool_hat","straw_hat","straw_raincoat"]:
+		service.start_craft("hand_"+item,1)
+		for wait_craft in 300:
+			if service.inventory.count_item(item)==1 and world.commands.is_empty():break
+			await create_timer(.05).timeout
+		verify(service.inventory.count_item(item)==1,"online crafted exactly one "+item+" "+world.last_error)
+	for pair in [["wool_hat","wool_sweater"],["straw_hat","straw_raincoat"]]:
+		for item in pair:
+			var found:=-1
+			for index in 40:
+				if service.inventory.slots[index].get("item_id","")==item:found=index;break
+			verify(found>=0,"crafted item remains in private bag "+item)
+			service.inventory.equip(found)
+			for wait_equip in 200:
+				if service.inventory.equipment.get("head" if item.ends_with("hat") else "outfit",{}).get("item_id","")==item and world.commands.is_empty():break
+				await create_timer(.05).timeout
+			verify(service.inventory.equipment.get("head" if item.ends_with("hat") else "outfit",{}).get("item_id","")==item,"online equipment confirmed "+item)
+		for wait_peer in 300:
+			var other=world.actors.values()[0]
+			if other.network_equipment.get("head",{}).get("item_id","")==pair[0] and other.network_equipment.get("outfit",{}).get("item_id","")==pair[1]:break
+			await create_timer(.05).timeout
+		var remote=world.actors.values()[0]
+		verify(remote.network_equipment.get("head",{}).get("item_id","")==pair[0] and remote.network_equipment.get("outfit",{}).get("item_id","")==pair[1],"both remote clothing slots synchronized "+pair[0])
+		for direction in ["front","back","left","right"]:
+			world.player.facing=direction;world.player.action="pickup";world.player.action_clock=.25;world.player.action_committed=true
+			for wait_pose in 160:
+				if remote.facing==direction and remote.action=="pickup":break
+				await create_timer(.05).timeout
+			verify(remote.facing==direction and remote.action=="pickup","remote gear action direction "+pair[0]+" "+direction)
+			await process_frame
+			var head=remote.character.get_node("Visual/Pelvis/Head/Sprite")
+			var hat=head.get_node_or_null("EquipmentVisual_head_0" if pair[0]=="wool_hat" else "EquipmentVisual_head_1")
+			verify(is_instance_valid(hat) and hat.visible and is_equal_approx(hat.scale.x,hat.scale.y),"remote fixed proportional hat "+direction)
+			for zoom in [1.0,1.65]:
+				world.player.camera.zoom=Vector2.ONE*zoom
+				await process_frame
+				await RenderingServer.frame_post_draw
+				root.get_texture().get_image().save_png("res://reports/network-integration-v2/gear/"+str(int(fixture.index))+"-"+pair[0]+"-"+direction+"-"+str(zoom)+".png")
+			world.player.camera.zoom=Vector2.ONE
+			var mark=FileAccess.open(folder.path_join(pair[0]+direction+str(int(fixture.index))),FileAccess.WRITE);mark.store_string("ready");mark.close()
+			for wait_other in 300:
+				if FileAccess.file_exists(folder.path_join(pair[0]+direction+str(1-int(fixture.index)))):break
+				await create_timer(.05).timeout
+		world.player.action=""
+		for expected_tool in ["stone_axe","stone_pickaxe"]:
+			var tool_index:=-1
+			for index in 40:
+				if service.inventory.slots[index].get("item_id","")==expected_tool:tool_index=index;break
+			verify(tool_index>=0,"owned real tool available "+expected_tool)
+			service.inventory.equip(tool_index)
+			for wait_tool in 200:
+				if remote.network_equipment.get("main_hand",{}).get("item_id","")==expected_tool and world.commands.is_empty():break
+				await create_timer(.05).timeout
+			verify(remote.network_equipment.get("main_hand",{}).get("item_id","")==expected_tool,"remote actual tool change "+expected_tool)
+			for rendered in 8:
+				await RenderingServer.frame_post_draw
+				var head_now=remote.character.get_node("Visual/Pelvis/Head/Sprite")
+				var hat_now=head_now.get_node("EquipmentVisual_head_0" if pair[0]=="wool_hat" else "EquipmentVisual_head_1")
+				verify(hat_now.visible and is_equal_approx(hat_now.scale.x,hat_now.scale.y),"first rendered tool refresh preserves fixed hat "+str(rendered))
+		# Resume the real player movement path for a short, safe walking segment.
+		var ready_walk=FileAccess.open(folder.path_join(pair[0]+"-walk-ready"+str(int(fixture.index))),FileAccess.WRITE);ready_walk.store_string("ready");ready_walk.close()
+		for wait_walk_ready in 300:
+			if FileAccess.file_exists(folder.path_join(pair[0]+"-walk-ready"+str(1-int(fixture.index)))):break
+			await create_timer(.05).timeout
+		var walk_code:=KEY_S
+		for candidate in [[Vector2.DOWN,KEY_S],[Vector2.RIGHT,KEY_D],[Vector2.LEFT,KEY_A],[Vector2.UP,KEY_W]]:
+			if world.stream.clear_reach(world.player.position,world.player.position+candidate[0]*90) and world.generator.can_walk(world.player.position+candidate[0]*90):walk_code=candidate[1];break
+		world.player.set_physics_process(true)
+		var movement:=InputEventKey.new();movement.physical_keycode=walk_code;movement.keycode=walk_code;movement.pressed=true;Input.parse_input_event(movement)
+		for wait_walk in 80:
+			if remote.moving:break
+			await create_timer(.025).timeout
+		verify(remote.moving,"remote real movement wearing "+pair[0])
+		var seen_walk=FileAccess.open(folder.path_join(pair[0]+"-walk-seen"+str(int(fixture.index))),FileAccess.WRITE);seen_walk.store_string("seen");seen_walk.close()
+		for wait_walk_seen in 300:
+			if FileAccess.file_exists(folder.path_join(pair[0]+"-walk-seen"+str(1-int(fixture.index)))):break
+			await create_timer(.05).timeout
+		movement=movement.duplicate();movement.pressed=false;Input.parse_input_event(movement)
+		await create_timer(.3).timeout
+		world.player.set_physics_process(false)
+		var motion_mark=FileAccess.open(folder.path_join(pair[0]+"-moved"+str(int(fixture.index))),FileAccess.WRITE);motion_mark.store_string("done");motion_mark.close()
+		for wait_motion_peer in 200:
+			if FileAccess.file_exists(folder.path_join(pair[0]+"-moved"+str(1-int(fixture.index)))):break
+			await create_timer(.05).timeout
+	# Unequip via the actual inventory route, preserving both physical hats.
+	service.inventory.unequip(41)
+	for wait_remove in 200:
+		if service.inventory.equipment.get("head",{}).is_empty() and world.commands.is_empty():break
+		await create_timer(.05).timeout
+	verify(service.inventory.equipment.get("head",{}).is_empty(),"online hat removed")
+	verify(service.inventory.count_item("wool_hat")==1 and service.inventory.count_item("straw_hat")==1,"both hats conserved after change and removal")

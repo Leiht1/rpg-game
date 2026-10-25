@@ -1,0 +1,35 @@
+{
+  "body_height": 64.0,
+  "flame_height": 28.0,
+  "flame_anchor_y": -53.0,
+  "parts": [
+    {
+      "part": "body",
+      "source_cell": 0,
+      "alpha_bbox": [
+        186,
+        134,
+        441,
+        1131
+      ],
+      "size": [
+        255,
+        997
+      ]
+    },
+    {
+      "part": "flame",
+      "source_cell": 1,
+      "alpha_bbox": [
+        116,
+        267,
+        484,
+        921
+      ],
+      "size": [
+        368,
+        654
+      ]
+    }
+  ]
+}

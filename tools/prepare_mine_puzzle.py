@@ -1,0 +1,27 @@
+import json
+from pathlib import Path
+def replace(path,a,b):
+ p=Path(path);s=p.read_text(encoding='utf-8');assert a in s,(path,a);p.write_text(s.replace(a,b),encoding='utf-8')
+replace('scripts/exploration_chapter.gd','var mine:=','var puzzle:=preload("res://scripts/mine_puzzle.gd").new()\nvar mine:=')
+replace('scripts/mine_rules.gd','return {"site":{},','return {"puzzle":preload("res://scripts/mine_puzzle.gd").initial(),"site":{},')
+replace('scripts/item_service.gd','chapter.mine.service=self','chapter.mine.service=self\n\tchapter.puzzle.s=self')
+replace('scripts/exploration_chapter.gd','result.merge(value,true)','result.merge(value,true)\n\tif not result.mine.has("puzzle"):result.mine.puzzle=puzzle.initial()')
+replace('scripts/exploration_mine.gd','func valid(value: Variant) -> bool:','func valid(value: Variant) -> bool:\n\tif value is Dictionary and value.has("puzzle"):\n\t\tif not chapter.puzzle.valid(value.puzzle) or (value.puzzle.solved and value.get("phase")!="open"):return false')
+replace('scripts/exploration_mine.gd','sync_recipe()\n\tif not s.writable','sync_recipe()\n\tchapter.puzzle.advance()\n\tif not s.writable')
+replace('scripts/exploration_mine.gd','if not s.writable or s.body.down','if kind.begins_with("lamp:") or kind.begins_with("carving:") or kind in ["inscription","chest"]:return chapter.puzzle.interact(kind)\n\tif not s.writable or s.body.down')
+replace('scripts/item_service.gd','func harvest_hit(target: Node2D, action: String) -> bool:','func harvest_hit(target: Node2D, action: String) -> bool:\n\tif is_instance_valid(target) and target.has_meta("crystal_index"):return chapter.puzzle.hit(target)')
+replace('scripts/exploration_chapter.gd','if id not in [MAP,NOTE,BOTTLE]:return false','if id==puzzle.RECORD:return puzzle.read_record()\n\tif id not in [MAP,NOTE,BOTTLE]:return false')
+replace('scripts/exploration_chapter.gd','if not owned or id not in [MAP,NOTE,BOTTLE]:return false','if not owned or id not in [MAP,NOTE,BOTTLE,puzzle.RECORD]:return false')
+replace('scripts/exploration_chapter.gd','func text(id: String) -> String:','func text(id: String) -> String:\n\tif id==puzzle.RECORD:return puzzle.RECORD_TEXT')
+# A repeated chest inspection lets any participant read the world-unique record.
+replace('scripts/mine_puzzle.gd','if state.claimed:return RECORD_TEXT','if state.claimed:\n\t\tif not read_record():return "保存失败，请再试一次"\n\t\treturn RECORD_TEXT')
+replace('scripts/network_game_worker.gd','if page.begins_with("矿工的残页"):','if page.begins_with("矿工的残页") or page.begins_with("壁刻·") or page.begins_with("岩壁主刻文") or page.begins_with("古老的路线记录"):')
+replace('scripts/world_interaction.gd','if result.begins_with("矿工的残页"):','if result.begins_with("矿工的残页") or result.begins_with("壁刻·") or result.begins_with("岩壁主刻文") or result.begins_with("古老的路线记录"):')
+replace('scripts/exploration_mine.gd','"extension":"north_rock_boundary"','"extension":"north_rock_boundary","next":chapter.puzzle.continuation()')
+p=Path('data/exploration_items.json');rows=json.loads(p.read_text(encoding='utf-8'))
+record=dict(rows[0]);record.update(item_id='ancient_mine_record',name='古老的路线记录',description='比前辈更早的寻访者留下的路线，夹着一片磨圆的陌生硬壳。可反复阅读。');rows.append(record)
+rows.append(dict(item_id='crystal',name='水晶',category='material',description='从矿洞深处采得的淡蓝晶体。',icon='res://assets/exploration/puzzle-v1/crystal.png',world_visual='res://assets/exploration/puzzle-v1/crystal.png',max_stack=99,usable=False,consumable=False,tags=['mineral'],rarity='rare',drop_rules={'source':'水晶矿'}))
+p.write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding='utf-8')
+p=Path('data/harvest_resources.json');v=json.loads(p.read_text(encoding='utf-8'));r=dict(v['resources']['copper_ore'] if 'copper_ore' in v['resources'] else next(x for x in v['resources'].values() if x['action']=='mine'))
+r.update(name='水晶矿',hits=8,drops={'crystal':2},width=92,collision=[27,16],range=82,textures=['res://assets/exploration/puzzle-v1/ore.png']*3)
+r.pop('crack_textures',None);r.pop('collision_outline',None);r.pop('collision_outline_width',None);v['resources']['crystal_ore']=r;p.write_text(json.dumps(v,ensure_ascii=False,indent=2),encoding='utf-8')

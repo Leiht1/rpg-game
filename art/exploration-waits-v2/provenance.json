@@ -1,0 +1,50 @@
+{
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "estimateUsd": 0.0,
+  "authorization": "用户本轮明确要求制作并导入垂钓老者素材；尚待用户主观画风确认。",
+  "source_jobs": [
+    "art/exploration-waits-v2/elder-source/job.json",
+    "art/exploration-waits-v2/elder-rod-edit/job.json"
+  ],
+  "prompts": [
+    "art/exploration-waits-v2/elder-prompt.txt",
+    "art/exploration-waits-v2/rod-edit-prompt.txt"
+  ],
+  "reference": "art/reference/hero.png",
+  "registration": {
+    "canvas": [
+      1024,
+      1024
+    ],
+    "game_canvas_height": 112,
+    "offset_right": [
+      -28,
+      -108
+    ],
+    "offset_left": [
+      -79,
+      -108
+    ],
+    "rod_tip_right": [
+      898,
+      58
+    ],
+    "rod_tip_left": [
+      126,
+      58
+    ],
+    "collision_radius": 12
+  },
+  "paper_source": "assets/ui/survival_guide_v1/letter.png",
+  "sha256": {
+    "art/exploration-waits-v2/elder-source/generated.png": "fd169134c8fa36ca1e238a06e6463606a4405719e5aef046467e11eda5d597f0",
+    "art/exploration-waits-v2/elder-rod-edit/generated.png": "e70a1c84dfc1a3fcf71b000f4d3ed1ff5237ee95d4aa186d2e107119ebb3e96b",
+    "art/exploration-waits-v2/elder-final/clean.png": "87719b11dd4b31e956e9ddf0a6e539e07e7935c367c51c9a8f40633ca1fcb4f3",
+    "assets/exploration/v2/elder.png": "87719b11dd4b31e956e9ddf0a6e539e07e7935c367c51c9a8f40633ca1fcb4f3"
+  },
+  "status": "rejected_style",
+  "superseded_by": "assets/exploration/v3/elder.png",
+  "feedback": "用户指出画风沿用早期主角参考，与当前正式白T大头短腿角色违和；本批原图仅留来源历史，不再运行。"
+}

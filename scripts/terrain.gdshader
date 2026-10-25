@@ -1,4 +1,14 @@
 shader_type canvas_item;
+uniform float season_snow=0.;
+uniform int snow_heat_count=0;
+uniform vec3 snow_heat_sources[32];
+uniform float season_ice=0.;
+uniform float snow_patch_scale=155.;
+uniform float snow_patch_threshold=.73;
+uniform float snow_patch_growth=.10;
+uniform float snow_patch_edge=.05;
+uniform float snow_patch_opacity=.95;
+uniform sampler2D lake_mask:filter_linear,repeat_disable;
 uniform sampler2D environment_tex:filter_linear,repeat_disable;
 uniform sampler2D grounding_mask:filter_linear,repeat_disable;
 uniform vec2 chunk_origin=vec2(0.);
@@ -13,6 +23,10 @@ uniform vec2 world_size=vec2(6144.,4096.);
 varying vec2 world_p;
 void vertex(){world_p=(MODEL_MATRIX*vec4(VERTEX,0.,1.)).xy;}
 float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float snow_noise(vec2 p){
+ vec2 i=floor(p);vec2 f=fract(p);f=f*f*(3.-2.*f);
+ return mix(mix(hash(i),hash(i+vec2(1.,0.)),f.x),mix(hash(i+vec2(0.,1.)),hash(i+vec2(1.,1.)),f.x),f.y);
+}
 vec3 tile_sample(sampler2D tex,vec2 v,vec2 cell){
  // Stay inside each painted plate: no wrapping or reflected rock shapes.
  vec2 uv=(v-cell)*.4+vec2(.45)+vec2(hash(cell),hash(cell+19.))*.1;
@@ -92,5 +106,17 @@ void fragment(){
  float glint=exp(-dy*dy)*pow(max(0.,1.-dx*dx),2.)*step(.74,hash(cell+31.));
  water+=vec3(.055,.070,.061)*glint*smoothstep(.46,.65,w.a);
  base=mix(base,water,smoothstep(.47,.53,water_mask));
+ float field=.58*snow_noise(p/snow_patch_scale)+.28*snow_noise(p/(snow_patch_scale*.42)+19.)+.14*snow_noise(p/(snow_patch_scale*.16)+81.);
+ // Even at maximum accumulation most of the original ground stays exposed.
+ float cover=smoothstep(snow_patch_threshold-season_snow*snow_patch_growth,snow_patch_threshold+snow_patch_edge-season_snow*snow_patch_growth,field)*smoothstep(.03,.28,season_snow)*(1.-smoothstep(.12,.45,w.a));
+ vec3 snow_color=mix(vec3(.86,.89,.86),vec3(.96,.96,.92),snow_noise(p/30.+3.));
+ float warmth=0.;
+ for(int i=0;i<32;i++){
+  if(i>=snow_heat_count){break;}
+  warmth=max(warmth,1.-smoothstep(snow_heat_sources[i].z*.65,snow_heat_sources[i].z,distance(p,snow_heat_sources[i].xy)));
+ }
+ base=mix(base,snow_color,cover*snow_patch_opacity*(1.-warmth));
+ float ice=season_ice*smoothstep(.53,.60,texture(lake_mask,UV).r)*smoothstep(.53,.60,w.a);
+ base=mix(base,mix(water,vec3(.69,.83,.86),.72)+vec3(.018)*sin(p.x*.012+sin(p.y*.01)),ice);
  COLOR=vec4(base,1.);
 }

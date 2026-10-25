@@ -1,0 +1,226 @@
+{
+  "lamp": {
+    "width": 132,
+    "anchor": [
+      146,
+      208
+    ],
+    "chamber_center": [
+      156,
+      80
+    ]
+  },
+  "stones": [
+    {
+      "texture": "rock-1.png",
+      "at": [
+        5,
+        -42
+      ],
+      "width": 140,
+      "start": 0.18,
+      "duration": 0.78,
+      "slide": [
+        1.684,
+        80
+      ],
+      "rotation": 0.0066
+    },
+    {
+      "texture": "rock-2.png",
+      "at": [
+        -105,
+        -10
+      ],
+      "width": 125,
+      "start": 0.272,
+      "duration": 0.78,
+      "slide": [
+        -35.368,
+        92
+      ],
+      "rotation": -0.1382
+    },
+    {
+      "texture": "rock-4.png",
+      "at": [
+        105,
+        -10
+      ],
+      "width": 128,
+      "start": 0.364,
+      "duration": 0.78,
+      "slide": [
+        35.368,
+        104
+      ],
+      "rotation": 0.1382
+    },
+    {
+      "texture": "rock-0.png",
+      "at": [
+        0,
+        32
+      ],
+      "width": 236,
+      "start": 0.456,
+      "duration": 0.78,
+      "slide": [
+        0.0,
+        116
+      ],
+      "rotation": 0.0
+    },
+    {
+      "texture": "rock-4.png",
+      "at": [
+        -110,
+        40
+      ],
+      "width": 139,
+      "start": 0.548,
+      "duration": 0.78,
+      "slide": [
+        -37.053,
+        80
+      ],
+      "rotation": -0.1447
+    },
+    {
+      "texture": "rock-0.png",
+      "at": [
+        103,
+        38
+      ],
+      "width": 145,
+      "start": 0.64,
+      "duration": 0.78,
+      "slide": [
+        34.695,
+        92
+      ],
+      "rotation": 0.1355
+    },
+    {
+      "texture": "rock-2.png",
+      "at": [
+        -165,
+        42
+      ],
+      "width": 93,
+      "start": 0.732,
+      "duration": 0.78,
+      "slide": [
+        -55.579,
+        104
+      ],
+      "rotation": -0.2171
+    },
+    {
+      "texture": "rock-5.png",
+      "at": [
+        -125,
+        80
+      ],
+      "width": 108,
+      "start": 0.824,
+      "duration": 0.78,
+      "slide": [
+        -42.105,
+        116
+      ],
+      "rotation": -0.1645
+    },
+    {
+      "texture": "rock-0.png",
+      "at": [
+        -32,
+        86
+      ],
+      "width": 136,
+      "start": 0.916,
+      "duration": 0.78,
+      "slide": [
+        -10.779,
+        80
+      ],
+      "rotation": -0.0421
+    },
+    {
+      "texture": "rock-3.png",
+      "at": [
+        75,
+        84
+      ],
+      "width": 150,
+      "start": 1.008,
+      "duration": 0.78,
+      "slide": [
+        25.263,
+        92
+      ],
+      "rotation": 0.0987
+    },
+    {
+      "texture": "rock-7.png",
+      "at": [
+        156,
+        66
+      ],
+      "width": 78,
+      "start": 1.1,
+      "duration": 0.78,
+      "slide": [
+        52.547,
+        104
+      ],
+      "rotation": 0.2053
+    },
+    {
+      "texture": "rock-6.png",
+      "at": [
+        -181,
+        68
+      ],
+      "width": 65,
+      "start": 1.192,
+      "duration": 0.78,
+      "slide": [
+        -60.968,
+        116
+      ],
+      "rotation": -0.2382
+    },
+    {
+      "texture": "rock-6.png",
+      "at": [
+        15,
+        103
+      ],
+      "width": 63,
+      "start": 1.284,
+      "duration": 0.78,
+      "slide": [
+        5.053,
+        80
+      ],
+      "rotation": 0.0197
+    },
+    {
+      "texture": "rock-7.png",
+      "at": [
+        120,
+        96
+      ],
+      "width": 68,
+      "start": 1.376,
+      "duration": 0.78,
+      "slide": [
+        40.421,
+        92
+      ],
+      "rotation": 0.1579
+    }
+  ],
+  "source": "eight complete separately drawn rocks; no heap slicing; per-stone fixed scale"
+}

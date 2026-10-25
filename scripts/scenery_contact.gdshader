@@ -1,6 +1,7 @@
 shader_type canvas_item;
 render_mode unshaded;
 uniform sampler2D pure_ground : hint_screen_texture, repeat_disable, filter_linear;
+uniform float season_snow=0.;
 uniform float bend=0.;
 uniform float height=256.;
 uniform float fixed_y=-32.;
@@ -44,5 +45,9 @@ void fragment(){
  vec3 target=surface_kind==2?earth:litter;
  float amount=surface_kind==2?.86:(surface_kind==1?.72:0.);
  COLOR.rgb=mix(fitted,target,ground_part*amount*color_fit);
+ float top_edge=1.-texture(TEXTURE,UV-vec2(0.,.018)).a;
+ float foliage=tree?smoothstep(-.06,.04,painted.g-painted.r)*(1.-smoothstep(.65,.80,UV.y)):1.;
+ float cap=clamp(top_edge*.8+foliage*smoothstep(.30,.65,painted.g)*.80,0.,.92)*season_snow;
+ COLOR.rgb=mix(COLOR.rgb,vec3(.87,.92,.91)*(0.88+.12*painted.g),cap);
  // COLOR.a already contains original painted alpha and whole-object fade.
 }

@@ -162,6 +162,27 @@
       },
       "output": "carrot_pork",
       "seconds": 28
+    },
+    "camp_small_hodgepodge": {
+      "name": "小杂烩",
+      "materials": {},
+      "output": "small_hodgepodge",
+      "seconds": 12,
+      "fallback_only": true,
+      "default_unlocked": false
+    },
+    "camp_large_hodgepodge": {
+      "name": "大杂烩",
+      "materials": {},
+      "output": "large_hodgepodge",
+      "seconds": 18,
+      "fallback_only": true,
+      "default_unlocked": false
     }
-  }
+  },
+  "light_scale_min": 0.5,
+  "light_scale_max": 2.0,
+  "flame_scale_min": 0.5,
+  "flame_scale_max": 1.5,
+  "experiment_small_limit": 2
 }

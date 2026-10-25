@@ -20,8 +20,14 @@ var front_free_arm_scale := Vector2.ONE
 var front_free_source: Sprite2D
 var front_free_was_visible := true
 var front_free_hand: Sprite2D
+var raised_arm: Node2D
+var raised_arm_rotation := 0.0
+var canopy: Sprite2D
 
 func release_pose() -> void:
+	if is_instance_valid(canopy):canopy.hide()
+	if is_instance_valid(raised_arm): raised_arm.rotation=raised_arm_rotation
+	raised_arm=null
 	if is_instance_valid(front_arm):
 		var held := front_arm.get_node_or_null("HeldTool")
 		if held != null: front_arm.move_child(held,0)
@@ -54,21 +60,34 @@ func apply(character: Node2D, inventory: ItemInventory, facing: String, action: 
 		arm.add_child(tool)
 		# Default side/back order; the front view moves the tool above the hand below.
 		arm.move_child(tool,0)
+	var left_tool: Sprite2D=character.get_node_or_null("Visual/Pelvis/ArmL/HeldTool")
+	if left_tool:left_tool.hide()
 	tool.hide()
 	tool.set_meta("item_id","")
 	character.get_node("Visual/Pelvis/ArmR/Grip/Axe").hide()
 	if inventory==null: return
 	var instance: Dictionary=inventory.equipment.get("main_hand",{})
-	if instance.is_empty() or action=="pickup": return
+	if instance.is_empty(): return
 	var definition := inventory.database.item(str(instance.item_id))
 	var row: Dictionary=definitions.get(definition.get("visual_id",""),{})
 	if row.is_empty(): return
+	if action=="pickup" and not row.get("keep_on_pickup",false): return
 	if row.has("views"):
 		row=row.duplicate(true)
 		row.merge(row.views.get("side" if facing in ["left","right"] else facing,{}),true)
+	var left_hand: bool=row.get("display_hand","right")=="left"
+	if left_hand:
+		arm=character.get_node("Visual/Pelvis/ArmL")
+		grip=arm.get_node_or_null("Grip")
+		if grip==null:
+			grip=Node2D.new();grip.name="Grip";grip.position=Vector2(0,21);arm.add_child(grip)
+		tool=arm.get_node_or_null("HeldTool")
+		if tool==null:
+			tool=Sprite2D.new();tool.name="HeldTool";tool.centered=false;tool.texture_filter=CanvasItem.TEXTURE_FILTER_LINEAR;arm.add_child(tool)
 	var path := str(row.texture)
 	if not textures.has(path): textures[path]=preload("res://scripts/candidate_art.gd").texture(path) if path.begins_with("res://prototypes/") else load(path)
 	tool.texture=textures[path]
+	tool.region_enabled=false
 	var pin: Array=row.grip_px
 	tool.offset=-Vector2(pin[0],pin[1])
 	tool.scale=Vector2.ONE*float(row.scale)
@@ -87,12 +106,12 @@ func apply(character: Node2D, inventory: ItemInventory, facing: String, action: 
 		tool.rotation+=deg_to_rad(float(row.get("idle_rotation_degrees",0)))
 	# All registered main-hand tools share this policy, regardless of ID or action.
 	# Animation sampling may put ArmR behind Pelvis; front-facing holding must override it.
-	if facing=="front":
+	if facing=="front" and not left_hand:
 		if front_arm!=arm:
 			front_arm=arm;front_arm_was_behind=arm.show_behind_parent;front_arm_position=arm.position
 		arm.show_behind_parent=false
 		arm.move_child(tool,arm.get_child_count()-1)
-		if not action.is_empty(): align_front_shoulders(character,arm)
+		if not action.is_empty() and action!="pickup": align_front_shoulders(character,arm)
 	if action in row.get("aim_forward_actions",[]):
 		# Aim in rig space so mirroring and the sampled arm rotation preserve the blade direction.
 		var visual: Node2D=character.get_node("Visual")
@@ -103,7 +122,32 @@ func apply(character: Node2D, inventory: ItemInventory, facing: String, action: 
 		var forward: Vector2={"front":Vector2.DOWN,"back":Vector2.UP,"left":Vector2.LEFT,"right":Vector2.RIGHT}[facing]
 		var local_forward := arm.to_local(arm.global_position+forward)-arm.to_local(arm.global_position)
 		tool.rotation=local_forward.angle()-float(row.get("source_angle",-PI*.5))
-	if facing=="back": show_behind_legs(character,tool)
+	if row.get("upright",false):
+		if row.has("hold_arm_degrees"):
+			raised_arm=arm;raised_arm_rotation=arm.rotation
+			var view := "side" if facing in ["left","right"] else facing
+			arm.rotation=deg_to_rad(float(row.hold_arm_degrees.get(view,-150)))
+			if action=="pickup": arm.rotation-=arm.get_parent().rotation
+		var up: Vector2=arm.global_transform.basis_xform_inv(Vector2.UP)
+		tool.rotation=up.angle()+PI*.5
+	if row.has("foreground_canopy_height"):
+		show_canopy_in_front(character,tool,float(row.foreground_canopy_height))
+	elif facing=="back": show_behind_legs(character,tool)
+
+func show_canopy_in_front(character: Node2D, source: Sprite2D, height: float) -> void:
+	# Keep world Y sorting intact; cover the head subtree locally, including new hats.
+	var visual: Node2D=character.get_node("Visual/Pelvis/Head")
+	if not is_instance_valid(canopy):
+		canopy=Sprite2D.new();canopy.name="HeldCanopyInFront";canopy.centered=false;visual.add_child(canopy)
+	visual.move_child(canopy,visual.get_child_count()-1)
+	canopy.z_index=0
+	canopy.texture=source.texture;canopy.offset=source.offset;canopy.texture_filter=source.texture_filter
+	canopy.region_enabled=true;canopy.region_rect=Rect2(0,0,source.texture.get_width(),height)
+	canopy.global_transform=source.global_transform
+	canopy.show()
+	# Partition one approved image: the shaft stays at the real left grip, canopy is above head/hair.
+	source.region_enabled=true;source.region_rect=Rect2(0,height,source.texture.get_width(),source.texture.get_height()-height)
+	source.offset.y+=height
 
 func show_behind_legs(character: Node2D, source: Sprite2D) -> void:
 	# Same local world sort as the character; only its internal part order changes.

@@ -180,6 +180,7 @@ func claim(id: String, index: int, expected: Dictionary) -> String:
 
 func advance(delta: float, shared: bool=true) -> void:
 	if not is_finite(delta) or delta<=0:return
+	if shared:service.chapter.finale.tick(delta)
 	if service.body.health<=0 and personal.phase=="alive":die()
 	if personal.phase!="alive":
 		personal.clock+=delta
@@ -202,7 +203,8 @@ func advance(delta: float, shared: bool=true) -> void:
 		var w: Dictionary=a.weapon
 		if before<float(w.windup)+float(w.active) and a.elapsed>=float(w.windup):resolve_hits(a)
 		if a.elapsed>=float(w.windup)+float(w.active)+float(w.recovery):personal.attack={}
-	if shared:advance_boars(delta)
+	if shared:
+		advance_boars(delta)
 
 func spawn_point() -> Vector2:
 	if state.get("spawn",{}).is_empty():
@@ -211,6 +213,7 @@ func spawn_point() -> Vector2:
 	return Vector2(state.spawn.x,state.spawn.y)
 
 func resolve_hits(a: Dictionary) -> void:
+	service.chapter.finale.hit(a)
 	var origin: Vector2=service.world.player.position
 	var direction:=Vector2(a.direction.x,a.direction.y)
 	var old_world:=state.duplicate(true);var old_loose: Dictionary=service.loose.duplicate(true)
@@ -269,6 +272,7 @@ func advance_boars(delta: float) -> void:
 			state.boars[id]={"x":at.x,"y":at.y,"home_x":at.x,"home_y":at.y,"health":float(rules.boar.health),"mode":"patrol","clock":0.0,"hit":0.0,"generation":0}
 	var minute: float=service.world.environment_view.simulation.minute
 	var night: bool=minute>=float(rules.boar.night_start_minute) or minute<float(rules.boar.night_end_minute)
+	if night: advance_night_encounter(delta,minute)
 	for id in state.boars:
 		var row: Dictionary=state.boars[id]
 		row.hit=maxf(0,float(row.get("hit",0))-delta)
@@ -294,6 +298,15 @@ func advance_boars(delta: float) -> void:
 		# Once committed, finish this attack independently of detection/leash checks.
 		if row.mode=="attack":
 			var victim: String=str(row.get("attack_target",""))
+			if victim.begins_with("crop:"):
+				var plot_id:=victim.trim_prefix("crop:")
+				var plot: Dictionary=service.builds.states.get(plot_id,{})
+				if row.clock>=float(weapon.windup) and row.clock<=duration and not row.get("struck",false) and not plot.is_empty() and not str(plot.get("crop","")).is_empty():
+					var center:=Vector2(plot.x,plot.y)
+					if at.distance_to(center)<float(weapon.range) and attack_path_clear(at,center,id):
+						row.struck=true;destroy_crop(plot_id)
+				if row.clock>=duration:row.mode="chase";row.clock=0.0
+				continue
 			var victim_alive: bool=personal.phase=="alive" if victim.is_empty() else false
 			var victim_at: Vector2=service.world.player.position
 			for peer in peers:
@@ -308,10 +321,11 @@ func advance_boars(delta: float) -> void:
 		var target:=home
 		var following: bool=row.mode in ["alert","chase","hurt"]
 		var detection: float=rules.boar.get("chase_range",600) if following else rules.boar.notice_range
-		if nearest<INF and distance<detection and player.distance_to(home)<float(rules.boar.leash):
+		if night and row.get("night_hunter",false):detection=float(rules.boar.night_hunt_range)
+		if nearest<INF and distance<detection and player.distance_to(home)<(float(rules.boar.night_hunt_range) if night and row.get("night_hunter",false) else float(rules.boar.leash)):
 			if row.mode in ["patrol","return"]:row.mode="alert";row.clock=0.0
 			if row.mode=="alert" and row.clock<.7:continue
-			if distance<float(weapon.range):
+			if distance<float(weapon.range) and (not night or crop_on_path(at,player,id).is_empty()):
 				row.mode="attack";row.clock=0.0;row.struck=false;row.attack_target=target_id
 				if absf(player.x-at.x)>8:row.facing_x=1.0 if player.x>at.x else -1.0
 				continue
@@ -323,14 +337,89 @@ func advance_boars(delta: float) -> void:
 				var phase: float=float(str(id).hash()%628)/100.0
 				target=home+Vector2(cos(row.clock*.025+phase),sin(row.clock*.019+phase))*float(rules.boar.night_roam_radius)
 			elif row.mode=="patrol":target=home+Vector2(cos(row.clock*.2),sin(row.clock*.17))*45
+		if night:
+			var crop_id:=crop_on_path(at,player,id)
+			if not crop_id.is_empty():
+				var plot: Dictionary=service.builds.states[crop_id]
+				target=Vector2(plot.x,plot.y);row.mode="chase"
+				if at.distance_to(target)<float(weapon.range):
+					row.mode="attack";row.clock=0.0;row.struck=false;row.attack_target="crop:"+crop_id
+					continue
 		var travel: Vector2=target-at
 		# Ignore tiny sideways corrections; knockback never changes this heading.
-		if absf(travel.x)>maxf(12,absf(travel.y)*.2):row.facing_x=1.0 if travel.x>0 else -1.0
+		var desired_facing: float=1.0 if travel.x>0 else -1.0
+		row.turn_clock=maxf(0,float(row.get("turn_clock",0))-delta)
+		if absf(travel.x)>maxf(24,absf(travel.y)*.35) and float(row.turn_clock)<=0 and desired_facing!=float(row.get("facing_x",1)):
+			row.facing_x=desired_facing;row.turn_clock=.5
 		var next:=at.move_toward(target,float(rules.boar.speed)*(float(rules.boar.night_speed_multiplier) if night else 1.0)*delta*(1.0 if row.mode=="chase" else .4))
 		var target_node: Node2D=service.combat_view.boars.get(id) if is_instance_valid(service.combat_view) else null
 		if boar_clear(at,next,target_node):
 			row.x=next.x;row.y=next.y
-			trample_crops(Vector2(row.x,row.y),target_node)
+
+func destroy_crop(id: String) -> void:
+	var plot: Dictionary=service.builds.states[id]
+	plot.crop="";plot.growth_minutes=0.0;plot.roots=true;plot.erase("fertilized")
+	service.dirty=true
+	if service.builds.visuals.has(id):service.builds.visuals[id].queue_redraw()
+
+func crop_on_path(at: Vector2, player: Vector2, boar_id: String) -> String:
+	var selected:=""
+	var nearest: float=float(rules.boar.crop_notice_range)
+	for id in service.builds.states:
+		var plot: Dictionary=service.builds.states[id]
+		if plot.kind!="tilled_soil" or str(plot.get("crop","")).is_empty():continue
+		var center:=Vector2(plot.x,plot.y)
+		var distance:=at.distance_to(center)
+		if distance<nearest and center.distance_to(Geometry2D.get_closest_point_to_segment(center,at,player))<float(rules.boar.crop_path_width) and attack_path_clear(at,center,boar_id):
+			nearest=distance;selected=str(id)
+	return selected
+
+func advance_night_encounter(delta: float, minute: float) -> void:
+	var observers: Array[Vector2]=[]
+	if personal.phase=="alive":observers.append(service.world.player.position)
+	for peer in peers:
+		if peer.get("phase","alive")=="alive":observers.append(Vector2(peer.x,peer.y))
+	if observers.is_empty():return
+	var night_day: int=int(service.world.environment_view.simulation.day)-(1 if minute<float(rules.boar.night_end_minute) else 0)
+	if int(state.get("encounter_night",-999))==night_day:return
+	state.encounter_wait=float(state.get("encounter_wait",0))+delta
+	if state.encounter_wait<float(rules.boar.night_encounter_delay):return
+	state.encounter_wait=0.0
+	var rng:=RandomNumberGenerator.new();rng.seed=service.world.world_seed^night_day*7919
+	if rng.randf()>float(rules.boar.night_encounter_chance):
+		state.encounter_night=night_day;service.dirty=true;return
+	# Select from all authenticated participants, independent of polling order.
+	observers.sort_custom(func(a: Vector2,b: Vector2):return a.x<b.x or (a.x==b.x and a.y<b.y))
+	var player: Vector2=observers[posmod(night_day,observers.size())]
+	# Reuse a distant living animal: no population inflation or visible teleport.
+	var selected:=""
+	for id in state.boars:
+		var row: Dictionary=state.boars[id]
+		var distant:=true
+		for observer in observers:
+			if Vector2(row.x,row.y).distance_to(observer)<=float(rules.boar.night_spawn_max)*2:distant=false
+		if row.health>0 and row.mode in ["patrol","return"] and distant:
+			selected=str(id);break
+	if selected.is_empty():return
+	for attempt in 48:
+		var at:=player+Vector2.RIGHT.rotated(rng.randf()*TAU)*rng.randf_range(float(rules.boar.night_spawn_min),float(rules.boar.night_spawn_max))
+		if encounter_visible(at,observers):continue
+		if not service.world.generator.can_walk(at) or not service.ground_clear(at,25,service.nearby_props(at)) or not boar_clear(at,at+Vector2(.01,0)):continue
+		var row: Dictionary=state.boars[selected]
+		row.x=at.x;row.y=at.y;row.home_x=at.x;row.home_y=at.y;row.mode="chase";row.clock=0.0;row.night_hunter=true
+		row.facing_x=1.0 if player.x>at.x else -1.0
+		state.encounter_night=night_day;service.dirty=true;return
+
+func encounter_visible(at: Vector2, observers: Array[Vector2]) -> bool:
+	if not service.world.get_meta("network_rules_host",false):
+		var screen: Vector2=service.world.get_viewport().get_canvas_transform()*at
+		return service.world.get_viewport().get_visible_rect().grow(100).has_point(screen)
+	# The headless host's viewport is unrelated to any player's camera. Cover the
+	# default window at the widest allowed zoom, with the original offscreen margin.
+	var half_view:=Vector2(640,360)/.65+Vector2(100,100)
+	for observer in observers:
+		if Rect2(observer-half_view,half_view*2).has_point(at):return true
+	return false
 
 func trample_crops(at: Vector2, node: CollisionObject2D=null) -> void:
 	for id in service.builds.states:

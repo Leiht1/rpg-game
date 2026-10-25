@@ -1,0 +1,82 @@
+{
+  "art_source": "host_image",
+  "route": "image_gen",
+  "model": "Built-in image_gen; exact revision and cost unavailable",
+  "estimateUsd": null,
+  "user_request": "羊毛衫的袖子比手细，跟手没有很好的衔接；继续",
+  "scope": "Local correction of existing sweater cuffs; no new clothing or hand geometry. Subjective visual review remains available.",
+  "sources": [
+    "art/wool-sleeve-v2/sleeve-first.png",
+    "art/wool-sleeve-v2/sleeve-source.png"
+  ],
+  "references": [
+    "art/season-gear-v1/sleeve-source.png",
+    "assets/season_gear/v1/wool_sweater-front-arm.png"
+  ],
+  "prompt": "Preserve ivory cable knit and brown contour; upright centered sleeve; rounded shoulder; broad ribbed cuff at least 95% of maximum sleeve width, covering the original hand; no taper, hand, skin, halo or cast shadow; native transparent background.",
+  "processing": "Native alpha, bbox from alpha>=24; LANCZOS register sleeve to 38x86 at (1,0) on 40x100 canvas. Original 32px hand copied at x=4, preserving centered-Sprite local coordinates. Original hand at y>=86 is byte-identical; original y82..85 is overlapped by cloth cuff. Original v1 PNGs preserved.",
+  "checks": [
+    {
+      "view": "front",
+      "canvas": [
+        40,
+        100
+      ],
+      "cuff_span": [
+        2,
+        37
+      ],
+      "hand_span": [
+        4,
+        35
+      ],
+      "hand_pixels_unchanged": true
+    },
+    {
+      "view": "back",
+      "canvas": [
+        40,
+        100
+      ],
+      "cuff_span": [
+        2,
+        37
+      ],
+      "hand_span": [
+        4,
+        35
+      ],
+      "hand_pixels_unchanged": true
+    },
+    {
+      "view": "side",
+      "canvas": [
+        40,
+        100
+      ],
+      "cuff_span": [
+        2,
+        37
+      ],
+      "hand_span": [
+        4,
+        35
+      ],
+      "hand_pixels_unchanged": true
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/season_gear/sleeve-v2/wool_sweater-front-arm.png",
+      "sha256": "b7fcd47ce999bd9b5ac55db5bf421ac840252855dfb4fe9d516b58bf6a6cfb02"
+    },
+    {
+      "path": "assets/season_gear/sleeve-v2/wool_sweater-back-arm.png",
+      "sha256": "b7fcd47ce999bd9b5ac55db5bf421ac840252855dfb4fe9d516b58bf6a6cfb02"
+    },
+    {
+      "path": "assets/season_gear/sleeve-v2/wool_sweater-side-arm.png",
+      "sha256": "fb46ed20c295f3a698ff377e590108058f214013b4d8fe00c3befa5c03ac0d40"
+    }
+  ]
+}

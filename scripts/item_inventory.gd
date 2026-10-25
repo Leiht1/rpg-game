@@ -15,6 +15,7 @@ var body: RefCounted
 var equipment: Dictionary = {}
 var equipment_slots: Array = JSON.parse_string(FileAccess.get_file_as_string("res://data/equipment_slots.json"))
 var quarantined_equipment: Dictionary = {}
+var chapter_reader: Callable
 var commit_equipment: Callable
 
 func slot_key(index: int) -> String:
@@ -310,6 +311,10 @@ func use_slot(index: int) -> bool:
 		return false
 	var definition := database.item(id)
 	if not definition.usable: return false
+	if definition.use_action=="mine_pack":
+		return chapter_reader.is_valid() and chapter_reader.call(id)
+	if definition.use_action=="read_chapter":
+		return chapter_reader.is_valid() and chapter_reader.call(id)
 	if definition.use_action=="read_guide":
 		used.emit(id,{"slot":index});return true
 	if definition.use_action not in ["place_campfire","place_sleeping_bag"] and preload("res://scripts/network_game_route.gd").send(self,"inventory",["use_slot",index]):return true
@@ -460,3 +465,7 @@ func add_value(value: Dictionary) -> int:
 func labor_speed() -> float:
 	var held: Dictionary=equipment.get("main_hand",{})
 	return float(database.item(str(held.get("item_id",""))).get("stats",{}).get("labor_speed",1.0))
+
+func harvest_power() -> int:
+	var held: Dictionary=equipment.get("main_hand",{})
+	return maxi(1,int(database.item(str(held.get("item_id",""))).get("stats",{}).get("harvest_power",1)))

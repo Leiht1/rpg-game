@@ -1,0 +1,161 @@
+[
+  {
+    "bearing": {
+      "x": 0.986339271068573,
+      "y": 0.164726570248604
+    },
+    "bearing_name": "东",
+    "connected_rock_region": 1,
+    "direction_resolved": true,
+    "landmarks": [
+      "断裂石柱",
+      "古老石座",
+      "白色碎壳",
+      "开阔石台"
+    ],
+    "north_rotation": -0.736593067646027,
+    "origin": {
+      "x": 22388.052734375,
+      "y": 20773.875
+    },
+    "outer_coast_distance": 816.389892578125,
+    "paper_forward": {
+      "x": 0.841300249099731,
+      "y": -0.540568172931671
+    },
+    "precision": "coastal_rock_region_sector",
+    "region_grid": 385,
+    "requirements": {
+      "coast_max_distance": 900.0,
+      "connected_to_ordinary_rock": true,
+      "different_rock_region_from_mine": true,
+      "independent_special_terrain": true,
+      "landmarks": [
+        "断裂石柱",
+        "古老石座",
+        "白色碎壳",
+        "开阔石台"
+      ],
+      "near_outer_sea": true,
+      "special_terrain": "sea_eroded_ruins_plateau"
+    },
+    "search_area": {
+      "center": {
+        "x": 30592.0,
+        "y": 22144.0
+      },
+      "radius": 384.0
+    },
+    "seed": 271828,
+    "source_rock_region": 0,
+    "target_generated": false,
+    "terrain": "sea_eroded_ruins_plateau",
+    "version": 2
+  },
+  {
+    "bearing": {
+      "x": -0.156995415687561,
+      "y": 0.987599313259125
+    },
+    "bearing_name": "南",
+    "connected_rock_region": 3,
+    "direction_resolved": true,
+    "landmarks": [
+      "断裂石柱",
+      "古老石座",
+      "白色碎壳",
+      "开阔石台"
+    ],
+    "north_rotation": -2.29955625534058,
+    "origin": {
+      "x": 27164.078125,
+      "y": 11602.5703125
+    },
+    "outer_coast_distance": 191.507537841797,
+    "paper_forward": {
+      "x": 0.841300249099731,
+      "y": -0.540568172931671
+    },
+    "precision": "coastal_rock_region_sector",
+    "region_grid": 385,
+    "requirements": {
+      "coast_max_distance": 900.0,
+      "connected_to_ordinary_rock": true,
+      "different_rock_region_from_mine": true,
+      "independent_special_terrain": true,
+      "landmarks": [
+        "断裂石柱",
+        "古老石座",
+        "白色碎壳",
+        "开阔石台"
+      ],
+      "near_outer_sea": true,
+      "special_terrain": "sea_eroded_ruins_plateau"
+    },
+    "search_area": {
+      "center": {
+        "x": 24064.0,
+        "y": 31104.0
+      },
+      "radius": 384.0
+    },
+    "seed": 314159,
+    "source_rock_region": 0,
+    "target_generated": false,
+    "terrain": "sea_eroded_ruins_plateau",
+    "version": 2
+  },
+  {
+    "bearing": {
+      "x": -0.606114327907562,
+      "y": 0.795377552509308
+    },
+    "bearing_name": "西南",
+    "connected_rock_region": 1,
+    "direction_resolved": true,
+    "landmarks": [
+      "断裂石柱",
+      "古老石座",
+      "白色碎壳",
+      "开阔石台"
+    ],
+    "north_rotation": -2.79307472705841,
+    "origin": {
+      "x": 30192.546875,
+      "y": 17869.9296875
+    },
+    "outer_coast_distance": 851.052185058594,
+    "paper_forward": {
+      "x": 0.841300249099731,
+      "y": -0.540568172931671
+    },
+    "precision": "coastal_rock_region_sector",
+    "region_grid": 385,
+    "requirements": {
+      "coast_max_distance": 900.0,
+      "connected_to_ordinary_rock": true,
+      "different_rock_region_from_mine": true,
+      "independent_special_terrain": true,
+      "landmarks": [
+        "断裂石柱",
+        "古老石座",
+        "白色碎壳",
+        "开阔石台"
+      ],
+      "near_outer_sea": true,
+      "special_terrain": "sea_eroded_ruins_plateau"
+    },
+    "search_area": {
+      "center": {
+        "x": 23424.0,
+        "y": 26752.0
+      },
+      "radius": 384.0
+    },
+    "seed": 161803,
+    "source_rock_region": 0,
+    "target_generated": false,
+    "terrain": "sea_eroded_ruins_plateau",
+    "version": 2
+  }
+]

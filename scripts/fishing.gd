@@ -15,6 +15,8 @@ var world: Node2D
 var player: WildPlayer
 var service: Node
 var spots: Array[Dictionary]=[]
+var chapter_candidate: Dictionary={}
+var chapter_candidate_shore:=Vector2.INF
 var state := "idle"
 var clock := 0.0
 var ambient_clock := 0.0
@@ -62,7 +64,7 @@ func configure(owner_world: Node2D, shore_spots: Array[Dictionary]) -> void:
 	fish_texture=load("res://assets/fishing/v1/fish.res")
 	float_texture=load("res://assets/fishing/v1/float.res")
 	rng.randomize();loot_rng.randomize()
-	catch_textures={FISH_ID:fish_texture,COIN_ID:load("res://assets/fishing/v1/coin.res"),CHEST_ID:load("res://assets/fishing/v1/locked_chest.res")}
+	catch_textures={"mysterious_bottle":load("res://assets/exploration/v1/bottle.png"),FISH_ID:fish_texture,COIN_ID:load("res://assets/fishing/v1/coin.res"),CHEST_ID:load("res://assets/fishing/v1/locked_chest.res")}
 	build_ui()
 	phase_history.append("idle")
 
@@ -91,21 +93,38 @@ func build_ui() -> void:
 	bite_mark.mouse_filter=Control.MOUSE_FILTER_IGNORE;layer.add_child(bite_mark)
 	game.hide();bite_mark.hide();target_panel.hide()
 
+func refresh_chapter_spots() -> void:
+	spots=service.fishing_population.spots.duplicate()
+	if not service.chapter.special(int(service.chapter.state.lake)):return
+	var stand: Vector2=service.chapter.point("shore")
+	if stand!=chapter_candidate_shore:
+		chapter_candidate_shore=stand;chapter_candidate={}
+		for candidate in service.fishing_population.candidates:
+			if candidate.stand.distance_to(stand)<1:
+				chapter_candidate=candidate.duplicate(true);chapter_candidate.remaining=1;chapter_candidate.chapter_only=true;break
+	if service.chapter.state.elder_spawned:
+		var at: Vector2=service.chapter.point("elder")
+		var water: Vector2=service.chapter.point("river_fish")
+		spots.append({"stand":at,"water":water,"lake":-2,"id":"chapter-river","remaining":1,"chapter_only":true})
+	elif not chapter_candidate.is_empty():spots.append(chapter_candidate)
+
 func nearest_spot() -> int:
 	var best := -1
 	var distance := INTERACT_RANGE
 	for i in spots.size():
 		var spot: Dictionary=spots[i]
-		if int(spot.get("remaining",6))<=0: continue
+		if int(spot.get("remaining",6))<=0 or world.generator.frozen_at(spot.water): continue
 		var d := player.position.distance_to(spot.water)
-		if d<distance and player.position.distance_to(spot.stand)<90 and world.generator.can_walk(player.position) and world.stream.clear_reach(player.position,spot.water):
+		if (d<distance or (is_equal_approx(d,distance) and spot.get("chapter_only",false))) and player.position.distance_to(spot.stand)<90 and world.generator.can_walk(player.position) and world.stream.clear_reach(player.position,spot.water):
 			best=i;distance=d
 	return best
 
 func ui_open() -> bool:
+	if is_instance_valid(service.chapter_view) and service.chapter_view.panel.visible:return true
 	return service.storage_ui.panel.visible or service.industry_ui.visible or service.planting_ui.visible or world.map_view.visible or world.item_ui.bag.visible or world.item_ui.catalog.visible or world.item_ui.craft_panel.visible or world.item_ui.item_modal_open() or world.camp_ui.panel.visible or service.body.sleep_active() or get_viewport().gui_is_dragging() or get_viewport().gui_get_focus_owner() is LineEdit
 
 func try_start() -> bool:
+	refresh_chapter_spots()
 	if state!="idle" or ui_open() or not player.action.is_empty() or service.body.down: return false
 	if not service.writable or not service.inventory.has_capability("fishing_ready"): return false
 	var index := nearest_spot()
@@ -126,6 +145,9 @@ func try_start() -> bool:
 
 func transition(next: String) -> void:
 	state=next;clock=0;phase_history.append(next)
+	if next=="success":
+		var special:=chapter_catch()
+		if not special.is_empty():catch_id=special
 	if next=="cast":AudioFX.play_sfx("sfx_fishing_cast",player.position)
 	if next=="bite":AudioFX.play_sfx("sfx_fishing_bite",player.position)
 	if next=="wait": splash(spots[selected].water,.75)
@@ -160,8 +182,10 @@ func advance(delta: float) -> void:
 	elif state=="failure" and clock>=.7: finish(message)
 
 func valid_session() -> bool:
+	if selected<0 or selected>=spots.size():return false
+	if spots[selected].get("chapter_only",false) and not reward_committed and not service.chapter.special(int(spots[selected].lake)):return false
 	var held: Dictionary=service.inventory.equipment.main_hand
-	return (int(spots[selected].get("remaining",6))>0 or (state=="success" and reward_committed)) and not held.is_empty() and str(held.get("instance_id",""))==held_instance and service.inventory.has_capability("fishing_ready") and not service.body.down and not service.body.sleep_active() and player.position.distance_to(spots[selected].stand)<100
+	return not world.generator.frozen_at(spots[selected].water) and (int(spots[selected].get("remaining",6))>0 or (state=="success" and reward_committed)) and not held.is_empty() and str(held.get("instance_id",""))==held_instance and service.inventory.has_capability("fishing_ready") and not service.body.down and not service.body.sleep_active() and player.position.distance_to(spots[selected].stand)<100
 
 func judge() -> void:
 	if preload("res://scripts/network_game_route.gd").send(self,"fish_judge",[]):return
@@ -195,20 +219,30 @@ func catch_for_roll(value: float) -> String:
 	if value<CHEST_CHANCE+COIN_CHANCE: return COIN_ID
 	return FISH_ID
 
+func chapter_catch() -> String:
+	var lake:=int(spots[selected].lake)
+	return service.chapter.reward(lake)
+
 func commit_reward() -> void:
 	if reward_committed or state!="success" or not valid_session(): return
 	reward_committed=true
 	var before: Array[Dictionary]=service.inventory.slots.duplicate(true)
 	var previous_dirty: bool=service.dirty
 	var population_before: Dictionary=service.fishing_population.serialize()
+	var chapter_before: Dictionary=service.chapter.serialize()
+	var special: String=chapter_catch()
+	if not special.is_empty():catch_id=special
+	elif catch_id==service.chapter.BOTTLE:catch_id=FISH_ID
 	if service.inventory.add(catch_id,1)==0:
-		if catch_id==FISH_ID: service.fishing_population.consume(selected)
+		if catch_id==FISH_ID and not spots[selected].get("chapter_only",false): service.fishing_population.consume(selected)
+		service.chapter.caught(int(spots[selected].lake),catch_id)
 		service.dirty=true
 		if service.save_state():
 			reward_count+=1
 			service.item_obtained.emit(catch_id,1)
 			message="钓到了一条湖鱼！" if catch_id==FISH_ID else "钓到了"+str(service.database.item(catch_id).name)+"！"
 		else:
+			service.chapter.state=chapter_before
 			service.fishing_population.restore(population_before)
 			service.inventory.slots=before;service.dirty=previous_dirty
 			service.inventory.changed.emit()
@@ -252,6 +286,7 @@ func _process(delta: float) -> void:
 		if state=="game":
 			marker_phase+=delta*.72;bar.marker=pingpong(marker_phase,1.0)
 	else:advance(delta)
+	if state=="idle":refresh_chapter_spots()
 	if state!="idle":
 		player.input_blocked=true;pose();update_line()
 	update_ui();queue_redraw()
@@ -263,12 +298,14 @@ func network_snapshot() -> Dictionary:
 	return value
 
 func network_restore(value: Dictionary) -> void:
+	refresh_chapter_spots()
 	var previous:=state
 	for key in ["state","clock","wait_time","hits","misses","round_clock","input_cooldown","marker_phase","selected","held_instance","reward_committed","catch_id","message","message_remaining"]:
 		if value.has(key):set(key,value[key])
 	if value.is_empty():state="idle";selected=-1
 	bar.safe_center=float(value.get("safe_center",.5));bar.marker=pingpong(marker_phase,1.0)
-	spots=service.fishing_population.spots
+	# Keep the reconstructed chapter bank too. Replacing this array with the
+	# population alone drops the active river index on every network snapshot.
 	if state!="idle" and (selected<0 or selected>=spots.size()):state="idle"
 	blocker.visible=state!="idle"
 	if state!="idle":
@@ -381,6 +418,7 @@ func _draw() -> void:
 	for i in spots.size():
 		if int(spots[i].get("remaining",6))<=0: continue
 		var at: Vector2=spots[i].water
+		if world.generator.frozen_at(at):continue
 		var screen: Vector2=get_viewport().get_canvas_transform()*at
 		if not get_viewport_rect().grow(120).has_point(screen): continue
 		var phase := fposmod(ambient_clock*.32+i*.7,1.0)

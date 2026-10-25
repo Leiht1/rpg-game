@@ -142,6 +142,7 @@ func install_chunk(packet: Dictionary) -> void:
 	terrain.position=Vector2(coord)*Gen.CHUNK_PX
 	terrain.scale=Vector2.ONE*Gen.TEX_STEP
 	var material:=shared_material.duplicate() as ShaderMaterial
+	if packet.has("lake_mask"):material.set_shader_parameter("lake_mask",ImageTexture.create_from_image(packet.lake_mask))
 	material.set_shader_parameter("environment_tex",ImageTexture.create_from_image(packet.environment))
 	material.set_shader_parameter("chunk_origin",Vector2(coord)*Gen.CHUNK_PX)
 	var mask:Image
@@ -232,9 +233,11 @@ func unload_chunk(coord: Vector2i) -> void:
 	total_unloaded+=1
 
 func has_ground(p: Vector2) -> bool:
+	if preload("res://scripts/mine_rules.gd").pocket(p,generator.extent):return true
 	return loaded.has(chunk_at(p))
 
 func viewport_ready(p: Vector2, half_view: Vector2) -> bool:
+	if preload("res://scripts/mine_rules.gd").pocket(p,generator.extent):return true
 	var lo := chunk_at(p-half_view-Vector2(180,280))
 	var hi := chunk_at(p+half_view+Vector2(180,180))
 	for y in range(lo.y,hi.y+1):
@@ -273,7 +276,8 @@ func chop_tree(tree: Node2D) -> void:
 	if harvested.has(id): return
 	if items and not items.body.can_labor("chop",items.world.player.action=="chop"): return
 	if items: items.body.spend_labor("chop")
-	tree_hits[id]=int(tree_hits.get(id,0))+1
+	var previous_hits := int(tree_hits.get(id,0))
+	tree_hits[id]=mini(tree.required_hits,previous_hits+(items.inventory.harvest_power() if items else 1))
 	tree.hit()
 	AudioFX.play_sfx("sfx_chop_hit",tree.position)
 	if items:
@@ -282,8 +286,9 @@ func chop_tree(tree: Node2D) -> void:
 	if items: items.dirty=true
 	var required:int=tree.required_hits
 	var hits := int(tree_hits[id])
-	if hits%4==0:
-		spawn_drop(tree.position+Vector2(-28 if hits==4 else 28,18),id+":hit%d"%hits)
+	for milestone in range(4,required+1,4):
+		if previous_hits<milestone and hits>=milestone:
+			spawn_drop(tree.position+Vector2(-28 if milestone==4 else 28,18),id+":hit%d"%milestone)
 	if hits<required: return
 	harvested[id]=true
 	call_deferred("refresh_grounding",tree.position)

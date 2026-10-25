@@ -13,13 +13,18 @@ var preview := false
 var gate_parts: Array[Node2D]=[]
 var ground_neighbors: Dictionary={}
 var torch_flame: Sprite2D
+var torch_body: Sprite2D
+var torch_flame_base_scale := 1.0
 var torch_phase := 0.0
+var shelter_view: RefCounted
 var fuel_bar: ProgressBar
 
 func _ready() -> void:
 	if manager.states.has(building_id) and manager.states[building_id].kind in ["wood_floor","wood_chest"]:texture_filter=CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
 	if manager.states.has(building_id) and manager.states[building_id].kind=="camp_torch": setup_torch()
 	else: set_process(false)
+	if manager.states.has(building_id) and manager.states[building_id].kind=="rain_shelter":
+		shelter_view=preload("res://scripts/rain_shelter_view.gd").new();shelter_view.configure(self)
 	if preview:
 		body.free();shape.free();leaf.free();damage.free()
 		return
@@ -40,7 +45,12 @@ func _ready() -> void:
 			post.position=Vector2(endpoint)*preload("res://scripts/camp_grid.gd").STEP-position
 			add_child(post)
 			post.draw.connect(draw_joint.bind(post,preload("res://scripts/camp_grid.gd").junction(manager.states,endpoint).stone))
-	if row.layer not in ["ground","overlay"]:
+	if row.kind=="rain_shelter":
+		shape.disabled=true
+		for post in preload("res://scripts/weather_body_rules.gd").data.shelter_posts:
+			var pole := CollisionShape2D.new();var circle := CircleShape2D.new();circle.radius=float(preload("res://scripts/weather_body_rules.gd").data.post_radius)
+			pole.shape=circle;pole.position=Vector2(post[0],post[1]);body.add_child(pole)
+	elif row.layer not in ["ground","overlay"]:
 		var rect := RectangleShape2D.new()
 		rect.size=(Vector2(8,64) if row.vertical else Vector2(96,8)) if row.layer=="edge" else manager.footprint(row)
 		shape.shape=rect
@@ -134,6 +144,13 @@ func draw_volume(row: Dictionary, definition: Dictionary) -> bool:
 	if image==null:return true
 	var region := Rect2(image.get_image().get_used_rect())
 	var rect := volume_rect(image,profile)
+	if row.kind=="wood_chest" and row.open:
+		# The raised lid adds height without shrinking the body.
+		var closed := texture(int(definition.frame))
+		var painted := Vector2(closed.get_image().get_used_rect().size)
+		var body_scale := painted.x*minf(float(profile.width)/painted.x,float(profile.max_height)/painted.y)/region.size.x
+		var extent := region.size*body_scale
+		rect=Rect2(Vector2(-extent.x*.5,8-extent.y),extent)
 	if row.kind=="wool_carpet":rect=Rect2(-Vector2(profile.width,profile.max_height)*.5,Vector2(profile.width,profile.max_height))
 	draw_texture_rect_region(image,rect,region)
 	return true
@@ -141,6 +158,7 @@ func draw_volume(row: Dictionary, definition: Dictionary) -> bool:
 func _draw() -> void:
 	if not manager.states.has(building_id): return
 	var r: Dictionary=manager.states[building_id];var d: Dictionary=manager.definitions[r.kind]
+	if r.kind=="rain_shelter":return # Independently Y-sorted roof and poles draw themselves.
 	if draw_volume(r,d):return
 	if d.get("industry",false):
 		var path: String=d.art
@@ -161,7 +179,13 @@ func _draw() -> void:
 		return
 	if r.kind=="tilled_soil":
 		var soil := planting_texture("soil")
-		if soil: draw_texture_rect(soil,preload("res://scripts/planting.gd").soil_rect(),false)
+		if soil and not has_node("WinterSoil"):
+			var ground:=Sprite2D.new();ground.name="WinterSoil";ground.texture=soil;ground.centered=false
+			var rect: Rect2=preload("res://scripts/planting.gd").soil_rect()
+			ground.position=rect.position;ground.scale=rect.size/Vector2(soil.get_size());ground.show_behind_parent=true
+			var mat:=ShaderMaterial.new();mat.shader=preload("res://scripts/season_soil.gdshader");ground.material=mat
+			add_child(ground)
+
 		var crop_name: String="roots" if r.get("roots",false) else ""
 		if not str(r.get("crop","")).is_empty():
 			var stage_value := preload("res://scripts/planting.gd").stage_for(r)
@@ -250,6 +274,8 @@ func gate_collision() -> void:
 
 func perform_interaction(_action: String, _player: Node2D) -> bool:
 	var r: Dictionary=manager.states[building_id];var d: Dictionary=manager.definitions[r.kind]
+	if preload("res://scripts/season_surface.gd").blocked(manager.service,building_id):
+		manager.service.notice.emit("积雪太厚，暂时无法使用");return false
 	if r.get("abandoned",false): return false
 	if d.get("door",false):
 		var reason: String=manager.toggle(building_id)
@@ -359,15 +385,24 @@ func position_damage() -> void:
 	damage.position=Vector2(-18,top-7)
 
 func setup_torch() -> void:
-	var image := texture(15)
-	if image==null: return
+	var registration: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://prototypes/torch-separated-v1/registration.json"))
+	var art=preload("res://scripts/candidate_art.gd")
+	var image: Texture2D=art.texture("res://prototypes/torch-separated-v1/body.png")
+	torch_body=Sprite2D.new();torch_body.texture=image
+	torch_body.scale=Vector2.ONE*float(registration.body_height)/image.get_height()
+	torch_body.position=Vector2(0,8-float(registration.body_height)*.5)
+	add_child(torch_body)
+	var flame_image: Texture2D=art.texture("res://prototypes/torch-separated-v1/flame.png")
 	torch_flame=Sprite2D.new()
-	torch_flame.texture=image
-	var extent := Vector2(image.get_size())*minf(80.0/image.get_width(),92.0/image.get_height())
-	torch_flame.scale=extent/Vector2(image.get_size())
-	torch_flame.position=Vector2(0,8-extent.y*.5)
+	torch_flame.texture=flame_image
+	torch_flame.centered=false
+	torch_flame.offset=Vector2(-flame_image.get_width()*.5,-flame_image.get_height())
+	torch_flame_base_scale=float(registration.flame_height)/flame_image.get_height()
+	torch_flame.scale=Vector2.ONE*torch_flame_base_scale
+	torch_flame.position=Vector2(0,float(registration.flame_anchor_y))
 	var effect := ShaderMaterial.new()
 	effect.shader=preload("res://scripts/camp_torch_flame.gdshader")
+	effect.set_shader_parameter("source_height",float(flame_image.get_height()))
 	torch_flame.material=effect
 	add_child(torch_flame)
 	if not preview:
@@ -383,9 +418,13 @@ func _process(delta: float) -> void:
 		if damage_seconds==0: set_process(false)
 		return
 	var lit: bool=preview or manager.service.camps.fuel_lit(building_id)
-	torch_flame.material.set_shader_parameter("lit",lit)
+	torch_flame.visible=lit
+	torch_flame.scale=Vector2.ONE*torch_flame_base_scale*(1.5 if preview else manager.service.camps.flame_scale(building_id))
 	if fuel_bar!=null:
 		fuel_bar.value=float(manager.states.get(building_id,{}).get("fuel",0))
 		preload("res://scripts/item_ui_style.gd").progress_style(fuel_bar,true,lit)
 	torch_phase+=delta
 	torch_flame.material.set_shader_parameter("phase",torch_phase)
+
+func update_occlusion(point: Vector2) -> void:
+	if shelter_view!=null:shelter_view.update_occlusion(point)

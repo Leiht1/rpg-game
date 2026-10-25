@@ -382,5 +382,35 @@
     "default_unlocked": true,
     "description": "用湖鱼和木材制作耐储存的烟熏鱼。",
     "craft_time": 1.5
+  },
+  {
+    "recipe_id": "build_rain_shelter",
+    "output_id": "rain_shelter",
+    "output_count": 1,
+    "materials": {
+      "wood": 16,
+      "plant_fiber": 12,
+      "broad_leaf": 8
+    },
+    "category": "生活",
+    "conditions": [],
+    "default_unlocked": true,
+    "description": "搭起可容纳床和站立空间的简易雨棚，不提供热量。",
+    "craft_time": 1.5
+  },
+  {
+    "recipe_id": "build_dock",
+    "output_id": "dock",
+    "output_count": 1,
+    "materials": {
+      "wood": 45,
+      "stone": 20,
+      "plant_fiber": 15
+    },
+    "category": "生活",
+    "conditions": [],
+    "default_unlocked": false,
+    "description": "在海岸稳固地面搭建船坞。",
+    "craft_time": 1.5
   }
 ]

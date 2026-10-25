@@ -1,0 +1,85 @@
+{
+  "schema": "generate2dmap.map_bundle.v2",
+  "id": "mine-vestibule",
+  "world": {
+    "width": 1536,
+    "height": 1024,
+    "unit": "px"
+  },
+  "layers": [
+    {
+      "name": "painted-floor-and-walls",
+      "kind": "image",
+      "image": "interior-v2-source/generated.png"
+    }
+  ],
+  "objects": [],
+  "collision": {
+    "actorRadius": 7.68,
+    "ySquash": 1,
+    "walkRegions": [
+      {
+        "polygon": [
+          [
+            222.72,
+            250.368
+          ],
+          [
+            1313.28,
+            250.368
+          ],
+          [
+            1313.28,
+            799.488
+          ],
+          [
+            222.72,
+            799.488
+          ]
+        ]
+      }
+    ],
+    "solids": []
+  },
+  "spawns": [
+    {
+      "id": "entry",
+      "x": 768,
+      "y": 722.688
+    },
+    {
+      "id": "return",
+      "x": 768,
+      "y": 780.288
+    },
+    {
+      "id": "north-boundary-approach",
+      "x": 768,
+      "y": 319.488
+    }
+  ],
+  "art_source": "host_image",
+  "provenance": {
+    "tool": "native-mine-qa-projection",
+    "version": "1",
+    "params": {
+      "scale": 0.768,
+      "runtime": "scripts/mine_rules.gd"
+    },
+    "inputs": []
+  },
+  "interactions": [
+    {
+      "id": "return-to-surface",
+      "x": 768,
+      "y": 780.288,
+      "reach": 62.976
+    },
+    {
+      "id": "north-approach",
+      "x": 768,
+      "y": 319.488,
+      "reach": 16
+    }
+  ]
+}

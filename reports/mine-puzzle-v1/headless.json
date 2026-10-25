@@ -1,0 +1,146 @@
+[
+  {
+    "name": "formal item schema",
+    "pass": false
+  },
+  {
+    "name": "fresh puzzle schema",
+    "pass": true
+  },
+  {
+    "name": "old chapter migration retains valid first two rounds",
+    "pass": true
+  },
+  {
+    "name": "hidden rewards absent before solve",
+    "pass": true
+  },
+  {
+    "name": "remote reward rejected",
+    "pass": true
+  },
+  {
+    "name": "wall clue 0 reachable",
+    "pass": true
+  },
+  {
+    "name": "wall clue 1 reachable",
+    "pass": true
+  },
+  {
+    "name": "wall clue 2 reachable",
+    "pass": true
+  },
+  {
+    "name": "wall clue 3 reachable",
+    "pass": true
+  },
+  {
+    "name": "main inscription",
+    "pass": true
+  },
+  {
+    "name": "first correct lamp",
+    "pass": true
+  },
+  {
+    "name": "wrong order resets",
+    "pass": true
+  },
+  {
+    "name": "lamp save failure rollback",
+    "pass": true
+  },
+  {
+    "name": "four lamps unlock one permanent result",
+    "pass": true
+  },
+  {
+    "name": "three real mine nodes and chest revealed",
+    "pass": true
+  },
+  {
+    "name": "completed lamp refuses restart",
+    "pass": true
+  },
+  {
+    "name": "full bag preserves chest",
+    "pass": true
+  },
+  {
+    "name": "chest write failure rolls reward back",
+    "pass": true
+  },
+  {
+    "name": "claim once does not auto-read",
+    "pass": true
+  },
+  {
+    "name": "one official key item",
+    "pass": true
+  },
+  {
+    "name": "real inventory reader starts world wait",
+    "pass": true
+  },
+  {
+    "name": "seeded one or two complete days",
+    "pass": true
+  },
+  {
+    "name": "chest repeat and reread cannot duplicate or reset wait",
+    "pass": true
+  },
+  {
+    "name": "unarmed cannot harvest",
+    "pass": true
+  },
+  {
+    "name": "formal pickaxe equipped",
+    "pass": true
+  },
+  {
+    "name": "mining write failure restores ore and tool",
+    "pass": true
+  },
+  {
+    "name": "rare crystal yield exactly two",
+    "pass": true
+  },
+  {
+    "name": "existing pick durability per hit",
+    "pass": true
+  },
+  {
+    "name": "duplicate depleted hit cannot reward",
+    "pass": true
+  },
+  {
+    "name": "complete state schema",
+    "pass": true
+  },
+  {
+    "name": "reload does not refresh",
+    "pass": true
+  },
+  {
+    "name": "six full calendar days",
+    "pass": true
+  },
+  {
+    "name": "not early before deadline",
+    "pass": true
+  },
+  {
+    "name": "independent ore regrows by world time",
+    "pass": true
+  },
+  {
+    "name": "reload state does not replay collapse",
+    "pass": true
+  },
+  {
+    "name": "next-stage eligibility only no generated ruin",
+    "pass": true
+  }
+]

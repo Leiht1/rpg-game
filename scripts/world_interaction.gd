@@ -14,7 +14,7 @@ static func action_for(target: Node2D) -> String:
 			var row: Dictionary=manager.states.get(target.building_id,{})
 			if row.get("abandoned",false): return "demolish"
 			if row.get("kind","")=="tilled_soil": return manager.service.planting.action(target.building_id)
-			if not row.is_empty() and (row.layer in ["ground","overlay"] or row.kind in ["stone_wall","wood_fence","camp_torch"]): return ""
+			if not row.is_empty() and (row.layer in ["ground","overlay"] or row.kind in ["stone_wall","wood_fence","camp_torch","rain_shelter","dock"]): return ""
 	if target.is_in_group("drops"): return "pickup"
 	if target.is_in_group("trees"): return "chop"
 	return str(target.get_meta("interaction_action","inspect"))
@@ -34,6 +34,12 @@ static func in_reach(stream: Node, at: Vector2, target: Node2D) -> bool:
 	return at.distance_to(point)<distance and stream.clear_reach(at,point,target)
 
 static func reach_point(at: Vector2, target: Node2D) -> Vector2:
+	if target.get_meta("building_id","")!="" and target.manager.states.get(target.building_id,{}).get("kind","")=="rain_shelter":
+		var nearest := Vector2.INF
+		for post in preload("res://scripts/weather_body_rules.gd").data.shelter_posts:
+			var point := target.global_position+Vector2(post[0],post[1])
+			if nearest==Vector2.INF or at.distance_squared_to(point)<at.distance_squared_to(nearest):nearest=point
+		return nearest
 	if target.get_meta("building_id","")!="" and not target.manager.volume_profile(str(target.manager.states.get(target.building_id,{}).get("kind",""))).is_empty():
 		var row: Dictionary=target.manager.states[target.building_id]
 		var bounds: Rect2=target.manager.footprint_rect(row)
@@ -74,6 +80,8 @@ static func target(stream: Node, at: Vector2, facing: String, pointer: Vector2) 
 	return best
 
 static func caption(target: Node2D, inventory: ItemInventory) -> String:
+	if target.has_meta("mine_kind"):
+		return target.get_meta("mine_caption","E 查看")
 	if target.has_meta("animal_id"):return target.manager.caption(target.animal_id)
 	var action := action_for(target)
 	if target.get_meta("building_id","")!="" and target.manager.states.get(target.building_id,{}).get("abandoned",false):
@@ -95,6 +103,13 @@ static func caption(target: Node2D, inventory: ItemInventory) -> String:
 
 static func execute(stream: Node, player: Node2D, target: Node2D) -> bool:
 	if not in_reach(stream,player.position,target): return false
+	if target.has_meta("mine_kind"):
+		var result: String=stream.items.chapter.mine.request(str(target.get_meta("mine_kind")))
+		if result.begins_with("矿工的残页") or result.begins_with("壁刻·") or result.begins_with("古老的路线记录"):stream.items.chapter_view.show_page(result)
+		elif not result.is_empty():stream.items.notice.emit(result)
+		return true
+	if target.has_meta("chapter_kind"):
+		stream.items.chapter_view.investigate(str(target.get_meta("chapter_kind")));return true
 	if target.has_meta("relic_id"):
 		target.interact();return true
 	var action := action_for(target)

@@ -62,7 +62,7 @@ func recipe(kind: String, id: String) -> Dictionary:
 	if kind=="copper_oven":
 		if rules.fallback_recipes.has(id):return rules.fallback_recipes[id]
 		var r: Dictionary=service.camps.rules.recipes.get(id,{})
-		return {} if r.get("legacy_only",false) else r
+		return {} if r.get("legacy_only",false) or r.get("fallback_only",false) else r
 	var r: Dictionary=rules.recipes.get(id,{})
 	return r if r.get("station","")==kind else {}
 
@@ -85,6 +85,7 @@ func feed_allowed(id: String) -> bool:
 	return false
 
 func check(id: String) -> String:
+	if preload("res://scripts/season_surface.gd").blocked(service,id):return "积雪太厚，暂时无法使用"
 	if busy or service.craft_busy or service.body.sleep_active():return "正在处理"
 	if not service.writable:return "存档受保护"
 	if not service.builds.states.has(id):return "设施不存在"

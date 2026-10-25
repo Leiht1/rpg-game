@@ -29,6 +29,7 @@ var warp := FastNoiseLite.new()
 var region_warp := FastNoiseLite.new()
 var phase: float
 var lake_bins := {}
+var season_sim: Node
 var lakes: Array[Vector4] = []
 var spawn := Vector2.ZERO
 
@@ -326,9 +327,10 @@ func subenvironment(p: Vector2) -> Vector2:
 	return Vector2(smoothstep(-.4,.4,moisture.get_noise_2dv(p)),smoothstep(-.4,.4,elevation.get_noise_2dv(p)))
 
 func can_walk(p: Vector2, radius: float = 10.0) -> bool:
+	if preload("res://scripts/mine_rules.gd").pocket(p,extent):return preload("res://scripts/mine_rules.gd").walkable(p,extent,radius)
 	if p.x<radius or p.y<radius or p.x>extent-radius or p.y>extent-radius:return false
 	for offset in [Vector2.ZERO,Vector2(radius,0),Vector2(-radius,0),Vector2(0,radius),Vector2(0,-radius)]:
-		if sample(p+offset).z>.56:return false
+		if sample(p+offset).z>.56 and not frozen_at(p+offset):return false
 	return true
 
 func props_for_chunk(coord: Vector2i) -> Array[Dictionary]:
@@ -363,6 +365,7 @@ func build_chunk(coord: Vector2i) -> Dictionary:
 	var begin := Time.get_ticks_usec()
 	var bytes := PackedByteArray()
 	bytes.resize((TEX_RES+6)*(TEX_RES+6)*4)
+	var lake_mask:=Image.create(TEX_RES+6,TEX_RES+6,false,Image.FORMAT_L8)
 	var environment:=Image.create(26,26,false,Image.FORMAT_RGBA8)
 	var index := 0
 	var origin := Vector2(coord) * CHUNK_PX
@@ -374,11 +377,40 @@ func build_chunk(coord: Vector2i) -> Dictionary:
 		for x in range(-3,TEX_RES+3):
 			var p := origin + Vector2(x,y)*TEX_STEP
 			var v := sample(p)
+			var lw:=lake_weight(p)
+			lake_mask.set_pixel(x+3,y+3,Color(lw,lw,lw))
 			bytes[index] = roundi(v.x*255)
 			bytes[index+1] = roundi(v.y*255)
 			bytes[index+2] = roundi(v.w*255)
 			bytes[index+3] = roundi(v.z*255)
 			index += 4
 	return {"coord":coord,"image":Image.create_from_data(TEX_RES+6,TEX_RES+6,false,Image.FORMAT_RGBA8,bytes),
-		"environment":environment,"props":props_for_chunk(coord),"build_ms":(Time.get_ticks_usec()-begin)/1000.0}
+		"lake_mask":lake_mask,"environment":environment,"props":props_for_chunk(coord),"build_ms":(Time.get_ticks_usec()-begin)/1000.0}
 
+
+func lake_weight(p: Vector2) -> float:
+	var q:=p+Vector2(warp.get_noise_2d(p.x,p.y),warp.get_noise_2d(p.y+1200,p.x))*minf(240.,extent*.005)
+	var water:=0.0
+	for lake in lake_bins.get(Vector2i(q/2048),[]):
+		var rel:Vector2=(q-Vector2(lake.x,lake.y))/Vector2(lake.z,lake.w)
+		var angle:=atan2(rel.y,rel.x)
+		var phase_value:=random_at(roundi(lake.x),roundi(lake.y),951)*TAU
+		var radius:=.93+.19*sin(angle*3.+phase_value)+.13*sin(angle*5.-phase_value*.73)+.055*sin(angle*9.+phase_value*1.6)
+		var bay_angle:=angle_difference(angle,phase_value)
+		radius-=.25*exp(-bay_angle*bay_angle/.19)
+		water=maxf(water,1.-smoothstep(-65.,45.,(rel.length()-radius)*minf(lake.z,lake.w)))
+	return water
+
+func frozen_at(p: Vector2) -> bool:
+	return is_instance_valid(season_sim) and season_sim.lakes_frozen() and lake_weight(p)>.56 and sample(p).z>.56
+
+func thaw_shore(p: Vector2, clear: Callable=Callable()) -> Vector2:
+	# Repair only an actor stranded inside an inland lake after thaw, never ocean.
+	if frozen_at(p) or lake_weight(p)<=.56 or can_walk(p):return p
+	var maximum:=0.0
+	for lake in lakes:maximum=maxf(maximum,maxf(lake.z,lake.w)*3.)
+	for radius in range(24,int(maximum)+48,24):
+		for angle in 64:
+			var at:=p+Vector2.from_angle(float(angle)*TAU/64.)*radius
+			if can_walk(at,18) and (not clear.is_valid() or clear.call(at)):return at
+	return p

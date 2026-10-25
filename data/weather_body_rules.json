@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "base_celsius": 22.0,
+  "night_drop": 8.0,
+  "rain_drop": 6.0,
+  "storm_drop": 4.0,
+  "wet_chill": 14.0,
+  "wet_per_minute": 0.55,
+  "storm_wet_multiplier": 1.5,
+  "dry_per_minute": 0.16,
+  "heat_dry_per_minute": 0.65,
+  "thermal_response_minutes": 22.0,
+  "heat_celsius": 16.0,
+  "heat_sources": {
+    "simple_campfire": 400.0,
+    "camp_torch": 180.0
+  },
+  "wet_thresholds": [
+    10,
+    35,
+    70
+  ],
+  "cold_enter": [
+    16.0,
+    9.0,
+    2.0
+  ],
+  "cold_hysteresis": 2.0,
+  "recovery_factors": [
+    1.0,
+    0.9,
+    0.7,
+    0.45
+  ],
+  "run_factors": [
+    1.0,
+    1.0,
+    1.08,
+    1.15
+  ],
+  "move_factors": [
+    1.0,
+    1.0,
+    1.0,
+    0.94
+  ],
+  "extreme_grace_minutes": 120.0,
+  "extreme_damage_per_hour": 2.0,
+  "shelter_rect": [
+    -144,
+    -96,
+    288,
+    192
+  ],
+  "shelter_posts": [
+    [
+      -135,
+      24
+    ],
+    [
+      135,
+      24
+    ],
+    [
+      -154,
+      96
+    ],
+    [
+      154,
+      96
+    ]
+  ],
+  "post_radius": 5.0,
+  "shelter_visual_width": 336,
+  "shelter_visual_bottom": 96,
+  "base_clothing_warmth": 2.0,
+  "shelter_roof_occluded_alpha": 0.32,
+  "shelter_roof_fade_seconds": 0.16,
+  "summer_heat": {
+    "neutral_celsius": 22.0,
+    "activity_response_minutes": 90.0,
+    "thermal_response_minutes": 45.0,
+    "walking_load_celsius": 1.0,
+    "running_load_celsius": 4.0,
+    "labor_load_celsius": 3.5,
+    "accumulate_above_celsius": 29.5,
+    "full_rate_excess_celsius": 2.0,
+    "release_below_celsius": 29.0,
+    "enter_minutes": 90.0,
+    "exit_minutes": 20.0,
+    "max_minutes": 120.0,
+    "cooling_per_minute": 0.75,
+    "energy_recovery_factor": 0.85
+  }
+}

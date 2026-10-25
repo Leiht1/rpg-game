@@ -1,0 +1,50 @@
+{
+  "art_source": "existing",
+  "processing": "Unchanged cave wall sample + exactly one matching lamp glyph; complex etch layer removed; no new generation",
+  "files": {
+    "closeup-0.png": {
+      "sha256": "a23474e56b54e336d58772862b991bb7363a02fa586887aadd07b959d9253922",
+      "wall_region": [
+        1019,
+        127,
+        1193,
+        257
+      ],
+      "only_overlay": "assets\\exploration\\mine-scene-v2\\glyph-0.png",
+      "glyph_sha256": "d9b83a579487525c2318e37d40617955ec4d3e3f9356535d98301712c74694bf"
+    },
+    "closeup-1.png": {
+      "sha256": "f051827665b34bf69c6f3f1e39997e4207eb2d12c8309f9675f993fd1023ced2",
+      "wall_region": [
+        343,
+        127,
+        517,
+        257
+      ],
+      "only_overlay": "assets\\exploration\\mine-scene-v2\\glyph-1.png",
+      "glyph_sha256": "b12b7db1680856f4e2ccfb7a89f10d79ffe754ed4f62bb798c4045c83dd8e451"
+    },
+    "closeup-2.png": {
+      "sha256": "fbebc9bd976aab7fe78fe24ee8f51d1a00dc47c33c19999330b86cc7e73a9b5d",
+      "wall_region": [
+        28,
+        393,
+        202,
+        523
+      ],
+      "only_overlay": "assets\\exploration\\mine-scene-v2\\glyph-2.png",
+      "glyph_sha256": "49410b5218ab6fb34b5a50f0db9bbde37b377f5898cf24f1735ad17f0b6943b6"
+    },
+    "closeup-3.png": {
+      "sha256": "09c4fb522b7c021ef38a8ef148e1463c34e0e7d36b33f43e8aac0225503b80ec",
+      "wall_region": [
+        650,
+        127,
+        824,
+        257
+      ],
+      "only_overlay": "assets\\exploration\\mine-scene-v2\\glyph-3.png",
+      "glyph_sha256": "e1af5aee3b38c926e3efe8f0dca04e953d5bc8998492ce6629ea3914b83edb69"
+    }
+  }
+}

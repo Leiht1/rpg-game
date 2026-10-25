@@ -5,6 +5,7 @@ var world: Node2D
 var effect := ColorRect.new()
 var material_effect := ShaderMaterial.new()
 var dial := preload("res://scripts/environment_dial.gd").new()
+var season_dial := preload("res://scripts/season_dial.gd").new()
 var panel := PanelContainer.new()
 var detail := Label.new()
 var rain_visual := preload("res://scripts/weather_rain.gd").new()
@@ -27,6 +28,7 @@ func configure(owner_world: Node2D) -> void:
 	simulation = Simulation.new()
 	simulation.name = "WorldEnvironment"
 	world.add_child(simulation)
+	world.generator.season_sim=simulation
 	simulation.rng.seed = world.world_seed ^ 78041
 	lightning_random.seed=world.world_seed ^ 93617
 	lightning_wait=lightning_random.randf_range(LIGHTNING_INTERVAL_MIN,LIGHTNING_INTERVAL_MAX)
@@ -40,6 +42,11 @@ func configure(owner_world: Node2D) -> void:
 	world.add_child(rain_visual)
 	# After streamed ground/copy, before every sorted prop and the player.
 	world.move_child(rain_visual,world.object_root.get_index())
+	var season_visual := preload("res://scripts/season_features_visual.gd").new()
+	season_visual.name="SeasonFlecks"
+	season_visual.world=world
+	world.add_child(season_visual)
+	world.move_child(season_visual,world.object_root.get_index())
 	material_effect.shader = preload("res://scripts/world_environment.gdshader")
 	var world_copy := BackBufferCopy.new()
 	world_copy.copy_mode = BackBufferCopy.COPY_MODE_VIEWPORT
@@ -59,9 +66,13 @@ func configure(owner_world: Node2D) -> void:
 	dial.offset_top=16
 	dial.offset_bottom=180
 	dial.simulation=simulation
-	world.title.position.x=180
-	world.hint.position.x=180
-	world.debug_label.position.x=180
+	dial.add_child(season_dial)
+	season_dial.position=Vector2(144,19)
+	season_dial.size=Vector2(100,116)
+	season_dial.simulation=simulation
+	world.title.position.x=280
+	world.hint.position.x=280
+	world.debug_label.position.x=280
 	panel.position = Vector2(880,190)
 	panel.custom_minimum_size = Vector2(365,0)
 	hud.add_child(panel)
@@ -94,6 +105,7 @@ func configure(owner_world: Node2D) -> void:
 		else:
 			previous_scale=simulation.time_scale;previous_pause=simulation.paused
 			preview=true;simulation.time_scale=simulation.day_length_minutes;simulation.paused=false)
+	button(box,"切换四季（下一季）",debug_next_season)
 	var weather_row := HBoxContainer.new()
 	box.add_child(weather_row)
 	for weather in [Simulation.Weather.CLEAR, Simulation.Weather.RAIN, Simulation.Weather.THUNDERSTORM]:
@@ -101,6 +113,17 @@ func configure(owner_world: Node2D) -> void:
 	button(box,"预览一次闪电（雷暴雨时）",func():
 		if simulation.blend.y>.7: lightning_age=0.0)
 	panel.hide()
+
+func debug_next_season() -> void:
+	if not OS.has_feature("debug"):return
+	stop_preview()
+	var date: Dictionary=simulation.season_date()
+	var days: float=float(preload("res://scripts/season_rules.gd").data.seasons[date.index].days)
+	# Debug calendar jump only; do not replay elapsed body/cooking/crop time.
+	simulation.day+=maxi(1,int(ceil(days-float(date.progress))))
+	simulation.state_changed.emit()
+	world.item_service.dirty=true
+	dial.queue_redraw();season_dial.queue_redraw()
 
 func button(parent: Node, text: String, action: Callable) -> void:
 	var control := Button.new()
@@ -142,18 +165,28 @@ func _process(delta: float) -> void:
 	var centers := PackedVector2Array()
 	var radii := PackedFloat32Array()
 	var strengths := PackedFloat32Array()
+	if world.get_meta("network_game",false):
+		for actor in world.actors.values():
+			if not is_instance_valid(actor) or actor.lamp_item.is_empty():continue
+			var radius: float=float(world.item_service.database.item(actor.lamp_item).get("light_radius",0))
+			if radius<=0:continue
+			var screen: Vector2=get_viewport().get_canvas_transform()*actor.position
+			if not get_viewport().get_visible_rect().grow(radius*get_viewport().get_canvas_transform().get_scale().x).has_point(screen):continue
+			centers.append(screen/get_viewport().get_visible_rect().size)
+			radii.append(radius*get_viewport().get_canvas_transform().get_scale().x);strengths.append(1.0)
 	for node in world.item_service.camps.visuals.values():
 		if is_instance_valid(node) and world.item_service.camps.states[node.camp_id].lit:
 			var screen: Vector2=get_viewport().get_canvas_transform()*node.position
-			if get_viewport().get_visible_rect().grow(maxf(240.0,float(world.item_service.camps.rules.light_radius)*get_viewport().get_canvas_transform().get_scale().x)).has_point(screen):
+			var radius: float=float(world.item_service.camps.rules.light_radius)*world.item_service.camps.light_scale(node.camp_id)
+			if radius>0 and get_viewport().get_visible_rect().grow(maxf(240.0,radius*get_viewport().get_canvas_transform().get_scale().x)).has_point(screen):
 				centers.append(screen/get_viewport().get_visible_rect().size)
-				radii.append(float(world.item_service.camps.rules.light_radius)*get_viewport().get_canvas_transform().get_scale().x)
+				radii.append(radius*get_viewport().get_canvas_transform().get_scale().x)
 				strengths.append(1.0)
 	for id in world.item_service.builds.visuals:
 		if (world.item_service.builds.states[id].kind!="camp_torch" or not world.item_service.camps.fuel_lit(id)) and not (world.item_service.builds.states[id].kind=="copper_lamp" and world.item_service.builds.states[id].machine.enabled): continue
 		var node: Node2D=world.item_service.builds.visuals[id]
 		var screen: Vector2=get_viewport().get_canvas_transform()*node.position
-		var radius: float=float(world.item_service.industry.rules.copper_lamp_radius) if world.item_service.builds.states[id].kind=="copper_lamp" else 210.0
+		var radius: float=float(world.item_service.industry.rules.copper_lamp_radius) if world.item_service.builds.states[id].kind=="copper_lamp" else 210.0*world.item_service.camps.light_scale(id)
 		if get_viewport().get_visible_rect().grow(maxf(240.0,radius*get_viewport().get_canvas_transform().get_scale().x)).has_point(screen):
 			centers.append(screen/get_viewport().get_visible_rect().size);radii.append(radius*get_viewport().get_canvas_transform().get_scale().x)
 			strengths.append(float(world.item_service.industry.rules.copper_lamp_strength) if world.item_service.builds.states[id].kind=="copper_lamp" else 1.0)
@@ -162,10 +195,11 @@ func _process(delta: float) -> void:
 	material_effect.set_shader_parameter("camp_centers",centers)
 	material_effect.set_shader_parameter("camp_radii",radii)
 	material_effect.set_shader_parameter("camp_strengths",strengths)
-	rain_visual.intensity=light.rain
+	rain_visual.intensity=0.0 if simulation.season_date().index==3 else light.rain
 	rain_visual.storm=light.storm
 	update_lightning(delta,light.storm)
 	dial.queue_redraw()
+	season_dial.queue_redraw()
 	detail.text="流速 ×%.1f%s\n%s → %s  %.0f%%\n持续剩余 %.0f秒 · 每日 %.0f分" % [simulation.time_scale,"（暂停）" if simulation.paused else "",simulation.weather_name(simulation.current_weather),simulation.weather_name(),minf(100.,simulation.transition_elapsed/simulation.transition_seconds*100.),simulation.weather_remaining,simulation.day_length_minutes]
 	detail.text=simulation.clock_text()+" · "+simulation.phase()+"\n"+detail.text
 	save_clock += delta
@@ -232,15 +266,17 @@ func advance_gameplay(seconds: float, shared: bool=true) -> void:
 		if body.sleeping:
 			var minutes_left: float=maxf(0.000001,body.sleep_duration-body.sleep_elapsed)
 			var target: float=float(body.sleep_session.get("target",100))
-			var rate: float=float(body.sleep_session.get("rate",body.rules.sleep_energy_per_hour))
+			var rate: float=float(body.sleep_session.get("rate",body.rules.sleep_energy_per_hour))*body.energy_recovery_factor()
 			minutes_left=minf(minutes_left,maxf(.000001,(target-body.energy)/rate*60))
 			step=minf(step,minutes_left*simulation.day_length_minutes*60.0/1440.0)
 		var original_scale: float=simulation.time_scale
 		if shared:simulation.time_scale=1.0;simulation.advance(step);simulation.time_scale=original_scale
 		body.busy=player.input_blocked and not body.sleeping
-		body.advance(step,step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0),player.running and player.moving and not player.input_blocked,player.action in ["chop","mine","dig"] and not player.input_blocked)
+		body.exposure=preload("res://scripts/weather_exposure.gd").sample(service)
+		body.advance(step,step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0),player.running and player.moving and not player.input_blocked,player.action in ["chop","mine","dig"] and not player.input_blocked,player.moving and not player.input_blocked)
 		service.industry.advance(step,step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0),shared)
 		if shared:
+			preload("res://scripts/season_surface.gd").advance(service,step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
 			service.planting.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
 			service.animals.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0))
 			if service.writable and service.fishing_population.advance(step*1440.0/maxf(1.0,simulation.day_length_minutes*60.0)): service.dirty=true
@@ -255,3 +291,4 @@ func body_environment_snapshot() -> Dictionary:
 	var data: Dictionary=simulation.serialize()
 	if preview: data.time_scale=previous_scale;data.paused=previous_pause
 	return data
+

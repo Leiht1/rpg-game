@@ -717,7 +717,8 @@
     "visual_id": "",
     "stats": {},
     "durability": null,
-    "death_retention": "retain"
+    "death_retention": "retain",
+    "lamp_burn_rate": 1.3333333333333333
   },
   {
     "item_id": "simple_campfire",
@@ -2257,7 +2258,8 @@
     "action_id": "chop",
     "visual_id": "tool:copper_axe",
     "stats": {
-      "labor_speed": 1.35
+      "labor_speed": 1.35,
+      "harvest_power": 2
     },
     "durability": 250,
     "industry": true,
@@ -2292,7 +2294,8 @@
     "action_id": "mine",
     "visual_id": "tool:copper_pickaxe",
     "stats": {
-      "labor_speed": 1.35
+      "labor_speed": 1.35,
+      "harvest_power": 2
     },
     "durability": 250,
     "industry": true,
@@ -2327,7 +2330,8 @@
     "action_id": "dig",
     "visual_id": "tool:copper_shovel",
     "stats": {
-      "labor_speed": 1.35
+      "labor_speed": 1.35,
+      "harvest_power": 2
     },
     "durability": 250,
     "industry": true,
@@ -2362,7 +2366,8 @@
     "action_id": "demolish",
     "visual_id": "tool:copper_hammer",
     "stats": {
-      "labor_speed": 1.35
+      "labor_speed": 1.35,
+      "harvest_power": 2
     },
     "durability": 250,
     "industry": true,
@@ -2401,7 +2406,8 @@
     "lamp_lifetime": 3600.0,
     "light_radius": 390.0,
     "expire_remove": true,
-    "death_retention": "retain"
+    "death_retention": "retain",
+    "lamp_burn_rate": 1.3333333333333333
   },
   {
     "item_id": "fishing_rod",
@@ -3233,5 +3239,192 @@
     "stats": {},
     "durability": null,
     "death_retention": "retain"
+  },
+  {
+    "item_id": "rain_umbrella",
+    "name": "雨伞",
+    "category": "tool",
+    "description": "主手装备，遮雨但不保暖。",
+    "icon": "res://assets/weather/v1/umbrella.png",
+    "world_visual": "res://assets/weather/v1/umbrella.png",
+    "world_size": 24,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "rain_cover"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作 / F6 调试物品库"
+    },
+    "equippable": true,
+    "equip_slot": "main_hand",
+    "equipment_type": "tool",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "tool:rain_umbrella",
+    "stats": {},
+    "durability": null,
+    "death_retention": "relic"
+  },
+  {
+    "item_id": "rain_shelter",
+    "name": "简易雨棚",
+    "category": "utility",
+    "description": "木杆支撑防雨布，覆盖3×3建造格，不提供热量。",
+    "icon": "res://assets/weather/v1/shelter.png",
+    "world_visual": "res://assets/weather/v1/shelter.png",
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "sleep",
+      "building"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "habitat": "none",
+      "chance": 0,
+      "source": "营地建造"
+    },
+    "effects": {},
+    "world_size": 28,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "death_retention": "retain"
+  },
+  {
+    "item_id": "wool_sweater",
+    "name": "羊毛衫",
+    "category": "equipment",
+    "description": "上身与手臂保暖，严寒时仍需火源。",
+    "icon": "res://assets/season_gear/v1/wool_sweater-icon.png",
+    "world_visual": "res://assets/season_gear/v1/wool_sweater-icon.png",
+    "world_size": 26,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "season_clothing"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作"
+    },
+    "equippable": true,
+    "equip_slot": "outfit",
+    "equipment_type": "outfit",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "clothing:wool_sweater",
+    "stats": {
+      "warmth": 7.0
+    },
+    "durability": null,
+    "death_retention": "relic"
+  },
+  {
+    "item_id": "wool_hat",
+    "name": "羊毛帽",
+    "category": "equipment",
+    "description": "套在发型外侧的羊毛帽，提供少量保暖。",
+    "icon": "res://assets/season_gear/v1/wool_hat-icon.png",
+    "world_visual": "res://assets/season_gear/v1/wool_hat-icon.png",
+    "world_size": 26,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "season_clothing"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作"
+    },
+    "equippable": true,
+    "equip_slot": "head",
+    "equipment_type": "headwear",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "clothing:wool_hat",
+    "stats": {
+      "warmth": 3.0
+    },
+    "durability": null,
+    "death_retention": "relic"
+  },
+  {
+    "item_id": "straw_hat",
+    "name": "草帽",
+    "category": "equipment",
+    "description": "遮挡日晒，减少少量雨水。",
+    "icon": "res://assets/season_gear/v1/straw_hat-icon.png",
+    "world_visual": "res://assets/season_gear/v1/straw_hat-icon.png",
+    "world_size": 26,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "season_clothing"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作"
+    },
+    "equippable": true,
+    "equip_slot": "head",
+    "equipment_type": "headwear",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "clothing:straw_hat",
+    "stats": {
+      "rain_resistance": 0.2,
+      "sun_shade": 2.5
+    },
+    "durability": null,
+    "death_retention": "relic"
+  },
+  {
+    "item_id": "straw_raincoat",
+    "name": "蓑衣",
+    "category": "equipment",
+    "description": "减少雨水浸湿，留出双手使用工具；不能完全遮雨。",
+    "icon": "res://assets/season_gear/v1/straw_raincoat-icon.png",
+    "world_visual": "res://assets/season_gear/v1/straw_raincoat-icon.png",
+    "world_size": 26,
+    "max_stack": 1,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "season_clothing"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "徒手制作"
+    },
+    "equippable": true,
+    "equip_slot": "outfit",
+    "equipment_type": "outfit",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "clothing:straw_raincoat",
+    "stats": {
+      "rain_resistance": 0.6
+    },
+    "durability": null,
+    "death_retention": "relic"
   }
 ]

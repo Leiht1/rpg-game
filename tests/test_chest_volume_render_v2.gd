@@ -30,6 +30,11 @@ func run() -> void:
 		var source: Texture2D=load(OPEN) if opened else node.texture(13)
 		var reference := viewport();var painter := Node2D.new();painter.position=node.position;painter.texture_filter=node.texture_filter;reference.add_child(painter)
 		var region := Rect2(source.get_image().get_used_rect());var rect := node.volume_rect(source,manager.volume_profile("wood_chest"))
+		if opened:
+			var closed: Texture2D=node.texture(13)
+			var width: float=node.volume_rect(closed,manager.volume_profile("wood_chest")).size.x
+			var extent:=Vector2(width,width*region.size.y/region.size.x)
+			rect=Rect2(Vector2(-extent.x*.5,8-extent.y),extent)
 		painter.draw.connect(func():painter.draw_texture_rect_region(source,rect,region));painter.queue_redraw()
 		await frames();await RenderingServer.frame_post_draw
 		var expected := reference.get_texture().get_image();var differences := 0;var colored := 0

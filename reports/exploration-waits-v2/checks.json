@@ -1,0 +1,322 @@
+[
+  {
+    "name": "isolated world no production save access",
+    "pass": true
+  },
+  {
+    "name": "item schema valid",
+    "pass": true
+  },
+  {
+    "name": "new world silent and empty",
+    "pass": true
+  },
+  {
+    "name": "no early placeholders",
+    "pass": true
+  },
+  {
+    "name": "early reload remains dormant",
+    "pass": true
+  },
+  {
+    "name": "normal valid metal workbench site",
+    "pass": true
+  },
+  {
+    "name": "normal building transaction with cost",
+    "pass": true
+  },
+  {
+    "name": "facility alone insufficient",
+    "pass": true
+  },
+  {
+    "name": "time plus development qualifies separately",
+    "pass": true
+  },
+  {
+    "name": "qualification survives reload",
+    "pass": true
+  },
+  {
+    "name": "safe site generated",
+    "pass": true
+  },
+  {
+    "name": "site accessible clear terrain resources facilities spawn",
+    "pass": true
+  },
+  {
+    "name": "away from spawn",
+    "pass": true
+  },
+  {
+    "name": "real loaded investigation objects",
+    "pass": true
+  },
+  {
+    "name": "existing interaction reach",
+    "pass": true
+  },
+  {
+    "name": "full bag retains both clues",
+    "pass": true
+  },
+  {
+    "name": "one free slot rolls back partial clue grant",
+    "pass": true
+  },
+  {
+    "name": "failed disk write rolls back stage and both items",
+    "pass": true
+  },
+  {
+    "name": "real E input opens investigation through existing selection",
+    "pass": true
+  },
+  {
+    "name": "map note and stage one transaction",
+    "pass": true
+  },
+  {
+    "name": "repeat objects never duplicate",
+    "pass": true
+  },
+  {
+    "name": "atomic disk save",
+    "pass": true
+  },
+  {
+    "name": "JSON chapter schema validates after numeric conversion",
+    "pass": true
+  },
+  {
+    "name": "disk reload exact site items progress",
+    "pass": true
+  },
+  {
+    "name": "leave and return stable location",
+    "pass": true
+  },
+  {
+    "name": "no immediate elder or special catch after investigation",
+    "pass": true
+  },
+  {
+    "name": "seeded one or two COMPLETE days",
+    "pass": true
+  },
+  {
+    "name": "forged old shore request cannot skip wait",
+    "pass": true
+  },
+  {
+    "name": "reload preserves precise waiting deadline",
+    "pass": true
+  },
+  {
+    "name": "one minute before deadline still no elder",
+    "pass": true
+  },
+  {
+    "name": "elder appears at complete-day deadline",
+    "pass": true
+  },
+  {
+    "name": "real walkable outer coast and valid deep water",
+    "pass": true
+  },
+  {
+    "name": "one stable elder after repeated advance",
+    "pass": true
+  },
+  {
+    "name": "loaded real elder entity",
+    "pass": true
+  },
+  {
+    "name": "no special before actual dialogue",
+    "pass": true
+  },
+  {
+    "name": "real E opens first elder dialogue",
+    "pass": true
+  },
+  {
+    "name": "dialogue starts complete one-day wait",
+    "pass": true
+  },
+  {
+    "name": "repeated dialogue never resets wait",
+    "pass": true
+  },
+  {
+    "name": "fishing wait survives restored world clock",
+    "pass": true
+  },
+  {
+    "name": "one minute before special opening",
+    "pass": true
+  },
+  {
+    "name": "special catch opens after full day",
+    "pass": true
+  },
+  {
+    "name": "paper blocks game input predecessor_map",
+    "pass": true
+  },
+  {
+    "name": "paper blocks game input predecessor_note",
+    "pass": true
+  },
+  {
+    "name": "other water keeps normal loot",
+    "pass": true
+  },
+  {
+    "name": "original loot table unchanged",
+    "pass": true
+  },
+  {
+    "name": "player fishes beside elder without overlapping collider",
+    "pass": true
+  },
+  {
+    "name": "real fishing cancellation starts",
+    "pass": true
+  },
+  {
+    "name": "cancel never advances guarantee",
+    "pass": true
+  },
+  {
+    "name": "real failure fishing starts",
+    "pass": true
+  },
+  {
+    "name": "failed timing never advances guarantee",
+    "pass": true
+  },
+  {
+    "name": "real fishing starts with rod and valid lake",
+    "pass": true
+  },
+  {
+    "name": "network restore preserves active river fishing index",
+    "pass": true
+  },
+  {
+    "name": "existing timing rounds reach success",
+    "pass": true
+  },
+  {
+    "name": "full bag catch preserves guarantee",
+    "pass": true
+  },
+  {
+    "name": "subsequent real fishing attempt",
+    "pass": true
+  },
+  {
+    "name": "subsequent real fishing attempt",
+    "pass": true
+  },
+  {
+    "name": "bottle acquired once remains unread",
+    "pass": true
+  },
+  {
+    "name": "ordinary fishing awards fish before bounded third special catch",
+    "pass": true
+  },
+  {
+    "name": "repeated fishing settlement idempotent",
+    "pass": true
+  },
+  {
+    "name": "real item context menu opens unread bottle",
+    "pass": true
+  },
+  {
+    "name": "reading alone completes mine clue",
+    "pass": true
+  },
+  {
+    "name": "reread persistent nonconsumable no rewards",
+    "pass": true
+  },
+  {
+    "name": "shared shore record retains opened mine clue",
+    "pass": true
+  },
+  {
+    "name": "new dialogue is not overwritten by previously opened bottle",
+    "pass": true
+  },
+  {
+    "name": "shared transcript text stays inside actual paper",
+    "pass": true
+  },
+  {
+    "name": "chapter valid roundtrip",
+    "pass": true
+  },
+  {
+    "name": "mine hook records full-day gate, no same-frame unlock",
+    "pass": true
+  },
+  {
+    "name": "repeat bottle read preserves future deadline",
+    "pass": true
+  },
+  {
+    "name": "paper inside requested window (960, 540)predecessor_map",
+    "pass": true
+  },
+  {
+    "name": "paper inside requested window (960, 540)predecessor_note",
+    "pass": true
+  },
+  {
+    "name": "paper inside requested window (960, 540)mysterious_bottle",
+    "pass": true
+  },
+  {
+    "name": "paper inside requested window (1600, 900)predecessor_map",
+    "pass": true
+  },
+  {
+    "name": "paper inside requested window (1600, 900)predecessor_note",
+    "pass": true
+  },
+  {
+    "name": "paper inside requested window (1600, 900)mysterious_bottle",
+    "pass": true
+  },
+  {
+    "name": "depleted lake retains actual fishing fallback",
+    "pass": true
+  },
+  {
+    "name": "success animation shows actual bottle before settlement",
+    "pass": true
+  },
+  {
+    "name": "failed catch save rolls back unique award and guarantee",
+    "pass": true
+  },
+  {
+    "name": "depleted lake catch succeeds without random gate",
+    "pass": true
+  },
+  {
+    "name": "future version protected",
+    "pass": true
+  },
+  {
+    "name": "no final secret exposed",
+    "pass": true
+  }
+]

@@ -1,0 +1,414 @@
+[
+  {
+    "name": "isolated local world",
+    "pass": true
+  },
+  {
+    "name": "harvest power stone_axe",
+    "pass": true
+  },
+  {
+    "name": "harvest power stone_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "harvest power simple_shovel",
+    "pass": true
+  },
+  {
+    "name": "harvest power stone_hammer",
+    "pass": true
+  },
+  {
+    "name": "harvest power copper_axe",
+    "pass": true
+  },
+  {
+    "name": "harvest power copper_pickaxe",
+    "pass": true
+  },
+  {
+    "name": "harvest power copper_shovel",
+    "pass": true
+  },
+  {
+    "name": "harvest power copper_hammer",
+    "pass": true
+  },
+  {
+    "name": "create resource stone_outcrop",
+    "pass": true
+  },
+  {
+    "name": "half hits ceil and completes stone_outcrop",
+    "pass": true
+  },
+  {
+    "name": "one durability per actual strike stone_outcrop",
+    "pass": true
+  },
+  {
+    "name": "create resource flint_outcrop",
+    "pass": true
+  },
+  {
+    "name": "half hits ceil and completes flint_outcrop",
+    "pass": true
+  },
+  {
+    "name": "one durability per actual strike flint_outcrop",
+    "pass": true
+  },
+  {
+    "name": "create resource buried_root",
+    "pass": true
+  },
+  {
+    "name": "half hits ceil and completes buried_root",
+    "pass": true
+  },
+  {
+    "name": "one durability per actual strike buried_root",
+    "pass": true
+  },
+  {
+    "name": "create resource buried_bone",
+    "pass": true
+  },
+  {
+    "name": "half hits ceil and completes buried_bone",
+    "pass": true
+  },
+  {
+    "name": "one durability per actual strike buried_bone",
+    "pass": true
+  },
+  {
+    "name": "create resource buried_supply",
+    "pass": true
+  },
+  {
+    "name": "half hits ceil and completes buried_supply",
+    "pass": true
+  },
+  {
+    "name": "one durability per actual strike buried_supply",
+    "pass": true
+  },
+  {
+    "name": "create resource copper_outcrop",
+    "pass": true
+  },
+  {
+    "name": "half hits ceil and completes copper_outcrop",
+    "pass": true
+  },
+  {
+    "name": "one durability per actual strike copper_outcrop",
+    "pass": true
+  },
+  {
+    "name": "create resource silver_outcrop",
+    "pass": true
+  },
+  {
+    "name": "half hits ceil and completes silver_outcrop",
+    "pass": true
+  },
+  {
+    "name": "one durability per actual strike silver_outcrop",
+    "pass": true
+  },
+  {
+    "name": "create resource gold_outcrop",
+    "pass": true
+  },
+  {
+    "name": "half hits ceil and completes gold_outcrop",
+    "pass": true
+  },
+  {
+    "name": "one durability per actual strike gold_outcrop",
+    "pass": true
+  },
+  {
+    "name": "create resource broadleaf_clump",
+    "pass": true
+  },
+  {
+    "name": "half hits ceil and completes broadleaf_clump",
+    "pass": true
+  },
+  {
+    "name": "one durability per actual strike broadleaf_clump",
+    "pass": true
+  },
+  {
+    "name": "tree strike count stone_axe4",
+    "pass": true
+  },
+  {
+    "name": "tree reward milestones preserved stone_axe4",
+    "pass": true
+  },
+  {
+    "name": "tree strike count stone_axe8",
+    "pass": true
+  },
+  {
+    "name": "tree reward milestones preserved stone_axe8",
+    "pass": true
+  },
+  {
+    "name": "tree strike count copper_axe4",
+    "pass": true
+  },
+  {
+    "name": "tree reward milestones preserved copper_axe4",
+    "pass": true
+  },
+  {
+    "name": "tree strike count copper_axe8",
+    "pass": true
+  },
+  {
+    "name": "tree reward milestones preserved copper_axe8",
+    "pass": true
+  },
+  {
+    "name": "lamp duration .75 field_lantern",
+    "pass": true
+  },
+  {
+    "name": "lamp expires exactly field_lantern",
+    "pass": true
+  },
+  {
+    "name": "lamp duration .75 silver_lantern",
+    "pass": true
+  },
+  {
+    "name": "lamp expires exactly silver_lantern",
+    "pass": true
+  },
+  {
+    "name": "durability never hides on hover",
+    "pass": true
+  },
+  {
+    "name": "fuel radius 1.0",
+    "pass": true
+  },
+  {
+    "name": "fuel flame size 1.0",
+    "pass": true
+  },
+  {
+    "name": "flame bottom fixed 1.0",
+    "pass": true
+  },
+  {
+    "name": "fuel radius 0.5",
+    "pass": true
+  },
+  {
+    "name": "fuel flame size 0.5",
+    "pass": true
+  },
+  {
+    "name": "flame bottom fixed 0.5",
+    "pass": true
+  },
+  {
+    "name": "fuel radius 0.01",
+    "pass": true
+  },
+  {
+    "name": "fuel flame size 0.01",
+    "pass": true
+  },
+  {
+    "name": "flame bottom fixed 0.01",
+    "pass": true
+  },
+  {
+    "name": "zero fuel extinguished",
+    "pass": true
+  },
+  {
+    "name": "torch cup/shaft and flame root stationary 1.0",
+    "pass": true
+  },
+  {
+    "name": "torch flame curve 1.0",
+    "pass": true
+  },
+  {
+    "name": "torch cup/shaft and flame root stationary 0.5",
+    "pass": true
+  },
+  {
+    "name": "torch flame curve 0.5",
+    "pass": true
+  },
+  {
+    "name": "torch cup/shaft and flame root stationary 0.001",
+    "pass": true
+  },
+  {
+    "name": "torch flame curve 0.001",
+    "pass": true
+  },
+  {
+    "name": "180 frames no boar left/right oscillation",
+    "pass": true
+  },
+  {
+    "name": "crop along pursuit path selected first",
+    "pass": true
+  },
+  {
+    "name": "boar attacks crop before player",
+    "pass": true
+  },
+  {
+    "name": "one attack destroys crop",
+    "pass": true
+  },
+  {
+    "name": "boar resumes player pursuit",
+    "pass": true
+  },
+  {
+    "name": "fence blocks boar path",
+    "pass": true
+  },
+  {
+    "name": "night encounter created",
+    "pass": true
+  },
+  {
+    "name": "night spawn stays distant",
+    "pass": true
+  },
+  {
+    "name": "one encounter per night without population growth",
+    "pass": true
+  },
+  {
+    "name": "new encounter fields roundtrip save validation",
+    "pass": true
+  },
+  {
+    "name": "unisex selection unisex_mohawk male",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_mohawk male front",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_mohawk male back",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_mohawk male right",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_mohawk male left",
+    "pass": true
+  },
+  {
+    "name": "unisex selection unisex_mohawk female",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_mohawk female front",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_mohawk female back",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_mohawk female right",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_mohawk female left",
+    "pass": true
+  },
+  {
+    "name": "unisex selection unisex_bun male",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_bun male front",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_bun male back",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_bun male right",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_bun male left",
+    "pass": true
+  },
+  {
+    "name": "unisex selection unisex_bun female",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_bun female front",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_bun female back",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_bun female right",
+    "pass": true
+  },
+  {
+    "name": "native hair unisex_bun female left",
+    "pass": true
+  },
+  {
+    "name": "portal texture survives regeneration 0",
+    "pass": true
+  },
+  {
+    "name": "portal texture survives regeneration 1",
+    "pass": true
+  },
+  {
+    "name": "portal texture survives regeneration 2",
+    "pass": true
+  },
+  {
+    "name": "portal texture survives regeneration 3",
+    "pass": true
+  },
+  {
+    "name": "survival guide warning",
+    "pass": true
+  },
+  {
+    "name": "copper hammer advances twice",
+    "pass": true
+  },
+  {
+    "name": "copper hammer completes odd count in ceil half",
+    "pass": true
+  },
+  {
+    "name": "hammer wears once per actual strike",
+    "pass": true
+  }
+]

@@ -65,6 +65,7 @@ func _ready() -> void:
 	carried_wood.texture=load("res://assets/environment/cartoon_v2/wood.png")
 	carried_wood.scale=Vector2.ONE*.65
 	if body!=null: preload("res://scripts/body_shape.gd").apply(character,body.build)
+	appearance.apply_layers(character,equipment_inventory,facing)
 	carried_wood.visible=false
 	character.get_node("Visual/Pelvis/ArmR/Grip").add_child(carried_wood)
 	animation_player=character.get_node("AnimationPlayer")
@@ -120,6 +121,14 @@ func _physics_process(delta: float) -> void:
 		last_displacement=Vector2.ZERO
 		return
 	chop_buffer=maxf(0.0,chop_buffer-delta)
+	if not generator.frozen_at(position) and generator.lake_weight(position)>.56 and not generator.can_walk(position):
+		var query:=PhysicsShapeQueryParameters2D.new()
+		query.shape=get_node("CollisionShape2D").shape if has_node("CollisionShape2D") else CircleShape2D.new()
+		query.exclude=[get_rid()];query.collision_mask=collision_mask
+		var shore:=generator.thaw_shore(position,func(at: Vector2):
+			query.transform=Transform2D(0,at)
+			return get_world_2d().direct_space_state.intersect_shape(query,1).is_empty())
+		if shore!=position:position=shore;velocity=Vector2.ZERO;reset_physics_interpolation()
 	var direction := input_override if automated else Input.get_vector("move_left","move_right","move_up","move_down")
 	direction=direction.limit_length(1.0)
 	running=run_override if automated else Input.is_action_pressed("run")
@@ -159,7 +168,14 @@ func _physics_process(delta: float) -> void:
 				action_contact=false
 			else:
 				cancel_action()
-	var wanted: Vector2 = direction*(RUN_SPEED if running else WALK_SPEED)*(body.efficiency() if body!=null else 1.0)
+	var wanted: Vector2 = direction*(RUN_SPEED if running else WALK_SPEED)*(body.movement_factor() if body!=null else 1.0)
+	var frozen: bool=generator.frozen_at(position)
+	var ice_config: Dictionary=preload("res://scripts/season_rules.gd").data.features
+	if frozen and action.is_empty():
+		wanted=velocity.move_toward(wanted,float(ice_config.ice_braking if direction.is_zero_approx() else ice_config.ice_acceleration)*delta)
+	elif not generator.sample(position).z>.56 and velocity.distance_to(wanted)>1.0 and get_meta("was_on_ice",false):
+		wanted=velocity.move_toward(wanted,float(ice_config.shore_recovery)*delta)
+	set_meta("was_on_ice",frozen or (get_meta("was_on_ice",false) and wanted.distance_to(direction*(RUN_SPEED if running else WALK_SPEED)*(body.movement_factor() if body!=null else 1.0))>1.0))
 	var travel := wanted*delta
 	blocked_by_loading=false
 	var half_view := get_viewport_rect().size/(2.0*camera.zoom)
@@ -196,6 +212,7 @@ func update_animation() -> void:
 		queue_redraw()
 	if actor.is_empty() or animation_player==null: return
 	held_tool.release_pose()
+	appearance.release_layers()
 	if body!=null and not body.sleep_session.is_empty():
 		# Sleeping body is concealed; the current side head is displayed separately.
 		var still := get_node_or_null("SleepHeadCover")
@@ -239,14 +256,15 @@ func update_animation() -> void:
 	character.get_node("Visual/Pelvis/ArmR").scale=Vector2.ONE
 	character.get_node("Visual/Pelvis/Torso").rotation=0.0
 	animation_player.seek(clock,true)
-	appearance.apply(character,equipment_inventory,facing)
 	look_renderer.apply(character,character_look,equipment_inventory,facing)
+	appearance.apply(character,equipment_inventory,facing)
 	var pose_action: String=("mine" if combat_attack.weapon.animation=="club" else "attack") if not combat_attack.is_empty() else "" if action in ["throw","feed","fertilize"] else action
 	held_tool.apply(character,null if combat.get("phase","")=="dying" else equipment_inventory,facing,pose_action)
 	if facing=="front" and not combat_attack.is_empty():
 		held_tool.front_attack_pose(character)
 		if combat_attack.weapon.animation=="club":held_tool.front_club_pose(character,float(combat_attack.elapsed),combat_attack.weapon)
 	if body!=null: preload("res://scripts/body_shape.gd").apply(character,body.build)
+	appearance.apply_layers(character,equipment_inventory,facing)
 	carried_wood.visible=action=="pickup" and action_succeeded and not harvesting and carried_wood.texture!=null and action_clock<.63
 	carried_wood.modulate.a=clampf((.69-action_clock)/.10,0,1)
 	var visual: Node2D=character.get_node("Visual")

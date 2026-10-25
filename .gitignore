@@ -133,3 +133,59 @@ dist/
 # Temporary packaged launcher verification copies.
 /reports/network-smoothness-v9/launcher-check/
 /reports/network-smoothness-v9/v10-launcher-check/
+
+# Weather V1 private local service and disposable persistence fixtures.
+/reports/weather-v1/private/
+/reports/weather-v1/*save.json
+
+# Seasons: private credentials, disposable save fixtures and generated test adapters.
+/reports/seasons-v1/network/private/
+/reports/seasons-v1/*items.json
+/reports/seasons-v1/host/isolated-snapshot.json
+/reports/seasons-v1/weather-body/*save.json
+/reports/seasons-v1/*regression.gd*
+/reports/seasons-v1/*.private.json
+
+# Seasonal feature work-area backups and isolated private data.
+/reports/season-features-v1/before-files/
+/reports/season-features-v1/before.patch
+/reports/season-features-v1/before-status.txt
+/reports/season-features-v1/network/private/
+/reports/season-features-v1/isolated-items.json
+/reports/season-features-v1/calendar-regression/*items.json
+
+# Isolated online integration fixtures, credentials and generated adapters.
+/reports/network-local-rollup-v1/network/private/
+/reports/network-local-rollup-v1/native.gd*
+/reports/network-local-rollup-v1/runner.py
+/reports/network-local-rollup-v1/*snapshot.json
+
+# This round's isolated accounts/databases, generated adapters and disposable saves.
+/reports/network-integration-v2/**/private/
+/reports/network-integration-v2/restart/private-*/
+/reports/network-integration-v2/**/private-*/
+/reports/network-integration-v2/**/native.gd*
+/reports/network-integration-v2/**/runner.py
+/reports/network-integration-v2/**/fixture-server.py
+/reports/network-integration-v2/restart/reconnect.gd*
+/reports/network-integration-v2/environment/**/*items.json
+/reports/network-integration-v2/environment/**/*save.json
+
+# Exploration V1-A isolated accounts, rule-host state and disposable snapshots.
+/reports/exploration-v1/**/private/
+/reports/exploration-v1/host/private-*/
+/reports/exploration-v1/host/snapshot.json
+
+# Exploration waits: private accounts, process fixtures and disposable saves.
+/reports/exploration-waits-v2/**/private/
+/reports/exploration-waits-v2/**/private-*/
+/reports/exploration-waits-v2/host/snapshot.json
+
+# Mine round: isolated accounts, runtime hosts and disposable browser QA.
+/reports/mine-v1/**/private/
+/reports/mine-v1/authority/mine-authority-*/
+/reports/mine-v1/authority/mine-db-*/
+/reports/mine-v1/nav-*/
+
+# Disposable local restart test snapshot.
+/reports/network-local-rollup-v1/restart/isolated-snapshot.json

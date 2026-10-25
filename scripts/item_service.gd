@@ -11,6 +11,8 @@ var sleep: RefCounted=preload("res://scripts/sleep_controller.gd").new()
 var sleep_ui: Control
 var planting: RefCounted=preload("res://scripts/planting.gd").new()
 var planting_ui: Control
+var chapter:=preload("res://scripts/exploration_chapter.gd").new()
+var chapter_view: Node
 var combat:=preload("res://scripts/combat_service.gd").new()
 var combat_view: Node
 var animals: Node
@@ -83,6 +85,11 @@ func notify_build_cost(materials: Dictionary) -> void:
 
 func configure(owner_world: Node, art_preview: bool) -> void:
 	world = owner_world
+	chapter.service=self
+	chapter.mine.service=self
+	chapter.puzzle.s=self
+	chapter.finale.s=self
+	inventory.chapter_reader=chapter.use_item
 	combat.service=self
 	var identity: String=world.world_id if not world.world_id.is_empty() else "%s:%d:%d"%[world.Gen.VERSION,world.world_seed,world.map_cells]
 	if world.get("record") is Dictionary: identity=str(world.record.get("world_id",identity))
@@ -238,7 +245,8 @@ func burn_lantern(dt: float) -> void:
 	var slot := lamp_slot()
 	if slot.is_empty():
 		lantern.hide();return
-	lantern_remaining=maxf(0.0,float(slot.get("fuel",1800.0))-dt)
+	lantern_remaining=maxf(0.0,float(slot.get("fuel",1800.0))-dt*float(database.item(slot.item_id).get("lamp_burn_rate",1.0)))
+	if lantern_remaining<.000001:lantern_remaining=0.0
 	slot.fuel=lantern_remaining
 	dirty=true
 	if lantern_remaining<=0:
@@ -331,16 +339,20 @@ func _process(delta: float) -> void:
 	exploration.reveal(world.player.position)
 	if exploration.revision!=saved_exploration_revision:dirty=true
 	combat.advance(delta)
+	chapter.mine.tick()
 	advance_craft(delta)
 	clock += delta
 	if clock > 15:
 		clock = 0
+		chapter.advance()
 		if dirty: save_state()
 
 func snapshot() -> Dictionary:
 	exploration.reveal(world.player.position,true)
 	var result: Dictionary = {"merchant":merchant.serialize(),"fishing":fishing_population.serialize(),"player_position":{"x":world.player.position.x,"y":world.player.position.y},"animals":animals.serialize(),"ecology_layout_version":2,"planting_cycle_version":2,"body_environment":world.environment_view.body_environment_snapshot(),"buildings":builds.serialize(),"campfires":camps.serialize(),"body":body.serialize(),"lantern_remaining":lantern_remaining,"version":1,"harvest_version":HARVEST_VERSION,"props_version":world.Gen.PROP_VERSION,"resource_hits":resource_hits,"resource_version":RESOURCE_VERSION,"seed":world.world_seed,"map_cells":world.map_cells,"generator":world.Gen.VERSION,"slots":inventory.slots,"selected":inventory.selected,"hotbar_equipment":inventory.hotbar_equipment,"equipment":inventory.equipment,"ore_nodes":ore_nodes,"equipment_quarantine":inventory.quarantined_equipment,"consumed":consumed,"loose":loose,"harvested":world.stream.harvested,"tree_hits":world.stream.tree_hits}
 
+	result["exploration_chapter"]=chapter.serialize()
+	result["mine_travel"]=chapter.mine.travel.duplicate(true)
 	result["combat_world"]=combat.serialize()
 	result["combat_personal"]=combat.personal.duplicate(true)
 	result["guide_stage"]=guide_stage
@@ -409,11 +421,16 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 	if value.has("world_generation") and not world.Gen.valid_configuration(value.world_generation,world.map_cells):writable=false;return
 	if value.has("world_exploration") and not exploration.valid(value.world_exploration): writable=false;return
 	if value.has("world_id") and value.world_id!=exploration.world_id: writable=false;return
+	if value.has("mine_travel"):
+		var region=value.mine_travel
+		if not region is Dictionary or not region.get("inside") is bool or not (region.get("serial") is int or region.get("serial") is float) or not is_finite(float(region.serial)) or region.serial<0 or region.serial!=floor(region.serial):writable=false;return
+		if region.inside and value.get("exploration_chapter",{}).get("mine",{}).get("phase","")!="open":writable=false;return
 	if value.has("player_position"):
 		var point=value.player_position
 		if not point is Dictionary: writable=false;return
+		if value.get("mine_travel",{}).get("inside",false) and not preload("res://scripts/mine_rules.gd").walkable(Vector2(point.get("x",-1),point.get("y",-1)),world.generator.extent,0):writable=false;return
 		for axis in ["x","y"]:
-			if not (point.get(axis) is float or point.get(axis) is int) or not is_finite(float(point[axis])) or point[axis]<0 or point[axis]>world.generator.extent: writable=false;return
+			if not (point.get(axis) is float or point.get(axis) is int) or not is_finite(float(point[axis])) or point[axis]<0 or (point[axis]>world.generator.extent and not (value.get("mine_travel",{}).get("inside",false) and preload("res://scripts/mine_rules.gd").walkable(Vector2(point.get("x",0),point.get("y",0)),world.generator.extent,0))): writable=false;return
 	for key in ["consumed","loose","harvested","tree_hits"]:
 		if not value.get(key) is Dictionary: writable = false; return
 	for key in ["guide_stage","tree_balance_version"]:
@@ -434,6 +451,7 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 		if preload("res://scripts/food_freshness.gd").cooked(database,entry.item_id):
 			if not entry.has("instance"):entry.instance={"item_id":entry.item_id,"count":entry.count}
 			if not entry.instance is Dictionary or entry.instance.get("item_id")!=entry.item_id or entry.instance.get("count")!=entry.count or not preload("res://scripts/food_freshness.gd").normalize(database,entry.instance):writable=false;return
+	if value.has("exploration_chapter") and not chapter.valid(value.exploration_chapter):writable=false;return
 	if value.has("merchant") and not merchant.valid(value.merchant):writable=false;return
 	if value.has("fishing") and not fishing_population.valid(value.fishing): writable=false;return
 	if value.has("animals") and not animals.valid(value.animals): writable=false;return
@@ -500,12 +518,13 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 	camps.discovered=value.get("campfires",{}).get("discovered",{}).duplicate(true)
 	# Old ready tasks have already completed; old in-progress tasks keep their paid output.
 	for camp in camps.states.values():
-		if camp.ready: camps.discovered[camp.recipe]=true
+		if camp.ready and not camps.rules.recipes.get(camp.recipe,{}).get("fallback_only",false): camps.discovered[camp.recipe]=true
 	camps.rebuild()
 	if online:
 		for id in camps.visuals.keys():
 			if not camps.states.has(id):camps.visuals[id].queue_free();camps.visuals.erase(id)
 	for coord in world.stream.loaded: camps.install(coord)
+	chapter.state=value.get("exploration_chapter",chapter.initial()).duplicate(true)
 	combat.state=value.get("combat_world",combat.initial_world()).duplicate(true)
 	combat.personal=value.get("combat_personal",combat.initial_personal()).duplicate(true)
 	body.restore(staged_body.serialize())
@@ -516,6 +535,13 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 		var s: Dictionary=body.sleep_session
 		world.player.position=Vector2(s.x,s.y) if s.phase!="align" else Vector2(s.exit_x,s.exit_y).lerp(Vector2(s.x,s.y),float(s.clock)/float(preload("res://scripts/sleep_rules.gd").data().legacy_phase_seconds.align))
 	if value.has("body_environment"): world.environment_view.simulation.restore(value.body_environment)
+	chapter.state=chapter.migrate(chapter.state)
+	chapter.mine.travel=value.get("mine_travel",{"serial":0,"inside":false}).duplicate(true)
+	chapter.mine.timer_ticks=Time.get_ticks_msec()
+	chapter.mine.sync_recipe()
+	chapter.finale.sync_recipe()
+	if value.get("exploration_chapter",{}).get("version",2)==1:migrate=true
+	if value.get("exploration_chapter",{}).get("mine",{}).get("puzzle",{}).get("version",2)==1:migrate=true
 	lantern_remaining=float(fuel)
 	resource_hits=value.get("resource_hits",{}).duplicate(true)
 	staged.restore_hotbar_links(value.get("hotbar_equipment",{}))
@@ -854,6 +880,7 @@ func pickup(drop: Node2D) -> bool:
 	return true
 
 func discard(index: int, count: int = 1) -> bool:
+	if chapter.mine.travel.inside:notice.emit("请回到地表再放下物品");return false
 	if preload("res://scripts/network_game_route.gd").send(self,"discard",[index,count]):return true
 	if index<0 or index>=inventory.slots.size() or inventory.slots[index].is_empty() or count<1: return false
 	if database.item(str(inventory.slots[index].item_id)).get("indestructible",false): notice.emit("生存指南需要随身保留");return false
@@ -930,12 +957,13 @@ func mine(target: Node2D) -> bool:
 	return harvest_hit(target,"mine")
 
 func harvest_hit(target: Node2D, action: String) -> bool:
+	if is_instance_valid(target) and target.has_meta("crystal_index"):return chapter.puzzle.hit(target)
 	if not body.can_labor(action,world.player.action==action): return false
 	if not is_instance_valid(target) or not inventory.has_capability(action) or target.get_meta("spent",false): return false
 	var id := str(target.get_meta("ore_id",""))
 	if id.is_empty() or consumed.has(id) or target.get("definition")==null: return false
 	if action!=str(target.definition.action) or not preload("res://scripts/world_interaction.gd").in_reach(world.stream,world.player.position,target): return false
-	var hits := int(resource_hits.get(id,0))+1
+	var hits := mini(int(target.definition.hits),int(resource_hits.get(id,0))+inventory.harvest_power())
 	body.spend_labor(action)
 	var completed := hits>=int(target.definition.hits)
 	# Persist all rewards and depletion in the same snapshot. No per-particle save.
@@ -973,12 +1001,14 @@ func harvest_hit(target: Node2D, action: String) -> bool:
 
 
 func valid_body_environment(value: Variant) -> bool:
+	if value is Dictionary and not preload("res://scripts/season_surface.gd").valid(value.get("season_surface",{})):return false
 	if not value is Dictionary or value.get("version")!=3: return false
 	var limits := {"day":[1,100000000],"minute":[0,1440],"day_length_minutes":[.1,100000],"time_scale":[0,10000],"weather_remaining":[0,1000000],"transition_elapsed":[0,1000000],"duration_min":[1,1000000],"duration_max":[1,1000000],"transition_seconds":[.1,1000000]}
 	for key in limits:
 		var number = value.get(key)
 		if not (number is float or number is int) or not is_finite(float(number)) or number<limits[key][0] or number>limits[key][1]: return false
 	if value.day!=floor(value.day) or value.minute>=1440 or not value.get("paused") is bool: return false
+	if value.has("season") and not preload("res://scripts/season_rules.gd").valid(value.season,int(value.day)):return false
 	for key in ["current_weather","target_weather"]:
 		var number = value.get(key)
 		if not (number is int or number is float) or not is_finite(float(number)) or number!=floor(number) or int(number) not in [0,2,3]: return false

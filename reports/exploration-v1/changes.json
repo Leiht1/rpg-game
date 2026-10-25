@@ -1,0 +1,537 @@
+[
+  {
+    "path": "DEVLOG.md",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          1838,
+          1837
+        ],
+        "after_lines": [
+          1838,
+          1842
+        ]
+      }
+    ]
+  },
+  {
+    "path": "FISHING_SYSTEM.md",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          1,
+          0
+        ],
+        "after_lines": [
+          1,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "path": "ITEM_SYSTEM.md",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          1,
+          0
+        ],
+        "after_lines": [
+          1,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "path": "MULTIPLAYER_V01.md",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          1,
+          0
+        ],
+        "after_lines": [
+          1,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "path": "PROJECT_STATUS.md",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          6,
+          5
+        ],
+        "after_lines": [
+          6,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "path": "README.md",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          1,
+          0
+        ],
+        "after_lines": [
+          1,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "path": "scripts/camp_buildings.gd",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          157,
+          156
+        ],
+        "after_lines": [
+          157,
+          159
+        ]
+      }
+    ]
+  },
+  {
+    "path": "scripts/fishing.gd",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          18,
+          17
+        ],
+        "after_lines": [
+          18,
+          19
+        ]
+      },
+      {
+        "kind": "replace",
+        "before_lines": [
+          65,
+          65
+        ],
+        "after_lines": [
+          67,
+          67
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          94,
+          93
+        ],
+        "after_lines": [
+          96,
+          106
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          106,
+          105
+        ],
+        "after_lines": [
+          119,
+          119
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          109,
+          108
+        ],
+        "after_lines": [
+          123,
+          123
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          129,
+          128
+        ],
+        "after_lines": [
+          144,
+          146
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          163,
+          162
+        ],
+        "after_lines": [
+          181,
+          182
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          198,
+          197
+        ],
+        "after_lines": [
+          218,
+          222
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          204,
+          203
+        ],
+        "after_lines": [
+          229,
+          232
+        ]
+      },
+      {
+        "kind": "replace",
+        "before_lines": [
+          205,
+          205
+        ],
+        "after_lines": [
+          234,
+          235
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          212,
+          211
+        ],
+        "after_lines": [
+          242,
+          242
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          255,
+          254
+        ],
+        "after_lines": [
+          286,
+          286
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          266,
+          265
+        ],
+        "after_lines": [
+          298,
+          298
+        ]
+      }
+    ]
+  },
+  {
+    "path": "scripts/item_database.gd",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          13,
+          12
+        ],
+        "after_lines": [
+          13,
+          13
+        ]
+      }
+    ]
+  },
+  {
+    "path": "scripts/item_inventory.gd",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          18,
+          17
+        ],
+        "after_lines": [
+          18,
+          18
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          313,
+          312
+        ],
+        "after_lines": [
+          314,
+          315
+        ]
+      }
+    ]
+  },
+  {
+    "path": "scripts/item_service.gd",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          14,
+          13
+        ],
+        "after_lines": [
+          14,
+          15
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          86,
+          85
+        ],
+        "after_lines": [
+          88,
+          89
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          339,
+          338
+        ],
+        "after_lines": [
+          343,
+          343
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          345,
+          344
+        ],
+        "after_lines": [
+          350,
+          350
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          438,
+          437
+        ],
+        "after_lines": [
+          444,
+          444
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          510,
+          509
+        ],
+        "after_lines": [
+          517,
+          517
+        ]
+      }
+    ]
+  },
+  {
+    "path": "scripts/item_ui.gd",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          613,
+          612
+        ],
+        "after_lines": [
+          613,
+          613
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          655,
+          654
+        ],
+        "after_lines": [
+          656,
+          657
+        ]
+      }
+    ]
+  },
+  {
+    "path": "scripts/network_game_worker.gd",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          37,
+          36
+        ],
+        "after_lines": [
+          37,
+          37
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          169,
+          168
+        ],
+        "after_lines": [
+          170,
+          176
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          239,
+          238
+        ],
+        "after_lines": [
+          247,
+          247
+        ]
+      }
+    ]
+  },
+  {
+    "path": "scripts/network_game_world.gd",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          92,
+          91
+        ],
+        "after_lines": [
+          92,
+          92
+        ]
+      },
+      {
+        "kind": "insert",
+        "before_lines": [
+          96,
+          95
+        ],
+        "after_lines": [
+          97,
+          97
+        ]
+      }
+    ]
+  },
+  {
+    "path": "scripts/world.gd",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          139,
+          138
+        ],
+        "after_lines": [
+          139,
+          141
+        ]
+      }
+    ]
+  },
+  {
+    "path": "scripts/world_interaction.gd",
+    "changes": [
+      {
+        "kind": "insert",
+        "before_lines": [
+          104,
+          103
+        ],
+        "after_lines": [
+          104,
+          105
+        ]
+      }
+    ]
+  },
+  {
+    "path": "tools/network/gameplay.py",
+    "changes": [
+      {
+        "kind": "replace",
+        "before_lines": [
+          14,
+          14
+        ],
+        "after_lines": [
+          14,
+          14
+        ]
+      },
+      {
+        "kind": "replace",
+        "before_lines": [
+          44,
+          44
+        ],
+        "after_lines": [
+          44,
+          44
+        ]
+      }
+    ]
+  },
+  {
+    "path": ".gitignore",
+    "changes": [
+      {
+        "kind": "append",
+        "before_line_count": 172,
+        "after_line_count": 177
+      }
+    ]
+  }
+]

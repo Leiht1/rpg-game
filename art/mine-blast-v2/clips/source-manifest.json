@@ -1,0 +1,70 @@
+{
+  "schema": "generate2dsprite.animation_clips.v1",
+  "frames": [
+    "registered-frames/frame-00.png",
+    "registered-frames/frame-01.png",
+    "registered-frames/frame-02.png",
+    "registered-frames/frame-03.png",
+    "registered-frames/frame-04.png",
+    "registered-frames/frame-05.png",
+    "registered-frames/frame-06.png",
+    "registered-frames/frame-07.png",
+    "registered-frames/frame-08.png",
+    "registered-frames/frame-09.png",
+    "registered-frames/frame-10.png",
+    "registered-frames/frame-11.png",
+    "registered-frames/frame-12.png",
+    "registered-frames/frame-13.png",
+    "registered-frames/frame-14.png",
+    "registered-frames/frame-15.png"
+  ],
+  "anchor_px": [
+    256,
+    420
+  ],
+  "clips": {
+    "blast": {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "duration_ms": [
+        35,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100,
+        110,
+        120,
+        130,
+        140,
+        150,
+        160,
+        170,
+        190
+      ],
+      "loop": false
+    }
+  },
+  "art_source": "host_image",
+  "placeholder": false,
+  "pixel_art": false,
+  "sampling": "linear"
+}

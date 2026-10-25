@@ -1,0 +1,24 @@
+{
+  "art_source": "existing",
+  "generated_route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "estimateUsd": 0,
+  "source": "art\\mine-puzzle-v1\\generated\\generated.png",
+  "source_sha256": "e3132268e7ed5983b867d2ed1a7c934fb578c69ce9b4bea6767ddd69e1597f92",
+  "processing": "equal ownership cells; soft magenta matte; full alpha bounds; ore registered on 256 canvas; exact source glyph crops",
+  "files": {
+    "carving-0.png": "10c42e99a649b66495d140bd7defa8c052b6d85be904a30da880f4568abce411",
+    "carving-1.png": "d5d74c8daef364f21981651c133ea502455f7581079b627e2e8347ed4e2f1511",
+    "carving-2.png": "91e06d71db798ac72a535dd39e0dc69179c48fc4a4f8d5497b73caadbd1266e3",
+    "carving-3.png": "eeaaabd0f73efc15c0299bc01b346c91327d84478eb728aa3ac4a581b85a3fc2",
+    "crystal.png": "3770aeceae7b4ea71c7fbe794ecb4c05047260a8b6b552918d7dc1235945dc50",
+    "glyph-0.png": "71c5b4336c1ff4a76517a9b808e2aa49dd38ea915ff037a49935e412fb108552",
+    "glyph-1.png": "f24c4e60c791df2171fefffc63e9f749f36c98853232e783504af644b9ca7038",
+    "glyph-2.png": "2327fb2520b853df408da0519433bca445a1a4eeda7f88b9f94c039358484943",
+    "glyph-3.png": "18dfb29499c6bcab0a3b8c404dbeb1cd14b5eeca4f16e3dbba70aed0f2a5428e",
+    "lamp.png": "832c6676a01952a3cc837f5819b02364ccc335e5a03a42815245c3871826cdbe",
+    "ore.png": "033c342c77dd020751ff43e85f6b75fe7eca11a8c8458a0623d9efcc88ad0f47",
+    "rubble.png": "94723e3ab28bb016eacf8d1589e6664be3ce78172ac041539ee102278b69fc05"
+  },
+  "quality_limits": "generated carving spike is radial; used identical crop on matching lamp. No user aesthetic approval claimed."
+}

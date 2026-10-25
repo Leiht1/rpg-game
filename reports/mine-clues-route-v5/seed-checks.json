@@ -1,0 +1,66 @@
+[
+  {
+    "name": "seed 271828 uses actual rocky mine site",
+    "pass": true
+  },
+  {
+    "name": "seed 271828 deterministic across readers",
+    "pass": true
+  },
+  {
+    "name": "seed 271828 hint uses real traversable land",
+    "pass": true
+  },
+  {
+    "name": "seed 271828 graph corridor without ruin creation",
+    "pass": true
+  },
+  {
+    "name": "seed 271828 hint has no persistent state side effects",
+    "pass": true
+  },
+  {
+    "name": "seed 314159 uses actual rocky mine site",
+    "pass": true
+  },
+  {
+    "name": "seed 314159 deterministic across readers",
+    "pass": true
+  },
+  {
+    "name": "seed 314159 hint uses real traversable land",
+    "pass": true
+  },
+  {
+    "name": "seed 314159 graph corridor without ruin creation",
+    "pass": true
+  },
+  {
+    "name": "seed 314159 hint has no persistent state side effects",
+    "pass": true
+  },
+  {
+    "name": "seed 161803 uses actual rocky mine site",
+    "pass": true
+  },
+  {
+    "name": "seed 161803 deterministic across readers",
+    "pass": true
+  },
+  {
+    "name": "seed 161803 hint uses real traversable land",
+    "pass": true
+  },
+  {
+    "name": "seed 161803 graph corridor without ruin creation",
+    "pass": true
+  },
+  {
+    "name": "seed 161803 hint has no persistent state side effects",
+    "pass": true
+  },
+  {
+    "name": "different world seeds do not reuse a fictitious fixed location",
+    "pass": true
+  }
+]

@@ -41,7 +41,7 @@
       126,
       54
     ],
-    "scale": 0.34,
+    "scale": 0.315636,
     "rotation_degrees": 180,
     "hand_offset": [
       0,
@@ -256,5 +256,32 @@
       "side": -30
     },
     "idle_rotation_degrees": 30
+  },
+  "tool:rain_umbrella": {
+    "texture": "res://assets/weather/v1/umbrella.png",
+    "grip_px": [
+      128,
+      204
+    ],
+    "scale": 0.32,
+    "rotation_degrees": 0,
+    "hand_offset": [
+      0,
+      -2.75
+    ],
+    "stance_degrees": {
+      "front": 0,
+      "back": 0,
+      "side": 0
+    },
+    "upright": true,
+    "hold_arm_degrees": {
+      "front": 150,
+      "back": 150,
+      "side": 145
+    },
+    "keep_on_pickup": true,
+    "display_hand": "left",
+    "foreground_canopy_height": 146
   }
 }

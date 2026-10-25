@@ -1,0 +1,20 @@
+{
+  "approval": "approved",
+  "approval_date": "2026-10-23",
+  "approval_quote": "接入吧，现在建造和制作里都还看不到雨棚和雨伞",
+  "scope": "本批正常比例umbrella.png和加大shelter.png，不批准长柄失败稿或未来新图",
+  "source_record": "prototypes/weather-v1/provenance.json",
+  "generation_record": "art/weather-v1/QA.json",
+  "files": {
+    "umbrella": {
+      "source": "prototypes\\weather-v1\\umbrella.png",
+      "file": "assets\\weather\\v1\\umbrella.png",
+      "sha256": "ea38868bc95edaeaa144bd95ae1855285660a111f172d2b15b5043a0c2f61f19"
+    },
+    "shelter": {
+      "source": "prototypes\\weather-v1\\shelter.png",
+      "file": "assets\\weather\\v1\\shelter.png",
+      "sha256": "1892ddad44c7e2036a8ccf76344f98d9a9038bb77a95d4a4ac2b9aaa4ad54595"
+    }
+  }
+}

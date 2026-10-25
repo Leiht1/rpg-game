@@ -4,6 +4,7 @@ var items: Control
 var state: RefCounted
 var hud := Button.new()
 var summary := Label.new()
+var weather_summary := Label.new()
 var bars: Array[ProgressBar] = []
 var numbers: Array[Label] = []
 var overlay := Control.new()
@@ -21,11 +22,11 @@ func configure(owner_ui: Control) -> void:
 	mouse_filter=Control.MOUSE_FILTER_IGNORE
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(hud)
-	hud.size=Vector2(220,169)
+	hud.size=Vector2(220,205)
 	hud.focus_mode=Control.FOCUS_NONE
 	for style in ["normal","hover","pressed","focus"]: hud.add_theme_stylebox_override(style,BodySkin.section(10))
 	var box := VBoxContainer.new()
-	box.position=Vector2(12,10);box.size=Vector2(196,149)
+	box.position=Vector2(12,10);box.size=Vector2(196,185)
 	box.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	hud.add_child(box)
 	for entry in [["health","生命","c47568"],["hunger","饥饿","c9a15c"],["stamina","体力","8b9b69"],["energy","精力","a293b9"]]:
@@ -51,6 +52,8 @@ func configure(owner_ui: Control) -> void:
 		var number := Label.new()
 		number.custom_minimum_size.x=33;number.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT
 		row.add_child(number);numbers.append(number)
+	box.add_child(weather_summary)
+	weather_summary.add_theme_font_size_override("font_size",13)
 	box.add_child(summary)
 	summary.add_theme_font_size_override("font_size",12)
 	summary.clip_text=true
@@ -73,13 +76,13 @@ func configure(owner_ui: Control) -> void:
 	overlay.mouse_filter=Control.MOUSE_FILTER_STOP
 	overlay.add_child(paper)
 	paper.add_theme_stylebox_override("panel",BodySkin.frame())
-	paper.size=Vector2(520,450)
+	paper.size=Vector2(484,430)
 	var content := VBoxContainer.new()
-	content.add_theme_constant_override("separation",18)
+	content.add_theme_constant_override("separation",6)
 	paper.add_child(content)
 	var title := Label.new();title.text="身体状态";title.add_theme_font_size_override("font_size",23);content.add_child(title)
 	content.add_child(details)
-	details.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;details.custom_minimum_size=Vector2(460,276)
+	details.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;details.custom_minimum_size=Vector2(424,290)
 	var close := Button.new();close.text="关闭 · Esc";close.set_meta("audio_window_close",true);content.add_child(close);close.pressed.connect(close_panel)
 	overlay.hide()
 	refresh()
@@ -131,11 +134,12 @@ func _process(delta: float) -> void:
 	if refresh_clock>=.2: refresh_clock=0;refresh()
 
 func refresh() -> void:
+	weather_summary.text="受潮："+state.wet_status()+"\n体感："+state.thermal_status()
 	var values := [state.health,state.hunger,state.stamina,state.energy]
 	for i in 4: bars[i].value=values[i];numbers[i].text=str(roundi(values[i]))
 	summary.text="身体状态："+("倒地" if state.down else state.status())
 	style_bar(bars[3],Color("b77768") if state.energy<float(state.rules.energy_severe) else Color("c5a464") if state.energy<float(state.rules.energy_tired) else Color("a293b9"))
 	if state.sleeping: summary.text=state.energy_status()+" · %.1f小时"%(state.sleep_elapsed/60.0)
 	if not overlay.visible: return
-	details.text="%s\n\n生命  %.0f / 100     饥饿  %.0f / 100     体力  %.0f / 100\n精力  %.0f / 100 · %s\n体力恢复效率  %.0f%%\n\n疾病与疲劳：%s\n\n体型：%s\n长期饮食与活动缓慢影响脸部和衣身轮廓。\n\n%s"%[state.status(),state.health,state.hunger,state.stamina,state.energy,state.energy_status(),state.recovery_factor()*100,state.status(),state.body_description(),state.advice()]
-
+	var e: Dictionary=preload("res://scripts/weather_exposure.gd").sample(items.service)
+	details.text="生命 %.0f  饥饿 %.0f  体力 %.0f  精力 %.0f\n%s · %s\n体力恢复 %.0f%%\n\n受潮：%s · %.1f / 100\n体感：%s · %.1f℃\n天气：%s  环境 %.1f℃\n衣物保暖：+%.1f℃\n雨伞：%s   雨棚：%s\n热源：%s\n\n%s"%[state.health,state.hunger,state.stamina,state.energy,state.status(),state.energy_status(),state.recovery_factor()*100,state.wet_status(),state.wetness,state.thermal_status(),state.felt_temperature,e.weather,e.ambient,e.warmth,"生效" if e.umbrella else "无","生效" if e.shelter else "无","生效" if e.heat>0 else "无",state.body_description()+("\n炎热：精力恢复降低15%" if state.hot else "")]

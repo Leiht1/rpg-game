@@ -1,6 +1,7 @@
 """Transactional projection of original game saves into shared and personal state."""
 import copy
 import math
+import threading
 
 try:
     from .game_host import GameHost
@@ -8,9 +9,9 @@ except ImportError:
     from game_host import GameHost
 
 PERSONAL = frozenset(("slots", "equipment", "equipment_quarantine", "hotbar_equipment",
-                      "selected", "body", "player_position", "lantern_remaining", "guide_stage",
+                      "mine_travel", "selected", "body", "player_position", "lantern_remaining", "guide_stage",
                       "combat_personal", "network_craft_job", "network_craft_station", "network_active_lamp", "network_lamp_on", "network_fishing", "network_light_clock"))
-ARITY = {"guide":1,"combat_duel":2,"combat_attack":1,"relic_claim":3,"snapshot": 0, "organize": 0, "craft": 2, "craft_cancel": 0, "station": 1,
+ARITY = {"mine":1,"chapter":1,"chapter_read":1,"guide":1,"combat_duel":2,"combat_attack":1,"relic_claim":3,"snapshot": 0, "organize": 0, "craft": 2, "craft_cancel": 0, "station": 1,
          "discard": 2, "inventory": None, "camp_act": 4, "camp_feed": 4,
          "camp_place": 3, "camp_build": 3, "building_place": 2,
          "building_toggle": 1, "building_open": 2, "building_bag": 3,
@@ -40,7 +41,7 @@ def validate(operation, args):
         elif not isinstance(value, (str, int, float, bool, type(None))):
             raise ValueError("Invalid gameplay value")
     visit(args)
-    signatures = {"combat_duel":(str,bool),"combat_attack":(dict,),"relic_claim":(str,int,dict),
+    signatures = {"mine":(str,),"chapter":(str,),"chapter_read":(str,),"combat_duel":(str,bool),"combat_attack":(dict,),"relic_claim":(str,int,dict),
         "guide": (int,), "craft": (str, int), "station": (str,), "discard": (int, int),
         "camp_act": (str, str, str, dict), "camp_feed": (str, int, dict, int),
         "camp_place": (dict, int, dict), "camp_build": (dict, str, list),
@@ -93,6 +94,35 @@ class Gameplay:
         self.hosts = {}
         self.defaults = {}
         self.combat_characters = []
+        self.start_lock = threading.Lock()
+
+    def prepare(self, world):
+        """Start a rules process without holding the service transaction lock.
+
+        Bootstrap only creates immutable defaults; authoritative state is restored
+        by apply inside the normal transaction after authentication is rechecked.
+        Concurrent entrants must share exactly one process and private channel.
+        """
+        wid = world["id"]
+        host = self.hosts.get(wid)
+        if host is not None and host.process is not None and host.process.poll() is None and wid in self.defaults:
+            return host
+        with self.start_lock:
+            host = self.hosts.get(wid)
+            if host is None or host.process is None or host.process.poll() is not None:
+                if host is not None:
+                    host.close()
+                self.hosts.pop(wid, None)
+                self.defaults.pop(wid, None)
+                host = GameHost(self.config, {k: world[k] for k in ("id", "seed", "map_cells")})
+                try:
+                    defaults = host.execute()["snapshot"]
+                except BaseException:
+                    host.close()
+                    raise
+                self.defaults[wid] = defaults
+                self.hosts[wid] = host
+            return host
 
     def close(self):
         for host in self.hosts.values():
@@ -113,12 +143,7 @@ class Gameplay:
         if expected is not None and (not isinstance(expected, dict) or len(expected)>2 or any(not isinstance(key, str) or not key.isdigit() or not 0<=int(key)<48 or not isinstance(value, dict) for key,value in expected.items())):
             raise ValueError("Invalid inventory source snapshot")
         wid = world["id"]
-        host = self.hosts.get(wid)
-        if host is None or host.process.poll() is not None:
-            if host is not None:
-                host.close()
-            host = self.hosts[wid] = GameHost(self.config, {k: world[k] for k in ("id", "seed", "map_cells")})
-            self.defaults[wid] = host.execute()["snapshot"]
+        host = self.prepare(world)
         shared_state = world.get("gameplay")
         personal = character.get("gameplay")
         if shared_state is None:

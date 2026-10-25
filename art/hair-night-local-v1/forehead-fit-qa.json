@@ -1,0 +1,152 @@
+{
+  "before": {
+    "ear_ink_total": 496,
+    "ear_ink_covered": 0,
+    "rear_covered_rows": 101,
+    "rear_test_rows": 101,
+    "forehead_gaps": [
+      {
+        "x": 237,
+        "gap": 1
+      },
+      {
+        "x": 238,
+        "gap": 2
+      },
+      {
+        "x": 239,
+        "gap": 2
+      },
+      {
+        "x": 240,
+        "gap": 2
+      },
+      {
+        "x": 241,
+        "gap": 3
+      },
+      {
+        "x": 242,
+        "gap": 4
+      },
+      {
+        "x": 243,
+        "gap": 4
+      },
+      {
+        "x": 244,
+        "gap": 5
+      },
+      {
+        "x": 245,
+        "gap": 6
+      },
+      {
+        "x": 246,
+        "gap": 7
+      },
+      {
+        "x": 247,
+        "gap": 7
+      },
+      {
+        "x": 248,
+        "gap": 8
+      },
+      {
+        "x": 249,
+        "gap": 10
+      },
+      {
+        "x": 250,
+        "gap": 11
+      },
+      {
+        "x": 251,
+        "gap": 11
+      },
+      {
+        "x": 252,
+        "gap": 12
+      },
+      {
+        "x": 253,
+        "gap": 13
+      },
+      {
+        "x": 254,
+        "gap": 14
+      },
+      {
+        "x": 255,
+        "gap": 15
+      },
+      {
+        "x": 256,
+        "gap": 16
+      },
+      {
+        "x": 257,
+        "gap": 17
+      },
+      {
+        "x": 258,
+        "gap": 20
+      },
+      {
+        "x": 259,
+        "gap": 22
+      },
+      {
+        "x": 260,
+        "gap": 28
+      }
+    ],
+    "max_forehead_gap": 28
+  },
+  "after": {
+    "ear_ink_total": 496,
+    "ear_ink_covered": 0,
+    "rear_covered_rows": 101,
+    "rear_test_rows": 101,
+    "forehead_gaps": [],
+    "max_forehead_gap": 0
+  },
+  "registration": "actual-skull contour forelock registration; move existing columns only, no painted fill",
+  "column_displacement": {
+    "230": 1,
+    "231": 2,
+    "232": 2,
+    "233": 3,
+    "234": 3,
+    "235": 4,
+    "236": 4,
+    "237": 5,
+    "238": 6,
+    "239": 6,
+    "240": 6,
+    "241": 7,
+    "242": 8,
+    "243": 8,
+    "244": 9,
+    "245": 10,
+    "246": 11,
+    "247": 11,
+    "248": 12,
+    "249": 14,
+    "250": 15,
+    "251": 15,
+    "252": 16,
+    "253": 17,
+    "254": 18,
+    "255": 19,
+    "256": 20,
+    "257": 21,
+    "258": 24,
+    "259": 26,
+    "260": 32,
+    "261": 32
+  },
+  "rejected_generation": "bun-forehead-generated: changed fitting-skull forehead shape",
+  "pass": true
+}

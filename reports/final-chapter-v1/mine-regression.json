@@ -1,0 +1,54 @@
+[
+  {
+    "pass": true,
+    "test": "first and second round progress preserved"
+  },
+  {
+    "pass": true,
+    "test": "unsolved lamp room cannot give route map"
+  },
+  {
+    "pass": true,
+    "test": "existing wall clue 0"
+  },
+  {
+    "pass": true,
+    "test": "existing wall clue 1"
+  },
+  {
+    "pass": true,
+    "test": "existing wall clue 2"
+  },
+  {
+    "pass": true,
+    "test": "existing wall clue 3"
+  },
+  {
+    "pass": true,
+    "test": "wrong complete lamp order resets safely"
+  },
+  {
+    "pass": true,
+    "test": "correct four-season sequence unlocks crystal and original chest"
+  },
+  {
+    "pass": true,
+    "test": "original route map claim works"
+  },
+  {
+    "pass": true,
+    "test": "original illustrated map reading works"
+  },
+  {
+    "pass": true,
+    "test": "reread cannot duplicate map or reset wait"
+  },
+  {
+    "pass": true,
+    "test": "preceding chapters never reset"
+  },
+  {
+    "pass": true,
+    "test": "continued complete exploration schema remains valid"
+  }
+]

@@ -8,6 +8,7 @@ var damage := ProgressBar.new()
 var damage_seconds := 0.0
 var fuel_bar := ProgressBar.new()
 var flame_material := ShaderMaterial.new()
+var flame_bottom := 0.0
 
 func _ready() -> void:
 	add_child(damage);damage.hide()
@@ -19,6 +20,7 @@ func _ready() -> void:
 	flame.texture=load("res://assets/campfire/v1/flame.png")
 	flame_material.shader=preload("res://scripts/campfire_flame.gdshader");flame.material=flame_material
 	flame.position=Vector2(0,-44);flame.scale=Vector2.ONE*.20;add_child(flame)
+	flame_bottom=(flame.texture.get_image().get_used_rect().end.y-flame.texture.get_height()*.5)*.20
 	var body := StaticBody2D.new();var shape := CollisionShape2D.new();var circle := CircleShape2D.new()
 	circle.radius=float(manager.rules.collision_radius);shape.shape=circle;body.add_child(shape);add_child(body)
 	fuel_bar.position=Vector2(-36,6);fuel_bar.size=Vector2(72,7)
@@ -36,6 +38,10 @@ func _process(delta: float) -> void:
 	preload("res://scripts/item_ui_style.gd").progress_style(fuel_bar,true,flame.visible)
 	fuel_bar.value=float(manager.states[camp_id].fuel) if manager.states.has(camp_id) else 0.0
 	if not flame.visible: return
+	var size_factor: float=manager.flame_scale(camp_id)
+	# Bottom of the original flame stays at the same world position.
+	flame.scale=Vector2.ONE*.20*size_factor
+	flame.position.y=-44+flame_bottom*(1.0-size_factor)
 	age+=delta
 	flame_material.set_shader_parameter("phase",age)
 

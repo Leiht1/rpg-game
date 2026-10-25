@@ -1,0 +1,191 @@
+{
+  "captures": [
+    "00-before",
+    "01-enter-fade",
+    "02-enter-black",
+    "03-inside",
+    "04-exit-cold-black",
+    "05-surface",
+    "fx-000",
+    "fx-003",
+    "fx-006",
+    "fx-009",
+    "fx-012",
+    "fx-015",
+    "fx-018",
+    "fx-021",
+    "fx-024",
+    "fx-027",
+    "fx-030",
+    "fx-033",
+    "fx-036",
+    "fx-039",
+    "fx-042",
+    "fx-045",
+    "fx-048",
+    "fx-051",
+    "fx-054",
+    "fx-057",
+    "fx-060",
+    "fx-063",
+    "fx-066",
+    "fx-069",
+    "fx-072",
+    "fx-075",
+    "fx-078",
+    "fx-081",
+    "fx-084",
+    "fx-087",
+    "fx-090",
+    "fx-093",
+    "fx-096",
+    "fx-099",
+    "fx-102",
+    "fx-105",
+    "fx-108",
+    "fx-111",
+    "fx-114",
+    "fx-117",
+    "fx-120",
+    "fx-123",
+    "fx-126",
+    "fx-129",
+    "fx-132",
+    "fx-135",
+    "fx-138",
+    "fx-141",
+    "fx-144",
+    "fx-147",
+    "fx-150",
+    "fx-153",
+    "fx-156",
+    "fx-159",
+    "fx-162",
+    "fx-165",
+    "fx-168",
+    "fx-171",
+    "fx-174",
+    "fx-177",
+    "fx-180",
+    "fx-183",
+    "fx-186",
+    "fx-189",
+    "fx-192",
+    "fx-195",
+    "fx-198",
+    "fx-201",
+    "fx-204",
+    "fx-207",
+    "fx-210",
+    "fx-213",
+    "fx-216",
+    "fx-219",
+    "fx-222",
+    "fx-225",
+    "fx-228",
+    "fx-231",
+    "fx-234",
+    "fx-237",
+    "fx-240",
+    "fx-243",
+    "fx-246",
+    "fx-249",
+    "fx-252",
+    "fx-255",
+    "fx-258",
+    "fx-261",
+    "fx-264",
+    "fx-267",
+    "fx-270",
+    "fx-273",
+    "fx-276",
+    "fx-279"
+  ],
+  "checks": [
+    {
+      "name": "real E starts fade before teleport",
+      "pass": true
+    },
+    {
+      "name": "outgoing scene retained while fading",
+      "pass": true
+    },
+    {
+      "name": "entry position switches only behind full black",
+      "pass": true
+    },
+    {
+      "name": "repeated E during entry cannot double transition",
+      "pass": true
+    },
+    {
+      "name": "entry curtain contains cave icon and concise caption",
+      "pass": true
+    },
+    {
+      "name": "transition completes",
+      "pass": true
+    },
+    {
+      "name": "interior ready before reveal completes",
+      "pass": true
+    },
+    {
+      "name": "entry destination ready",
+      "pass": true
+    },
+    {
+      "name": "entry preserves inventory",
+      "pass": true
+    },
+    {
+      "name": "exit position switches only behind full black",
+      "pass": true
+    },
+    {
+      "name": "black is held while actual surface chunks are unavailable",
+      "pass": true
+    },
+    {
+      "name": "cold-return fixture really has unloaded surface",
+      "pass": true
+    },
+    {
+      "name": "return caption and progress do not report done before loading",
+      "pass": true
+    },
+    {
+      "name": "transition completes",
+      "pass": true
+    },
+    {
+      "name": "cold surface ready before reveal",
+      "pass": true
+    },
+    {
+      "name": "exit preserves own inventory and one transition",
+      "pass": true
+    },
+    {
+      "name": "transition completes",
+      "pass": true
+    },
+    {
+      "name": "save failure returns to original scene and unlocks curtain",
+      "pass": true
+    },
+    {
+      "name": "sprite root and scale remain fixed throughout every painted phase",
+      "pass": true
+    },
+    {
+      "name": "premultiplied temporal blending is active between registered frames",
+      "pass": true
+    },
+    {
+      "name": "aligned explosion ends cleanly",
+      "pass": true
+    }
+  ],
+  "failures": 0
+}

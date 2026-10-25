@@ -1,0 +1,337 @@
+{
+  "version": 1,
+  "transition_days": 1.0,
+  "weather_reference_weights": [
+    5,
+    2,
+    1
+  ],
+  "seasons": [
+    {
+      "id": "spring",
+      "name": "春",
+      "days": 7,
+      "temperature_start": 0,
+      "temperature_end": 0,
+      "weather_weights": [
+        5,
+        3,
+        1
+      ],
+      "growth": {
+        "carrot": 1.15,
+        "potato": 1.0,
+        "cabbage": 1.1
+      },
+      "color": "a9c58a",
+      "light_hours": [
+        5,
+        8,
+        17,
+        20
+      ]
+    },
+    {
+      "id": "summer",
+      "name": "夏",
+      "days": 7,
+      "temperature_start": 8,
+      "temperature_end": 8,
+      "weather_weights": [
+        6,
+        2,
+        2
+      ],
+      "growth": {
+        "carrot": 1.0,
+        "potato": 1.15,
+        "cabbage": 0.9
+      },
+      "color": "e7cb79",
+      "light_hours": [
+        4,
+        7,
+        19,
+        22
+      ]
+    },
+    {
+      "id": "autumn",
+      "name": "秋",
+      "days": 7,
+      "temperature_start": 0,
+      "temperature_end": -10,
+      "weather_weights": [
+        5,
+        3,
+        1
+      ],
+      "growth": {
+        "carrot": 1.0,
+        "potato": 1.0,
+        "cabbage": 1.15
+      },
+      "color": "cc9564",
+      "light_hours": [
+        5,
+        8,
+        17,
+        20
+      ]
+    },
+    {
+      "id": "winter",
+      "name": "冬",
+      "days": 7,
+      "temperature_start": -18,
+      "temperature_end": -18,
+      "weather_weights": [
+        7,
+        2,
+        0.5
+      ],
+      "growth": {
+        "carrot": 0.5,
+        "potato": 0.6,
+        "cabbage": 0.65
+      },
+      "color": "bdcfd4",
+      "light_hours": [
+        7,
+        9,
+        15,
+        18
+      ]
+    }
+  ],
+  "visual": {
+    "dial_radius": 42,
+    "ground_marks": 12,
+    "ground_alpha": 0.24,
+    "ground_radius": 2.0
+  },
+  "features": {
+    "snow_gain_per_minute": 0.003,
+    "snow_melt_per_minute": 0.0015,
+    "winter_snow_minimum": 0.48,
+    "freeze_day": 0.5,
+    "ice_acceleration": 460,
+    "ice_braking": 125,
+    "shore_recovery": 900,
+    "blocking_on": 0.72,
+    "blocking_off": 0.3,
+    "heat_melt_per_minute": 0.035,
+    "tint_strength": 0.025,
+    "snow_particles": 115,
+    "candidate_art": true,
+    "buildings": {
+      "stone_wall": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "stone_gate": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "wood_fence": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "fence_gate": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "wood_floor": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.9
+      },
+      "stone_path": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.9
+      },
+      "wood_chest": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "workbench": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "camp_torch": {
+        "allowed": false,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "sleeping_bag": {
+        "allowed": false,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "straw_mat": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "wood_bed": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "tilled_soil": {
+        "allowed": false,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.9
+      },
+      "signpost": {
+        "allowed": false,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "stone_furnace": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "metal_workbench": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "copper_oven": {
+        "allowed": true,
+        "blocks": true,
+        "gain": 0.85,
+        "melt": 1.2,
+        "snow_depth": 0.32
+      },
+      "copper_lamp": {
+        "allowed": false,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "reinforced_cabinet": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "feed_trough": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "refrigerator": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "wool_carpet": {
+        "allowed": false,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "precision_repair_bench": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "fuel_supply_box": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "compost_bin": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.32
+      },
+      "advanced_smokehouse": {
+        "allowed": true,
+        "blocks": true,
+        "gain": 1.0,
+        "melt": 1.0,
+        "snow_depth": 0.32
+      },
+      "rain_shelter": {
+        "allowed": true,
+        "blocks": false,
+        "gain": 1,
+        "melt": 1,
+        "snow_depth": 0.55
+      }
+    },
+    "bird_interval_seconds": 42,
+    "leaf_interval_seconds": 32,
+    "ground_snow": {
+      "patch_scale": 120.0,
+      "threshold": 0.745,
+      "growth": 0.08,
+      "edge_width": 0.045,
+      "opacity": 0.95
+    },
+    "snow_motion": {
+      "fall_speed_min": 19.0,
+      "fall_speed_max": 47.0,
+      "drift_speed": 12.0,
+      "sway_speed": 0.3,
+      "sway_amplitude": 22.0,
+      "screen_margin": 16.0
+    },
+    "snow_heat_min_fuel_ratio": 0.25
+  }
+}

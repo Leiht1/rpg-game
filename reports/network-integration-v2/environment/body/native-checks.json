@@ -1,0 +1,306 @@
+[
+	{
+		"name": "clear dry comfortable",
+		"pass": true
+	},
+	{
+		"name": "brief rain no severe harm",
+		"pass": true
+	},
+	{
+		"name": "exposure gradually wets",
+		"pass": true
+	},
+	{
+		"name": "umbrella prevents wetting and allows slow drying",
+		"pass": true
+	},
+	{
+		"name": "rain stops gradual drying",
+		"pass": true
+	},
+	{
+		"name": "all four thermal states crossed smoothly",
+		"pass": true
+	},
+	{
+		"name": "extreme grace then slow net health loss",
+		"pass": true
+	},
+	{
+		"name": "heat warms smoothly and dries",
+		"pass": true
+	},
+	{
+		"name": "comfort recovers over time",
+		"pass": true
+	},
+	{
+		"name": "recovery effect 0",
+		"pass": true
+	},
+	{
+		"name": "movement effect 0",
+		"pass": true
+	},
+	{
+		"name": "recovery effect 1",
+		"pass": true
+	},
+	{
+		"name": "movement effect 1",
+		"pass": true
+	},
+	{
+		"name": "recovery effect 2",
+		"pass": true
+	},
+	{
+		"name": "movement effect 2",
+		"pass": true
+	},
+	{
+		"name": "recovery effect 3",
+		"pass": true
+	},
+	{
+		"name": "movement effect 3",
+		"pass": true
+	},
+	{
+		"name": "hysteresis retains cold within recovery buffer",
+		"pass": true
+	},
+	{
+		"name": "old body save defaults",
+		"pass": true
+	},
+	{
+		"name": "new body roundtrip",
+		"pass": true
+	},
+	{
+		"name": "invalid weather save rejects atomically",
+		"pass": true
+	},
+	{
+		"name": "bounded large and small steps agree",
+		"pass": true
+	},
+	{
+		"name": "isolated world",
+		"pass": true
+	},
+	{
+		"name": "item and both recipe registries valid",
+		"pass": true
+	},
+	{
+		"name": "candidate recipes playable",
+		"pass": true
+	},
+	{
+		"name": "actual umbrella craft transaction",
+		"pass": true
+	},
+	{
+		"name": "duplicate craft cannot grant second umbrella",
+		"pass": true
+	},
+	{
+		"name": "umbrella equips actual main hand",
+		"pass": true
+	},
+	{
+		"name": "umbrella cannot act as axe/pick",
+		"pass": true
+	},
+	{
+		"name": "umbrella no durability",
+		"pass": true
+	},
+	{
+		"name": "equipped umbrella active in rain",
+		"pass": true
+	},
+	{
+		"name": "hand raised above shoulder front",
+		"pass": true
+	},
+	{
+		"name": "umbrella remains upright front",
+		"pass": true
+	},
+	{
+		"name": "four view shared held registry front",
+		"pass": true
+	},
+	{
+		"name": "hand raised above shoulder back",
+		"pass": true
+	},
+	{
+		"name": "umbrella remains upright back",
+		"pass": true
+	},
+	{
+		"name": "four view shared held registry back",
+		"pass": true
+	},
+	{
+		"name": "hand raised above shoulder left",
+		"pass": true
+	},
+	{
+		"name": "umbrella remains upright left",
+		"pass": true
+	},
+	{
+		"name": "four view shared held registry left",
+		"pass": true
+	},
+	{
+		"name": "hand raised above shoulder right",
+		"pass": true
+	},
+	{
+		"name": "umbrella remains upright right",
+		"pass": true
+	},
+	{
+		"name": "four view shared held registry right",
+		"pass": true
+	},
+	{
+		"name": "unequip removes rain protection",
+		"pass": true
+	},
+	{
+		"name": "unequip releases raised arm",
+		"pass": true
+	},
+	{
+		"name": "tool switching restores capability",
+		"pass": true
+	},
+	{
+		"name": "large canopy actual build site",
+		"pass": true
+	},
+	{
+		"name": "place shelter via original transaction",
+		"pass": true
+	},
+	{
+		"name": "precise coverage inside/outside",
+		"pass": true
+	},
+	{
+		"name": "four poles only, interior clear",
+		"pass": true
+	},
+	{
+		"name": "bed can be built under existing shelter",
+		"pass": true
+	},
+	{
+		"name": "place real bed below shelter",
+		"pass": true
+	},
+	{
+		"name": "sleep and standing use same coverage",
+		"pass": true
+	},
+	{
+		"name": "rain rejects exposed bed",
+		"pass": true
+	},
+	{
+		"name": "shelter can be built after bed",
+		"pass": true
+	},
+	{
+		"name": "build shelter over actual bed",
+		"pass": true
+	},
+	{
+		"name": "sheltered rain bed allows sleep",
+		"pass": true
+	},
+	{
+		"name": "sleep uses bed position and ignores held umbrella",
+		"pass": true
+	},
+	{
+		"name": "failed building save restores material and states",
+		"pass": true
+	},
+	{
+		"name": "real pole demolition strike 0",
+		"pass": true
+	},
+	{
+		"name": "real pole demolition strike 1",
+		"pass": true
+	},
+	{
+		"name": "real pole demolition strike 2",
+		"pass": true
+	},
+	{
+		"name": "real pole demolition strike 3",
+		"pass": true
+	},
+	{
+		"name": "shelter demolition preserves bed",
+		"pass": true
+	},
+	{
+		"name": "lit fuelled campfire warms",
+		"pass": true
+	},
+	{
+		"name": "empty fuel does not warm",
+		"pass": true
+	},
+	{
+		"name": "existing equipped clothes give configured warmth",
+		"pass": true
+	},
+	{
+		"name": "paused no weather body time",
+		"pass": true
+	},
+	{
+		"name": "runtime authoritative advance wired",
+		"pass": true
+	},
+	{
+		"name": "two HUD text rows",
+		"pass": true
+	},
+	{
+		"name": "click existing HUD opens live details",
+		"pass": true
+	},
+	{
+		"name": "close details restores operation",
+		"pass": true
+	},
+	{
+		"name": "real mouse opens HUD details",
+		"pass": true
+	},
+	{
+		"name": "actual atomic weather-body save",
+		"pass": true
+	},
+	{
+		"name": "actual file restores weather state",
+		"pass": true
+	},
+	{
+		"name": "old actual file loads safely",
+		"pass": true
+	}
+]

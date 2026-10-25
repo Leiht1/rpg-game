@@ -1,3 +1,7 @@
+## 2026-10-24 · 探索关键物品
+
+新增探索物品定义沿原 ItemDatabase/库存、查看菜单与原子快照使用，单次世界奖励与失败回滚见 [探索规范](EXPLORATION_SYSTEM.md)。原物品定义和存档根版本保持。
+
 ## 2026-10-22 · 战斗与死亡 V1
 
 物品配置增加 death_retention，缺省 retain；仅明确列出的常见原始资源转入遗物。转移/分批领取保存完整实例元数据，与原库存快照同一提交；不移动装备引用或其他玩家物品。新增医疗/武器/肉类沿原物品使用与保存。详见 [战斗系统](COMBAT_SYSTEM.md)。
@@ -154,3 +158,8 @@ ItemInventory 负责堆叠、容量、交换、食用和校验。ItemService 负
 ## 2026-10-19 · 动物与产物
 
 原物品原子快照新增可选 `animals.version1`；旧档缺失合法，未知/非法动物记录保护原档。鸡蛋、羊毛为材料，羊毛剪为独立耐久工具，地面蛋复用原 loose/consumed 和拾取，不新建库存。完整来源、事务和时序见 [动物规范](ANIMAL_SYSTEM.md)。
+
+
+## 2026-10-25 · 矿石实体轮廓
+
+harvest_resources中的可选collision_outline以collision_outline_width为显示基准，harvest_node同比缩放应用；五类矿石按底座及侧面人物身体余量分别配置。未配置的资源继续原碰撞方式，完成采集仍移除实体。验证见reports/ore-collision-v1/REPORT.md。

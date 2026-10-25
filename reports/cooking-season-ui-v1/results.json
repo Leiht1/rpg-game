@@ -1,0 +1,469 @@
+{
+	"checks": [
+		{
+			"name": "isolated world no player writes",
+			"pass": true
+		},
+		{
+			"name": "F4 next season 0",
+			"pass": true
+		},
+		{
+			"name": "F4 next season 1",
+			"pass": true
+		},
+		{
+			"name": "F4 next season 2",
+			"pass": true
+		},
+		{
+			"name": "F4 next season 3",
+			"pass": true
+		},
+		{
+			"name": "debug season jump no body time or hour advancement",
+			"pass": true
+		},
+		{
+			"name": "actual F4 button exists",
+			"pass": true
+		},
+		{
+			"name": "screenshot ingredients resolve large hodgepodge",
+			"pass": true
+		},
+		{
+			"name": "small arbitrary combination fallback",
+			"pass": true
+		},
+		{
+			"name": "exact known recipe retains priority",
+			"pass": true
+		},
+		{
+			"name": "exact herb recipe unchanged",
+			"pass": true
+		},
+		{
+			"name": "reject invalid experiment {  }",
+			"pass": true
+		},
+		{
+			"name": "reject invalid experiment { \"stone\": 1 }",
+			"pass": true
+		},
+		{
+			"name": "reject invalid experiment { \"wildflower\": 0 }",
+			"pass": true
+		},
+		{
+			"name": "reject invalid experiment { \"wildflower\": 1.5 }",
+			"pass": true
+		},
+		{
+			"name": "reject invalid experiment { \"wildflower\": 100 }",
+			"pass": true
+		},
+		{
+			"name": "camp fallback cannot become free oven recipe",
+			"pass": true
+		},
+		{
+			"name": "integral JSON float accepted",
+			"pass": true
+		},
+		{
+			"name": "real free cook button enabled",
+			"pass": true
+		},
+		{
+			"name": "cooking hides both clock and season",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 0",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 1",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 2",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 3",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 4",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 5",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 6",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 7",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 8",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 9",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 10",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 11",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 12",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 13",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 14",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 15",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 16",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 17",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 18",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 19",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 20",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 21",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 22",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 23",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 24",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 25",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 26",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 27",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 28",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 29",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 30",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 31",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 32",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 33",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 34",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 35",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 36",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 37",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 38",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 39",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 40",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 41",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 42",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 43",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 44",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 45",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 46",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 47",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 48",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 49",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 50",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 51",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 52",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 53",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 54",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 55",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 56",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 57",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 58",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 59",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 60",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 61",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 62",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 63",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 64",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 65",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 66",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 67",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 68",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 69",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 70",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 71",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 72",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 73",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 74",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 75",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 76",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 77",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 78",
+			"pass": true
+		},
+		{
+			"name": "popup hover stable despite freshness tick 79",
+			"pass": true
+		},
+		{
+			"name": "passive cooked-food freshness actually changed during hover",
+			"pass": true
+		},
+		{
+			"name": "failed start save rolls ingredients and task back",
+			"pass": true
+		},
+		{
+			"name": "actual UI starts fallback",
+			"pass": true
+		},
+		{
+			"name": "actual selected ingredient deducted brown_mushroom",
+			"pass": true
+		},
+		{
+			"name": "actual selected ingredient deducted cabbage",
+			"pass": true
+		},
+		{
+			"name": "actual selected ingredient deducted wild_berry",
+			"pass": true
+		},
+		{
+			"name": "actual selected ingredient deducted wildflower",
+			"pass": true
+		},
+		{
+			"name": "double start cannot double consume",
+			"pass": true
+		},
+		{
+			"name": "unlit fallback pauses",
+			"pass": true
+		},
+		{
+			"name": "fallback ready and saved task validates",
+			"pass": true
+		},
+		{
+			"name": "fallback not recorded as invented recipe",
+			"pass": true
+		},
+		{
+			"name": "fixed fallback output claim",
+			"pass": true
+		},
+		{
+			"name": "repeat claim rejected",
+			"pass": true
+		},
+		{
+			"name": "both dials restore on close",
+			"pass": true
+		},
+		{
+			"name": "season inherits clock visibility for every UI",
+			"pass": true
+		},
+		{
+			"name": "same canvas and visibility subtree",
+			"pass": true
+		}
+	],
+	"failed": 0
+}

@@ -154,12 +154,25 @@ func paving_can_cover(node: Node) -> bool:
 func reason(row: Dictionary) -> String:
 	if not definitions.has(row.get("kind","")) or not row.has_all(["x","y","layer","vertical"]): return "无效建造位置"
 	if not service.writable: return "存档受保护，不能建造"
+	if row.kind=="dock" and not service.chapter.finale.state.dock_unlocked:return "尚未掌握船坞建造方法"
+	if not service.chapter.finale.state.site.is_empty() and Vector2(row.x,row.y).distance_to(service.chapter.finale.at())<560:return "请保留遗迹空地"
+	if row.kind=="dock" and (service.world.generator.coast_distance(Vector2(row.x,row.y))>220 or service.world.generator.coast_distance(Vector2(row.x,row.y))<35):return "船坞需要靠海的稳固地面"
+	if preload("res://scripts/mine_rules.gd").pocket(Vector2(row.x,row.y),service.world.generator.extent):return "矿洞内没有适合建造的地面"
+	if not service.chapter.mine.state.site.is_empty():
+		if Vector2(row.x,row.y).distance_to(service.chapter.mine.at())<260:return "这里是矿洞通道"
+		if Vector2(row.x,row.y).distance_to(service.chapter.mine.record_at())<95:return "这里有矿工遗留物"
+	if service.chapter.state.stage>=2:
+		if service.chapter.state.get("elder_spawned",false) and Vector2(row.x,row.y).distance_to(service.chapter.point("elder"))<150:return "这里有人正在垂钓"
+		for key in ["site","shore"]:
+			if Vector2(row.x,row.y).distance_to(service.chapter.point(key))<150:return "这里有前人遗留物"
 	if row.kind=="wool_carpet":
 		var floor_found := false
 		for base in states.values():
 			if base.kind in ["wood_floor","stone_path"] and Grid.key(base,false)==Grid.key(row,false):floor_found=true;break
 		if not floor_found:return "需要已有地板"
 	if row.kind=="tilled_soil":
+		for existing in states.values():
+			if existing.kind=="rain_shelter" and preload("res://scripts/weather_exposure.gd").soil_under_pole(row,existing):return "耕地不能覆盖雨棚柱子"
 		if not service.inventory.has_capability("mine"): return "需要装备石镐开垦"
 		if not service.body.can_labor("mine"): return "精力或体力不足，不能开垦"
 	var at := Vector2(row.x,row.y)
@@ -181,6 +194,7 @@ func reason(row: Dictionary) -> String:
 	var occupied := occupant(row)
 	var replace_id := replacement(row)
 	if not occupied.is_empty() and replace_id.is_empty(): return "此位置已有建筑"
+	if row.kind=="rain_shelter": return shelter_reason(row)
 	var paving: bool=row.kind in ["wood_floor","stone_path"]
 	var offsets: Array=[Vector2.ZERO]
 	if definitions[row.kind].get("sleep",false) or (row.layer=="free" and not volume_profile(str(row.kind)).is_empty()):
@@ -195,6 +209,7 @@ func reason(row: Dictionary) -> String:
 		if not world.generator.can_walk(p,10) or world.generator.sample(p).z>.03: return "需要干燥陆地"
 		if row.layer not in ["ground","overlay"] and world.player.position.distance_to(p)<22: return "请避开角色"
 		for node in world.get_tree().get_nodes_in_group("world_interactables")+world.get_tree().get_nodes_in_group("trees"):
+			if states.get(str(node.get_meta("building_id","")),{}).get("kind","")=="rain_shelter": continue # Only its real poles obstruct facilities.
 			if paving and paving_can_cover(node): continue
 			if node.get_meta("building_id","")==replace_id and not replace_id.is_empty(): continue
 			if node.get_meta("camp_layer","")=="ground": continue
@@ -374,7 +389,7 @@ func strike(id: String, target: Node2D) -> bool:
 	if not error.is_empty(): service.notice.emit(error);return false
 	if not is_instance_valid(target) or str(target.get_meta("building_id",target.get("camp_id")))!=id: return false
 	if not preload("res://scripts/world_interaction.gd").in_reach(service.world.stream,service.world.player.position,target): return false
-	if target.get_meta("interaction_action","")!="sleep" and service.world.player.position.distance_to(target.position)>100: return false
+	if target.get_meta("interaction_action","")!="sleep" and service.world.player.position.distance_to(preload("res://scripts/world_interaction.gd").reach_point(service.world.player.position,target))>100: return false
 	busy=true
 	var camp: bool=service.camps.states.has(id)
 	var row: Dictionary=service.camps.states[id] if camp else states[id]
@@ -384,7 +399,7 @@ func strike(id: String, target: Node2D) -> bool:
 	var equipment := inv.equipment.duplicate(true);var links := inv.hotbar_equipment.duplicate(true)
 	var loose: Dictionary=service.loose.duplicate(true)
 	var rewards: Array[Dictionary]=[]
-	var hits := int(row.get("hits",0))+1
+	var hits := mini(int(d.hits),int(row.get("hits",0))+inv.harvest_power())
 	if hits>=int(d.hits):
 		for material in d.cost:
 			var amount := floori(float(d.cost[material])*.5)
@@ -594,3 +609,25 @@ func storage_kind(kind: String) -> bool:
 
 func storage_capacity(id: String) -> int:
 	return 9 if states[id].kind=="wood_chest" else int(definitions[states[id].kind].get("storage_slots",12))
+
+func shelter_reason(row: Dictionary) -> String:
+	var at := Vector2(row.x,row.y)
+	var world=service.world
+	if world.player.position.distance_to(at)>220:return "请靠近建造位置"
+	var cover: Array=preload("res://scripts/weather_body_rules.gd").data.shelter_rect
+	for x in [float(cover[0]),0.0,float(cover[0]+cover[2])]:
+		for y in [float(cover[1]),0.0,float(cover[1]+cover[3])]:
+			var ground: Vector2=at+Vector2(x,y)
+			if not world.stream.has_ground(ground) or not world.generator.can_walk(ground,8) or world.generator.sample(ground).z>.03:return "需要干燥陆地"
+	for other in states.values():
+		if other.kind=="tilled_soil" and preload("res://scripts/weather_exposure.gd").soil_under_pole(other,row):return "雨棚柱子不能建在耕地上"
+		if other.kind=="rain_shelter" and Rect2(Vector2(other.x-288,other.y-192),Vector2(576,384)).has_point(at):return "雨棚覆盖重叠"
+	for post in preload("res://scripts/weather_body_rules.gd").data.shelter_posts:
+		var point := at+Vector2(post[0],post[1])
+		if not world.stream.has_ground(point) or not world.generator.can_walk(point,8) or world.generator.sample(point).z>.03:return "需要干燥陆地"
+		var shape := CircleShape2D.new();shape.radius=8
+		var query := PhysicsShapeQueryParameters2D.new();query.shape=shape;query.collision_mask=1;query.transform=Transform2D(0,point)
+		if not world.get_world_2d().direct_space_state.intersect_shape(query,1).is_empty():return "请避开支柱位置的障碍"
+	for key in cost(row):
+		if service.inventory.count_item(key)<int(cost(row)[key]):return "材料不足："+str(service.database.item(key).name)
+	return ""

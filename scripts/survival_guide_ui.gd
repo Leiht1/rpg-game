@@ -57,7 +57,8 @@ func configure(owner_screen: Control) -> void:
 	page.add_child(title)
 	var words:=Label.new()
 	words.text="W A S D  移动             E  交互    F  攻击\n\nB  打开背包               M  打开地图\n\nC  打开工具制作           V  打开建造\n\n鼠标拖动物品，可移动、调整位置，也可投放\n鼠标右键可使用物品，装备道具\n\n将物品放入快捷栏，按对应数字键快捷使用\n\n收集资源，建造营地，努力活下去。"
-	words.position=Vector2(80,128);words.size=Vector2(640,400)
+	words.text+="\n夜晚可能会遭遇野兽，保护好自己"
+	words.position=Vector2(80,128);words.size=Vector2(640,414)
 	words.add_theme_font_override("font",handwriting)
 	words.add_theme_font_size_override("font_size",25)
 	words.add_theme_color_override("font_color",Color("5d4933"))

@@ -1,0 +1,31 @@
+{
+  "bearing": {
+    "x": 0.281801402568817,
+    "y": -0.959472715854645
+  },
+  "bearing_name": "北",
+  "landmarks": [
+    "裂开的山脊",
+    "狭窄谷口",
+    "未知刻记"
+  ],
+  "north_rotation": -0.28567107121018,
+  "origin": {
+    "x": 38033.2265625,
+    "y": 38750.71484375
+  },
+  "precision": "coarse_terrain_area",
+  "search_area": {
+    "center": {
+      "x": 39091.27734375,
+      "y": 35148.28125
+    },
+    "radius": 2386.55382081026
+  },
+  "seed": 271828,
+  "target_generated": false,
+  "terrain": "narrow_land_corridor",
+  "terrain_fraction": 0.65,
+  "terrain_link": 15,
+  "version": 1
+}

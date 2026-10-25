@@ -1,0 +1,225 @@
+[
+  {
+    "file": "glyph-0",
+    "alpha_bbox": [
+      74,
+      99,
+      326,
+      300
+    ],
+    "cell": [
+      362,
+      362
+    ],
+    "edge_touch": false
+  },
+  {
+    "file": "glyph-1",
+    "alpha_bbox": [
+      39,
+      114,
+      324,
+      266
+    ],
+    "cell": [
+      362,
+      362
+    ],
+    "edge_touch": false
+  },
+  {
+    "file": "glyph-2",
+    "alpha_bbox": [
+      40,
+      85,
+      324,
+      303
+    ],
+    "cell": [
+      362,
+      362
+    ],
+    "edge_touch": false
+  },
+  {
+    "file": "glyph-3",
+    "alpha_bbox": [
+      65,
+      84,
+      294,
+      289
+    ],
+    "cell": [
+      362,
+      362
+    ],
+    "edge_touch": false
+  },
+  {
+    "file": "etch-0",
+    "alpha_bbox": [
+      41,
+      35,
+      339,
+      323
+    ],
+    "cell": [
+      362,
+      362
+    ],
+    "edge_touch": false
+  },
+  {
+    "file": "etch-1",
+    "alpha_bbox": [
+      37,
+      34,
+      326,
+      315
+    ],
+    "cell": [
+      362,
+      362
+    ],
+    "edge_touch": false
+  },
+  {
+    "file": "etch-2",
+    "alpha_bbox": [
+      43,
+      37,
+      322,
+      314
+    ],
+    "cell": [
+      362,
+      362
+    ],
+    "edge_touch": false
+  },
+  {
+    "file": "etch-3",
+    "alpha_bbox": [
+      43,
+      40,
+      322,
+      334
+    ],
+    "cell": [
+      362,
+      362
+    ],
+    "edge_touch": false
+  },
+  {
+    "file": "lamp",
+    "alpha_bbox": [
+      48,
+      33,
+      313,
+      292
+    ],
+    "cell": [
+      362,
+      362
+    ],
+    "edge_touch": false
+  },
+  {
+    "file": "chest-closed",
+    "alpha_bbox": [
+      23,
+      59,
+      335,
+      284
+    ],
+    "cell": [
+      362,
+      362
+    ],
+    "edge_touch": false
+  },
+  {
+    "file": "chest-open",
+    "alpha_bbox": [
+      26,
+      5,
+      334,
+      291
+    ],
+    "cell": [
+      362,
+      362
+    ],
+    "edge_touch": false
+  },
+  {
+    "file": "rubble",
+    "alpha_bbox": [
+      14,
+      122,
+      344,
+      293
+    ],
+    "cell": [
+      362,
+      362
+    ],
+    "edge_touch": false
+  },
+  {
+    "file": "heap-parts",
+    "partition": "painted rock seam polygons; source canvas retained",
+    "recomposition_difference_pixels": 0
+  },
+  {
+    "file": "closeup-0",
+    "source_region": [
+      343,
+      127,
+      517,
+      257
+    ],
+    "source": "assets/exploration/mine-v1/interior.png"
+  },
+  {
+    "file": "closeup-1",
+    "source_region": [
+      650,
+      127,
+      824,
+      257
+    ],
+    "source": "assets/exploration/mine-v1/interior.png"
+  },
+  {
+    "file": "closeup-2",
+    "source_region": [
+      1019,
+      127,
+      1193,
+      257
+    ],
+    "source": "assets/exploration/mine-v1/interior.png"
+  },
+  {
+    "file": "closeup-3",
+    "source_region": [
+      28,
+      393,
+      202,
+      523
+    ],
+    "source": "assets/exploration/mine-v1/interior.png"
+  },
+  {
+    "file": "closeup-4",
+    "source_region": [
+      1334,
+      455,
+      1508,
+      585
+    ],
+    "source": "assets/exploration/mine-v1/interior.png"
+  }
+]

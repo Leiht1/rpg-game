@@ -1,0 +1,56 @@
+{
+  "status": "pending_user",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "correction": "complete newly painted unlit torch and separate flame; mohawk central crest only, exposed shaved sides; head-centred registration",
+  "jobs": [
+    "torch-separated-generated/job.json",
+    "mohawk-corrected-generated/job.json",
+    "bun-fitted-generated/job.json",
+    "bun-exact-generated/job.json",
+    "bun-exact-refined-generated/job.json"
+  ],
+  "ownership": "correction-registration.json",
+  "sha256": {
+    "prototypes\\hair-night-local-v1\\unisex_bun-back.png": "a8afc42b3ed4376be800fc3515a5e69b0ce02c35c093ebfa58c0c3d31cd4884f",
+    "prototypes\\hair-night-local-v1\\unisex_bun-front.png": "11c901bb28aa1c0c95d833f8222e063747c9c6a1deb278d4c07b50d897bbeb70",
+    "prototypes\\hair-night-local-v1\\unisex_bun-left.png": "81a93705d0807a480508c12f829dcc0172304cb38f446d5c1b0a3891394bc068",
+    "prototypes\\hair-night-local-v1\\unisex_bun-right.png": "b05a91baa96c6514958b3ebfa4f97fd07a8589cf6225972b8cfade50353e1dae",
+    "prototypes\\hair-night-local-v1\\unisex_bun-side.png": "b05a91baa96c6514958b3ebfa4f97fd07a8589cf6225972b8cfade50353e1dae",
+    "prototypes\\hair-night-local-v1\\unisex_mohawk-back.png": "158970fe251ceff94f20569d173cc8c94c1870349913cdce72a4af45e6ed8043",
+    "prototypes\\hair-night-local-v1\\unisex_mohawk-front.png": "c3849eeaf56ae41f8bbdef39cdd0aa3c0dde4a004fbcc5fb5bc292e6809bf0d2",
+    "prototypes\\hair-night-local-v1\\unisex_mohawk-left.png": "b328c753f43d5204cce5a625cea5d22bce97270875bd0cb214e38f3db87bdc9a",
+    "prototypes\\hair-night-local-v1\\unisex_mohawk-right.png": "f3417f5d760f0d5cd97fd6c5da8538d1cd33787c2c915f0eb27a813dd0e3db67",
+    "prototypes\\hair-night-local-v1\\unisex_mohawk-side.png": "f3417f5d760f0d5cd97fd6c5da8538d1cd33787c2c915f0eb27a813dd0e3db67",
+    "prototypes\\torch-separated-v1\\body.png": "3a1c27ba161541364d28d9e3e830ce5c240559523107aa358fea5e17ec3a16e1",
+    "prototypes\\torch-separated-v1\\flame.png": "5202616ee8e44798643b3e83e0626ce98cacb3592d3d3cb15b5ea949838a7632",
+    "prototypes\\bun-exact-fit-v3\\back.png": "536daf4dd64d3453a4eff1c5c121f0182bf0246b119a7301c455a9f309a91ffc",
+    "prototypes\\bun-exact-fit-v3\\front.png": "90c342c4145d560fd8befd1c4fd126850d92d64f789e4d87b0156134293ff816",
+    "prototypes\\bun-exact-fit-v3\\left.png": "6d8cdd26d1918f875c9e194bfcf73ff5e9624f5c0452fc001b339f12390f5b2a",
+    "prototypes\\bun-exact-fit-v3\\right.png": "e906730b7f62b380464e123fe68a6a52a3259babbde741dbf58c23571360bdbc",
+    "prototypes\\bun-exact-fit-v3\\side.png": "e906730b7f62b380464e123fe68a6a52a3259babbde741dbf58c23571360bdbc",
+    "prototypes\\bun-forehead-v4\\left.png": "49802e719b5c477515f1c669519df7944fda2b5ef4dd3825d0d5f45aa472f303",
+    "prototypes\\bun-forehead-v4\\right.png": "02de82f3cb22ace752f6e71d166cb21508d38ee0fc6a818713b658b8df9d5207",
+    "prototypes\\bun-forehead-v4\\side.png": "02de82f3cb22ace752f6e71d166cb21508d38ee0fc6a818713b658b8df9d5207",
+    "prototypes\\bun-contour-v5\\left.png": "0d4da0cb62e22cce78f1df004387b62f3c8084af0c32a7bfffd0030cc7076890",
+    "prototypes\\bun-contour-v5\\right.png": "1a7e01c34f476a9af019e49887e07b76eaa66afe8f191da5582d4eaf20cd0d60",
+    "prototypes\\bun-contour-v5\\side.png": "1a7e01c34f476a9af019e49887e07b76eaa66afe8f191da5582d4eaf20cd0d60"
+  },
+  "bun_registration": [
+    "register_bun_exact.py",
+    "register_forehead_only.py",
+    "press_forehead_contour.py"
+  ],
+  "current_bun": {
+    "front_back": "prototypes/bun-exact-fit-v3",
+    "side": "prototypes/bun-contour-v5"
+  },
+  "bun_landmarks": "exact-native-head-guide.json",
+  "bun_qa": [
+    "bun-exact-fit-qa.json",
+    "forehead-fit-qa.json",
+    "forehead-contour-v5.json"
+  ],
+  "rejected_generation": "bun-forehead-generated: model changed fitting skull; not used"
+}

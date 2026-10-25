@@ -15,7 +15,7 @@ func configure(owner_screen: Control) -> void:
 	screen=owner_screen;theme=ItemSkin.theme();name="AnimalFoodChoices"
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter=Control.MOUSE_FILTER_STOP;z_index=35
-	panel.add_theme_stylebox_override("panel",ItemSkin.frame(14))
+	panel.add_theme_stylebox_override("panel",ItemSkin.hotbar())
 	add_child(panel);panel.add_child(grid)
 	grid.add_theme_constant_override("separation",6)
 	gui_input.connect(func(event):

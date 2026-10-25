@@ -13,6 +13,9 @@ func _init(db: ItemDatabase, path: String = "res://data/recipes.json") -> void:
 	if not rows is Array:
 		errors.append("配方数据不是数组")
 		return
+	if path=="res://data/recipes.json":
+		var mine: Dictionary=JSON.parse_string(FileAccess.get_file_as_string("res://data/mine_rules.json"))
+		rows.append({"recipe_id":mine.recipe_id,"output_id":"miner_blast_pack","output_count":1,"materials":mine.materials,"category":"野外用品","conditions":mine.recipe_conditions,"default_unlocked":false,"description":"旧矿工留下的特殊塌方处理方法。","craft_time":1.5})
 	for row in rows:
 		var reason := validate(row)
 		if not reason.is_empty(): errors.append(reason); continue

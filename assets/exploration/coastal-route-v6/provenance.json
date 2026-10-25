@@ -1,0 +1,40 @@
+{
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "estimateUsd": 0,
+  "source": "art\\coastal-route-v6\\arrow-fix\\generated.png",
+  "source_sha256": "d33f58551d717ba434dfb189171bc82ae18d7b747bea88f09b67f87d4cb0d11f",
+  "processing": "Soft chroma matte; full paper at native ratio; separate hand-painted compass extracted. All terrain, route and annotations are model-painted, not code-drawn. Local edit corrected arrow directions.",
+  "paper_bbox": [
+    14,
+    76,
+    1362,
+    989
+  ],
+  "north_source_region": [
+    1370,
+    925,
+    1435,
+    1065
+  ],
+  "symbols": [
+    "two separate flat rocky areas",
+    "outer access path",
+    "shoreline",
+    "broken columns",
+    "circular stone seat",
+    "pale open platform",
+    "small shell marks"
+  ],
+  "annotations": [
+    "沿着石地往外走。",
+    "看见断柱时，方向就对了。"
+  ],
+  "no_entrance": true,
+  "files": {
+    "north.png": "6d92531b796e265b48465a4e71f466330364405b7b891fe3dbe9ec963f59d777",
+    "route-icon.png": "8c9703cfa07555a1ca8885ea0f4c4a1e74e2217874914b7d399b5da49fd282c2",
+    "route-paper.png": "4f6697d9bb0332ab81c9cd16efac026c5b10855b8d5e06323094bf4c4ec5c1d3"
+  }
+}

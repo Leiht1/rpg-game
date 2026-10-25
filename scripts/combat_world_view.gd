@@ -152,8 +152,11 @@ class Relic extends Node2D:
 
 class Portal extends Node2D:
 	var clock:=0.0
+	var frame_texture: Texture2D
 	func _ready() -> void:
-		var sprite:=Sprite2D.new();sprite.texture=load("res://assets/combat/v2/portal.png");sprite.scale=Vector2.ONE*.47;sprite.position=Vector2(0,-51);add_child(sprite)
+		# Keep a strong texture owner across world regeneration and queued draws.
+		frame_texture=ImageTexture.create_from_image(preload("res://assets/combat/v2/portal.png").get_image())
+		var sprite:=Sprite2D.new();sprite.texture=frame_texture;sprite.scale=Vector2.ONE*.47;sprite.position=Vector2(0,-51);add_child(sprite)
 		for side in [-1,1]:
 			var pillar:=StaticBody2D.new();pillar.position=Vector2(side*35,-8);add_child(pillar)
 			var collision:=CollisionShape2D.new();var circle:=CircleShape2D.new();circle.radius=8;collision.shape=circle;pillar.add_child(collision)
@@ -186,6 +189,7 @@ class Boar extends StaticBody2D:
 	var legs: Array[Bone2D]=[]
 	var clock:=0.0
 	var previous:=Vector2.ZERO
+	var visual_facing:=1.0
 	var weapon: Dictionary=preload("res://scripts/combat_rules.gd").load_rules().weapons.boar
 	func part(bone: Bone2D, file: String, at: Vector2, scale_value: Vector2) -> void:
 		var sprite:=Sprite2D.new();sprite.texture=load("res://assets/combat/v1/"+file+".png");sprite.position=at;sprite.scale=scale_value;bone.add_child(sprite)
@@ -195,6 +199,7 @@ class Boar extends StaticBody2D:
 		body.length=12;head.length=12
 		body.position=Vector2(0,-24);body.rest=body.transform;head.rest=Transform2D.IDENTITY
 		add_child(skeleton);skeleton.add_child(body)
+		skeleton.physics_interpolation_mode=Node.PHYSICS_INTERPOLATION_MODE_OFF
 		for i in 4:
 			var leg:=Bone2D.new();leg.set_autocalculate_length_and_angle(false);leg.length=12;leg.position=Vector2(-16+(i%2)*31,0);leg.rest=leg.transform;body.add_child(leg);legs.append(leg)
 			part(leg,"boar_leg",Vector2(0,12),Vector2(.07,.10))
@@ -205,7 +210,9 @@ class Boar extends StaticBody2D:
 	func _process(delta: float) -> void:
 		collision_layer=1 if record.health>0 else 0
 		var moving: bool=position.distance_to(previous)>.01
-		skeleton.scale.x=float(record.get("facing_x",skeleton.scale.x))
+		visual_facing=float(record.get("facing_x",visual_facing))
+		# Assign the full basis: negative X decomposes to rotation PI/negative Y.
+		skeleton.transform=Transform2D(Vector2(visual_facing,0),Vector2(0,1),Vector2.ZERO)
 		previous=position
 		# Patrol steps are slower than chase steps; blocked animals stop stepping.
 		if moving and record.mode not in ["hurt","attack","alert","dead"]:clock+=delta*(8.0 if record.mode=="chase" else 3.0)

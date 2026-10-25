@@ -32,6 +32,7 @@ func valid(row: Dictionary) -> bool:
 	return Fresh.normalize(service.database,j.output)
 
 func check(id: String) -> String:
+	if preload("res://scripts/season_surface.gd").blocked(service,id):return "积雪太厚，暂时无法使用"
 	if busy or service.builds.busy or service.craft_busy or service.body.sleep_active() or service.body.down:return "正在处理"
 	if not service.writable:return "存档受保护"
 	var row: Dictionary=service.builds.states.get(id,{})

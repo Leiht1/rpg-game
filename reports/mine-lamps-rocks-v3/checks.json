@@ -1,0 +1,134 @@
+[
+  {
+    "name": "four lamp anchors form exact rectangle",
+    "pass": true
+  },
+  {
+    "name": "rectangle has clear central operating space",
+    "pass": true
+  },
+  {
+    "name": "unlit lamp 0 uses extinguished chamber",
+    "pass": true
+  },
+  {
+    "name": "lamp 0 enlarged to 132 world units",
+    "pass": true
+  },
+  {
+    "name": "lamp 0 stone has no lighting tint",
+    "pass": true
+  },
+  {
+    "name": "unlit lamp 1 uses extinguished chamber",
+    "pass": true
+  },
+  {
+    "name": "lamp 1 enlarged to 132 world units",
+    "pass": true
+  },
+  {
+    "name": "lamp 1 stone has no lighting tint",
+    "pass": true
+  },
+  {
+    "name": "unlit lamp 2 uses extinguished chamber",
+    "pass": true
+  },
+  {
+    "name": "lamp 2 enlarged to 132 world units",
+    "pass": true
+  },
+  {
+    "name": "lamp 2 stone has no lighting tint",
+    "pass": true
+  },
+  {
+    "name": "unlit lamp 3 uses extinguished chamber",
+    "pass": true
+  },
+  {
+    "name": "lamp 3 enlarged to 132 world units",
+    "pass": true
+  },
+  {
+    "name": "lamp 3 stone has no lighting tint",
+    "pass": true
+  },
+  {
+    "name": "heap consists of fourteen whole independent stones",
+    "pass": true
+  },
+  {
+    "name": "every stone texture is a complete separately generated rock",
+    "pass": true
+  },
+  {
+    "name": "same whole stones form initial opaque heap",
+    "pass": true
+  },
+  {
+    "name": "rewards remain hidden before completion",
+    "pass": true
+  },
+  {
+    "name": "actual E lights first lamp",
+    "pass": true
+  },
+  {
+    "name": "light appears inside chamber without brightening stone",
+    "pass": true
+  },
+  {
+    "name": "wrong E resets lamps",
+    "pass": true
+  },
+  {
+    "name": "failed sequence extinguishes all four real chambers",
+    "pass": true
+  },
+  {
+    "name": "original completion logic preserved",
+    "pass": true
+  },
+  {
+    "name": "four flames lit while roofs and stone retain original colour",
+    "pass": true
+  },
+  {
+    "name": "all stones retain exactly the same scale in every rendered animation frame",
+    "pass": true
+  },
+  {
+    "name": "stones begin sliding at different times",
+    "pass": true
+  },
+  {
+    "name": "every complete stone actually slides before disappearing",
+    "pass": true
+  },
+  {
+    "name": "last stone finishes before reveal event ends",
+    "pass": true
+  },
+  {
+    "name": "unchanged rewards exposed behind departed stones",
+    "pass": true
+  },
+  {
+    "name": "visual animation does not mutate persistent progress or rewards",
+    "pass": true
+  },
+  {
+    "name": "gentle shake restores camera exactly",
+    "pass": true
+  },
+  {
+    "name": "leaving and returning does not rebuild or replay heap",
+    "pass": true
+  },
+  {
+    "name": "completed existing save restores final visual state",
+    "pass": true
+  }
+]

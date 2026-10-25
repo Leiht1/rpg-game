@@ -21,14 +21,15 @@ func _draw()->void:
 	draw_circle(CENTER+Vector2(0,3),68,Color(0,0,0,.16))
 	draw_circle(CENTER,67,INK)
 	draw_circle(CENTER,64,Color("d7cba8"))
-	sector(0,5,Color("505c74"))
-	sector(5,8,Color("dfbd7d"))
-	sector(8,17,Color("f0da91"))
-	sector(17,20,Color("c68d5d"))
-	sector(20,24,Color("505c74"))
+	var h: Array=simulation.light_hours()
+	sector(0,h[0],Color("505c74"))
+	sector(h[0],h[1],Color("dfbd7d"))
+	sector(h[1],h[2],Color("f0da91"))
+	sector(h[2],h[3],Color("c68d5d"))
+	sector(h[3],24,Color("505c74"))
 	draw_arc(CENTER,60,0,TAU,128,INK,1.5,true)
 	for hour in 24:
-		var color:=Color("f5e8bf") if hour<5 or hour>=20 else Color("7a684b")
+		var color:=Color("f5e8bf") if hour<simulation.light_hours()[0] or hour>=simulation.light_hours()[3] else Color("7a684b")
 		draw_line(point(hour,54 if hour%6==0 else 57),point(hour,60),color,2 if hour%6==0 else 1,true)
 	var dial_font := ThemeDB.fallback_font
 	for entry in [["12",0.0],["3",6.0],["6",12.0],["9",18.0]]:
@@ -90,3 +91,4 @@ func cloud_base(color:Color)->StyleBoxFlat:
 	var style:=StyleBoxFlat.new();style.bg_color=color
 	style.set_corner_radius_all(4)
 	return style
+

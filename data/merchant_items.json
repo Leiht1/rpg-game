@@ -58,7 +58,9 @@
     "capabilities": [],
     "action_id": "",
     "visual_id": "",
-    "stats": {},
+    "stats": {
+      "warmth": 4.0
+    },
     "durability": null
   },
   {
@@ -124,5 +126,3 @@
     "durability": null
   }
 ]
-
-

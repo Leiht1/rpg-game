@@ -56,8 +56,8 @@ class CombatNetworkTests(unittest.TestCase):
   n=self.host.execute(night,elapsed=.1)['snapshot']['combat_world']['boars']['fixture']
   origin=day['combat_world']['boars']['fixture']['x']
   self.assertAlmostEqual((origin-n['x'])/(origin-d['x']),1.2,places=3)
- def test_boar_tramples_crop_without_rewards(self):
-  s=self.boar_fixture();b=s['combat_world']['boars']['fixture'];defs=json.loads((ROOT/'data/camp_buildings.json').read_text(encoding='utf-8'))
+ def test_boar_attacks_crop_without_rewards(self):
+  s=self.boar_fixture(night=True);b=s['combat_world']['boars']['fixture'];defs=json.loads((ROOT/'data/camp_buildings.json').read_text(encoding='utf-8'))
   s['buildings']['objects']={'plot':{'kind':'tilled_soil','layer':defs['tilled_soil']['layer'],'x':b['x'],'y':b['y'],'gx':int(b['x']//96),'gy':int(b['y']//64),'vertical':False,'open':False,'inward':False,'facing':0,'hits':0,'contents':[{} for _ in range(12)],'crop':'carrot','growth_minutes':0.0,'roots':False,'fertilized':True}}
   plot=s['buildings']['objects']['plot'];plot['x']=plot['gx']*96+48;plot['y']=plot['gy']*64+32
   b.update(x=plot['x'],y=plot['y'],home_x=plot['x'],home_y=plot['y'])
@@ -65,6 +65,9 @@ class CombatNetworkTests(unittest.TestCase):
   crops=json.loads((ROOT/'data/planting.json').read_text(encoding='utf-8'))['crops']
   s['buildings']['objects']['plot']['crop']=next(iter(crops))
   r=self.host.execute(s,elapsed=.1);self.assertTrue(r['ok'],r)
+  self.assertEqual(r['snapshot']['buildings']['objects']['plot']['crop'],next(iter(crops)))
+  self.assertEqual(r['snapshot']['combat_world']['boars']['fixture']['attack_target'],'crop:plot')
+  r=self.host.execute(r['snapshot'],elapsed=.4);self.assertTrue(r['ok'],r)
   plot=r['snapshot']['buildings']['objects']['plot']
   self.assertEqual(plot['crop'],'');self.assertTrue(plot['roots']);self.assertEqual(plot['growth_minutes'],0)
   self.assertFalse(plot.get('fertilized',False));self.assertEqual(s['slots'],r['snapshot']['slots'])

@@ -13,6 +13,7 @@ var fuel_cards := GridContainer.new()
 var fuel_buttons: Dictionary={}
 var selected_fuel := ""
 var amount := SpinBox.new()
+var fuel_limit := Label.new()
 var add := Button.new()
 var fuel_window := PopupPanel.new()
 var fuel_confirm := Button.new()
@@ -65,6 +66,7 @@ func configure(owner_service: Node) -> void:
 	fuel_cards.columns=2;fuel_content.add_child(fuel_cards)
 	var quantity_line := HBoxContainer.new();fuel_content.add_child(quantity_line);var quantity_label := Label.new();quantity_label.text="数量";quantity_line.add_child(quantity_label)
 	amount.min_value=1;amount.max_value=99;amount.step=1;amount.rounded=true;amount.custom_minimum_size=Vector2(100,32);quantity_line.add_child(amount)
+	fuel_content.add_child(fuel_limit)
 	var fuel_actions := HBoxContainer.new();fuel_content.add_child(fuel_actions);fuel_confirm.text="确认添加";fuel_actions.add_child(fuel_confirm);fuel_confirm.pressed.connect(add_fuel);fuel_actions.add_child(button("取消",func():fuel_window.hide()))
 	column.add_child(separator)
 	ignite.text="开火";extinguish.text="关火";switches.add_child(ignite);switches.add_child(extinguish)
@@ -191,7 +193,12 @@ func refresh() -> void:
 	separator.visible=burner;switches.visible=burner;ignite.disabled=m.enabled or float(m.fuel)+float(m.legacy_fuel)<=0;extinguish.disabled=not m.enabled
 	for id in fuel_buttons:fuel_buttons[id].set_pressed_no_signal(id==selected_fuel)
 	add.disabled=false
-	fuel_confirm.disabled=selected_fuel.is_empty() or service.inventory.count_item(selected_fuel)<int(amount.value)
+	var limit: int=service.inventory.count_item(selected_fuel) if not selected_fuel.is_empty() else 0
+	if burner and not selected_fuel.is_empty():
+		limit=mini(limit,maxi(0,int(floor((float(service.industry.rules.max_fuel)-float(m.fuel))/float(service.industry.rules.fuel_items[selected_fuel]))))) if float(m.legacy_fuel)<=0 else 0
+	amount.max_value=maxi(1,limit)
+	fuel_limit.text="可投放数量：%d"%limit if not selected_fuel.is_empty() else "请选择燃料" if burner else "请选择饲料"
+	fuel_confirm.disabled=limit<1 or int(amount.value)>limit
 	rows.visible=row.kind!="feed_trough"
 	for i in 4:
 		slot_buttons[i].get_parent().visible=i<m.jobs.size()

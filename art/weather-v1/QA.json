@@ -1,0 +1,40 @@
+{
+  "status": "pending_user_visual_review",
+  "original_assets_overwritten": false,
+  "route": "local:codex-cli",
+  "processing": [
+    "ownership crop",
+    "soft magenta alpha key",
+    "uniform Lanczos resize"
+  ],
+  "assets": {
+    "umbrella": {
+      "sha256": "ea38868bc95edaeaa144bd95ae1855285660a111f172d2b15b5043a0c2f61f19",
+      "size": [
+        256,
+        236
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "nonempty": true,
+      "runtime_state": "candidate_only"
+    },
+    "shelter": {
+      "sha256": "1892ddad44c7e2036a8ccf76344f98d9a9038bb77a95d4a4ac2b9aaa4ad54595",
+      "size": [
+        640,
+        461
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "nonempty": true,
+      "runtime_state": "candidate_only"
+    }
+  },
+  "warnings": [],
+  "rejected_variant": "art/weather-v1/umbrella-tall; long shaft rejected by user; runtime restored original short shaft and raises native arm"
+}

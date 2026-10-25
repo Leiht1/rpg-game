@@ -1,0 +1,22 @@
+{
+  "status": "pending_user",
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "source": "generated/job.json",
+  "prompt": "prompt.txt",
+  "registration": "register.py",
+  "four_views": "front/back/right; left is exact right mirror, matching existing rig",
+  "sha256": {
+    "prototypes\\hair-night-local-v1\\unisex_bun-back.png": "4f18f670f7d8ea05fa78655f2c54f54fb07018da89957d48ca8b004b71474db4",
+    "prototypes\\hair-night-local-v1\\unisex_bun-front.png": "136872144f231f78a4cd596d29bcc8ca3299ef72fb63529573a90e0cbaf6f763",
+    "prototypes\\hair-night-local-v1\\unisex_bun-left.png": "499553828110e82c88067a21ba035783d2b4d9f53328a38b7d9f1967a28da54e",
+    "prototypes\\hair-night-local-v1\\unisex_bun-right.png": "9e13265e50f1b6e2569b74ac19fd09d7043e1eafc7ab08ba99e30490d0013a4c",
+    "prototypes\\hair-night-local-v1\\unisex_bun-side.png": "9e13265e50f1b6e2569b74ac19fd09d7043e1eafc7ab08ba99e30490d0013a4c",
+    "prototypes\\hair-night-local-v1\\unisex_mohawk-back.png": "c6ff218b9cf328aa6abac182bd73f92d1abdbb280b8be0433789bdabc1b68dcd",
+    "prototypes\\hair-night-local-v1\\unisex_mohawk-front.png": "2f840b5ec0e737e4681f648630bc6d2410711fc5b536d8cd5361647134ae768e",
+    "prototypes\\hair-night-local-v1\\unisex_mohawk-left.png": "581ad214d7a42fd0275fac2bfaa09778e869ea78cafcff6c3ab4dc97521a7349",
+    "prototypes\\hair-night-local-v1\\unisex_mohawk-right.png": "a01f9e2206bda9f267d66cf2d23405c03e93416b69a445118dd60207f5c1a0e0",
+    "prototypes\\hair-night-local-v1\\unisex_mohawk-side.png": "a01f9e2206bda9f267d66cf2d23405c03e93416b69a445118dd60207f5c1a0e0"
+  }
+}

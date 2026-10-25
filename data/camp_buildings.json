@@ -309,5 +309,29 @@
     "frame": 0,
     "expansion_v2": true,
     "art": "res://assets/camp_expansion/v2/advanced_smokehouse.png"
+  },
+  "rain_shelter": {
+    "name": "简易雨棚",
+    "layer": "free",
+    "cost": {
+      "wood": 16,
+      "plant_fiber": 12,
+      "broad_leaf": 8
+    },
+    "hits": 4,
+    "frame": 14,
+    "rain_cover": true
+  },
+  "dock": {
+    "name": "船坞",
+    "layer": "free",
+    "cost": {
+      "wood": 45,
+      "stone": 20,
+      "plant_fiber": 15
+    },
+    "hits": 6,
+    "frame": 0,
+    "art": "res://assets/exploration/final-v1/dock.png"
   }
 }

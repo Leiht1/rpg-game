@@ -1,0 +1,215 @@
+{
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "estimateUsd": 0,
+  "sources": {
+    "boss": {
+      "source": "art\\final-chapter-v1\\kit\\generated.png",
+      "ownership": [
+        0,
+        0,
+        550,
+        512
+      ],
+      "bounds": [
+        36,
+        66,
+        529,
+        468
+      ],
+      "size": [
+        493,
+        402
+      ],
+      "sha256": "49c5b9eef5ed9fb724e5626abbefc16aee6538114513047607bb7f048926ee7a"
+    },
+    "chest": {
+      "source": "art\\final-chapter-v1\\kit\\generated.png",
+      "ownership": [
+        550,
+        0,
+        1024,
+        512
+      ],
+      "bounds": [
+        42,
+        174,
+        427,
+        473
+      ],
+      "size": [
+        385,
+        299
+      ],
+      "sha256": "f49d088c7ff25694c4fec4eab87ce818278b254595fd1c223261dcf3961300ed"
+    },
+    "ruin": {
+      "source": "art\\final-chapter-v1\\kit\\generated.png",
+      "ownership": [
+        1024,
+        0,
+        1536,
+        512
+      ],
+      "bounds": [
+        29,
+        74,
+        475,
+        477
+      ],
+      "size": [
+        446,
+        403
+      ],
+      "sha256": "5241d329fcabf572e357ac051d20c1ae90c0ef6edc50229ded590ed997206719"
+    },
+    "letter": {
+      "source": "art\\final-chapter-v1\\kit\\generated.png",
+      "ownership": [
+        0,
+        512,
+        520,
+        1024
+      ],
+      "bounds": [
+        44,
+        50,
+        520,
+        419
+      ],
+      "size": [
+        476,
+        369
+      ],
+      "sha256": "dae242694486a73bf8eddf8eda276b0a62a03f8af0d952b56db3bef8e15bffcc"
+    },
+    "dock": {
+      "source": "art\\final-chapter-v1\\kit\\generated.png",
+      "ownership": [
+        1024,
+        512,
+        1536,
+        1024
+      ],
+      "bounds": [
+        22,
+        68,
+        466,
+        408
+      ],
+      "size": [
+        444,
+        340
+      ],
+      "sha256": "6a1bfe7007f5bb545d39206a95695ba118a1ef618e090ec5182f70998fc7883d"
+    },
+    "ground": {
+      "source": "art\\final-chapter-v1\\ground\\generated.png",
+      "ownership": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "bounds": [
+        18,
+        23,
+        1527,
+        1024
+      ],
+      "size": [
+        1509,
+        1001
+      ],
+      "sha256": "b0c6f29da72c2883e72009c184570165d72b4fde8f17e8b98cebf9a97201b429"
+    },
+    "blueprint": {
+      "source": "art\\final-chapter-v1\\items\\generated.png",
+      "ownership": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "bounds": [
+        99,
+        86,
+        887,
+        801
+      ],
+      "size": [
+        788,
+        715
+      ],
+      "sha256": "3bdf636d323f71572d5aa369d692002a8493d67ea9cd2a947a2c0a430b4c0e1f"
+    },
+    "core": {
+      "source": "art\\final-chapter-v1\\items\\generated.png",
+      "ownership": [
+        887,
+        0,
+        1774,
+        887
+      ],
+      "bounds": [
+        0,
+        139,
+        813,
+        813
+      ],
+      "size": [
+        813,
+        674
+      ],
+      "sha256": "0614f4845ea798a1d0d29d25bc778b21f5dd3ab97952d8200458e73320259db3"
+    }
+  },
+  "authorization": "本轮完整开发与正式功能接入；具体审美未获用户确认",
+  "warnings": [
+    "ground approach touches source lower edge; kept whole, no fabricated extension",
+    "no video generation route; guardian uses master pose with state motion, not full directional animation clips"
+  ],
+  "qa": [
+    {
+      "id": "boss_alpha",
+      "visible_pixels": 133687,
+      "magenta_visible": 0
+    },
+    {
+      "id": "chest_alpha",
+      "visible_pixels": 90330,
+      "magenta_visible": 0
+    },
+    {
+      "id": "ruin_alpha",
+      "visible_pixels": 92192,
+      "magenta_visible": 0
+    },
+    {
+      "id": "letter_alpha",
+      "visible_pixels": 147933,
+      "magenta_visible": 0
+    },
+    {
+      "id": "dock_alpha",
+      "visible_pixels": 95231,
+      "magenta_visible": 0
+    },
+    {
+      "id": "ground_alpha",
+      "visible_pixels": 1016806,
+      "magenta_visible": 0
+    },
+    {
+      "id": "blueprint_alpha",
+      "visible_pixels": 363689,
+      "magenta_visible": 0
+    },
+    {
+      "id": "core_alpha",
+      "visible_pixels": 269290,
+      "magenta_visible": 0
+    }
+  ]
+}

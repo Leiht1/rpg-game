@@ -1,0 +1,202 @@
+[
+	{
+		"name": "isolated world and environment",
+		"pass": true
+	},
+	{
+		"name": "configured day span 0",
+		"pass": true
+	},
+	{
+		"name": "configured day span 1",
+		"pass": true
+	},
+	{
+		"name": "configured day span 2",
+		"pass": true
+	},
+	{
+		"name": "configured day span 3",
+		"pass": true
+	},
+	{
+		"name": "distinct sequence frames loaded without skeletons",
+		"pass": true
+	},
+	{
+		"name": "winter snow accumulates from normal game time",
+		"pass": true
+	},
+	{
+		"name": "winter snow persists in clear weather",
+		"pass": true
+	},
+	{
+		"name": "spring gradual thaw",
+		"pass": true
+	},
+	{
+		"name": "lake passable on ice",
+		"pass": true
+	},
+	{
+		"name": "lake passable on ice",
+		"pass": true
+	},
+	{
+		"name": "lake passable on ice",
+		"pass": true
+	},
+	{
+		"name": "lake passable on ice",
+		"pass": true
+	},
+	{
+		"name": "real inland lake exercised",
+		"pass": true
+	},
+	{
+		"name": "outside ocean never frozen",
+		"pass": true
+	},
+	{
+		"name": "surface roundtrip exact",
+		"pass": true
+	},
+	{
+		"name": "negative snow rejected before mutation",
+		"pass": true
+	},
+	{
+		"name": "heavy snow blocks smokehouse",
+		"pass": true
+	},
+	{
+		"name": "actual building interaction rejects snow",
+		"pass": true
+	},
+	{
+		"name": "existing expansion transaction rejects snow",
+		"pass": true
+	},
+	{
+		"name": "existing machine transaction rejects snow",
+		"pass": true
+	},
+	{
+		"name": "storage remains usable",
+		"pass": true
+	},
+	{
+		"name": "unlit fire no heat",
+		"pass": true
+	},
+	{
+		"name": "empty fire no heat",
+		"pass": true
+	},
+	{
+		"name": "existing burning fire heat",
+		"pass": true
+	},
+	{
+		"name": "fire beyond configured range cannot melt snow",
+		"pass": true
+	},
+	{
+		"name": "melt source is a valid existing campfire state",
+		"pass": true
+	},
+	{
+		"name": "heat restores use without mutating business row",
+		"pass": true
+	},
+	{
+		"name": "atomic save includes building snow",
+		"pass": true
+	},
+	{
+		"name": "actual load preserves snow and melt progress",
+		"pass": true
+	},
+	{
+		"name": "snow canopy occlusion retains opaque poles (0.0, 0.0)",
+		"pass": true
+	},
+	{
+		"name": "snow canopy occlusion retains opaque poles (0.0, 180.0)",
+		"pass": true
+	},
+	{
+		"name": "snow canopy occlusion retains opaque poles (150.0, -10.0)",
+		"pass": true
+	},
+	{
+		"name": "real building collider still blocks on ice",
+		"pass": true
+	},
+	{
+		"name": "ice acceleration direction (1.0, 0.0)",
+		"pass": true
+	},
+	{
+		"name": "finite ice braking (1.0, 0.0)",
+		"pass": true
+	},
+	{
+		"name": "ice acceleration direction (-1.0, 0.0)",
+		"pass": true
+	},
+	{
+		"name": "finite ice braking (-1.0, 0.0)",
+		"pass": true
+	},
+	{
+		"name": "ice acceleration direction (0.0, -1.0)",
+		"pass": true
+	},
+	{
+		"name": "finite ice braking (0.0, -1.0)",
+		"pass": true
+	},
+	{
+		"name": "ice acceleration direction (0.0, 1.0)",
+		"pass": true
+	},
+	{
+		"name": "finite ice braking (0.0, 1.0)",
+		"pass": true
+	},
+	{
+		"name": "ice stops without infinite slide",
+		"pass": true
+	},
+	{
+		"name": "thaw restores original water collision",
+		"pass": true
+	},
+	{
+		"name": "actor caught in thaw recovers to a real unobstructed bank",
+		"pass": true
+	},
+	{
+		"name": "actual inland fishing entry unavailable while frozen",
+		"pass": true
+	},
+	{
+		"name": "actual fishing entry restored after thaw",
+		"pass": true
+	},
+	{
+		"name": "real existing fishing bank exercised",
+		"pass": true
+	},
+	{
+		"name": "ordinary ground retains immediate stop after ice",
+		"pass": true
+	},
+	{
+		"name": "all four actual terrain types rendered",
+		"pass": true
+	}
+]

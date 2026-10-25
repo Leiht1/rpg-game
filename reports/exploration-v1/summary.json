@@ -1,0 +1,46 @@
+{
+  "engine": "Godot 4.7.2",
+  "window": [
+    1280,
+    720
+  ],
+  "single_window": {
+    "checks": 47,
+    "failed": 0
+  },
+  "authority_restart": {
+    "checks": 18,
+    "failed": 0
+  },
+  "two_clients": {
+    "network": {
+      "checks": [
+        14,
+        14
+      ],
+      "global_rewards": {
+        "predecessor_map": 1,
+        "predecessor_note": 1
+      },
+      "stages": [
+        3.0,
+        3.0
+      ]
+    },
+    "network-lake": {
+      "checks": [
+        15,
+        15
+      ],
+      "global_rewards": {
+        "mysterious_bottle": 1
+      },
+      "stages": [
+        5.0,
+        5.0
+      ]
+    }
+  },
+  "deployment": "none",
+  "player_data": "isolated only"
+}

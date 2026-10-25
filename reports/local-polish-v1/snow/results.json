@@ -1,0 +1,728 @@
+{
+	"checks": [
+		{
+			"name": "original snow count retained",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed200.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed200.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed200.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed200.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed200.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed200.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed200.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed200.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed200.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed200.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed200.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed200.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed200.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed200.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed200.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed200.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed200.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed200.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed200.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed200.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed200.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed200.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed200.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed200.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed200.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed200.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed200.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed200.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed200.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed200.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed200.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed200.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed200.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed200.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed200.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed200.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed200.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed200.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed200.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed200.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed200.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed200.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed200.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed200.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed200.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed200.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed200.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed200.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed200.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed200.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed200.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed200.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed200.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed200.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed200.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed200.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed200.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed200.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed200.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed200.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed200.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed200.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed200.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed200.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed200.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed200.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed200.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed200.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed200.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed200.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed200.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed200.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed200.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed200.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed200.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed200.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed200.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed200.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed200.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed200.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed200.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed200.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed200.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed200.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed310.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed310.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed310.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed310.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed310.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed310.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed310.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed310.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed310.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed310.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed310.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 0.0) speed310.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed310.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed310.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed310.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed310.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed310.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed310.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed310.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed310.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed310.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed310.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed310.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (1.0, 0.0) speed310.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed310.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed310.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed310.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed310.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed310.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed310.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed310.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed310.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed310.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed310.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed310.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-1.0, 0.0) speed310.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed310.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed310.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed310.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed310.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed310.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed310.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed310.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed310.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed310.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed310.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed310.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, -1.0) speed310.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed310.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed310.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed310.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed310.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed310.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed310.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed310.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed310.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed310.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed310.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed310.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.0, 1.0) speed310.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed310.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed310.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed310.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed310.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed310.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed310.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed310.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed310.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed310.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed310.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed310.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (0.707107, 0.707107) speed310.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed310.0 frame0",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed310.0 frame1",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed310.0 frame2",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed310.0 frame3",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed310.0 frame4",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed310.0 frame5",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed310.0 frame6",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed310.0 frame7",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed310.0 frame8",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed310.0 frame9",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed310.0 frame10",
+			"pass": true
+		},
+		{
+			"name": "world fall and camera-relative drift (-0.707107, -0.707107) speed310.0 frame11",
+			"pass": true
+		},
+		{
+			"name": "paused snowfall clock stops",
+			"pass": true
+		},
+		{
+			"name": "paused particles remain world anchored while camera moves",
+			"pass": true
+		},
+		{
+			"name": "zoom recycle stays within visible world 0.65",
+			"pass": true
+		},
+		{
+			"name": "all twelve screen regions filled after zoom 0.65 [7, 7, 10, 10, 10, 11, 10, 6, 10, 10, 7, 9]",
+			"pass": true
+		},
+		{
+			"name": "zoom recycle stays within visible world 1.65",
+			"pass": true
+		},
+		{
+			"name": "all twelve screen regions filled after zoom 1.65 [7, 7, 10, 10, 10, 11, 10, 6, 10, 8, 8, 9]",
+			"pass": true
+		},
+		{
+			"name": "zoom recycle stays within visible world 1.0",
+			"pass": true
+		},
+		{
+			"name": "all twelve screen regions filled after zoom 1.0 [7, 7, 10, 9, 10, 11, 10, 7, 10, 7, 8, 9]",
+			"pass": true
+		},
+		{
+			"name": "large camera jump recycles fixed population",
+			"pass": true
+		},
+		{
+			"name": "nonwinter stops snow",
+			"pass": true
+		},
+		{
+			"name": "winter reentry seeds current view",
+			"pass": true
+		}
+	],
+	"failed": 0,
+	"max_vertical_step": 2.33203125,
+	"min_vertical_step": 0.9609375,
+	"tracked_samples": 18666
+}

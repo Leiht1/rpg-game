@@ -3,6 +3,16 @@ extends RefCounted
 signal changed
 const RULES = preload("res://scripts/body_rules.gd")
 var rules: Dictionary = RULES.load_rules()
+const WeatherRules = preload("res://scripts/weather_body_rules.gd")
+var wetness := 0.0
+var felt_temperature := 22.0
+var cold_level := 0
+var extreme_minutes := 0.0
+var exposure: Dictionary={}
+var heat_temperature := 22.0
+var activity_heat := 0.0
+var hot_minutes := 0.0
+var hot := false
 var discomfort := 0.0
 var health := 100.0
 var hunger := 100.0
@@ -37,17 +47,19 @@ func spend_labor(action: String) -> void:
 	exhausted=stamina<float(rules.labor_cost.get(action,0.0))
 	changed.emit()
 
-func advance(seconds: float, minutes: float, sprinting: bool, working: bool) -> void:
+func advance(seconds: float, minutes: float, sprinting: bool, working: bool, moving: bool=false) -> void:
 	if seconds<=0.0 or minutes<=0.0: return
 	# Fixed bounded slices keep thresholds, illness intervals and rescue reproducible.
 	var remaining := minutes
 	while remaining>0.000001:
 		var step := minf(remaining,1.0)
-		_tick(seconds*step/minutes,step,sprinting,working)
+		_tick(seconds*step/minutes,step,sprinting,working,moving)
 		remaining-=step
 	changed.emit()
 
-func _tick(seconds: float, minutes: float, sprinting: bool, working: bool) -> void:
+func _tick(seconds: float, minutes: float, sprinting: bool, working: bool, moving: bool=false) -> void:
+	advance_weather(minutes)
+	advance_heat(minutes,sprinting,working,moving)
 	var affected := minf(minutes,hallucination_remaining)
 	hallucination_remaining=maxf(0.0,hallucination_remaining-affected)
 	health=maxf(0.0,health-affected*float(rules.hallucination_damage)/float(rules.hallucination_minutes))
@@ -58,7 +70,7 @@ func _tick(seconds: float, minutes: float, sprinting: bool, working: bool) -> vo
 		sleep_elapsed+=minutes
 		var limit: float=float(sleep_session.get("target",100.0))
 		var elapsed: float=minf(minutes,maxf(0,sleep_duration-(sleep_elapsed-minutes)))
-		energy=minf(limit,energy+elapsed/60.0*float(preload("res://scripts/sleep_rules.gd").facility(str(sleep_session.get("source",""))).get("rate",rules.sleep_energy_per_hour)))
+		energy=minf(limit,energy+elapsed/60.0*float(preload("res://scripts/sleep_rules.gd").facility(str(sleep_session.get("source",""))).get("rate",rules.sleep_energy_per_hour))*energy_recovery_factor())
 		if sleep_elapsed+0.00001>=sleep_duration or energy+0.00001>=limit:
 			sleep_elapsed=minf(sleep_elapsed,sleep_duration)
 			sleeping=false
@@ -79,7 +91,7 @@ func _tick(seconds: float, minutes: float, sprinting: bool, working: bool) -> vo
 	if health<=0.0: down=true
 	if down: return
 	if sprinting and not exhausted:
-		stamina=maxf(0.0,stamina-seconds*float(rules.run_per_second))
+		stamina=maxf(0.0,stamina-seconds*float(rules.run_per_second)*float(WeatherRules.data.run_factors[cold_level]))
 		rest_clock=0.0
 		if stamina<=0: exhausted=true
 	elif working:
@@ -96,7 +108,28 @@ func _tick(seconds: float, minutes: float, sprinting: bool, working: bool) -> vo
 	build=move_toward(build,reserve,days/float(rules.body_response_days))
 
 func recovery_factor() -> float:
-	return (.2+.8*smoothstep(0.0,float(rules.hunger_optimal),hunger))*(1.0-minf(.35,illness*.12))
+	return float(WeatherRules.data.recovery_factors[cold_level])*(.2+.8*smoothstep(0.0,float(rules.hunger_optimal),hunger))*(1.0-minf(.35,illness*.12))
+
+func energy_recovery_factor() -> float:
+	return float(WeatherRules.data.summer_heat.energy_recovery_factor) if hot else 1.0
+
+func advance_heat(minutes: float, sprinting: bool, working: bool, moving: bool) -> void:
+	if exposure.is_empty() or down: return
+	var c: Dictionary=WeatherRules.data.summer_heat
+	var activity := 0.0
+	if not sleep_active():
+		activity=float(c.running_load_celsius) if sprinting else float(c.labor_load_celsius) if working else float(c.walking_load_celsius) if moving else 0.0
+	activity_heat=lerpf(activity_heat,activity,1.0-exp(-minutes/float(c.activity_response_minutes)))
+	# Wool keeps its cold protection but adds no summer penalty. Use ambient, not felt warmth.
+	var ambient: float=float(exposure.get("ambient",c.neutral_celsius))
+	var shade: float=minf(maxf(0,ambient-float(c.neutral_celsius)),maxf(0,float(exposure.get("sun_shade",0))))
+	var target: float=ambient-shade+activity_heat
+	heat_temperature=lerpf(heat_temperature,target,1.0-exp(-minutes/float(c.thermal_response_minutes)))
+	var rate: float=clampf((heat_temperature-float(c.accumulate_above_celsius))/float(c.full_rate_excess_celsius),0,1)
+	if rate>0: hot_minutes=minf(float(c.max_minutes),hot_minutes+minutes*rate)
+	elif heat_temperature<float(c.release_below_celsius): hot_minutes=maxf(0,hot_minutes-minutes*float(c.cooling_per_minute))
+	if not hot and hot_minutes>=float(c.enter_minutes): hot=true
+	elif hot and hot_minutes<=float(c.exit_minutes) and heat_temperature<float(c.release_below_celsius): hot=false
 
 func can_eat(effect: Dictionary) -> bool:
 	return (hunger<100.0 and float(effect.get("hunger",0))>0) or (health<100.0 and float(effect.get("health",0))>0) or (illness>0 and float(effect.get("treatment",0))>0)
@@ -141,10 +174,23 @@ func body_description() -> String:
 	return shape+" · "+trend
 
 func serialize() -> Dictionary:
-	return {"hallucination_remaining":hallucination_remaining,"version":2,"sleep_session":sleep_session.duplicate(true),"energy":energy,"sleeping":sleeping,"sleep_forced":sleep_forced,"sleep_elapsed":sleep_elapsed,"sleep_duration":sleep_duration,"health":health,"hunger":hunger,"stamina":stamina,"deprivation":deprivation,"illness":illness,"reserve":reserve,"build":build,"damage_clock":damage_clock,"rest_clock":rest_clock,"rescue_clock":rescue_clock,"exhausted":exhausted,"down":down}
+	return {"summer_heat":{"version":1,"temperature":heat_temperature,"activity":activity_heat,"minutes":hot_minutes,"hot":hot},"weather_body":{"version":1,"wetness":wetness,"felt_temperature":felt_temperature,"cold_level":cold_level,"extreme_minutes":extreme_minutes},"hallucination_remaining":hallucination_remaining,"version":2,"sleep_session":sleep_session.duplicate(true),"energy":energy,"sleeping":sleeping,"sleep_forced":sleep_forced,"sleep_elapsed":sleep_elapsed,"sleep_duration":sleep_duration,"health":health,"hunger":hunger,"stamina":stamina,"deprivation":deprivation,"illness":illness,"reserve":reserve,"build":build,"damage_clock":damage_clock,"rest_clock":rest_clock,"rescue_clock":rescue_clock,"exhausted":exhausted,"down":down}
 
 func restore(value: Variant) -> bool:
 	if not value is Dictionary: return false
+	var weather = value.get("weather_body",{"version":1,"wetness":0.0,"felt_temperature":22.0,"cold_level":0,"extreme_minutes":0.0})
+	if not weather is Dictionary or weather.get("version")!=1: return false
+	for key in {"wetness":[0,100],"felt_temperature":[-80,80],"cold_level":[0,3],"extreme_minutes":[0,1000000]}:
+		var bounds: Array={"wetness":[0,100],"felt_temperature":[-80,80],"cold_level":[0,3],"extreme_minutes":[0,1000000]}[key]
+		var number=weather.get(key)
+		if not (number is int or number is float) or not is_finite(float(number)) or number<bounds[0] or number>bounds[1]: return false
+	if weather.cold_level!=floor(weather.cold_level): return false
+	var summer = value.get("summer_heat",{"version":1,"temperature":22.0,"activity":0.0,"minutes":0.0,"hot":false})
+	if not summer is Dictionary or summer.get("version")!=1 or not summer.get("hot") is bool: return false
+	var heat_ranges := {"temperature":[-80,80],"activity":[0,20],"minutes":[0,1000000]}
+	for key in heat_ranges:
+		var number=summer.get(key)
+		if not (number is int or number is float) or not is_finite(float(number)) or number<heat_ranges[key][0] or number>heat_ranges[key][1]: return false
 	var raw_version = value.get("version")
 	if not (raw_version is int or raw_version is float) or not is_finite(float(raw_version)) or raw_version!=floor(raw_version): return false
 	var version := int(raw_version)
@@ -165,6 +211,8 @@ func restore(value: Variant) -> bool:
 	for key in ["down","exhausted"]:
 		if not value.get(key) is bool: return false
 	for key in ranges: set(key,float(value[key]))
+	wetness=float(weather.wetness);felt_temperature=float(weather.felt_temperature);cold_level=int(weather.cold_level);extreme_minutes=float(weather.extreme_minutes)
+	heat_temperature=float(summer.temperature);activity_heat=float(summer.activity);hot_minutes=float(summer.minutes);hot=summer.hot
 	hallucination_remaining=float(raw_hallucination)
 	energy=float(value.get("energy",100.0))
 	sleeping=bool(value.get("sleeping",false));sleep_forced=bool(value.get("sleep_forced",false))
@@ -199,3 +247,37 @@ func start_sleep(minute: float, forced: bool=false) -> bool:
 	sleeping=true
 	changed.emit()
 	return true
+
+func movement_factor() -> float:
+	return efficiency()*float(WeatherRules.data.move_factors[cold_level])
+
+func advance_weather(minutes: float) -> void:
+	if exposure.is_empty() or down: return
+	var c: Dictionary=WeatherRules.data
+	var exposed: bool=not exposure.get("umbrella",false) and not exposure.get("shelter",false)
+	var rain: float=float(exposure.get("rain",0))
+	var heat: float=float(exposure.get("heat",0))
+	var gain: float=rain*float(c.wet_per_minute)*lerpf(1.0,float(c.storm_wet_multiplier),float(exposure.get("storm",0))) if exposed else 0.0
+	gain*=1.0-clampf(float(exposure.get("rain_resistance",0)),0,1)
+	var drying: float=float(c.dry_per_minute)*(1.0-rain if exposed else 1.0)+heat*float(c.heat_dry_per_minute)
+	wetness=clampf(wetness+minutes*(gain-drying),0,100)
+	var target: float=float(exposure.get("ambient",c.base_celsius))+float(exposure.get("warmth",0))+heat*float(c.heat_celsius)-wetness/100.0*float(c.wet_chill)
+	felt_temperature=lerpf(felt_temperature,target,1.0-exp(-minutes/float(c.thermal_response_minutes)))
+	while cold_level<3 and felt_temperature<float(c.cold_enter[cold_level]): cold_level+=1
+	while cold_level>0 and felt_temperature>float(c.cold_enter[cold_level-1])+float(c.cold_hysteresis): cold_level-=1
+	if cold_level==3:
+		var before := extreme_minutes
+		extreme_minutes=minf(1000000,extreme_minutes+minutes)
+		var damage_minutes: float=maxf(0,extreme_minutes-float(c.extreme_grace_minutes))-maxf(0,before-float(c.extreme_grace_minutes))
+		health=maxf(0,health-damage_minutes*float(c.extreme_damage_per_hour)/60.0)
+	else: extreme_minutes=0.0
+
+func wet_status() -> String:
+	var index := 0
+	for threshold in WeatherRules.data.wet_thresholds:
+		if wetness>=float(threshold):index+=1
+	return ["干燥","微湿","潮湿","湿透"][index]
+
+func thermal_status() -> String:
+	if hot and cold_level==0: return "炎热"
+	return ["舒适","微冷","寒冷","极冷"][cold_level]

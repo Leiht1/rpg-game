@@ -1,0 +1,38 @@
+{
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "estimateUsd": 0.0,
+  "source_job": "art/exploration-elder-style-v3/source/job.json",
+  "prompt": "art/exploration-elder-style-v3/prompt.txt",
+  "style_reference": "art/exploration-elder-style-v3/current-hero-reference.png",
+  "pose_reference": "art/exploration-waits-v2/elder-rod-edit/generated.png",
+  "style_authority": "ART_STYLE.md / assets/hero/cartoon/character.tscn",
+  "approval": {
+    "quote": "老者素材可以了",
+    "scope": "本批v3老者PNG，保留垂钓坐姿；后续要求仅调整运行尺寸及外缘海岸生成地点",
+    "date": "2026-10-25"
+  },
+  "registration": {
+    "canvas": [
+      1024,
+      1024
+    ],
+    "display_canvas_height": 142,
+    "anchor_offsets": "scripts/exploration_chapter_view.gd",
+    "rod_tip_right": [
+      892,
+      67
+    ],
+    "rod_tip_left": [
+      132,
+      67
+    ]
+  },
+  "sha256": {
+    "art/exploration-elder-style-v3/source/generated.png": "baa866f3bd978da1604ab201eadea0f2f9a315ff9d5861e8b604dd362a51b72a",
+    "art/exploration-elder-style-v3/processed/clean.png": "4731cde372bbaa94d84420ccceb92ecc8cb1457625428a26f0ee49f2facb98b0",
+    "assets/exploration/v3/elder.png": "4731cde372bbaa94d84420ccceb92ecc8cb1457625428a26f0ee49f2facb98b0",
+    "art/exploration-elder-style-v3/current-hero-reference.png": "c595d02708d14841bbe16db7a0986065d89792c1a0930960f2de26f405dd7ff6"
+  }
+}

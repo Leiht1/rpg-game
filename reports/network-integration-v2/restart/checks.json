@@ -1,0 +1,30 @@
+[
+  {
+    "name": "both authority snapshots cross spring to summer once",
+    "pass": true
+  },
+  {
+    "name": "personal body states remain distinct",
+    "pass": true
+  },
+  {
+    "name": "actual authority building placed before restart",
+    "pass": true
+  },
+  {
+    "name": "inventory mutation acknowledged before stop",
+    "pass": true
+  },
+  {
+    "name": "command receipts committed to SQLite",
+    "pass": true
+  },
+  {
+    "name": "both packed clients verify exact persisted state after real restart",
+    "pass": true
+  },
+  {
+    "name": "same request after server restart cannot duplicate or repeat inventory movement",
+    "pass": true
+  }
+]

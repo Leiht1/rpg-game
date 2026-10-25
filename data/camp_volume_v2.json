@@ -124,5 +124,16 @@
       86,
       50
     ]
+  },
+  "dock": {
+    "art": "res://assets/exploration/final-v1/dock.png",
+    "width": 180,
+    "max_height": 150,
+    "collision": [
+      -85,
+      -38,
+      170,
+      46
+    ]
   }
 }

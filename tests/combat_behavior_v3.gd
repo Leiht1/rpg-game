@@ -43,7 +43,7 @@ func run() -> void:
 	c.advance_boars(.1);check(c.damage_events.size()==1,"at most one hit per attack")
 	b.mode="hurt";b.clock=0;b.facing_x=-1;c.advance_boars(.1);check(b.facing_x==-1,"hurt retains heading")
 	var pig=load("res://scripts/combat_world_view.gd").Boar.new();pig.record=b;root.add_child(pig);pig.set_process(false)
-	pig.position+=Vector2(8,0);pig._process(.016);check(pig.skeleton.scale.x==-1,"knockback displacement does not flip boar")
+	pig.position+=Vector2(8,0);pig._process(.016);check(pig.skeleton.transform.x.x==-1,"knockback displacement does not flip boar")
 	b.mode="attack";b.clock=.45;pig._process(.016);check(pig.body.position!=Vector2(0,-24) and absf(pig.body.rotation)>.01,"attack moves full body")
 	b.mode="patrol";pig.position+=Vector2(2,0);var t: float=pig.clock;pig._process(.1);var slow: float=pig.clock-t
 	b.mode="chase";pig.position+=Vector2(2,0);t=pig.clock;pig._process(.1);check(pig.clock-t>slow*2,"chase steps faster than patrol")

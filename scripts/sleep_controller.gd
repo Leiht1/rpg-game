@@ -70,6 +70,8 @@ func start(id: String, option: String="maximum", forced: bool=false) -> String:
 		if not available(id): return "设施无法使用"
 		var row: Dictionary=service.builds.states[id]
 		source=row.kind;anchor=Vector2(row.x,row.y)
+		var rain: float=w.environment_view.simulation.blend.y+w.environment_view.simulation.blend.z
+		if rain>0.01 and not preload("res://scripts/weather_exposure.gd").covered(service,preload("res://scripts/weather_exposure.gd").sleep_point(row)): return "床铺正在淋雨"
 		var bounds: Rect2=service.builds.footprint_rect(row)
 		var edge: Vector2=anchor+(p.position-anchor).clamp(bounds.position,bounds.end)
 		if p.position.distance_to(edge)>=100: return "请靠近睡眠设施"

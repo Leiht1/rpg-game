@@ -1,0 +1,86 @@
+[
+  {
+    "view": "front",
+    "cyan_head_bbox": [
+      43,
+      428,
+      491,
+      706
+    ],
+    "scale_from_head": 0.4375,
+    "source_anchor": [
+      267.0,
+      706
+    ],
+    "target_anchor": [
+      180,
+      310
+    ],
+    "transform": [
+      63.1875,
+      1.125
+    ],
+    "hair_alpha_bbox": [
+      96,
+      114,
+      264,
+      249
+    ]
+  },
+  {
+    "view": "back",
+    "cyan_head_bbox": [
+      39,
+      535,
+      473,
+      706
+    ],
+    "scale_from_head": 0.45161290322580644,
+    "source_anchor": [
+      256.0,
+      706
+    ],
+    "target_anchor": [
+      180,
+      310
+    ],
+    "transform": [
+      64.38709677419355,
+      -8.838709677419331
+    ],
+    "hair_alpha_bbox": [
+      96,
+      107,
+      264,
+      287
+    ]
+  },
+  {
+    "view": "side",
+    "cyan_head_bbox": [
+      149,
+      424,
+      468,
+      706
+    ],
+    "scale_from_head": 0.445,
+    "source_anchor": [
+      468,
+      706
+    ],
+    "target_anchor": [
+      273,
+      310
+    ],
+    "transform": [
+      64.74000000000001,
+      -4.170000000000016
+    ],
+    "hair_alpha_bbox": [
+      83,
+      112,
+      256,
+      297
+    ]
+  }
+]

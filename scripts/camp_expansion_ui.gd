@@ -64,7 +64,7 @@ func deposit_fuel() -> void:
 
 func layout_for(kind: String) -> void:
 	var compact := kind in ["compost_bin","advanced_smokehouse","fuel_supply_box"]
-	panel.size=Vector2(420,232 if kind=="compost_bin" else 220 if kind=="fuel_supply_box" else 144) if compact else Vector2(600,520)
+	panel.size=Vector2(420,232 if kind=="compost_bin" else 220 if kind=="fuel_supply_box" else 368) if compact else Vector2(600,520)
 	title.position=Vector2(18,14) if compact else Vector2(28,20)
 	close.position=Vector2(panel.size.x-90,12 if compact else 20)
 	status.position=Vector2(18,58) if compact else Vector2(28,65)

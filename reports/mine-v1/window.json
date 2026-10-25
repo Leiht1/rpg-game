@@ -1,0 +1,157 @@
+{
+  "checks": [
+    {
+      "name": "formal item and recipe schemas",
+      "pass": true
+    },
+    {
+      "name": "unknown recipe hidden",
+      "pass": true
+    },
+    {
+      "name": "unread no mine",
+      "pass": true
+    },
+    {
+      "name": "actual bottle read records deadline",
+      "pass": true
+    },
+    {
+      "name": "read before day no mine",
+      "pass": true
+    },
+    {
+      "name": "reread cannot reset deadline",
+      "pass": true
+    },
+    {
+      "name": "normal time rule full day minus one second",
+      "pass": true
+    },
+    {
+      "name": "rocky area mine generated after full world day",
+      "pass": true
+    },
+    {
+      "name": "safe seeded rocky location",
+      "pass": true
+    },
+    {
+      "name": "old chapter and current mine roundtrip",
+      "pass": true
+    },
+    {
+      "name": "actual sealed collider and interaction",
+      "pass": true
+    },
+    {
+      "name": "ordinary mining cannot target seal",
+      "pass": true
+    },
+    {
+      "name": "real actor walking stops at sealed collision",
+      "pass": true
+    },
+    {
+      "name": "normal F attack cannot break special seal",
+      "pass": true
+    },
+    {
+      "name": "native E input investigates actual seal",
+      "pass": true
+    },
+    {
+      "name": "record unlocks actual recipe",
+      "pass": true
+    },
+    {
+      "name": "recipe listed in existing craft UI",
+      "pass": true
+    },
+    {
+      "name": "advanced station placed for discovered recipe",
+      "pass": true
+    },
+    {
+      "name": "insufficient materials rejected",
+      "pass": true
+    },
+    {
+      "name": "full inventory rejects real recipe without deduction",
+      "pass": true
+    },
+    {
+      "name": "craft rollback attempt starts",
+      "pass": true
+    },
+    {
+      "name": "craft disk failure restores every ingredient and no output",
+      "pass": true
+    },
+    {
+      "name": "real timed crafting starts",
+      "pass": true
+    },
+    {
+      "name": "duplicate craft start rejected",
+      "pass": true
+    },
+    {
+      "name": "real crafting awards inventory pack",
+      "pass": true
+    },
+    {
+      "name": "wrong distance no consumption",
+      "pass": true
+    },
+    {
+      "name": "placement disk failure rolls back inventory and seal",
+      "pass": true
+    },
+    {
+      "name": "actual placement consumes exactly one and persists fuse",
+      "pass": true
+    },
+    {
+      "name": "armed restart retains finalization deadline",
+      "pass": true
+    },
+    {
+      "name": "repeated placement never charges again",
+      "pass": true
+    },
+    {
+      "name": "persisted opening removes physical and visual seal",
+      "pass": true
+    },
+    {
+      "name": "real actor crosses former seal after blast",
+      "pass": true
+    },
+    {
+      "name": "entry disk failure restores own region position and serial",
+      "pass": true
+    },
+    {
+      "name": "native E enters open mine with original actor",
+      "pass": true
+    },
+    {
+      "name": "interior walkable area bounded",
+      "pass": true
+    },
+    {
+      "name": "interior personal position save and restore",
+      "pass": true
+    },
+    {
+      "name": "actual exit returns to saved surface mine",
+      "pass": true
+    },
+    {
+      "name": "repeat entry open state retained",
+      "pass": true
+    }
+  ],
+  "failures": 0
+}

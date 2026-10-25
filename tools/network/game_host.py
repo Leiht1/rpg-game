@@ -142,6 +142,7 @@ class GameHost:
     def movement(self, world, character, inputs):
         request = {"operation": "movement", "character": character, "inputs": inputs,
                    "buildings": world["gameplay"]["buildings"]["objects"],
+                   "exploration_chapter": world["gameplay"].get("exploration_chapter", {}),
                    "combat_world": world["gameplay"].get("combat_world", {}),
                    "harvested": world["gameplay"]["harvested"]}
         self._send(request)

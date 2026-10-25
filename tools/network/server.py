@@ -23,6 +23,7 @@ import ssl
 import subprocess
 import threading
 import time
+import traceback
 import unicodedata
 import zipfile
 from collections import defaultdict, deque
@@ -93,6 +94,7 @@ class Service:
         self.lock = threading.RLock()
         self.request_ready = threading.Condition(self.lock)
         self.queue_lock = threading.Lock()
+        self.world_bootstrap = threading.local()
         self.pending_moves = 0
         self.sessions = {}
         self.limits = defaultdict(deque)
@@ -102,6 +104,12 @@ class Service:
         self.nav_cache = {}
         self.mask_cache = {}
         self.gameplay = None
+        if config.get("gameplay_preview") is True:
+            try:
+                from .gameplay import Gameplay
+            except ImportError:
+                from gameplay import Gameplay
+            self.gameplay = Gameplay(self.config)
         self.movement_checkpoint = 0.0
         self.save()
 
@@ -253,12 +261,43 @@ class Service:
             result["visual_body"] = {key: body.get(key) for key in ("build", "sleeping", "sleep_session")}
             result["combat"] = c["gameplay"].get("combat_personal", {})
             result["pose"] = c.get("pose", {})
+            active_lamp = c["gameplay"].get("network_active_lamp", "")
+            lamp_on = c["gameplay"].get("network_lamp_on", False)
+            lamp = next((slot for slot in c["slots"]+list(c["equipment"].values())
+                         if active_lamp and slot.get("lamp_id") == active_lamp and slot.get("fuel", 0) > 0), {})
+            result["lamp_item"] = lamp.get("item_id", "") if lamp_on else ""
         return result
 
     def handle(self, op, data, token="", ip="local"):
         if op == "move":
             with self.queue_lock:self.pending_moves += 1
         try:
+            if op == "create_world":
+                with self.lock:
+                    require(isinstance(data, dict) and data.get("protocol") == PROTOCOL and data.get("version") == VERSION, "客户端与服务器版本不兼容")
+                    account, unused = self.account(token)
+                    require(account["nickname"], "请先设置昵称")
+                    require(not account["world_id"], "已有所属世界，请继续进入或永久退出后再加入")
+                    name = data.get("name", "原野")
+                    require(isinstance(name,str) and 1 <= len(name.strip()) <= 20 and not any(unicodedata.category(c).startswith("C") for c in name), "世界名称不合法")
+                    self.rate(("world",account["id"]), 5, 60)
+                world = self.new_world(name)
+                # Generation writes only this uncommitted world's private cache.
+                # Membership and name are checked again at the commit boundary.
+                self.world_bootstrap.value = (world, None)
+                self.world_bootstrap.value = (world, self.terrain_factory(world))
+            if self.gameplay is not None and op in ("character", "game_snapshot", "game_command", "move", "logout", "leave_lobby", "leave_world"):
+                # Register movement before even the bootstrap lookup competes
+                # for the lock, so snapshot priority cannot starve queued input.
+                # Cold startup creates defaults only; dispatch rechecks session
+                # and membership before restoring committed authoritative state.
+                with self.lock:
+                    require(isinstance(data, dict) and data.get("protocol") == PROTOCOL and data.get("version") == VERSION, "客户端与服务器版本不兼容")
+                    account, unused = self.account(token)
+                    world = self.state["worlds"].get(account["world_id"])
+                    bootstrap = {k: world[k] for k in ("id", "seed", "map_cells")} if world else None
+                if bootstrap is not None:
+                    self.gameplay.prepare(bootstrap)
             with self.request_ready:
                 if op == "game_snapshot":
                     # Drain already queued input before another expensive tick.
@@ -276,9 +315,19 @@ class Service:
                                 "last":time.time()-(now-session["seen"])}
                                 for session in self.sessions.values() if session.get("entered") and session["seen"] > now-15]
         finally:
+            if op == "create_world" and hasattr(self.world_bootstrap, "value"):
+                staged, unused = self.world_bootstrap.value
+                del self.world_bootstrap.value
+                with self.lock:
+                    if staged["id"] not in self.state["worlds"]:
+                        (self.root/"Worlds"/(staged["id"]+".terrain.json")).unlink(missing_ok=True)
+                        self.nav_cache.pop(staged["id"], None)
             if op == "move":
                 with self.queue_lock:self.pending_moves -= 1
                 with self.request_ready:self.request_ready.notify_all()
+
+    def new_world(self, name):
+        return {"id":identifier(),"name":name.strip(),"seed":secrets.randbelow(2147483646)+1,"map_cells":self.config.get("world_cells",1536),"generator":"windrest-continent-0.6.0","format":1,"clock":0.0,"weather":"clear","storage":{},"drops":{},"legacies":{},"exploration":[],"systems": {"buildings":{},"resources":{},"animals":{},"crops":{},"fish":{},"merchant":{}}}
 
     def handle_locked(self, op, data, token="", ip="local"):
         timing = time.perf_counter()
@@ -462,10 +511,14 @@ class Service:
             if op == "create_world":
                 name = d.get("name", "原野")
                 require(isinstance(name,str) and 1 <= len(name.strip()) <= 20 and not any(unicodedata.category(c).startswith("C") for c in name), "世界名称不合法")
-                self.rate(("world",a["id"]), 5, 60)
-                wid = identifier()
-                w = {"id":wid,"name":name.strip(),"seed":secrets.randbelow(2147483646)+1,"map_cells":self.config.get("world_cells",1536),"generator":"windrest-continent-0.6.0","format":1,"clock":0.0,"weather":"clear","storage":{},"drops":{},"legacies":{},"exploration":[],"systems": {"buildings":{},"resources":{},"animals":{},"crops":{},"fish":{},"merchant":{}}}
-                nav = self.terrain_factory(w)
+                prepared = getattr(self.world_bootstrap, "value", None)
+                if prepared is None:
+                    self.rate(("world",a["id"]), 5, 60)
+                    w = self.new_world(name)
+                    nav = self.terrain_factory(w)
+                else:
+                    w, nav = prepared
+                wid = w["id"]
                 self.nav_cache[wid] = nav
                 w["spawn"] = nav["spawn"]
                 self.state["worlds"][wid] = w
@@ -688,6 +741,8 @@ class Service:
                 return 0<=ix<nav["width"] and 0<=iy<nav["width"] and mask[iy*nav["width"]+ix] == 1
             steps = inputs if inputs is not None else [{"dx":x,"dy":y,"dt":elapsed,"run":d.get("run")}]
             formal_movement = self.config.get("gameplay_preview") is True and "gameplay" in w and "gameplay" in c
+            if formal_movement and d.get("mine_serial",0) != c["gameplay"].get("mine_travel",{}).get("serial",0):
+                steps=[];x=y=0
             if formal_movement and any(item["dx"] or item["dy"] for item in steps):
                 position = self.gameplay.hosts[w["id"]].movement(w, c, steps)
                 c["x"],c["y"] = position["x"],position["y"]
@@ -706,7 +761,7 @@ class Service:
             if x or y:
                 c["facing"] = ("right" if x>0 else "left") if abs(x)>abs(y) else ("front" if y>0 else "back")
             cell = int(c["y"]/48)*w["map_cells"]+int(c["x"]/48)
-            if cell not in w["exploration"]:
+            if 0 <= c["x"] < w["map_cells"]*48 and 0 <= c["y"] < w["map_cells"]*48 and cell not in w["exploration"]:
                 w["exploration"].append(cell)
             players = []
             for aid in self.online(w["id"]):
@@ -879,7 +934,12 @@ class Handler(BaseHTTPRequestHandler):
             status = 200
         except (Rejected,ValueError,TypeError,KeyError) as exc:
             result,status = {"ok":False,"error":str(exc) if isinstance(exc,Rejected) else "请求格式错误"},400
-        except Exception:
+        except Exception as exc:
+            # Keep useful failure locations without printing request contents,
+            # account credentials, tokens, chat text or exception payloads.
+            print("SERVER_REQUEST_ERROR", type(exc).__name__,
+                  [(Path(frame.filename).name, frame.name, frame.lineno)
+                   for frame in traceback.extract_tb(exc.__traceback__)], flush=True)
             result,status = {"ok":False,"error":"服务器操作失败，数据未提交"},500
         body = json.dumps(result,ensure_ascii=False).encode()
         compressed = False

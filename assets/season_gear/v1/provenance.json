@@ -1,0 +1,188 @@
+{
+  "art_source": "host_image",
+  "route": "image_gen",
+  "model": "Built-in image_gen; exact image model revision and subscription cost unavailable",
+  "status": "integrated per explicit user task; aesthetic confirmation pending",
+  "reference": "art/season-gear-v1/reference.png",
+  "sources": [
+    "art/season-gear-v1/equipment-source.png",
+    "art/season-gear-v1/sleeve-source.png",
+    "art/season-gear-v1/side-hats-source-v2.png",
+    "art/season-gear-v1/straw-hats-source-v3.png",
+    "art/season-gear-v1/wool-hats-source-v4.png"
+  ],
+  "processing": "Native alpha trim below24; initial sheet ownership columns0/483/966/1448 rows0/300/540/805/1086; woolV4 ownership0/725/1430/2091; strawV3 thirds724. Final hats use fixed per-view uniform display scale independent of hair, separate far/near rim, per-column lower contour masks; original hair pixels never rewritten. Torso and sleeve LANCZOS registration; original hand pixels retained; side sweater torso uses back sweater material.",
+  "files": [
+    {
+      "path": "assets/season_gear/v1/straw_hat-back-foreground.png",
+      "sha256": "90f9ca5fe977ec001eeaa635cacb6beb1fb9fb73eaafc49439646c1021e690af"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_hat-back-join.png",
+      "sha256": "120438d36a7554c35778fd62117a5dafde9300e69eb4664759d397cfdaa3de63"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_hat-back-rear.png",
+      "sha256": "2d982d8cdf3fd16b905981a9f6b98b826d7ce1b681c50535e7c3b202ff78915a"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_hat-back.png",
+      "sha256": "95f2f954bfc2707e26ade8066bc5d9bfa64cf8fed1a092419947d74663331302"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_hat-front-foreground.png",
+      "sha256": "9def90dc79c4096f7f4ecf9ca3888406c3a3957ccee8520f8695b5c9a143429f"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_hat-front-join.png",
+      "sha256": "e559522b7133be5d1271a75dc21e8b42e6453424cbc537d5a6daa68b6c331e81"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_hat-front-rear.png",
+      "sha256": "061f8d546792ec889cefad39714643d6a44572d364ddc5e59a5a02144ec50f7c"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_hat-front.png",
+      "sha256": "6bcfcf007b5eaa29ce7d670c02a572aaf7376f174a90c8a14a44233974b7594b"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_hat-icon.png",
+      "sha256": "d7b484c4e7c94a5ef027cb4fde1c994b5f3af0b94aa464852c804fb2ef5c68de"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_hat-side-foreground.png",
+      "sha256": "ba1cd97bbbe9130197087e98d3eec3ee5a934d90cc147abed19e556c3312a29a"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_hat-side-join.png",
+      "sha256": "8244ffc6ca16ac0fe8751d6b36e6cc85112c30c441402b015a9aac8888b303b1"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_hat-side-rear.png",
+      "sha256": "1ff66e3ce4664b9673aafb30262c14d4edbf2c255ee4222456b4f6c4ccb53e86"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_hat-side.png",
+      "sha256": "3c709d047ff23f070d5a687b1a5d90597c1a8796f7b857bd37f4827548c13750"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_raincoat-back-torso.png",
+      "sha256": "a318300cde25fb7dbcebe401e2c076ae861d162a603618edd9da9ddcd6c400bc"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_raincoat-back.png",
+      "sha256": "7d826936c7c1975b2c14dea8013ebc3fea38b6ae4a60c6cbf3beaa42cf67488d"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_raincoat-front-torso.png",
+      "sha256": "d58f604c39d3cc80913327a09bf0318add857997b5feb1a33b185a1f5f2642a5"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_raincoat-front.png",
+      "sha256": "8b626f566fab87563d86684885b0835fe6d489931250791f61842fcaaa49ba42"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_raincoat-icon.png",
+      "sha256": "96c4e97b80b3b8fd8b73a7868976cbca0b2e7c3af46ef7aa3defc7a4a898b66b"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_raincoat-side-torso.png",
+      "sha256": "9ea396e296cce45d8f8ccaa8fafc1e676f59472d2a95d83ea252d05981727e43"
+    },
+    {
+      "path": "assets/season_gear/v1/straw_raincoat-side.png",
+      "sha256": "ccb0f9e644d275d006d545ec7a0b147618583ae17f940c719148f463e057a7c3"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_hat-back-join.png",
+      "sha256": "6ad320577cffea712d0273d093442699506e09201325630bd0145fac8bc327ae"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_hat-back.png",
+      "sha256": "a5d1d708010b55b781eaab0f16c891d26e7e7ce7de9cd207a29f37b8ea471a5c"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_hat-front-join.png",
+      "sha256": "be17fbc68338fbed64c10a2a54191511be1eb8a807526e780a0893f5c25a9bc0"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_hat-front.png",
+      "sha256": "26160fa655c4bbdf5bb913b23bce9ec013296a3fde0767b2a0c36cc5bd33360f"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_hat-icon.png",
+      "sha256": "62554b3023eaa005860b5effccedba0208e6addc078810a3a57f89d06a6f82d1"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_hat-side-join.png",
+      "sha256": "24a6cd7b415108844f10e4be7c9ca6651852d8eb7198ac0f307c0bb1e0c12557"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_hat-side.png",
+      "sha256": "eab9a3a546c86107d4a797f8b8572aeb390441dcf51a7cf8db7234f8c881aa41"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_sweater-back-arm.png",
+      "sha256": "203d67a3073e7aa9a013f47e7e75d89ceed99d920edfacf5458b303b32724ee6"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_sweater-back-torso.png",
+      "sha256": "c47c705f833ec5384eb1aa76b3c0412caede3a5dc45a657c2985642e3b432770"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_sweater-back.png",
+      "sha256": "c3cce26073136da6a220fb2ea810a85a20e27faf80560d5a4392fa5b2c6b8fd2"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_sweater-front-arm.png",
+      "sha256": "203d67a3073e7aa9a013f47e7e75d89ceed99d920edfacf5458b303b32724ee6"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_sweater-front-torso.png",
+      "sha256": "912b41335d65ed8951d772f370efcb9f6fb182933a26889dfb049bee57a27ab2"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_sweater-front.png",
+      "sha256": "b655d779beac16d2e935d2cc4b29c06a0c2fe2dc2fcf0602095305f8a0cf33dc"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_sweater-icon.png",
+      "sha256": "039cfd09ff9c96338a23362948d6dd56f797abf63b63504681ba33d3d4ea397d"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_sweater-side-arm.png",
+      "sha256": "c48cc98cf7e4bdfe6a0f00dfb50c41d4a0f0cd9f3de57a3b165fa33f722e6b4a"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_sweater-side-torso.png",
+      "sha256": "b14197e08b031643f06e83a3d0781ebc076b764a9fe62f8c39ddb175aa19feec"
+    },
+    {
+      "path": "assets/season_gear/v1/wool_sweater-side.png",
+      "sha256": "bbb8789f3be27dea67c758ee37b89f03a5bc1fcd61966dd0bc4e4e073cf8e0f3"
+    }
+  ],
+  "prompts": [
+    "art/season-gear-v1/equipment-prompt.txt",
+    "art/season-gear-v1/sleeve-prompt.txt",
+    "art/season-gear-v1/side-hats-v2-prompt.txt",
+    "art/season-gear-v1/straw-hats-v3-prompt.txt",
+    "art/season-gear-v1/wool-hats-v4-prompt.txt"
+  ],
+  "generation_inputs": {
+    "equipment-source.png": [
+      "reference.png"
+    ],
+    "sleeve-source.png": [],
+    "side-hats-source-v2.png": [
+      "fit-reference-v2.png"
+    ],
+    "straw-hats-source-v3.png": [
+      "reference.png"
+    ],
+    "wool-hats-source-v4.png": [
+      "fit-reference-v2.png"
+    ]
+  },
+  "estimateUsd": null
+}

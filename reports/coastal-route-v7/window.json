@@ -1,0 +1,114 @@
+[
+  {
+    "name": "formal item definition valid",
+    "pass": true
+  },
+  {
+    "name": "original key item ID and stack limit unchanged",
+    "pass": true
+  },
+  {
+    "name": "full bag still preserves unique reward",
+    "pass": true
+  },
+  {
+    "name": "failed save still rolls back original chest claim",
+    "pass": true
+  },
+  {
+    "name": "original chest award remains claim-only",
+    "pass": true
+  },
+  {
+    "name": "exactly one unchanged reward ID",
+    "pass": true
+  },
+  {
+    "name": "new clue contract has no saved-progress side effects",
+    "pass": true
+  },
+  {
+    "name": "future coastal special terrain remains ungenerated",
+    "pass": true
+  },
+  {
+    "name": "different ordinary rock area and independent platform constraints retained",
+    "pass": true
+  },
+  {
+    "name": "current isolated world's coastal bearing resolves",
+    "pass": true
+  },
+  {
+    "name": "coarse sector actually exists in ordinary rocky land",
+    "pass": true
+  },
+  {
+    "name": "coarse sector is not mine's connected rock region",
+    "pass": true
+  },
+  {
+    "name": "actual outer coast proximity",
+    "pass": true
+  },
+  {
+    "name": "existing inventory reading opens new artwork",
+    "pass": true
+  },
+  {
+    "name": "coastal route painting is the visible reading content",
+    "pass": true
+  },
+  {
+    "name": "no reward toast overlay or paper cropping",
+    "pass": true
+  },
+  {
+    "name": "existing seed-based one-or-two full-day wait unchanged",
+    "pass": true
+  },
+  {
+    "name": "whole paper zoom remains proportional and uncropped",
+    "pass": true
+  },
+  {
+    "name": "reading zoom does not change game camera",
+    "pass": true
+  },
+  {
+    "name": "repeat reading preserves reward and wait 0",
+    "pass": true
+  },
+  {
+    "name": "repeat reading preserves reward and wait 1",
+    "pass": true
+  },
+  {
+    "name": "repeat reading preserves reward and wait 2",
+    "pass": true
+  },
+  {
+    "name": "save reload retains original ownership and deadline",
+    "pass": true
+  },
+  {
+    "name": "same coastal clue after save reload",
+    "pass": true
+  },
+  {
+    "name": "existing close control works",
+    "pass": true
+  },
+  {
+    "name": "focused paper-fit check (960, 540)",
+    "pass": true
+  },
+  {
+    "name": "focused paper-fit check (1600, 900)",
+    "pass": true
+  },
+  {
+    "name": "existing completed gameplay state remains valid",
+    "pass": true
+  }
+]

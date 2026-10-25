@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 import shutil
 import subprocess
+import sys
+import ssl
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -88,10 +90,14 @@ binary_format/embed_pck=false
         print("Client files updated:",client)
         return
     shutil.copy2(client/"Candidates.pck",server/"Candidates.pck")
-    subprocess.run(["python","-m","PyInstaller","--noconfirm","--onefile","--name","WindrestServer",
+    # Some bundled Python distributions load an adjacent TLS policy PEM when
+    # constructing SSLContext. Preserve that policy in the frozen executable.
+    tls_policy = Path(ssl.__file__).with_name("codex-rejected-cas.pem")
+    tls_data = ["--add-data", str(tls_policy)+";."] if tls_policy.is_file() else []
+    subprocess.run([sys.executable,"-m","PyInstaller",*tls_data,"--noconfirm","--onefile","--name","WindrestServer",
                     "--distpath",str(server),"--workpath",str(out/"build"),"--specpath",str(out/"build"),
                     "--collect-all","PIL","--collect-all","cryptography",str(ROOT/"tools/network/server.py")],check=True)
-    subprocess.run(["python","-m","PyInstaller","--noconfirm","--onefile","--windowed","--name","WindrestMonitor",
+    subprocess.run([sys.executable,"-m","PyInstaller","--noconfirm","--onefile","--windowed","--name","WindrestMonitor",
                     "--distpath",str(server),"--workpath",str(out/"monitor-build"),"--specpath",str(out/"monitor-build"),
                     str(ROOT/"tools/network/monitor.py")],check=True)
     (out/"View-Server.cmd").write_text('@echo off\r\nstart "" "%~dp0Server\\WindrestMonitor.exe" --config "%~dp0Config\\network-server.json"\r\n',encoding="ascii")

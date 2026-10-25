@@ -1,3 +1,11 @@
+## 2026-10-25 · 最终篇章场景与守护者
+
+本轮按完整开发授权接入 `assets/exploration/final-v1` 与返工 `final-v2`，不表示具体新图已获用户审美确认。台地采用连续岩面与不规则宽衔接，柱/墩/石座独立底部锚点及尺寸；原角色和岩石区PNG不变。实际人物正常/放大与前后遮挡已逐张核对，失败原图、生成路线、来源及边界见[场景报告](reports/final-chapter-v2/REPORT.md)和资源 provenance。Boss 为单主体状态表现，无完整四向逐帧动画包。
+
+## 2026-10-25 · 垂钓老者画风确认
+
+用户明确“老者素材可以了”，本批 `assets/exploration/v3/elder.png` 获具体确认。依据当前 `assets/hero/cartoon/character.tscn` 实渲染，采用大头短腿、清晰深棕描边、简化五官与色块；不是早期 `art/reference/hero.png` 的水彩角色风格。旧v2详细水彩图已被否定并退出运行，原图保留来源历史。后续按用户要求仅放大运行显示并改为外缘岸边朝水坐姿，参数见探索实现，实景与范围见 [本轮报告](reports/exploration-waits-v2/REPORT.md)、[来源与QA](art/exploration-elder-style-v3/QA.md)。该批准不扩展到未来NPC画稿。
+
 ## 2026-10-22 · 战斗与死亡 V1
 
 本轮依用户“新增并正式接入”授权接入 assets/combat/v1，来源 art/combat-v1，经 generate2dsprite → route_media → Codex(local CLI)。采用正式场景参考，角色仍用原部件；野猪为分件骨骼，传送门和灵魂为持续运动效果。追加修订：传送门两倍、头部放大与头身内接。来源/裁切边界/原图失败/运行 QA 限制见 provenance 与 [报告](reports/combat-v1/REPORT.md)，不把数值 QA 作为用户审美确认。

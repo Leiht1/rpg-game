@@ -1,0 +1,118 @@
+[
+  {
+    "name": "current save schema including mine",
+    "pass": true
+  },
+  {
+    "name": "inconsistent inside region cannot load",
+    "pass": true
+  },
+  {
+    "name": "forged remote placement no cost",
+    "pass": true
+  },
+  {
+    "name": "invalid target refused",
+    "pass": true
+  },
+  {
+    "name": "server placement atomic one cost and durable fuse",
+    "pass": true
+  },
+  {
+    "name": "concurrent second intent cannot charge",
+    "pass": true
+  },
+  {
+    "name": "no early opening",
+    "pass": true
+  },
+  {
+    "name": "personal-only tick cannot double-advance shared fuse",
+    "pass": true
+  },
+  {
+    "name": "one shared elapsed tick advances fuse exactly once",
+    "pass": true
+  },
+  {
+    "name": "new Godot process restores pending fuse deadline",
+    "pass": true
+  },
+  {
+    "name": "new process keeps final fraction before five seconds",
+    "pass": true
+  },
+  {
+    "name": "restart finishes seal without extra consumption",
+    "pass": true
+  },
+  {
+    "name": "settled snapshot no repeated finalization",
+    "pass": true
+  },
+  {
+    "name": "authority enters actual region",
+    "pass": true
+  },
+  {
+    "name": "entry preserves personal inventory equipment body",
+    "pass": true
+  },
+  {
+    "name": "travel personal chapter shared",
+    "pass": true
+  },
+  {
+    "name": "authority returns to same surface mine",
+    "pass": true
+  },
+  {
+    "name": "SQLite placement failure rolls back chapter inventory receipt together",
+    "pass": true
+  },
+  {
+    "name": "same request succeeds after disk recovery",
+    "pass": true
+  },
+  {
+    "name": "receipt replay returns state without second cost",
+    "pass": true
+  },
+  {
+    "name": "opening save failure leaves authoritative seal armed",
+    "pass": true
+  },
+  {
+    "name": "next request restores persisted baseline and completes opening",
+    "pass": true
+  },
+  {
+    "name": "SQLite persisted authoritative opened state",
+    "pass": true
+  },
+  {
+    "name": "seed 314159 waits before deadline",
+    "pass": true
+  },
+  {
+    "name": "seed 314159 finds safe rocky reachable placement",
+    "pass": true
+  },
+  {
+    "name": "seed 314159 persisted location stable",
+    "pass": true
+  },
+  {
+    "name": "seed 161803 waits before deadline",
+    "pass": true
+  },
+  {
+    "name": "seed 161803 finds safe rocky reachable placement",
+    "pass": true
+  },
+  {
+    "name": "seed 161803 persisted location stable",
+    "pass": true
+  }
+]

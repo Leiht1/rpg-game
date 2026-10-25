@@ -86,6 +86,9 @@ func clear_at(at: Vector2, radius: float=12.0, except: RID=RID()) -> bool:
  # Unloaded buildings still prevent births and initial spawn inside furniture.
  for b in service.builds.states.values():
   if b.layer in ["ground","overlay"]: continue
+  if b.kind=="rain_shelter":
+   if preload("res://scripts/weather_exposure.gd").pole_blocks(b,at,at,radius):return false
+   continue
   var poly=barrier_polygon(b)
   if Geometry2D.is_point_in_polygon(at,poly):return false
   for i in poly.size():
@@ -311,6 +314,9 @@ func nearby_path(a: Vector2, b: Vector2) -> bool:
  # Same persisted geometry as real gates, including their current swing; works unloaded.
  for obstacle in service.builds.states.values():
   if obstacle.layer in ["ground","overlay"]:continue
+  if obstacle.kind=="rain_shelter":
+   if preload("res://scripts/weather_exposure.gd").pole_blocks(obstacle,a,b,8):return false
+   continue
   var poly=barrier_polygon(obstacle)
   if Geometry2D.is_point_in_polygon(a,poly) or Geometry2D.is_point_in_polygon(b,poly):return false
   for n in poly.size():

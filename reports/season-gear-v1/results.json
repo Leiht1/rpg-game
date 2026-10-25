@@ -1,0 +1,7513 @@
+{
+	"checks": [
+		{
+			"name": "peak summer first hour no immediate heat state",
+			"pass": true
+		},
+		{
+			"name": "long unshaded peak summer eventually hot",
+			"pass": true
+		},
+		{
+			"name": "hat comfortable all-day peak summer walking",
+			"pass": true
+		},
+		{
+			"name": "hat normal activity and short running remain gentle",
+			"pass": true
+		},
+		{
+			"name": "hat permits only very prolonged exertion heat accumulation",
+			"pass": true
+		},
+		{
+			"name": "hat ordinary labor period safe",
+			"pass": true
+		},
+		{
+			"name": "cool-season running does not trigger summer burden",
+			"pass": true
+		},
+		{
+			"name": "wool adds no summer heat penalty",
+			"pass": true
+		},
+		{
+			"name": "heat adds no health damage consumption or stamina penalty",
+			"pass": true
+		},
+		{
+			"name": "only hot energy recovery factor exactly 85 percent",
+			"pass": true
+		},
+		{
+			"name": "real sleeping recovery 15 percent lower while hot",
+			"pass": true
+		},
+		{
+			"name": "heat does not vanish instantly on cooling",
+			"pass": true
+		},
+		{
+			"name": "rest in normal temperatures gradually clears heat",
+			"pass": true
+		},
+		{
+			"name": "heat roundtrip persistence",
+			"pass": true
+		},
+		{
+			"name": "invalid heat rejects atomically",
+			"pass": true
+		},
+		{
+			"name": "old save neutral heat defaults",
+			"pass": true
+		},
+		{
+			"name": "rain protection naked hat cape combined umbrella strictly ordered",
+			"pass": true
+		},
+		{
+			"name": "wool improves original cold model",
+			"pass": true
+		},
+		{
+			"name": "shade never changes original cold rules",
+			"pass": true
+		},
+		{
+			"name": "isolated test world no player writes",
+			"pass": true
+		},
+		{
+			"name": "item and recipe validation",
+			"pass": true
+		},
+		{
+			"name": "formal hand recipe wool_sweater",
+			"pass": true
+		},
+		{
+			"name": "actual atomic craft wool_sweater",
+			"pass": true
+		},
+		{
+			"name": "deduplicate craft wool_sweater",
+			"pass": true
+		},
+		{
+			"name": "no clothing durability wool_sweater",
+			"pass": true
+		},
+		{
+			"name": "formal hand recipe wool_hat",
+			"pass": true
+		},
+		{
+			"name": "actual atomic craft wool_hat",
+			"pass": true
+		},
+		{
+			"name": "deduplicate craft wool_hat",
+			"pass": true
+		},
+		{
+			"name": "no clothing durability wool_hat",
+			"pass": true
+		},
+		{
+			"name": "formal hand recipe straw_hat",
+			"pass": true
+		},
+		{
+			"name": "actual atomic craft straw_hat",
+			"pass": true
+		},
+		{
+			"name": "deduplicate craft straw_hat",
+			"pass": true
+		},
+		{
+			"name": "no clothing durability straw_hat",
+			"pass": true
+		},
+		{
+			"name": "formal hand recipe straw_raincoat",
+			"pass": true
+		},
+		{
+			"name": "actual atomic craft straw_raincoat",
+			"pass": true
+		},
+		{
+			"name": "deduplicate craft straw_raincoat",
+			"pass": true
+		},
+		{
+			"name": "no clothing durability straw_raincoat",
+			"pass": true
+		},
+		{
+			"name": "equip wool_sweater",
+			"pass": true
+		},
+		{
+			"name": "equip wool_hat",
+			"pass": true
+		},
+		{
+			"name": "head and body warmth stacks plus native base",
+			"pass": true
+		},
+		{
+			"name": "equip straw_raincoat",
+			"pass": true
+		},
+		{
+			"name": "equip straw_hat",
+			"pass": true
+		},
+		{
+			"name": "equip stone_axe",
+			"pass": true
+		},
+		{
+			"name": "rain set protects 68 percent with free tool hand",
+			"pass": true
+		},
+		{
+			"name": "equip rain_umbrella",
+			"pass": true
+		},
+		{
+			"name": "umbrella remains superior and functional",
+			"pass": true
+		},
+		{
+			"name": "equip wool_sweater",
+			"pass": true
+		},
+		{
+			"name": "equip stone_axe",
+			"pass": true
+		},
+		{
+			"name": "exactly one foreground left arm with clothing and stone_axe",
+			"pass": true
+		},
+		{
+			"name": "original right hand before clothing stone_axe",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose wool_sweaterstone_axefront",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose wool_sweaterstone_axeback",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose wool_sweaterstone_axeleft",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose wool_sweaterstone_axeright",
+			"pass": true
+		},
+		{
+			"name": "equip stone_pickaxe",
+			"pass": true
+		},
+		{
+			"name": "exactly one foreground left arm with clothing and stone_pickaxe",
+			"pass": true
+		},
+		{
+			"name": "original right hand before clothing stone_pickaxe",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose wool_sweaterstone_pickaxefront",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose wool_sweaterstone_pickaxeback",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose wool_sweaterstone_pickaxeleft",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose wool_sweaterstone_pickaxeright",
+			"pass": true
+		},
+		{
+			"name": "equip simple_shovel",
+			"pass": true
+		},
+		{
+			"name": "exactly one foreground left arm with clothing and simple_shovel",
+			"pass": true
+		},
+		{
+			"name": "original right hand before clothing simple_shovel",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose wool_sweatersimple_shovelfront",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose wool_sweatersimple_shovelback",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose wool_sweatersimple_shovelleft",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose wool_sweatersimple_shovelright",
+			"pass": true
+		},
+		{
+			"name": "equip rain_umbrella",
+			"pass": true
+		},
+		{
+			"name": "exactly one foreground left arm with clothing and rain_umbrella",
+			"pass": true
+		},
+		{
+			"name": "original right hand before clothing rain_umbrella",
+			"pass": true
+		},
+		{
+			"name": "equip straw_raincoat",
+			"pass": true
+		},
+		{
+			"name": "equip stone_axe",
+			"pass": true
+		},
+		{
+			"name": "exactly one foreground left arm with clothing and stone_axe",
+			"pass": true
+		},
+		{
+			"name": "original right hand before clothing stone_axe",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose straw_raincoatstone_axefront",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose straw_raincoatstone_axeback",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose straw_raincoatstone_axeleft",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose straw_raincoatstone_axeright",
+			"pass": true
+		},
+		{
+			"name": "equip stone_pickaxe",
+			"pass": true
+		},
+		{
+			"name": "exactly one foreground left arm with clothing and stone_pickaxe",
+			"pass": true
+		},
+		{
+			"name": "original right hand before clothing stone_pickaxe",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose straw_raincoatstone_pickaxefront",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose straw_raincoatstone_pickaxeback",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose straw_raincoatstone_pickaxeleft",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose straw_raincoatstone_pickaxeright",
+			"pass": true
+		},
+		{
+			"name": "equip simple_shovel",
+			"pass": true
+		},
+		{
+			"name": "exactly one foreground left arm with clothing and simple_shovel",
+			"pass": true
+		},
+		{
+			"name": "original right hand before clothing simple_shovel",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose straw_raincoatsimple_shovelfront",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose straw_raincoatsimple_shovelback",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose straw_raincoatsimple_shovelleft",
+			"pass": true
+		},
+		{
+			"name": "animated right sleeve follows actual tool pose straw_raincoatsimple_shovelright",
+			"pass": true
+		},
+		{
+			"name": "equip rain_umbrella",
+			"pass": true
+		},
+		{
+			"name": "exactly one foreground left arm with clothing and rain_umbrella",
+			"pass": true
+		},
+		{
+			"name": "original right hand before clothing rain_umbrella",
+			"pass": true
+		},
+		{
+			"name": "inventory portrait uses front clothing layers",
+			"pass": true
+		},
+		{
+			"name": "heat reuses existing body text UI",
+			"pass": true
+		},
+		{
+			"name": "UI probe body restored atomically",
+			"pass": true
+		},
+		{
+			"name": "sleep preserves closed-eye head and fixed layered hat true",
+			"pass": true
+		},
+		{
+			"name": "sleep preserves closed-eye head and fixed layered hat false",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 3 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_natural 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_natural 3 right",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_natural front row0 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_natural back row0 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_natural left row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_natural right row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_natural front row2 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_natural back row2 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_natural left row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_natural right row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_naturalright",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 3 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_fluffy 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_fluffy 3 right",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_fluffy front row0 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_fluffy back row0 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_fluffy left row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_fluffy right row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_fluffy front row2 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_fluffy back row2 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_fluffy left row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_fluffy right row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_fluffyright",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 3 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_parted 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_parted 3 right",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_parted front row0 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_parted back row0 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_parted left row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_parted right row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_parted front row2 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_parted back row2 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_parted left row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_parted right row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_partedright",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 3 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved male_curly 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair male_curly 3 right",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_curly front row0 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_curly back row0 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_curly left row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_curly right row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_curly front row2 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_curly back row2 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_curly left row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap male_curly right row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material male_curlyright",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 3 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_bob 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_bob 3 right",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_bob front row0 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_bob back row0 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_bob left row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_bob right row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_bob front row2 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_bob back row2 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_bob left row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_bob right row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_bobright",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 3 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_straight 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_straight 3 right",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_straight front row0 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_straight back row0 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_straight left row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_straight right row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_straight front row2 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_straight back row2 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_straight left row2 columns87 max1",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_straight right row2 columns87 max1",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_straightright",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 3 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_twintail 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_twintail 3 right",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_twintail front row0 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_twintail back row0 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_twintail left row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_twintail right row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_twintail front row2 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_twintail back row2 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_twintail left row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_twintail right row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_twintailright",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 3 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved female_ponytail 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair female_ponytail 3 right",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_ponytail front row0 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_ponytail back row0 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_ponytail left row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_ponytail right row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_ponytail front row2 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_ponytail back row2 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_ponytail left row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap female_ponytail right row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material female_ponytailright",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 3 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_mohawk 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_mohawk 3 right",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_mohawk front row0 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_mohawk back row0 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_mohawk left row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_mohawk right row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_mohawk front row2 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_mohawk back row2 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_mohawk left row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_mohawk right row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_mohawk front row0 pixels0",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_mohawk back row0 pixels8",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_mohawk left row0 pixels18",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_mohawk right row0 pixels18",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_mohawk front row2 pixels0",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_mohawk back row2 pixels0",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_mohawk left row2 pixels3",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_mohawk right row2 pixels3",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_mohawkright",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 0 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 0",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 0 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 0 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 0 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 0 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 0 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 0 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 0 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 1 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolfront",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 1",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint front",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 1 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 1 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolback",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 1 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 1 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolleft",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 1 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 1 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders woolright",
+			"pass": true
+		},
+		{
+			"name": "wool fabric excluded from skin tint right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 1 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 2 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 2",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 2 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 2 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 2 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 2 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 2 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 2 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 2 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 3 front",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawfront",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front front",
+			"pass": true
+		},
+		{
+			"name": "front clothing exactly one foreground empty arm and original right 3",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 3 front",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 3 back",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawback",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front back",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 3 back",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 3 left",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawleft",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front left",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 3 left",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 3 right",
+			"pass": true
+		},
+		{
+			"name": "original hair preserved unisex_bun 3 right",
+			"pass": true
+		},
+		{
+			"name": "fixed uniform hat size position across all hair and genders strawright",
+			"pass": true
+		},
+		{
+			"name": "far brim behind head near brim in front right",
+			"pass": true
+		},
+		{
+			"name": "hat follows actual head outside hair unisex_bun 3 right",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_bun front row0 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_bun back row0 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_bun left row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_bun right row0 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_bun front row2 columns76 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_bun back row2 columns77 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_bun left row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hat-head seam no transparent gap unisex_bun right row2 columns87 max0",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_bun front row0 pixels181",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_bun back row0 pixels555",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_bun left row0 pixels558",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_bun right row0 pixels558",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_bun front row2 pixels135",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_bun back row2 pixels335",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_bun left row2 pixels620",
+			"pass": true
+		},
+		{
+			"name": "GPU hair beyond fixed hat contour clipped unisex_bun right row2 pixels620",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunfront",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunback",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunleft",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunright",
+			"pass": true
+		},
+		{
+			"name": "unequip restores complete original hair material unisex_bunright",
+			"pass": true
+		}
+	],
+	"failed": 0
+}

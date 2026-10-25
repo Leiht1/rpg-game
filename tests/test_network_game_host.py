@@ -450,7 +450,7 @@ class RulesHostTests(unittest.TestCase):
                              "x": self.baseline["player_position"]["x"], "y": self.baseline["player_position"]["y"],
                              "slots": [{} for _ in range(40)], "equipment": {}, "hotbar_equipment": {}}
                 character["slots"][8] = {"item_id": "wood", "count": 3}
-                service.state["worlds"][wid] = {"id": wid}
+                service.state["worlds"][wid] = {"id": wid, "seed": 271828, "map_cells": 128}
                 service.state["characters"]["player"] = character
                 service.state["accounts"]["account"] = {"id": "account", "player_id": "player", "world_id": wid,
                                                         "enabled": True, "nickname": "Isolated", "role": "player"}

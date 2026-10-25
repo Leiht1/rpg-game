@@ -1,0 +1,71 @@
+[
+  {
+    "view": "front",
+    "ownership": [
+      0,
+      500
+    ],
+    "source_bbox": [
+      81,
+      205,
+      431,
+      568
+    ],
+    "scale": 0.2742857142857143,
+    "paste": [
+      132,
+      90
+    ],
+    "scalp_anchor": {
+      "width": 96,
+      "bottom": 190,
+      "center": 180
+    }
+  },
+  {
+    "view": "back",
+    "ownership": [
+      500,
+      980
+    ],
+    "source_bbox": [
+      77,
+      189,
+      399,
+      760
+    ],
+    "scale": 0.36645962732919257,
+    "paste": [
+      121,
+      89
+    ],
+    "scalp_anchor": {
+      "width": 118,
+      "bottom": 298,
+      "center": 180
+    }
+  },
+  {
+    "view": "side",
+    "ownership": [
+      980,
+      1536
+    ],
+    "source_bbox": [
+      26,
+      210,
+      526,
+      734
+    ],
+    "scale": 0.416,
+    "paste": [
+      67,
+      75
+    ],
+    "scalp_anchor": {
+      "width": 208,
+      "bottom": 293,
+      "center": 171
+    }
+  }
+]

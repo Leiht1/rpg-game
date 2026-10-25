@@ -128,6 +128,38 @@
         "front": "res://prototypes/ponytail-side-v3/female_ponytail-side.png",
         "rear": ""
       }
+    },
+    "unisex_mohawk": {
+      "name": "莫西干发型",
+      "gender": "unisex",
+      "front": {
+        "front": "res://prototypes/hair-night-local-v1/unisex_mohawk-front.png",
+        "rear": ""
+      },
+      "back": {
+        "front": "res://prototypes/hair-night-local-v1/unisex_mohawk-back.png",
+        "rear": ""
+      },
+      "side": {
+        "front": "res://prototypes/hair-night-local-v1/unisex_mohawk-side.png",
+        "rear": ""
+      }
+    },
+    "unisex_bun": {
+      "name": "丸子头",
+      "gender": "unisex",
+      "front": {
+        "front": "res://prototypes/bun-exact-fit-v3/front.png",
+        "rear": ""
+      },
+      "back": {
+        "front": "res://prototypes/bun-exact-fit-v3/back.png",
+        "rear": ""
+      },
+      "side": {
+        "front": "res://prototypes/bun-contour-v5/side.png",
+        "rear": ""
+      }
     }
   },
   "skin": {

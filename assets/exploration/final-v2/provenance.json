@@ -1,0 +1,91 @@
+{
+  "route": "local:codex-cli",
+  "art_source": "host_image",
+  "model": "codex-image_gen",
+  "estimateUsd": 0,
+  "files": {
+    "pillar": {
+      "source": "art\\final-chapter-v2\\props\\generated.png",
+      "ownership": [
+        0,
+        0,
+        512,
+        1024
+      ],
+      "bounds": [
+        101,
+        70,
+        447,
+        905
+      ],
+      "source_size": [
+        346,
+        835
+      ],
+      "world_width": 78,
+      "world_height": 188.24,
+      "anchor": "bottom center +6 world units",
+      "visible_magenta_pixels": 0,
+      "sha256": "a5cc5b23324a3642b25a4530cd99562968352e4946a945a91b250384e974d53c"
+    },
+    "stump": {
+      "source": "art\\final-chapter-v2\\props\\generated.png",
+      "ownership": [
+        512,
+        0,
+        980,
+        1024
+      ],
+      "bounds": [
+        87,
+        434,
+        381,
+        892
+      ],
+      "source_size": [
+        294,
+        458
+      ],
+      "world_width": 76,
+      "world_height": 118.39,
+      "anchor": "bottom center +6 world units",
+      "visible_magenta_pixels": 0,
+      "sha256": "c38431b945cf582dd5b920037e2bcb15b5d77dc70877550481f2b176ed8413fc"
+    },
+    "seat": {
+      "source": "art\\final-chapter-v2\\props\\generated.png",
+      "ownership": [
+        980,
+        0,
+        1536,
+        1024
+      ],
+      "bounds": [
+        37,
+        621,
+        499,
+        916
+      ],
+      "source_size": [
+        462,
+        295
+      ],
+      "world_width": 103,
+      "world_height": 65.77,
+      "anchor": "bottom center +6 world units",
+      "visible_magenta_pixels": 0,
+      "sha256": "7752eef9e53734c32f5d06fed736d9108a9ee5f447b31a8834d42031d470e800"
+    },
+    "ground": {
+      "source": "art\\final-chapter-v2\\ground-retry\\generated.png",
+      "size": [
+        1672,
+        941
+      ],
+      "processing": "Whole continuous texture. Runtime irregular world-space gradual opacity mask, no source cropping or painted silhouette.",
+      "sha256": "9ee3b9f2cca5dd9938257ee9c33c0920d6279b4f30830982139a628d1c8a5cd4"
+    }
+  },
+  "visual_approval": "pending user review",
+  "failure": "first ground generation capacity error; retried without changing model"
+}

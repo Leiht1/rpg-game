@@ -37,7 +37,9 @@ func advance(minutes: float) -> void:
 		var row: Dictionary=service.builds.states[id]
 		if row.kind!="tilled_soil" or row.crop.is_empty() or row.roots: continue
 		var old := stage(row)
-		row.growth_minutes=minf(float(rules.crops[row.crop].minutes),float(row.growth_minutes)+minutes*(float(service.expansion.rules.fertilizer_speed) if row.get("fertilized",false) else 1.0))
+		var sim=service.world.environment_view.simulation
+		var growth: float=preload("res://scripts/season_rules.gd").growth(str(row.crop),sim.season_elapsed_days(),minutes)
+		row.growth_minutes=minf(float(rules.crops[row.crop].minutes),float(row.growth_minutes)+growth*(float(service.expansion.rules.fertilizer_speed) if row.get("fertilized",false) else 1.0))
 		service.dirty=true
 		if old!=stage(row) and service.builds.visuals.has(id): service.builds.visuals[id].queue_redraw()
 

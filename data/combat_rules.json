@@ -71,7 +71,14 @@
     "night_start_minute": 1200,
     "night_end_minute": 360,
     "night_roam_radius": 650,
-    "population_revision": 2
+    "population_revision": 2,
+    "night_hunt_range": 1800,
+    "night_encounter_delay": 18.0,
+    "night_encounter_chance": 0.95,
+    "night_spawn_min": 650.0,
+    "night_spawn_max": 1000.0,
+    "crop_notice_range": 320.0,
+    "crop_path_width": 160.0
   },
   "knockback": 12
 }

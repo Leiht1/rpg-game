@@ -68,9 +68,10 @@ func _process(delta: float) -> void:
 	item_service.sleep.render()
 func move_server() -> void:
 	moving_request=true;sequence+=1
-	var response: Dictionary=await Network.call_api("move",{"seq":sequence,"dx":0,"dy":0,"inputs":player.movement_batch(),"pose":{"action":player.action,"clock":player.action_clock,"facing":player.facing}})
+	var region_serial: int=int(item_service.chapter.mine.travel.serial)
+	var response: Dictionary=await Network.call_api("move",{"mine_serial":region_serial,"seq":sequence,"dx":0,"dy":0,"inputs":player.movement_batch(),"pose":{"action":player.action,"clock":player.action_clock,"facing":player.facing}})
 	moving_request=false
-	if stopping:return
+	if stopping or region_serial!=int(item_service.chapter.mine.travel.serial):return
 	if response.get("ok",false):
 		player.acknowledge(response.character,int(response.input_ack))
 		if response.has("players"):update_players(response.players,float(response.get("players_sample_time",-1)))
@@ -89,10 +90,13 @@ func sync_server() -> void:
 		if command.get("operation")=="combat_attack":item_service.combat.confirm_attack_preview(true)
 		for event in response.get("events",[]):
 			match event.kind:
+				"chapter_page":item_service.chapter_view.show_page(str(event.text))
 				"notice":item_service.notice.emit(str(event.text))
 				"obtained":item_service.item_obtained.emit(str(event.id),int(event.count))
 				"sound":AudioFX.play_sfx(str(event.key),Vector2(event.at.x,event.at.y) if not event.at.is_empty() else Vector2.INF)
 	elif command.has("request_id"):
+		if command.get("operation") in ["chapter","chapter_read"]:item_service.chapter_view.close_page()
+		if command.get("operation")=="mine" and item_service.chapter_view.transition.active:item_service.chapter_view.transition.prepare_reveal()
 		last_error=str(response.get("error","操作同步失败"))
 		# Keep the same ID after transport failure; never retry a rejected command.
 		if not str(response.get("error","")).begins_with("服务器暂时不可用") and not str(response.get("error","")).begins_with("无法连接服务器"):
@@ -145,17 +149,20 @@ func map_players() -> Array[Dictionary]:
 func apply_snapshot(source: Dictionary) -> void:
 	applying=true
 	var snapshot:=source.duplicate(true)
+	var changed_region: bool=snapshot.get("mine_travel",{}).get("serial",0)!=item_service.chapter.mine.travel.serial
+	if changed_region:item_service.chapter_view.transition.cover_now()
 	var changed_life: bool=snapshot.get("combat_personal",{}).get("phase","alive")!=item_service.combat.personal.phase
 	changed_life=changed_life or snapshot.get("combat_personal",{}).get("hit_serial",0)!=item_service.combat.personal.get("hit_serial",0)
-	if changed_life:
+	if changed_life or changed_region:
 		player.pending_inputs.clear();player.correction=Vector2.ZERO
 	else:snapshot.player_position={"x":player.position.x,"y":player.position.y}
 	var selected: int=item_service.inventory.selected
 	var previous_hits: Dictionary=stream.tree_hits.duplicate()
 	var previous_job: Dictionary=item_service.craft_job.duplicate(true)
 	item_service.writable=true;item_service.load_state("",false,snapshot)
-	if changed_life:
+	if changed_life or changed_region:
 		player.reset_physics_interpolation();player.camera.reset_smoothing();stream.update_target(player.position)
+	if changed_region:item_service.chapter_view.transition.prepare_reveal()
 	item_service.inventory.selected=selected
 	item_service.restore_network_lamp(snapshot)
 	item_service.merchant.sync_actor()

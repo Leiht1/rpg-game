@@ -610,6 +610,8 @@ func item_modal_open(include_sleep: bool = true) -> bool:
 	return (is_instance_valid(feed_ui) and feed_ui.visible) or (is_instance_valid(guide) and guide.letter.visible) or (include_sleep and service.body.sleep_active()) or (is_instance_valid(world.camp_ui) and world.camp_ui.sign_dialog.visible) or (is_instance_valid(modal) and modal.visible)
 
 func update_input_block() -> void:
+	if world.get_meta("mine_transition_active",false):world.player.input_blocked=true;return
+	if is_instance_valid(service.chapter_view) and service.chapter_view.panel.visible:world.player.input_blocked=true;return
 	if service.combat.personal.phase!="alive":world.player.input_blocked=true;return
 	if world.get_meta("world_menu_open",false):world.player.input_blocked=true;return
 	if service.merchant.interacting:world.player.input_blocked=true;return
@@ -652,6 +654,8 @@ func open_item_menu(index: int, at: Vector2) -> void:
 	equip_button.text="卸下" if equipped_action_index(index)>=40 else "装备"
 	use_button.text=("关闭" if is_instance_valid(service.lantern) and service.lantern.visible and modal_stack.get("lamp_id","")==service.active_lamp else "打开") if service.database.item(modal_stack.item_id).get("use_action","")=="light" else "使用"
 	if modal_stack.item_id=="survival_guide":use_button.text="查看"
+	if service.database.item(modal_stack.item_id).get("use_action","")=="read_chapter":
+		use_button.text="打开" if modal_stack.item_id==service.chapter.BOTTLE and not service.chapter.state.bottle_read else "查看"
 	if modal_stack.item_id=="solar_flashlight":use_button.text="关闭" if modal_stack.state.on else "打开"
 	use_button.visible=index<40 or modal_stack.item_id=="solar_flashlight"
 	destroy_button.visible=index<40 and not (index<8 and service.inventory.slots[index].is_empty()) and not service.database.item(modal_stack.item_id).get("indestructible",false)
@@ -786,7 +790,9 @@ func _notification(what: int) -> void:
 	if what==NOTIFICATION_DRAG_BEGIN:
 		hide_item_hover()
 		ground_drop.mouse_filter=Control.MOUSE_FILTER_STOP
-		world.player.cancel_action()
+		if not world.player.action.is_empty():
+			world.player.cancel_action()
+			world.player.update_animation()
 		update_input_block()
 	elif what==NOTIFICATION_DRAG_END:
 		ground_drop.mouse_filter=Control.MOUSE_FILTER_IGNORE
@@ -906,6 +912,7 @@ func update_portrait(delta: float) -> void:
 	if not is_instance_valid(preview_actor): return
 	# Equipment display uses its own front-facing idle pose, never the world pose.
 	portrait_held_tool.release_pose()
+	portrait_appearance.release_layers()
 	var animation: AnimationPlayer=preview_actor.get_node("AnimationPlayer")
 	var clip := animation.get_animation("front_breathe")
 	portrait_clock=fposmod(portrait_clock+delta,clip.length)
@@ -914,10 +921,11 @@ func update_portrait(delta: float) -> void:
 	var visual: Node2D=preview_actor.get_node("Visual")
 	visual.scale=Vector2.ONE
 	visual.position=Vector2.ZERO
-	portrait_appearance.apply(preview_actor,service.inventory,"front")
 	portrait_look.apply(preview_actor,world.player.character_look,service.inventory,"front")
+	portrait_appearance.apply(preview_actor,service.inventory,"front")
 	portrait_held_tool.apply(preview_actor,service.inventory,"front","")
 	preload("res://scripts/body_shape.gd").apply(preview_actor,service.body.build)
+	portrait_appearance.apply_layers(preview_actor,service.inventory,"front")
 
 func sync_portrait(source: Node, target: Node) -> void:
 	# Keep the portrait origin, but mirror the complete live drawing state.

@@ -1,0 +1,95 @@
+[
+  {
+    "bearing": {
+      "x": -0.324591487646103,
+      "y": -0.945854246616364
+    },
+    "bearing_name": "北",
+    "landmarks": [
+      "裂开的山脊",
+      "狭窄谷口",
+      "未知刻记"
+    ],
+    "north_rotation": 0.33057980140182,
+    "origin": {
+      "x": 22388.052734375,
+      "y": 20773.875
+    },
+    "precision": "coarse_terrain_area",
+    "search_area": {
+      "center": {
+        "x": 21670.484375,
+        "y": 18682.892578125
+      },
+      "radius": 2839.98555115862
+    },
+    "seed": 271828,
+    "target_generated": false,
+    "terrain": "narrow_land_corridor",
+    "terrain_fraction": 0.35,
+    "terrain_link": 8,
+    "version": 1
+  },
+  {
+    "bearing": {
+      "x": 0.0833730772137642,
+      "y": 0.996518433094025
+    },
+    "bearing_name": "南",
+    "landmarks": [
+      "裂开的山脊",
+      "狭窄谷口",
+      "未知刻记"
+    ],
+    "north_rotation": -3.05812271038559,
+    "origin": {
+      "x": 27164.078125,
+      "y": 11602.5703125
+    },
+    "precision": "coarse_terrain_area",
+    "search_area": {
+      "center": {
+        "x": 27315.6640625,
+        "y": 13414.404296875
+      },
+      "radius": 1923.1326453992
+    },
+    "seed": 314159,
+    "target_generated": false,
+    "terrain": "narrow_land_corridor",
+    "terrain_fraction": 0.65,
+    "terrain_link": 6,
+    "version": 1
+  },
+  {
+    "bearing": {
+      "x": -0.426737755537033,
+      "y": -0.904375433921814
+    },
+    "bearing_name": "西北",
+    "landmarks": [
+      "裂开的山脊",
+      "狭窄谷口",
+      "未知刻记"
+    ],
+    "north_rotation": 0.440882607302393,
+    "origin": {
+      "x": 30192.546875,
+      "y": 17869.9296875
+    },
+    "precision": "coarse_terrain_area",
+    "search_area": {
+      "center": {
+        "x": 29542.01171875,
+        "y": 16491.265625
+      },
+      "radius": 1576.32038143768
+    },
+    "seed": 161803,
+    "target_generated": false,
+    "terrain": "narrow_land_corridor",
+    "terrain_fraction": 0.35,
+    "terrain_link": 7,
+    "version": 1
+  }
+]

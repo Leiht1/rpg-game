@@ -1,0 +1,50 @@
+[
+  {
+    "name": "open threshold reachable but actor cannot enter shell or pass behind picture",
+    "pass": true
+  },
+  {
+    "name": "right rock face blocks actor",
+    "pass": true
+  },
+  {
+    "name": "left rock face blocks actor",
+    "pass": true
+  },
+  {
+    "name": "rear roof blocks actor",
+    "pass": true
+  },
+  {
+    "name": "threshold still permits entry",
+    "pass": true
+  },
+  {
+    "name": "inside approach stops before beam",
+    "pass": true
+  },
+  {
+    "name": "both painted exit posts and beam are outside floor",
+    "pass": true
+  },
+  {
+    "name": "entry landing remains clear",
+    "pass": true
+  },
+  {
+    "name": "floor along both side edges remains reachable",
+    "pass": true
+  },
+  {
+    "name": "floor close to exit beam remains reachable",
+    "pass": true
+  },
+  {
+    "name": "stopped position still reaches exit",
+    "pass": true
+  },
+  {
+    "name": "round trip completes",
+    "pass": true
+  }
+]

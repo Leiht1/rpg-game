@@ -34,6 +34,7 @@ func boot() -> void:
 	world.item_service.set_process(false)
 	world.item_service.animals.set_physics_process(false)
 	world.item_service.combat_view.set_process(false)
+	world.item_service.chapter_view.set_process(false)
 	world.stream.set_process(true)
 	# Headless authority has no pointer, HUD or map to refresh each frame.
 	for node in world.find_children("*","",true,false):
@@ -91,6 +92,9 @@ func execute(request: Dictionary) -> void:
 	if not state.is_empty():
 		if service.consumed!=state.get("consumed",{}) or world.stream.harvested!=state.get("harvested",{}):
 			for coord in world.stream.loaded.keys():world.stream.unload_chunk(coord)
+			# A restored transaction can remove/revive resources without changing
+			# the player's chunk. Requeue that same area after invalidation.
+			world.stream.target_center=Vector2i(-999,-999)
 		service.writable=true
 		service.load_state("",false,state)
 		if not service.writable:
@@ -134,12 +138,14 @@ func execute(request: Dictionary) -> void:
 	if requested_station is String and (requested_station.is_empty() or service.workbench_valid(requested_station)):service.craft_station_id=requested_station
 	var elapsed:=clampf(float(request.get("elapsed",0)),0,5)
 	service.combat.peers=request.get("combat_peers",[])
+	world.set_meta("network_observers",request.get("combat_peers",[]))
 	service.combat.damage_events=[]
 	for incoming in request.get("combat_damage",[]):
 		service.combat.damage(float(incoming.amount),point(incoming.source),bool(incoming.duel))
 	if elapsed>0:
 		if service.body.energy<=0 and not service.body.sleep_active():world.environment_view.try_start_sleep(true)
 		world.environment_view.advance_gameplay(elapsed,bool(request.get("shared",true)))
+		if bool(request.get("shared",true)):service.chapter.mine.advance(elapsed)
 		service.combat.advance(elapsed,bool(request.get("shared",true)))
 		service.advance_craft(elapsed)
 		fishing.advance(elapsed)
@@ -163,6 +169,21 @@ func execute(request: Dictionary) -> void:
 			write_result({"ok":false,"error":"背包已变化，请重新操作","snapshot":service.snapshot()});busy=false;return
 	# Explicit allowlist. Placement rows are rebuilt from kind and geometry below.
 	match operation:
+		"mine":
+			var page: String=service.chapter.mine.interact(str(args[0]))
+			if page.begins_with("矿工的残页") or page.begins_with("壁刻·") or page.begins_with("古老的路线记录"):
+				Engine.get_meta("network_rules_events").append({"kind":"chapter_page","text":page})
+			elif page.begins_with("入口被") or page.begins_with("引线") or page=="木箱中留着一份古老的路线记录。":
+				Engine.get_meta("network_rules_events").append({"kind":"notice","text":page})
+			else:message=page
+		"chapter":
+			var page: String=service.chapter.interact(str(args[0]))
+			if page.begins_with("模糊地图") or page.begins_with("垂钓老者"):
+				Engine.get_meta("network_rules_events").append({"kind":"chapter_page","text":page})
+			else:message=page
+		"chapter_read":
+			if not service.chapter.use_item(str(args[0])):message="无法阅读该线索"
+			elif str(args[0])==service.chapter.finale.LETTER:Engine.get_meta("network_rules_events").append({"kind":"chapter_page","text":"海彼岸的记录"})
 		"guide":
 			if not service.advance_guide(int(args[0])):message="指引进度无效"
 		"combat_duel":message=service.combat.duel(str(args[0]),bool(args[1]))
@@ -233,6 +254,7 @@ func execute(request: Dictionary) -> void:
 	for row in service.builds.states.values():
 		if row.get("sleep_state","PLACED")=="PLACED":row.erase("network_sleep_owner")
 	world.player.set_physics_process(false)
+	service.chapter.advance()
 	var snapshot: Dictionary=service.snapshot().duplicate(true)
 	if OS.get_environment("WINDREST_PROFILE_NETWORK")=="1":print("RULES_US ",request.get("operation")," restore=",timing[1]-timing[0]," wait=",timing[2]-timing[1]," advance=",timing[3]-timing[2]," snapshot=",Time.get_ticks_usec()-timing[3])
 	snapshot.network_craft_job=service.craft_job.duplicate(true)
@@ -267,6 +289,7 @@ func freeze_actors() -> void:
 func movement(request: Dictionary) -> void:
 	var character: Dictionary=request.character
 	var at:=Vector2(character.x,character.y)
+	at=world.generator.thaw_shore(at,func(point: Vector2):return movement_clear(point,request))
 	var body=preload("res://scripts/body_state.gd").new()
 	body.restore(character.gameplay.body)
 	var fishing: Dictionary=character.gameplay.get("network_fishing",{})
@@ -274,7 +297,7 @@ func movement(request: Dictionary) -> void:
 		write_result({"x":at.x,"y":at.y});return
 	for item in request.inputs:
 		# The client sends actual displacement, including its original shore slide.
-		var direction:=Vector2(item.dx,item.dy).limit_length(body.efficiency())
+		var direction:=Vector2(item.dx,item.dy).limit_length(body.movement_factor())
 		var motion:=direction*(310.0 if item.get("run",false) and not body.exhausted else 200.0)*float(item.dt)
 		var count:=maxi(1,ceili(motion.length()/6.0))
 		for step in count:
@@ -287,6 +310,16 @@ func movement(request: Dictionary) -> void:
 
 func movement_clear(at: Vector2, request: Dictionary) -> bool:
 	if not world.generator.can_walk(at):return false
+	if preload("res://scripts/exploration_final.gd").blocks(at,request.get("exploration_chapter",{}).get("finale",{})):return false
+	var m: Dictionary=request.get("exploration_chapter",{}).get("mine",{})
+	if preload("res://scripts/mine_rules.gd").pocket(at,world.generator.extent):
+		var local:=at-preload("res://scripts/mine_rules.gd").origin(world.generator.extent)
+		if preload("res://scripts/mine_puzzle_geometry.gd").blocks(local,m):return false
+	if not m.get("site",{}).is_empty():
+		var site:=Vector2(m.site.x,m.site.y)
+		if m.phase!="open" and Rect2(site+Vector2(-90,-65),Vector2(180,100)).grow(10).has_point(at):return false
+		for rect in [Rect2(-138,-85,44,100),Rect2(94,-85,44,100),Rect2(-135,-102,270,22)]:
+			if Rect2(site+rect.position,rect.size).grow(10).has_point(at):return false
 	var combat_world: Dictionary=request.get("combat_world",{})
 	var portal: Dictionary=combat_world.get("spawn",{})
 	if not portal.is_empty():
@@ -296,6 +329,9 @@ func movement_clear(at: Vector2, request: Dictionary) -> bool:
 		if boar.health>0 and at.distance_to(Vector2(boar.x,boar.y))<24:return false
 	for row in request.buildings.values():
 		if row.layer in ["ground","overlay"]:continue
+		if row.kind=="rain_shelter":
+			if preload("res://scripts/weather_exposure.gd").pole_blocks(row,at,at,9.8):return false
+			continue
 		var polygon: PackedVector2Array=world.item_service.animals.barrier_polygon(row)
 		if Geometry2D.is_point_in_polygon(at,polygon):return false
 		for n in polygon.size():

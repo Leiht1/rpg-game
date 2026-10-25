@@ -1,0 +1,48 @@
+{
+  "frames": [
+    "flash-00.png",
+    "flash-01.png",
+    "flash-02.png",
+    "flash-03.png",
+    "flash-04.png",
+    "flash-05.png",
+    "flash-06.png",
+    "flash-07.png"
+  ],
+  "duration_ms": [
+    30,
+    40,
+    50,
+    65,
+    75,
+    85,
+    95,
+    110
+  ],
+  "canvas": [
+    384,
+    512
+  ],
+  "anchor_px": [
+    192,
+    256
+  ],
+  "smoke": [
+    "particles-00.png",
+    "particles-01.png",
+    "particles-02.png",
+    "particles-03.png",
+    "particles-04.png",
+    "particles-05.png",
+    "particles-10.png",
+    "particles-11.png"
+  ],
+  "stones": [
+    "particles-06.png",
+    "particles-07.png",
+    "particles-08.png",
+    "particles-09.png"
+  ],
+  "tail_seconds": 4.8,
+  "art_source": "local Codex image generation; source and prompts in art/mine-blast-v4"
+}

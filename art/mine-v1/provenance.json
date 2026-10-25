@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-25",
+  "art_source": "host_image",
+  "route": "generate2dmap / generate2dsprite -> generate2dmedia route_media.py -> local:codex-cli",
+  "model": "codex-image_gen; exact backend revision unavailable",
+  "authorization": "User requested full playable mine chapter and subsequent visual correction; this is implementation authorization, not user aesthetic approval of these exact revised PNGs.",
+  "feedback": "Mine did not match environment and looked pasted; interior exit light must shine inward from outside.",
+  "processing": "Half-sheet ownership crop for entrance/rubble, four-cell crop for record/pack; magenta key and edge despill, preserved proportions. Interior revised generation used as complete opaque room plate.",
+  "assets": [
+    {
+      "file": "assets/exploration/mine-v1/entrance.png",
+      "sha256": "9d4c4eb73e01a9b475317b66ed35e44788c7a242a992c861578069c36e5ea574",
+      "source": "art/mine-v1/entrance-v2-source/generated.png",
+      "source_sha256": "761c46861d414123fce45799f40ac0af6c9f718170c1b24e9a45a062c0da15e5"
+    },
+    {
+      "file": "assets/exploration/mine-v1/rubble.png",
+      "sha256": "ff928ce0fb3b732db671a415951464686531ddc370432675d0cf2c27df990e44",
+      "source": "art/mine-v1/entrance-v2-source/generated.png",
+      "source_sha256": "761c46861d414123fce45799f40ac0af6c9f718170c1b24e9a45a062c0da15e5"
+    },
+    {
+      "file": "assets/exploration/mine-v1/record.png",
+      "sha256": "13277e98ccee2b61954702f0b2e64bad6fb58ac47b7bde8995b6ff53495b159b",
+      "source": "art/mine-v1/props-source/generated.png",
+      "source_sha256": "38b5fef72e7192980368c73c2565fc3a06b3253ac20c1fd33af39d9379405ba4"
+    },
+    {
+      "file": "assets/exploration/mine-v1/pack.png",
+      "sha256": "fa78346b4d716b53de810761cf263c35d64cfb605d63716b9c32d7f13cc03922",
+      "source": "art/mine-v1/props-source/generated.png",
+      "source_sha256": "38b5fef72e7192980368c73c2565fc3a06b3253ac20c1fd33af39d9379405ba4"
+    },
+    {
+      "file": "assets/exploration/mine-v1/interior.png",
+      "sha256": "eab860e78e9a478f672c7cad915ab5418043c1dad82f0fd972200e02f5833810",
+      "source": "art/mine-v1/interior-v2-source/generated.png",
+      "source_sha256": "997a9a48db3f000a9830ff08c1c92f7c2e6ca5abc6edbff10c3b4e49611700bb"
+    }
+  ]
+}

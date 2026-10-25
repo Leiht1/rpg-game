@@ -52,7 +52,11 @@ func _ready() -> void:
 		var shape := CollisionShape2D.new()
 		var polygon := ConvexPolygonShape2D.new()
 		var points := PackedVector2Array()
-		for i in 12: points.append(Vector2(cos(TAU*i/12)*float(definition.collision[0]),sin(TAU*i/12)*float(definition.collision[1])))
+		if definition.has("collision_outline"):
+			var factor: float=float(definition.width)/float(definition.collision_outline_width)
+			for point in definition.collision_outline:points.append(Vector2(float(point[0]),float(point[1]))*factor)
+		else:
+			for i in 12: points.append(Vector2(cos(TAU*i/12)*float(definition.collision[0]),sin(TAU*i/12)*float(definition.collision[1])))
 		polygon.points=points
 		shape.shape=polygon
 		collision.add_child(shape);add_child(collision)

@@ -1,0 +1,33 @@
+{
+  "source": "art/weather-v1/generated/generated.png",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "source_sha256": "3132f2c722c16bac6d868485e79e962f9d4d8b2de7971227fbc2dcc73ceacaa8",
+  "prompt": "art/weather-v1/prompt.txt",
+  "processing": "two object ownership crops, soft chroma key, uniform Lanczos scaling",
+  "approval": "pending_user",
+  "qa": {
+    "umbrella": {
+      "size": [
+        256,
+        236
+      ],
+      "sha256": "ea38868bc95edaeaa144bd95ae1855285660a111f172d2b15b5043a0c2f61f19",
+      "source": "art\\weather-v1\\generated\\generated.png",
+      "source_sha256": "3132f2c722c16bac6d868485e79e962f9d4d8b2de7971227fbc2dcc73ceacaa8",
+      "route": "local:codex-cli",
+      "prompt": "art/weather-v1/prompt.txt",
+      "status": "pending_user",
+      "note": "original normal proportions restored; long shaft rejected; only native arm rotation raises grip"
+    },
+    "shelter": {
+      "size": [
+        640,
+        461
+      ],
+      "sha256": "1892ddad44c7e2036a8ccf76344f98d9a9038bb77a95d4a4ac2b9aaa4ad54595",
+      "alpha": true,
+      "status": "pending_user"
+    }
+  }
+}

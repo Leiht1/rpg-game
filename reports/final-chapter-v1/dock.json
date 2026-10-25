@@ -1,0 +1,38 @@
+[
+  {
+    "pass": true,
+    "test": "direct placement cannot bypass blueprint unlock"
+  },
+  {
+    "pass": true,
+    "test": "actual safe coastal dock placement exists"
+  },
+  {
+    "pass": true,
+    "test": "dock genuinely built through original construction transaction"
+  },
+  {
+    "pass": true,
+    "test": "one real dock facility created"
+  },
+  {
+    "pass": true,
+    "test": "idle dock has no nonfunctional interaction prompt"
+  },
+  {
+    "pass": true,
+    "test": "configured construction cost deducted: wood"
+  },
+  {
+    "pass": true,
+    "test": "configured construction cost deducted: stone"
+  },
+  {
+    "pass": true,
+    "test": "configured construction cost deducted: plant_fiber"
+  },
+  {
+    "pass": true,
+    "test": "built dock survives JSON restore"
+  }
+]

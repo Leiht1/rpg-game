@@ -62,8 +62,8 @@ func _ready() -> void:
 	durability_bar.add_theme_stylebox_override("background",track)
 	canvas.add_child(durability_bar)
 	gui_input.connect(on_input)
-	mouse_entered.connect(func(): hovered=true; refresh(); screen.show_item_hover(index,self))
-	mouse_exited.connect(func(): hovered=false; refresh(); screen.hide_item_hover(index))
+	mouse_entered.connect(func(): hovered=true; refresh_panel(); screen.show_item_hover(index,self))
+	mouse_exited.connect(func(): hovered=false; refresh_panel(); screen.hide_item_hover(index))
 	refresh()
 
 func refresh() -> void:
@@ -74,7 +74,8 @@ func refresh() -> void:
 	fallback.text=""
 	shortcut.text = str(index+1) if index < 8 else ""
 	tooltip_text = ""
-	durability_bar.hide()
+	var has_durability: bool=not slot.is_empty() and screen.service.database.item(slot.item_id).get("durability")!=null
+	durability_bar.visible=has_durability
 	if not slot.is_empty():
 		icon.texture = screen.service.stack_texture(slot,"icon")
 		dev_symbol.visible=icon.texture==null
@@ -82,7 +83,7 @@ func refresh() -> void:
 		dev_symbol.queue_redraw()
 		var definition: Dictionary=screen.service.database.item(slot.item_id)
 		if definition.get("durability")!=null:
-			durability_bar.show();durability_bar.max_value=float(definition.durability)
+			durability_bar.max_value=float(definition.durability)
 			durability_bar.value=float(slot.get("durability",definition.durability)) if slot.get("durability")!=null else float(definition.durability)
 			var fill := StyleBoxFlat.new()
 			var ratio := durability_bar.value/durability_bar.max_value
@@ -97,6 +98,11 @@ func refresh() -> void:
 		for item in screen.service.inventory.equipment.values():
 			if item.get("instance_id","")==slot.instance_id: equipped=true
 	equipped_marker.visible=equipped
+	refresh_panel()
+
+func refresh_panel() -> void:
+	var slot: Dictionary=screen.service.inventory.get_slot(index)
+	var equipped: bool=slot.has("instance_id") and screen.service.inventory.equipment.values().any(func(item):return item.get("instance_id","")==slot.instance_id)
 	var disabled := false
 	var drag = get_viewport().gui_get_drag_data()
 	if drag is Dictionary and drag.get("inventory")==screen.service.inventory and drag.has("slot"):

@@ -22,6 +22,15 @@ func fuel_lit(id: String) -> bool:
 	var row := fuel_state(id)
 	return bool(row.get("lit",false)) and float(row.get("fuel",0))>0
 
+func fuel_ratio(id: String) -> float:
+	return clampf(float(fuel_state(id).get("fuel",0))/float(rules.max_fuel),0,1)
+
+func light_scale(id: String) -> float:
+	return lerpf(float(rules.light_scale_min),float(rules.light_scale_max),fuel_ratio(id)) if fuel_lit(id) else 0.0
+
+func flame_scale(id: String) -> float:
+	return lerpf(float(rules.flame_scale_min),float(rules.flame_scale_max),fuel_ratio(id))
+
 func rebuild() -> void:
 	bins.clear(); burning.clear()
 	for id in states:
@@ -64,6 +73,11 @@ func placement_reason(at: Vector2) -> String:
 	var world: Node=service.world
 	var gen=world.generator
 	if not service.writable: return "存档受保护，不能放置"
+	if not service.chapter.finale.state.site.is_empty() and at.distance_to(service.chapter.finale.at())<560:return "请保留遗迹空地"
+	if preload("res://scripts/mine_rules.gd").pocket(at,gen.extent):return "矿洞内没有适合放置的地面"
+	if not service.chapter.mine.state.site.is_empty():
+		if at.distance_to(service.chapter.mine.at())<260:return "这里是矿洞通道"
+		if at.distance_to(service.chapter.mine.record_at())<95:return "这里有矿工遗留物"
 	if world.player.position.distance_to(at)>float(rules.place_range): return "请放在身边的地面"
 	if world.player.position.distance_to(at)<float(rules.player_clearance): return "离角色太近"
 	if at.distance_to(gen.spawn)<float(rules.spawn_clearance): return "请避开出生点"
@@ -130,7 +144,7 @@ func place(at: Vector2, slot: int, expected: Dictionary) -> String:
 	return ""
 
 func known(recipe: String) -> bool:
-	return rules.recipes.has(recipe) and not rules.recipes[recipe].get("legacy_only",false) and (rules.recipes[recipe].get("default_unlocked",true) or discovered.has(recipe))
+	return rules.recipes.has(recipe) and not rules.recipes[recipe].get("legacy_only",false) and not rules.recipes[recipe].get("fallback_only",false) and (rules.recipes[recipe].get("default_unlocked",true) or discovered.has(recipe))
 
 func match_materials(materials: Dictionary) -> String:
 	# JSON numbers are floats; compare exact integral quantities without key order.
@@ -138,7 +152,7 @@ func match_materials(materials: Dictionary) -> String:
 		var count = materials[key]
 		if not count is int or count<1: return ""
 	for key in rules.recipes:
-		if rules.recipes[key].get("legacy_only",false): continue
+		if rules.recipes[key].get("legacy_only",false) or rules.recipes[key].get("fallback_only",false): continue
 		var expected: Dictionary=rules.recipes[key].materials
 		if expected.size()!=materials.size(): continue
 		var matches := true
@@ -146,6 +160,20 @@ func match_materials(materials: Dictionary) -> String:
 			if not materials.has(id) or float(materials[id])!=float(expected[id]): matches=false;break
 		if matches: return key
 	return ""
+
+func experiment_recipe(materials: Dictionary) -> String:
+	if materials.is_empty() or materials.size()>4:return ""
+	var allowed := {}
+	for definition in rules.recipes.values():
+		if definition.get("legacy_only",false) or definition.get("fallback_only",false):continue
+		for id in definition.materials:allowed[id]=true
+	var normalized := {};var total := 0
+	for id in materials:
+		var count=materials[id]
+		if not allowed.has(id) or not (count is int or count is float) or not is_finite(float(count)) or count<1 or count>99 or count!=floor(count):return ""
+		normalized[id]=int(count);total+=int(count)
+	var exact := match_materials(normalized)
+	return exact if not exact.is_empty() else "camp_small_hodgepodge" if total<=int(rules.experiment_small_limit) else "camp_large_hodgepodge"
 
 func act(id: String, action: String, recipe: String = "", materials: Dictionary = {}) -> String:
 	if service.body.sleep_active(): return "睡醒了再试试"
@@ -163,13 +191,13 @@ func act(id: String, action: String, recipe: String = "", materials: Dictionary 
 	var claimed := ""
 	match action:
 		"cook", "experiment":
-			if action=="experiment": recipe=match_materials(materials)
+			if action=="experiment": recipe=experiment_recipe(materials)
 			if not row.recipe.is_empty(): reason="请先完成并领取当前食物"
 			elif not rules.recipes.has(recipe): reason="尚无已知料理能使用这组材料"
 			elif action=="cook" and not known(recipe): reason="尚未发现"
 			elif not row.lit or row.fuel<=0: reason="将背包或快捷栏的可燃物拖到篝火上点燃"
 			else:
-				staged=consume(rules.recipes[recipe].materials,true)
+				staged=consume(materials if rules.recipes[recipe].get("fallback_only",false) else rules.recipes[recipe].materials,true)
 				if staged==null: reason="食材不足"
 				else: row.erase("output");row.recipe=recipe;row.elapsed=0.0;row.ready=false
 		"claim":
@@ -267,7 +295,7 @@ func advance(dt: float, rain: float = 0.0, storm: float = 0.0) -> void:
 			row.elapsed=minf(duration,float(row.elapsed)+used)
 			row.ready=row.elapsed>=duration
 			if row.ready:
-				discovered[row.recipe]=true
+				if not rules.recipes[row.recipe].get("fallback_only",false):discovered[row.recipe]=true
 				row.output={"item_id":rules.recipes[row.recipe].output,"count":1,"spoilage":0.0}
 				completed=true
 		if row.fuel<=0: row.lit=false;burning.erase(id)

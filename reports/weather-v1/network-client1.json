@@ -1,0 +1,38 @@
+{
+	"checks": 14,
+	"cold_level": 3,
+	"health": 89.9681244444487,
+	"temperature": -9.54086998241178,
+	"weather": {
+		"blend": [
+			0.0,
+			1.0,
+			0.0
+		],
+		"current_weather": 3,
+		"day": 1,
+		"day_length_minutes": 60.0,
+		"duration_max": 600.0,
+		"duration_min": 240.0,
+		"minute": 5.73759999999313,
+		"paused": false,
+		"rng_state": "-8757411305613066277",
+		"target_weather": 3,
+		"time_scale": 1.0,
+		"transition_elapsed": 25.0,
+		"transition_from": [
+			0.0,
+			1.0,
+			0.0
+		],
+		"transition_seconds": 25.0,
+		"version": 3,
+		"weather_remaining": 9985.65600000022,
+		"weights": [
+			5.0,
+			2.0,
+			1.0
+		]
+	},
+	"wetness": 100.0
+}

@@ -1,0 +1,21 @@
+{
+  "recipe_id": "hand_miner_blast_pack",
+  "materials": {
+    "plant_fiber": 8,
+    "copper_ore": 3,
+    "flint": 3,
+    "relic_fragment": 2
+  },
+  "placement_radius": 82,
+  "retry_seconds": 15,
+  "recipe_conditions": [
+    "metal_workbench"
+  ],
+  "record_min_distance": 650,
+  "record_max_distance": 950,
+  "fuse_seconds": 5.0,
+  "blast_visual": {
+    "manifest": "res://assets/exploration/mine-blast-v4/runtime.json",
+    "width": 350
+  }
+}

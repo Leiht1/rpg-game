@@ -1,0 +1,128 @@
+[
+  {
+    "item_id": "predecessor_map",
+    "name": "模糊地图",
+    "category": "utility",
+    "description": "墨迹散开的旧地图，只能辨出附近湖岸的大致方向。",
+    "icon": "res://assets/ui/survival_guide_v1/letter_icon.png",
+    "world_visual": "res://assets/ui/survival_guide_v1/letter_icon.png",
+    "max_stack": 1,
+    "usable": true,
+    "use_action": "read_chapter",
+    "consumable": false,
+    "tags": [
+      "exploration",
+      "key_item"
+    ],
+    "rarity": "rare",
+    "drop_rules": {
+      "source": "探索调查"
+    },
+    "indestructible": true,
+    "death_retention": "retain"
+  },
+  {
+    "item_id": "predecessor_note",
+    "name": "残缺文字",
+    "category": "utility",
+    "description": "前辈的寻找记录在关键处中断。",
+    "icon": "res://assets/ui/survival_guide_v1/letter_icon.png",
+    "world_visual": "res://assets/ui/survival_guide_v1/letter_icon.png",
+    "max_stack": 1,
+    "usable": true,
+    "use_action": "read_chapter",
+    "consumable": false,
+    "tags": [
+      "exploration",
+      "key_item"
+    ],
+    "rarity": "rare",
+    "drop_rules": {
+      "source": "探索调查"
+    },
+    "indestructible": true,
+    "death_retention": "retain"
+  },
+  {
+    "item_id": "mysterious_bottle",
+    "name": "神秘瓶子",
+    "category": "utility",
+    "description": "湖水中钓起的封口瓶，里面卷着一张残页。使用可打开阅读。",
+    "icon": "res://assets/exploration/v1/bottle.png",
+    "world_visual": "res://assets/exploration/v1/bottle.png",
+    "max_stack": 1,
+    "usable": true,
+    "use_action": "read_chapter",
+    "consumable": false,
+    "tags": [
+      "exploration",
+      "key_item"
+    ],
+    "rarity": "rare",
+    "drop_rules": {
+      "source": "探索调查"
+    },
+    "indestructible": true,
+    "death_retention": "retain"
+  },
+  {
+    "item_id": "miner_blast_pack",
+    "name": "矿工爆破包",
+    "category": "utility",
+    "description": "旧矿工的幻想爆破包。靠近已调查的矿洞入口，按 E 安放，只能震松那里的塌方。",
+    "icon": "res://assets/exploration/mine-v1/pack.png",
+    "world_visual": "res://assets/exploration/mine-v1/pack.png",
+    "max_stack": 10,
+    "usable": true,
+    "use_action": "mine_pack",
+    "consumable": false,
+    "tags": [
+      "exploration"
+    ],
+    "rarity": "rare",
+    "drop_rules": {
+      "source": "制作"
+    }
+  },
+  {
+    "item_id": "ancient_mine_record",
+    "name": "古老的路线图",
+    "category": "utility",
+    "description": "一张画着洞口、山脊与不明记号的旧路线纸。可反复查看。",
+    "icon": "res://assets/exploration/mine-route-v5/route-icon.png",
+    "world_visual": "res://assets/exploration/mine-route-v5/route-icon.png",
+    "max_stack": 1,
+    "usable": true,
+    "use_action": "read_chapter",
+    "consumable": false,
+    "tags": [
+      "exploration",
+      "key_item"
+    ],
+    "rarity": "rare",
+    "drop_rules": {
+      "source": "探索调查"
+    },
+    "indestructible": true,
+    "death_retention": "retain"
+  },
+  {
+    "item_id": "crystal",
+    "name": "水晶",
+    "category": "material",
+    "description": "从矿洞深处采得的淡蓝晶体。",
+    "icon": "res://assets/exploration/mine-scene-v2/crystal.png",
+    "world_visual": "res://assets/exploration/mine-scene-v2/crystal.png",
+    "max_stack": 99,
+    "use_action": "",
+    "usable": false,
+    "consumable": false,
+    "tags": [
+      "mineral"
+    ],
+    "rarity": "rare",
+    "drop_rules": {
+      "source": "水晶矿"
+    }
+  }
+]
