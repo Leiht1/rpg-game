@@ -1,0 +1,121 @@
+{
+  "route": "host_image:imagegen",
+  "art_source": "host_image",
+  "approval": "pending_user",
+  "source_sha256": "bcb12a1e5f79cb7c7de5a446f0c7c542aa70e1b0e3346b47ed2ae481e44d474e",
+  "processing": "Native alpha; complete components identified at alpha>8; 3px ownership expansion retains antialiasing; remote alpha<=8 speckles discarded; 2px transparent safety margin; no painted limb clipping.",
+  "parts": [
+    {
+      "part": "torso",
+      "bbox": [
+        128,
+        9,
+        807,
+        399
+      ],
+      "area": 190735,
+      "sha256": "b1834cfa5aad25d74f12bf14f2cc3735960fb4e106f062f03369741c91365bfc",
+      "size": [
+        689,
+        400
+      ]
+    },
+    {
+      "part": "tail",
+      "bbox": [
+        928,
+        8,
+        1418,
+        413
+      ],
+      "area": 104767,
+      "sha256": "56070adac65c8f7771bf18bfc8faee5322243fe949a68af26e0fcecb72209ea4",
+      "size": [
+        500,
+        415
+      ]
+    },
+    {
+      "part": "hip",
+      "bbox": [
+        1009,
+        417,
+        1320,
+        838
+      ],
+      "area": 82919,
+      "sha256": "ff82eceafcc2c68c9d612017b3d92a4b3bf9dbbfcd18ba5923bff46be40247c6",
+      "size": [
+        321,
+        431
+      ]
+    },
+    {
+      "part": "fore_upper",
+      "bbox": [
+        295,
+        399,
+        568,
+        837
+      ],
+      "area": 78459,
+      "sha256": "5f1a4dbb456305af2a99e40f42efd904d569bf030b32688b8bad3c6ee4249a49",
+      "size": [
+        283,
+        448
+      ]
+    },
+    {
+      "part": "hind_paw",
+      "bbox": [
+        981,
+        831,
+        1351,
+        1006
+      ],
+      "area": 43421,
+      "sha256": "160059e2178109d37f672881593b7c33148b8ad1bffc2b20e7b0d9c665b8240b",
+      "size": [
+        380,
+        185
+      ]
+    },
+    {
+      "part": "fore_paw",
+      "bbox": [
+        232,
+        855,
+        606,
+        1004
+      ],
+      "area": 38956,
+      "sha256": "37a709ea0380472cc84ab82eae707fa31fda5841179b44f24e377706df9e18d4",
+      "size": [
+        384,
+        159
+      ]
+    }
+  ],
+  "references": [
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side/torso.png",
+      "sha256": "42fac9024dcf0309446a450ad7c66bd75487f70861ba52794142c018c33c6017"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side/tail.png",
+      "sha256": "e4f4435f2250559c8111ac89b5f04c1e0a7b4fd92ace12315f9a7591e861ec7d"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side/fore_upper.png",
+      "sha256": "5b95bd906fc34b05a6c4f9b39e3220a26fd7e4b84d12a0cdc48172504bf94823"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side/hip.png",
+      "sha256": "46e03f0f60060a0982848fd1943d79b2515408f668a054157c678c46d4abc5a3"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side/fore_paw.png",
+      "sha256": "a4befdd52fe7b6c9c171a2a56b87a7a166741c3c7a21fd89472272d409d25294"
+    }
+  ]
+}

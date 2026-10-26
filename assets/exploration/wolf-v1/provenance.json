@@ -1,0 +1,76 @@
+{
+  "approval": "approved_current_v11",
+  "date": "2026-10-26",
+  "quote": "先暂定这版吧，接入游戏，然后将项目推送到远端",
+  "scope": "Current V11 side-view wolf with approved idle/walk clips; left is mirrored. No approval of future art or new attack clips.",
+  "route": "host_image:imagegen + existing accepted parts",
+  "source_records": [
+    "art/wolf-unify-v11/provenance.json",
+    "art/wolf-build-v10/provenance.json",
+    "prototypes/boss-beasts-v1/assets/provenance.json"
+  ],
+  "scene_source": "prototypes/boss-beasts-v1/godot/wolf.tscn",
+  "scene_sha256": "7cf20c9a4a5995ad593c2317c5a8053cf05920a233e94874b813928bca8584bf",
+  "parts": [
+    {
+      "file": "tail.png",
+      "source": "prototypes/boss-beasts-v1/assets/wolf/side-v5/tail.png",
+      "sha256": "56070adac65c8f7771bf18bfc8faee5322243fe949a68af26e0fcecb72209ea4"
+    },
+    {
+      "file": "hind_ankle.png",
+      "source": "prototypes/boss-beasts-v1/assets/wolf/side-v11/hind_ankle.png",
+      "sha256": "f4ae7765085571952a02f54f4141f1f514d0b79e0b949cfcd0349781db9859b3"
+    },
+    {
+      "file": "hind_lower.png",
+      "source": "prototypes/boss-beasts-v1/assets/wolf/side-v11/hind_lower.png",
+      "sha256": "07a624a89b7d0490a36f2766b4ac13f447cdd38c1f16d5757a88a081161ecb58"
+    },
+    {
+      "file": "hip.png",
+      "source": "prototypes/boss-beasts-v1/assets/wolf/side-v10/hip.png",
+      "sha256": "ee14278ad48ef41dba62f9a2770805f09bff3b7b870924c6836e8c035a41c71d"
+    },
+    {
+      "file": "hind_paw.png",
+      "source": "prototypes/boss-beasts-v1/assets/wolf/side-v11/hind_paw.png",
+      "sha256": "b0fcc3b6681cc2d9063ea7ec5e8332d8fd68361a561093c009b0f65275de2491"
+    },
+    {
+      "file": "fore_lower.png",
+      "source": "prototypes/boss-beasts-v1/assets/wolf/side-v11/fore_lower.png",
+      "sha256": "0f49b94e24e2d5d97c1c5adf554ea2756d7612d3510a131f2565ab59fe876728"
+    },
+    {
+      "file": "fore_upper.png",
+      "source": "prototypes/boss-beasts-v1/assets/wolf/side-v10/fore_upper.png",
+      "sha256": "8fc1059810dd662a9fcb4341267438749a184a30ff987a8fe5e4949bead34ed8"
+    },
+    {
+      "file": "fore_paw.png",
+      "source": "prototypes/boss-beasts-v1/assets/wolf/side-v11/fore_paw.png",
+      "sha256": "3ef166b7e92305de107192c6187ef4987356d27be79d5fa7498ab248a277eb0f"
+    },
+    {
+      "file": "torso.png",
+      "source": "prototypes/boss-beasts-v1/assets/wolf/side-v5/torso.png",
+      "sha256": "b1834cfa5aad25d74f12bf14f2cc3735960fb4e106f062f03369741c91365bfc"
+    },
+    {
+      "file": "shoulder.png",
+      "source": "prototypes/boss-beasts-v1/assets/wolf/side/shoulder.png",
+      "sha256": "8e91ce9c1ed0b5de7650c1706f6ae19df81259a5e01672cca30b856eedbd579e"
+    },
+    {
+      "file": "neck.png",
+      "source": "prototypes/boss-beasts-v1/assets/wolf/side/neck.png",
+      "sha256": "95d3ed78f1dcc9dd336675f22839e978d187832384d6b70218998ee5c843f114"
+    },
+    {
+      "file": "head.png",
+      "source": "prototypes/boss-beasts-v1/assets/wolf/side/head.png",
+      "sha256": "36aa40852266e86353c7368dc6723dc033fa353c876d21bf4375156efcd854d4"
+    }
+  ]
+}

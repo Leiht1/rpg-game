@@ -1,0 +1,20 @@
+[
+  {
+    "part": "fore_lower",
+    "median_channel_spread": 1.0,
+    "p95_channel_spread": 2.0,
+    "max_channel_spread": 5
+  },
+  {
+    "part": "hind_lower",
+    "median_channel_spread": 1.0,
+    "p95_channel_spread": 2.0,
+    "max_channel_spread": 4
+  },
+  {
+    "part": "hind_ankle",
+    "median_channel_spread": 1.0,
+    "p95_channel_spread": 2.0,
+    "max_channel_spread": 4
+  }
+]

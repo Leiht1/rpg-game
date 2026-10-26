@@ -1,0 +1,115 @@
+{
+  "route": "host_image:imagegen",
+  "approval": "pending_user",
+  "scope": "Generated fur RGB only; original V6 dimensions and alpha preserved bit-for-bit; source joint anchors and transforms unchanged. Existing dark outlines retained.",
+  "source_sha256": "d717aaecf379a9ecf39518b753f98554571abcea50356818bad856d8ed69a78e",
+  "parts": [
+    {
+      "part": "hind_lower",
+      "size": [
+        158,
+        577
+      ],
+      "source_bbox": [
+        649,
+        13,
+        921,
+        1007
+      ],
+      "source_v6_sha256": "e52edc8430168765724d96e81cab0dfc6a461860445e75a2068148d15d748c95",
+      "sha256": "e6286dec6c3ffc41e890d53975f3a9fc4465c850babb5da68bf293ad301e397b",
+      "alpha_identical_to_v6": true,
+      "median_visible_rgb_before": [
+        220,
+        220,
+        226
+      ],
+      "median_visible_rgb_after": [
+        96,
+        105,
+        131
+      ]
+    },
+    {
+      "part": "fore_lower",
+      "size": [
+        141,
+        588
+      ],
+      "source_bbox": [
+        226,
+        18,
+        490,
+        1007
+      ],
+      "source_v6_sha256": "d068f041ae616bffb484333c4ccc8ef61737754a338ee488f1a663bdcef76638",
+      "sha256": "25eeb91818fc1c1ed6a0b9f4a4c8e603b790188369f1a379e386d59d1bc8d6dc",
+      "alpha_identical_to_v6": true,
+      "median_visible_rgb_before": [
+        224,
+        224,
+        228
+      ],
+      "median_visible_rgb_after": [
+        98,
+        107,
+        133
+      ]
+    },
+    {
+      "part": "hind_ankle",
+      "size": [
+        105,
+        445
+      ],
+      "source_bbox": [
+        1102,
+        177,
+        1312,
+        998
+      ],
+      "source_v6_sha256": "c41d467a582ad7369b21108dc8b0daaf80f721aa802cbd8ef6e05dfcd062975a",
+      "sha256": "4411b47eebe427810841c9b70aec9bb7ca391e27f637b84dbc2d267d7de5e4db",
+      "alpha_identical_to_v6": true,
+      "median_visible_rgb_before": [
+        221,
+        221,
+        226
+      ],
+      "median_visible_rgb_after": [
+        97,
+        105,
+        131
+      ]
+    }
+  ],
+  "model": "host imagegen; exact revision unknown",
+  "cost": "unknown",
+  "geometry_approval": {
+    "quote": "我感觉形状已经可以了",
+    "scope": "仅认可V6现有腿型，本轮新毛色仍待查看；不表示正式游戏美术批准"
+  },
+  "prompt": "art/wolf-fur-v7/prompt.txt",
+  "references": [
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v6/fore_lower.png",
+      "sha256": "d068f041ae616bffb484333c4ccc8ef61737754a338ee488f1a663bdcef76638"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v6/hind_lower.png",
+      "sha256": "e52edc8430168765724d96e81cab0dfc6a461860445e75a2068148d15d748c95"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v6/hind_ankle.png",
+      "sha256": "c41d467a582ad7369b21108dc8b0daaf80f721aa802cbd8ef6e05dfcd062975a"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v5/hip.png",
+      "sha256": "ff82eceafcc2c68c9d612017b3d92a4b3bf9dbbfcd18ba5923bff46be40247c6"
+    }
+  ],
+  "user_reference": {
+    "path": "art/wolf-fur-v7/user-shape-reference.png",
+    "sha256": "13554e693a8530d3082779fc51b96b0ba4d2052f03429f37d98a16298fbe8a75"
+  }
+}

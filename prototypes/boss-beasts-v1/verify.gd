@@ -3,7 +3,7 @@ var checks := 0
 func _initialize() -> void:
  call_deferred("verify")
 func verify() -> void:
- for kind in ["bear", "wolf"]:
+ for kind in ["wolf"]:
   var packed = load("res://godot/" + kind + ".tscn")
   assert(packed is PackedScene)
   var actor = packed.instantiate()

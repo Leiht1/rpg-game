@@ -1,0 +1,182 @@
+[
+  {
+    "pass": true,
+    "test": "no premature site before full-day deadline"
+  },
+  {
+    "pass": true,
+    "test": "deadline grants eligibility"
+  },
+  {
+    "pass": true,
+    "test": "safe different-rock coastal site generated"
+  },
+  {
+    "pass": true,
+    "test": "mine site preserved and distinct"
+  },
+  {
+    "pass": true,
+    "test": "site on actual outer coast rock"
+  },
+  {
+    "pass": true,
+    "test": "nearby live player triggers guardian"
+  },
+  {
+    "pass": true,
+    "test": "living boss blocks chest"
+  },
+  {
+    "pass": true,
+    "test": "phase one cycles real attacks"
+  },
+  {
+    "pass": true,
+    "test": "phase two introduces warned core burst"
+  },
+  {
+    "pass": true,
+    "test": "visible windup has no damage: slam"
+  },
+  {
+    "pass": true,
+    "test": "active attack deals configured single hit: slam"
+  },
+  {
+    "pass": true,
+    "test": "same attack does not damage every frame: slam"
+  },
+  {
+    "pass": true,
+    "test": "walking outside warned geometry avoids hit: slam"
+  },
+  {
+    "pass": true,
+    "test": "visible windup has no damage: charge"
+  },
+  {
+    "pass": true,
+    "test": "active attack deals configured single hit: charge"
+  },
+  {
+    "pass": true,
+    "test": "same attack does not damage every frame: charge"
+  },
+  {
+    "pass": true,
+    "test": "walking outside warned geometry avoids hit: charge"
+  },
+  {
+    "pass": true,
+    "test": "visible windup has no damage: quake"
+  },
+  {
+    "pass": true,
+    "test": "active attack deals configured single hit: quake"
+  },
+  {
+    "pass": true,
+    "test": "same attack does not damage every frame: quake"
+  },
+  {
+    "pass": true,
+    "test": "walking outside warned geometry avoids hit: quake"
+  },
+  {
+    "pass": true,
+    "test": "visible windup has no damage: core"
+  },
+  {
+    "pass": true,
+    "test": "active attack deals configured single hit: core"
+  },
+  {
+    "pass": true,
+    "test": "same attack does not damage every frame: core"
+  },
+  {
+    "pass": true,
+    "test": "walking outside warned geometry avoids hit: core"
+  },
+  {
+    "pass": true,
+    "test": "boss charge movement cannot pass through ruin column foot"
+  },
+  {
+    "pass": true,
+    "test": "leaving arena resets guardian without erasing progress"
+  },
+  {
+    "pass": true,
+    "test": "normal melee hit resolves permanent boss death"
+  },
+  {
+    "pass": true,
+    "test": "core is independent world loot, not auto inventory or chest content"
+  },
+  {
+    "pass": true,
+    "test": "full bag preserves core"
+  },
+  {
+    "pass": true,
+    "test": "core claim succeeds exactly once"
+  },
+  {
+    "pass": true,
+    "test": "repeated core claim cannot duplicate"
+  },
+  {
+    "pass": true,
+    "test": "one free slot cannot partially take two final rewards"
+  },
+  {
+    "pass": true,
+    "test": "failed disk write rolls back chest and both rewards"
+  },
+  {
+    "pass": true,
+    "test": "defeated guardian unlocks final chest"
+  },
+  {
+    "pass": true,
+    "test": "chest awards exactly illustrated record and blueprint"
+  },
+  {
+    "pass": true,
+    "test": "repeated chest request idempotent"
+  },
+  {
+    "pass": true,
+    "test": "illustrated final record opens through inventory"
+  },
+  {
+    "pass": true,
+    "test": "failed blueprint save restores item and locked recipe"
+  },
+  {
+    "pass": true,
+    "test": "blueprint consumed atomically with dock unlock"
+  },
+  {
+    "pass": true,
+    "test": "dock recipe is genuinely available in existing construction book"
+  },
+  {
+    "pass": true,
+    "test": "repeated blueprint use rejected"
+  },
+  {
+    "pass": true,
+    "test": "complete saved chapter validates"
+  },
+  {
+    "pass": true,
+    "test": "JSON restore preserves boss, chest, rewards and dock"
+  },
+  {
+    "pass": true,
+    "test": "guardian never respawns after victory"
+  }
+]

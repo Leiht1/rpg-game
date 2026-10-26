@@ -1,0 +1,69 @@
+{
+  "build": {
+    "hip": {
+      "width_before": 70.969495368728,
+      "width_after": 81.65060111947062,
+      "height_before": 87.15838947357611,
+      "height_after": 89.53211487137473
+    },
+    "fore_upper": {
+      "width_before": 61.46461335005095,
+      "width_after": 61.46461335005095,
+      "height_before": 83.39339467545975,
+      "height_after": 83.39339467545975
+    },
+    "fore_lower": {
+      "width_before": 31.276814981089647,
+      "width_after": 30.929725243774897,
+      "height_before": 72.80401470388095,
+      "height_after": 65.45098466406147
+    },
+    "hind_lower": {
+      "width_before": 32.05722954390759,
+      "width_after": 37.77079658420558,
+      "height_before": 68.6940633083734,
+      "height_after": 72.26555468916882
+    },
+    "hind_ankle": {
+      "width_before": 21.06927790056905,
+      "width_after": 23.588911466331968,
+      "height_before": 51.9861530807519,
+      "height_after": 51.967031277730555
+    },
+    "additional_rump_raise": 6.530046680396822,
+    "unchanged_paw_draw_samples": 768
+  },
+  "coat_rgb_medians": {
+    "hip": [
+      187.0,
+      186.0,
+      189.0
+    ],
+    "fore_lower": [
+      187.0,
+      186.0,
+      189.0
+    ],
+    "hind_lower": [
+      187.0,
+      185.0,
+      189.0
+    ],
+    "hind_ankle": [
+      187.0,
+      186.0,
+      189.0
+    ],
+    "fore_paw": [
+      189.0,
+      187.0,
+      190.0
+    ],
+    "hind_paw": [
+      189.0,
+      187.0,
+      190.0
+    ]
+  },
+  "five_alpha_checks": "pass"
+}

@@ -1,0 +1,68 @@
+{
+  "route": "host_image:imagegen",
+  "art_source": "host_image",
+  "approval": "pending_user",
+  "source_sha256": "5181ed329372949cb238323e3486f57a4696be9dc71c49e790e438dcf0f47050",
+  "processing": "Native alpha; complete components identified at alpha>8; 3px ownership expansion retains antialiasing; remote alpha<=8 speckles discarded; 2px transparent safety margin; no painted limb clipping.",
+  "parts": [
+    {
+      "part": "hind_lower",
+      "bbox": [
+        624,
+        172,
+        990,
+        929
+      ],
+      "area": 162391,
+      "sha256": "90b942feac96087f58fa2bca32ee154a946329bd065d97450e2665a6e66d7c62",
+      "size": [
+        376,
+        767
+      ]
+    },
+    {
+      "part": "fore_lower",
+      "bbox": [
+        175,
+        97,
+        476,
+        950
+      ],
+      "area": 155086,
+      "sha256": "fd187071329460d92b10c7f6b3ec989a413b8e33775215e564a57d1ae7ded12c",
+      "size": [
+        311,
+        863
+      ]
+    },
+    {
+      "part": "hind_ankle",
+      "bbox": [
+        1175,
+        287,
+        1399,
+        931
+      ],
+      "area": 82798,
+      "sha256": "4ba4ba50d529f4b887d6ba2f1553be7ebf13462a9adb31bb50fab6fdb4d688fd",
+      "size": [
+        234,
+        654
+      ]
+    }
+  ],
+  "references": [
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side/fore_lower.png",
+      "sha256": "41d284fe21452e6005e04e4f737547b569fa55e277fb34c774d096059eea8bcb"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side/hind_lower.png",
+      "sha256": "62cead773ec723e5908af8cfc1467209cc05fe6826611ceb880d20a32922b5de"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side/hind_ankle.png",
+      "sha256": "13723351d1d88337de582f46b32ae986b07dfff8967af3f7a5f7f3b2f78049cb"
+    }
+  ]
+}

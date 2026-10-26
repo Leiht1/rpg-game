@@ -1,0 +1,202 @@
+{
+  "route": "host_image:imagegen",
+  "approval": "pending_user",
+  "source_sha256": "7a96a0de41b454973736626888a97aea9761a72f5ede871b320cebf98c95eb15",
+  "processing": "Five complete generated thicker limb contours with native alpha. Lower three use registered original V9 light-grey RGB material to prevent generated colour drift. Two paw RGB repaints use the V9 light-grey coat palette while preserving exact V6 alpha, dimensions and runtime size. No painted limb clipping.",
+  "parts": [
+    {
+      "part": "hip",
+      "joint_a": [
+        0.41935483870967744,
+        0.15572232645403378
+      ],
+      "joint_b": [
+        0.5967741935483871,
+        0.8405253283302064
+      ],
+      "size": [
+        434,
+        533
+      ],
+      "source_bbox": [
+        637,
+        12,
+        1061,
+        535
+      ],
+      "sha256": "ee14278ad48ef41dba62f9a2770805f09bff3b7b870924c6836e8c035a41c71d"
+    },
+    {
+      "part": "fore_upper",
+      "joint_a": [
+        0.4244791666666667,
+        0.10940499040307101
+      ],
+      "joint_b": [
+        0.6119791666666666,
+        0.8886756238003839
+      ],
+      "size": [
+        384,
+        521
+      ],
+      "source_bbox": [
+        222,
+        4,
+        596,
+        515
+      ],
+      "sha256": "8fc1059810dd662a9fcb4341267438749a184a30ff987a8fe5e4949bead34ed8"
+    },
+    {
+      "part": "fore_lower",
+      "joint_a": [
+        0.4726890756302521,
+        0.08664259927797834
+      ],
+      "joint_b": [
+        0.5504201680672269,
+        0.9187725631768953
+      ],
+      "axis_deviation_over_width": 0.03429701598643793,
+      "size": [
+        238,
+        554
+      ],
+      "source_bbox": [
+        219,
+        498,
+        447,
+        1042
+      ],
+      "sha256": "f59cba866445f4b69adda2636a5a74647d898f1313311649a4d9c94bf5e356fe"
+    },
+    {
+      "part": "hind_lower",
+      "joint_a": [
+        0.47619047619047616,
+        0.08888888888888889
+      ],
+      "joint_b": [
+        0.5992063492063492,
+        0.9166666666666666
+      ],
+      "axis_deviation_over_width": 0.04052590461986436,
+      "size": [
+        252,
+        540
+      ],
+      "source_bbox": [
+        545,
+        510,
+        787,
+        1040
+      ],
+      "sha256": "c052459d712316542ced1fed97c7786289795c017de6097f10ac8bff749345cd"
+    },
+    {
+      "part": "fore_paw",
+      "paw_alpha_and_size_identical_to_v6": true,
+      "source_v6_sha256": "806cc371d1ab6861de2c8dde927ed461d20616ad3fdbb023f23ae255583b3fff",
+      "size": [
+        379,
+        184
+      ],
+      "source_bbox": [
+        108,
+        1014,
+        598,
+        1247
+      ],
+      "sha256": "d030cb0e50e92045aeebbd8e254f71a6850a554c9a952f5b74f825ac81ec5b44"
+    },
+    {
+      "part": "hind_paw",
+      "paw_alpha_and_size_identical_to_v6": true,
+      "source_v6_sha256": "8b17d2c000835b8679737b7fbbeadd71cd472424b2b65e31b340112c8a9f1485",
+      "size": [
+        381,
+        174
+      ],
+      "source_bbox": [
+        677,
+        1047,
+        1159,
+        1247
+      ],
+      "sha256": "b6526e0b0c117a628fcf8c97b649aa3d77328bce517735b09783e2779c522fae"
+    },
+    {
+      "part": "hind_ankle",
+      "joint_a": [
+        0.4483695652173913,
+        0.11013215859030837
+      ],
+      "joint_b": [
+        0.5543478260869565,
+        0.9074889867841409
+      ],
+      "axis_deviation_over_width": 0.03386980542877731,
+      "size": [
+        184,
+        454
+      ],
+      "source_bbox": [
+        875,
+        579,
+        1049,
+        1023
+      ],
+      "sha256": "5f615fa81c4753da8f1aff28cae18bfbf5788dbd345bfc06a426d10e107ad13f"
+    }
+  ],
+  "art_source": "host_image",
+  "actual_source_size": [
+    1254,
+    1254
+  ],
+  "requested_size": [
+    1536,
+    1536
+  ],
+  "model": "host imagegen; exact revision unknown",
+  "cost": "unknown",
+  "prompt": "art/wolf-build-v10/prompt.txt",
+  "references": [
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v5/fore_upper.png",
+      "sha256": "5f1a4dbb456305af2a99e40f42efd904d569bf030b32688b8bad3c6ee4249a49"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v5/hip.png",
+      "sha256": "ff82eceafcc2c68c9d612017b3d92a4b3bf9dbbfcd18ba5923bff46be40247c6"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v9/fore_lower.png",
+      "sha256": "da01e15be0972e5b21783cec5aa74df15e4bff0ebbcf8d6e53e3224a6a803b4d"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v6/fore_paw.png",
+      "sha256": "806cc371d1ab6861de2c8dde927ed461d20616ad3fdbb023f23ae255583b3fff"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v6/hind_paw.png",
+      "sha256": "8b17d2c000835b8679737b7fbbeadd71cd472424b2b65e31b340112c8a9f1485"
+    }
+  ],
+  "material_sources": [
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v9/fore_lower.png",
+      "sha256": "da01e15be0972e5b21783cec5aa74df15e4bff0ebbcf8d6e53e3224a6a803b4d"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v9/hind_lower.png",
+      "sha256": "8d7360db2af13825e602be08863d5425c5de0f27f03e4ab7919761b7f3a376dc"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v9/hind_ankle.png",
+      "sha256": "44683cf7dae3bb38ad90ea368af971fcc11eabe652d5237513a1fc064e97fdbf"
+    }
+  ],
+  "validation": "reports/wolf-build-v10/REPORT.md"
+}

@@ -1,0 +1,123 @@
+{
+  "route": "host_image:imagegen",
+  "approval": "pending_user",
+  "scope": "Generated fur RGB only; original v6 dimensions and alpha preserved bit-for-bit; source joint anchors and transforms unchanged. Generated grey RGB includes outlines.",
+  "source_sha256": "d1185a6b318dd38ef3ed00e677b64fe59c97d10c2821858759ee3f3f613ff611",
+  "parts": [
+    {
+      "part": "hind_lower",
+      "size": [
+        158,
+        577
+      ],
+      "source_bbox": [
+        686,
+        25,
+        936,
+        990
+      ],
+      "source_version": "v6",
+      "source_sha256": "e52edc8430168765724d96e81cab0dfc6a461860445e75a2068148d15d748c95",
+      "sha256": "8d7360db2af13825e602be08863d5425c5de0f27f03e4ab7919761b7f3a376dc",
+      "alpha_identical_to_source": true,
+      "median_visible_rgb_before": [
+        220,
+        220,
+        226
+      ],
+      "median_visible_rgb_after": [
+        202,
+        201,
+        204
+      ]
+    },
+    {
+      "part": "fore_lower",
+      "size": [
+        141,
+        588
+      ],
+      "source_bbox": [
+        275,
+        17,
+        496,
+        995
+      ],
+      "source_version": "v6",
+      "source_sha256": "d068f041ae616bffb484333c4ccc8ef61737754a338ee488f1a663bdcef76638",
+      "sha256": "da01e15be0972e5b21783cec5aa74df15e4bff0ebbcf8d6e53e3224a6a803b4d",
+      "alpha_identical_to_source": true,
+      "median_visible_rgb_before": [
+        224,
+        224,
+        228
+      ],
+      "median_visible_rgb_after": [
+        202,
+        201,
+        204
+      ]
+    },
+    {
+      "part": "hind_ankle",
+      "size": [
+        105,
+        445
+      ],
+      "source_bbox": [
+        1143,
+        288,
+        1315,
+        978
+      ],
+      "source_version": "v6",
+      "source_sha256": "c41d467a582ad7369b21108dc8b0daaf80f721aa802cbd8ef6e05dfcd062975a",
+      "sha256": "44683cf7dae3bb38ad90ea368af971fcc11eabe652d5237513a1fc064e97fdbf",
+      "alpha_identical_to_source": true,
+      "median_visible_rgb_before": [
+        221,
+        221,
+        226
+      ],
+      "median_visible_rgb_after": [
+        201,
+        200,
+        204
+      ]
+    }
+  ],
+  "color_reference": {
+    "path": "art/wolf-fur-v9/thigh-light-grey-reference.png",
+    "sha256": "6fbddf4398387bc64052337b6ca885a96e4435b68089b45c0c78570ebb93d7f4",
+    "source": "prototypes/boss-beasts-v1/assets/wolf/side-v5/hip.png",
+    "crop": [
+      140,
+      250,
+      240,
+      365
+    ],
+    "light_grey_median_rgb": [
+      195,
+      195,
+      197
+    ]
+  },
+  "references": [
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v6/fore_lower.png",
+      "sha256": "d068f041ae616bffb484333c4ccc8ef61737754a338ee488f1a663bdcef76638"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v6/hind_lower.png",
+      "sha256": "e52edc8430168765724d96e81cab0dfc6a461860445e75a2068148d15d748c95"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v6/hind_ankle.png",
+      "sha256": "c41d467a582ad7369b21108dc8b0daaf80f721aa802cbd8ef6e05dfcd062975a"
+    }
+  ],
+  "prompt": "art/wolf-fur-v9/prompt.txt",
+  "user_correction": "不是把蓝色变成深灰色，只要跟大腿一样的灰色",
+  "model": "host imagegen; exact revision unknown",
+  "cost": "unknown"
+}

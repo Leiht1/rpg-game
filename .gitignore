@@ -189,3 +189,6 @@ dist/
 
 # Disposable local restart test snapshot.
 /reports/network-local-rollup-v1/restart/isolated-snapshot.json
+
+# Local isolated formal-wolf regression snapshot
+/reports/guardian-wolf-formal-v1/regression/ready.json

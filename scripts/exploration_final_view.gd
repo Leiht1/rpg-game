@@ -5,7 +5,7 @@ const SCENERY="res://assets/exploration/final-v2/"
 var s: Node
 var ground: Sprite2D
 var guardian: Node2D
-var body: Sprite2D
+var body: Node2D
 var visual_root: Node2D
 var rendered_at:=Vector2.ZERO
 var previous_health:=-1.0
@@ -27,10 +27,11 @@ func build() -> void:
 		var node:=Node2D.new();node.position=model.at()+Vector2(spec.at[0],spec.at[1]);s.world.object_root.add_child(node)
 		var pic:=Sprite2D.new();pic.texture=load(SCENERY+spec.file+".png");pic.scale=Vector2.ONE*float(spec.width)/pic.texture.get_width();pic.position=Vector2(0,-pic.texture.get_height()*pic.scale.y*.5+6);node.add_child(pic);props.append(node)
 		var obstacle:=StaticBody2D.new();var collision:=CollisionShape2D.new();var shape:=CircleShape2D.new();shape.radius=float(spec.radius);collision.shape=shape;obstacle.add_child(collision);node.add_child(obstacle)
-	guardian=Node2D.new();s.world.object_root.add_child(guardian);visual_root=Node2D.new();guardian.add_child(visual_root);body=picture("boss",190,visual_root,Vector2(0,-93));rendered_at=model.boss_at()
+	guardian=Node2D.new();s.world.object_root.add_child(guardian);visual_root=Node2D.new();guardian.add_child(visual_root)
+	body=preload("res://assets/exploration/wolf-v1/wolf.tscn").instantiate();visual_root.add_child(body);rendered_at=model.boss_at()
 	var volume:=StaticBody2D.new();volume.name="Volume";var collider:=CollisionShape2D.new();var footprint:=CircleShape2D.new();footprint.radius=35;collider.shape=footprint;volume.add_child(collider);guardian.add_child(volume)
-	health=ProgressBar.new();health.size=Vector2(180,9);health.position=Vector2(-90,-211);health.show_percentage=false;health.max_value=float(model.config.health);visual_root.add_child(health)
-	var title:=Label.new();title.text="远古领主";title.position=Vector2(-44,-239);title.add_theme_font_size_override("font_size",15);visual_root.add_child(title)
+	health=ProgressBar.new();health.size=Vector2(180,9);health.position=Vector2(-90,-238);health.show_percentage=false;health.max_value=float(model.config.health);visual_root.add_child(health)
+	var title:=Label.new();title.text="远古领主";title.position=Vector2(-44,-266);title.add_theme_font_size_override("font_size",15);visual_root.add_child(title)
 	chest=target("chest",model.chest_at(),"E 打开遗迹宝箱");picture("chest",105,chest,Vector2(0,-39))
 	core=target("core",model.boss_at(),"E 拾取远古领主的内核");picture("core",42,core,Vector2(0,-20))
 func _process(_delta: float) -> void:
@@ -49,9 +50,7 @@ func _process(_delta: float) -> void:
 	guardian.get_node("Volume").get_child(0).set_deferred("disabled",not guardian.visible)
 	chest.modulate=Color(.65,.77,.78) if not model.state.defeated else Color(.73,.76,.71) if model.state.chest_open else Color.WHITE
 	var b: Dictionary=model.state.boss
-	var pose:=float(b.clock)
-	body.rotation=sin(pose*7)*.035 if b.mode=="chase" else -.09 if b.mode=="windup" and b.attack=="slam" else .10 if b.mode=="active" and b.attack=="slam" else 0.0
-	body.position=Vector2(0,-93+sin(pose*8)*2 if b.mode=="chase" else -93)
+	body.update_motion(rendered_at,b,_delta)
 	body.modulate=Color(1.18,1.3,1.3) if b.attack=="core" and b.mode in ["windup","active"] else Color(1.07,.82,.71) if b.health<=float(model.config.health)*.5 else Color.WHITE
 	if b.attack=="core" and b.mode=="recover":body.modulate=Color(1.1,1.45,1.45)
 	if previous_health>=0 and b.health<previous_health:hit_flash=.16

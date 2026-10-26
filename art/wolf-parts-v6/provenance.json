@@ -1,0 +1,154 @@
+{
+  "route": "host_image:imagegen",
+  "art_source": "host_image",
+  "approval": "pending_user",
+  "source_sha256": "83be5dd14c963c13810365549c239a975180c880a1b1f8805e6dd5e034bf7197",
+  "processing": "Native alpha; full component ownership at alpha>8 expanded3px; transparent safety margin2px. No painted-limb cropping. Five separate anatomical shapes, not resized copies.",
+  "parts": [
+    {
+      "part": "hind_lower",
+      "source_bbox": [
+        702,
+        86,
+        856,
+        659
+      ],
+      "size": [
+        158,
+        577
+      ],
+      "sha256": "e52edc8430168765724d96e81cab0dfc6a461860445e75a2068148d15d748c95",
+      "joint_a": [
+        0.49683544303797467,
+        0.12824956672443674
+      ],
+      "joint_b": [
+        0.569620253164557,
+        0.8700173310225303
+      ],
+      "axis_deviation_px": 3.5478971962616868,
+      "axis_deviation_over_width": 0.022455045545960044
+    },
+    {
+      "part": "fore_lower",
+      "source_bbox": [
+        238,
+        75,
+        375,
+        659
+      ],
+      "size": [
+        141,
+        588
+      ],
+      "sha256": "d068f041ae616bffb484333c4ccc8ef61737754a338ee488f1a663bdcef76638",
+      "joint_a": [
+        0.4998337765957447,
+        0.12755102040816327
+      ],
+      "joint_b": [
+        0.5780141843971631,
+        0.8707482993197279
+      ],
+      "axis_deviation_px": 3.4549663901601804,
+      "axis_deviation_over_width": 0.024503307731632486
+    },
+    {
+      "part": "fore_paw",
+      "source_bbox": [
+        307,
+        771,
+        682,
+        951
+      ],
+      "size": [
+        379,
+        184
+      ],
+      "sha256": "806cc371d1ab6861de2c8dde927ed461d20616ad3fdbb023f23ae255583b3fff"
+    },
+    {
+      "part": "hind_paw",
+      "source_bbox": [
+        935,
+        778,
+        1312,
+        948
+      ],
+      "size": [
+        381,
+        174
+      ],
+      "sha256": "8b17d2c000835b8679737b7fbbeadd71cd472424b2b65e31b340112c8a9f1485"
+    },
+    {
+      "part": "hind_ankle",
+      "source_bbox": [
+        1188,
+        202,
+        1289,
+        643
+      ],
+      "size": [
+        105,
+        445
+      ],
+      "sha256": "c41d467a582ad7369b21108dc8b0daaf80f721aa802cbd8ef6e05dfcd062975a",
+      "joint_a": [
+        0.4903679653679654,
+        0.1303370786516854
+      ],
+      "joint_b": [
+        0.580952380952381,
+        0.8696629213483146
+      ],
+      "axis_deviation_px": 2.1819908814589652,
+      "axis_deviation_over_width": 0.020780865537704432
+    }
+  ],
+  "model": "host tool; exact model revision unknown",
+  "cost": "unknown",
+  "prompt": "prompt.txt",
+  "corrective_prompt": "prompt-retry.txt",
+  "references": [
+    {
+      "path": "art/wolf-parts-v6/user-failure-reference.png",
+      "sha256": "afde12f951e9934670ac8bc588d14c57574fc9add1798103ac9e50492e220e6b"
+    },
+    {
+      "path": "art/wolf-parts-v6/style-reference-v5.png",
+      "sha256": "28dd49a991a8b95a7b1b79c4d2f85acb4b1f5b5f412be759a1d6ebfab4f726fd"
+    },
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v5/hip.png",
+      "sha256": "ff82eceafcc2c68c9d612017b3d92a4b3bf9dbbfcd18ba5923bff46be40247c6"
+    }
+  ],
+  "rejected_attempt": {
+    "file": "art/wolf-parts-v6/rejected-curved.png",
+    "sha256": "a99543ba65c33d2b310d27d60f065c1b1fb8520eee4bf94dfd6b610b54f3ba88",
+    "reason": "前后小腿仍带明显S形轮廓，不采用；prompt-retry.txt明确改成单根近直线骨段。"
+  },
+  "unchanged_parts": [
+    {
+      "part": "torso",
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v5/torso.png",
+      "sha256": "b1834cfa5aad25d74f12bf14f2cc3735960fb4e106f062f03369741c91365bfc"
+    },
+    {
+      "part": "tail",
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v5/tail.png",
+      "sha256": "56070adac65c8f7771bf18bfc8faee5322243fe949a68af26e0fcecb72209ea4"
+    },
+    {
+      "part": "fore_upper",
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v5/fore_upper.png",
+      "sha256": "5f1a4dbb456305af2a99e40f42efd904d569bf030b32688b8bad3c6ee4249a49"
+    },
+    {
+      "part": "hip",
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v5/hip.png",
+      "sha256": "ff82eceafcc2c68c9d612017b3d92a4b3bf9dbbfcd18ba5923bff46be40247c6"
+    }
+  ]
+}

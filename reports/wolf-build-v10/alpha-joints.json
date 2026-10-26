@@ -1,0 +1,22 @@
+{
+  "checks": 2880,
+  "failures": [],
+  "minimum_overlap_pixels": {
+    "tail/torso": 34.22222222222222,
+    "rear0/root": 2107.8888888888887,
+    "rear0/knee": 396.1111111111111,
+    "rear0/hock": 168.77777777777777,
+    "rear0/heel": 113.55555555555556,
+    "rear1/root": 1999.4444444444443,
+    "rear1/knee": 388.8888888888889,
+    "rear1/hock": 162.44444444444446,
+    "rear1/heel": 113.55555555555556,
+    "front0/root": 1757.0,
+    "front0/elbow": 340.8888888888889,
+    "front0/wrist": 125.55555555555556,
+    "front1/root": 1483.5555555555557,
+    "front1/elbow": 300.44444444444446,
+    "front1/wrist": 125.88888888888889
+  },
+  "description": "Actual antialiased PNG alpha intersections at 3x sample density; coverage is a connectivity check, not aesthetic approval."
+}

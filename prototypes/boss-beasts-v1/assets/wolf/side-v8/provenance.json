@@ -1,0 +1,89 @@
+{
+  "route": "host_image:imagegen",
+  "approval": "pending_user",
+  "scope": "Generated fur RGB only; original v7 dimensions and alpha preserved bit-for-bit; source joint anchors and transforms unchanged. Neutral generated RGB includes outlines.",
+  "source_sha256": "5e2da1b325cbe70b36fb774aed4153d220b444d1fbd88ebe712d61f51dbff06c",
+  "parts": [
+    {
+      "part": "hind_lower",
+      "size": [
+        158,
+        577
+      ],
+      "source_bbox": [
+        635,
+        9,
+        894,
+        1008
+      ],
+      "source_version": "v7",
+      "source_sha256": "e6286dec6c3ffc41e890d53975f3a9fc4465c850babb5da68bf293ad301e397b",
+      "sha256": "343388a7feb6df393b3babd71368344298622a771b5f1374498dd341b54b890b",
+      "alpha_identical_to_source": true,
+      "median_visible_rgb_before": [
+        96.0,
+        105.0,
+        131.0
+      ],
+      "median_visible_rgb_after": [
+        131.0,
+        130.0,
+        130.0
+      ]
+    },
+    {
+      "part": "fore_lower",
+      "size": [
+        141,
+        588
+      ],
+      "source_bbox": [
+        272,
+        8,
+        503,
+        1012
+      ],
+      "source_version": "v7",
+      "source_sha256": "25eeb91818fc1c1ed6a0b9f4a4c8e603b790188369f1a379e386d59d1bc8d6dc",
+      "sha256": "9e086b05e6c9b14fdd0f25e6e7887241c8a43a7d94d339113efba206982d3e26",
+      "alpha_identical_to_source": true,
+      "median_visible_rgb_before": [
+        98.0,
+        107.0,
+        133.0
+      ],
+      "median_visible_rgb_after": [
+        132.0,
+        132.0,
+        132.0
+      ]
+    },
+    {
+      "part": "hind_ankle",
+      "size": [
+        105,
+        445
+      ],
+      "source_bbox": [
+        1065,
+        80,
+        1254,
+        935
+      ],
+      "source_version": "v7",
+      "source_sha256": "4411b47eebe427810841c9b70aec9bb7ca391e27f637b84dbc2d267d7de5e4db",
+      "sha256": "5fff4ec8d873077f04dfe1c26eec5fc34e32ec33ed7d40c81f1dda8fce5fd47a",
+      "alpha_identical_to_source": true,
+      "median_visible_rgb_before": [
+        97.0,
+        105.0,
+        131.0
+      ],
+      "median_visible_rgb_after": [
+        128.0,
+        127.0,
+        127.0
+      ]
+    }
+  ]
+}

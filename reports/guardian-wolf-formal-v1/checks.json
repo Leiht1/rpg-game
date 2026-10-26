@@ -1,0 +1,126 @@
+[
+  {
+    "pass": true,
+    "test": "formal wolf includes presentation driver"
+  },
+  {
+    "pass": true,
+    "test": "approved idle and walk available"
+  },
+  {
+    "pass": true,
+    "test": "nineteen layered parts use twelve formal textures"
+  },
+  {
+    "pass": true,
+    "test": "runtime has no candidate texture dependency"
+  },
+  {
+    "pass": true,
+    "test": "stationary boss idles on first frame"
+  },
+  {
+    "pass": true,
+    "test": "rightward motion starts approved walk"
+  },
+  {
+    "pass": true,
+    "test": "walk rate follows actual displacement"
+  },
+  {
+    "pass": true,
+    "test": "left uses whole-body mirror without compression"
+  },
+  {
+    "pass": true,
+    "test": "stopping restores idle"
+  },
+  {
+    "pass": true,
+    "test": "presentation does not mutate authoritative state"
+  },
+  {
+    "pass": true,
+    "test": "windup faces authoritative attack direction"
+  },
+  {
+    "pass": true,
+    "test": "existing charge reuses walk at actual speed"
+  },
+  {
+    "pass": true,
+    "test": "large restore jump does not sprint in place"
+  },
+  {
+    "pass": true,
+    "test": "formal clip sampled at 97 positions: side_idle"
+  },
+  {
+    "pass": true,
+    "test": "formal clip sampled at 97 positions: side_walk"
+  },
+  {
+    "pass": true,
+    "test": "fixture never writes player world or environment"
+  },
+  {
+    "pass": true,
+    "test": "existing final-chapter state remains valid"
+  },
+  {
+    "pass": true,
+    "test": "ordinary game view directly uses formal wolf"
+  },
+  {
+    "pass": true,
+    "test": "living wolf visible in real arena"
+  },
+  {
+    "pass": true,
+    "test": "old whole-picture bob and tilt excluded"
+  },
+  {
+    "pass": true,
+    "test": "original collision footprint preserved"
+  },
+  {
+    "pass": true,
+    "test": "real model movement drives walking"
+  },
+  {
+    "pass": true,
+    "test": "real arena movement mirrors left"
+  },
+  {
+    "pass": true,
+    "test": "original health presentation retained"
+  },
+  {
+    "pass": true,
+    "test": "original core-attack tint retained"
+  },
+  {
+    "pass": true,
+    "test": "view leaves boss and rewards state untouched"
+  },
+  {
+    "pass": true,
+    "test": "original damage flash retained"
+  },
+  {
+    "pass": true,
+    "test": "player is blocked by original guardian collision"
+  },
+  {
+    "pass": true,
+    "test": "victory hides wolf and retains existing core pickup"
+  },
+  {
+    "pass": true,
+    "test": "defeated guardian no longer blocks"
+  },
+  {
+    "pass": true,
+    "test": "view never awards loot on its own"
+  }
+]

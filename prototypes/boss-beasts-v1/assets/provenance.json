@@ -3,372 +3,6 @@
   "route": "local:codex-cli",
   "parts": [
     {
-      "kind": "bear",
-      "view": "front",
-      "part": "torso",
-      "ownership": [
-        14,
-        77,
-        279,
-        263
-      ],
-      "sha256": "f0b08f3a12d608633872c4bd20f03280cd065454ecc93e0697754631fb6bd10f"
-    },
-    {
-      "kind": "bear",
-      "view": "front",
-      "part": "head",
-      "ownership": [
-        86,
-        117,
-        697,
-        615
-      ],
-      "sha256": "bbf9907ad0ac18ac9c3ff171244aca5b8862b9b2b8cf12df48fb332eb4c6d7ae",
-      "source": "art\\boss-beasts-v1\\bear-head-host\\generated.png",
-      "route": "host_image:imagegen"
-    },
-    {
-      "kind": "bear",
-      "view": "front",
-      "part": "neck",
-      "ownership": [
-        482,
-        111,
-        604,
-        239
-      ],
-      "sha256": "bba08a1c0c723491ee0acf15f0e8a584d41c3077c34cfd4dcfc56530dabc94b7"
-    },
-    {
-      "kind": "bear",
-      "view": "front",
-      "part": "shoulder",
-      "ownership": [
-        629,
-        109,
-        758,
-        249
-      ],
-      "sha256": "d6b2eaffa8d92e287dfd7cd4d542cba3f4b3584fbd6cb3bf0c4aa584d4945b80"
-    },
-    {
-      "kind": "bear",
-      "view": "front",
-      "part": "fore_upper",
-      "ownership": [
-        793,
-        81,
-        906,
-        269
-      ],
-      "sha256": "3845837d905dc488fe34c7c23f1710212c4e4b28a092e798b86ed82351885020"
-    },
-    {
-      "kind": "bear",
-      "view": "front",
-      "part": "fore_lower",
-      "ownership": [
-        946,
-        110,
-        1031,
-        261
-      ],
-      "sha256": "79f06a7476657b3b6fd314de0908b71d19a0d5f7d90cc709caea5f6d7bf62c93"
-    },
-    {
-      "kind": "bear",
-      "view": "front",
-      "part": "fore_paw",
-      "ownership": [
-        1069,
-        113,
-        1179,
-        260
-      ],
-      "sha256": "6c3a2165cda11a985df805c66162156abb40d99d332ea207127aadbe06044a46"
-    },
-    {
-      "kind": "bear",
-      "view": "front",
-      "part": "hip",
-      "ownership": [
-        1331,
-        75,
-        1475,
-        261
-      ],
-      "sha256": "e181a1ac3d7753697ad384bff62a777d56dc4ed9e07eef20cff073e58b582090"
-    },
-    {
-      "kind": "bear",
-      "view": "front",
-      "part": "hind_lower",
-      "ownership": [
-        1498,
-        118,
-        1588,
-        256
-      ],
-      "sha256": "b62e4435f16f633ccf4ede9aebd7a0cd00d10d9ecd8dabec45bbf112d397f009"
-    },
-    {
-      "kind": "bear",
-      "view": "front",
-      "part": "hind_paw",
-      "ownership": [
-        1640,
-        132,
-        1740,
-        249
-      ],
-      "sha256": "da9d67be75b0db2e219ca668575614ed5184e597ee7bb40c367a92fba01e126e"
-    },
-    {
-      "kind": "bear",
-      "view": "back",
-      "part": "torso",
-      "ownership": [
-        13,
-        350,
-        279,
-        533
-      ],
-      "sha256": "5608edc50f405c2071f8eb6fa6f4821ff95ad7692575a9df15ef4f0a5466fca4"
-    },
-    {
-      "kind": "bear",
-      "view": "back",
-      "part": "head",
-      "ownership": [
-        784,
-        118,
-        1384,
-        615
-      ],
-      "sha256": "20fed3961e3ec0ba87138786094f2de7ae2feaf59e9d59e4481e365228594847",
-      "source": "art\\boss-beasts-v1\\bear-head-host\\generated.png",
-      "route": "host_image:imagegen"
-    },
-    {
-      "kind": "bear",
-      "view": "back",
-      "part": "neck",
-      "ownership": [
-        482,
-        385,
-        603,
-        510
-      ],
-      "sha256": "62f65784f38d561617670d405c43eaee73dfad774f088a319f994bfccd93dc75"
-    },
-    {
-      "kind": "bear",
-      "view": "back",
-      "part": "shoulder",
-      "ownership": [
-        624,
-        375,
-        760,
-        522
-      ],
-      "sha256": "5977c902ba850849074e8b289ed06d2802badc635fd6307b8d1b44445171aaf0"
-    },
-    {
-      "kind": "bear",
-      "view": "back",
-      "part": "fore_upper",
-      "ownership": [
-        792,
-        355,
-        904,
-        539
-      ],
-      "sha256": "5d8cbcc9b1b9a3caafaf535d370469a4386af8bb64a33a71f136a275532a2467"
-    },
-    {
-      "kind": "bear",
-      "view": "back",
-      "part": "fore_lower",
-      "ownership": [
-        945,
-        386,
-        1033,
-        540
-      ],
-      "sha256": "1f8ed64457059483c72fa57612f385c12dd01ee70867e422b7d65e9a8aa516a0"
-    },
-    {
-      "kind": "bear",
-      "view": "back",
-      "part": "fore_paw",
-      "ownership": [
-        1128,
-        391,
-        1252,
-        535
-      ],
-      "sha256": "367bb660953f95f0aa5b2a345f62723ef4f8e46ef9e499ee8d9ddbb71a3cb1f6"
-    },
-    {
-      "kind": "bear",
-      "view": "back",
-      "part": "hip",
-      "ownership": [
-        1330,
-        353,
-        1475,
-        543
-      ],
-      "sha256": "c86fcec87be0ea9036e0e44cfb1c574ccdd551cfa49598cbed6c481e2f6d3e4f"
-    },
-    {
-      "kind": "bear",
-      "view": "back",
-      "part": "hind_lower",
-      "ownership": [
-        1503,
-        395,
-        1593,
-        538
-      ],
-      "sha256": "bcbc5a8dceafe7c785fa470d712d03ac9fc68c654a7194f96f07c70fcabd4a09"
-    },
-    {
-      "kind": "bear",
-      "view": "back",
-      "part": "hind_paw",
-      "ownership": [
-        1639,
-        420,
-        1750,
-        538
-      ],
-      "sha256": "f69bc9b5212a2f431c1429c50e34ee47e7809855b497ba5bce9eb0bf3b2e44f6"
-    },
-    {
-      "kind": "bear",
-      "view": "side",
-      "part": "torso",
-      "ownership": [
-        12,
-        624,
-        274,
-        799
-      ],
-      "sha256": "16326ded410abfb2bcdc1b1cfaf0d161282d4271e5aa62c3387826b63ec00694"
-    },
-    {
-      "kind": "bear",
-      "view": "side",
-      "part": "head",
-      "ownership": [
-        1494,
-        117,
-        2114,
-        614
-      ],
-      "sha256": "5f6c4be24c8c60e9497e13edd03b682767affdc874398a202ccf8e8d40f2b1e7",
-      "source": "art\\boss-beasts-v1\\bear-head-host\\generated.png",
-      "route": "host_image:imagegen"
-    },
-    {
-      "kind": "bear",
-      "view": "side",
-      "part": "neck",
-      "ownership": [
-        496,
-        654,
-        595,
-        777
-      ],
-      "sha256": "687cf787bbb2f99ccce17fd5be7b6dee7c20e92bb25e957545ab13fa765c3d2c"
-    },
-    {
-      "kind": "bear",
-      "view": "side",
-      "part": "shoulder",
-      "ownership": [
-        633,
-        644,
-        757,
-        784
-      ],
-      "sha256": "2d75b3b28cc35212a4e39087aceb2dd70a568d667739232ea2b0495211e83bc8"
-    },
-    {
-      "kind": "bear",
-      "view": "side",
-      "part": "fore_upper",
-      "ownership": [
-        782,
-        618,
-        910,
-        812
-      ],
-      "sha256": "6e87e58b46383b344f7c574bb90a6ce3f75e7480ed576672ab2ad839702ea9a0"
-    },
-    {
-      "kind": "bear",
-      "view": "side",
-      "part": "fore_lower",
-      "ownership": [
-        942,
-        652,
-        1042,
-        804
-      ],
-      "sha256": "255b7fb776346b3e4e8250df0bd1dc0e0ea791a94c49096b388fa29a211b922d"
-    },
-    {
-      "kind": "bear",
-      "view": "side",
-      "part": "fore_paw",
-      "ownership": [
-        1088,
-        654,
-        1277,
-        796
-      ],
-      "sha256": "46c3f33158584ac19c7e3e978c7f7b4cbef3896d0fd750770534fbd1547a1092"
-    },
-    {
-      "kind": "bear",
-      "view": "side",
-      "part": "hip",
-      "ownership": [
-        1330,
-        620,
-        1475,
-        813
-      ],
-      "sha256": "a2a749716d4aca985e11174a1d68c459d472ea105a95b42ae90a940718a0013a"
-    },
-    {
-      "kind": "bear",
-      "view": "side",
-      "part": "hind_lower",
-      "ownership": [
-        1501,
-        660,
-        1601,
-        804
-      ],
-      "sha256": "0781708dfd842c959e912467b42537a8d51ff963bca06d1f727fc18ad91ad63b"
-    },
-    {
-      "kind": "bear",
-      "view": "side",
-      "part": "hind_paw",
-      "ownership": [
-        1633,
-        674,
-        1761,
-        788
-      ],
-      "sha256": "2f03303800bc00fcc25039461979bb76759430e34eedeedbbb773c7fc15be987"
-    },
-    {
       "kind": "wolf",
       "view": "front",
       "part": "torso",
@@ -767,7 +401,7 @@
   ],
   "hero": {
     "source": "assets/hero/cartoon/character.tscn",
-    "visible_height": 83.0
+    "visible_height": 83
   },
   "animation": "hierarchical cutout rig with two bone IK, user requested; no generated motion frames",
   "source_notes": [
@@ -783,5 +417,73 @@
   },
   "registration_notes": [
     "Wolf side tail mirrored as an isolated part; pivot uses actual proximal root at 92%,12%."
-  ]
+  ],
+  "revision_v3": {
+    "date": "2026-10-26",
+    "art_source": "existing",
+    "changes": "熊候选及源图移出工作目录，隔离恢复副本在reports/.tmp/removed-bear-v3；狼髋与后脚基点-81改-108；脚掌43改36，踝部对齐；原狼PNG不改。",
+    "approval": "pending_user"
+  },
+  "revision_v4": {
+    "date": "2026-10-26",
+    "art_source": "existing",
+    "approval": "pending_user",
+    "changes": "仅运行部件注册与层级：躯干常量倾角0.045弧度使臀部略抬高；后腿髋由统一-108改远侧-103/近侧-94，高度偏移30改12；近侧大腿放躯干前、远侧腿留后；尾根由(-123,bodyY+4)改(-128,bodyY-25)，躯干前重叠遮住原臀部切口。PNG不改。"
+  },
+  "revision_v5": {
+    "date": "2026-10-26",
+    "route": "host_image:imagegen",
+    "approval": "pending_user",
+    "source": "art/wolf-parts-v5",
+    "runtime": "wolf/side-v5",
+    "changes": "重画完整圆臀、完整尾根、粗前后上腿、纯脚掌及三段小腿/跖段，共9PNG；尾巴绘制于身体后；旧PNG保留。覆盖V4尾根前景重叠与V3/V4原脚掌和小腿显示。",
+    "qa": "reports/wolf-parts-v5/REPORT.md"
+  },
+  "revision_v6": {
+    "date": "2026-10-26",
+    "route": "host_image:imagegen",
+    "approval": "pending_user",
+    "source": "art/wolf-parts-v6",
+    "runtime": "wolf/side-v6",
+    "changes": "保留V5大腿、身体与尾巴；重画五种下肢/脚掌为独立单段，去掉素材内置S弯曲；每段按源图两关节等比连接，不分别缩放宽高。",
+    "report": "reports/wolf-parts-v6/REPORT.md"
+  },
+  "revision_v7": {
+    "date": "2026-10-26",
+    "route": "host_image:imagegen",
+    "approval": "pending_user_colors",
+    "source": "art/wolf-fur-v7",
+    "runtime": "wolf/side-v7",
+    "scope": "仅前小腿、后小腿、后跖段RGB毛色和毛发表现；原V6尺寸与alpha逐像素保持，全部源关节点及显示变换不改。",
+    "report": "reports/wolf-fur-v7/REPORT.md"
+  },
+  "revision_v9": {
+    "date": "2026-10-26",
+    "route": "host_image:imagegen",
+    "approval": "pending_user_colors",
+    "source": "art/wolf-fur-v9",
+    "runtime": "wolf/side-v9",
+    "scope": "用户纠正：只沿用大腿浅灰毛色；V7蓝灰与V8误解的深灰均退出当前显示。腿型、alpha、尺寸、源关节和全部显示变换保持。",
+    "report": "reports/wolf-fur-v9/REPORT.md"
+  },
+  "revision_v10": {
+    "date": "2026-10-26",
+    "route": "host_image:imagegen",
+    "approval": "pending_user",
+    "source": "art/wolf-build-v10",
+    "runtime": "wolf/side-v10",
+    "scope": "所有腿段重画加粗、臀部抬高；保留原毛色，四只脚仅改色，原大小外形和足部运动保持。前脚连接检查完成。",
+    "report": "reports/wolf-build-v10/REPORT.md"
+  },
+  "revision_v11": {
+    "date": "2026-10-26",
+    "route": "host_image:imagegen",
+    "approval": "approved_current_v11",
+    "source": "art/wolf-unify-v11",
+    "runtime": "wolf/side-v11",
+    "scope": "原轮廓保持，后腿加粗、前小腿略短、臀部再抬高；按当前V10大腿真实灰色与描边统一下肢和脚掌。",
+    "report": "reports/wolf-unify-v11/REPORT.md",
+    "approval_quote": "先暂定这版吧，接入游戏，然后将项目推送到远端",
+    "formal_manifest": "assets/exploration/wolf-v1/provenance.json"
+  }
 }

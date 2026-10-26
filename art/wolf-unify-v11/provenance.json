@@ -1,0 +1,153 @@
+{
+  "route": "host_image:imagegen",
+  "approval": "approved_current_v11",
+  "source_sha256": "ae5bb3f192be1c76bb12a4bc2976dec19e0fecfb94b72e3ab9994a9b6ff3e30a",
+  "processing": "Three generated lower-leg fur/ink materials registered along the actual unchanged V10 contours, not only their bounding boxes. Paw original correctly located ink, claw and fur strokes retained, coat palette matched to the current V10 thigh. All five PNG alpha/dimensions unchanged. No painted silhouette cutting or code-drawn outline.",
+  "thigh_coat_median_rgb": [
+    187,
+    186,
+    189
+  ],
+  "thigh_ink_median_rgb": [
+    3,
+    3,
+    7
+  ],
+  "parts": [
+    {
+      "part": "hind_lower",
+      "source_bbox": [
+        626,
+        52,
+        960,
+        766
+      ],
+      "size": [
+        252,
+        540
+      ],
+      "alpha_identical_to_v10": true,
+      "sha256": "07a624a89b7d0490a36f2766b4ac13f447cdd38c1f16d5757a88a081161ecb58",
+      "source_v10_sha256": "c052459d712316542ced1fed97c7786289795c017de6097f10ac8bff749345cd",
+      "median_visible_rgb": [
+        176,
+        175,
+        181
+      ]
+    },
+    {
+      "part": "fore_lower",
+      "source_bbox": [
+        149,
+        48,
+        448,
+        765
+      ],
+      "size": [
+        238,
+        554
+      ],
+      "alpha_identical_to_v10": true,
+      "sha256": "0f49b94e24e2d5d97c1c5adf554ea2756d7612d3510a131f2565ab59fe876728",
+      "source_v10_sha256": "f59cba866445f4b69adda2636a5a74647d898f1313311649a4d9c94bf5e356fe",
+      "median_visible_rgb": [
+        176,
+        175,
+        180
+      ]
+    },
+    {
+      "part": "fore_paw",
+      "source_bbox": [
+        94,
+        756,
+        726,
+        1002
+      ],
+      "size": [
+        379,
+        184
+      ],
+      "alpha_identical_to_v10": true,
+      "sha256": "3ef166b7e92305de107192c6187ef4987356d27be79d5fa7498ab248a277eb0f",
+      "source_v10_sha256": "d030cb0e50e92045aeebbd8e254f71a6850a554c9a952f5b74f825ac81ec5b44",
+      "median_visible_rgb": [
+        173,
+        173,
+        179
+      ]
+    },
+    {
+      "part": "hind_ankle",
+      "source_bbox": [
+        1160,
+        137,
+        1405,
+        733
+      ],
+      "size": [
+        184,
+        454
+      ],
+      "alpha_identical_to_v10": true,
+      "sha256": "f4ae7765085571952a02f54f4141f1f514d0b79e0b949cfcd0349781db9859b3",
+      "source_v10_sha256": "5f615fa81c4753da8f1aff28cae18bfbf5788dbd345bfc06a426d10e107ad13f",
+      "median_visible_rgb": [
+        175,
+        174,
+        180
+      ]
+    },
+    {
+      "part": "hind_paw",
+      "source_bbox": [
+        863,
+        784,
+        1458,
+        1005
+      ],
+      "size": [
+        381,
+        174
+      ],
+      "alpha_identical_to_v10": true,
+      "sha256": "b0fcc3b6681cc2d9063ea7ec5e8332d8fd68361a561093c009b0f65275de2491",
+      "source_v10_sha256": "b6526e0b0c117a628fcf8c97b649aa3d77328bce517735b09783e2779c522fae",
+      "median_visible_rgb": [
+        172,
+        172,
+        178
+      ]
+    }
+  ],
+  "actual_source_size": [
+    1536,
+    1024
+  ],
+  "art_source": "host_image",
+  "model": "host imagegen; exact revision unknown",
+  "cost": "unknown",
+  "prompt": "art/wolf-unify-v11/prompt.txt",
+  "references": [
+    {
+      "path": "prototypes/boss-beasts-v1/assets/wolf/side-v10/hip.png",
+      "sha256": "ee14278ad48ef41dba62f9a2770805f09bff3b7b870924c6836e8c035a41c71d"
+    },
+    {
+      "path": "art/wolf-unify-v11/thigh-grey-reference.png",
+      "sha256": "767afc33355b4db4d35355560976eceeeb542aeee502ae0490572b5cf3d4de8d"
+    },
+    {
+      "path": "art/wolf-unify-v11/lower-references.png",
+      "sha256": "f13b72dbdab9f193374da926c9cd00d610a4f0314c8132f4094c0d39f7b1bbdd"
+    },
+    {
+      "path": "art/wolf-unify-v11/paw-references.png",
+      "sha256": "80703aa6d4ccbc47dace41802bb0b3909bca5cc9f092a48fb026a65da04bd639"
+    }
+  ],
+  "geometry_scope": "Only requested display adjustments: thicker rear segments, shorter front lower with width kept, higher rump; original bitmap contours and all paw sizes/trajectories retained.",
+  "validation": "reports/wolf-unify-v11/REPORT.md",
+  "approval_quote": "先暂定这版吧，接入游戏，然后将项目推送到远端",
+  "formal_manifest": "assets/exploration/wolf-v1/provenance.json"
+}

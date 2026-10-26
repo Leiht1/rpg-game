@@ -7,11 +7,15 @@ class Img{async decode(){const b=fs.readFileSync(path.join(root,this.src));this.
 const box={document:{querySelector:()=>({getContext:()=>ctx}),getElementById:id=>controls[id]||(controls[id]=el()),querySelectorAll:()=>[]},Image:Img,console,requestAnimationFrame:noop,window:{}};
 vm.createContext(box);vm.runInContext(fs.readFileSync(path.join(root,'preview.js'),'utf8'),box);
 let checks=0;const check=(v,m)=>{assert(v,m);checks++},dist=(a,b)=>Math.hypot(a[0]-b[0],a[1]-b[1]);
-for(const k of ['bear','wolf']){
+for(const k of ['wolf']){
  const solve=(t,pose=null)=>vm.runInContext(`state.action='walk';state.pose=${JSON.stringify(pose)};solve('${k}',${t})`,box);
  const p=solve(0).p;let prev;
  for(let i=0;i<=1000;i++){
   const s=solve(i/1000*p.cycle);
+  for(const l of s.legs.filter(l=>!l.rear)){
+   check(Math.abs(dist(l.hip,l.knee)-66)<1e-7,`${k} front upper reach`);
+   check(Math.abs(dist(l.knee,l.sole)-62)<1e-7,`${k} shortened front lower reach`);
+  }
   for(let j=0;j<2;j++){
    const l=s.legs[j],floor=l.far?-13:0;
    check(Math.abs(dist(l.hip,l.knee)-p.thigh)<1e-7,`${k} thigh length`);

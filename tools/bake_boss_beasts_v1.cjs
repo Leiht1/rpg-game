@@ -9,7 +9,7 @@ class Img{async decode(){const b=fs.readFileSync(path.join(root,this.src));this.
 const sandbox={document:doc,Image:Img,console,requestAnimationFrame:noop,window:{},rigCapture:[]};vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(root,'preview.js'),'utf8'),sandbox);
 setImmediate(()=>{
  const num=x=>Number(x.toFixed(6));const vec=(x,y)=>`Vector2(${num(x)}, ${num(y)})`;
- for(const k of ['bear','wolf']){
+ for(const k of ['wolf']){
   let clips=[];const ext=new Map();
   for(const v of ['side'])for(const action of ['idle','walk']){
    const duration=action==='idle'?(k==='bear'?3.8:2.8):(k==='bear'?2.6:1.9),frames=[];
