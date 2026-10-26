@@ -1,0 +1,787 @@
+{
+  "approval": "pending_user",
+  "route": "local:codex-cli",
+  "parts": [
+    {
+      "kind": "bear",
+      "view": "front",
+      "part": "torso",
+      "ownership": [
+        14,
+        77,
+        279,
+        263
+      ],
+      "sha256": "f0b08f3a12d608633872c4bd20f03280cd065454ecc93e0697754631fb6bd10f"
+    },
+    {
+      "kind": "bear",
+      "view": "front",
+      "part": "head",
+      "ownership": [
+        86,
+        117,
+        697,
+        615
+      ],
+      "sha256": "bbf9907ad0ac18ac9c3ff171244aca5b8862b9b2b8cf12df48fb332eb4c6d7ae",
+      "source": "art\\boss-beasts-v1\\bear-head-host\\generated.png",
+      "route": "host_image:imagegen"
+    },
+    {
+      "kind": "bear",
+      "view": "front",
+      "part": "neck",
+      "ownership": [
+        482,
+        111,
+        604,
+        239
+      ],
+      "sha256": "bba08a1c0c723491ee0acf15f0e8a584d41c3077c34cfd4dcfc56530dabc94b7"
+    },
+    {
+      "kind": "bear",
+      "view": "front",
+      "part": "shoulder",
+      "ownership": [
+        629,
+        109,
+        758,
+        249
+      ],
+      "sha256": "d6b2eaffa8d92e287dfd7cd4d542cba3f4b3584fbd6cb3bf0c4aa584d4945b80"
+    },
+    {
+      "kind": "bear",
+      "view": "front",
+      "part": "fore_upper",
+      "ownership": [
+        793,
+        81,
+        906,
+        269
+      ],
+      "sha256": "3845837d905dc488fe34c7c23f1710212c4e4b28a092e798b86ed82351885020"
+    },
+    {
+      "kind": "bear",
+      "view": "front",
+      "part": "fore_lower",
+      "ownership": [
+        946,
+        110,
+        1031,
+        261
+      ],
+      "sha256": "79f06a7476657b3b6fd314de0908b71d19a0d5f7d90cc709caea5f6d7bf62c93"
+    },
+    {
+      "kind": "bear",
+      "view": "front",
+      "part": "fore_paw",
+      "ownership": [
+        1069,
+        113,
+        1179,
+        260
+      ],
+      "sha256": "6c3a2165cda11a985df805c66162156abb40d99d332ea207127aadbe06044a46"
+    },
+    {
+      "kind": "bear",
+      "view": "front",
+      "part": "hip",
+      "ownership": [
+        1331,
+        75,
+        1475,
+        261
+      ],
+      "sha256": "e181a1ac3d7753697ad384bff62a777d56dc4ed9e07eef20cff073e58b582090"
+    },
+    {
+      "kind": "bear",
+      "view": "front",
+      "part": "hind_lower",
+      "ownership": [
+        1498,
+        118,
+        1588,
+        256
+      ],
+      "sha256": "b62e4435f16f633ccf4ede9aebd7a0cd00d10d9ecd8dabec45bbf112d397f009"
+    },
+    {
+      "kind": "bear",
+      "view": "front",
+      "part": "hind_paw",
+      "ownership": [
+        1640,
+        132,
+        1740,
+        249
+      ],
+      "sha256": "da9d67be75b0db2e219ca668575614ed5184e597ee7bb40c367a92fba01e126e"
+    },
+    {
+      "kind": "bear",
+      "view": "back",
+      "part": "torso",
+      "ownership": [
+        13,
+        350,
+        279,
+        533
+      ],
+      "sha256": "5608edc50f405c2071f8eb6fa6f4821ff95ad7692575a9df15ef4f0a5466fca4"
+    },
+    {
+      "kind": "bear",
+      "view": "back",
+      "part": "head",
+      "ownership": [
+        784,
+        118,
+        1384,
+        615
+      ],
+      "sha256": "20fed3961e3ec0ba87138786094f2de7ae2feaf59e9d59e4481e365228594847",
+      "source": "art\\boss-beasts-v1\\bear-head-host\\generated.png",
+      "route": "host_image:imagegen"
+    },
+    {
+      "kind": "bear",
+      "view": "back",
+      "part": "neck",
+      "ownership": [
+        482,
+        385,
+        603,
+        510
+      ],
+      "sha256": "62f65784f38d561617670d405c43eaee73dfad774f088a319f994bfccd93dc75"
+    },
+    {
+      "kind": "bear",
+      "view": "back",
+      "part": "shoulder",
+      "ownership": [
+        624,
+        375,
+        760,
+        522
+      ],
+      "sha256": "5977c902ba850849074e8b289ed06d2802badc635fd6307b8d1b44445171aaf0"
+    },
+    {
+      "kind": "bear",
+      "view": "back",
+      "part": "fore_upper",
+      "ownership": [
+        792,
+        355,
+        904,
+        539
+      ],
+      "sha256": "5d8cbcc9b1b9a3caafaf535d370469a4386af8bb64a33a71f136a275532a2467"
+    },
+    {
+      "kind": "bear",
+      "view": "back",
+      "part": "fore_lower",
+      "ownership": [
+        945,
+        386,
+        1033,
+        540
+      ],
+      "sha256": "1f8ed64457059483c72fa57612f385c12dd01ee70867e422b7d65e9a8aa516a0"
+    },
+    {
+      "kind": "bear",
+      "view": "back",
+      "part": "fore_paw",
+      "ownership": [
+        1128,
+        391,
+        1252,
+        535
+      ],
+      "sha256": "367bb660953f95f0aa5b2a345f62723ef4f8e46ef9e499ee8d9ddbb71a3cb1f6"
+    },
+    {
+      "kind": "bear",
+      "view": "back",
+      "part": "hip",
+      "ownership": [
+        1330,
+        353,
+        1475,
+        543
+      ],
+      "sha256": "c86fcec87be0ea9036e0e44cfb1c574ccdd551cfa49598cbed6c481e2f6d3e4f"
+    },
+    {
+      "kind": "bear",
+      "view": "back",
+      "part": "hind_lower",
+      "ownership": [
+        1503,
+        395,
+        1593,
+        538
+      ],
+      "sha256": "bcbc5a8dceafe7c785fa470d712d03ac9fc68c654a7194f96f07c70fcabd4a09"
+    },
+    {
+      "kind": "bear",
+      "view": "back",
+      "part": "hind_paw",
+      "ownership": [
+        1639,
+        420,
+        1750,
+        538
+      ],
+      "sha256": "f69bc9b5212a2f431c1429c50e34ee47e7809855b497ba5bce9eb0bf3b2e44f6"
+    },
+    {
+      "kind": "bear",
+      "view": "side",
+      "part": "torso",
+      "ownership": [
+        12,
+        624,
+        274,
+        799
+      ],
+      "sha256": "16326ded410abfb2bcdc1b1cfaf0d161282d4271e5aa62c3387826b63ec00694"
+    },
+    {
+      "kind": "bear",
+      "view": "side",
+      "part": "head",
+      "ownership": [
+        1494,
+        117,
+        2114,
+        614
+      ],
+      "sha256": "5f6c4be24c8c60e9497e13edd03b682767affdc874398a202ccf8e8d40f2b1e7",
+      "source": "art\\boss-beasts-v1\\bear-head-host\\generated.png",
+      "route": "host_image:imagegen"
+    },
+    {
+      "kind": "bear",
+      "view": "side",
+      "part": "neck",
+      "ownership": [
+        496,
+        654,
+        595,
+        777
+      ],
+      "sha256": "687cf787bbb2f99ccce17fd5be7b6dee7c20e92bb25e957545ab13fa765c3d2c"
+    },
+    {
+      "kind": "bear",
+      "view": "side",
+      "part": "shoulder",
+      "ownership": [
+        633,
+        644,
+        757,
+        784
+      ],
+      "sha256": "2d75b3b28cc35212a4e39087aceb2dd70a568d667739232ea2b0495211e83bc8"
+    },
+    {
+      "kind": "bear",
+      "view": "side",
+      "part": "fore_upper",
+      "ownership": [
+        782,
+        618,
+        910,
+        812
+      ],
+      "sha256": "6e87e58b46383b344f7c574bb90a6ce3f75e7480ed576672ab2ad839702ea9a0"
+    },
+    {
+      "kind": "bear",
+      "view": "side",
+      "part": "fore_lower",
+      "ownership": [
+        942,
+        652,
+        1042,
+        804
+      ],
+      "sha256": "255b7fb776346b3e4e8250df0bd1dc0e0ea791a94c49096b388fa29a211b922d"
+    },
+    {
+      "kind": "bear",
+      "view": "side",
+      "part": "fore_paw",
+      "ownership": [
+        1088,
+        654,
+        1277,
+        796
+      ],
+      "sha256": "46c3f33158584ac19c7e3e978c7f7b4cbef3896d0fd750770534fbd1547a1092"
+    },
+    {
+      "kind": "bear",
+      "view": "side",
+      "part": "hip",
+      "ownership": [
+        1330,
+        620,
+        1475,
+        813
+      ],
+      "sha256": "a2a749716d4aca985e11174a1d68c459d472ea105a95b42ae90a940718a0013a"
+    },
+    {
+      "kind": "bear",
+      "view": "side",
+      "part": "hind_lower",
+      "ownership": [
+        1501,
+        660,
+        1601,
+        804
+      ],
+      "sha256": "0781708dfd842c959e912467b42537a8d51ff963bca06d1f727fc18ad91ad63b"
+    },
+    {
+      "kind": "bear",
+      "view": "side",
+      "part": "hind_paw",
+      "ownership": [
+        1633,
+        674,
+        1761,
+        788
+      ],
+      "sha256": "2f03303800bc00fcc25039461979bb76759430e34eedeedbbb773c7fc15be987"
+    },
+    {
+      "kind": "wolf",
+      "view": "front",
+      "part": "torso",
+      "ownership": [
+        23,
+        71,
+        260,
+        272
+      ],
+      "sha256": "f76f67bcb99acdbe3e4c3931d4b5fa56248bec11ad8dcea9002589b31c3197fc"
+    },
+    {
+      "kind": "wolf",
+      "view": "front",
+      "part": "head",
+      "ownership": [
+        277,
+        66,
+        455,
+        279
+      ],
+      "sha256": "886e3604c142199a5610b8dcc67a70bc038cac23bb59b65f9ed83a507f5e23f4"
+    },
+    {
+      "kind": "wolf",
+      "view": "front",
+      "part": "neck",
+      "ownership": [
+        470,
+        122,
+        607,
+        272
+      ],
+      "sha256": "00b3fa350ec9b8d9555bb9498e74e67678e99a3317883f87f46d69a6402ae14b"
+    },
+    {
+      "kind": "wolf",
+      "view": "front",
+      "part": "shoulder",
+      "ownership": [
+        629,
+        125,
+        730,
+        241
+      ],
+      "sha256": "1d3b7073f7491425ab04d3e3b42c2595c6b35baa8a8f2e5a9785acf4bbf9abf0"
+    },
+    {
+      "kind": "wolf",
+      "view": "front",
+      "part": "fore_upper",
+      "ownership": [
+        762,
+        58,
+        853,
+        198
+      ],
+      "sha256": "463c0b4ac3cbc7a5e5522a2571bf727de2dbb0f9b2e90c40e2b5108339596434"
+    },
+    {
+      "kind": "wolf",
+      "view": "front",
+      "part": "fore_lower",
+      "ownership": [
+        895,
+        90,
+        956,
+        236
+      ],
+      "sha256": "f5122b9e5e2305cafd5ea46f8e88da16fc221d3e964c60045dce7cebfb633730"
+    },
+    {
+      "kind": "wolf",
+      "view": "front",
+      "part": "fore_paw",
+      "ownership": [
+        1003,
+        158,
+        1086,
+        258
+      ],
+      "sha256": "a6ecb378b4cbab96a8afa7c9719166381fee86a26b983b2cea907ed9afa6f17f"
+    },
+    {
+      "kind": "wolf",
+      "view": "front",
+      "part": "hip",
+      "ownership": [
+        1129,
+        58,
+        1232,
+        222
+      ],
+      "sha256": "e6c518c60223899bb42e6657953ed96c560ce6239aa3d918405fb46173a7bc6c"
+    },
+    {
+      "kind": "wolf",
+      "view": "front",
+      "part": "hind_lower",
+      "ownership": [
+        1299,
+        83,
+        1369,
+        237
+      ],
+      "sha256": "3cfbe3db1fde981696d65300f4406c5004ee291388a70568970cffb4302d7c10"
+    },
+    {
+      "kind": "wolf",
+      "view": "front",
+      "part": "hind_paw",
+      "ownership": [
+        1428,
+        170,
+        1511,
+        270
+      ],
+      "sha256": "6150b794080bbea61469b91f92d892660b82b312ecb22ac83e6c3d0d6d1ddc1d"
+    },
+    {
+      "kind": "wolf",
+      "view": "front",
+      "part": "tail",
+      "ownership": [
+        1564,
+        33,
+        1709,
+        297
+      ],
+      "sha256": "2e73c6533bf1bcb4ce78219b9e84859fe6a00d30a636b777edde9228a50954c4"
+    },
+    {
+      "kind": "wolf",
+      "view": "back",
+      "part": "torso",
+      "ownership": [
+        29,
+        351,
+        274,
+        556
+      ],
+      "sha256": "ac6e95aa30b1da23248f3445328b1cbb3433839b08ad0e9992a3677a2075ed1a"
+    },
+    {
+      "kind": "wolf",
+      "view": "back",
+      "part": "head",
+      "ownership": [
+        296,
+        350,
+        475,
+        564
+      ],
+      "sha256": "70fd75ea6ea9d8fc7141d9c3a5061ffb74e7bde811af6cc81da0c2f6c6ad5b3d"
+    },
+    {
+      "kind": "wolf",
+      "view": "back",
+      "part": "neck",
+      "ownership": [
+        492,
+        391,
+        616,
+        559
+      ],
+      "sha256": "ee37b58d8ff7eb72739dca823bed92cb3c0a4835d18e2682297756ff3f358cb9"
+    },
+    {
+      "kind": "wolf",
+      "view": "back",
+      "part": "shoulder",
+      "ownership": [
+        637,
+        408,
+        739,
+        512
+      ],
+      "sha256": "53b816dc715470a81f99ba121ca9eac66f987343a50b07e41c210bef06ecf78a"
+    },
+    {
+      "kind": "wolf",
+      "view": "back",
+      "part": "fore_upper",
+      "ownership": [
+        766,
+        342,
+        861,
+        476
+      ],
+      "sha256": "67b6d55dbb9601de804d6370b7ebcc05ce42bdbf5b39fda87b32a2b703e8c6ce"
+    },
+    {
+      "kind": "wolf",
+      "view": "back",
+      "part": "fore_lower",
+      "ownership": [
+        910,
+        370,
+        971,
+        512
+      ],
+      "sha256": "d92118d930dbd82731ceb44d509105d97ba3a15f7d2b3912be153180c77bef45"
+    },
+    {
+      "kind": "wolf",
+      "view": "back",
+      "part": "fore_paw",
+      "ownership": [
+        1018,
+        443,
+        1094,
+        540
+      ],
+      "sha256": "a069bc90039156c723179e5b8e336f74d400bb752f00b7ddd736a57675c69ee0"
+    },
+    {
+      "kind": "wolf",
+      "view": "back",
+      "part": "hip",
+      "ownership": [
+        1136,
+        342,
+        1240,
+        504
+      ],
+      "sha256": "66bd6c3cd5bc93097be798d0f442c1350521cb755c665d63787cb26a82023fc6"
+    },
+    {
+      "kind": "wolf",
+      "view": "back",
+      "part": "hind_lower",
+      "ownership": [
+        1304,
+        368,
+        1372,
+        516
+      ],
+      "sha256": "1b3dac40a9d3cc79ba17f384d63943c650b496f0eb96085debe699ba8c7c43cc"
+    },
+    {
+      "kind": "wolf",
+      "view": "back",
+      "part": "hind_paw",
+      "ownership": [
+        1430,
+        448,
+        1508,
+        548
+      ],
+      "sha256": "0951070bea7efd5efbbc5a4b99a416a66dec9740f087c3c7ce66129cc9e93875"
+    },
+    {
+      "kind": "wolf",
+      "view": "back",
+      "part": "tail",
+      "ownership": [
+        1569,
+        320,
+        1711,
+        586
+      ],
+      "sha256": "2e86bb22515ad318df2c17aea424ed967a29707e5d2364efe1d1d3778fc15556"
+    },
+    {
+      "kind": "wolf",
+      "view": "side",
+      "part": "torso",
+      "ownership": [
+        26,
+        636,
+        332,
+        822
+      ],
+      "sha256": "42fac9024dcf0309446a450ad7c66bd75487f70861ba52794142c018c33c6017"
+    },
+    {
+      "kind": "wolf",
+      "view": "side",
+      "part": "head",
+      "ownership": [
+        345,
+        630,
+        555,
+        822
+      ],
+      "sha256": "36aa40852266e86353c7368dc6723dc033fa353c876d21bf4375156efcd854d4"
+    },
+    {
+      "kind": "wolf",
+      "view": "side",
+      "part": "neck",
+      "ownership": [
+        565,
+        665,
+        686,
+        821
+      ],
+      "sha256": "95d3ed78f1dcc9dd336675f22839e978d187832384d6b70218998ee5c843f114"
+    },
+    {
+      "kind": "wolf",
+      "view": "side",
+      "part": "shoulder",
+      "ownership": [
+        716,
+        685,
+        823,
+        797
+      ],
+      "sha256": "8e91ce9c1ed0b5de7650c1706f6ae19df81259a5e01672cca30b856eedbd579e"
+    },
+    {
+      "kind": "wolf",
+      "view": "side",
+      "part": "fore_upper",
+      "ownership": [
+        857,
+        633,
+        978,
+        757
+      ],
+      "sha256": "5b95bd906fc34b05a6c4f9b39e3220a26fd7e4b84d12a0cdc48172504bf94823"
+    },
+    {
+      "kind": "wolf",
+      "view": "side",
+      "part": "fore_lower",
+      "ownership": [
+        993,
+        673,
+        1081,
+        798
+      ],
+      "sha256": "41d284fe21452e6005e04e4f737547b569fa55e277fb34c774d096059eea8bcb"
+    },
+    {
+      "kind": "wolf",
+      "view": "side",
+      "part": "fore_paw",
+      "ownership": [
+        1092,
+        761,
+        1198,
+        826
+      ],
+      "sha256": "a4befdd52fe7b6c9c171a2a56b87a7a166741c3c7a21fd89472272d409d25294"
+    },
+    {
+      "kind": "wolf",
+      "view": "side",
+      "part": "hip",
+      "ownership": [
+        1178,
+        633,
+        1313,
+        784
+      ],
+      "sha256": "46e03f0f60060a0982848fd1943d79b2515408f668a054157c678c46d4abc5a3"
+    },
+    {
+      "kind": "wolf",
+      "view": "side",
+      "part": "hind_lower",
+      "ownership": [
+        1346,
+        660,
+        1460,
+        795
+      ],
+      "sha256": "62cead773ec723e5908af8cfc1467209cc05fe6826611ceb880d20a32922b5de"
+    },
+    {
+      "kind": "wolf",
+      "view": "side",
+      "part": "hind_paw",
+      "ownership": [
+        1471,
+        760,
+        1578,
+        827
+      ],
+      "sha256": "68eae0130cd471731b47ea7c65ecd54008ff6006ef494869bd842c243d514b5f"
+    },
+    {
+      "kind": "wolf",
+      "view": "side",
+      "part": "tail",
+      "ownership": [
+        1550,
+        626,
+        1757,
+        835
+      ],
+      "sha256": "e4f4435f2250559c8111ac89b5f04c1e0a7b4fd92ace12315f9a7591e861ec7d"
+    }
+  ],
+  "hero": {
+    "source": "assets/hero/cartoon/character.tscn",
+    "visible_height": 83.0
+  },
+  "animation": "hierarchical cutout rig with two bone IK, user requested; no generated motion frames",
+  "source_notes": [
+    "Source atlas is 1774x887, not requested 3072x1536; ownership follows actual parts, not equal cells.",
+    "Bear front atlas contains an unused extra forepaw. Thin grid lines removed by component ownership.",
+    "Wolf upper thigh and foreleg sources include distal extensions; proximal ownership is recorded per part.",
+    "Bear head-only revision uses built-in imagegen after local CLI returned TOOL_UNAVAILABLE; model exact revision unknown."
+  ],
+  "source_sha256": {
+    "art\\boss-beasts-v1\\bear-head-host\\generated.png": "05c5635c897078c2719cf4e6c53e5c5fb62666df60a987ea10811e5d7ae8e2b1",
+    "art\\boss-beasts-v1\\bear-source-retry\\generated.png": "3dedede9363c99e3b4ae4c903ff1c9a827cbf1032e43f2cae301c2a92fb1db9c",
+    "art\\boss-beasts-v1\\wolf-source-retry\\generated.png": "116db5627c24acaab8089a19a8bc514fc35fbeebbf6931fb040e6faa0ac37a48"
+  },
+  "registration_notes": [
+    "Wolf side tail mirrored as an isolated part; pivot uses actual proximal root at 92%,12%."
+  ]
+}

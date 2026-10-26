@@ -1,0 +1,92 @@
+{
+	"checks": 113,
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"poses": [
+		{
+			"foot_separation": 93.1271209716797,
+			"free_sole_y": 0.0,
+			"loaded_sole_y": 0.0,
+			"pose": "neutral",
+			"view": "front"
+		},
+		{
+			"foot_separation": 95.0191612243652,
+			"free_sole_y": -0.324779510498047,
+			"loaded_sole_y": 0.0,
+			"pose": "contact",
+			"view": "front"
+		},
+		{
+			"foot_separation": 73.4164714813232,
+			"free_sole_y": -2.40242767333984,
+			"loaded_sole_y": 0.0000019073486328125,
+			"pose": "down",
+			"view": "front"
+		},
+		{
+			"foot_separation": 78.1873455047607,
+			"free_sole_y": -11.5142993927002,
+			"loaded_sole_y": 0.0,
+			"pose": "passing",
+			"view": "front"
+		},
+		{
+			"foot_separation": 93.1271209716797,
+			"free_sole_y": 0.0,
+			"loaded_sole_y": 0.0,
+			"pose": "neutral",
+			"view": "back"
+		},
+		{
+			"foot_separation": 95.0191612243652,
+			"free_sole_y": -0.324779510498047,
+			"loaded_sole_y": 0.0,
+			"pose": "contact",
+			"view": "back"
+		},
+		{
+			"foot_separation": 73.4164714813232,
+			"free_sole_y": -2.40242767333984,
+			"loaded_sole_y": 0.0000019073486328125,
+			"pose": "down",
+			"view": "back"
+		},
+		{
+			"foot_separation": 78.1873455047607,
+			"free_sole_y": -11.5142993927002,
+			"loaded_sole_y": 0.0,
+			"pose": "passing",
+			"view": "back"
+		},
+		{
+			"foot_separation": 36.0,
+			"free_sole_y": 0.0000019073486328125,
+			"loaded_sole_y": 0.0000019073486328125,
+			"pose": "neutral",
+			"view": "right"
+		},
+		{
+			"foot_separation": 47.2974243164063,
+			"free_sole_y": 0.0,
+			"loaded_sole_y": 0.0,
+			"pose": "contact",
+			"view": "right"
+		},
+		{
+			"foot_separation": 39.9159889221191,
+			"free_sole_y": -2.3659725189209,
+			"loaded_sole_y": 0.000003814697265625,
+			"pose": "down",
+			"view": "right"
+		},
+		{
+			"foot_separation": 41.1665840148926,
+			"free_sole_y": -12.116325378418,
+			"loaded_sole_y": -0.0000019073486328125,
+			"pose": "passing",
+			"view": "right"
+		}
+	],
+	"scope": "local isolated posture/anchor tests; aesthetic approval remains pending"
+}

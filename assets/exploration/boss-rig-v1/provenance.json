@@ -1,0 +1,1024 @@
+{
+  "art_source": "host_image",
+  "route": "local:codex-cli",
+  "model": "codex-image_gen",
+  "source": "art\\boss-rig-v1\\atlas\\generated.png",
+  "source_sha256": "583e7865aaa39dec0d4ef1c4173f601e07391f3748a07de4fbc5d72f3bfb1bd8",
+  "prompt": "art/boss-rig-v1/prompt.txt",
+  "authorization": "2026-10-26 用户要求直接制作、接入、运行与验证；审美仍由用户查看",
+  "parts": [
+    {
+      "view": "front",
+      "slot": "torso",
+      "ownership": [
+        0,
+        0,
+        236,
+        190
+      ],
+      "bounds": [
+        21,
+        17,
+        228,
+        185
+      ],
+      "size": [
+        207,
+        168
+      ],
+      "sha256": "d69587f4db6d61761ae3649cbd5362d4d46b0ba3af3ca780425069cc1c129177"
+    },
+    {
+      "view": "front",
+      "slot": "head",
+      "ownership": [
+        236,
+        0,
+        400,
+        190
+      ],
+      "bounds": [
+        6,
+        43,
+        141,
+        168
+      ],
+      "size": [
+        135,
+        125
+      ],
+      "sha256": "6196a7de172e4283ae22d4312c71d686cc801753d13df12ba34aff05261f1a42"
+    },
+    {
+      "view": "front",
+      "slot": "left_upper",
+      "ownership": [
+        400,
+        0,
+        588,
+        190
+      ],
+      "bounds": [
+        28,
+        10,
+        145,
+        185
+      ],
+      "size": [
+        117,
+        121
+      ],
+      "sha256": "db0a6bfe0c90f480d54ab5ac4d7d4ffaf7db9ee6f3561c91e45c9e8002dafcc8"
+    },
+    {
+      "view": "front",
+      "slot": "left_forearm",
+      "ownership": [
+        588,
+        0,
+        777,
+        190
+      ],
+      "bounds": [
+        20,
+        7,
+        139,
+        186
+      ],
+      "size": [
+        119,
+        158
+      ],
+      "sha256": "12777a3706bdf5872ceb6701838d2a80a794d09d5d8ceb1a6194097231c191c9"
+    },
+    {
+      "view": "front",
+      "slot": "left_fist",
+      "ownership": [
+        777,
+        0,
+        958,
+        190
+      ],
+      "bounds": [
+        14,
+        25,
+        139,
+        181
+      ],
+      "size": [
+        125,
+        156
+      ],
+      "sha256": "e077592880252e2464500f8530e98c1d9f47a07efab5b86b0709200be0d88377"
+    },
+    {
+      "view": "front",
+      "slot": "right_upper",
+      "ownership": [
+        958,
+        0,
+        1148,
+        190
+      ],
+      "bounds": [
+        20,
+        9,
+        143,
+        186
+      ],
+      "size": [
+        123,
+        122
+      ],
+      "sha256": "58ba36063e013133d28d02deb6f68794e1d2ecb8e7934c90ab1feb56f480b80f"
+    },
+    {
+      "view": "front",
+      "slot": "right_forearm",
+      "ownership": [
+        1148,
+        0,
+        1335,
+        190
+      ],
+      "bounds": [
+        32,
+        6,
+        153,
+        186
+      ],
+      "size": [
+        121,
+        158
+      ],
+      "sha256": "6fcd67ca5804a7dcfac65a605f7415393ba7e231b9f3b76896e6c4aabcbfa8c9"
+    },
+    {
+      "view": "front",
+      "slot": "right_fist",
+      "ownership": [
+        1335,
+        0,
+        1536,
+        190
+      ],
+      "bounds": [
+        38,
+        17,
+        168,
+        183
+      ],
+      "size": [
+        130,
+        166
+      ],
+      "sha256": "49af07799f34e0ece622e78294975419362f072bd360b15ad71a2eaf69e4d516"
+    },
+    {
+      "view": "front",
+      "slot": "left_thigh",
+      "ownership": [
+        0,
+        190,
+        236,
+        347
+      ],
+      "bounds": [
+        60,
+        5,
+        160,
+        151
+      ],
+      "size": [
+        100,
+        101
+      ],
+      "sha256": "a4ce3b8b82e5bad95ea444f1b2066584bafce917a2ae29f950d196ec08bdcbf2"
+    },
+    {
+      "view": "front",
+      "slot": "left_shin",
+      "ownership": [
+        236,
+        190,
+        400,
+        347
+      ],
+      "bounds": [
+        22,
+        2,
+        112,
+        153
+      ],
+      "size": [
+        90,
+        76
+      ],
+      "sha256": "987ef3fade392269bc59978b6a9d4522e07c22d2ef55b55a4edf3de0a231933c"
+    },
+    {
+      "view": "front",
+      "slot": "left_foot",
+      "ownership": [
+        400,
+        190,
+        588,
+        347
+      ],
+      "bounds": [
+        11,
+        25,
+        137,
+        152
+      ],
+      "size": [
+        126,
+        127
+      ],
+      "sha256": "c83a7eb2f305aa1852b5691dea0b942e3dbf83a776a8a94313c4c4d556cab0b8"
+    },
+    {
+      "view": "front",
+      "slot": "right_thigh",
+      "ownership": [
+        588,
+        190,
+        777,
+        347
+      ],
+      "bounds": [
+        33,
+        2,
+        134,
+        151
+      ],
+      "size": [
+        101,
+        103
+      ],
+      "sha256": "dff146ed1442430dd782e708db53a6d14a1d6d190e5be26d35a4c811721d8aa9"
+    },
+    {
+      "view": "front",
+      "slot": "right_shin",
+      "ownership": [
+        777,
+        190,
+        958,
+        347
+      ],
+      "bounds": [
+        36,
+        2,
+        123,
+        152
+      ],
+      "size": [
+        87,
+        75
+      ],
+      "sha256": "c4563a6fee5a2dea0766054ac658ea00d4327f11d8a53ca56c741b4903f7118e"
+    },
+    {
+      "view": "front",
+      "slot": "right_foot",
+      "ownership": [
+        958,
+        190,
+        1148,
+        347
+      ],
+      "bounds": [
+        32,
+        25,
+        160,
+        152
+      ],
+      "size": [
+        128,
+        127
+      ],
+      "sha256": "417a325fe032e501f0230b96fdb2d43b090b9f2566310551d273e8a1bf9d6320"
+    },
+    {
+      "view": "front",
+      "slot": "armor",
+      "ownership": [
+        1148,
+        190,
+        1335,
+        347
+      ],
+      "bounds": [
+        5,
+        10,
+        171,
+        151
+      ],
+      "size": [
+        166,
+        141
+      ],
+      "sha256": "3110ebea931d657f3e1f498aa0d0e8576c58398814f63fc2b9c51f36380edbcb"
+    },
+    {
+      "view": "front",
+      "slot": "core",
+      "ownership": [
+        1335,
+        190,
+        1536,
+        347
+      ],
+      "bounds": [
+        19,
+        6,
+        175,
+        157
+      ],
+      "size": [
+        156,
+        151
+      ],
+      "sha256": "f60a19639974915feabb364d992c4578f35f059bb580495ebdd1b5f58cad6fb5"
+    },
+    {
+      "view": "back",
+      "slot": "torso",
+      "ownership": [
+        0,
+        347,
+        236,
+        531
+      ],
+      "bounds": [
+        21,
+        9,
+        223,
+        179
+      ],
+      "size": [
+        202,
+        170
+      ],
+      "sha256": "a4000ed95b983ccbd0e1cd0f5c083de5b201bf4be6359b3b6f0cfbbb5f0b0b90"
+    },
+    {
+      "view": "back",
+      "slot": "head",
+      "ownership": [
+        236,
+        347,
+        400,
+        531
+      ],
+      "bounds": [
+        4,
+        39,
+        144,
+        157
+      ],
+      "size": [
+        140,
+        118
+      ],
+      "sha256": "27055b45ef4e142e5351d5b00cb8ba24caf02f609e54c9d76e38f4f783485584"
+    },
+    {
+      "view": "back",
+      "slot": "left_upper",
+      "ownership": [
+        400,
+        347,
+        588,
+        531
+      ],
+      "bounds": [
+        24,
+        4,
+        148,
+        180
+      ],
+      "size": [
+        124,
+        122
+      ],
+      "sha256": "d879f628583e6db4f31ee26540f120d7fa6fde8ae626fce388ef6f24bf84f60f"
+    },
+    {
+      "view": "back",
+      "slot": "left_forearm",
+      "ownership": [
+        588,
+        347,
+        777,
+        531
+      ],
+      "bounds": [
+        20,
+        2,
+        148,
+        181
+      ],
+      "size": [
+        128,
+        158
+      ],
+      "sha256": "75d98245f2cdfd0c24cdc1dd2ca8ef64b6f6f1ea6fbbe6ff3fbcf8cd6b665ada"
+    },
+    {
+      "view": "back",
+      "slot": "left_fist",
+      "ownership": [
+        777,
+        347,
+        958,
+        531
+      ],
+      "bounds": [
+        13,
+        21,
+        140,
+        173
+      ],
+      "size": [
+        127,
+        152
+      ],
+      "sha256": "20705d1f1caf5e3a468dc9360404080d09137a0c3b9f1e2bfd4c944efefa6417"
+    },
+    {
+      "view": "back",
+      "slot": "right_upper",
+      "ownership": [
+        958,
+        347,
+        1148,
+        531
+      ],
+      "bounds": [
+        23,
+        4,
+        150,
+        180
+      ],
+      "size": [
+        127,
+        122
+      ],
+      "sha256": "1a488732faccd3fc92aa5f6998b5ee012cc55ab489116301aeb782181015b238"
+    },
+    {
+      "view": "back",
+      "slot": "right_forearm",
+      "ownership": [
+        1148,
+        347,
+        1335,
+        531
+      ],
+      "bounds": [
+        27,
+        2,
+        158,
+        181
+      ],
+      "size": [
+        131,
+        158
+      ],
+      "sha256": "4606ed25532cc682b40a11691b1fecfb3d88a45952e45dcca832fa4b6e754aa1"
+    },
+    {
+      "view": "back",
+      "slot": "right_fist",
+      "ownership": [
+        1335,
+        347,
+        1536,
+        531
+      ],
+      "bounds": [
+        36,
+        20,
+        166,
+        172
+      ],
+      "size": [
+        130,
+        152
+      ],
+      "sha256": "aa3d863bf4320098920a7ef696b787f69b469e84f0d7621a6ce414b319928399"
+    },
+    {
+      "view": "back",
+      "slot": "left_thigh",
+      "ownership": [
+        0,
+        531,
+        236,
+        698
+      ],
+      "bounds": [
+        61,
+        7,
+        157,
+        156
+      ],
+      "size": [
+        96,
+        103
+      ],
+      "sha256": "e96729ce75900e660e4a2415f4f8b70bcf23804b137bdda801ed01de2e0a22c0"
+    },
+    {
+      "view": "back",
+      "slot": "left_shin",
+      "ownership": [
+        236,
+        531,
+        400,
+        698
+      ],
+      "bounds": [
+        20,
+        1,
+        109,
+        158
+      ],
+      "size": [
+        89,
+        79
+      ],
+      "sha256": "745048587dd38fd9099566ee967416d9f0623639718b800b17b0a86035b70cd3"
+    },
+    {
+      "view": "back",
+      "slot": "left_foot",
+      "ownership": [
+        400,
+        531,
+        588,
+        698
+      ],
+      "bounds": [
+        25,
+        26,
+        141,
+        154
+      ],
+      "size": [
+        116,
+        128
+      ],
+      "sha256": "dc8cc1174cba51e0de83aa7116e4c5e50f4577da668b6917be99d96bfc8e0e91"
+    },
+    {
+      "view": "back",
+      "slot": "right_thigh",
+      "ownership": [
+        588,
+        531,
+        777,
+        698
+      ],
+      "bounds": [
+        32,
+        6,
+        129,
+        155
+      ],
+      "size": [
+        97,
+        103
+      ],
+      "sha256": "4cc5fc4dbb6e7b43368e16e8a277bb134b206b390bcd99248a6a1b83435fd2bd"
+    },
+    {
+      "view": "back",
+      "slot": "right_shin",
+      "ownership": [
+        777,
+        531,
+        958,
+        698
+      ],
+      "bounds": [
+        34,
+        1,
+        121,
+        157
+      ],
+      "size": [
+        87,
+        78
+      ],
+      "sha256": "9d27d27cc3e09950e902b5041c00f164a5a733dbf8f9089221d707a0f4576bbe"
+    },
+    {
+      "view": "back",
+      "slot": "right_foot",
+      "ownership": [
+        958,
+        531,
+        1148,
+        698
+      ],
+      "bounds": [
+        29,
+        26,
+        145,
+        154
+      ],
+      "size": [
+        116,
+        128
+      ],
+      "sha256": "eafe4ed65352946e5a3f68db68ddb0bf518314dfa78f1a69273a3b23c2ad101f"
+    },
+    {
+      "view": "back",
+      "slot": "armor",
+      "ownership": [
+        1148,
+        531,
+        1335,
+        698
+      ],
+      "bounds": [
+        6,
+        13,
+        173,
+        154
+      ],
+      "size": [
+        167,
+        141
+      ],
+      "sha256": "a4bbed4b45c51b2254702d10dfd71a10c86f23e7f0990fed9d0bdd262a361613"
+    },
+    {
+      "view": "back",
+      "slot": "core",
+      "ownership": [
+        1335,
+        531,
+        1536,
+        698
+      ],
+      "bounds": [
+        16,
+        7,
+        172,
+        163
+      ],
+      "size": [
+        156,
+        156
+      ],
+      "sha256": "a231a2c8b10eafbed1476e600c201de0350c17fb71fd41c2e10cfd46afc4b0ef"
+    },
+    {
+      "view": "side",
+      "slot": "torso",
+      "ownership": [
+        0,
+        698,
+        236,
+        861
+      ],
+      "bounds": [
+        25,
+        0,
+        191,
+        162
+      ],
+      "size": [
+        166,
+        162
+      ],
+      "sha256": "10180ab1d3f9af400fdfbfa727fd4da8ef59b5a65ad2b4ede3948ab90c88d362"
+    },
+    {
+      "view": "side",
+      "slot": "head",
+      "ownership": [
+        236,
+        698,
+        400,
+        861
+      ],
+      "bounds": [
+        8,
+        21,
+        130,
+        142
+      ],
+      "size": [
+        122,
+        121
+      ],
+      "sha256": "1ca20503ec5a98c6dd9da05f315a99d83fae337bdd65a73c2adb758e5b873c9c"
+    },
+    {
+      "view": "side",
+      "slot": "left_upper",
+      "ownership": [
+        400,
+        698,
+        588,
+        861
+      ],
+      "bounds": [
+        27,
+        0,
+        134,
+        163
+      ],
+      "size": [
+        107,
+        113
+      ],
+      "sha256": "b955f148b72f29edd932e281c79ce9189e39ef62b07af04d75e5aea52b852645"
+    },
+    {
+      "view": "side",
+      "slot": "left_forearm",
+      "ownership": [
+        588,
+        698,
+        777,
+        861
+      ],
+      "bounds": [
+        21,
+        0,
+        140,
+        163
+      ],
+      "size": [
+        119,
+        143
+      ],
+      "sha256": "7ea8017b40cda88248df3cb988087f504ab9c0ac8de817e1116d405fcf10b778"
+    },
+    {
+      "view": "side",
+      "slot": "left_fist",
+      "ownership": [
+        777,
+        698,
+        958,
+        861
+      ],
+      "bounds": [
+        17,
+        13,
+        140,
+        153
+      ],
+      "size": [
+        123,
+        140
+      ],
+      "sha256": "ddd1d1067c661db294fad2593f1f1712a8a25c6150e9852d99a40e3d19f93765"
+    },
+    {
+      "view": "side",
+      "slot": "right_upper",
+      "ownership": [
+        958,
+        698,
+        1148,
+        861
+      ],
+      "bounds": [
+        32,
+        0,
+        144,
+        163
+      ],
+      "size": [
+        112,
+        113
+      ],
+      "sha256": "738ce95bf8aa33c7de00710f78fbb884cd6f013b22d6d63702adc0d8352824b1"
+    },
+    {
+      "view": "side",
+      "slot": "right_forearm",
+      "ownership": [
+        1148,
+        698,
+        1335,
+        861
+      ],
+      "bounds": [
+        32,
+        0,
+        147,
+        163
+      ],
+      "size": [
+        115,
+        143
+      ],
+      "sha256": "a71a3208c3f58443f4b6edcb812c6b13be1a56025baa350de7e2358941cf092f"
+    },
+    {
+      "view": "side",
+      "slot": "right_fist",
+      "ownership": [
+        1335,
+        698,
+        1536,
+        861
+      ],
+      "bounds": [
+        41,
+        10,
+        162,
+        152
+      ],
+      "size": [
+        121,
+        142
+      ],
+      "sha256": "17c6bdcd733dbe01199b8c4ab8d99d5396453067f5240bbebc488bd558fd31e2"
+    },
+    {
+      "view": "side",
+      "slot": "left_thigh",
+      "ownership": [
+        0,
+        861,
+        236,
+        1024
+      ],
+      "bounds": [
+        57,
+        4,
+        146,
+        150
+      ],
+      "size": [
+        89,
+        101
+      ],
+      "sha256": "cb5d425b0cfbcc86e1a6a73281a8e0bc3cf6664af091e3c893e1a6c1ee03db64"
+    },
+    {
+      "view": "side",
+      "slot": "left_shin",
+      "ownership": [
+        236,
+        861,
+        400,
+        1024
+      ],
+      "bounds": [
+        23,
+        4,
+        112,
+        150
+      ],
+      "size": [
+        89,
+        73
+      ],
+      "sha256": "647f55456716d7b92d1265de0f3fc7f1643ee2ae315481962d7886e0d1b67cd1"
+    },
+    {
+      "view": "side",
+      "slot": "left_foot",
+      "ownership": [
+        400,
+        861,
+        588,
+        1024
+      ],
+      "bounds": [
+        18,
+        45,
+        151,
+        142
+      ],
+      "size": [
+        133,
+        97
+      ],
+      "sha256": "5ce635e0ea5fcfa24bfabf2a88bd3f01c47d023ac611b356b15f7150ecde1edb"
+    },
+    {
+      "view": "side",
+      "slot": "right_thigh",
+      "ownership": [
+        588,
+        861,
+        777,
+        1024
+      ],
+      "bounds": [
+        34,
+        4,
+        123,
+        150
+      ],
+      "size": [
+        89,
+        101
+      ],
+      "sha256": "be5edda0aa3c2696362c29781e378ce7a08aff022ca02c2808ae37504eb931c4"
+    },
+    {
+      "view": "side",
+      "slot": "right_shin",
+      "ownership": [
+        777,
+        861,
+        958,
+        1024
+      ],
+      "bounds": [
+        34,
+        3,
+        122,
+        150
+      ],
+      "size": [
+        88,
+        73
+      ],
+      "sha256": "ae5b4d6b05e645c6f54abb16986e5a7af785d8a8d08fe923be595d6b65e3f86e"
+    },
+    {
+      "view": "side",
+      "slot": "right_foot",
+      "ownership": [
+        958,
+        861,
+        1148,
+        1024
+      ],
+      "bounds": [
+        15,
+        44,
+        155,
+        142
+      ],
+      "size": [
+        140,
+        98
+      ],
+      "sha256": "b80af845de3f7147eb05d66a1fccec9cffa4fdb93ab4e3134af0788b385ade1b"
+    },
+    {
+      "view": "side",
+      "slot": "armor",
+      "ownership": [
+        1148,
+        861,
+        1335,
+        1024
+      ],
+      "bounds": [
+        8,
+        7,
+        161,
+        142
+      ],
+      "size": [
+        153,
+        135
+      ],
+      "sha256": "a49076bf96e80abce923912403bf116acc2c1ce529cbe6a39cd75d95881887e0"
+    },
+    {
+      "view": "side",
+      "slot": "core",
+      "ownership": [
+        1335,
+        861,
+        1536,
+        1024
+      ],
+      "bounds": [
+        42,
+        6,
+        152,
+        144
+      ],
+      "size": [
+        110,
+        138
+      ],
+      "sha256": "ccf64c1010e8d39cdbe168e94043d6729df00347fc02fc0f31d830182f3c327f"
+    }
+  ],
+  "notes": [
+    "one unified three-view part atlas, no per-action regenerated body",
+    "shin boot contour excluded by ownership crop; independent foot supplies ankle overlap",
+    "all views share the same runtime joint lengths; sprite registration documented in ancient_lord_rig.gd"
+  ]
+}

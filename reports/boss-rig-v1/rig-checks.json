@@ -1,0 +1,138 @@
+{
+  "checks": [
+    {
+      "pass": true,
+      "test": "33 independent editable joints"
+    },
+    {
+      "pass": true,
+      "test": "Left elbow inherits upper arm"
+    },
+    {
+      "pass": true,
+      "test": "Left shin inherits knee"
+    },
+    {
+      "pass": true,
+      "test": "Left independent wrist and fist"
+    },
+    {
+      "pass": true,
+      "test": "Right elbow inherits upper arm"
+    },
+    {
+      "pass": true,
+      "test": "Right shin inherits knee"
+    },
+    {
+      "pass": true,
+      "test": "Right independent wrist and fist"
+    },
+    {
+      "pass": true,
+      "test": "front planted foot reaches world target"
+    },
+    {
+      "pass": true,
+      "test": "front support foot remains stable in world space"
+    },
+    {
+      "pass": true,
+      "test": "front knee actually articulates"
+    },
+    {
+      "pass": true,
+      "test": "front stop does not keep marching"
+    },
+    {
+      "pass": false,
+      "test": "back planted foot reaches world target"
+    },
+    {
+      "pass": false,
+      "test": "back support foot remains stable in world space"
+    },
+    {
+      "pass": true,
+      "test": "back knee actually articulates"
+    },
+    {
+      "pass": true,
+      "test": "back stop does not keep marching"
+    },
+    {
+      "pass": true,
+      "test": "right planted foot reaches world target"
+    },
+    {
+      "pass": true,
+      "test": "right support foot remains stable in world space"
+    },
+    {
+      "pass": true,
+      "test": "right knee actually articulates"
+    },
+    {
+      "pass": true,
+      "test": "right stop does not keep marching"
+    },
+    {
+      "pass": true,
+      "test": "left planted foot reaches world target"
+    },
+    {
+      "pass": true,
+      "test": "left support foot remains stable in world space"
+    },
+    {
+      "pass": true,
+      "test": "left knee actually articulates"
+    },
+    {
+      "pass": true,
+      "test": "left stop does not keep marching"
+    },
+    {
+      "pass": true,
+      "test": "turn retains gait phase"
+    },
+    {
+      "pass": true,
+      "test": "diagonal boundary does not flicker"
+    },
+    {
+      "pass": true,
+      "test": "attack entry settles locomotion"
+    },
+    {
+      "pass": true,
+      "test": "raised arm moves actual elbow"
+    },
+    {
+      "pass": true,
+      "test": "combat override can be released"
+    }
+  ],
+  "metrics": {
+    "back": {
+      "knee_rotation_range": 2.29343259334564,
+      "max_contact_error": 13.5246829986572,
+      "max_support_slide": 1.33904182910919
+    },
+    "front": {
+      "knee_rotation_range": 2.79352414608002,
+      "max_contact_error": 0.0000170598450495163,
+      "max_support_slide": 0.0000310493851429783
+    },
+    "left": {
+      "knee_rotation_range": 1.28660726547241,
+      "max_contact_error": 0.0000314567987516057,
+      "max_support_slide": 0.0000314567987516057
+    },
+    "right": {
+      "knee_rotation_range": 0.843811273574829,
+      "max_contact_error": 0.0000307550726574846,
+      "max_support_slide": 0.0000314567987516057
+    }
+  }
+}

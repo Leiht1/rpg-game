@@ -1,0 +1,26 @@
+[
+  {
+    "source": "prototypes\\boss-beasts-v1\\assets\\bear\\side\\hind_lower.png",
+    "ownership": [
+      0,
+      55,
+      100,
+      144
+    ],
+    "output": "prototypes\\boss-beasts-v1\\assets\\bear\\side\\hind_ankle.png",
+    "sha256": "ae89d66978cd55cdb9793b585ce030bbedeb0661987cf6beb7149099a2e52ca4",
+    "purpose": "Existing distal lower-leg artwork reused for independent hock-to-heel segment; no new art"
+  },
+  {
+    "source": "prototypes\\boss-beasts-v1\\assets\\wolf\\side\\hind_lower.png",
+    "ownership": [
+      0,
+      51,
+      114,
+      135
+    ],
+    "output": "prototypes\\boss-beasts-v1\\assets\\wolf\\side\\hind_ankle.png",
+    "sha256": "13723351d1d88337de582f46b32ae986b07dfff8967af3f7a5f7f3b2f78049cb",
+    "purpose": "Existing distal lower-leg artwork reused for independent hock-to-heel segment; no new art"
+  }
+]

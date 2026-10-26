@@ -1,0 +1,555 @@
+{
+  "approval": "pending_user",
+  "route": "local:codex-cli",
+  "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+  "source_sha256": "1e56ce85aba67add68ee692e7754fda6e6a39bb931508882db995115ea7d805e",
+  "reference": "art/boss-posture-v2/master-corrected/generated.png",
+  "prompt": "art/boss-posture-v3/parts-prompt.txt",
+  "notes": [
+    "Controlled necessary-part silhouette revision, same identity and joint lengths",
+    "Full owned source silhouettes, uniform sprite scaling only",
+    "Head and unused core retained byte-for-byte; embedded chest crystal belongs to torso"
+  ],
+  "parts": [
+    {
+      "view": "front",
+      "slot": "torso",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        40,
+        32,
+        290,
+        244
+      ],
+      "sha256": "2f5abe7d61e4d29f4496cc7264d535e1269da4c7384481f60f13f9a43c316bb2"
+    },
+    {
+      "view": "front",
+      "slot": "armor",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        320,
+        67,
+        560,
+        217
+      ],
+      "sha256": "b09b3f7b4948ba7afad09ab55f0b76171527d1364659b248a8613b4801d6fbd3"
+    },
+    {
+      "view": "front",
+      "slot": "left_upper",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        601,
+        68,
+        754,
+        216
+      ],
+      "sha256": "043b732a4ea4e36a27b7e8ec2135d1f96f131173e4246d9d88257a28e76eb872"
+    },
+    {
+      "view": "front",
+      "slot": "right_upper",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        601,
+        68,
+        754,
+        216
+      ],
+      "sha256": "1311510535b2d28c37162dda3aa3b1f9787564b97753b4353d3aa8c2f33f4555"
+    },
+    {
+      "view": "front",
+      "slot": "left_forearm",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        810,
+        48,
+        958,
+        242
+      ],
+      "sha256": "aa527487fec3a57cc60671b87527f7f50eecc6ac81c490eb88e52cccbc815c9c"
+    },
+    {
+      "view": "front",
+      "slot": "right_forearm",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        810,
+        48,
+        958,
+        242
+      ],
+      "sha256": "d6a7d99f21c0cad916253b80f8c8da89a05ce495b1447f2334eae73eea417491"
+    },
+    {
+      "view": "front",
+      "slot": "left_fist",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1022,
+        71,
+        1185,
+        234
+      ],
+      "sha256": "52bf5c87b0f13dcec5ba7779c2e91b47d78c52e621ed0e915f22e8c47f7023cc"
+    },
+    {
+      "view": "front",
+      "slot": "right_fist",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1022,
+        71,
+        1185,
+        234
+      ],
+      "sha256": "1dad12b8dd95f33446c98948c22aa6ee44830894966129ffe969beea0adec95b"
+    },
+    {
+      "view": "front",
+      "slot": "left_thigh",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1247,
+        35,
+        1417,
+        239
+      ],
+      "sha256": "2897e3cb40e7dde063b07cf0eacf03d904d5e444cbaa05b7c0a281047829cd19"
+    },
+    {
+      "view": "front",
+      "slot": "right_thigh",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1247,
+        35,
+        1417,
+        239
+      ],
+      "sha256": "4a94f099238572c426fa7711c551e298f69f09e218d710645f4819312c5ba54b"
+    },
+    {
+      "view": "front",
+      "slot": "left_shin",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1491,
+        70,
+        1616,
+        237
+      ],
+      "sha256": "5d658840ce83fd06bf4099e1d45ef539d6a9f3088624339f74a0c6e7dc7f9b7d"
+    },
+    {
+      "view": "front",
+      "slot": "right_shin",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1491,
+        70,
+        1616,
+        237
+      ],
+      "sha256": "52b89e1deba0952e0eb78a59118fb6baa6bef716a800fdd1b6aae7aa0861b805"
+    },
+    {
+      "view": "front",
+      "slot": "left_foot",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1704,
+        108,
+        1985,
+        234
+      ],
+      "sha256": "38fa6d012699f1daa76318ce891652852dacb89676f20dc593f52d7cb5a8e860"
+    },
+    {
+      "view": "front",
+      "slot": "right_foot",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1704,
+        108,
+        1985,
+        234
+      ],
+      "sha256": "571ea2b87491000b105c974c17b7e5d42512ec565766f604049d36ed29783814"
+    },
+    {
+      "view": "front",
+      "slot": "head",
+      "source": "prototypes\\boss-posture-v2\\parts\\front\\head.png",
+      "sha256": "09dad9be48a82926048bf8face5b94a7a2f76f32ee0ab48a57245ac1a1ccc7cf"
+    },
+    {
+      "view": "front",
+      "slot": "core",
+      "source": "prototypes\\boss-posture-v2\\parts\\front\\core.png",
+      "sha256": "48769e921cb4d75685437ab704e085cf4d911a1e03e2aff7ba219e0dfcffe3af"
+    },
+    {
+      "view": "back",
+      "slot": "torso",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        33,
+        264,
+        289,
+        480
+      ],
+      "sha256": "303a3176999d824e44d5a55f24ae1bf015fdc62338c95155eb116a9c6a3bd57c"
+    },
+    {
+      "view": "back",
+      "slot": "armor",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        323,
+        304,
+        561,
+        452
+      ],
+      "sha256": "52fc54bf1d4609c3b4aa37bf373bf8f51c8080f093723d12169ca60e8aade9dd"
+    },
+    {
+      "view": "back",
+      "slot": "left_upper",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        602,
+        300,
+        756,
+        454
+      ],
+      "sha256": "10496a7a2163c45e0a595949608d8aaefb993ecfa11ac2eb0e49b7b1f0d39b1d"
+    },
+    {
+      "view": "back",
+      "slot": "right_upper",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        602,
+        300,
+        756,
+        454
+      ],
+      "sha256": "cd252cce59bc1c9ed2da2ebc8fdaf1ca0c07c7ac2d91c763c02ea77c23efa409"
+    },
+    {
+      "view": "back",
+      "slot": "left_forearm",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        821,
+        282,
+        949,
+        472
+      ],
+      "sha256": "3002bae3fc31639febae771073fae03f958b0643003db615f03e626e37dbda1e"
+    },
+    {
+      "view": "back",
+      "slot": "right_forearm",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        821,
+        282,
+        949,
+        472
+      ],
+      "sha256": "0b87d176889d0ef4dc6004b73205fe433bc6ca90c185a8167a506633ae4e3468"
+    },
+    {
+      "view": "back",
+      "slot": "left_fist",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1018,
+        303,
+        1183,
+        465
+      ],
+      "sha256": "1717de51fc6625f128e5f444a7826ffa4c4eec30d1a973129eb69a0e1600c8b7"
+    },
+    {
+      "view": "back",
+      "slot": "right_fist",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1018,
+        303,
+        1183,
+        465
+      ],
+      "sha256": "ca9d6049debe3e4fbdfb73a6e339305f7702edb6a5bc51f60b1e35d82d89c2bb"
+    },
+    {
+      "view": "back",
+      "slot": "left_thigh",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1241,
+        264,
+        1417,
+        475
+      ],
+      "sha256": "6177ceb330c56cab1b84f9e9a50533857fe4caa957c0a457ac70e33d03fa4757"
+    },
+    {
+      "view": "back",
+      "slot": "right_thigh",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1241,
+        264,
+        1417,
+        475
+      ],
+      "sha256": "bb274a2b3da87d3ecc745373097120f16299c4a46662b6d496cfa9a6c55db9c6"
+    },
+    {
+      "view": "back",
+      "slot": "left_shin",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1502,
+        305,
+        1627,
+        470
+      ],
+      "sha256": "5748dfe274dc3222a243ee03d03486d5f19ae8e7cdfa434d6a796b3b90a619c2"
+    },
+    {
+      "view": "back",
+      "slot": "right_shin",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1502,
+        305,
+        1627,
+        470
+      ],
+      "sha256": "f630d9da0f617d5b8f48e017679a71183e991eed7d332014bb623b5c4e957a10"
+    },
+    {
+      "view": "back",
+      "slot": "left_foot",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1720,
+        330,
+        1989,
+        471
+      ],
+      "sha256": "f97a34e462f330782a69b8989109af7873ec2ca040656d38843849f7ad9f894b"
+    },
+    {
+      "view": "back",
+      "slot": "right_foot",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1720,
+        330,
+        1989,
+        471
+      ],
+      "sha256": "d26705cb2994b6f3f2d01a7e21552103454e07a782fa06d4e9eead93af32b551"
+    },
+    {
+      "view": "back",
+      "slot": "head",
+      "source": "prototypes\\boss-posture-v2\\parts\\back\\head.png",
+      "sha256": "d00ca66dc5ac9d4d8ff43889942747bce3cc068666ec98e3a53a9427f3106cef"
+    },
+    {
+      "view": "back",
+      "slot": "core",
+      "source": "prototypes\\boss-posture-v2\\parts\\back\\core.png",
+      "sha256": "262ab6bc99ccbdc4f00f4774489368fa2c70e02e5531bd0d6038af4779dad843"
+    },
+    {
+      "view": "side",
+      "slot": "torso",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        60,
+        498,
+        258,
+        734
+      ],
+      "sha256": "01c906f5afd8de2e298c59eaf978008ca1864902e6933c665f43c9f895ded3c9"
+    },
+    {
+      "view": "side",
+      "slot": "armor",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        335,
+        526,
+        536,
+        683
+      ],
+      "sha256": "e9aebee3644277dac447f7d259d1c185625b2aa61c626f1606e10a911b431e49"
+    },
+    {
+      "view": "side",
+      "slot": "left_upper",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        592,
+        534,
+        749,
+        709
+      ],
+      "sha256": "57005cdff70db083fba3400a27f28f72f0389b1c58b1db7eb9122b5216bab753"
+    },
+    {
+      "view": "side",
+      "slot": "right_upper",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        592,
+        534,
+        749,
+        709
+      ],
+      "sha256": "57005cdff70db083fba3400a27f28f72f0389b1c58b1db7eb9122b5216bab753"
+    },
+    {
+      "view": "side",
+      "slot": "left_forearm",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        810,
+        518,
+        957,
+        721
+      ],
+      "sha256": "3e72d8c3b9491e99e59c45f2fbc647879ae5876b819887f87e7a2d7d62a20c48"
+    },
+    {
+      "view": "side",
+      "slot": "right_forearm",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        810,
+        518,
+        957,
+        721
+      ],
+      "sha256": "3e72d8c3b9491e99e59c45f2fbc647879ae5876b819887f87e7a2d7d62a20c48"
+    },
+    {
+      "view": "side",
+      "slot": "left_fist",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1025,
+        544,
+        1183,
+        711
+      ],
+      "sha256": "45461b8aed13a68c7dc44fa85c20f4f94a4f697e7c963afc8bf0044c7d972c05"
+    },
+    {
+      "view": "side",
+      "slot": "right_fist",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1025,
+        544,
+        1183,
+        711
+      ],
+      "sha256": "45461b8aed13a68c7dc44fa85c20f4f94a4f697e7c963afc8bf0044c7d972c05"
+    },
+    {
+      "view": "side",
+      "slot": "left_thigh",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1255,
+        500,
+        1406,
+        721
+      ],
+      "sha256": "11112b78cbf48906f8bc13cb9c7a5e6e4476e33c46509a1467e7bcb9b4009ba8"
+    },
+    {
+      "view": "side",
+      "slot": "right_thigh",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1255,
+        500,
+        1406,
+        721
+      ],
+      "sha256": "11112b78cbf48906f8bc13cb9c7a5e6e4476e33c46509a1467e7bcb9b4009ba8"
+    },
+    {
+      "view": "side",
+      "slot": "left_shin",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1490,
+        537,
+        1613,
+        715
+      ],
+      "sha256": "73bc58379e4f3ffbdb2174ddecdae03f14c900e96015a3661ecf2519d871bfd2"
+    },
+    {
+      "view": "side",
+      "slot": "right_shin",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1490,
+        537,
+        1613,
+        715
+      ],
+      "sha256": "73bc58379e4f3ffbdb2174ddecdae03f14c900e96015a3661ecf2519d871bfd2"
+    },
+    {
+      "view": "side",
+      "slot": "left_foot",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1706,
+        572,
+        2004,
+        705
+      ],
+      "sha256": "9ba4b22af4626bf6fef246b9bd316be94ba9d3ba8e2994240919446fb7888528"
+    },
+    {
+      "view": "side",
+      "slot": "right_foot",
+      "source": "art\\boss-posture-v3\\parts-source\\generated.png",
+      "ownership": [
+        1706,
+        572,
+        2004,
+        705
+      ],
+      "sha256": "9ba4b22af4626bf6fef246b9bd316be94ba9d3ba8e2994240919446fb7888528"
+    },
+    {
+      "view": "side",
+      "slot": "head",
+      "source": "prototypes\\boss-posture-v2\\parts\\side\\head.png",
+      "sha256": "f2ac2f7ab9240d40c98ed2392c9cdd9cd1a120ffc4c2224dcd2ae8a1089d41c3"
+    },
+    {
+      "view": "side",
+      "slot": "core",
+      "source": "prototypes\\boss-posture-v2\\parts\\side\\core.png",
+      "sha256": "206b6d129455a392bb9bdb64e61bb18067d189fcd1496a16f064783a8808ddff"
+    }
+  ]
+}
