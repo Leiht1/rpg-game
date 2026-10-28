@@ -1,0 +1,22 @@
+name: haotian
+services:
+  game:
+    build: .
+    user: "1000:1000"
+    init: true
+    restart: unless-stopped
+    stop_signal: SIGINT
+    stop_grace_period: 90s
+    ports:
+      - "24870:24870"
+    volumes:
+      - ./app:/srv/app
+      - ./bin:/srv/bin:ro
+      - ./Config:/srv/Config:ro
+      - ./Data:/srv/Data
+      - ./home:/srv/home
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
