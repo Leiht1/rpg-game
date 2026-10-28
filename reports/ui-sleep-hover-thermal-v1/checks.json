@@ -1,0 +1,538 @@
+[
+  {
+    "name": "bed location found",
+    "pass": true
+  },
+  {
+    "name": "real bed placed",
+    "pass": true
+  },
+  {
+    "name": "sleep starts",
+    "pass": true
+  },
+  {
+    "name": "sleep canopy fades false-wood_bed-false",
+    "pass": true
+  },
+  {
+    "name": "sleep poles opaque false-wood_bed-false",
+    "pass": true
+  },
+  {
+    "name": "sleep canopy fades false-wood_bed-true",
+    "pass": true
+  },
+  {
+    "name": "sleep poles opaque false-wood_bed-true",
+    "pass": true
+  },
+  {
+    "name": "sleep canopy fades false-straw_mat-false",
+    "pass": true
+  },
+  {
+    "name": "sleep poles opaque false-straw_mat-false",
+    "pass": true
+  },
+  {
+    "name": "sleep canopy fades false-straw_mat-true",
+    "pass": true
+  },
+  {
+    "name": "sleep poles opaque false-straw_mat-true",
+    "pass": true
+  },
+  {
+    "name": "sleep canopy fades false-sleeping_bag-false",
+    "pass": true
+  },
+  {
+    "name": "sleep poles opaque false-sleeping_bag-false",
+    "pass": true
+  },
+  {
+    "name": "clear roof restores false",
+    "pass": true
+  },
+  {
+    "name": "sleep canopy fades true-wood_bed-false",
+    "pass": true
+  },
+  {
+    "name": "sleep poles opaque true-wood_bed-false",
+    "pass": true
+  },
+  {
+    "name": "sleep canopy fades true-wood_bed-true",
+    "pass": true
+  },
+  {
+    "name": "sleep poles opaque true-wood_bed-true",
+    "pass": true
+  },
+  {
+    "name": "sleep canopy fades true-straw_mat-false",
+    "pass": true
+  },
+  {
+    "name": "sleep poles opaque true-straw_mat-false",
+    "pass": true
+  },
+  {
+    "name": "sleep canopy fades true-straw_mat-true",
+    "pass": true
+  },
+  {
+    "name": "sleep poles opaque true-straw_mat-true",
+    "pass": true
+  },
+  {
+    "name": "sleep canopy fades true-sleeping_bag-false",
+    "pass": true
+  },
+  {
+    "name": "sleep poles opaque true-sleeping_bag-false",
+    "pass": true
+  },
+  {
+    "name": "clear roof restores true",
+    "pass": true
+  },
+  {
+    "name": "HUD opens details during sleep without waking",
+    "pass": true
+  },
+  {
+    "name": "extreme cold blue in HUD and details",
+    "pass": true
+  },
+  {
+    "name": "heat red in HUD and details",
+    "pass": true
+  },
+  {
+    "name": "Esc closes details and retains sleep input lock",
+    "pass": true
+  },
+  {
+    "name": "E wakes with details open",
+    "pass": true
+  },
+  {
+    "name": "hover appears",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 0",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 1",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 2",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 3",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 4",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 5",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 6",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 7",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 8",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 9",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 10",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 11",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 12",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 13",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 14",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 15",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 16",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 17",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 18",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 19",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 20",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 21",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 22",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 23",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 24",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 25",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 26",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 27",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 28",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 29",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 30",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 31",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 32",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 33",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 34",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 35",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 36",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 37",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 38",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 39",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 40",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 41",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 42",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 43",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 44",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 45",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 46",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 47",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 48",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 49",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 50",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 51",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 52",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 53",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 54",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 55",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 56",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 57",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 58",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 59",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 60",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 61",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 62",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 63",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 64",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 65",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 66",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 67",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 68",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 69",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 70",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 71",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 72",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 73",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 74",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 75",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 76",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 77",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 78",
+    "pass": true
+  },
+  {
+    "name": "unchanged sync retains visible card 79",
+    "pass": true
+  },
+  {
+    "name": "changed slot retains visible panel and updates contents without delay",
+    "pass": true
+  },
+  {
+    "name": "real GUI pointer enters rightmost bag cell",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 0",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 1",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 2",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 3",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 4",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 5",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 6",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 7",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 8",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 9",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 10",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 11",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 12",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 13",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 14",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 15",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 16",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 17",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 18",
+    "pass": true
+  },
+  {
+    "name": "changing metadata preserves right-edge visible panel 19",
+    "pass": true
+  },
+  {
+    "name": "leaving item hides hover",
+    "pass": true
+  }
+]

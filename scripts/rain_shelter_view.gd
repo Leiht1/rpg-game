@@ -54,11 +54,11 @@ func draw_part(node: Node2D, source: Rect2) -> void:
  node.draw_texture_rect_region(image,destination,source)
 func update_occlusion(point: Vector2) -> void:
  if building.preview:return
- var next:=covers_head(point)
  var world=building.manager.service.world
+ var next:=covers_actor(world.get("player"),point)
  if not next and world.get_meta("network_game",false):
   for actor in world.actors.values():
-   if is_instance_valid(actor) and actor.visible and covers_head(actor.global_position):next=true;break
+   if is_instance_valid(actor) and actor.visible and covers_actor(actor,actor.global_position):next=true;break
  if next==faded:return
  faded=next
  if is_instance_valid(fade):fade.kill()
@@ -67,6 +67,18 @@ func update_occlusion(point: Vector2) -> void:
 func covers_head(point: Vector2) -> bool:
  var p: Vector2=point-building.global_position
  var head := Rect2(p+Vector2(-16,-84),Vector2(32,54))
+ return covers_rect(p,head)
+func covers_actor(actor: Node2D, point: Vector2) -> bool:
+ if not is_instance_valid(actor):return covers_head(point)
+ var group:=actor.get_node_or_null("SleepHeadCover")
+ if not is_instance_valid(group) or not group.visible:return covers_head(point)
+ for sprite in group.find_children("*","Sprite2D",true,false):
+  if not sprite.is_visible_in_tree() or sprite.texture==null:continue
+  var rect: Rect2=sprite.get_rect()
+  var transform: Transform2D=building.global_transform.affine_inverse()*sprite.global_transform
+  if covers_rect(building.to_local(point),transform*rect):return true
+ return false
+func covers_rect(p: Vector2, head: Rect2) -> bool:
  var next := false
  # Visual occlusion is independent of gameplay rain coverage, including the eaves.
  if p.y<=roof.position.y:

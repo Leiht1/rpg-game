@@ -20,6 +20,7 @@ var organize_button := Button.new()
 var map_button := NavButton.new()
 var hover_index := -1
 var hover_wait := 0.0
+var hover_snapshot: Dictionary={}
 var hover_card: Control
 var ground_drop := preload("res://scripts/item_ground_drop.gd").new()
 var dock: HBoxContainer
@@ -367,7 +368,13 @@ func add_slot(parent: Node, index: int) -> void:
 func refresh() -> void:
 	for cell in cells: cell.refresh()
 	refresh_equipment_preview()
-	if hover_index>=0: show_item_hover(hover_index,hover_anchor)
+	if hover_index>=0 and is_instance_valid(hover_card) and service.inventory.get_slot(hover_index)!=hover_snapshot:
+		# Keep the visible panel/anchor while replacing changed contents in-frame.
+		var replacement := make_item_card(hover_index)
+		hover_snapshot=service.inventory.get_slot(hover_index).duplicate(true)
+		for child in hover_card.get_children():hover_card.remove_child(child);child.queue_free()
+		for child in replacement.get_children():replacement.remove_child(child);hover_card.add_child(child)
+		replacement.free();ignore_card_mouse(hover_card)
 
 var hover_anchor: Control
 func show_item_hover(index: int, anchor: Control = null) -> void:
@@ -403,6 +410,7 @@ func _process(delta: float) -> void:
 		hover_wait-=delta
 		if hover_wait<=0:
 			hover_card=make_item_card(hover_index)
+			hover_snapshot=service.inventory.get_slot(hover_index).duplicate(true)
 			hover_card.z_index=20
 			add_child(hover_card)
 			ignore_card_mouse(hover_card)

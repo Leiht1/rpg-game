@@ -1,0 +1,538 @@
+{
+  "local_requests": 2520,
+  "local_http_500": 0,
+  "local_by_callers": {
+    "1": {
+      "all": {
+        "n": 360,
+        "p50": 34.573,
+        "p95": 828.236,
+        "maximum": 926.195
+      },
+      "accepted": {
+        "n": 360,
+        "p50": 34.573,
+        "p95": 828.236,
+        "maximum": 926.195
+      },
+      "rejected": 0
+    },
+    "2": {
+      "all": {
+        "n": 720,
+        "p50": 61.115,
+        "p95": 815.243,
+        "maximum": 1029.286
+      },
+      "accepted": {
+        "n": 594,
+        "p50": 60.143,
+        "p95": 729.89,
+        "maximum": 1029.286
+      },
+      "rejected": 126
+    },
+    "4": {
+      "all": {
+        "n": 1440,
+        "p50": 142.616,
+        "p95": 895.228,
+        "maximum": 1249.2
+      },
+      "accepted": {
+        "n": 1050,
+        "p50": 134.453,
+        "p95": 863.681,
+        "maximum": 1108.854
+      },
+      "rejected": 390
+    }
+  },
+  "active_command_operations": [
+    "animal_feed",
+    "building_bag",
+    "building_edit",
+    "building_open",
+    "building_place",
+    "building_toggle",
+    "building_transfer",
+    "buy",
+    "camp_act",
+    "camp_build",
+    "camp_feed",
+    "camp_place",
+    "chapter",
+    "chapter_read",
+    "combat_attack",
+    "craft",
+    "craft_cancel",
+    "discard",
+    "expansion",
+    "fertilize",
+    "fish_cancel",
+    "fish_judge",
+    "fish_start",
+    "guide",
+    "industry",
+    "interact",
+    "inventory",
+    "lamp",
+    "mine",
+    "organize",
+    "plant",
+    "relic_claim",
+    "sleep",
+    "station",
+    "wake"
+  ],
+  "public": {
+    "public-soak-1-0": {
+      "api_ms": {
+        "character": {
+          "n": 1,
+          "p50": 90,
+          "p95": 90,
+          "maximum": 90
+        },
+        "game_command": {
+          "n": 203,
+          "p50": 111,
+          "p95": 137,
+          "maximum": 465
+        },
+        "game_snapshot": {
+          "n": 427,
+          "p50": 91,
+          "p95": 125,
+          "maximum": 585
+        },
+        "login": {
+          "n": 1,
+          "p50": 315,
+          "p95": 315,
+          "maximum": 315
+        },
+        "move": {
+          "n": 1676,
+          "p50": 47.0,
+          "p95": 110,
+          "maximum": 366
+        },
+        "poll": {
+          "n": 1378,
+          "p50": 39.0,
+          "p95": 107,
+          "maximum": 366
+        },
+        "resume": {
+          "n": 1,
+          "p50": 154,
+          "p95": 154,
+          "maximum": 154
+        }
+      },
+      "command_confirm_ms": {
+        "n": 193,
+        "p50": 139.14,
+        "p95": 198.587,
+        "maximum": 482.138
+      },
+      "pre_api_ms": {
+        "n": 193,
+        "p50": 0.459,
+        "p95": 56.614,
+        "maximum": 134.802
+      },
+      "http_lane_ms": {
+        "n": 193,
+        "p50": 0.109,
+        "p95": 0.199,
+        "maximum": 0.292
+      },
+      "request_decode_ms": {
+        "n": 193,
+        "p50": 111.037,
+        "p95": 136.072,
+        "maximum": 465.0
+      },
+      "snapshot_apply_ms": {
+        "n": 628,
+        "p50": 8.604,
+        "p95": 9.856,
+        "maximum": 18.114
+      },
+      "frame_ms": {
+        "n": 24162,
+        "p50": 5.371,
+        "p95": 6.886,
+        "maximum": 47.369
+      },
+      "max_move_ack_age_ms": 234,
+      "prediction_blocked_frames": 0,
+      "http_body_bytes": {
+        "n": 630,
+        "p50": 6616.0,
+        "p95": 6721,
+        "maximum": 6742
+      },
+      "decoded_bytes": {
+        "n": 630,
+        "p50": 129114.0,
+        "p95": 129530,
+        "maximum": 129603
+      },
+      "rejected_actions": [
+        {
+          "label": "soak_attack_135",
+          "error": "体力不足"
+        },
+        {
+          "label": "attempt_fish_start",
+          "error": "当前无法钓鱼"
+        }
+      ]
+    },
+    "public-soak-2-0": {
+      "api_ms": {
+        "character": {
+          "n": 1,
+          "p50": 94,
+          "p95": 94,
+          "maximum": 94
+        },
+        "game_command": {
+          "n": 198,
+          "p50": 121.0,
+          "p95": 203,
+          "maximum": 347
+        },
+        "game_snapshot": {
+          "n": 428,
+          "p50": 100.0,
+          "p95": 188,
+          "maximum": 426
+        },
+        "login": {
+          "n": 1,
+          "p50": 421,
+          "p95": 421,
+          "maximum": 421
+        },
+        "move": {
+          "n": 1529,
+          "p50": 51,
+          "p95": 151,
+          "maximum": 485
+        },
+        "poll": {
+          "n": 1333,
+          "p50": 46,
+          "p95": 143,
+          "maximum": 415
+        },
+        "resume": {
+          "n": 1,
+          "p50": 179,
+          "p95": 179,
+          "maximum": 179
+        }
+      },
+      "command_confirm_ms": {
+        "n": 177,
+        "p50": 157.026,
+        "p95": 244.816,
+        "maximum": 366.906
+      },
+      "pre_api_ms": {
+        "n": 177,
+        "p50": 0.337,
+        "p95": 85.256,
+        "maximum": 196.908
+      },
+      "http_lane_ms": {
+        "n": 177,
+        "p50": 0.125,
+        "p95": 0.228,
+        "maximum": 0.361
+      },
+      "request_decode_ms": {
+        "n": 177,
+        "p50": 121.508,
+        "p95": 193.993,
+        "maximum": 263.59
+      },
+      "snapshot_apply_ms": {
+        "n": 613,
+        "p50": 8.867,
+        "p95": 9.835,
+        "maximum": 17.792
+      },
+      "frame_ms": {
+        "n": 23412,
+        "p50": 5.548,
+        "p95": 7.372,
+        "maximum": 44.282
+      },
+      "max_move_ack_age_ms": 337,
+      "prediction_blocked_frames": 0,
+      "http_body_bytes": {
+        "n": 626,
+        "p50": 6642.0,
+        "p95": 6745,
+        "maximum": 6768
+      },
+      "decoded_bytes": {
+        "n": 626,
+        "p50": 129114.0,
+        "p95": 129526,
+        "maximum": 129587
+      },
+      "rejected_actions": [
+        {
+          "label": "discard_one",
+          "error": "丢弃失败"
+        },
+        {
+          "label": "soak_attack_48",
+          "error": "体力不足"
+        },
+        {
+          "label": "soak_attack_54",
+          "error": "体力不足"
+        },
+        {
+          "label": "soak_attack_63",
+          "error": "体力不足"
+        },
+        {
+          "label": "soak_attack_72",
+          "error": "体力不足"
+        },
+        {
+          "label": "soak_attack_81",
+          "error": "体力不足"
+        },
+        {
+          "label": "soak_attack_90",
+          "error": "体力不足"
+        },
+        {
+          "label": "soak_attack_96",
+          "error": "体力不足"
+        },
+        {
+          "label": "soak_attack_108",
+          "error": "体力不足"
+        },
+        {
+          "label": "soak_attack_114",
+          "error": "体力不足"
+        },
+        {
+          "label": "soak_attack_123",
+          "error": "体力不足"
+        },
+        {
+          "label": "soak_attack_132",
+          "error": "体力不足"
+        },
+        {
+          "label": "attempt_fish_start",
+          "error": "当前无法钓鱼"
+        }
+      ]
+    },
+    "public-soak-2-1": {
+      "api_ms": {
+        "character": {
+          "n": 1,
+          "p50": 88,
+          "p95": 88,
+          "maximum": 88
+        },
+        "game_command": {
+          "n": 197,
+          "p50": 119,
+          "p95": 217,
+          "maximum": 384
+        },
+        "game_snapshot": {
+          "n": 441,
+          "p50": 85,
+          "p95": 191,
+          "maximum": 500
+        },
+        "login": {
+          "n": 1,
+          "p50": 315,
+          "p95": 315,
+          "maximum": 315
+        },
+        "move": {
+          "n": 1550,
+          "p50": 48.0,
+          "p95": 146,
+          "maximum": 395
+        },
+        "poll": {
+          "n": 1316,
+          "p50": 48.0,
+          "p95": 150,
+          "maximum": 490
+        },
+        "resume": {
+          "n": 1,
+          "p50": 275,
+          "p95": 275,
+          "maximum": 275
+        }
+      },
+      "command_confirm_ms": {
+        "n": 187,
+        "p50": 147.761,
+        "p95": 264.951,
+        "maximum": 500.722
+      },
+      "pre_api_ms": {
+        "n": 187,
+        "p50": 0.336,
+        "p95": 105.831,
+        "maximum": 213.226
+      },
+      "http_lane_ms": {
+        "n": 187,
+        "p50": 0.12,
+        "p95": 0.23,
+        "maximum": 0.346
+      },
+      "request_decode_ms": {
+        "n": 187,
+        "p50": 118.547,
+        "p95": 214.535,
+        "maximum": 306.611
+      },
+      "snapshot_apply_ms": {
+        "n": 636,
+        "p50": 8.927,
+        "p95": 9.994,
+        "maximum": 17.439
+      },
+      "frame_ms": {
+        "n": 22424,
+        "p50": 5.812,
+        "p95": 7.492,
+        "maximum": 54.262
+      },
+      "max_move_ack_age_ms": 330,
+      "prediction_blocked_frames": 0,
+      "http_body_bytes": {
+        "n": 638,
+        "p50": 6642.0,
+        "p95": 6747,
+        "maximum": 6763
+      },
+      "decoded_bytes": {
+        "n": 638,
+        "p50": 129113.0,
+        "p95": 129513,
+        "maximum": 129575
+      },
+      "rejected_actions": [
+        {
+          "label": "discard_one",
+          "error": "丢弃失败"
+        },
+        {
+          "label": "attempt_fish_start",
+          "error": "当前无法钓鱼"
+        }
+      ]
+    }
+  },
+  "peer_observation": [
+    {
+      "client": 0,
+      "label": "attack_2",
+      "confirm_ms": 135.421,
+      "local_visual_ms": 9.0,
+      "peer_visual_ms": 137.0
+    },
+    {
+      "client": 0,
+      "label": "attack_6",
+      "confirm_ms": 169.164,
+      "local_visual_ms": 9.0,
+      "peer_visual_ms": 158.0
+    },
+    {
+      "client": 0,
+      "label": "attack_10",
+      "confirm_ms": 244.191,
+      "local_visual_ms": 9.0,
+      "peer_visual_ms": 240.0
+    },
+    {
+      "client": 0,
+      "label": "attack_14",
+      "confirm_ms": 194.048,
+      "local_visual_ms": 8.0,
+      "peer_visual_ms": 188.0
+    },
+    {
+      "client": 0,
+      "label": "attack_18",
+      "confirm_ms": 127.682,
+      "local_visual_ms": 9.0,
+      "peer_visual_ms": 126.0
+    },
+    {
+      "client": 0,
+      "label": "attack_22",
+      "confirm_ms": 143.373,
+      "local_visual_ms": 8.0,
+      "peer_visual_ms": 118.0
+    },
+    {
+      "client": 1,
+      "label": "attack_2",
+      "confirm_ms": 221.721,
+      "local_visual_ms": 9.0,
+      "peer_visual_ms": 208.0
+    },
+    {
+      "client": 1,
+      "label": "attack_6",
+      "confirm_ms": 277.482,
+      "local_visual_ms": 8.0,
+      "peer_visual_ms": 264.0
+    },
+    {
+      "client": 1,
+      "label": "attack_10",
+      "confirm_ms": 213.039,
+      "local_visual_ms": 8.0,
+      "peer_visual_ms": 193.0
+    },
+    {
+      "client": 1,
+      "label": "attack_14",
+      "confirm_ms": 247.042,
+      "local_visual_ms": 7.0,
+      "peer_visual_ms": 125.0
+    },
+    {
+      "client": 1,
+      "label": "attack_18",
+      "confirm_ms": 188.193,
+      "local_visual_ms": 8.0,
+      "peer_visual_ms": 175.0
+    },
+    {
+      "client": 1,
+      "label": "attack_22",
+      "confirm_ms": 136.27,
+      "local_visual_ms": 9.0,
+      "peer_visual_ms": 121.0
+    }
+  ]
+}

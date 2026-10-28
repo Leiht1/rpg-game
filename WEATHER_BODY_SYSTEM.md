@@ -48,3 +48,7 @@
 ## 2026-10-28 · 雨棚旋转
 
 放置时R切换横纵朝向，沿原vertical字段保存。纵向图assets/weather/v2/shelter_vertical.png，柱脚及遮雨矩形由data/weather_body_rules.json对应方向配置维护，碰撞、建造、路径与交互统一读取。棚布/支柱仍独立排序、只淡化棚布。验证与边界见[专项报告](reports/soil-shelter-rotate-v1/REPORT.md)。
+
+## 2026-10-28 · 睡姿雨棚遮挡与体感文字
+
+雨棚实际遮挡检测包含本机及远端 `SleepHeadCover` 头部/被面贴图的变换范围，不再把睡姿套用站立头框；沿原参数只淡化棚布，柱子/柱帽保持实色。HUD 与身体详情共用体感状态颜色，冷态为逐渐加深的蓝色，炎热为红色，其他文字保持原色；不改变状态阈值和身体结算。实现及十种睡姿/雨棚组合验证见[本轮报告](reports/ui-sleep-hover-thermal-v1/REPORT.md)。

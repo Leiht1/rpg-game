@@ -163,3 +163,7 @@ ItemInventory 负责堆叠、容量、交换、食用和校验。ItemService 负
 ## 2026-10-25 · 矿石实体轮廓
 
 harvest_resources中的可选collision_outline以collision_outline_width为显示基准，harvest_node同比缩放应用；五类矿石按底座及侧面人物身体余量分别配置。未配置的资源继续原碰撞方式，完成采集仍移除实体。验证见reports/ore-collision-v1/REPORT.md。
+
+## 2026-10-28 · 同步时保持物品悬浮信息
+
+库存同步不重置已经开始的悬浮等待或隐藏已显示的信息面板。相同格内容未变时保留原实例；内容变化时保持原面板和锚点、原位更新，移出/关闭/拖拽仍沿原规则隐藏。验证见[本轮报告](reports/ui-sleep-hover-thermal-v1/REPORT.md)。

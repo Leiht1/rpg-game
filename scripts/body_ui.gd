@@ -4,12 +4,12 @@ var items: Control
 var state: RefCounted
 var hud := Button.new()
 var summary := Label.new()
-var weather_summary := Label.new()
+var weather_summary := RichTextLabel.new()
 var bars: Array[ProgressBar] = []
 var numbers: Array[Label] = []
 var overlay := Control.new()
 var paper := PanelContainer.new()
-var details := Label.new()
+var details := RichTextLabel.new()
 var lamp := PanelContainer.new()
 var fuel := ProgressBar.new()
 var lamp_icon := TextureRect.new()
@@ -53,7 +53,9 @@ func configure(owner_ui: Control) -> void:
 		number.custom_minimum_size.x=33;number.horizontal_alignment=HORIZONTAL_ALIGNMENT_RIGHT
 		row.add_child(number);numbers.append(number)
 	box.add_child(weather_summary)
-	weather_summary.add_theme_font_size_override("font_size",13)
+	weather_summary.bbcode_enabled=true;weather_summary.fit_content=true
+	weather_summary.add_theme_color_override("default_color",Color("4e493d"))
+	weather_summary.add_theme_font_size_override("normal_font_size",13)
 	box.add_child(summary)
 	summary.add_theme_font_size_override("font_size",12)
 	summary.clip_text=true
@@ -82,6 +84,8 @@ func configure(owner_ui: Control) -> void:
 	paper.add_child(content)
 	var title := Label.new();title.text="身体状态";title.add_theme_font_size_override("font_size",23);content.add_child(title)
 	content.add_child(details)
+	details.bbcode_enabled=true;details.fit_content=true
+	details.add_theme_color_override("default_color",Color("4e493d"))
 	details.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;details.custom_minimum_size=Vector2(424,290)
 	var close := Button.new();close.text="关闭 · Esc";close.set_meta("audio_window_close",true);content.add_child(close);close.pressed.connect(close_panel)
 	overlay.hide()
@@ -93,11 +97,10 @@ func style_bar(bar: ProgressBar, color: Color) -> void:
 	bar.add_theme_stylebox_override("background",background);bar.add_theme_stylebox_override("fill",fill)
 
 func toggle() -> void:
-	if state.sleeping: return
 	if overlay.visible: close_panel();return
 	items.close_panels()
 	if items.world.map_view.visible: items.world.map_view.close_map()
-	items.world.player.cancel_action()
+	if not state.sleep_active(): items.world.player.cancel_action()
 	overlay.show();items.dock.hide();items.update_input_block();refresh()
 
 func close_panel() -> void:
@@ -106,6 +109,7 @@ func close_panel() -> void:
 func _input(event: InputEvent) -> void:
 	if not overlay.visible: return
 	if event is InputEventKey:
+		if state.sleep_active() and (event.physical_keycode==KEY_E or event.keycode==KEY_E): return
 		if event.pressed and event.physical_keycode==KEY_ESCAPE: close_panel()
 		get_viewport().set_input_as_handled()
 
@@ -133,8 +137,13 @@ func _process(delta: float) -> void:
 	refresh_clock+=delta
 	if refresh_clock>=.2: refresh_clock=0;refresh()
 
+func thermal_text() -> String:
+	var color: String=["668056","638fae","377bc0","235ac4"][state.cold_level]
+	if state.hot and state.cold_level==0: color="c64b38"
+	return "[color=#%s]%s[/color]"%[color,state.thermal_status()]
+
 func refresh() -> void:
-	weather_summary.text="受潮："+state.wet_status()+"\n体感："+state.thermal_status()
+	weather_summary.text="受潮："+state.wet_status()+"\n体感："+thermal_text()
 	var values := [state.health,state.hunger,state.stamina,state.energy]
 	for i in 4: bars[i].value=values[i];numbers[i].text=str(roundi(values[i]))
 	summary.text="身体状态："+("倒地" if state.down else state.status())
@@ -142,4 +151,4 @@ func refresh() -> void:
 	if state.sleeping: summary.text=state.energy_status()+" · %.1f小时"%(state.sleep_elapsed/60.0)
 	if not overlay.visible: return
 	var e: Dictionary=preload("res://scripts/weather_exposure.gd").sample(items.service)
-	details.text="生命 %.0f  饥饿 %.0f  体力 %.0f  精力 %.0f\n%s · %s\n体力恢复 %.0f%%\n\n受潮：%s · %.1f / 100\n体感：%s · %.1f℃\n天气：%s  环境 %.1f℃\n衣物保暖：+%.1f℃\n雨伞：%s   雨棚：%s\n热源：%s\n\n%s"%[state.health,state.hunger,state.stamina,state.energy,state.status(),state.energy_status(),state.recovery_factor()*100,state.wet_status(),state.wetness,state.thermal_status(),state.felt_temperature,e.weather,e.ambient,e.warmth,"生效" if e.umbrella else "无","生效" if e.shelter else "无","生效" if e.heat>0 else "无",state.body_description()+("\n炎热：精力恢复降低15%" if state.hot else "")]
+	details.text="生命 %.0f  饥饿 %.0f  体力 %.0f  精力 %.0f\n%s · %s\n体力恢复 %.0f%%\n\n受潮：%s · %.1f / 100\n体感：%s · %.1f℃\n天气：%s  环境 %.1f℃\n衣物保暖：+%.1f℃\n雨伞：%s   雨棚：%s\n热源：%s\n\n%s"%[state.health,state.hunger,state.stamina,state.energy,state.status(),state.energy_status(),state.recovery_factor()*100,state.wet_status(),state.wetness,thermal_text(),state.felt_temperature,e.weather,e.ambient,e.warmth,"生效" if e.umbrella else "无","生效" if e.shelter else "无","生效" if e.heat>0 else "无",state.body_description()+("\n炎热：精力恢复降低15%" if state.hot else "")]

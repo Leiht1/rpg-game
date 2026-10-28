@@ -207,3 +207,8 @@ dist/
 
 /reports/release-20261028-v6/private/
 /reports/release-20261028-v6/*.tar.gz
+
+# Latency audit: keep summaries/coverage; raw request traces stay local.
+/reports/network-latency-full-v1/controlled*-tls.json
+/reports/network-latency-full-v1/public-*.json
+/reports/network-latency-full-v1/exploratory-remote/
