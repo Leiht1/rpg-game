@@ -228,6 +228,13 @@ func create_character()->void:
 	creation=preload("res://scripts/character_creation.gd").new()
 	creation.set("selection_only",true)
 	creation.set("save_path","user://singleplayer-characters-v1/state.json")
+	creation.world_entered.connect(func():
+		if not online_creation:add_local_return())
+	creation.cancelled.connect(func():
+		creation.queue_free();creation=null
+		root.show()
+		if online_creation:profile()
+		else:local_mode())
 	creation.connect("appearance_selected",func(look:Dictionary):
 		if online_creation:
 			await show_loading("正在创建人物并准备世界…")
@@ -264,12 +271,12 @@ func open_online(response:Dictionary)->void:
 	hide_loading();busy=false
 func local_mode()->void:
 	var box:=panel("单机模式")
-	button(box,"继续原有本地世界",func():root.hide();active_world=load("res://scenes/world.tscn").instantiate();add_child(active_world);add_local_return())
-	button(box,"人物创建 / 继续新角色",func():
-		online_creation=false
+	button(box,"继续原有本地世界",func():
 		if FileAccess.file_exists("user://singleplayer-characters-v1/state.json"):
 			root.hide();creation=preload("res://scripts/character_creation.gd").new();creation.save_path="user://singleplayer-characters-v1/state.json";add_child(creation);add_local_return()
-		else:create_character();add_local_return())
+			creation.cancelled.connect(func():creation.queue_free();creation=null;root.show();local_mode())
+		else:root.hide();active_world=load("res://scenes/world.tscn").instantiate();add_child(active_world);add_local_return())
+	button(box,"创建新的世界",func():online_creation=false;create_character())
 	button(box,"返回主菜单",menu)
 func add_local_return()->void:
 	var game_menu=preload("res://scripts/world_menu.gd").new()
@@ -282,6 +289,7 @@ func add_local_return()->void:
 		if is_instance_valid(creation):remove_child(creation);creation.queue_free();creation=null
 		game_menu.queue_free();menu()
 	add_child(game_menu)
+	if is_instance_valid(creation):creation.tree_exiting.connect(game_menu.queue_free)
 
 func admin()->void:
 	var box:=panel("服务器管理",680)

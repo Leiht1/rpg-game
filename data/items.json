@@ -3426,5 +3426,36 @@
     },
     "durability": null,
     "death_retention": "relic"
+  },
+  {
+    "item_id": "broad_leaf_seed",
+    "name": "宽叶种子",
+    "category": "material",
+    "description": "靠近空闲耕地按 E，点击选择要种植的种子。",
+    "icon": "res://assets/planting/candidate-broad-leaf-v1/broad_leaf_seed.png",
+    "world_visual": "res://assets/planting/candidate-broad-leaf-v1/broad_leaf_seed.png",
+    "max_stack": 30,
+    "usable": false,
+    "use_action": "",
+    "consumable": false,
+    "tags": [
+      "crop",
+      "seed"
+    ],
+    "rarity": "common",
+    "drop_rules": {
+      "source": "野外采集留种或耕地收获"
+    },
+    "effects": {},
+    "world_size": 24,
+    "equippable": false,
+    "equip_slot": "",
+    "equipment_type": "",
+    "capabilities": [],
+    "action_id": "",
+    "visual_id": "",
+    "stats": {},
+    "durability": null,
+    "death_retention": "retain"
   }
 ]

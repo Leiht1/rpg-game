@@ -115,7 +115,7 @@ func configure(owner_world: Node2D) -> void:
 	panel.hide()
 
 func debug_next_season() -> void:
-	if not OS.has_feature("debug"):return
+	if not preload("res://scripts/debug_access.gd").allowed():return
 	stop_preview()
 	var date: Dictionary=simulation.season_date()
 	var days: float=float(preload("res://scripts/season_rules.gd").data.seasons[date.index].days)
@@ -227,7 +227,7 @@ func update_lightning(delta: float, storm: float) -> void:
 	material_effect.set_shader_parameter("lightning",lightning_strength(lightning_age)*storm)
 
 func _input(event: InputEvent) -> void:
-	if OS.has_feature("debug") and event is InputEventKey and event.pressed and not event.echo and event.physical_keycode==KEY_F4:
+	if preload("res://scripts/debug_access.gd").allowed() and event is InputEventKey and event.pressed and not event.echo and event.physical_keycode==KEY_F4:
 		panel.visible=not panel.visible
 		get_viewport().set_input_as_handled()
 

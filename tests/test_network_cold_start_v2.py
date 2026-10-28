@@ -36,6 +36,29 @@ class ColdStartTests(unittest.TestCase):
             self.assertTrue(moving.result(timeout=3)['ok'])
         self.assertEqual(self.s.pending_moves,0)
 
+    def test_queued_action_runs_before_background_snapshot(self):
+        self.both()
+        self.s.gameplay=SimpleNamespace(prepare=lambda world:None)
+        order=[]
+        def committed(op, *args):
+            order.append(op)
+            return {'ok':True}
+        with patch.object(self.s,'handle_locked',side_effect=committed):
+            with concurrent.futures.ThreadPoolExecutor(2) as pool:
+                with self.s.lock:
+                    action=pool.submit(self.api,'game_command',{},self.t1)
+                    deadline=time.monotonic()+2
+                    while not self.s.pending_commands and time.monotonic()<deadline:
+                        threading.Event().wait(.01)
+                    self.assertEqual(self.s.pending_commands,1)
+                    snapshot=pool.submit(self.api,'game_snapshot',{},self.t2)
+                self.assertTrue(action.result(timeout=3)['ok'])
+                self.assertTrue(snapshot.result(timeout=3)['ok'])
+        self.assertEqual(order,['game_command','game_snapshot'])
+        self.assertEqual(self.s.pending_commands,0)
+        with self.assertRaises(Exception):self.api('game_command',{},'invalid-token')
+        self.assertEqual(self.s.pending_commands,0,'failed authentication cannot leave the snapshot queue blocked')
+
     def test_new_world_save_failure_keeps_no_membership_or_cache(self):
         save=self.s.save
         with patch.object(self.s,'save',side_effect=OSError('test disk full')):

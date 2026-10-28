@@ -5,6 +5,7 @@ var token:=""
 var profile:Dictionary={}
 var cursor:=0
 var avatar_cache:Dictionary={}
+var http_channels:Dictionary={}
 func _init()->void:
 	var pack:=OS.get_executable_path().get_base_dir().path_join("Candidates.pck")
 	if FileAccess.file_exists(pack):ProjectSettings.load_resource_pack(pack)
@@ -20,25 +21,26 @@ func _ready()->void:
 func call_api(operation:String,data:Dictionary={})->Dictionary:
 	var began:=Time.get_ticks_msec()
 	if not str(config.get("server_url","")).begins_with("https://"):return {"ok":false,"error":"服务器地址须使用HTTPS"}
-	var request:=HTTPRequest.new();add_child(request);request.use_threads=true;request.timeout=190 if operation in ["create_world","character","game_snapshot","game_command"] else (8 if operation in ["login","activate"] else 30)
-	request.body_size_limit=8*1024*1024
+	var timeout:=190.0 if operation in ["create_world","character","game_snapshot","game_command"] else (8.0 if operation in ["login","activate"] else 30.0)
 	var cert:=X509Certificate.new()
 	var cert_value:String=str(config.get("certificate","server-public.crt")).replace("\\","/")
 	var path:String=cert_value if cert_value.is_absolute_path() else config.base_dir.path_join(cert_value)
 	if cert.load(path)!=OK:
-		request.queue_free();return {"ok":false,"error":"缺少服务器公开证书，请使用管理员发放的客户端配置"}
-	request.set_tls_options(TLSOptions.client(cert,config.get("server_name","windrest-server")))
+		return {"ok":false,"error":"缺少服务器公开证书，请使用管理员发放的客户端配置"}
 	var payload:=data.duplicate(true);payload.gameplay_revision=1;payload.protocol=config.get("protocol",1);payload.version=config.get("version","0.1.0")
-	var headers:=PackedStringArray(["Content-Type: application/json","Authorization: Bearer "+token])
+	var headers:=PackedStringArray(["Content-Type: application/json","Accept-Encoding: gzip","Authorization: Bearer "+token])
 	var url:=str(config.server_url).trim_suffix("/")
 	# LAN servers commonly listen on IPv4; do not let localhost's ::1 record
 	# prevent connecting to their configured IPv4 listener.
 	var authority:=url.get_slice("/",2)
 	var host:=authority.get_slice(":",0)
 	if host.to_lower()=="localhost":url=url.replace("https://"+host,"https://127.0.0.1")
-	var error:=request.request(url+"/api/"+operation,headers,HTTPClient.METHOD_POST,JSON.stringify(payload))
-	if error!=OK:request.queue_free();return {"ok":false,"error":"无法发起连接"}
-	var result=await request.request_completed;request.queue_free()
+	var lane:=operation if operation in ["move","poll"] else ("game" if operation in ["game_snapshot","game_command"] else "account")
+	if not http_channels.has(lane):http_channels[lane]=preload("res://scripts/network_http_channel.gd").new()
+	var port:=int(authority.get_slice(":",1)) if authority.contains(":") else 443
+	if host.to_lower()=="localhost":host="127.0.0.1"
+	var identity:=url+"|"+path+"|"+str(config.get("server_name","windrest-server"))
+	var result:Array=await http_channels[lane].exchange(get_tree(),host,port,TLSOptions.client(cert,config.get("server_name","windrest-server")),identity,"/api/"+operation,headers,JSON.stringify(payload),timeout)
 	if Engine.has_meta("network_timings"):
 		var timings: Dictionary=Engine.get_meta("network_timings")
 		if not timings.has(operation):timings[operation]=[]

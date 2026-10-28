@@ -27,6 +27,23 @@
       "stage_minutes": 2880,
       "yield_count": 4,
       "seed_count": 2
+    },
+    "broad_leaf": {
+      "name": "宽叶",
+      "seed": "broad_leaf_seed",
+      "produce": "broad_leaf",
+      "minutes": 2880,
+      "stage_minutes": 960,
+      "yield_count": 4,
+      "seed_count": 2,
+      "extra_produce": {
+        "plant_fiber": 4
+      },
+      "stage_sizes": [
+        28,
+        42,
+        54
+      ]
     }
   },
   "wild_sources": [

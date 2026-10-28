@@ -15,3 +15,6 @@
 客户端 dist/Windrest-Cloud-2026.10.28.zip 使用当前代码构建，原公开证书，连接https://47.118.18.98:24870；尚未真实窗口连云验证。未发布旧自动更新地址，未切换公司服务器或其客户端配置。私有快照和迁移包不进入Git。
 
 运维：ssh deploy-haotian@47.118.18.98，cd /opt/apps/haotian；docker compose ps / logs --tail 80 / restart game / stop game。所有docker命令无需sudo；不可在朋友项目运行清理命令。
+
+
+后续：用户放行端口后，公司电脑公网TCP/原证书严格TLS/登录API验证通过；本地config/network-client.json只替换server_url为https://47.118.18.98:24870，证书保持。Godot4.7.2无头实例加载真实network_client.gd、读取实际项目配置并访问公网登录API，预期返回不存在账号，通过。无真实账号密码登录，未创建正式测试人物/世界；后续联机专项可直接使用云服，单机入口不变。

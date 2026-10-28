@@ -116,6 +116,11 @@ func execute(request: Dictionary) -> void:
 	world.stream.update_target(world.player.position)
 	var personal: Dictionary=state.get("combat_personal",{})
 	var needs_scene: bool=request.get("operation","snapshot")!="snapshot" or personal.get("phase","alive")!="alive" or not personal.get("attack",{}).is_empty() or state.get("network_fishing",{}).get("state","idle")!="idle"
+	# Moving ordinary bag slots only validates inventory; it performs no spatial
+	# query. Keep scene/physics waits for equipment, use, and world interactions.
+	var command_args: Array=request.get("args",[])
+	if request.get("operation")=="inventory" and command_args.size()==3 and command_args[0]=="move_slot" and command_args[1] is float and command_args[2] is float and command_args[1]>=0 and command_args[1]<40 and command_args[2]>=0 and command_args[2]<40 and personal.get("phase","alive")=="alive" and personal.get("attack",{}).is_empty() and state.get("network_fishing",{}).get("state","idle")=="idle":
+		needs_scene=false
 	timing.append(Time.get_ticks_usec())
 	# Restore may replace a facility at the same ID. Let deferred deletion and
 	# physics registration finish before a ray can hit the superseded collider.

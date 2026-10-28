@@ -1,0 +1,190 @@
+[
+  {
+    "client": 0,
+    "exit": 0,
+    "apis": {
+      "login": {
+        "max_ms": 410,
+        "median_ms": 410,
+        "p95_ms": 410,
+        "samples": 1
+      },
+      "resume": {
+        "max_ms": 217,
+        "median_ms": 217,
+        "p95_ms": 217,
+        "samples": 1
+      },
+      "character": {
+        "max_ms": 19149,
+        "median_ms": 19149,
+        "p95_ms": 19149,
+        "samples": 1
+      },
+      "game_snapshot": {
+        "max_ms": 1600,
+        "median_ms": 267,
+        "p95_ms": 387,
+        "samples": 152
+      },
+      "move": {
+        "max_ms": 495,
+        "median_ms": 232,
+        "p95_ms": 333,
+        "samples": 259
+      },
+      "poll": {
+        "max_ms": 467,
+        "median_ms": 219,
+        "p95_ms": 323,
+        "samples": 267
+      },
+      "game_command": {
+        "max_ms": 449,
+        "median_ms": 333,
+        "p95_ms": 333,
+        "samples": 3
+      }
+    },
+    "api_results": {
+      "character": {
+        "count": 1,
+        "errors": [],
+        "failures": 0
+      },
+      "game_command": {
+        "count": 3,
+        "errors": [],
+        "failures": 0
+      },
+      "game_snapshot": {
+        "count": 152,
+        "errors": [],
+        "failures": 0
+      },
+      "login": {
+        "count": 1,
+        "errors": [],
+        "failures": 0
+      },
+      "move": {
+        "count": 259,
+        "errors": [],
+        "failures": 0
+      },
+      "poll": {
+        "count": 267,
+        "errors": [],
+        "failures": 0
+      },
+      "resume": {
+        "count": 1,
+        "errors": [],
+        "failures": 0
+      }
+    },
+    "PERFORMANCE": "PERFORMANCE players=2.0 frames=3689 median=16.655 p95=17.524 max=38.207 pending=18 ack_age=482 blocked=0 travel=527.34375",
+    "REMOTE_CHECK": "REMOTE_CHECK missing_frames=0 attack_frames=82",
+    "ATTACK_RESPONSE_MS": "ATTACK_RESPONSE_MS [29.089,30.188,28.267]",
+    "remote_arrival": {
+      "count": 431,
+      "median_ms": 163,
+      "p95_ms": 271,
+      "max_ms": 412
+    }
+  },
+  {
+    "client": 1,
+    "exit": 0,
+    "apis": {
+      "login": {
+        "max_ms": 338,
+        "median_ms": 338,
+        "p95_ms": 338,
+        "samples": 1
+      },
+      "resume": {
+        "max_ms": 216,
+        "median_ms": 216,
+        "p95_ms": 216,
+        "samples": 1
+      },
+      "character": {
+        "max_ms": 19251,
+        "median_ms": 19251,
+        "p95_ms": 19251,
+        "samples": 1
+      },
+      "game_snapshot": {
+        "max_ms": 556,
+        "median_ms": 267,
+        "p95_ms": 367,
+        "samples": 156
+      },
+      "poll": {
+        "max_ms": 516,
+        "median_ms": 217,
+        "p95_ms": 333,
+        "samples": 269
+      },
+      "move": {
+        "max_ms": 554,
+        "median_ms": 233,
+        "p95_ms": 347,
+        "samples": 258
+      },
+      "game_command": {
+        "max_ms": 306,
+        "median_ms": 285,
+        "p95_ms": 285,
+        "samples": 3
+      }
+    },
+    "api_results": {
+      "character": {
+        "count": 1,
+        "errors": [],
+        "failures": 0
+      },
+      "game_command": {
+        "count": 3,
+        "errors": [],
+        "failures": 0
+      },
+      "game_snapshot": {
+        "count": 156,
+        "errors": [],
+        "failures": 0
+      },
+      "login": {
+        "count": 1,
+        "errors": [],
+        "failures": 0
+      },
+      "move": {
+        "count": 258,
+        "errors": [],
+        "failures": 0
+      },
+      "poll": {
+        "count": 269,
+        "errors": [],
+        "failures": 0
+      },
+      "resume": {
+        "count": 1,
+        "errors": [],
+        "failures": 0
+      }
+    },
+    "PERFORMANCE": "PERFORMANCE players=2.0 frames=3690 median=16.66 p95=17.504 max=40.171 pending=17 ack_age=450 blocked=0 travel=403.349609375",
+    "REMOTE_CHECK": "REMOTE_CHECK missing_frames=0 attack_frames=122",
+    "ATTACK_RESPONSE_MS": "ATTACK_RESPONSE_MS [28.525,29.862,28.711]",
+    "remote_arrival": {
+      "count": 460,
+      "median_ms": 150.0,
+      "p95_ms": 250,
+      "max_ms": 417
+    }
+  }
+]

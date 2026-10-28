@@ -1,5 +1,7 @@
 extends Node
 signal appearance_selected(appearance: Dictionary)
+signal cancelled
+signal world_entered
 var selection_only := false
 const Catalog=preload("res://scripts/character_catalog.gd")
 const CreationSkin=preload("res://scripts/item_ui_style.gd")
@@ -55,6 +57,9 @@ func _ready() -> void:
 		tones.add_child(button);skin_buttons.append(button);button.pressed.connect(func():look.skin_id=id;refresh_preview())
 	status.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;status.custom_minimum_size.x=600;box.add_child(status)
 	enter.text="进入世界";enter.custom_minimum_size.y=42;box.add_child(enter);enter.pressed.connect(begin_creation)
+	var back:=Button.new();back.text="返回";box.add_child(back)
+	back.pressed.connect(func():
+		if not busy:cancelled.emit())
 	select_gender(0)
 	if not selection_only and FileAccess.file_exists(save_path):
 		var value=JSON.parse_string(FileAccess.get_file_as_string(save_path))
@@ -107,6 +112,7 @@ func open_world(record: Dictionary, creating: bool) -> bool:
 	world.player.input_blocked=true
 	var service: Node=world.item_service
 	if not service.writable:return fail("试玩存档数据不完整，原文件已保留。",not creating)
+	while not world.started:await get_tree().process_frame
 	if creating:
 		if not world.safe_entry():return fail("未找到安全出生点，请重试。",false)
 		# Legacy marker records completed initialization; no starter outfit grant.
@@ -114,8 +120,8 @@ func open_world(record: Dictionary, creating: bool) -> bool:
 		DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(save_path.get_base_dir()))
 		world.persistent_world=true
 		if not service.save_state():return fail("初次保存失败，选择已保留，可重试。",false)
-	while not world.started:await get_tree().process_frame
 	world.player.input_blocked=false;screen.hide();busy=false
+	world_entered.emit()
 	return true
 func fail(message: String, protect: bool) -> bool:
 	world.persistent_world=false;world.item_service.writable=false

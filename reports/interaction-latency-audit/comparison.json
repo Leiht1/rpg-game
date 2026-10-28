@@ -1,0 +1,151 @@
+{
+  "scope": "Local Service.handle callers; not TLS clients or UI. Each group 300 seconds. After run first group overlaps 46.5s rules regression, so its before/after comparison is confounded. No CPU/RSS/network counters collected.",
+  "before": {
+    "1": {
+      "move": {
+        "count": 2956,
+        "median_ms": 0.0,
+        "p95_ms": 0.0,
+        "max_ms": 16.0,
+        "median_bytes": 748
+      },
+      "snapshot": {
+        "count": 708,
+        "median_ms": 16.0,
+        "p95_ms": 78.0,
+        "max_ms": 156.0,
+        "median_bytes": 127192
+      },
+      "inventory": {
+        "count": 295,
+        "median_ms": 62.0,
+        "p95_ms": 79.0,
+        "max_ms": 250.0,
+        "median_bytes": 127242
+      },
+      "errors": []
+    },
+    "2": {
+      "move": {
+        "count": 5449,
+        "median_ms": 0.0,
+        "p95_ms": 94.0,
+        "max_ms": 329.0,
+        "median_bytes": 1271
+      },
+      "snapshot": {
+        "count": 1372,
+        "median_ms": 16.0,
+        "p95_ms": 203.0,
+        "max_ms": 328.0,
+        "median_bytes": 127208
+      },
+      "inventory": {
+        "count": 576,
+        "median_ms": 93.0,
+        "p95_ms": 187.0,
+        "max_ms": 281.0,
+        "median_bytes": 127260
+      },
+      "errors": []
+    },
+    "4": {
+      "move": {
+        "count": 10070,
+        "median_ms": 0.0,
+        "p95_ms": 157.0,
+        "max_ms": 1500.0,
+        "median_bytes": 2317
+      },
+      "snapshot": {
+        "count": 2629,
+        "median_ms": 16.0,
+        "p95_ms": 188.0,
+        "max_ms": 1547.0,
+        "median_bytes": 127214
+      },
+      "inventory": {
+        "count": 1130,
+        "median_ms": 63.0,
+        "p95_ms": 203.0,
+        "max_ms": 1531.0,
+        "median_bytes": 127265
+      },
+      "errors": []
+    }
+  },
+  "after": {
+    "1": {
+      "move": {
+        "count": 2709,
+        "median_ms": 0.0,
+        "p95_ms": 0.0,
+        "max_ms": 32.0,
+        "median_bytes": 734
+      },
+      "snapshot": {
+        "count": 656,
+        "median_ms": 31.0,
+        "p95_ms": 156.0,
+        "max_ms": 10891.0,
+        "median_bytes": 127177
+      },
+      "inventory": {
+        "count": 273,
+        "median_ms": 47.0,
+        "p95_ms": 125.0,
+        "max_ms": 172.0,
+        "median_bytes": 127228
+      },
+      "errors": []
+    },
+    "2": {
+      "move": {
+        "count": 5847,
+        "median_ms": 0.0,
+        "p95_ms": 47.0,
+        "max_ms": 172.0,
+        "median_bytes": 1243
+      },
+      "snapshot": {
+        "count": 1409,
+        "median_ms": 15.0,
+        "p95_ms": 125.0,
+        "max_ms": 157.0,
+        "median_bytes": 127191
+      },
+      "inventory": {
+        "count": 584,
+        "median_ms": 47.0,
+        "p95_ms": 109.0,
+        "max_ms": 125.0,
+        "median_bytes": 127242
+      },
+      "errors": []
+    },
+    "4": {
+      "move": {
+        "count": 10636,
+        "median_ms": 0.0,
+        "p95_ms": 156.0,
+        "max_ms": 672.0,
+        "median_bytes": 2261
+      },
+      "snapshot": {
+        "count": 2709,
+        "median_ms": 15.0,
+        "p95_ms": 188.0,
+        "max_ms": 875.0,
+        "median_bytes": 127201
+      },
+      "inventory": {
+        "count": 1147,
+        "median_ms": 47.0,
+        "p95_ms": 187.0,
+        "max_ms": 531.0,
+        "median_bytes": 127252
+      },
+      "errors": []
+    }
+  }
+}

@@ -192,3 +192,15 @@ dist/
 
 # Local isolated formal-wolf regression snapshot
 /reports/guardian-wolf-formal-v1/regression/ready.json
+
+# Cloud interaction/crop release: private fixtures and disposable transfer bundles.
+/reports/online-leaf-v1/private/
+/reports/online-leaf-v1/*.tar.gz
+
+# Local release verification copies, transfer archives and raw timing traces.
+/reports/release-20261028-v5/private/
+/reports/release-20261028-v5/*.tar.gz
+/reports/company-release-20261027/old-launcher-test/
+/reports/interaction-latency-audit/*-stage-raw.json
+/reports/interaction-latency-audit/round3-queue.json
+/reports/network-performance-v7/latency-stage-raw.json

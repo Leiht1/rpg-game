@@ -41,6 +41,43 @@ class RulesHostTests(unittest.TestCase):
         self.assertIn(identity,result['snapshot']['consumed'])
         self.assertNotIn(identity,result['snapshot']['loose'])
 
+    def test_pickup_competition_and_full_bag_keep_authority(self):
+        state = copy.deepcopy(self.baseline)
+        state['combat_personal']['phase'] = 'alive'
+        at = state['player_position']
+        identity = 'ordered-pickup-competition'
+        state['loose'][identity] = {'id':identity,'item_id':'wood','count':2,
+                                    'x':at['x']+6,'y':at['y']+20,'mode':'pickup'}
+        first = self.host.execute(state, operation='interact', args=[{'drop_id':identity}], player_id='one')
+        self.assertTrue(first['ok'], first.get('error'))
+        other = copy.deepcopy(first['snapshot'])
+        other['slots'] = copy.deepcopy(state['slots'])
+        second = self.host.execute(other, operation='interact', args=[{'drop_id':identity}], player_id='two')
+        self.assertFalse(second['ok'])
+        self.assertEqual(second['snapshot']['slots'], other['slots'])
+        full = copy.deepcopy(state)
+        full['slots'] = [{'item_id':'stone','count':99} for _ in full['slots']]
+        rejected = self.host.execute(full, operation='interact', args=[{'drop_id':identity}])
+        self.assertIn(identity, rejected['snapshot']['loose'])
+        self.assertEqual(rejected['snapshot']['slots'], full['slots'])
+
+    def test_pickup_wall_restore_still_waits_for_physics(self):
+        state = self.fixture_building('stone_wall', {'vertical':True})
+        state['combat_personal']['phase'] = 'alive'
+        wall = state['buildings']['objects']['fixture']
+        wall['x'] = wall['gx']*96
+        state['player_position'] = {'x':wall['x']-18,'y':wall['y']}
+        identity = 'ordered-pickup-behind-wall'
+        state['loose'][identity] = {'id':identity,'item_id':'wood','count':1,
+                                    'x':wall['x']+18,'y':wall['y'],'mode':'pickup'}
+        blocked = self.host.execute(state, operation='interact', args=[{'drop_id':identity}])
+        self.assertIn('snapshot', blocked, blocked.get('error'))
+        self.assertFalse(blocked['ok'])
+        self.assertIn(identity, blocked['snapshot']['loose'])
+        state['buildings']['objects'] = {}
+        clear = self.host.execute(state, operation='interact', args=[{'drop_id':identity}])
+        self.assertTrue(clear['ok'], clear.get('error'))
+
     def test_roundtrip_original_snapshot(self):
         result = self.host.execute(copy.deepcopy(self.baseline))
         self.assertTrue(result["ok"], result.get("error"))

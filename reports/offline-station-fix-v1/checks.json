@@ -1,0 +1,146 @@
+[
+  {
+    "label": "new creation ignores existing invalid save without disabling Enter",
+    "pass": true
+  },
+  {
+    "label": "opening creation preserves previous save",
+    "pass": true
+  },
+  {
+    "label": "cancel preserves previous save",
+    "pass": true
+  },
+  {
+    "label": "failed initial save returns to creation",
+    "pass": true
+  },
+  {
+    "label": "failed creation preserves old world and allows retry",
+    "pass": true
+  },
+  {
+    "label": "new world initializes successfully over existing invalid save",
+    "pass": true
+  },
+  {
+    "label": "successful creation atomically replaces old save with valid new session",
+    "pass": true
+  },
+  {
+    "label": "metal workbench reachable before snapshot",
+    "pass": true
+  },
+  {
+    "label": "open metal crafting UI",
+    "pass": true
+  },
+  {
+    "label": "reproduce original snapshot collider causing station rejection",
+    "pass": true
+  },
+  {
+    "label": "snapshot retires old collider immediately 0",
+    "pass": true
+  },
+  {
+    "label": "UI survives immediate snapshot replacement 0",
+    "pass": true
+  },
+  {
+    "label": "snapshot retires old collider immediately 1",
+    "pass": true
+  },
+  {
+    "label": "UI survives immediate snapshot replacement 1",
+    "pass": true
+  },
+  {
+    "label": "snapshot retires old collider immediately 2",
+    "pass": true
+  },
+  {
+    "label": "UI survives immediate snapshot replacement 2",
+    "pass": true
+  },
+  {
+    "label": "snapshot retires old collider immediately 3",
+    "pass": true
+  },
+  {
+    "label": "UI survives immediate snapshot replacement 3",
+    "pass": true
+  },
+  {
+    "label": "snapshot retires old collider immediately 4",
+    "pass": true
+  },
+  {
+    "label": "UI survives immediate snapshot replacement 4",
+    "pass": true
+  },
+  {
+    "label": "snapshot retires old collider immediately 5",
+    "pass": true
+  },
+  {
+    "label": "UI survives immediate snapshot replacement 5",
+    "pass": true
+  },
+  {
+    "label": "snapshot retires old collider immediately 6",
+    "pass": true
+  },
+  {
+    "label": "UI survives immediate snapshot replacement 6",
+    "pass": true
+  },
+  {
+    "label": "snapshot retires old collider immediately 7",
+    "pass": true
+  },
+  {
+    "label": "UI survives immediate snapshot replacement 7",
+    "pass": true
+  },
+  {
+    "label": "authoritative snapshot keeps metal station usable 0",
+    "pass": true
+  },
+  {
+    "label": "authoritative snapshot keeps metal station usable 1",
+    "pass": true
+  },
+  {
+    "label": "authoritative snapshot keeps metal station usable 2",
+    "pass": true
+  },
+  {
+    "label": "metal crafting starts after repeated snapshots",
+    "pass": true
+  },
+  {
+    "label": "metal crafting completes and grants product",
+    "pass": true
+  },
+  {
+    "label": "walking away still closes station",
+    "pass": true
+  },
+  {
+    "label": "continue restores newly created world",
+    "pass": true
+  },
+  {
+    "label": "read-only continuation leaves save intact",
+    "pass": true
+  },
+  {
+    "label": "launcher new-world button always opens enabled character creation",
+    "pass": true
+  },
+  {
+    "label": "launcher cancel returns to visible offline menu",
+    "pass": true
+  }
+]

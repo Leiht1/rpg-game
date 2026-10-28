@@ -3,6 +3,7 @@ var pending_inputs: Array=[]
 var input_id:=0
 var sent_input_id:=0
 var confirmed_at:=0
+var acknowledged_input_id:=0
 var correction:=Vector2.ZERO
 func _physics_process(delta: float) -> void:
 	var previous:=position
@@ -26,15 +27,17 @@ func record_input(direction: Vector2, duration: float, run: bool) -> void:
 			return
 	input_id+=1
 	pending_inputs.append({"id":input_id,"dx":direction.x,"dy":direction.y,"run":run,"dt":duration})
-func movement_batch() -> Array:
+func movement_batch(limit_id: int=-1) -> Array:
 	var result: Array=[]
 	var duration:=0.0
 	for item in pending_inputs:
+		if limit_id>=0 and int(item.id)>limit_id:break
 		if duration+float(item.dt)>1.0:break
 		result.append(item.duplicate(true));duration+=float(item.dt)
 	if not result.is_empty():sent_input_id=maxi(sent_input_id,int(result[-1].id))
 	return result
 func acknowledge(row: Dictionary, ack: int) -> void:
+	acknowledged_input_id=maxi(acknowledged_input_id,ack)
 	while not pending_inputs.is_empty() and int(pending_inputs[0].id)<=ack:pending_inputs.pop_front()
 	confirmed_at=Time.get_ticks_msec()
 	var predicted:=Vector2(row.x,row.y)

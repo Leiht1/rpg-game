@@ -5,6 +5,7 @@ static var configuration: Dictionary=JSON.parse_string(FileAccess.get_file_as_st
 var rules: Dictionary=configuration
 
 static func art(name_value: String) -> String:
+	if name_value.begins_with("broad_leaf_"):return "res://assets/planting/candidate-broad-leaf-v1/"+name_value+".png"
 	if name_value=="soil": return "res://assets/planting/v2/soil.png"
 	if name_value=="roots": return "res://assets/planting/v1/roots.png"
 	return "res://assets/planting/v3/"+name_value+".png"
@@ -85,6 +86,7 @@ func interact(id: String, target: Node2D, seed_id: String="") -> bool:
 	elif request=="pickup":
 		var spec: Dictionary=rules.crops[row.crop]
 		rewards={str(spec.produce):int(spec.yield_count),str(spec.seed):int(spec.seed_count)}
+		for item in spec.get("extra_produce",{}):rewards[str(item)]=int(rewards.get(str(item),0))+int(spec.extra_produce[item])
 		for item in rewards:
 			if staged.add(item,rewards[item])>0: service.notice.emit("背包空间不足，请留出收获和种子的空间");return false
 		row.crop="";row.growth_minutes=0.0;row.roots=true;row.erase("fertilized")

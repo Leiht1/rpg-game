@@ -236,9 +236,9 @@ Ctrl+左键拆分 · B 关闭"
 	var cat_layout := VBoxContainer.new()
 	catalog.add_child(cat_layout)
 	var cat_title := Label.new()
-	cat_title.text = "物品图鉴 / 调试管理  ·  F6 关闭" if OS.has_feature("debug") else "物品图鉴"
+	cat_title.text = "物品图鉴 / 调试管理  ·  F6 关闭" if preload("res://scripts/debug_access.gd").allowed() else "物品图鉴"
 	cat_layout.add_child(cat_title)
-	if OS.has_feature("debug"):
+	if preload("res://scripts/debug_access.gd").allowed():
 		var debug_actions := HBoxContainer.new()
 		cat_layout.add_child(debug_actions)
 		var ore_button := Button.new()
@@ -456,7 +456,7 @@ func rebuild_catalog() -> void:
 		text.add_theme_font_size_override("font_size",13)
 		text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		row.add_child(text)
-		if OS.has_feature("debug"):
+		if preload("res://scripts/debug_access.gd").allowed():
 			var grant := Button.new()
 			grant.text = "+%d" % int(definition.max_stack)
 			grant.pressed.connect(func():
@@ -879,7 +879,7 @@ func _input(event: InputEvent) -> void:
 		toggle_bag()
 		get_viewport().set_input_as_handled()
 		return
-	if key == KEY_F6 and OS.has_feature("debug"):
+	if key == KEY_F6 and preload("res://scripts/debug_access.gd").allowed():
 		if world.map_view.visible: world.map_view.close_map()
 		var panel: Control = catalog
 		var next := not panel.visible

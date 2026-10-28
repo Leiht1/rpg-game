@@ -1,0 +1,122 @@
+[
+  {
+    "label": "legal plot",
+    "pass": true
+  },
+  {
+    "label": "till",
+    "pass": true
+  },
+  {
+    "label": "sow broad leaf",
+    "pass": true
+  },
+  {
+    "label": "one seed consumed",
+    "pass": true
+  },
+  {
+    "label": "growth stage 0",
+    "pass": true
+  },
+  {
+    "label": "stage art 0",
+    "pass": true
+  },
+  {
+    "label": "growth stage 1",
+    "pass": true
+  },
+  {
+    "label": "stage art 1",
+    "pass": true
+  },
+  {
+    "label": "growth stage 2",
+    "pass": true
+  },
+  {
+    "label": "stage art 2",
+    "pass": true
+  },
+  {
+    "label": "crop persistence roundtrip",
+    "pass": true
+  },
+  {
+    "label": "full bag atomically rejects dual products and seeds",
+    "pass": true
+  },
+  {
+    "label": "save failure restores all rewards and mature crop",
+    "pass": true
+  },
+  {
+    "label": "harvest broad leaf",
+    "pass": true
+  },
+  {
+    "label": "equal leaf fiber and sustainable seeds",
+    "pass": true
+  },
+  {
+    "label": "roots prevent duplicate harvest",
+    "pass": true
+  },
+  {
+    "label": "new seed uses original natural gathering",
+    "pass": true
+  },
+  {
+    "label": "pickup pending feedback has no inventory mutation",
+    "pass": true
+  },
+  {
+    "label": "rejected pickup restores full visibility",
+    "pass": true
+  },
+  {
+    "label": "chop feedback does not grant authoritative hit",
+    "pass": true
+  },
+  {
+    "label": "rejected chop removes preview receipt",
+    "pass": true
+  },
+  {
+    "label": "ordinary account cannot obtain debug access by nickname",
+    "pass": true
+  },
+  {
+    "label": "ordinary account F4 does not open environment tools",
+    "pass": true
+  },
+  {
+    "label": "ordinary account F6 does not open catalog tools",
+    "pass": true
+  },
+  {
+    "label": "ordinary account has no debug action buttons",
+    "pass": true
+  },
+  {
+    "label": "authenticated administrator retains debug access",
+    "pass": true
+  },
+  {
+    "label": "administrator F4 opens tools",
+    "pass": true
+  },
+  {
+    "label": "administrator F6 opens tools",
+    "pass": true
+  },
+  {
+    "label": "queued interaction provides feedback during an in-flight snapshot",
+    "pass": true
+  },
+  {
+    "label": "mine feedback starts immediately without mining or depletion",
+    "pass": true
+  }
+]

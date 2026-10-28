@@ -192,7 +192,13 @@ func _draw() -> void:
 			crop_name=str(r.crop)+"_"+str(stage_value)
 		if not crop_name.is_empty():
 			var crop_image := planting_texture(crop_name)
-			if crop_image: draw_texture_rect(crop_image,Rect2(-34,-32,68,56) if r.get("roots",false) else Rect2(-27,-42,54,54),false)
+			if crop_image:
+				var crop_rect:=Rect2(-34,-32,68,56) if r.get("roots",false) else Rect2(-27,-42,54,54)
+				if not r.get("roots",false):
+					var sizes: Array=preload("res://scripts/planting.gd").configuration.crops[r.crop].get("stage_sizes",[54,54,54])
+					var size_value:=float(sizes[preload("res://scripts/planting.gd").stage_for(r)])
+					crop_rect=Rect2(-size_value*.5,12-size_value,size_value,size_value)
+				draw_texture_rect(crop_image,crop_rect,false)
 		return
 	if r.layer=="ground":
 		var material := "wood" if r.kind=="wood_floor" else "stone"

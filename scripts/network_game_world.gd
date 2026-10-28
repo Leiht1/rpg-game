@@ -3,11 +3,13 @@ signal returned
 var session_data: Dictionary={}
 var routes: Dictionary={}
 var commands: Array=[]
+var interaction_preview=preload("res://scripts/network_interaction_preview.gd").new()
 var stopping:=false
 var typing:=false
 var applying:=false
 var moving_request:=false
 var requesting:=false
+var interaction_fence:=false
 var polling:=false
 var last_error:=""
 var sequence:=0
@@ -47,6 +49,10 @@ func enqueue(operation: String, args: Array) -> void:
 	if stopping or applying:return
 	if commands.size()>=24:item_ui.show_notice("正在同步，请稍候");return
 	var command:={"request_id":Crypto.new().generate_random_bytes(16).hex_encode(),"operation":operation,"args":args,"expected":{}}
+	if operation=="interact":
+		command.input_boundary=player.input_id
+		# Freeze this input ID: later frames must not merge movement into it.
+		player.sent_input_id=maxi(player.sent_input_id,player.input_id)
 	var indices: Array=[]
 	if operation=="inventory":
 		indices.append(int(args[1]))
@@ -54,6 +60,14 @@ func enqueue(operation: String, args: Array) -> void:
 	elif operation in ["discard","lamp"] and int(args[0])>=0:indices.append(int(args[0]))
 	for index in indices:command.expected[str(index)]=item_service.inventory.get_slot(index).duplicate(true)
 	commands.append(command)
+	if operation=="interact":
+		for target in object_root.get_children():
+			var matches:=false
+			for key in args[0]:
+				if target.has_meta(key) and str(target.get_meta(key))==str(args[0][key]):matches=true;break
+			if matches:
+				interaction_preview.begin(str(command.request_id),target,preload("res://scripts/world_interaction.gd").action_for(target),player)
+				break
 	if operation=="combat_attack":item_service.combat.begin_attack_preview(Vector2(args[0].x,args[0].y))
 	if not requesting:sync_server.call_deferred()
 func _process(delta: float) -> void:
@@ -67,9 +81,15 @@ func _process(delta: float) -> void:
 	if sync_clock>=sync_interval and not requesting:sync_clock=0;sync_server()
 	item_service.sleep.render()
 func move_server() -> void:
+	if moving_request or interaction_fence or stopping:return
+	var limit_id: int=-1
+	for command in commands:
+		if command.has("input_boundary"):
+			limit_id=int(command.input_boundary);break
+	if limit_id>=0 and player.acknowledged_input_id>=limit_id:return
 	moving_request=true;sequence+=1
 	var region_serial: int=int(item_service.chapter.mine.travel.serial)
-	var response: Dictionary=await Network.call_api("move",{"mine_serial":region_serial,"seq":sequence,"dx":0,"dy":0,"inputs":player.movement_batch(),"pose":{"action":player.action,"clock":player.action_clock,"facing":player.facing}})
+	var response: Dictionary=await Network.call_api("move",{"mine_serial":region_serial,"seq":sequence,"dx":0,"dy":0,"inputs":player.movement_batch(limit_id),"pose":{"action":player.action,"clock":player.action_clock,"facing":player.facing}})
 	moving_request=false
 	if stopping or region_serial!=int(item_service.chapter.mine.travel.serial):return
 	if response.get("ok",false):
@@ -80,12 +100,24 @@ func sync_server() -> void:
 	if requesting or stopping:return
 	requesting=true
 	var command: Dictionary=commands[0].duplicate(true) if not commands.is_empty() else {}
+	if command.has("input_boundary"):
+		# Confirm only movement up to the action, then keep later movement local
+		# until the authority has checked the action at that ordered position.
+		while moving_request or player.acknowledged_input_id<int(command.input_boundary):
+			if stopping:requesting=false;return
+			if not moving_request:move_server()
+			await get_tree().process_frame
+		interaction_fence=true
 	command.selected=item_service.inventory.selected
 	command.station=item_service.craft_station_id
 	var response: Dictionary=await Network.call_api("game_snapshot" if commands.is_empty() else "game_command",command)
+	interaction_fence=false
 	if stopping:requesting=false;return
 	if response.get("ok",false):
-		if command.has("request_id"):commands.pop_front()
+		var preview_chop: bool=interaction_preview.pending.get(str(command.get("request_id","")),{}).get("action","")=="chop"
+		if command.has("request_id"):
+			commands.pop_front()
+			interaction_preview.finish(str(command.request_id),true)
 		apply_snapshot(response.snapshot)
 		if command.get("operation")=="combat_attack":item_service.combat.confirm_attack_preview(true)
 		for event in response.get("events",[]):
@@ -93,7 +125,9 @@ func sync_server() -> void:
 				"chapter_page":item_service.chapter_view.show_page(str(event.text))
 				"notice":item_service.notice.emit(str(event.text))
 				"obtained":item_service.item_obtained.emit(str(event.id),int(event.count))
-				"sound":AudioFX.play_sfx(str(event.key),Vector2(event.at.x,event.at.y) if not event.at.is_empty() else Vector2.INF)
+				"sound":
+					if event.key=="sfx_chop_hit" and preview_chop:continue
+					AudioFX.play_sfx(str(event.key),Vector2(event.at.x,event.at.y) if not event.at.is_empty() else Vector2.INF)
 	elif command.has("request_id"):
 		if command.get("operation") in ["chapter","chapter_read"]:item_service.chapter_view.close_page()
 		if command.get("operation")=="mine" and item_service.chapter_view.transition.active:item_service.chapter_view.transition.prepare_reveal()
@@ -101,6 +135,7 @@ func sync_server() -> void:
 		# Keep the same ID after transport failure; never retry a rejected command.
 		if not str(response.get("error","")).begins_with("服务器暂时不可用") and not str(response.get("error","")).begins_with("无法连接服务器"):
 			commands.pop_front()
+			interaction_preview.finish(str(command.request_id))
 			if command.get("operation")=="combat_attack":item_service.combat.confirm_attack_preview(false)
 		item_ui.show_notice(response.get("error","操作同步失败"))
 	requesting=false
@@ -146,6 +181,13 @@ func map_players() -> Array[Dictionary]:
 		if not is_instance_valid(actor):continue
 		result.append({"position":actor.position,"name":actor.get_node("Nickname").text,"self":false})
 	return result
+func cancel_movement_interactions() -> void:
+	# Teleports and downed-state changes invalidate the pending movement path.
+	# Do not leave an interaction waiting for input IDs discarded by that reset.
+	for index in range(commands.size()-1,-1,-1):
+		if commands[index].has("input_boundary"):
+			interaction_preview.finish(str(commands[index].request_id))
+			commands.remove_at(index)
 func apply_snapshot(source: Dictionary) -> void:
 	applying=true
 	var snapshot:=source.duplicate(true)
@@ -154,6 +196,7 @@ func apply_snapshot(source: Dictionary) -> void:
 	var changed_life: bool=snapshot.get("combat_personal",{}).get("phase","alive")!=item_service.combat.personal.phase
 	changed_life=changed_life or snapshot.get("combat_personal",{}).get("hit_serial",0)!=item_service.combat.personal.get("hit_serial",0)
 	if changed_life or changed_region:
+		cancel_movement_interactions()
 		player.pending_inputs.clear();player.correction=Vector2.ZERO
 	else:snapshot.player_position={"x":player.position.x,"y":player.position.y}
 	var selected: int=item_service.inventory.selected
@@ -180,7 +223,9 @@ func apply_snapshot(source: Dictionary) -> void:
 		var prop_id:=str(node.get_meta("prop_id",""))
 		if node.is_in_group("trees") and snapshot.harvested.has(prop_id):
 			node.remove_from_group("trees");node.fade_out();stream.call_deferred("refresh_grounding",node.position);continue
-		if node.is_in_group("trees") and int(snapshot.tree_hits.get(prop_id,0))>int(previous_hits.get(prop_id,0)):node.hit()
+		if node.is_in_group("trees") and int(snapshot.tree_hits.get(prop_id,0))>int(previous_hits.get(prop_id,0)):
+			if int(node.get_meta("network_preview_hits",0))>0:node.set_meta("network_preview_hits",int(node.get_meta("network_preview_hits"))-1)
+			else:node.hit()
 		if node.has_method("fade_out") and node.get("state") in ["fading","removed"]:continue
 		for key in ["prop_id","ore_id","drop_id"]:
 			var id:=str(node.get_meta(key,""))
@@ -196,12 +241,12 @@ func apply_snapshot(source: Dictionary) -> void:
 			var value:=row.duplicate(true);value.id=id;stream.create_item_drop(value)
 	applying=false
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode in [KEY_N,KEY_F3,KEY_F4,KEY_F6,KEY_F7]:get_viewport().set_input_as_handled();return
+	if event is InputEventKey and event.pressed and not event.echo and (event.physical_keycode in [KEY_N,KEY_F3,KEY_F7] or (event.physical_keycode in [KEY_F4,KEY_F6] and not preload("res://scripts/debug_access.gd").allowed())):get_viewport().set_input_as_handled();return
 	super._unhandled_input(event)
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and event.physical_keycode==KEY_ESCAPE and typing:
 		entry.hide();entry.release_focus();typing=false;item_ui.update_input_block();get_viewport().set_input_as_handled();return
-	if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode in [KEY_N,KEY_F3,KEY_F4,KEY_F6,KEY_F7] and not get_viewport().gui_get_focus_owner() is LineEdit:get_viewport().set_input_as_handled();return
+	if event is InputEventKey and event.pressed and not event.echo and (event.physical_keycode in [KEY_N,KEY_F3,KEY_F7] or (event.physical_keycode in [KEY_F4,KEY_F6] and not preload("res://scripts/debug_access.gd").allowed())) and not get_viewport().gui_get_focus_owner() is LineEdit:get_viewport().set_input_as_handled();return
 	if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode==KEY_Y and not typing and not get_viewport().gui_get_focus_owner() is LineEdit:
 		typing=true;entry.show();entry.grab_focus();player.input_blocked=true;get_viewport().set_input_as_handled()
 func send_chat(text: String) -> void:
@@ -221,4 +266,5 @@ func close_world() -> void:
 	returned.emit();queue_free()
 func network_close() -> void:await close_world()
 func _exit_tree() -> void:
+	interaction_preview.clear()
 	if Engine.has_meta("network_game_controller") and Engine.get_meta("network_game_controller")==self:Engine.remove_meta("network_game_controller")

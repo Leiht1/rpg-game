@@ -316,13 +316,25 @@ func refresh_all() -> void:
 	for coord in service.world.stream.loaded: install(coord)
 
 func refresh_around(row: Dictionary) -> void:
-	var at := Vector2(row.x,row.y)
+	refresh_rows([row])
+
+func refresh_rows(rows: Array) -> void:
+	# Invalidate the union before installing: adjacent restored changes must not
+	# repeatedly construct and defer-delete the same colliders and visuals.
+	if rows.is_empty():return
 	var coords := {}
-	coords[service.world.stream.chunk_at(at)]=true
+	for row in rows:
+		coords[service.world.stream.chunk_at(Vector2(row.x,row.y))]=true
 	for id in visuals.keys():
 		var node: Node2D=visuals[id]
-		if node.position.distance_to(at)>160: continue
+		var affected := false
+		for row in rows:
+			if node.position.distance_to(Vector2(row.x,row.y))<=160:
+				affected=true;break
+		if not affected:continue
 		coords[service.world.stream.chunk_at(node.position)]=true
+		# Snapshot replacements must stop blocking rays before deferred deletion.
+		node.body.collision_layer=0
 		node.set_meta("spent",true);node.remove_from_group("world_interactables");node.queue_free();visuals.erase(id)
 	for coord in coords:
 		if service.world.stream.loaded.has(coord): install(coord)

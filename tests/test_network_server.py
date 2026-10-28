@@ -59,6 +59,18 @@ class ServerTests(unittest.TestCase):
         appearances=[row["appearance"] for row in self.s.state["characters"].values()]
         self.assertIn({"gender":"male","hair_id":"female_bob","skin_id":"skin_2"},appearances)
         self.assertIn({"gender":"female","hair_id":"male_natural","skin_id":"skin_2"},appearances)
+    def test_release_catalog_and_new_unisex_character_creation(self):
+        root=Path(__file__).parents[1]
+        config=json.loads((root/"config/network-server.json").read_text(encoding="utf-8"))
+        catalog=json.loads((root/"prototypes/character-creation-v1/catalog.json").read_text(encoding="utf-8"))
+        allowed={hair for group in config["hair_ids"].values() for hair in group}
+        self.assertEqual(allowed,set(catalog["hair"]))
+        self.s.config["hair_ids"]=config["hair_ids"]
+        w=self.world();self.api("join_world",{"world_id":w["id"]},self.t2)
+        for token,gender,hair in [(self.t1,"male","unisex_mohawk"),(self.t2,"female","unisex_bun")]:
+            self.api("character",{"appearance":{"gender":gender,"hair_id":hair,"skin_id":"skin_2"}},token)
+        self.assertEqual({c["appearance"]["hair_id"] for c in self.s.state["characters"].values()},
+                         {"unisex_mohawk","unisex_bun"})
     def test_reenter_resets_movement_sequence(self):
         self.world();self.enter(self.t1)
         self.api("move",{"seq":20,"dx":0,"dy":0},self.t1)

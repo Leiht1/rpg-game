@@ -92,7 +92,10 @@ class GameHost:
         def exact(size):
             chunks = bytearray()
             while len(chunks) < size:
-                self.channel.settimeout(max(.001, deadline-time.monotonic()))
+                remaining = deadline-time.monotonic()
+                if remaining <= 0:
+                    raise TimeoutError("Gameplay response exceeded its total deadline")
+                self.channel.settimeout(remaining)
                 part = self.channel.recv(size-len(chunks))
                 if not part:
                     raise ConnectionError("Gameplay rules host disconnected; committed data was preserved")

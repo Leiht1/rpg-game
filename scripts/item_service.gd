@@ -408,6 +408,8 @@ func advance_guide(stage: int) -> bool:
 	return false
 
 func load_state(source_path: String = "", migrate: bool = false, authoritative: Dictionary = {}) -> void:
+	var restore_trace: bool=OS.get_environment("WINDREST_PROFILE_NETWORK")=="1"
+	var restore_started: int=Time.get_ticks_usec()
 	var online: bool=world.get_meta("network_game",false) or world.get_meta("network_rules_host",false)
 	var previous_inventory: Array=[inventory.slots.duplicate(true),inventory.equipment.duplicate(true),inventory.hotbar_equipment.duplicate(true),inventory.quarantined_equipment.duplicate(true)] if online else []
 	var previous_buildings: Dictionary=builds.states.duplicate(true) if online else {}
@@ -458,6 +460,7 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 	if value.has("campfires") and not camps.validate(value.campfires): writable=false;return
 	if value.has("body_environment") and not valid_body_environment(value.body_environment): writable=false;return
 	if value.has("combat_world") and not combat.valid(value.combat_world,value.get("combat_personal",combat.personal)):writable=false;return
+	if restore_trace:print("RESTORE_STAGE validation_shared ",Time.get_ticks_usec()-restore_started)
 	var staged_body := preload("res://scripts/body_state.gd").new()
 	if value.has("body") and not staged_body.restore(value.body): writable=false; return
 	var fuel = value.get("lantern_remaining",1800.0)
@@ -503,6 +506,7 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 				plot.growth_minutes=float(progress)/previous_minutes[plot.crop]*float(planting.rules.crops[plot.crop].minutes)
 	if value.has("buildings") and not builds.validate(value.buildings,seen_instances): writable=false;return
 	if not sleep.valid_pair(staged_body,value.get("buildings",{"objects":{}}).objects): writable=false;return
+	if restore_trace:print("RESTORE_STAGE validation_all ",Time.get_ticks_usec()-restore_started)
 	if value.has("world_exploration") and value.world_exploration.bits!=Marshalls.raw_to_base64(exploration.bits): exploration.restore(value.world_exploration)
 	if value.has("merchant"):merchant.restore(value.merchant)
 	if value.has("fishing"):
@@ -524,6 +528,7 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 		for id in camps.visuals.keys():
 			if not camps.states.has(id):camps.visuals[id].queue_free();camps.visuals.erase(id)
 	for coord in world.stream.loaded: camps.install(coord)
+	if restore_trace:print("RESTORE_STAGE restore_entities ",Time.get_ticks_usec()-restore_started)
 	chapter.state=value.get("exploration_chapter",chapter.initial()).duplicate(true)
 	combat.state=value.get("combat_world",combat.initial_world()).duplicate(true)
 	combat.personal=value.get("combat_personal",combat.initial_personal()).duplicate(true)
@@ -563,15 +568,19 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 	if value.resource_version!=RESOURCE_VERSION or int(value.get("ecology_layout_version",1))<2:
 		preload("res://scripts/harvest_distribution.gd").preserve_worked(self,value.resource_version==RESOURCE_VERSION)
 		dirty=true
+	if restore_trace:print("RESTORE_STAGE restore_personal ",Time.get_ticks_usec()-restore_started)
 	var previous_pins:=ore_nodes.size()
 	preload("res://scripts/harvest_distribution.gd").preserve_current_minerals(self)
 	if ore_nodes.size()!=previous_pins:dirty=true
 	if online:
+		var changed_rows: Array=[]
 		for id in previous_buildings:
-			if not builds.states.has(id):builds.refresh_around(previous_buildings[id])
+			if not builds.states.has(id):changed_rows.append(previous_buildings[id])
 		for id in builds.states:
-			if not same_network_value(previous_buildings.get(id,{}),builds.states[id]):builds.refresh_around(builds.states[id])
+			if not same_network_value(previous_buildings.get(id,{}),builds.states[id]):changed_rows.append(builds.states[id])
+		builds.refresh_rows(changed_rows)
 	else:builds.refresh_all()
+	if restore_trace:print("RESTORE_STAGE refresh_complete ",Time.get_ticks_usec()-restore_started)
 	if migrate:
 		# Keep stable candidate IDs and consumed edits, preventing collected resources from respawning.
 		dirty = true

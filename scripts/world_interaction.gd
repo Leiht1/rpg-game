@@ -5,7 +5,7 @@ const VERBS := {"sow":"播种","sleep":"睡觉","cook":"烹饪","pickup":"拾取
 const NEEDS := {"chop":"斧头","mine":"镐子","dig":"铲子"}
 
 static func action_for(target: Node2D) -> String:
-	if not is_instance_valid(target): return ""
+	if not is_instance_valid(target) or target.get_meta("network_pending",false): return ""
 	if target.has_meta("animal_id"): return target.manager.action(target.animal_id)
 	if target.get_meta("building_id","")!="" or target.get("camp_id")!=null:
 		var manager: RefCounted=target.manager

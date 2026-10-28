@@ -1,0 +1,74 @@
+{
+  "1": {
+    "move": {
+      "count": 2709,
+      "median_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 32.0,
+      "median_bytes": 734
+    },
+    "snapshot": {
+      "count": 656,
+      "median_ms": 31.0,
+      "p95_ms": 156.0,
+      "max_ms": 10891.0,
+      "median_bytes": 127177
+    },
+    "inventory": {
+      "count": 273,
+      "median_ms": 47.0,
+      "p95_ms": 125.0,
+      "max_ms": 172.0,
+      "median_bytes": 127228
+    },
+    "errors": []
+  },
+  "2": {
+    "move": {
+      "count": 5847,
+      "median_ms": 0.0,
+      "p95_ms": 47.0,
+      "max_ms": 172.0,
+      "median_bytes": 1243
+    },
+    "snapshot": {
+      "count": 1409,
+      "median_ms": 15.0,
+      "p95_ms": 125.0,
+      "max_ms": 157.0,
+      "median_bytes": 127191
+    },
+    "inventory": {
+      "count": 584,
+      "median_ms": 47.0,
+      "p95_ms": 109.0,
+      "max_ms": 125.0,
+      "median_bytes": 127242
+    },
+    "errors": []
+  },
+  "4": {
+    "move": {
+      "count": 10636,
+      "median_ms": 0.0,
+      "p95_ms": 156.0,
+      "max_ms": 672.0,
+      "median_bytes": 2261
+    },
+    "snapshot": {
+      "count": 2709,
+      "median_ms": 15.0,
+      "p95_ms": 188.0,
+      "max_ms": 875.0,
+      "median_bytes": 127201
+    },
+    "inventory": {
+      "count": 1147,
+      "median_ms": 47.0,
+      "p95_ms": 187.0,
+      "max_ms": 531.0,
+      "median_bytes": 127252
+    },
+    "errors": []
+  }
+}

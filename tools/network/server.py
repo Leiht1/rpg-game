@@ -19,6 +19,7 @@ import re
 import secrets
 import shutil
 import sqlite3
+import socket
 import ssl
 import subprocess
 import threading
@@ -42,6 +43,7 @@ class ConcurrentTLSServer(ThreadingHTTPServer):
     def process_request_thread(self, request, client_address):
         try:
             request.settimeout(8)
+            request.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
             request = self.tls_context.wrap_socket(request, server_side=True)
         except (OSError, ssl.SSLError):
             request.close()
@@ -96,6 +98,7 @@ class Service:
         self.queue_lock = threading.Lock()
         self.world_bootstrap = threading.local()
         self.pending_moves = 0
+        self.pending_commands = 0
         self.sessions = {}
         self.limits = defaultdict(deque)
         self.messages = deque(maxlen=128)
@@ -271,6 +274,8 @@ class Service:
     def handle(self, op, data, token="", ip="local"):
         if op == "move":
             with self.queue_lock:self.pending_moves += 1
+        elif op == "game_command":
+            with self.queue_lock:self.pending_commands += 1
         try:
             if op == "create_world":
                 with self.lock:
@@ -300,9 +305,9 @@ class Service:
                     self.gameplay.prepare(bootstrap)
             with self.request_ready:
                 if op == "game_snapshot":
-                    # Drain already queued input before another expensive tick.
+                    # Drain queued movement/actions before another expensive tick.
                     deadline = time.perf_counter()+.2
-                    while self.pending_moves and time.perf_counter()<deadline:
+                    while (self.pending_moves or self.pending_commands) and time.perf_counter()<deadline:
                         self.request_ready.wait(.01)
                 try:
                     return self.handle_locked(op,data,token,ip)
@@ -324,6 +329,9 @@ class Service:
                         self.nav_cache.pop(staged["id"], None)
             if op == "move":
                 with self.queue_lock:self.pending_moves -= 1
+                with self.request_ready:self.request_ready.notify_all()
+            elif op == "game_command":
+                with self.queue_lock:self.pending_commands -= 1
                 with self.request_ready:self.request_ready.notify_all()
 
     def new_world(self, name):
@@ -881,6 +889,7 @@ class TrafficMonitor:
 
 
 class Handler(BaseHTTPRequestHandler):
+    protocol_version = "HTTP/1.1"
     def log_message(self, *args):
         pass
 

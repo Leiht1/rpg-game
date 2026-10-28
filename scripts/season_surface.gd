@@ -26,8 +26,11 @@ static func heat_sources(service: Node) -> Array[Vector3]:
 	return result
 
 static func heat(service: Node, point: Vector2) -> float:
+	return heat_from_sources(heat_sources(service),point)
+
+static func heat_from_sources(sources: Array[Vector3], point: Vector2) -> float:
 	var result:=0.0
-	for source in heat_sources(service):
+	for source in sources:
 		result=maxf(result,clampf(1.0-point.distance_to(Vector2(source.x,source.y))/source.z,0,1))
 	return result
 
@@ -35,6 +38,9 @@ static func advance(service: Node, minutes: float) -> void:
 	var sim=service.world.environment_view.simulation
 	var f: Dictionary=Rules.data.features
 	var winter: bool=sim.season_date().index==3
+	# Fuel and placement cannot change during this synchronous surface step.
+	# Scan facilities once, instead of rebuilding the same list for every tile.
+	var sources:=heat_sources(service)
 	for id in sim.building_snow.keys():
 		if not service.builds.states.has(id):sim.building_snow.erase(id)
 	for id in service.builds.states:
@@ -44,7 +50,7 @@ static func advance(service: Node, minutes: float) -> void:
 			sim.building_snow.erase(id)
 			continue
 		var state: Dictionary=sim.building_snow.get(id,{"amount":0.0,"blocked":false})
-		var warmth:=heat(service,Vector2(row.x,row.y))
+		var warmth:=heat_from_sources(sources,Vector2(row.x,row.y))
 		var gain:=maxf(float(f.winter_snow_minimum),sim.blend.y+sim.blend.z)*float(f.snow_gain_per_minute)*float(rule.gain) if winter else -float(f.snow_melt_per_minute)
 		state.amount=clampf(float(state.amount)+minutes*(gain-warmth*float(f.heat_melt_per_minute)*float(rule.melt)),0,1)
 		if state.amount>=float(f.blocking_on):state.blocked=bool(rule.blocks)
