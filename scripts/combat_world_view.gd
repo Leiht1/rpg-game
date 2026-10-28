@@ -92,7 +92,7 @@ func _process(delta: float) -> void:
 			if boars.has(id):boars[id].queue_free();boars.erase(id)
 			continue
 		if not boars.has(id):
-			var node:=Boar.new();node.record=row;node.max_health=float(service.combat.rules.boar.health);node.respawn_seconds=float(service.combat.rules.boar.respawn_seconds);node.set_meta("boar_id",id);world.object_root.add_child(node);boars[id]=node
+			var node:=Boar.new();node.position=Vector2(row.x,row.y);node.networked=world.get_meta("network_game",false);node.record=row;node.max_health=float(service.combat.rules.boar.health);node.respawn_seconds=float(service.combat.rules.boar.respawn_seconds);node.set_meta("boar_id",id);world.object_root.add_child(node);boars[id]=node
 		boars[id].record=row;boars[id].position=Vector2(row.x,row.y)
 	if relic_panel.visible:
 		var row: Dictionary=service.combat.state.relics.get(current,{})
@@ -188,6 +188,8 @@ class Boar extends StaticBody2D:
 	var head:=Bone2D.new()
 	var legs: Array[Bone2D]=[]
 	var clock:=0.0
+	var networked:=false
+	var network_motion=preload("res://scripts/network_animal_motion.gd").new()
 	var previous:=Vector2.ZERO
 	var visual_facing:=1.0
 	var weapon: Dictionary=preload("res://scripts/combat_rules.gd").load_rules().weapons.boar
@@ -209,11 +211,12 @@ class Boar extends StaticBody2D:
 		previous=position
 	func _process(delta: float) -> void:
 		collision_layer=1 if record.health>0 else 0
-		var moving: bool=position.distance_to(previous)>.01
+		var displayed: Vector2=network_motion.advance(position,delta,record.mode=="dead") if networked else position
+		var moving: bool=displayed.distance_to(previous)>.01
 		visual_facing=float(record.get("facing_x",visual_facing))
 		# Assign the full basis: negative X decomposes to rotation PI/negative Y.
-		skeleton.transform=Transform2D(Vector2(visual_facing,0),Vector2(0,1),Vector2.ZERO)
-		previous=position
+		skeleton.transform=Transform2D(Vector2(visual_facing,0),Vector2(0,1),displayed-position)
+		previous=displayed
 		# Patrol steps are slower than chase steps; blocked animals stop stepping.
 		if moving and record.mode not in ["hurt","attack","alert","dead"]:clock+=delta*(8.0 if record.mode=="chase" else 3.0)
 		for i in legs.size():legs[i].rotation=sin(clock+(i%2)*PI+(i/2)*PI)*.38 if moving and record.mode not in ["hurt","attack","alert","dead"] else 0

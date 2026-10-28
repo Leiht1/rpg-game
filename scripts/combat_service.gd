@@ -22,7 +22,8 @@ func attack_state() -> Dictionary:
 	var elapsed:=maxf(0,(Time.get_ticks_msec()-attack_preview_started)/1000.0)
 	var spec: Dictionary=attack_preview.weapon
 	var duration: float=spec.windup+spec.active+spec.recovery
-	if elapsed>=duration and not attack_preview_confirmed:return {}
+	# Keep movement fenced until rejection or authoritative completion.
+	# Pending confirmation must not unlock and then relock the same attack.
 	var result: Dictionary=(personal.attack if not personal.attack.is_empty() else attack_preview).duplicate(true)
 	result.elapsed=minf(duration,maxf(elapsed,float(result.get("elapsed",0))))
 	return result

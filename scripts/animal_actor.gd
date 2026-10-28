@@ -27,6 +27,7 @@ var feedback := 0.0
 var travel := 0.0
 var idle_tick := 0.0
 var last_stage := -1
+var network_motion=preload("res://scripts/network_animal_motion.gd").new()
 var feet: CircleShape2D
 
 func row() -> Dictionary:return manager.states[animal_id]
@@ -86,7 +87,7 @@ func refresh() -> void:
 func _physics_process(delta: float) -> void:
  if not manager.states.has(animal_id):return
  if manager.service.world.get_meta("network_game",false):
-  var state=row();var previous=position;position=position.lerp(Vector2(state.x,state.y),minf(1,delta*12));refresh()
+  var state=row();var previous=position;position=network_motion.advance(Vector2(state.x,state.y),delta);refresh()
   phase+=delta;travel+=position.distance_to(previous)
   if absf(position.x-previous.x)>.01:rig.scale.x=absf(rig.scale.x)*signf(position.x-previous.x)
   for key in bones:
