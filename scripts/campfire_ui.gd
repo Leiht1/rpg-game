@@ -299,7 +299,7 @@ func handle_input(event: InputEvent) -> bool:
 				paint_at(get_viewport().get_canvas_transform().affine_inverse()*event.position);return true
 			if event is InputEventKey and event.pressed and not event.echo:
 				var definition: Dictionary=world.item_service.builds.definitions[manager.build_book.recipe(building_id).output_id]
-				if event.physical_keycode==KEY_R and (definition.layer=="edge" or definition.get("sleep",false)): build_vertical=not build_vertical
+				if event.physical_keycode==KEY_R and (definition.layer=="edge" or definition.get("sleep",false) or manager.build_book.recipe(building_id).output_id=="rain_shelter"): build_vertical=not build_vertical
 				if event.physical_keycode==KEY_F: build_inward=not build_inward
 				if event.physical_keycode in [KEY_E,KEY_ESCAPE]: close_panel()
 				return true

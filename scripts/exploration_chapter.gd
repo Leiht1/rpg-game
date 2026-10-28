@@ -3,7 +3,7 @@ extends RefCounted
 const MAP := "predecessor_map"
 const NOTE := "predecessor_note"
 const BOTTLE := "mysterious_bottle"
-const MIN_DAYS := 3
+const MIN_DAYS := 28
 var finale:=preload("res://scripts/exploration_final.gd").new()
 var puzzle:=preload("res://scripts/mine_puzzle.gd").new()
 var mine:=preload("res://scripts/exploration_mine.gd").new()

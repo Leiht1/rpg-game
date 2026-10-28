@@ -91,5 +91,29 @@
     "max_minutes": 120.0,
     "cooling_per_minute": 0.75,
     "energy_recovery_factor": 0.85
-  }
+  },
+  "shelter_vertical_posts": [
+    [
+      -51,
+      0
+    ],
+    [
+      51,
+      0
+    ],
+    [
+      -98,
+      140
+    ],
+    [
+      98,
+      140
+    ]
+  ],
+  "shelter_vertical_rect": [
+    -95,
+    -140,
+    190,
+    280
+  ]
 }

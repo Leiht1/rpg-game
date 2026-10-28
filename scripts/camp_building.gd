@@ -47,7 +47,7 @@ func _ready() -> void:
 			post.draw.connect(draw_joint.bind(post,preload("res://scripts/camp_grid.gd").junction(manager.states,endpoint).stone))
 	if row.kind=="rain_shelter":
 		shape.disabled=true
-		for post in preload("res://scripts/weather_body_rules.gd").data.shelter_posts:
+		for post in preload("res://scripts/weather_exposure.gd").posts(row):
 			var pole := CollisionShape2D.new();var circle := CircleShape2D.new();circle.radius=float(preload("res://scripts/weather_body_rules.gd").data.post_radius)
 			pole.shape=circle;pole.position=Vector2(post[0],post[1]);body.add_child(pole)
 	elif row.layer not in ["ground","overlay"]:

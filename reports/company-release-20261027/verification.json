@@ -1,0 +1,11 @@
+{
+  "Config": true,
+  "Data/Accounts": true,
+  "Data/Worlds": true,
+  "Data/Players": true,
+  "database_logical_equal": true,
+  "strict_https_signed_version": true,
+  "release_zip_integrity": true,
+  "published_files_match": true,
+  "new_startup_backup": true
+}

@@ -43,3 +43,8 @@
 雨伞display_hand=left，keep_on_pickup保留持握；原左臂直接举伞，不复制任何手臂或改右手拾取。批准原图按登记区域分成伞柄和前景伞面，伞面在角色Visual内部盖过头部/头发，伞柄跟随原左掌，不设全局正Z。原右手拾取、承载物Grip、提交点和库存事务保持。空闲拖拽不释放持握姿势，真实动作被拖拽取消时立即恢复正常持握。
 
 雨棚分成棚布和四根支柱/柱帽，分别以真实脚点或前沿排序；棚布默认不透明，依据实际棚布alpha及人物投影遮挡临时淡化，独立于玩法遮雨判定。四柱/柱帽不淡化；篝火、床、墙、地面、耕地与人物按世界深度交叠。柱脚与耕地互斥，两种顺序均检查，失败不扣料；旧档不强制拆移。配置仍集中data/weather_body_rules.json，图片SHA不变。[本轮定向报告](reports/weather-layer-v2/REPORT.md)。
+
+
+## 2026-10-28 · 雨棚旋转
+
+放置时R切换横纵朝向，沿原vertical字段保存。纵向图assets/weather/v2/shelter_vertical.png，柱脚及遮雨矩形由data/weather_body_rules.json对应方向配置维护，碰撞、建造、路径与交互统一读取。棚布/支柱仍独立排序、只淡化棚布。验证与边界见[专项报告](reports/soil-shelter-rotate-v1/REPORT.md)。

@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "name": "find valid loaded dry site",
+      "pass": true
+    },
+    {
+      "name": "soil beside stone_wallfalse(0.0, -32.0) reason=",
+      "pass": true
+    },
+    {
+      "name": "soil beside stone_wallfalse(0.0, 32.0) reason=",
+      "pass": true
+    },
+    {
+      "name": "soil beside stone_walltrue(-48.0, 0.0) reason=",
+      "pass": true
+    },
+    {
+      "name": "soil beside stone_walltrue(48.0, 0.0) reason=",
+      "pass": true
+    },
+    {
+      "name": "soil beside wood_fencefalse(0.0, -32.0) reason=",
+      "pass": true
+    },
+    {
+      "name": "soil beside wood_fencefalse(0.0, 32.0) reason=",
+      "pass": true
+    },
+    {
+      "name": "soil beside wood_fencetrue(-48.0, 0.0) reason=",
+      "pass": true
+    },
+    {
+      "name": "soil beside wood_fencetrue(48.0, 0.0) reason=",
+      "pass": true
+    },
+    {
+      "name": "R switches shelter direction",
+      "pass": true
+    },
+    {
+      "name": "R restores shelter direction",
+      "pass": true
+    },
+    {
+      "name": "rotated shelter installed",
+      "pass": true
+    },
+    {
+      "name": "rotated art and four poles",
+      "pass": true
+    },
+    {
+      "name": "rotated coverage along depth",
+      "pass": true
+    },
+    {
+      "name": "rotated coverage excludes sides",
+      "pass": true
+    },
+    {
+      "name": "rotated pole blocks",
+      "pass": true
+    },
+    {
+      "name": "rotated pole blocks",
+      "pass": true
+    },
+    {
+      "name": "rotated pole blocks",
+      "pass": true
+    },
+    {
+      "name": "rotated pole blocks",
+      "pass": true
+    },
+    {
+      "name": "rotated shelter accepts existing save schema",
+      "pass": true
+    },
+    {
+      "name": "rotated pole forbids soil",
+      "pass": true
+    },
+    {
+      "name": "rotated roof fades alone",
+      "pass": true
+    },
+    {
+      "name": "rotated roof returns opaque",
+      "pass": true
+    }
+  ],
+  "count": 23,
+  "failed": 0
+}

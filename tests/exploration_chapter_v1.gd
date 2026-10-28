@@ -42,7 +42,11 @@ func run() -> void:
 	check(not row.is_empty(),"normal valid metal workbench site")
 	check(b.place(row,s.inventory.slots.duplicate(true)).is_empty(),"normal building transaction with cost")
 	q.advance();check(q.state.stage==0,"facility alone insufficient")
-	v.simulation.advance_calendar(10800)
+	v.simulation.day=28;v.simulation.minute=1439
+	q.advance();check(q.state.stage==0,"day 28 final minute remains dormant with workbench")
+	var dormant: Dictionary=s.snapshot().duplicate(true)
+	s.load_state("",false,dormant);q.advance();check(q.state.stage==0,"pre-day-29 reload remains dormant")
+	v.simulation.day=29;v.simulation.minute=0
 	q.advance();check(q.state.stage==1 and q.state.site.is_empty(),"time plus development qualifies separately")
 	var qualified: Dictionary=s.snapshot().duplicate(true)
 	s.load_state("",false,qualified);check(q.state.stage==1,"qualification survives reload")

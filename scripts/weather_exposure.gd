@@ -6,7 +6,7 @@ static func covered(service: Node, point: Vector2) -> bool:
 	for row in service.builds.states.values():
 		var definition: Dictionary=service.builds.definitions.get(row.kind,{})
 		if not definition.get("rain_cover",false): continue
-		var r: Array=definition.get("rain_cover_rect",CONFIG.data.shelter_rect)
+		var r: Array=cover_rect(row) if row.kind=="rain_shelter" else definition.get("rain_cover_rect",CONFIG.data.shelter_rect)
 		if Rect2(Vector2(row.x+r[0],row.y+r[1]),Vector2(r[2],r[3])).has_point(point): return true
 	return false
 
@@ -45,15 +45,21 @@ static func sample(service: Node) -> Dictionary:
 	return {"rain":rain,"rain_resistance":1.0-rain_remaining,"sun_shade":sun_shade*(1.0-night)*clampf(sim.blend.x,0,1),"storm":sim.blend.y,"night":night,"warmth":warmth,"heat":heat,"umbrella":umbrella,"shelter":covered(service,p),"weather":sim.weather_name(),"ambient":float(CONFIG.data.base_celsius)+sim.season_temperature()-night*float(CONFIG.data.night_drop)-rain*float(CONFIG.data.rain_drop)-sim.blend.y*float(CONFIG.data.storm_drop)}
 
 static func pole_blocks(row: Dictionary, a: Vector2, b: Vector2, radius: float) -> bool:
-	for post in CONFIG.data.shelter_posts:
+	for post in posts(row):
 		var p := Vector2(row.x+post[0],row.y+post[1])
 		if Geometry2D.get_closest_point_to_segment(p,a,b).distance_to(p)<radius+float(CONFIG.data.post_radius):return true
 	return false
 
 static func soil_under_pole(soil: Dictionary, shelter: Dictionary) -> bool:
 	var bounds := Rect2(Vector2(soil.x-48,soil.y-32),Vector2(96,64))
-	for post in CONFIG.data.shelter_posts:
+	for post in posts(shelter):
 		var p := Vector2(shelter.x+post[0],shelter.y+post[1])
 		var nearest: Vector2=p.clamp(bounds.position,bounds.end)
 		if p.distance_to(nearest)<=float(CONFIG.data.post_radius):return true
 	return false
+
+static func posts(row: Dictionary) -> Array:
+	return CONFIG.data.get("shelter_vertical_posts",CONFIG.data.shelter_posts) if row.get("vertical",false) else CONFIG.data.shelter_posts
+
+static func cover_rect(row: Dictionary) -> Array:
+	return CONFIG.data.shelter_vertical_rect if row.get("vertical",false) else CONFIG.data.shelter_rect

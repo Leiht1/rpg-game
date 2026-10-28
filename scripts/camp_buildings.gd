@@ -210,6 +210,7 @@ func reason(row: Dictionary) -> String:
 		if row.layer not in ["ground","overlay"] and world.player.position.distance_to(p)<22: return "请避开角色"
 		for node in world.get_tree().get_nodes_in_group("world_interactables")+world.get_tree().get_nodes_in_group("trees"):
 			if states.get(str(node.get_meta("building_id","")),{}).get("kind","")=="rain_shelter": continue # Only its real poles obstruct facilities.
+			if row.kind=="tilled_soil" and states.get(str(node.get_meta("building_id","")),{}).get("kind","") in ["stone_wall","wood_fence"]: continue
 			if paving and paving_can_cover(node): continue
 			if node.get_meta("building_id","")==replace_id and not replace_id.is_empty(): continue
 			if node.get_meta("camp_layer","")=="ground": continue
@@ -614,7 +615,7 @@ func shelter_reason(row: Dictionary) -> String:
 	var at := Vector2(row.x,row.y)
 	var world=service.world
 	if world.player.position.distance_to(at)>220:return "请靠近建造位置"
-	var cover: Array=preload("res://scripts/weather_body_rules.gd").data.shelter_rect
+	var cover: Array=preload("res://scripts/weather_exposure.gd").cover_rect(row)
 	for x in [float(cover[0]),0.0,float(cover[0]+cover[2])]:
 		for y in [float(cover[1]),0.0,float(cover[1]+cover[3])]:
 			var ground: Vector2=at+Vector2(x,y)
@@ -622,7 +623,7 @@ func shelter_reason(row: Dictionary) -> String:
 	for other in states.values():
 		if other.kind=="tilled_soil" and preload("res://scripts/weather_exposure.gd").soil_under_pole(other,row):return "雨棚柱子不能建在耕地上"
 		if other.kind=="rain_shelter" and Rect2(Vector2(other.x-288,other.y-192),Vector2(576,384)).has_point(at):return "雨棚覆盖重叠"
-	for post in preload("res://scripts/weather_body_rules.gd").data.shelter_posts:
+	for post in preload("res://scripts/weather_exposure.gd").posts(row):
 		var point := at+Vector2(post[0],post[1])
 		if not world.stream.has_ground(point) or not world.generator.can_walk(point,8) or world.generator.sample(point).z>.03:return "需要干燥陆地"
 		var shape := CircleShape2D.new();shape.radius=8

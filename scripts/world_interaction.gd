@@ -36,7 +36,7 @@ static func in_reach(stream: Node, at: Vector2, target: Node2D) -> bool:
 static func reach_point(at: Vector2, target: Node2D) -> Vector2:
 	if target.get_meta("building_id","")!="" and target.manager.states.get(target.building_id,{}).get("kind","")=="rain_shelter":
 		var nearest := Vector2.INF
-		for post in preload("res://scripts/weather_body_rules.gd").data.shelter_posts:
+		for post in preload("res://scripts/weather_exposure.gd").posts(target.manager.states[target.building_id]):
 			var point := target.global_position+Vector2(post[0],post[1])
 			if nearest==Vector2.INF or at.distance_squared_to(point)<at.distance_squared_to(nearest):nearest=point
 		return nearest
