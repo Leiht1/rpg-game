@@ -8,6 +8,7 @@ import sys
 import tempfile
 import time
 import unittest
+import threading
 from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -17,6 +18,111 @@ from gameplay import Gameplay, PERSONAL, validate
 
 
 class RulesHostTests(unittest.TestCase):
+    def test_task_lane_original_rules_start_cancel_and_guide(self):
+        with tempfile.TemporaryDirectory(prefix='sync-v5-task-') as folder:
+            host=GameHost({'data_dir':folder,'project':str(ROOT),'godot':os.environ.get('WINDREST_GODOT','D:/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64_console.exe')},{'inventory_only':True})
+            try:
+                state=copy.deepcopy(self.baseline)
+                state['guide_stage']=0
+                for index,item in enumerate(('branch','flint','plant_fiber')):state['slots'][index+8]={'item_id':item,'count':20}
+                started=host.execute(state,operation='craft',args=['hand_stone_axe',1])
+                self.assertTrue(started['ok'],started.get('error'))
+                self.assertEqual(started['slots'],state['slots'],'Starting must not issue items or deduct materials')
+                self.assertTrue(started['network_craft_job'])
+                tick_state=copy.deepcopy(state)
+                tick_state['network_craft_job']=copy.deepcopy(started['network_craft_job'])
+                tick_state['network_craft_job']['tick_skip']=.5
+                ticked=self.host.execute(tick_state,elapsed=.5)
+                self.assertTrue(ticked['ok'])
+                self.assertEqual(ticked['snapshot']['network_craft_job']['elapsed'],0,'Pre-start shared interval advanced the new job')
+                finished=self.host.execute(ticked['snapshot'],elapsed=2)
+                self.assertFalse(finished['snapshot']['network_craft_job'])
+                state.update(started)
+                cancelled=host.execute(state,operation='craft_cancel',args=[])
+                self.assertTrue(cancelled['ok']);self.assertEqual(cancelled['network_craft_job'],{})
+                self.assertEqual(cancelled['slots'],state['slots'])
+                guided=host.execute(state,operation='guide',args=[1])
+                self.assertTrue(guided['ok']);self.assertEqual(guided['guide_stage'],1)
+                state.update(guided)
+                self.assertFalse(host.execute(state,operation='guide',args=[0])['ok'])
+                station_recipe=next(row['recipe_id'] for row in json.loads((ROOT/'data/recipes.json').read_text(encoding='utf-8')) if row['conditions'])
+                self.assertTrue(host.execute(state,operation='craft',args=[station_recipe,1]).get('fallback'))
+            finally:host.close()
+
+    def test_personal_lane_does_not_hold_world_lock_or_overwrite_changed_bag(self):
+        spec=importlib.util.spec_from_file_location("sync_v4_server",ROOT/"tools/network/server.py")
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        with tempfile.TemporaryDirectory(prefix="sync-v4-light-") as folder:
+            service=module.Service({"data_dir":folder,"project":str(ROOT),"godot":os.environ.get("WINDREST_GODOT","D:/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64_console.exe"),"gameplay_preview":True})
+            state=copy.deepcopy(self.baseline)
+            state['combat_personal']['phase']='alive';state['slots'][8]={'item_id':'wood','count':3}
+            state['network_active_lamp']='retained-lamp-id-even-when-off'
+            wid=state['world_id'];cid='light-player'
+            service.state['worlds'][wid]={'id':wid,'gameplay':{k:v for k,v in state.items() if k not in PERSONAL}}
+            character={'id':cid,'world_id':wid,'x':state['player_position']['x'],'y':state['player_position']['y'],'gameplay':{k:v for k,v in state.items() if k in PERSONAL},'selected':0}
+            for k in ('slots','equipment','hotbar_equipment'):character[k]=copy.deepcopy(state[k])
+            service.state['characters'][cid]=character
+            service.state['accounts']['account']={'id':'account','player_id':cid,'world_id':wid,'enabled':True}
+            service.sessions['token']={'account':'account','expires':time.monotonic()+100,'seen':time.monotonic(),'entered':True}
+            host,unused=service.gameplay.inventory_host(cid)
+            began=threading.Event();resume=threading.Event();errors=[]
+            execute=host.execute
+            def delayed(*args,**kwargs):
+                if not began.is_set():began.set();self.assertTrue(resume.wait(10))
+                return execute(*args,**kwargs)
+            command={'protocol':1,'version':'0.1.0','request_id':'1'*32,'operation':'inventory','args':['move_slot',8,9],'expected':{'8':{'item_id':'wood','count':3},'9':{}}}
+            def request():
+                try:service.handle('game_command',command,'token')
+                except BaseException as error:errors.append(error)
+            thread=threading.Thread(target=request)
+            try:
+                with patch.object(host,'execute',side_effect=delayed):
+                    thread.start();self.assertTrue(began.wait(10))
+                    self.assertEqual(service.pending_commands,1,'Snapshot priority must also see personal commands')
+                    self.assertGreater(service.pending_commits,0,'Light capture/computation must reserve priority before commit')
+                    acquired=service.lock.acquire(timeout=.2)
+                    self.assertTrue(acquired,'Personal computation still held the shared world lock')
+                    try:
+                        # Model a committed authoritative reward while rules compute.
+                        character['slots'][8]['count']=7
+                        character['gameplay']['slots']=copy.deepcopy(character['slots'])
+                    finally:service.lock.release()
+                    resume.set();thread.join(10);self.assertFalse(thread.is_alive())
+                self.assertEqual(len(errors),1)
+                self.assertEqual(service.pending_commands,0)
+                self.assertEqual(service.pending_commits,0)
+                self.assertIsInstance(errors[0],module.Rejected)
+                self.assertEqual(character['slots'][8]['count'],7)
+                self.assertEqual(character['slots'][9],{})
+                self.assertEqual(service.state['receipts'],{})
+                for index,item in enumerate(('branch','flint','plant_fiber')):character['slots'][index+10]={'item_id':item,'count':20}
+                character['gameplay']['slots']=copy.deepcopy(character['slots'])
+                service.gameplay.clocks={wid:time.monotonic()}
+                clock=service.gameplay.clocks[wid]
+                task={**command,'request_id':'2'*32,'operation':'craft','args':['hand_stone_axe',1],'expected':{}}
+                started=service.handle('game_command',task,'token')
+                self.assertEqual(started['transaction_lane'],'task')
+                self.assertTrue(started['snapshot']['network_craft_job'])
+                self.assertEqual(service.gameplay.clocks[wid],clock,'Task start advanced the shared world clock')
+                replay=service.handle('game_command',task,'token')
+                self.assertEqual(replay['snapshot']['network_craft_job'],started['snapshot']['network_craft_job'])
+                cancel={**task,'request_id':'3'*32,'operation':'craft_cancel','args':[]}
+                saved=copy.deepcopy(service.state['characters'][cid])
+                with patch.object(service,'save',side_effect=OSError('injected disk failure')):
+                    with self.assertRaises(OSError):service.handle('game_command',cancel,'token')
+                self.assertEqual(service.state['characters'][cid],saved)
+                self.assertNotIn('game:'+cid+':'+'3'*32,service.state['receipts'])
+                cancelled=service.handle('game_command',cancel,'token')
+                self.assertEqual(cancelled['snapshot']['network_craft_job'],{})
+                self.assertTrue(cancelled['craft_cancelled'])
+                self.assertTrue(service.handle('game_command',cancel,'token')['craft_cancelled'])
+                idle_cancel=service.handle('game_command',{**cancel,'request_id':'4'*32},'token')
+                self.assertFalse(idle_cancel['craft_cancelled'],'Already completed job must not be reported as newly cancelled')
+                self.assertEqual(service.pending_commits,0)
+            finally:
+                resume.set();thread.join(10)
+                service.gameplay.close();service.db.close()
+
     @classmethod
     def setUpClass(cls):
         cls.temporary = tempfile.TemporaryDirectory(prefix="windrest-gameplay-")
@@ -29,6 +135,20 @@ class RulesHostTests(unittest.TestCase):
     def tearDownClass(cls):
         cls.host.close()
         cls.temporary.cleanup()
+
+    def test_cached_buildings_still_reject_duplicate_inventory_instances(self):
+        state=self.fixture_building('wood_chest')
+        tool={'item_id':'stone_axe','count':1,'instance_id':'sync-cache-tool','state':{},'durability':1}
+        state['buildings']['objects']['fixture']['contents'][0]=tool
+        accepted=self.host.execute(state)
+        self.assertTrue(accepted['ok'],accepted.get('error'))
+        # Same building, changed bag: validation reuse must retain cross-source IDs.
+        changed=copy.deepcopy(accepted['snapshot'])
+        changed['slots'][8]=copy.deepcopy(tool)
+        rejected=self.host.execute(changed)
+        self.assertFalse(rejected['ok'])
+        recovered=self.host.execute(accepted['snapshot'])
+        self.assertTrue(recovered['ok'],recovered.get('error'))
 
     def test_new_drop_in_already_loaded_chunk_is_interactable(self):
         state=copy.deepcopy(self.baseline)
@@ -254,6 +374,14 @@ class RulesHostTests(unittest.TestCase):
         result = self.host.execute(result["snapshot"], operation="camp_act", args=["fixture","claim","",{}])
         self.assertTrue(result["ok"], result.get("error"))
         self.assertEqual(sum(row.get("count",0) for row in result["snapshot"]["slots"] if row.get("item_id")=="roasted_carrot"),1)
+
+    def test_oven_network_material_submission(self):
+        machine = {"version":2,"fuel":0.0,"jobs":[{},{},{},{}],"queue":[],"completed":[],"feed":{},"enabled":False,"legacy_queue":[],"legacy_fuel":0.0}
+        state = self.fixture_building("copper_oven", {"machine":machine})
+        state["slots"][8] = {"item_id":"wild_carrot","count":2}
+        result = self.host.execute(state, operation="industry", args=["fixture","start",0,"",1,{"wild_carrot":1}])
+        self.assertTrue(result["ok"], result.get("error"))
+        self.assertTrue(result["snapshot"]["buildings"]["objects"]["fixture"]["machine"]["jobs"][0])
 
     def test_industry_fuel_queue_and_claim_restore(self):
         machine = {"version":2,"fuel":0.0,"jobs":[{}],"queue":[],"completed":[],"feed":{},"enabled":False,"legacy_queue":[],"legacy_fuel":0.0}
@@ -498,7 +626,7 @@ class RulesHostTests(unittest.TestCase):
                 with self.assertRaises(module.Rejected):
                     api("game_snapshot")
                 service.config["gameplay_preview"] = True
-                service.gameplay = Gameplay({})
+                service.gameplay = Gameplay({"data_dir":folder,"project":str(ROOT),"godot":os.environ.get("WINDREST_GODOT","D:/Godot_v4.7.2-stable_win64.exe/Godot_v4.7.2-stable_win64_console.exe")})
                 service.gameplay.hosts[wid] = self.host
                 service.gameplay.defaults[wid] = copy.deepcopy(self.baseline)
                 self.assertTrue(api("game_snapshot")["ok"])
@@ -513,7 +641,18 @@ class RulesHostTests(unittest.TestCase):
                     api("game_command", **command)
                 self.assertEqual(service.state, previous)
                 service.save = save
+                # A due world update must not be consumed by a plain bag edit.
+                service.gameplay.clocks[wid]=time.monotonic()-1.0
+                clock_before=service.gameplay.clocks[wid]
                 result = api("game_command", **command)
+                self.assertEqual(result.get("transaction_lane"),"personal")
+                self.assertEqual(service.gameplay.clocks[wid],clock_before)
+                service.gameplay.tick_ready={wid:0}
+                api("game_snapshot")
+                self.assertEqual(service.gameplay.clocks[wid],clock_before,'HTTP snapshot must not advance world time')
+                service.tick_gameplay=service.gameplay
+                self.assertTrue(service.advance_world_tick(wid))
+                self.assertGreater(service.gameplay.clocks[wid],clock_before)
                 self.assertEqual(result["snapshot"]["slots"][9]["count"], 3)
                 duplicate = api("game_command", **command)
                 self.assertEqual(duplicate["snapshot"]["slots"], result["snapshot"]["slots"])
@@ -521,7 +660,75 @@ class RulesHostTests(unittest.TestCase):
                 self.assertEqual(stored["characters"]["player"]["slots"][9]["count"], 3)
                 self.assertEqual(len(stored["receipts"]), 1)
                 self.assertNotIn("snapshot", next(iter(stored["receipts"].values())))
+                # Ordered movement and pickup share one transaction; original time
+                # credit still gates the action, and retries do not duplicate it.
+                c=service.state['characters']['player'];c.update(facing='front',moving=False,running=False)
+                c['appearance']={'gender':'male','hair_id':'male_short','skin_id':'skin_1'}
+                service.state['accounts']['account']['avatar']=''
+                service.state['worlds'][wid].setdefault('exploration',[])
+                # Reuse a local terrain fixture; no separate world-generator process.
+                service.nav_cache[wid]={'step':48,'width':128,'height':128,'mask':__import__('base64').b64encode(bytes([1])*(128*128)).decode()}
+                service.sessions['token'].update(seq=-1,move_at=time.monotonic(),move_credit=.15,input_ack=0)
+                def add_drop(identity):
+                    service.state['worlds'][wid]['gameplay']['loose'][identity]={'item_id':'branch','count':1,'x':c['x']+6,'y':c['y']+20}
+                def ordered(rid,identity,seq,input_id):
+                    return {'request_id':rid,'operation':'interact','args':[{'drop_id':identity}],'input_boundary':input_id,
+                            'input_movement':{'seq':seq,'mine_serial':0,'inputs':[{'id':input_id,'dx':0,'dy':0,'dt':.05,'run':False}]}}
+                add_drop('ordered-one')
+                combined=ordered('b'*32,'ordered-one',0,1)
+                first=api('game_command',**combined)
+                self.assertEqual(first['command_movement']['input_ack'],1)
+                self.assertEqual(api('game_command',**combined)['snapshot']['slots'],first['snapshot']['slots'])
+                # Exhausted movement budget acknowledges no unearned input and
+                # does not execute/reward the pickup or create its receipt.
+                add_drop('ordered-two')
+                service.sessions['token'].update(move_at=time.monotonic()+1,move_credit=0)
+                pending=ordered('c'*32,'ordered-two',1,2)
+                delayed=api('game_command',**pending)
+                self.assertTrue(delayed['movement_pending'])
+                self.assertEqual(delayed['command_movement']['input_ack'],1)
+                self.assertIn('ordered-two',service.state['worlds'][wid]['gameplay']['loose'])
+                self.assertNotIn('game:'+c['id']+':'+'c'*32,service.state['receipts'])
+                service.sessions['token'].update(move_at=time.monotonic(),move_credit=.15)
+                pending['input_movement']['seq']=2
+                resumed=api('game_command',**pending)
+                self.assertEqual(resumed['command_movement']['input_ack'],2)
+                self.assertNotIn('ordered-two',resumed['snapshot']['loose'])
+                malformed=ordered('d'*32,'missing',3,3);malformed['input_movement']['inputs'][0]['id']=4
+                before_bad=copy.deepcopy(service.state)
+                with self.assertRaises(module.Rejected):api('game_command',**malformed)
+                self.assertEqual(service.state,before_bad)
+
+                # The command wins the race against its already-in-flight move:
+                # duplicate input must be acknowledged without moving twice.
+                c=service.state['characters']['player']
+                add_drop('versioned-pickup')
+                service.sessions['token'].update(move_at=time.monotonic(),move_credit=.15)
+                versioned=ordered('e'*32,'versioned-pickup',4,3)
+                versioned['input_movement']['inputs'][0]['dx']=.1
+                versioned['position_version']=3
+                applied=api('game_command',**versioned)
+                self.assertNotIn('versioned-pickup',applied['snapshot']['loose'])
+                position=(c['x'],c['y'])
+                late=api('move',position_revision=1,seq=3,inputs=versioned['input_movement']['inputs'])
+                self.assertEqual(late['input_ack'],3)
+                self.assertEqual((c['x'],c['y']),position)
+                self.assertEqual(api('game_command',**versioned)['snapshot']['slots'],applied['snapshot']['slots'])
+                # A known earlier checkpoint can be checked without teleporting
+                # the authoritative current character backwards.
+                add_drop('historical-pickup')
+                history=ordered('f'*32,'historical-pickup',5,2);history['position_version']=2
+                rewound=api('game_command',**history)
+                self.assertNotIn('historical-pickup',rewound['snapshot']['loose'])
+                self.assertEqual((c['x'],c['y']),position)
+                malformed['input_movement']['inputs'][0]['id']=3;malformed['input_movement']['mine_serial']=999
+                before_bad=copy.deepcopy(service.state)
+                with self.assertRaises(module.Rejected):api('game_command',**malformed)
+                self.assertEqual(service.state,before_bad)
+
             finally:
+                if service.gameplay:
+                    for host in service.gameplay.inventory_hosts.values():host.close()
                 service.db.close()
 
 

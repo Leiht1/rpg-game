@@ -37,6 +37,8 @@ func movement_batch(limit_id: int=-1) -> Array:
 	if not result.is_empty():sent_input_id=maxi(sent_input_id,int(result[-1].id))
 	return result
 func acknowledge(row: Dictionary, ack: int) -> void:
+	# Independent movement and interaction connections may complete out of order.
+	if ack<acknowledged_input_id:return
 	acknowledged_input_id=maxi(acknowledged_input_id,ack)
 	while not pending_inputs.is_empty() and int(pending_inputs[0].id)<=ack:pending_inputs.pop_front()
 	confirmed_at=Time.get_ticks_msec()

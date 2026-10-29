@@ -1,11 +1,46 @@
 """An unfinished TLS client must not stall other clients' connections."""
-import socket, ssl, sys, tempfile, threading, time, unittest
+import socket, ssl, sys, tempfile, threading, time, unittest, json
+from concurrent.futures import ThreadPoolExecutor
 from http.client import HTTPSConnection
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"tools/network"))
 import server
 
 class TLSTests(unittest.TestCase):
+    def test_parallel_trace_records_remain_complete(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);(root/'Accounts').mkdir()
+            cert,key=server.certificate(root)
+            http=server.ConcurrentTLSServer(('127.0.0.1',0),server.Handler)
+            context=ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER);context.load_cert_chain(cert,key)
+            http.tls_context=context;http.monitor=None
+            class Service:
+                config={'sync_trace_file':str(root/'trace.jsonl')}
+                trace_lock=threading.Lock()
+                def handle(self,*args):return {'ok':True}
+            http.service=Service()
+            thread=threading.Thread(target=http.serve_forever,daemon=True);thread.start()
+            client=ssl.create_default_context(cafile=str(cert))
+            def request(index):
+                connection=HTTPSConnection('windrest-server',http.server_port,context=client,timeout=5)
+                connection._create_connection=lambda *a,**kw:socket.create_connection(http.server_address,timeout=5)
+                try:
+                    connection.request('POST','/api/profile',body=json.dumps({'request_id':str(index)}))
+                    response=connection.getresponse();response.read()
+                    self.assertEqual(response.status,200)
+                finally:connection.close()
+            try:
+                with ThreadPoolExecutor(max_workers=8) as pool:list(pool.map(request,range(24)))
+                deadline=time.monotonic()+2
+                while time.monotonic()<deadline:
+                    with http.service.trace_lock:
+                        rows=[json.loads(line) for line in (root/'trace.jsonl').read_text().splitlines()]
+                    if len(rows)==24:break
+                    time.sleep(.01)
+                self.assertEqual({r['request_id'] for r in rows},{str(i) for i in range(24)})
+                self.assertEqual(len(rows),24)
+            finally:http.shutdown();http.server_close();thread.join(3)
+
     def test_persistent_tls_reuses_connection_and_preserves_errors(self):
         with tempfile.TemporaryDirectory() as folder:
             (Path(folder)/"Accounts").mkdir()
@@ -15,6 +50,7 @@ class TLSTests(unittest.TestCase):
             http.tls_context=context
             peers=[]
             class Service:
+                config={}
                 def handle(self,op,*args):
                     if op=="rejected":raise server.Rejected("expected")
                     return {"ok":True}
@@ -44,6 +80,7 @@ class TLSTests(unittest.TestCase):
             context=ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER);context.load_cert_chain(cert,key)
             http.tls_context=context
             class Service:
+                config={}
                 def handle(self,*args):return {"ok":True}
             http.service=Service()
             http.monitor=server.TrafficMonitor(Path(folder))

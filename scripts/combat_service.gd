@@ -13,6 +13,8 @@ var damage_events: Array=[]
 var attack_preview: Dictionary={}
 var attack_preview_started:=0
 var attack_preview_confirmed:=false
+# Only previously validated contents may bypass repeated inventory reconstruction.
+var validated_relic_contents: Dictionary={}
 
 # Immediate local pose only. Damage, stamina and inventory remain authoritative.
 func attack_state() -> Dictionary:
@@ -68,15 +70,20 @@ func valid(value: Variant, individual: Variant) -> bool:
 		if not number(row.get("health"),0,rules.boar.health) or not number(row.get("clock"),0,1000000000) or not number(row.get("hit"),0,6):return false
 		if row.get("mode") not in ["patrol","alert","chase","return","attack","hurt","dead"]:return false
 		if row.health<=0 and not number(row.get("respawn"),0,rules.boar.respawn_seconds):return false
-	for row in value.relics.values():
+	var next_relic_contents: Dictionary={}
+	for relic_id in value.relics:
+		var row: Variant=value.relics[relic_id]
 		if not row is Dictionary or not row.get("contents") is Array:return false
 		if not row.get("owner") is String or row.contents.size()>40:return false
 		if not point_valid(row):return false
+		next_relic_contents[relic_id]=row.contents.duplicate(true)
+		if validated_relic_contents.has(relic_id) and service.same_network_value(validated_relic_contents[relic_id],row.contents):continue
 		for item in row.contents:
 			var inv:=ItemInventory.new(service.database)
 			var slots: Array=[]
 			for i in 40:slots.append(item if i==0 else {})
 			if not inv.restore(slots):return false
+	validated_relic_contents=next_relic_contents
 	return true
 
 func number(n: Variant, lower: float, upper: float) -> bool:

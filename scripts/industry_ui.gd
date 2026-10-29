@@ -35,6 +35,12 @@ var ingredient_window := PopupPanel.new()
 var ingredient_choices: Array=[]
 var ingredient_counts: Array=[]
 var ingredient_ids: Array=[]
+var oven_book_signature := ""
+var oven_mode := "book"
+var oven_recipe_choice := OptionButton.new()
+var oven_recipe_ids: Array[String]=[]
+var oven_free := VBoxContainer.new()
+var oven_details := Label.new()
 var selected_slot := -1
 var cook := Button.new()
 var tray := PopupPanel.new()
@@ -84,8 +90,13 @@ func configure(owner_service: Node) -> void:
 	for entry in [queue_button,completed_button,claim_all]:footer.add_child(entry)
 	queue_button.pressed.connect(show_tray.bind("queue"));completed_button.pressed.connect(show_tray.bind("completed"));claim_all.pressed.connect(func():command("claim_all"))
 	var ingredients := popup_frame(ingredient_window);var label := Label.new();label.text="添加材料";ingredients.add_child(label)
+	var modes := HBoxContainer.new();ingredients.add_child(modes)
+	modes.add_child(button("食谱册",func():set_oven_mode("book")))
+	modes.add_child(button("自由搭配",func():set_oven_mode("free")))
+	ingredients.add_child(oven_recipe_choice);oven_recipe_choice.item_selected.connect(func(_index):refresh_oven())
+	ingredients.add_child(oven_details);ingredients.add_child(oven_free)
 	for i in 4:
-		var line := HBoxContainer.new();ingredients.add_child(line)
+		var line := HBoxContainer.new();oven_free.add_child(line)
 		var choice := OptionButton.new();choice.custom_minimum_size=Vector2(300,32);choice.add_theme_constant_override("icon_max_width",20);line.add_child(choice);ingredient_choices.append(choice)
 		var count := SpinBox.new();count.min_value=1;count.max_value=99;count.step=1;count.rounded=true;line.add_child(count);ingredient_counts.append(count)
 	var actions := HBoxContainer.new();ingredients.add_child(actions);cook.text="加入加工队列";actions.add_child(cook);cook.pressed.connect(submit);actions.add_child(button("取消",func():ingredient_window.hide()))
@@ -123,19 +134,46 @@ func select_slot(i: int) -> void:
 	if service.builds.states[current].kind!="copper_oven":return
 	selected_slot=i
 	for count in ingredient_counts:count.value=1
-	ingredient_window.reset_size();ingredient_window.popup_centered()
+	refresh_oven();ingredient_window.reset_size();ingredient_window.popup_centered()
 func submit() -> void:
 	var row: Dictionary=service.builds.states[current]
 	if row.kind=="copper_oven":
 		var materials := {}
-		for i in 4:
+		if oven_mode=="book":
+			if oven_recipe_choice.selected<0:return
+			materials=service.camps.rules.recipes[oven_recipe_ids[oven_recipe_choice.selected]].materials.duplicate(true)
+		for i in (4 if oven_mode=="free" else 0):
 			var index: int=ingredient_choices[i].selected
 			if index<=0:continue
 			var id: String=ingredient_ids[index-1]
 			if materials.has(id):service.notice.emit("请勿重复选择食材");return
+			ingredient_counts[i].apply()
 			materials[id]=int(ingredient_counts[i].value)
 		if command("start",selected_slot,"",1,materials).is_empty():ingredient_window.hide()
 	elif not selected_recipe.is_empty():command("start",0,selected_recipe)
+func set_oven_mode(value: String) -> void:
+	oven_mode=value;refresh_oven()
+	ingredient_window.reset_size()
+	ingredient_window.popup_centered()
+
+func refresh_oven() -> void:
+	var previous := oven_recipe_ids[oven_recipe_choice.selected] if oven_recipe_choice.selected>=0 and oven_recipe_choice.selected<oven_recipe_ids.size() else ""
+	var book_signature := str(service.camps.discovered)
+	if book_signature!=oven_book_signature:
+		oven_book_signature=book_signature
+		oven_recipe_ids.clear();oven_recipe_choice.clear()
+		for id in service.camps.rules.recipes:
+			var r: Dictionary=service.camps.rules.recipes[id]
+			if not service.camps.known(id) or service.industry.recipe("copper_oven",id).is_empty():continue
+			oven_recipe_ids.append(id);oven_recipe_choice.add_item(r.name)
+		if previous in oven_recipe_ids:oven_recipe_choice.select(oven_recipe_ids.find(previous))
+	oven_recipe_choice.visible=oven_mode=="book";oven_free.visible=oven_mode=="free"
+	oven_details.text="请选择食材和数量" if oven_mode=="free" else "暂无已解锁食谱"
+	if oven_mode=="book" and oven_recipe_choice.selected>=0:
+		var r: Dictionary=service.camps.rules.recipes[oven_recipe_ids[oven_recipe_choice.selected]]
+		oven_details.text=""
+		for id in r.materials:oven_details.text+="%s ×%d（持有 %d）\n"%[service.database.item(id).name,int(r.materials[id]),service.inventory.count_item(id)]
+
 func choose_fuel(id: String) -> void:
 	selected_fuel="" if selected_fuel==id else id;refresh()
 func choose_recipe(id: String) -> void:
@@ -152,16 +190,21 @@ func refresh_choices() -> void:
 	for id in fuels:
 		var card := button(service.database.item(id).name+" ×%d"%service.inventory.count_item(id),choose_fuel.bind(str(id)))
 		card.icon=service.texture(id,"icon");card.expand_icon=true;card.add_theme_constant_override("icon_max_width",32);card.custom_minimum_size=Vector2(190,52);card.toggle_mode=true;fuel_cards.add_child(card);fuel_buttons[id]=card
-	var previous_ids: Array=ingredient_ids.duplicate()
-	ingredient_ids=[]
+	refresh_oven()
+	var next_ids: Array=[]
 	for id in service.database.ids():
-		if service.database.item(id).get("food_kind","") in ["raw","raw_meat"] and service.inventory.count_item(id)>0:ingredient_ids.append(id)
-	for choice in ingredient_choices:
-		var old_id: String=choice.get_meta("selected_id","")
-		if choice.selected>0 and choice.selected-1<previous_ids.size():old_id=previous_ids[choice.selected-1]
-		choice.clear();choice.add_item("—")
-		for id in ingredient_ids:choice.add_item(service.database.item(id).name+" ×%d"%service.inventory.count_item(id))
-		choice.select(ingredient_ids.find(old_id)+1 if old_id in ingredient_ids else 0)
+		if service.database.item(id).get("food_kind","") in ["raw","raw_meat"] and service.inventory.count_item(id)>0:next_ids.append(id)
+	# Network snapshots emit inventory.changed frequently. Do not destroy an open
+	# OptionButton popup while the player is selecting an ingredient.
+	if next_ids!=ingredient_ids:
+		var previous_ids: Array=ingredient_ids.duplicate()
+		ingredient_ids=next_ids
+		for choice in ingredient_choices:
+			var old_id := ""
+			if choice.selected>0 and choice.selected-1<previous_ids.size():old_id=previous_ids[choice.selected-1]
+			choice.clear();choice.add_item("—")
+			for id in ingredient_ids:choice.add_item(service.database.item(id).name)
+			choice.select(ingredient_ids.find(old_id)+1 if old_id in ingredient_ids else 0)
 	if row.kind=="stone_furnace":
 		for id in service.industry.rules.recipes:
 			var r: Dictionary=service.industry.rules.recipes[id]

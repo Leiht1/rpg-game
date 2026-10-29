@@ -116,6 +116,7 @@ func configure(owner_screen: Control) -> void:
 	# Reserve the same space at idle, during crafting and after completion.
 	progress.custom_minimum_size=Vector2(0,14)
 	progress.max_value=1.0
+	progress.step=0.0001
 	progress.show_percentage=false
 	progress.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	ItemSkin.progress_style(progress)
@@ -183,6 +184,8 @@ func clear(container: Node) -> void:
 
 func choose_category(category: String) -> void:
 	if not service.craft_job.is_empty(): return
+	var trace_start:=Time.get_ticks_usec()
+	var texture_us:=0
 	current_category=category
 	clear(rows)
 	recipe_buttons.clear()
@@ -195,7 +198,9 @@ func choose_category(category: String) -> void:
 		var entry := button("",select_recipe.bind(str(row.recipe_id)))
 		entry.toggle_mode=true
 		entry.custom_minimum_size=Vector2(258,66)
+		var texture_start:=Time.get_ticks_usec()
 		entry.icon=service.texture(row.output_id,"icon")
+		texture_us+=Time.get_ticks_usec()-texture_start
 		entry.expand_icon=true
 		entry.add_theme_constant_override("icon_max_width",36)
 		entry.alignment=HORIZONTAL_ALIGNMENT_LEFT
@@ -205,7 +210,16 @@ func choose_category(category: String) -> void:
 		entry.tooltip_text=""
 		rows.add_child(entry)
 		recipe_buttons[row.recipe_id]=entry
+	var refresh_start:=Time.get_ticks_usec()
 	refresh()
+	audit_panel("recipe_list",trace_start,{"texture_ms":texture_us/1000.0,"refresh_ms":(Time.get_ticks_usec()-refresh_start)/1000.0,"entries":available.size()})
+
+func audit_panel(stage: String, began: int, parts: Dictionary={}) -> void:
+	if not Engine.has_meta("sync_trace"):return
+	var trace: Dictionary=Engine.get_meta("sync_trace")
+	if not trace.has("panel_stages"):trace.panel_stages=[]
+	if trace.panel_stages.size()>=2048:return
+	trace.panel_stages.append({"stage":stage,"building":building,"began_us":began,"ms":(Time.get_ticks_usec()-began)/1000.0,"parts":parts})
 
 func select_recipe(id: String) -> void:
 	if not service.craft_job.is_empty(): return
@@ -217,6 +231,7 @@ func inventory_changed() -> void:
 
 func refresh() -> void:
 	if service==null: return
+	var trace_start:=Time.get_ticks_usec()
 	var making: bool=not service.craft_job.is_empty()
 	if quantity.editable==making: quantity.editable=not making
 	for tab in category_buttons.values(): tab.disabled=making
@@ -225,6 +240,7 @@ func refresh() -> void:
 	if row.is_empty():
 		status.text="暂无可用配方"
 		once.disabled=true;batch.disabled=true
+		audit_panel("detail",trace_start)
 		return
 	for id in recipe_buttons:
 		var entry: Button=recipe_buttons[id]
@@ -277,6 +293,7 @@ func refresh() -> void:
 		once.disabled=true;batch.disabled=true
 		status.text="正在制作 · %s × %d"%[definition.name,int(row.output_count)*int(service.craft_job.batches)]
 		status.add_theme_color_override("font_color",Color("627642"))
+	audit_panel("detail",trace_start)
 
 func submit_selected() -> void:
 	# Apply any SpinBox text edit before reading its numeric value.
@@ -303,7 +320,7 @@ func update_progress(value: float) -> void:
 	if value==0: refresh()
 
 func finish_craft(recipe_id: String, times: int, reason: String) -> void:
-	var row: Dictionary=book.recipe(recipe_id)
+	var row: Dictionary=service.craft_book.recipe(recipe_id)
 	refresh()
 	progress.value=1.0 if reason.is_empty() else 0.0
 	if reason.is_empty():
@@ -321,7 +338,9 @@ func set_mode(value: bool) -> void:
 		if not building: rebuild_context()
 		else: refresh()
 		return
-	service.cancel_craft()
+	var controller=Engine.get_meta("network_game_controller",null)
+	var pending_craft: bool=is_instance_valid(controller) and controller.commands.any(func(command):return command.get("operation")=="craft")
+	if not service.craft_job.is_empty() or pending_craft:service.cancel_craft()
 	building=value
 	close_button.text="V / Esc  关闭" if building else "C / Esc  关闭"
 	mode_title.text="营地建造" if building else "野外制作"
@@ -331,15 +350,17 @@ func set_mode(value: bool) -> void:
 	progress.visible=not building
 	book=service.camps.build_book if building else service.craft_book
 	selected=""
+	quantity.editable=not building
+	once.text="建造" if building else "制作一次"
+	batch.visible=not building
+	if not building:
+		rebuild_context()
+		return
 	clear(categories);category_buttons.clear()
 	for category in book.categories():
 		var tab := button(category,choose_category.bind(category))
 		tab.toggle_mode=true;category_buttons[category]=tab;categories.add_child(tab)
-	quantity.editable=not building
-	once.text="建造" if building else "制作一次"
-	batch.visible=not building
 	choose_category("全部")
-	if not building: rebuild_context()
 
 func rebuild_context() -> void:
 	if building: return

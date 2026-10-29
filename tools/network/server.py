@@ -28,7 +28,12 @@ import traceback
 import unicodedata
 import zipfile
 from collections import defaultdict, deque
+from contextlib import contextmanager, nullcontext
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+try:
+    from .request_lock import RequestLock
+except ImportError:
+    from request_lock import RequestLock
 
 VERSION = "0.1.0"
 PROTOCOL = 1
@@ -93,12 +98,13 @@ class Service:
         row = self.db.execute("SELECT payload FROM state WHERE id=1").fetchone()
         self.state = json.loads(row[0]) if row else {"format": 1, "accounts": {}, "worlds": {}, "characters": {}, "receipts": {}}
         require(self.state.get("format") == 1, "未知存档版本，拒绝覆盖")
-        self.lock = threading.RLock()
+        self.lock = RequestLock()
         self.request_ready = threading.Condition(self.lock)
         self.queue_lock = threading.Lock()
         self.world_bootstrap = threading.local()
         self.pending_moves = 0
         self.pending_commands = 0
+        self.pending_commits = 0
         self.sessions = {}
         self.limits = defaultdict(deque)
         self.messages = deque(maxlen=128)
@@ -114,11 +120,139 @@ class Service:
                 from gameplay import Gameplay
             self.gameplay = Gameplay(self.config)
         self.movement_checkpoint = 0.0
+        self.tick_stop = threading.Event()
+        self.tick_thread = None
+        self.tick_gameplay = None
+        self.tick_metrics = deque(maxlen=512)
+        self.tick_conflicts = defaultdict(int)
+        self.world_rules_lock = threading.RLock()
+        self.request_parts = threading.local()
+        self.trace_lock = threading.Lock()
         self.save()
 
+    def start_world_ticks(self):
+        """The server owns time; HTTP commands never advance other players."""
+        if self.gameplay is None or self.tick_thread is not None:return
+        self.tick_stop.clear()
+        self.tick_gameplay = type(self.gameplay)(self.config)
+        def run():
+            while not self.tick_stop.wait(.05):
+                with self.lock:world_ids=list(self.state['worlds'])
+                for wid in world_ids:
+                    if self.tick_stop.is_set():break
+                    try:self.advance_world_tick(wid)
+                    except Exception as error:
+                        # No state/body/credentials in diagnostics; retry from committed state.
+                        self.tick_metrics.append({'world':wid,'error':type(error).__name__})
+        self.tick_thread=threading.Thread(target=run,name='world-clock',daemon=True)
+        self.tick_thread.start()
+
+    def stop_world_ticks(self):
+        self.tick_stop.set()
+        if self.tick_thread is not None:
+            self.tick_thread.join(35)
+            if self.tick_thread.is_alive():raise RuntimeError('World clock did not stop')
+            self.tick_thread=None
+        if self.tick_gameplay is not None:
+            self.tick_gameplay.close();self.tick_gameplay=None
+
+    def advance_world_tick(self, wid):
+        # Sustained world writes must not starve time indefinitely. After two
+        # stale candidates, reserve the rules writer while recomputing; this
+        # reservation waits outside the shared state lock.
+        with self.world_rules_lock if self.tick_conflicts[wid]>=2 else nullcontext():
+            return self.compute_world_tick(wid)
+
+    def compute_world_tick(self, wid):
+        """Compute on a private rules host, then atomically validate/commit.
+
+        World writes and personal rewards invalidate this candidate. Ordinary
+        movement after the sampled tick time is retained. Explicit authoritative
+        relocation (respawn/knockback/sleep) overrides it, as a normal correction.
+        """
+        began=time.perf_counter()
+        with self.lock:
+            world=self.state['worlds'].get(wid)
+            now=time.monotonic()
+            if not world or 'gameplay' not in world:return False
+            elapsed,combat,due=self.world_tick_due(world,now)
+            if not due:return False
+            present=[self.state['accounts'][aid]['player_id'] for aid in self.online(wid)]
+            present=[cid for cid in present if cid in self.state['characters'] and 'gameplay' in self.state['characters'][cid]]
+            if not present:return False
+            before_world=copy.deepcopy(world)
+            before_chars={cid:copy.deepcopy(self.state['characters'][cid]) for cid in present}
+            clock=getattr(self.gameplay,'clocks',{}).get(wid)
+        staged_world=copy.deepcopy(before_world);staged_chars=copy.deepcopy(before_chars)
+        rules=self.tick_gameplay
+        if rules is None:raise RuntimeError('World clock is not started')
+        rules.combat_characters=list(staged_chars.values())
+        for index,person in enumerate(staged_chars.values()):
+            result=rules.apply(staged_world,person,elapsed=elapsed,shared=index==0)
+            require(result.get('ok'),result.get('error','世界计时失败'))
+        computed=time.perf_counter()
+        with self.world_rules_lock, self.lock:
+            current_world=self.state['worlds'].get(wid)
+            current_chars={cid:self.state['characters'].get(cid) for cid in present}
+            current_present={self.state['accounts'][aid]['player_id'] for aid in self.online(wid)}
+            unchanged=current_world is not None and {k:v for k,v in current_world.items() if k!='exploration'}=={k:v for k,v in before_world.items() if k!='exploration'}
+            unchanged=unchanged and current_present==set(present) and getattr(self.gameplay,'clocks',{}).get(wid)==clock
+            for cid,old in before_chars.items():
+                current=current_chars[cid];new=staged_chars[cid]
+                relocated=(new['x'],new['y'])!=(old['x'],old['y'])
+                # Pose is validated visual metadata, not a timer rule input.
+                # Its animation clock changes with movement and must not force
+                # a complete world-time recomputation on every packet.
+                ignore={'x','y','moving','running','facing','pose'}
+                # Ordinary bag rearrangement does not affect an idle personal
+                # timer. Keep it only if rules did not consume/age any inventory;
+                # equipment, body, tasks and every other dependency still match.
+                merge_bag=new['slots']==old['slots'] and not old['gameplay'].get('network_craft_job') and not new['gameplay'].get('network_craft_job')
+                def dependencies(c):
+                    value={k:v for k,v in c.items() if k not in ignore}
+                    if merge_bag:
+                        value={k:v for k,v in value.items() if k not in ('slots','_personal_revision')}
+                        value['gameplay']={k:v for k,v in value['gameplay'].items() if k!='slots'}
+                    return value
+                unchanged=unchanged and current is not None and dependencies(current)==dependencies(old)
+                if current is not None:
+                    for key in ignore-({'x','y'} if relocated else set()):
+                        if key in current:new[key]=copy.deepcopy(current[key])
+                        elif key in old:new[key]=copy.deepcopy(old[key])
+                        else:new.pop(key,None)
+                    if relocated:new['moving']=new['running']=False
+                    new['gameplay']['player_position']={'x':new['x'],'y':new['y']}
+                    if merge_bag:
+                        new['slots']=copy.deepcopy(current['slots']);new['gameplay']['slots']=copy.deepcopy(current['slots'])
+            if not unchanged:
+                self.tick_conflicts[wid]+=1
+                self.tick_metrics.append({'world':wid,'committed':False,'compute_ms':(computed-began)*1000})
+                return False
+            before=self.state
+            self.state={**before,'worlds':dict(before['worlds']),'characters':dict(before['characters'])}
+            staged_world['exploration']=current_world.get('exploration',[])
+            self.state['worlds'][wid]=staged_world
+            for cid,new in staged_chars.items():
+                new['_personal_revision']=current_chars[cid].get('_personal_revision',0)+1
+                self.state['characters'][cid]=new
+            try:self.save()
+            except BaseException:
+                self.state=before
+                raise
+            if not hasattr(self.gameplay,'clocks'):self.gameplay.clocks={}
+            self.gameplay.clocks[wid]=now
+            self.tick_conflicts[wid]=0
+            self.tick_metrics.append({'world':wid,'committed':True,'players':len(present),'compute_ms':(computed-began)*1000,'commit_ms':(time.perf_counter()-computed)*1000})
+            return True
+
     def save(self):
+        began=time.perf_counter()
+        payload=json.dumps(self.state, ensure_ascii=False)
+        encoded=time.perf_counter()
         with self.db:
-            self.db.execute("INSERT OR REPLACE INTO state VALUES(1,?)", (json.dumps(self.state, ensure_ascii=False),))
+            self.db.execute("INSERT OR REPLACE INTO state VALUES(1,?)", (payload,))
+        if hasattr(self,'request_parts') and hasattr(self.request_parts,'value'):
+            self.request_parts.value.update(save_encode_ms=(encoded-began)*1000,save_db_ms=(time.perf_counter()-encoded)*1000)
         self.movement_checkpoint = time.monotonic()
 
     def audit(self, account, action, target=""):
@@ -272,11 +406,35 @@ class Service:
         return result
 
     def handle(self, op, data, token="", ip="local"):
+        self.lock.begin()
+        self.request_parts.value={}
+        rules_owned=False
         if op == "move":
             with self.queue_lock:self.pending_moves += 1
         elif op == "game_command":
             with self.queue_lock:self.pending_commands += 1
         try:
+            if op=='game_snapshot' and isinstance(data,dict) and data.get('snapshot_defer')==1:
+                readonly=self.read_committed_snapshot(data,token)
+                if readonly is not None:return readonly
+            if op=="game_command" and self.gameplay is not None and data.get('operation') in ('inventory','organize','craft','craft_cancel','station','guide'):
+                # Reserve priority before the initial committed-state capture,
+                # not only after computation. Otherwise queued heavy writers can
+                # repeatedly win the lock while a light request has not started.
+                with self.queue_lock:self.pending_commits+=1
+                try:personal=self.handle_personal_inventory(data,token,ip)
+                finally:
+                    with self.queue_lock:self.pending_commits-=1
+                    self.notify_requests()
+                if personal is not None:return personal
+            if self.gameplay is not None and op in ('game_command','game_snapshot','move','logout','leave_lobby','leave_world','permanent_leave','character'):
+                # Own the mutable rules channel outside the shared state lock.
+                # Movement/logout must not interleave a captured spatial command.
+                queued=time.perf_counter()
+                self.world_rules_lock.acquire();rules_owned=True
+                self.request_parts.value['rules_wait_ms']=(time.perf_counter()-queued)*1000
+            if op=='game_command' and self.gameplay is not None:
+                return self.handle_world_command(data,token,ip)
             if op == "create_world":
                 with self.lock:
                     require(isinstance(data, dict) and data.get("protocol") == PROTOCOL and data.get("version") == VERSION, "客户端与服务器版本不兼容")
@@ -302,13 +460,20 @@ class Service:
                     world = self.state["worlds"].get(account["world_id"])
                     bootstrap = {k: world[k] for k in ("id", "seed", "map_cells")} if world else None
                 if bootstrap is not None:
-                    self.gameplay.prepare(bootstrap)
+                    if op=="character" and self.tick_gameplay is not None:
+                        # Both required authorities must be ready before entry.
+                        # Otherwise the first clock update includes host startup
+                        # and gameplay time stalls while the player is active.
+                        from concurrent.futures import ThreadPoolExecutor
+                        with ThreadPoolExecutor(max_workers=1) as loading:
+                            clock_ready=loading.submit(self.tick_gameplay.prepare,bootstrap)
+                            self.gameplay.prepare(bootstrap)
+                            self.gameplay.inventory_host(account["player_id"])
+                            clock_ready.result()
+                    else:
+                        self.gameplay.prepare(bootstrap)
+                        if op=="character":self.gameplay.inventory_host(account["player_id"])
             with self.request_ready:
-                if op == "game_snapshot":
-                    # Drain queued movement/actions before another expensive tick.
-                    deadline = time.perf_counter()+.2
-                    while (self.pending_moves or self.pending_commands) and time.perf_counter()<deadline:
-                        self.request_ready.wait(.01)
                 try:
                     return self.handle_locked(op,data,token,ip)
                 finally:
@@ -320,6 +485,7 @@ class Service:
                                 "last":time.time()-(now-session["seen"])}
                                 for session in self.sessions.values() if session.get("entered") and session["seen"] > now-15]
         finally:
+            if rules_owned:self.world_rules_lock.release()
             if op == "create_world" and hasattr(self.world_bootstrap, "value"):
                 staged, unused = self.world_bootstrap.value
                 del self.world_bootstrap.value
@@ -329,10 +495,197 @@ class Service:
                         self.nav_cache.pop(staged["id"], None)
             if op == "move":
                 with self.queue_lock:self.pending_moves -= 1
-                with self.request_ready:self.request_ready.notify_all()
+                self.notify_requests()
             elif op == "game_command":
                 with self.queue_lock:self.pending_commands -= 1
-                with self.request_ready:self.request_ready.notify_all()
+                self.notify_requests()
+
+    def handle_world_command(self, data, token, ip):
+        """Run the original rule transaction on a private candidate, outside lock.
+
+        The rules-channel mutex is already owned. A concurrent personal commit
+        or world-clock commit invalidates the captured dependencies, never gets
+        overwritten. Persistence remains synchronous before acknowledgment.
+        """
+        for attempt in range(3):
+            captured_at=time.perf_counter()
+            with self.lock:
+                require(isinstance(data,dict) and data.get('protocol')==PROTOCOL and data.get('version')==VERSION,'客户端与服务器版本不兼容')
+                account,session=self.account(token)
+                require(self.config.get('gameplay_preview') is True and session.get('entered'),'请先进入世界')
+                wid=account['world_id'];require(wid in self.state['worlds'],'请先加入世界')
+                # A newly entered character may require original release/init;
+                # retain that uncommon path until initialization has committed.
+                if session.get('game_fresh') or 'gameplay' not in self.state['worlds'][wid] or 'gameplay' not in self.state['characters'].get(account['player_id'],{}):
+                    return self.handle_locked('game_command',data,token,ip)
+                captured=copy.deepcopy(self.state)
+                sessions=copy.deepcopy(self.sessions)
+                session_before=copy.deepcopy(session)
+                account=copy.deepcopy(account)
+                if attempt==0 and 'game:'+account['player_id']+':'+str(data.get('request_id','')) not in captured['receipts']:self.rate(('gameplay',account['id']),30,5)
+            self.request_parts.value['capture_ms']=(time.perf_counter()-captured_at)*1000
+            candidate=copy.copy(self)
+            candidate.state=copy.deepcopy(captured);candidate.sessions=sessions
+            candidate.rate=lambda *args:None # reservation above survives retries
+            profile=getattr(self.gameplay,'request_profile',None)
+            if profile is not None:profile.calls=[]
+            result=candidate.dispatch('game_command',data,token,ip)
+            if profile is not None:self.request_parts.value['rule_calls']=copy.deepcopy(profile.calls)
+            commit_at=time.perf_counter()
+            with self.lock:
+                current_account,current_session=self.account(token)
+                if any(current_account.get(k)!=account.get(k) for k in ('id','enabled','world_id','player_id')) or not current_session.get('entered'):continue
+                dependencies=[cid for cid,c in captured['characters'].items() if c['world_id']==wid]
+                if self.state['worlds'].get(wid)!=captured['worlds'][wid] or any(self.state['characters'].get(cid)!=captured['characters'][cid] for cid in dependencies):continue
+                old_session=sessions[token]
+                # dispatch mutates candidate.sessions, so compare with original capture.
+                original_session=self.sessions[token]
+                if any(original_session.get(k)!=session_before.get(k) for k in ('seq','input_ack','entered')):continue
+                before=self.state;before_session=copy.deepcopy(original_session)
+                self.state={**before,'worlds':dict(before['worlds']),'characters':dict(before['characters']),'receipts':dict(before['receipts'])}
+                self.state['worlds'][wid]=candidate.state['worlds'][wid]
+                for cid in dependencies:
+                    new=candidate.state['characters'][cid]
+                    if new!=captured['characters'][cid]:
+                        new['_personal_revision']=before['characters'][cid].get('_personal_revision',0)+1
+                        self.state['characters'][cid]=new
+                for key,value in candidate.state['receipts'].items():
+                    if key not in captured['receipts']:self.state['receipts'][key]=value
+                self.sessions[token]={**old_session,'seen':original_session['seen']}
+                try:
+                    if self.state!=before:
+                        save_at=time.perf_counter();self.save()
+                        self.request_parts.value['save_ms']=(time.perf_counter()-save_at)*1000
+                except BaseException:
+                    self.state=before;self.sessions[token]=before_session
+                    raise
+                self.request_parts.value['commit_ms']=(time.perf_counter()-commit_at)*1000
+                return {'ok':True,**copy.deepcopy(result)}
+        return {'ok':True,'command_pending':True,'retry_after_ms':8}
+
+    def notify_requests(self):
+        # Waiters already have bounded timed waits. Never delay a completed
+        # response behind a different world's next expensive transaction.
+        if self.lock.acquire(False):
+            try:self.request_ready.notify_all()
+            finally:self.lock.release()
+
+    def world_tick_due(self, world, now):
+        last=getattr(self.gameplay,'clocks',{}).get(world['id'],now)
+        elapsed=min(5.0,max(0.0,now-last))
+        combat=any(p.get('gameplay',{}).get('combat_personal',{}).get('attack') or p.get('gameplay',{}).get('combat_personal',{}).get('phase','alive')!='alive' for p in self.state['characters'].values() if p['world_id']==world['id'])
+        combat=combat or any(b.get('mode') in ('alert','attack','chase') for b in world.get('gameplay',{}).get('combat_world',{}).get('boars',{}).values())
+        due=world['id'] not in getattr(self.gameplay,'clocks',{}) or (elapsed >= (.2 if combat else .75) and now>=getattr(self.gameplay,'tick_ready',{}).get(world['id'],0))
+        return elapsed,combat,due
+
+    def read_committed_snapshot(self, data, token):
+        require(data.get('protocol')==PROTOCOL and data.get('version')==VERSION,'客户端与服务器版本不兼容')
+        if self.config.get('gameplay_preview') is not True or self.gameplay is None:return None
+        if not self.lock.acquire(False):return {'ok':True,'snapshot_pending':True}
+        try:
+            account,session=self.account(token);character=self.character(account)
+            require(session.get('entered') and character is not None,'请先进入世界')
+            world=self.state['worlds'][account['world_id']]
+            if session.get('game_fresh') or 'gameplay' not in character or 'gameplay' not in world:return None
+            if data.get('selected',character.get('selected',0))!=character.get('selected',0):return None
+            return {'ok':True,'snapshot_lane':'read','snapshot':self.gameplay.snapshot(world,character),'events':[]}
+        finally:self.lock.release()
+
+    @contextmanager
+    def commit_slot(self):
+        with self.queue_lock:self.pending_commits+=1
+        acquired=False
+        try:
+            deadline=time.perf_counter()+.2
+            while not acquired and time.perf_counter()<deadline:acquired=self.lock.acquire(timeout=.002)
+            yield acquired
+        finally:
+            if acquired:self.lock.release()
+            with self.queue_lock:self.pending_commits-=1
+            self.notify_requests()
+
+    @staticmethod
+    def personal_inventory_command(data, character):
+        args=data.get("args",[])
+        personal=character.get("gameplay",{})
+        body=personal.get("body",{})
+        combat=personal.get("combat_personal",{})
+        if not personal or body.get("sleeping") or body.get("down") or combat.get("phase","alive")!="alive" or combat.get("attack") or personal.get("network_fishing",{}).get("state","idle")!="idle":return False
+        operation=data.get('operation')
+        if operation in ('craft_cancel','guide'):return True
+        if operation=='station':return args==['']
+        if personal.get('network_craft_job'):return False
+        if operation=='craft':return not personal.get('network_craft_station') and not data.get('station')
+        if data.get("operation")=="organize":return not args and not character.get("pose",{}).get("action")
+        if data.get("operation")!="inventory" or not isinstance(args,list) or not args:return False
+        arity={"move_slot":3,"split_slot":3,"destroy_slot":2}
+        if len(args)!=arity.get(args[0],-1) or any(type(v) is not int for v in args[1:]):return False
+        if args[0]=="destroy_slot" and 0<=args[1]<40 and personal.get("network_active_lamp") and character["slots"][args[1]].get("lamp_id")==personal["network_active_lamp"]:return False
+        return 8<=args[1]<40 and (args[0]!="move_slot" or 8<=args[2]<40)
+
+    def handle_personal_inventory(self, data, token, ip):
+        # Compute with original inventory rules outside the shared world lock;
+        # commit only if all personal dependencies still match. World writes retain
+        # their existing atomic transaction and can never be overwritten here.
+        if self.config.get("gameplay_preview") is not True:return None
+        fields=("slots","equipment","hotbar_equipment","body","combat_personal","network_craft_job","network_craft_station","guide_stage","network_fishing","network_active_lamp")
+        for attempt in range(3):
+            with self.lock:
+                require(isinstance(data,dict) and data.get("protocol")==PROTOCOL and data.get("version")==VERSION,"客户端与服务器版本不兼容")
+                account,session=self.account(token)
+                character=self.character(account)
+                if not session.get("entered") or session.get("game_fresh") or character is None:return None
+                rid=data.get("request_id","")
+                require(isinstance(rid,str) and re.fullmatch(r"[a-f0-9]{32}",rid),"操作编号无效")
+                key="game:"+character["id"]+":"+rid
+                world=self.state["worlds"][account["world_id"]]
+                lane='personal' if data.get('operation') in ('inventory','organize') else 'task'
+                if key in self.state["receipts"]:return {"ok":True,"transaction_lane":lane,"snapshot":self.gameplay.snapshot(world,character),"events":[],"craft_cancelled":self.state['receipts'][key].get('craft_cancelled',False)}
+                if not self.personal_inventory_command(data,character):return None
+                if attempt==0:self.rate(("gameplay",account["id"]),30,5)
+                try:from .gameplay import validate
+                except ImportError:from gameplay import validate
+                validate(data.get("operation"),data.get("args",[]))
+                expected=data.get("expected",{})
+                require(isinstance(expected,dict) and len(expected)<=2 and all(isinstance(k,str) and k.isdigit() and 0<=int(k)<40 and isinstance(v,dict) for k,v in expected.items()),"背包原状态无效")
+                cid,wid,identity=account["player_id"],world["id"],character["id"]
+                baseline=copy.deepcopy({k:character["gameplay"].get(k) for k in fields})
+                selected=character.get("selected",0)
+                revision=character.get('_personal_revision',0)
+                state={k:copy.deepcopy(character[k]) for k in ("slots","equipment","hotbar_equipment")}
+                state.update({k:copy.deepcopy(character['gameplay'].get(k)) for k in ('body','combat_personal','network_craft_job','network_craft_station','guide_stage')})
+            host,lock=self.gameplay.inventory_host(cid)
+            with lock:
+                result=host.execute(state,operation=data["operation"],args=data.get("args",[]),expected=expected)
+            if result.get('fallback'):return None
+            with self.commit_slot() as acquired:
+                if not acquired:return {'ok':True,'command_pending':True,'retry_after_ms':8}
+                account,session=self.account(token)
+                character=self.character(account)
+                require(session.get("entered") and account["world_id"]==wid and character is not None and character["id"]==identity,"所属世界已变化")
+                world=self.state["worlds"][wid]
+                if key in self.state["receipts"]:return {"ok":True,"transaction_lane":lane,"snapshot":self.gameplay.snapshot(world,character),"events":[],"craft_cancelled":self.state['receipts'][key].get('craft_cancelled',False)}
+                if character.get('_personal_revision',0)!=revision or not self.personal_inventory_command(data,character) or baseline!={k:character["gameplay"].get(k) for k in fields} or any(state[k]!=character[k] for k in ('slots','equipment','hotbar_equipment')) or selected!=character.get("selected",0):continue
+                require(result.get("ok"),result.get("error","物品操作失败"))
+                before=copy.deepcopy(character)
+                try:
+                    character["slots"]=copy.deepcopy(result["slots"])
+                    character["hotbar_equipment"]=copy.deepcopy(result["hotbar_equipment"])
+                    for k in ("slots","hotbar_equipment"):character["gameplay"][k]=copy.deepcopy(character[k])
+                    if lane=='task':
+                        for k in ('network_craft_job','network_craft_station','guide_stage'):character['gameplay'][k]=copy.deepcopy(result[k])
+                        if data['operation']=='craft' and character['gameplay']['network_craft_job']:
+                            # The shared tick has not run since this job began.
+                            # Do not charge that pre-start interval to crafting.
+                            character['gameplay']['network_craft_job']['tick_skip']=min(5.0,max(0.0,time.monotonic()-getattr(self.gameplay,'clocks',{}).get(wid,time.monotonic())))
+                    character['_personal_revision']=revision+1
+                    self.state["receipts"][key]={"accepted":True,"craft_cancelled":bool(result.get('craft_cancelled',False))}
+                    self.save()
+                except BaseException:
+                    self.state["characters"][cid]=before;self.state["receipts"].pop(key,None)
+                    raise
+                return {"ok":True,"transaction_lane":lane,"snapshot":self.gameplay.snapshot(world,character),"events":[],"craft_cancelled":bool(result.get('craft_cancelled',False))}
+        return {'ok':True,'command_pending':True,'retry_after_ms':8}
 
     def new_world(self, name):
         return {"id":identifier(),"name":name.strip(),"seed":secrets.randbelow(2147483646)+1,"map_cells":self.config.get("world_cells",1536),"generator":"windrest-continent-0.6.0","format":1,"clock":0.0,"weather":"clear","storage":{},"drops":{},"legacies":{},"exploration":[],"systems": {"buildings":{},"resources":{},"animals":{},"crops":{},"fish":{},"merchant":{}}}
@@ -360,6 +713,10 @@ class Service:
             gameplay_ready_before = copy.deepcopy(getattr(self.gameplay, "tick_ready", {}))
             try:
                 result = self.dispatch(op, data, token, ip)
+                for cid,character in self.state['characters'].items():
+                    old=before['characters'].get(cid,{})
+                    if character.get('gameplay')!=old.get('gameplay') or any(character.get(k)!=old.get(k) for k in ('slots','equipment','hotbar_equipment')):
+                        character['_personal_revision']=old.get('_personal_revision',0)+1
                 dispatched = time.perf_counter()
                 if self.state != before and (op != "move" or time.monotonic()-self.movement_checkpoint >= .5):
                     self.save()
@@ -557,9 +914,10 @@ class Service:
             session["seq"] = -1
             session["move_at"] = time.monotonic()
             session["input_ack"] = 0
+            session["position_history"] = []
             session["move_credit"] = .15
             session["game_fresh"] = True
-            return {"world":w,"character":c, "profile":self.profile(a), "movement_revision":2, "gameplay_enabled":self.config.get("gameplay_preview") is True}
+            return {"world":w,"character":c, "profile":self.profile(a), "movement_revision":2, "command_movement_revision":1, "position_revision":1, "gameplay_enabled":self.config.get("gameplay_preview") is True}
         if op == "resume":
             c = self.character(a)
             return {"world":self.state["worlds"][a["world_id"]],"character":c}
@@ -577,40 +935,53 @@ class Service:
                 except ImportError:
                     from gameplay import Gameplay
                 self.gameplay = Gameplay(self.config)
-            if session.get("game_fresh"):
+            fresh=bool(session.get('game_fresh'))
+            if fresh:
                 self.release_game_character(w, c)
                 session["game_fresh"] = False
-            # One wall-clock interval per world, and one personal interval per
-            # present character. Never advance shared machines once per player.
+            command_movement = None
+            restore_position = None
+            if op == "game_command" and "input_movement" in d:
+                require(d.get("operation")=="interact" and isinstance(d["input_movement"],dict), "交互移动输入无效")
+                boundary=d.get("input_boundary")
+                require(type(boundary) is int and boundary>=0, "交互移动边界无效")
+                key="game:"+c["id"]+":"+str(d.get("request_id",""))
+                if key not in self.state["receipts"]:
+                    movement=d["input_movement"]
+                    require(type(movement.get("mine_serial")) is int and movement["mine_serial"]==c.get("gameplay",{}).get("mine_travel",{}).get("serial",0), "交互区域已变化")
+                    require(isinstance(movement.get("inputs"),list) and all(isinstance(item,dict) and type(item.get("id")) is int and item["id"]<=boundary for item in movement["inputs"]), "交互移动顺序无效")
+                    # Same authenticated transaction and original movement validator:
+                    # time credit, input IDs, terrain, colliders and region stay authoritative.
+                    if "position_version" in d:
+                        require(type(d["position_version"]) is int and d["position_version"]==boundary, "交互位置版本无效")
+                        ack=session.get("input_ack",0)
+                        if boundary<ack:
+                            checkpoint=next((p for p in reversed(session.get("position_history",[])) if p["version"]==boundary and p["region"]==movement["mine_serial"] and time.monotonic()-p["at"]<=1.0),None)
+                            require(checkpoint is not None,"交互位置已过期，请重新操作")
+                            restore_position=(c["x"],c["y"])
+                            c["x"],c["y"]=checkpoint["x"],checkpoint["y"]
+                        elif boundary>ack:
+                            require(type(movement.get("seq")) is int,"交互移动序号无效")
+                            self.dispatch("move",{**movement,"seq":max(session["seq"]+1,movement.get("seq",0)),"protocol":d["protocol"],"version":d["version"]},token,ip)
+                    else:self.dispatch("move",{**movement,"protocol":d["protocol"],"version":d["version"]},token,ip)
+                command_movement={"character":{k:c[k] for k in ("id","x","y","facing","moving","running")},"input_ack":session.get("input_ack",0)}
+                if restore_position is not None:command_movement["character"].update(zip(("x","y"),restore_position))
+                if command_movement["input_ack"]<boundary:
+                    # No receipt and no gameplay effect until the affordable prefix
+                    # reaches the requested boundary. The same ID can safely retry.
+                    return {"movement_pending":True,"command_movement":command_movement}
+            # Initialization is still authoritative, but simulation time is
+            # advanced only by the independently committed world-clock task.
             now = time.monotonic()
-            last = getattr(self.gameplay, "clocks", {}).get(w["id"], now)
             if not hasattr(self.gameplay, "clocks"):self.gameplay.clocks = {}
-            elapsed = min(5.0, max(0.0, now-last))
-            # Several clients may ask for the same world update together. Reuse
-            # committed state between ticks instead of simulating everyone again.
-            combat_pending = any(p.get("gameplay", {}).get("combat_personal", {}).get("attack") or p.get("gameplay", {}).get("combat_personal", {}).get("phase", "alive") != "alive"
-                                 for p in self.state["characters"].values() if p["world_id"] == w["id"])
-            combat_pending = combat_pending or any(b.get("mode") in ("alert", "attack", "chase") for b in w.get("gameplay", {}).get("combat_world", {}).get("boars", {}).values())
-            tick_due = w["id"] not in self.gameplay.clocks or (elapsed >= (.2 if combat_pending else .75) and now >= getattr(self.gameplay,"tick_ready",{}).get(w["id"],0))
-            if op == "game_snapshot" and not tick_due and "gameplay" in w and "gameplay" in c:
-                selected = d.get("selected", c.get("selected", 0))
-                require(type(selected) is int and 0 <= selected < 8, "快捷栏无效")
+            self.gameplay.clocks.setdefault(w["id"],now)
+            selected = d.get("selected", c.get("selected", 0))
+            require(type(selected) is int and 0 <= selected < 8, "快捷栏无效")
+            if op == "game_snapshot" and not fresh and "gameplay" in w and "gameplay" in c:
                 c["selected"] = c["gameplay"]["selected"] = selected
                 return {"gameplay_revision":1,"snapshot":self.gameplay.snapshot(w,c),"events":[]}
-            if tick_due:self.gameplay.clocks[w["id"]] = now
-            else:elapsed = 0.0
-            present = [self.state["characters"][self.state["accounts"][aid]["player_id"]]
-                       for aid in self.online(w["id"]) if self.state["accounts"][aid]["player_id"] in self.state["characters"]]
-            present_ids = {person["id"] for person in present}
-            self.gameplay.combat_characters = present
-            tick_events = []
-            for person in self.state["characters"].values():
-                if person["world_id"] == w["id"] and person["id"] not in present_ids:self.release_game_character(w, person)
-            others = [person for person in present if person["id"] != c["id"]]
-            if elapsed > 0 and "gameplay" in w:
-                for index, person in enumerate(others):
-                    tick = self.gameplay.apply(w, person, elapsed=elapsed, shared=index==0)
-                    require(tick.get("ok"), tick.get("error", "世界计时失败"))
+            self.gameplay.combat_characters = [self.state["characters"][self.state["accounts"][aid]["player_id"]]
+                for aid in self.online(w["id"]) if self.state["accounts"][aid]["player_id"] in self.state["characters"]]
             rid = d.get("request_id", "")
             replayed = False
             if op == "game_command":
@@ -625,21 +996,21 @@ class Service:
             if "gameplay" in c:
                 c["gameplay"]["selected"] = selected
             try:
-                result = self.gameplay.apply(w, c, d.get("operation", "snapshot") if op == "game_command" and not replayed else "snapshot", d.get("args", []) if op == "game_command" and not replayed else [], elapsed=elapsed, shared=not others, station=d.get("station"), expected=d.get("expected"))
+                result = self.gameplay.apply(w, c, d.get("operation", "snapshot") if op == "game_command" and not replayed else "snapshot", d.get("args", []) if op == "game_command" and not replayed else [], elapsed=0, shared=False, station=d.get("station"), expected=d.get("expected"))
             except ValueError as error:
                 raise Rejected(str(error)) from error
             require(result.get("ok"), result.get("error", "玩法操作失败"))
-            if tick_due:
-                # Leave room for the queued movement requests after a simulation
-                # tick. Its processing time remains in clocks, so the next tick
-                # catches up real elapsed time instead of slowing the world.
-                if not hasattr(self.gameplay,"tick_ready"):self.gameplay.tick_ready = {}
-                self.gameplay.tick_ready[w["id"]] = time.monotonic()+(.05 if combat_pending else .15)
-            response = {"gameplay_revision": 1, "snapshot": result["snapshot"], "events": tick_events+result.get("events", [])}
+            response = {"gameplay_revision": 1, "snapshot": result["snapshot"], "events": result.get("events", [])}
+            response['craft_cancelled']=self.state['receipts'][key].get('craft_cancelled',False) if replayed else bool(result.get('craft_cancelled',False))
+            if restore_position is not None:
+                c["x"],c["y"]=restore_position
+                c["gameplay"]["player_position"]={"x":c["x"],"y":c["y"]}
+                response["snapshot"]["player_position"]={"x":c["x"],"y":c["y"]}
+            if command_movement is not None:response["command_movement"]=command_movement
             if op == "game_command":
                 # Store the acknowledgment, not a complete copy of the world per
                 # click. Retries return the latest committed snapshot.
-                self.state["receipts"][key] = {"accepted": True}
+                self.state["receipts"][key] = {"accepted": True,"craft_cancelled":response['craft_cancelled']}
             return response
         if op == "leave_lobby":
             session["entered"] = False
@@ -692,6 +1063,9 @@ class Service:
             c = self.character(a)
             require(c is not None, "人物不存在")
             seq = d.get("seq")
+            if d.get("position_revision")==1 and type(seq) is int and seq<=session["seq"]:
+                require(isinstance(d.get("inputs"),list) and all(isinstance(item,dict) and type(item.get("id")) is int and item["id"]<=session.get("input_ack",0) for item in d["inputs"]),"重复移动请求")
+                return {"character":{k:c[k] for k in ("id","x","y","facing","moving","running")},"input_ack":session.get("input_ack",0),"movement_revision":2}
             require(type(seq) is int and seq > session["seq"], "重复移动请求")
             if self.config.get("gameplay_preview") is True and "pose" in d:
                 pose = d["pose"]
@@ -706,6 +1080,7 @@ class Service:
             elapsed = min(1.0, max(0,now-session["move_at"]))
             inputs = d.get("inputs")
             ack = session.get("input_ack",0)
+            previous_ack = ack
             credit = min(1.75, session.get("move_credit",.15)+max(0,now-session["move_at"]))
             if inputs is not None:
                 require(isinstance(inputs,list) and len(inputs)<=90, "Invalid movement batch")
@@ -737,6 +1112,8 @@ class Service:
                 session["move_credit"] = max(0,credit-total)
                 session["input_ack"] = ack
             session["move_at"],session["seq"] = now,seq
+            history=session.setdefault("position_history",[])
+            history.append({"version":previous_ack,"x":c["x"],"y":c["y"],"region":c.get("gameplay",{}).get("mine_travel",{}).get("serial",0),"at":now})
             length = max(1,math.hypot(x,y))
             speed = 310 if d.get("run") is True else 200
             w = self.state["worlds"][a["world_id"]]
@@ -765,6 +1142,8 @@ class Service:
                     if safe(nx,c["y"]):c["x"] = nx
                     if safe(c["x"],ny):c["y"] = ny
             c["moving"] = bool(x or y)
+            history.append({"version":session.get("input_ack",0),"x":c["x"],"y":c["y"],"region":c.get("gameplay",{}).get("mine_travel",{}).get("serial",0),"at":now})
+            session["position_history"]=history[-96:]
             c["running"] = steps[-1].get("run") is True if steps else False
             if x or y:
                 c["facing"] = ("right" if x>0 else "left") if abs(x)>abs(y) else ("front" if y>0 else "back")
@@ -930,6 +1309,8 @@ class Handler(BaseHTTPRequestHandler):
                     self.monitor_received,self.monitor_sent,(time.perf_counter()-started)*1000)
 
     def post_request(self):
+        trace = {"received_ns":time.perf_counter_ns()}
+        trace_file = self.server.service.config.get("sync_trace_file")
         try:
             self.connection.settimeout(8)
             length = int(self.headers.get("Content-Length", "0"))
@@ -939,7 +1320,23 @@ class Handler(BaseHTTPRequestHandler):
             data = json.loads(raw)
             op = self.path.removeprefix("/api/")
             token = self.headers.get("Authorization", "").removeprefix("Bearer ")
+            trace.update(request_id=data.get("request_id",""), operation=op, command=data.get("operation",""), request_body_bytes=len(raw), business_start_ns=time.perf_counter_ns())
             result = self.server.service.handle(op,data,token,self.client_address[0])
+            trace["business_done_ns"] = time.perf_counter_ns()
+            if op in ("resume","character") and result.get("ok") and data.get("sync_init")==1 and self.server.service.config.get("gameplay_preview") is True:
+                # The gameplay scene obtains one authoritative initial snapshot.
+                # Identity replies must not duplicate its world/personal saves.
+                result = {**result,"world":{key:result["world"][key] for key in ("id","name","seed","map_cells","generator")},"character":{key:value for key,value in result["character"].items() if key!="gameplay"} if result.get("character") is not None else None}
+            if op in ("game_snapshot", "game_command") and result.get("ok") and data.get("sync_delta") == 1 and isinstance(result.get("snapshot"),dict):
+                # Stateless field tokens: a lost response/reconnect cannot advance a
+                # hidden server baseline. Old clients keep receiving full snapshots.
+                snapshot = result["snapshot"]
+                known = data.get("sync_tokens",{})
+                if not isinstance(known,dict) or len(known)>128:known={}
+                tokens = {key:hashlib.sha256(json.dumps(value,sort_keys=True,separators=(",",":"),ensure_ascii=False).encode()).hexdigest()[:24] for key,value in snapshot.items()}
+                changed = {key:value for key,value in snapshot.items() if known.get(key)!=tokens[key]}
+                result = {**result,"snapshot":changed,"sync_tokens":tokens,"snapshot_delta":True}
+
             status = 200
         except (Rejected,ValueError,TypeError,KeyError) as exc:
             result,status = {"ok":False,"error":str(exc) if isinstance(exc,Rejected) else "请求格式错误"},400
@@ -950,7 +1347,9 @@ class Handler(BaseHTTPRequestHandler):
                   [(Path(frame.filename).name, frame.name, frame.lineno)
                    for frame in traceback.extract_tb(exc.__traceback__)], flush=True)
             result,status = {"ok":False,"error":"服务器操作失败，数据未提交"},500
+        trace["serialize_start_ns"] = time.perf_counter_ns()
         body = json.dumps(result,ensure_ascii=False).encode()
+        trace.update(serialize_done_ns=time.perf_counter_ns(), json_bytes=len(body))
         compressed = False
         # Exploration is mostly unchanged zero-filled map data. Compress large
         # gameplay replies outside the transaction lock, preserving old clients.
@@ -959,6 +1358,10 @@ class Handler(BaseHTTPRequestHandler):
         if self.path in ("/api/game_snapshot", "/api/game_command", "/api/move", "/api/poll") and len(body) >= 2048 and gzip_allowed:
             packed = gzip.compress(body, compresslevel=1, mtime=0)
             if len(packed) < len(body):body = packed;compressed = True
+        trace.update(response_ready_ns=time.perf_counter_ns(), response_body_bytes=len(body), status=status)
+        lock_parts=self.server.service.lock.timings() if hasattr(self.server.service,'lock') else {}
+        trace.update(lock_wait_ms=lock_parts.get('wait_ns',0),lock_hold_ms=lock_parts.get('hold_ns',0))
+        if hasattr(self.server.service,'request_parts'):trace['world_parts']=getattr(self.server.service.request_parts,'value',{})
         self.monitor_status = status
         self.monitor_sent = len(body)
         self.send_response(status)
@@ -967,8 +1370,15 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Vary", "Accept-Encoding")
         self.send_header("Content-Length",str(len(body)))
         self.send_header("Cache-Control","no-store")
+        if isinstance(locals().get('data'),dict) and data.get('sync_timings')==1:
+            self.send_header('Server-Timing',f"server;dur={(trace['response_ready_ns']-trace['received_ns'])/1e6:.3f}, business;dur={(trace.get('business_done_ns',trace['serialize_start_ns'])-trace.get('business_start_ns',trace['received_ns']))/1e6:.3f}, lockwait;dur={trace['lock_wait_ms']:.3f}, lockhold;dur={trace['lock_hold_ms']:.3f}")
         self.end_headers()
+        trace["send_start_ns"] = time.perf_counter_ns()
         self.wfile.write(body)
+        trace["send_done_ns"] = time.perf_counter_ns()
+        if trace_file:
+            with self.server.service.trace_lock:
+                with open(trace_file,"a",encoding="utf-8") as trace_output:trace_output.write(json.dumps(trace)+"\n")
 
 
 def certificate(root):
@@ -1031,12 +1441,14 @@ def main():
     context.load_cert_chain(cert,key)
     server.tls_context = context
     print(f"Windrest {VERSION} LAN server listening on {config.get('bind')}:{config.get('port')}")
+    service.start_world_ticks()
     try:
         server.serve_forever()
     except KeyboardInterrupt:
         pass
     finally:
         server.server_close()
+        service.stop_world_ticks()
         if service.gameplay is not None:service.gameplay.close()
         service.save()
         service.db.close()

@@ -14,6 +14,7 @@ func exchange(tree: SceneTree, host: String, port: int, tls: TLSOptions, identit
 		if reply is Dictionary:
 			row.game_operation=str(data.get("operation",""))
 			row.command_ok=reply.get("ok",false)
+			row.error=str(reply.get("error",""))
 			row.reply_attack=reply.get("snapshot",{}).get("combat_personal",{}).get("attack",{}).duplicate(true)
 			if record_roster:
 				row.players=[]

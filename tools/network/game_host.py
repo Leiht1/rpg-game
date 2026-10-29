@@ -78,7 +78,9 @@ class GameHost:
             raise ctypes.WinError(ctypes.get_last_error())
 
     def _send(self, request):
+        began = time.perf_counter()
         data = json.dumps(request, ensure_ascii=False, allow_nan=False).encode("utf-8")
+        self.last_send = {"encode_ms": (time.perf_counter()-began)*1000, "request_bytes": len(data)}
         if len(data) > 8*1024*1024:
             raise ValueError("Gameplay request exceeds private channel limit")
         try:
@@ -120,6 +122,7 @@ class GameHost:
                    "shared": shared, "player_id": player_id, "station": station, "expected": expected or {}, "combat_peers":combat_peers or [], "combat_damage":combat_damage or []}
         self._send(request)
         result=self._receive(30)
+        result["ipc_metrics"] = {**self.last_send, "total_ms": (time.perf_counter()-began)*1000}
         if os.environ.get("WINDREST_PROFILE_NETWORK")=="1":print("HOST_MS",operation,round((time.perf_counter()-began)*1000),flush=True)
         return result
 

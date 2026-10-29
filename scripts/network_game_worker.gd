@@ -8,6 +8,9 @@ var startup := true
 var channel := StreamPeerTCP.new()
 var incoming := PackedByteArray()
 var packet_size := 0
+var inventory_only:=false
+var inventory_rules: RefCounted
+var task_service: Node
 func _ready() -> void:
 	Engine.max_fps=240
 	var args:=OS.get_cmdline_user_args()
@@ -22,6 +25,18 @@ func boot() -> void:
 		await get_tree().process_frame
 	if channel.get_status()!=StreamPeerTCP.STATUS_CONNECTED:get_tree().quit(2);return
 	channel.set_no_delay(true)
+	if config.get("inventory_only",false):
+		inventory_only=true
+		var db:=preload("res://scripts/item_database.gd").new()
+		preload("res://scripts/character_catalog.gd").enable_candidate(db)
+		inventory_rules=preload("res://scripts/item_inventory.gd").new(db)
+		task_service=preload("res://scripts/item_service.gd").new()
+		task_service.database=db;task_service.inventory=inventory_rules
+		task_service.craft_book=preload("res://scripts/craft_book.gd").new(db)
+		task_service.world={"persistent_world":false}
+		add_child(task_service)
+		task_service.set_process(false);task_service.merchant.set_process(false)
+		write_result({"ok":true,"ready":true,"ipc_nonce":config.ipc_nonce});startup=false;return
 	world=preload("res://scripts/network_game_host_world.gd").new()
 	world.bootstrap=config
 	get_tree().root.add_child(world)
@@ -79,6 +94,8 @@ func write_result(value: Dictionary) -> void:
 	var header:=PackedByteArray();header.resize(4);header.encode_u32(0,body.size())
 	if channel.put_data(header+body)!=OK:get_tree().quit(2)
 func execute(request: Dictionary) -> void:
+	if inventory_only:
+		execute_inventory(request);busy=false;return
 	var timing: Array=[Time.get_ticks_usec()]
 	Engine.set_meta("network_rules_events",[])
 	var service=world.item_service
@@ -115,12 +132,18 @@ func execute(request: Dictionary) -> void:
 		service.inventory.changed.emit()
 	world.stream.update_target(world.player.position)
 	var personal: Dictionary=state.get("combat_personal",{})
-	var needs_scene: bool=request.get("operation","snapshot")!="snapshot" or personal.get("phase","alive")!="alive" or not personal.get("attack",{}).is_empty() or state.get("network_fishing",{}).get("state","idle")!="idle"
+	var needs_scene: bool=geometry_changed or request.get("operation","snapshot")!="snapshot" or personal.get("phase","alive")!="alive" or not personal.get("attack",{}).is_empty() or state.get("network_fishing",{}).get("state","idle")!="idle"
 	# Moving ordinary bag slots only validates inventory; it performs no spatial
 	# query. Keep scene/physics waits for equipment, use, and world interactions.
 	var command_args: Array=request.get("args",[])
 	if request.get("operation")=="inventory" and command_args.size()==3 and command_args[0]=="move_slot" and command_args[1] is float and command_args[2] is float and command_args[1]>=0 and command_args[1]<40 and command_args[2]>=0 and command_args[2]<40 and personal.get("phase","alive")=="alive" and personal.get("attack",{}).is_empty() and state.get("network_fishing",{}).get("state","idle")=="idle":
 		needs_scene=false
+	# Inventory/job-only commands need no viewport or physics query.
+	var local_command: bool=request.get("operation") in ["organize","craft_cancel","guide"]
+	if request.get("operation")=="inventory" and not command_args.is_empty():
+		local_command=command_args[0] in ["split_slot","destroy_slot"]
+	if request.get("operation")=="craft" and service.craft_station_id.is_empty() and str(request.get("station","")).is_empty():local_command=true
+	if local_command and not geometry_changed and personal.get("phase","alive")=="alive" and personal.get("attack",{}).is_empty() and state.get("network_fishing",{}).get("state","idle")=="idle" and service.craft_station_id.is_empty():needs_scene=false
 	timing.append(Time.get_ticks_usec())
 	# Restore may replace a facility at the same ID. Let deferred deletion and
 	# physics registration finish before a ray can hit the superseded collider.
@@ -152,7 +175,9 @@ func execute(request: Dictionary) -> void:
 		world.environment_view.advance_gameplay(elapsed,bool(request.get("shared",true)))
 		if bool(request.get("shared",true)):service.chapter.mine.advance(elapsed)
 		service.combat.advance(elapsed,bool(request.get("shared",true)))
-		service.advance_craft(elapsed)
+		var craft_skip: float=minf(elapsed,float(service.craft_job.get("tick_skip",0.0)))
+		if not service.craft_job.is_empty():service.craft_job.tick_skip=maxf(0.0,float(service.craft_job.get("tick_skip",0.0))-craft_skip)
+		service.advance_craft(elapsed-craft_skip)
 		fishing.advance(elapsed)
 		world.player.set_physics_process(false)
 		if bool(request.get("shared",true)):service.animals.ensure_population()
@@ -166,6 +191,7 @@ func execute(request: Dictionary) -> void:
 	var message := ""
 	timing.append(Time.get_ticks_usec())
 	var operation:=str(request.get("operation","snapshot"))
+	var craft_cancelled: bool=operation=="craft_cancel" and not service.craft_job.is_empty()
 	var args: Array=integral_arguments(request.get("args",[]))
 	if service.combat.personal.phase!="alive" and operation!="snapshot":
 		write_result({"ok":false,"error":"正在返回传送门，请稍候","snapshot":service.snapshot()});busy=false;return
@@ -261,6 +287,7 @@ func execute(request: Dictionary) -> void:
 	world.player.set_physics_process(false)
 	service.chapter.advance()
 	var snapshot: Dictionary=service.snapshot().duplicate(true)
+	var rules_timing: Dictionary={"restore_ms":(timing[1]-timing[0])/1000.0,"scene_wait_ms":(timing[2]-timing[1])/1000.0,"advance_ms":(timing[3]-timing[2])/1000.0,"operation_snapshot_ms":(Time.get_ticks_usec()-timing[3])/1000.0}
 	if OS.get_environment("WINDREST_PROFILE_NETWORK")=="1":print("RULES_US ",request.get("operation")," restore=",timing[1]-timing[0]," wait=",timing[2]-timing[1]," advance=",timing[3]-timing[2]," snapshot=",Time.get_ticks_usec()-timing[3])
 	snapshot.network_craft_job=service.craft_job.duplicate(true)
 	snapshot.network_craft_station=service.craft_station_id
@@ -268,7 +295,7 @@ func execute(request: Dictionary) -> void:
 	snapshot.network_lamp_on=is_instance_valid(service.lantern) and service.lantern.visible
 	snapshot.network_fishing=fishing.network_snapshot()
 	snapshot.network_light_clock=service.merchant.state.get("last_time",0.0)
-	write_result({"ok":message.is_empty(),"error":message,"snapshot":snapshot,"events":Engine.get_meta("network_rules_events"),"combat_damage":service.combat.damage_events})
+	write_result({"ok":message.is_empty(),"error":message,"snapshot":snapshot,"events":Engine.get_meta("network_rules_events"),"combat_damage":service.combat.damage_events,"craft_cancelled":craft_cancelled,"rules_timing":rules_timing})
 	busy=false
 func point(value: Dictionary) -> Vector2:
 	return Vector2(float(value.x),float(value.y))
@@ -290,6 +317,46 @@ func freeze_actors() -> void:
 	# A rules request is deterministic: simulation only advances explicitly.
 	for child in world.object_root.get_children():
 		if child.has_meta("animal_id"):child.set_physics_process(false)
+
+func execute_inventory(request: Dictionary) -> void:
+	# No world scene or shared simulation; original personal rules only.
+	var state: Dictionary=integral_arguments(request.get("snapshot",{}))
+	var inv=inventory_rules
+	var ok: bool=state.has("slots") and inv.restore(state.slots) and inv.restore_equipment(state.equipment)
+	if ok:inv.restore_hotbar_links(state.get("hotbar_equipment",{}))
+	for index in request.get("expected",{}):
+		if not preload("res://scripts/food_freshness.gd").matches(inv.get_slot(int(index)),request.expected[index]):ok=false
+	var args: Array=integral_arguments(request.get("args",[]))
+	if ok and request.operation in ["craft","craft_cancel","station","guide"]:
+		if not task_service.body.restore(state.get("body",{})):
+			write_result({"ok":false,"error":"身体状态无效"});return
+		task_service.combat.personal=state.combat_personal.duplicate(true)
+		task_service.craft_job=state.get("network_craft_job",{}).duplicate(true)
+		task_service.craft_station_id=str(state.get("network_craft_station",""))
+		task_service.guide_stage=int(state.get("guide_stage",2))
+		if not task_service.craft_job.is_empty():task_service.craft_job_serial=maxi(task_service.craft_job_serial,int(task_service.craft_job.serial))
+		var error: String=""
+		var craft_cancelled: bool=request.operation=="craft_cancel" and not task_service.craft_job.is_empty()
+		match request.operation:
+			"craft":
+				var row: Dictionary=task_service.craft_book.recipe(str(args[0]))
+				if not row.is_empty() and (not row.default_unlocked or not row.conditions.is_empty()):
+					write_result({"ok":true,"fallback":true});return
+				error=task_service.start_craft(str(args[0]),int(args[1]))
+			"craft_cancel":task_service.cancel_craft()
+			"station":task_service.craft_station_id=""
+			"guide":
+				if not task_service.advance_guide(int(args[0])):error="指引进度无效"
+		write_result({"ok":error.is_empty(),"error":error,"slots":inv.slots,"hotbar_equipment":inv.hotbar_equipment,"network_craft_job":task_service.craft_job,"network_craft_station":task_service.craft_station_id,"guide_stage":task_service.guide_stage,"craft_cancelled":craft_cancelled});return
+	if ok and request.operation=="organize":inv.slots=inv.organized_bag_slots()
+	elif ok and request.operation=="inventory":
+		var method: String=str(args.pop_front()) if not args.is_empty() else ""
+		if method=="move_slot" and args.size()==2:ok=inv.move_slot(int(args[0]),int(args[1]))
+		elif method=="split_slot" and args.size()==2:ok=inv.split_slot(int(args[0]),int(args[1]))>=0
+		elif method=="destroy_slot" and args.size()==1:ok=inv.destroy_slot(int(args[0]))
+		else:ok=false
+	else:ok=false
+	write_result({"ok":ok,"error":"物品操作失败" if not ok else "","slots":inv.slots,"hotbar_equipment":inv.hotbar_equipment})
 
 func movement(request: Dictionary) -> void:
 	var character: Dictionary=request.character

@@ -329,8 +329,18 @@ func refresh_rows(rows: Array) -> void:
 		var node: Node2D=visuals[id]
 		var affected := false
 		for row in rows:
-			if node.position.distance_to(Vector2(row.x,row.y))<=160:
-				affected=true;break
+			var at:=Vector2(row.x,row.y)
+			if node.position.distance_to(at)>160:continue
+			if service.world.get_meta("network_game",false) or service.world.get_meta("network_rules_host",false):
+				# Unchanged nearby furniture/colliders need no reconstruction.
+				# Floors read neighbors when drawing; only edge junctions need
+				# their neighboring post/leaf structure rebuilt.
+				if states.has(id):
+					var current: Dictionary=states[id]
+					var own_change: bool=node.position.is_equal_approx(at) and current.kind==row.kind and current.layer==row.layer
+					if not own_change and not (current.layer=="edge" and row.layer=="edge"):
+						node.queue_redraw();continue
+			affected=true;break
 		if not affected:continue
 		coords[service.world.stream.chunk_at(node.position)]=true
 		# Snapshot replacements must stop blocking rays before deferred deletion.

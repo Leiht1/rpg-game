@@ -95,6 +95,18 @@ class Gameplay:
         self.defaults = {}
         self.combat_characters = []
         self.start_lock = threading.Lock()
+        self.inventory_hosts = {}
+        self.inventory_locks = {}
+        self.request_profile = threading.local()
+
+    def inventory_host(self, character_id):
+        with self.start_lock:
+            host = self.inventory_hosts.get(character_id)
+            if host is None or host.process is None or host.process.poll() is not None:
+                if host is not None:host.close()
+                host = GameHost(self.config, {"id":character_id,"inventory_only":True})
+                self.inventory_hosts[character_id] = host
+            return host, self.inventory_locks.setdefault(character_id, threading.Lock())
 
     def prepare(self, world):
         """Start a rules process without holding the service transaction lock.
@@ -125,6 +137,9 @@ class Gameplay:
             return host
 
     def close(self):
+        for host in self.inventory_hosts.values():host.close()
+        self.inventory_hosts.clear()
+        self.inventory_locks.clear()
         for host in self.hosts.values():
             host.close()
         self.hosts.clear()
@@ -185,6 +200,8 @@ class Gameplay:
                               shared=shared, player_id=character.get("id", "isolated"), station=station, expected=expected,
                               combat_peers=[{"id":p["id"],"x":p["x"],"y":p["y"],"phase":p.get("gameplay",{}).get("combat_personal",{}).get("phase","alive")}
                                             for p in self.combat_characters if p["id"]!=character["id"] and p["world_id"]==world["id"]], combat_damage=combat_damage)
+        if hasattr(self.request_profile,'calls'):
+            self.request_profile.calls.append({'operation':operation,'ipc':result.get('ipc_metrics',{}),'rules':result.get('rules_timing',{})})
         if "snapshot" not in result:
             raise RuntimeError(result.get("error", "Invalid gameplay rules response"))
         if not result["ok"]:

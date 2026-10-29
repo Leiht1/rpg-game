@@ -407,9 +407,16 @@ func advance_guide(stage: int) -> bool:
 	guide_stage=before
 	return false
 
+var validated_network_sections: Dictionary={}
+var validated_build_instances: Array=[]
+func unchanged_network_section(key: String, value: Dictionary) -> bool:
+	return (world.get_meta("network_game",false) or world.get_meta("network_rules_host",false)) and validated_network_sections.has(key) and same_network_value(validated_network_sections[key],value.get(key))
+
 func load_state(source_path: String = "", migrate: bool = false, authoritative: Dictionary = {}) -> void:
 	var restore_trace: bool=OS.get_environment("WINDREST_PROFILE_NETWORK")=="1"
 	var restore_started: int=Time.get_ticks_usec()
+	var restore_parts: Dictionary={}
+	if Engine.has_meta("sync_trace"):Engine.get_meta("sync_trace")["restore_parts"]=restore_parts
 	var online: bool=world.get_meta("network_game",false) or world.get_meta("network_rules_host",false)
 	var previous_inventory: Array=[inventory.slots.duplicate(true),inventory.equipment.duplicate(true),inventory.hotbar_equipment.duplicate(true),inventory.quarantined_equipment.duplicate(true)] if online else []
 	var previous_buildings: Dictionary=builds.states.duplicate(true) if online else {}
@@ -453,14 +460,22 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 		if preload("res://scripts/food_freshness.gd").cooked(database,entry.item_id):
 			if not entry.has("instance"):entry.instance={"item_id":entry.item_id,"count":entry.count}
 			if not entry.instance is Dictionary or entry.instance.get("item_id")!=entry.item_id or entry.instance.get("count")!=entry.count or not preload("res://scripts/food_freshness.gd").normalize(database,entry.instance):writable=false;return
-	if value.has("exploration_chapter") and not chapter.valid(value.exploration_chapter):writable=false;return
-	if value.has("merchant") and not merchant.valid(value.merchant):writable=false;return
-	if value.has("fishing") and not fishing_population.valid(value.fishing): writable=false;return
-	if value.has("animals") and not animals.valid(value.animals): writable=false;return
-	if value.has("campfires") and not camps.validate(value.campfires): writable=false;return
-	if value.has("body_environment") and not valid_body_environment(value.body_environment): writable=false;return
+	if value.has("exploration_chapter") and not unchanged_network_section("exploration_chapter",value) and not chapter.valid(value.exploration_chapter):writable=false;return
+	if Engine.has_meta("sync_trace"):restore_parts["validate_exploration_chapter"]=(Time.get_ticks_usec()-restore_started)/1000.0
+	if value.has("merchant") and not unchanged_network_section("merchant",value) and not merchant.valid(value.merchant):writable=false;return
+	if Engine.has_meta("sync_trace"):restore_parts["validate_merchant"]=(Time.get_ticks_usec()-restore_started)/1000.0
+	if value.has("fishing") and not unchanged_network_section("fishing",value) and not fishing_population.valid(value.fishing): writable=false;return
+	if Engine.has_meta("sync_trace"):restore_parts["validate_fishing"]=(Time.get_ticks_usec()-restore_started)/1000.0
+	if value.has("animals") and not unchanged_network_section("animals",value) and not animals.valid(value.animals): writable=false;return
+	if Engine.has_meta("sync_trace"):restore_parts["validate_animals"]=(Time.get_ticks_usec()-restore_started)/1000.0
+	if value.has("campfires") and not unchanged_network_section("campfires",value) and not camps.validate(value.campfires): writable=false;return
+	if Engine.has_meta("sync_trace"):restore_parts["validate_campfires"]=(Time.get_ticks_usec()-restore_started)/1000.0
+	if value.has("body_environment") and not unchanged_network_section("body_environment",value) and not valid_body_environment(value.body_environment): writable=false;return
+	if Engine.has_meta("sync_trace"):restore_parts["validate_body_environment"]=(Time.get_ticks_usec()-restore_started)/1000.0
 	if value.has("combat_world") and not combat.valid(value.combat_world,value.get("combat_personal",combat.personal)):writable=false;return
+	if Engine.has_meta("sync_trace"):restore_parts["validate_combat_world"]=(Time.get_ticks_usec()-restore_started)/1000.0
 	if restore_trace:print("RESTORE_STAGE validation_shared ",Time.get_ticks_usec()-restore_started)
+	if Engine.has_meta("sync_trace"):restore_parts["validation_shared"]=(Time.get_ticks_usec()-restore_started)/1000.0
 	var staged_body := preload("res://scripts/body_state.gd").new()
 	if value.has("body") and not staged_body.restore(value.body): writable=false; return
 	var fuel = value.get("lantern_remaining",1800.0)
@@ -504,9 +519,23 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 				var progress = plot.get("growth_minutes")
 				if not (progress is float or progress is int) or not is_finite(float(progress)) or progress<0 or progress>previous_minutes[plot.crop]: writable=false;return
 				plot.growth_minutes=float(progress)/previous_minutes[plot.crop]*float(planting.rules.crops[plot.crop].minutes)
-	if value.has("buildings") and not builds.validate(value.buildings,seen_instances): writable=false;return
+	var next_build_instances: Array=[]
+	if value.has("buildings"):
+		if unchanged_network_section("buildings",value):
+			# The geometry/storage was validated already, but instance uniqueness
+			# must still be checked against this response's inventory and drops.
+			for instance_id in validated_build_instances:
+				if seen_instances.has(instance_id):writable=false;return
+				seen_instances[instance_id]=true
+			next_build_instances=validated_build_instances
+		else:
+			var before_build_instances: Dictionary=seen_instances.duplicate()
+			if not builds.validate(value.buildings,seen_instances):writable=false;return
+			for instance_id in seen_instances:
+				if not before_build_instances.has(instance_id):next_build_instances.append(instance_id)
 	if not sleep.valid_pair(staged_body,value.get("buildings",{"objects":{}}).objects): writable=false;return
 	if restore_trace:print("RESTORE_STAGE validation_all ",Time.get_ticks_usec()-restore_started)
+	if Engine.has_meta("sync_trace"):restore_parts["validation_all"]=(Time.get_ticks_usec()-restore_started)/1000.0
 	if value.has("world_exploration") and value.world_exploration.bits!=Marshalls.raw_to_base64(exploration.bits): exploration.restore(value.world_exploration)
 	if value.has("merchant"):merchant.restore(value.merchant)
 	if value.has("fishing"):
@@ -529,6 +558,7 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 			if not camps.states.has(id):camps.visuals[id].queue_free();camps.visuals.erase(id)
 	for coord in world.stream.loaded: camps.install(coord)
 	if restore_trace:print("RESTORE_STAGE restore_entities ",Time.get_ticks_usec()-restore_started)
+	if Engine.has_meta("sync_trace"):restore_parts["restore_entities"]=(Time.get_ticks_usec()-restore_started)/1000.0
 	chapter.state=value.get("exploration_chapter",chapter.initial()).duplicate(true)
 	combat.state=value.get("combat_world",combat.initial_world()).duplicate(true)
 	combat.personal=value.get("combat_personal",combat.initial_personal()).duplicate(true)
@@ -554,7 +584,9 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 	inventory.slots=staged.slots
 	inventory.equipment=staged.equipment
 	inventory.quarantined_equipment=staged.quarantined_equipment
+	var inventory_ui_started:=Time.get_ticks_usec()
 	if not online or previous_inventory!=[inventory.slots,inventory.equipment,inventory.hotbar_equipment,inventory.quarantined_equipment]:inventory.changed.emit()
+	if Engine.has_meta("sync_trace"):restore_parts["inventory_ui_ms"]=(Time.get_ticks_usec()-inventory_ui_started)/1000.0
 	if value.get("ore_nodes",{}) is Dictionary: ore_nodes=value.get("ore_nodes",{})
 	inventory.selected = clampi(int(value.get("selected",0)),0,7)
 	consumed = value.consumed
@@ -569,6 +601,7 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 		preload("res://scripts/harvest_distribution.gd").preserve_worked(self,value.resource_version==RESOURCE_VERSION)
 		dirty=true
 	if restore_trace:print("RESTORE_STAGE restore_personal ",Time.get_ticks_usec()-restore_started)
+	if Engine.has_meta("sync_trace"):restore_parts["restore_personal"]=(Time.get_ticks_usec()-restore_started)/1000.0
 	var previous_pins:=ore_nodes.size()
 	preload("res://scripts/harvest_distribution.gd").preserve_current_minerals(self)
 	if ore_nodes.size()!=previous_pins:dirty=true
@@ -576,11 +609,31 @@ func load_state(source_path: String = "", migrate: bool = false, authoritative: 
 		var changed_rows: Array=[]
 		for id in previous_buildings:
 			if not builds.states.has(id):changed_rows.append(previous_buildings[id])
+		var animated_gates: Array=[]
 		for id in builds.states:
-			if not same_network_value(previous_buildings.get(id,{}),builds.states[id]):changed_rows.append(builds.states[id])
+			var previous: Dictionary=previous_buildings.get(id,{})
+			var current: Dictionary=builds.states[id]
+			if same_network_value(previous,current):continue
+			# An authoritative door toggle is a motion, not a new building.
+			# Preserve the client node so the original 0.25s tween can run.
+			var gate_change: bool=world.get_meta("network_game",false) and builds.visuals.has(id) and builds.definitions[current.kind].get("door",false) and not previous.is_empty()
+			if gate_change:
+				var old_shape:=previous.duplicate(true)
+				var new_shape:=current.duplicate(true)
+				for key in ["open","swing","hinge_end"]:old_shape.erase(key);new_shape.erase(key)
+				gate_change=same_network_value(old_shape,new_shape)
+			if gate_change:animated_gates.append(id)
+			else:changed_rows.append(current)
 		builds.refresh_rows(changed_rows)
+		for id in animated_gates:
+			if builds.visuals.has(id):builds.visuals[id].update_gate()
 	else:builds.refresh_all()
 	if restore_trace:print("RESTORE_STAGE refresh_complete ",Time.get_ticks_usec()-restore_started)
+	if Engine.has_meta("sync_trace"):restore_parts["refresh_complete"]=(Time.get_ticks_usec()-restore_started)/1000.0
+	if online:
+		validated_build_instances=next_build_instances.duplicate()
+		for section in ["exploration_chapter","merchant","fishing","animals","campfires","body_environment","buildings","slots","equipment","loose"]:
+			if value.has(section):validated_network_sections[section]=value[section].duplicate(true) if value[section] is Dictionary or value[section] is Array else value[section]
 	if migrate:
 		# Keep stable candidate IDs and consumed edits, preventing collected resources from respawning.
 		dirty = true
@@ -1030,6 +1083,7 @@ func valid_body_environment(value: Variant) -> bool:
 
 # JSON decodes whole numbers as floats; unchanged facilities must retain their nodes.
 static func same_network_value(a: Variant, b: Variant) -> bool:
+	if a==b:return true
 	if (a is int or a is float) and (b is int or b is float):return float(a)==float(b)
 	if a is Dictionary and b is Dictionary:
 		if a.size()!=b.size():return false

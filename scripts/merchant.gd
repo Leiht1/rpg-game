@@ -12,6 +12,7 @@ var ui: Control
 var lights := preload("res://scripts/solar_flashlight.gd").new()
 var interacting := false
 var busy := false
+var checked_position := Vector2.INF
 
 func configure(owner_service: Node) -> void:
 	service=owner_service;enabled=true
@@ -53,13 +54,26 @@ func restore(value: Dictionary) -> void:
 func ready_world() -> void:
 	if not enabled or not service.writable:return
 	if state.is_empty():migrate()
-	else:sync_actor()
+	else:
+		repair_position();sync_actor()
 	ui=preload("res://scripts/merchant_ui.gd").new();ui.merchant=self
 	service.world.ui.add_child(ui);ui.setup()
 
 func safe_point(point: Vector2) -> bool:
 	var props: Array[Dictionary]=service.nearby_props(point)
 	if not service.ground_clear(point,28,props) or not service.has_approach(point,props):return false
+	# Query deterministic resources even when their chunk has never been streamed.
+	var chunk := Vector2i((point/service.world.Gen.CHUNK_PX).floor())
+	for y in range(chunk.y-1,chunk.y+2):
+		for x in range(chunk.x-1,chunk.x+2):
+			var coord := Vector2i(x,y)
+			var packet: Dictionary=service.chunk_distribution(coord)
+			if not packet.has("harvest"):packet["harvest"]=preload("res://scripts/harvest_distribution.gd").build(service,coord)
+			for resource in packet.harvest:
+				if not service.consumed.has(resource.id) and point.distance_to(Vector2(resource.x,resource.y))<150:return false
+	for id in service.ore_nodes:
+		var resource: Dictionary=service.ore_nodes[id]
+		if not service.consumed.has(id) and point.distance_to(Vector2(resource.x,resource.y))<150:return false
 	# Reserve a clear 80-unit approach halo, including unloaded persistent buildings.
 	for row in service.builds.states.values():
 		var center := Vector2(row.x,row.y)
@@ -92,6 +106,22 @@ func migrate() -> bool:
 	if not service.save_state():state=before;rng.state=previous_rng;return false
 	sync_actor();return true
 
+func repair_position() -> void:
+	if state.is_empty():return
+	var current := Vector2(state.x,state.y)
+	if current==checked_position:return
+	checked_position=current
+	if safe_point(current):return
+	var previous := state.duplicate(true)
+	var previous_rng := rng.state
+	var point := choose_point()
+	if point==Vector2.INF:return
+	state.x=point.x;state.y=point.y;state.rng=str(rng.state)
+	service.dirty=true
+	if not service.save_state():state=previous;rng.state=previous_rng;checked_position=Vector2.INF;return
+	checked_position=point
+	sync_actor()
+
 func sync_actor() -> void:
 	if state.is_empty():return
 	if not is_instance_valid(actor):
@@ -100,6 +130,7 @@ func sync_actor() -> void:
 
 func advance(minutes: float) -> void:
 	if not enabled or not service.writable or state.is_empty() or minutes<=0:return
+	repair_position()
 	lights.advance(minutes)
 	state.remaining=maxf(0,float(state.remaining)-minutes);service.dirty=true
 	if state.remaining<=0 and not interacting:migrate()

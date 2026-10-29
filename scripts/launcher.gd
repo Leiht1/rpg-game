@@ -169,24 +169,43 @@ func lobby()->void:
 	var response:=await send("worlds",{})
 	if not response.get("ok",false):button(box,"返回",menu);return
 	if Network.profile.get("role","")=="admin":button(box,"世界管理",world_management)
-	if not Network.profile.world_id.is_empty():
-		button(box,"继续所属世界",resume_online)
-		button(box,"永久退出当前世界",confirm_leave)
-	else:
-		input(box,"name","新世界名称")
-		button(box,"创建世界",func():
-			var name_text:String=fields.name.text.strip_edges()
-			if name_text.is_empty() or name_text.length()>20:
-				status.text="请输入1至20个字的世界名称";return
-			var result:=await send("create_world",{"name":fields.name.text})
-			if result.get("ok",false):resume_online())
-		var scroll:=ScrollContainer.new();scroll.custom_minimum_size.y=200;box.add_child(scroll)
-		var list:=VBoxContainer.new();list.size_flags_horizontal=Control.SIZE_EXPAND_FILL;scroll.add_child(list)
-		for w in response.worlds:
-			button(list,"%s  · %d 人在线"%[w.name,int(w.online)],func():
-				var result:=await send("join_world",{"world_id":w.id})
-				if result.get("ok",false):resume_online())
+	var scroll:=ScrollContainer.new();scroll.custom_minimum_size.y=200;box.add_child(scroll)
+	var list:=VBoxContainer.new();list.size_flags_horizontal=Control.SIZE_EXPAND_FILL;scroll.add_child(list)
+	for w in response.worlds:
+		button(list,"%s  · %d 人在线"%[w.name,int(w.online)],func():world_details(w))
+	if response.worlds.is_empty():status.text="暂无世界"
+	if not Network.profile.world_id.is_empty():button(box,"继续原有世界",resume_online)
+	input(box,"name","新世界名称")
+	button(box,"创建世界",func():
+		var name_text:String=fields.name.text.strip_edges()
+		if name_text.is_empty() or name_text.length()>20:
+			status.text="请输入1至20个字的世界名称";return
+		request_world_change("create_world",{"name":name_text}))
 	button(box,"返回主菜单",menu)
+func world_details(world:Dictionary)->void:
+	var box:=panel(str(world.name),620)
+	var info:=Label.new();info.text="%d 人在线"%int(world.online)
+	if world.has("seed"):info.text+=" · 种子："+str(world.seed)
+	if world.has("map_cells"):info.text+=" · 地图："+str(world.map_cells)
+	box.add_child(info)
+	button(box,"进入世界",func():
+		if str(world.id)==str(Network.profile.world_id):resume_online()
+		else:request_world_change("join_world",{"world_id":world.id}))
+	button(box,"返回大厅",lobby)
+func request_world_change(operation:String,data:Dictionary)->void:
+	if Network.profile.world_id.is_empty():
+		await enter_requested_world(operation,data);return
+	var current:String=str(Network.profile.world_id)
+	var box:=panel("切换世界",540)
+	status.text="进入新的世界会删除当前所在世界的进度，是否继续？" if operation=="join_world" else "创建新的世界会删除当前所在世界的进度，是否继续？"
+	button(box,"继续",func():
+		var result:=await send("permanent_leave",{"confirm":current})
+		if result.get("ok",false):await enter_requested_world(operation,data))
+	button(box,"取消",lobby)
+func enter_requested_world(operation:String,data:Dictionary)->void:
+	var result:=await send(operation,data)
+	if result.get("ok",false):resume_online()
+	else:button(content,"返回大厅",lobby)
 func confirm_leave()->void:
 	var box:=panel("永久退出世界",450)
 	status.text="角色将被删除，随身物品留作遗产。此操作无法撤销。"

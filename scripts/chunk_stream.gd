@@ -20,6 +20,8 @@ var loaded := {}
 var tasks := {}
 var ready_data: Array[Dictionary] = []
 var requested: Array[Vector2i] = []
+var rules_packet_order: Array[Vector2i]=[]
+var rules_cache_metrics: Dictionary={"hits":0,"misses":0,"evictions":0}
 var mutex := Mutex.new()
 var textures: Array[Texture2D] = []
 var scenery_textures := {}
@@ -42,6 +44,7 @@ var drops: Array[Node2D]=[]
 var collected_wood := 0
 var items: Node
 var rules_only := false
+var rules_packets: Dictionary = {}
 
 func configure(gen: WildGenerator, sort_root: Node2D) -> void:
 	rules_only=get_parent().get_meta("network_rules_host",false)
@@ -109,6 +112,16 @@ func _process(_delta: float) -> void:
 			install_chunk(packet)
 
 func _generate(coord: Vector2i) -> void:
+	# Transaction rollback may reload the same chunk. Its immutable natural
+	# distribution is independent of consumed/harvested state, applied on install.
+	if rules_only:
+		mutex.lock()
+		if rules_packets.has(coord):
+			rules_packet_order.erase(coord);rules_packet_order.append(coord)
+			rules_cache_metrics.hits+=1
+			ready_data.append(rules_packets[coord].duplicate(true));mutex.unlock();return
+		rules_cache_metrics.misses+=1
+		mutex.unlock()
 	# Each worker owns its noises; no RenderingServer or scene nodes here.
 	var local_gen := Gen.new(generator.world_seed,generator.map_cells,generator.plan_snapshot())
 	var packet: Dictionary
@@ -126,6 +139,11 @@ func _generate(coord: Vector2i) -> void:
 	if items:
 		packet["resource_distribution"]=items.build_distribution(local_gen,items.rules,items.reachable,coord)
 	mutex.lock()
+	if rules_only:
+		rules_packets[coord]=packet.duplicate(true)
+		rules_packet_order.erase(coord);rules_packet_order.append(coord)
+		while rules_packets.size()>64:
+			rules_packets.erase(rules_packet_order.pop_front());rules_cache_metrics.evictions+=1
 	ready_data.append(packet)
 	mutex.unlock()
 

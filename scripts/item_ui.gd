@@ -520,7 +520,6 @@ func toggle_craft(station_id: String="") -> void:
 	if next:
 		world.player.cancel_action()
 		craft_panel.set_mode(false)
-		craft_panel.rebuild_context()
 	update_input_block()
 
 func toggle_build() -> void:

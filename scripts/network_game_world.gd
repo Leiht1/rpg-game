@@ -1,5 +1,10 @@
 extends "res://scripts/world.gd"
 signal returned
+signal authority_received(request_id: String)
+signal state_applied
+var pending_authority: Array=[]
+var applying_scheduled:=false
+var applying_craft_cancelled:=false
 var session_data: Dictionary={}
 var routes: Dictionary={}
 var commands: Array=[]
@@ -9,6 +14,10 @@ var typing:=false
 var applying:=false
 var moving_request:=false
 var requesting:=false
+var snapshot_requesting:=false
+var command_generation:=0
+var craft_visual_serial:=-1
+var craft_visual_elapsed:=0.0
 var interaction_fence:=false
 var polling:=false
 var last_error:=""
@@ -51,6 +60,9 @@ func enqueue(operation: String, args: Array) -> void:
 	var command:={"request_id":Crypto.new().generate_random_bytes(16).hex_encode(),"operation":operation,"args":args,"expected":{}}
 	if operation=="interact":
 		command.input_boundary=player.input_id
+		if int(session_data.get("position_revision",0))==1:
+			command.position_version=player.input_id
+			command.input_movement={"mine_serial":int(item_service.chapter.mine.travel.serial),"inputs":player.pending_inputs.duplicate(true),"dx":0,"dy":0}
 		# Freeze this input ID: later frames must not merge movement into it.
 		player.sent_input_id=maxi(player.sent_input_id,player.input_id)
 	var indices: Array=[]
@@ -59,6 +71,7 @@ func enqueue(operation: String, args: Array) -> void:
 		if args[0] in ["move_slot","equip_hotbar"]:indices.append(int(args[2]))
 	elif operation in ["discard","lamp"] and int(args[0])>=0:indices.append(int(args[0]))
 	for index in indices:command.expected[str(index)]=item_service.inventory.get_slot(index).duplicate(true)
+	command_generation+=1
 	commands.append(command)
 	if operation=="interact":
 		for target in object_root.get_children():
@@ -79,6 +92,7 @@ func _process(delta: float) -> void:
 	if move_clock>=.08 and not moving_request:move_clock=0;move_server()
 	var sync_interval:=.12 if not item_service.combat.personal.attack.is_empty() else .4
 	if sync_clock>=sync_interval and not requesting:sync_clock=0;sync_server()
+	render_craft_progress(delta)
 	item_service.sleep.render()
 func move_server() -> void:
 	if moving_request or interaction_fence or stopping:return
@@ -89,7 +103,7 @@ func move_server() -> void:
 	if limit_id>=0 and player.acknowledged_input_id>=limit_id:return
 	moving_request=true;sequence+=1
 	var region_serial: int=int(item_service.chapter.mine.travel.serial)
-	var response: Dictionary=await Network.call_api("move",{"mine_serial":region_serial,"seq":sequence,"dx":0,"dy":0,"inputs":player.movement_batch(limit_id),"pose":{"action":player.action,"clock":player.action_clock,"facing":player.facing}})
+	var response: Dictionary=await Network.call_api("move",{"position_revision":int(session_data.get("position_revision",0)),"mine_serial":region_serial,"seq":sequence,"dx":0,"dy":0,"inputs":player.movement_batch(limit_id),"pose":{"action":player.action,"clock":player.action_clock,"facing":player.facing}})
 	moving_request=false
 	if stopping or region_serial!=int(item_service.chapter.mine.travel.serial):return
 	if response.get("ok",false):
@@ -98,27 +112,51 @@ func move_server() -> void:
 	else:item_ui.show_notice(response.get("error","移动同步失败"))
 func sync_server() -> void:
 	if requesting or stopping:return
+	if commands.is_empty():
+		if not snapshot_requesting:refresh_snapshot()
+		return
 	requesting=true
 	var command: Dictionary=commands[0].duplicate(true) if not commands.is_empty() else {}
 	if command.has("input_boundary"):
 		# Confirm only movement up to the action, then keep later movement local
 		# until the authority has checked the action at that ordered position.
-		while moving_request or player.acknowledged_input_id<int(command.input_boundary):
-			if stopping:requesting=false;return
-			if not moving_request:move_server()
-			await get_tree().process_frame
-		interaction_fence=true
+		if command.has("position_version"):
+			# Send immediately, including the immutable input prefix already in flight.
+			# The authority deduplicates/replays it against its own position version.
+			sequence+=1;command.input_movement.seq=sequence
+		elif int(session_data.get("command_movement_revision",0))==1:
+			# Stop new movement requests, drain the already submitted prefix, then
+			# submit the remaining ordered inputs with the interaction in one trip.
+			interaction_fence=true
+			while moving_request:
+				if stopping:requesting=false;return
+				await get_tree().process_frame
+			sequence+=1
+			command.input_movement={"seq":sequence,"mine_serial":int(item_service.chapter.mine.travel.serial),"inputs":player.movement_batch(int(command.input_boundary)),"dx":0,"dy":0}
+		else:
+			while moving_request or player.acknowledged_input_id<int(command.input_boundary):
+				if stopping:requesting=false;return
+				if not moving_request:move_server()
+				await get_tree().process_frame
+			interaction_fence=true
 	command.selected=item_service.inventory.selected
 	command.station=item_service.craft_station_id
-	var response: Dictionary=await Network.call_api("game_snapshot" if commands.is_empty() else "game_command",command)
+	var response: Dictionary=await Network.call_api("game_command",command)
 	interaction_fence=false
 	if stopping:requesting=false;return
+	if response.get("ok",false) and response.has("command_movement"):
+		player.acknowledge(response.command_movement.character,int(response.command_movement.input_ack))
+	if response.get("ok",false) and response.get("command_pending",false):
+		await get_tree().create_timer(clampf(float(response.get("retry_after_ms",8))/1000.0,.001,.05)).timeout
+		requesting=false;sync_server.call_deferred();return
+	if response.get("ok",false) and response.get("movement_pending",false):
+		requesting=false;sync_server.call_deferred();return
 	if response.get("ok",false):
+		authority_received.emit(str(command.get("request_id","")))
 		var preview_chop: bool=interaction_preview.pending.get(str(command.get("request_id","")),{}).get("action","")=="chop"
-		if command.has("request_id"):
-			commands.pop_front()
-			interaction_preview.finish(str(command.request_id),true)
-		apply_snapshot(response.snapshot)
+		await stage_authority(response.snapshot,response.get("transaction_lane","")=="personal",str(command.get("request_id","")),bool(response.get("craft_cancelled",false)))
+		if not commands.is_empty() and commands[0].request_id==command.get("request_id",""):commands.pop_front()
+		interaction_preview.finish(str(command.get("request_id","")),true)
 		if command.get("operation")=="combat_attack":item_service.combat.confirm_attack_preview(true)
 		for event in response.get("events",[]):
 			match event.kind:
@@ -141,6 +179,54 @@ func sync_server() -> void:
 	requesting=false
 	if not commands.is_empty():sync_server.call_deferred()
 
+
+func render_craft_progress(delta: float) -> void:
+	var job: Dictionary=item_service.craft_job
+	if job.is_empty():craft_visual_serial=-1;craft_visual_elapsed=0.0;return
+	craft_visual_elapsed+=delta
+	# Visual interpolation only: completion, materials and rewards stay authoritative.
+	item_service.craft_progress.emit(minf(.999,craft_visual_elapsed/maxf(.001,float(job.duration))))
+
+func refresh_snapshot() -> void:
+	snapshot_requesting=true
+	var generation:=command_generation
+	var response: Dictionary=await Network.call_api("game_snapshot",{"snapshot_defer":1,"selected":item_service.inventory.selected,"station":item_service.craft_station_id})
+	snapshot_requesting=false
+	# A command may have committed while this older response was in flight.
+	if stopping or requesting or not commands.is_empty() or generation!=command_generation:return
+	if not response.get("ok",false):item_ui.show_notice(response.get("error","同步失败"))
+	elif not response.get("snapshot_pending",false):await stage_authority(response.snapshot)
+
+func stage_authority(snapshot: Dictionary, personal_only: bool=false, request_id: String="", craft_cancelled: bool=false) -> void:
+	# Only background snapshots may coalesce. Command commits retain their order.
+	if not personal_only and not requesting and not pending_authority.is_empty() and pending_authority[-1].background:
+		pending_authority[-1].snapshot=snapshot
+	else:pending_authority.append({"snapshot":snapshot,"personal":personal_only,"background":not requesting,"generation":command_generation,"request_id":request_id,"craft_cancelled":craft_cancelled})
+	if not applying_scheduled:
+		applying_scheduled=true
+		flush_authority.call_deferred()
+	await state_applied
+
+func flush_authority() -> void:
+	# Scene and UI mutations remain on the main thread at a frame boundary.
+	# call_deferred already runs at the end of the current main-loop pass.
+	# Another process_frame wait would add a full frame to every command.
+	while not pending_authority.is_empty():
+		var row: Dictionary=pending_authority.pop_front()
+		if row.background and (requesting or row.generation!=command_generation):continue
+		if not stopping:
+			var began:=Time.get_ticks_usec()
+			applying_craft_cancelled=bool(row.get("craft_cancelled",false))
+			if row.personal:
+				if not item_service.inventory.restore(row.snapshot.slots):apply_snapshot(row.snapshot)
+			else:apply_snapshot(row.snapshot)
+			applying_craft_cancelled=false
+			if Engine.has_meta("sync_trace"):
+				var trace: Dictionary=Engine.get_meta("sync_trace")
+				if not trace.has("applications"):trace.applications=[]
+				trace.applications.append({"request_id":row.request_id,"personal":row.personal,"began_us":began,"completed_us":Time.get_ticks_usec()})
+	applying_scheduled=false
+	state_applied.emit()
 
 func poll_server() -> void:
 	if polling or stopping:return
@@ -210,8 +296,13 @@ func apply_snapshot(source: Dictionary) -> void:
 	item_service.restore_network_lamp(snapshot)
 	item_service.merchant.sync_actor()
 	item_service.craft_job=snapshot.get("network_craft_job",{}).duplicate(true)
-	if not item_service.craft_job.is_empty():item_service.craft_progress.emit(float(item_service.craft_job.elapsed)/maxf(.001,float(item_service.craft_job.duration)))
-	elif not previous_job.is_empty():item_service.craft_finished.emit(str(previous_job.recipe_id),int(previous_job.batches),"")
+	if not item_service.craft_job.is_empty():item_service.craft_station_id=str(snapshot.get("network_craft_station",item_service.craft_job.get("station_id","")))
+	if not item_service.craft_job.is_empty():
+		if int(item_service.craft_job.serial)!=craft_visual_serial:
+			craft_visual_serial=int(item_service.craft_job.serial);craft_visual_elapsed=float(item_service.craft_job.elapsed)
+		else:craft_visual_elapsed=maxf(craft_visual_elapsed,float(item_service.craft_job.elapsed))
+		render_craft_progress(0.0)
+	elif not previous_job.is_empty():item_service.craft_finished.emit(str(previous_job.recipe_id),int(previous_job.batches),"制作已取消，材料未消耗" if applying_craft_cancelled else "")
 	item_service.animals.sync_visuals()
 	get_node("Fishing").network_restore(snapshot.get("network_fishing",{}))
 	if not item_service.body.sleep_active():
@@ -261,7 +352,7 @@ func show_chat(message: Dictionary) -> void:
 func close_world() -> void:
 	if stopping:return
 	stopping=true;player.input_blocked=true
-	while requesting or moving_request or polling:await get_tree().process_frame
+	while requesting or snapshot_requesting or moving_request or polling:await get_tree().process_frame
 	await Network.call_api("leave_lobby",{})
 	returned.emit();queue_free()
 func network_close() -> void:await close_world()
